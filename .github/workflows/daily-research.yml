@@ -67,6 +67,7 @@ jobs:
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           gemini_cli_version: "0.67.0"
+          gemini_model: flash # the default Pro model has no free-tier quota (limit 0)
           # Allowlist: no shell, no edit/replace tool. Gemini CLI cannot limit writes to one folder,
           # so the "Only issues/<date> changed" step below enforces that.
           settings: |
@@ -89,6 +90,7 @@ jobs:
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           gemini_cli_version: "0.67.0"
+          gemini_model: flash # the default Pro model has no free-tier quota (limit 0)
           settings: |
             {"tools": {"core": ["google_web_search", "web_fetch", "read_file", "write_file", "list_directory"]}}
           prompt: >-
