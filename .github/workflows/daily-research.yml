@@ -62,6 +62,8 @@ jobs:
 
       - name: Research and write
         uses: google-github-actions/run-gemini-cli@v0.1.22
+        env:
+          GEMINI_CLI_TRUST_WORKSPACE: "true" # headless CI; without it the CLI refuses to run
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           gemini_cli_version: "0.67.0"
@@ -82,6 +84,8 @@ jobs:
         id: factcheck
         continue-on-error: true
         uses: google-github-actions/run-gemini-cli@v0.1.22
+        env:
+          GEMINI_CLI_TRUST_WORKSPACE: "true" # headless CI; without it the CLI refuses to run
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           gemini_cli_version: "0.67.0"
