@@ -1,0 +1,4 @@
+pypdf==7.0.0
+requests==2.34.2
+pytest==9.2.0
+pillow==13.0.0

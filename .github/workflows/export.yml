@@ -1,0 +1,71 @@
+name: export
+
+on:
+  push:
+    branches: ["guide/**"]
+    paths: ["issues/*/figma.json"]
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Issue date YYYY-MM-DD (exports branch guide/<date>)"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    concurrency:
+      group: export-${{ inputs.date || github.ref_name }}
+    steps:
+      - name: Pick date
+        env:
+          INPUT_DATE: ${{ inputs.date }}
+          REF_NAME: ${{ github.ref_name }}
+        run: |
+          DATE="${INPUT_DATE:-${REF_NAME#guide/}}"
+          if ! [[ "$DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then echo "::error::bad date '$DATE'"; exit 1; fi
+          echo "DATE=$DATE" >> "$GITHUB_ENV"
+
+      - uses: actions/checkout@v4
+        with:
+          ref: guide/${{ env.DATE }}
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: Bring in the latest main
+        # main's manifest wins on conflict; update_manifest.py re-adds this issue below.
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git merge --no-edit -X theirs origin/main
+
+      - name: Export PDF and cover from Figma
+        env:
+          FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
+        run: python scripts/export_figma.py "$DATE"
+
+      - name: Update manifest
+        run: python scripts/update_manifest.py "$DATE"
+
+      - name: Commit and push
+        run: |
+          git add "issues/$DATE"/*.pdf "issues/$DATE"/*.png manifest.json
+          git diff --cached --quiet || git commit -m "export: issue $DATE PDFs, covers and manifest"
+          git push origin "HEAD:guide/$DATE"
+
+      - name: Mark PR ready
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr ready "guide/$DATE" || echo "PR already ready for review"
+          gh pr edit "guide/$DATE" --title "ELIOS Guide $DATE · ready to publish"
