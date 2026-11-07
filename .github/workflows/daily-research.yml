@@ -70,6 +70,7 @@ jobs:
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           gemini_cli_version: "0.67.0"
+          gemini_debug: true # stream output to the log; GitHub masks the key as ***
           # Free tier: Pro = 0 RPD, Flash = 5 RPM / 20 RPD. Flash Lite = 15 RPM / 250K TPM.
           # Research and fact-check use different models so each gets its own daily quota.
           # Per-minute 429s are retried with backoff by the CLI (general.maxAttempts, default 10).
@@ -97,6 +98,7 @@ jobs:
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           gemini_cli_version: "0.67.0"
+          gemini_debug: true # stream output to the log; GitHub masks the key as ***
           gemini_model: gemini-3.1-flash-lite
           settings: |
             {"model": {"maxSessionTurns": 40}, "tools": {"core": ["google_web_search", "web_fetch", "read_file", "write_file", "list_directory"]}}
