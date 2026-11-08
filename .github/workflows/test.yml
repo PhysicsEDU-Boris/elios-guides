@@ -2,6 +2,10 @@ name: test
 
 on:
   pull_request:
+    # guide PRs only add issue files and update the manifest; nothing for pytest to test
+    paths-ignore:
+      - "issues/**"
+      - "manifest.json"
   workflow_dispatch:
 
 permissions:
