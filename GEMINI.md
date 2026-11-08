@@ -57,6 +57,10 @@ English and Bahasa Indonesia, about the physics behind one real environmental ne
 - schema/example.en.json and schema/example.calc.py show one complete, valid issue. Copy their shape,
   not their facts.
 
+- NASA Earth Observatory now lives at science.nasa.gov/earth/earth-observatory/ and its images at
+  assets.science.nasa.gov. The old earthobservatory.nasa.gov and eoimages.gsfc.nasa.gov urls are gone.
+- Every source url is opened by a script after you finish. Invented or guessed urls fail the issue.
+
 ## id.json
 - Same keys, same facts, same correct answers, natural Bahasa Indonesia, decimal comma and dot
   thousands (9,81 · 5.310 · 57,8 jt). Months: JAN FEB MAR APR MEI JUN JUL AGU SEP OKT NOV DES.
