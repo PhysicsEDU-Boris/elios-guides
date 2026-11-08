@@ -10,5 +10,5 @@
 - Live manifest has 2026-11-08 with a revision; both public EN/ID PDFs have 4 pages and both PNGs verify.
 - Pages now uses Actions; published branch initialized; github-pages environment allows guide/* and the manual-test branch.
 - Owner must merge PR #16 to activate default-branch daily research/health and future export publication, and enable Actions failure notifications.
-- Separate ELIOS app branch codex/daily-guides targets feature/live-scan; app release required for the daily feed.
+- App PR #102: https://github.com/PhysicsEDU-Boris/ELIOS/pull/102 (base feature/live-scan, unmerged); app release required for the daily feed.
 - Known limit: automated fact/source/layout checks do not replace editorial judgement; quotas and scheduling may delay a day.
