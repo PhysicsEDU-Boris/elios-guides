@@ -1,0 +1,32 @@
+{
+  "guides": [
+    {
+      "revision": "1a7b77b75ace50ca641571cc9ece7247c006f96c7bcd57d1e55e39c9fcacb69b",
+      "date": "2026-11-08",
+      "issue": "01",
+      "slug": "utah-goosenecks-river-flow",
+      "xp": 60,
+      "title": {
+        "en": "How fast rivers carve deep rocks",
+        "id": "Secepat apa sungai mengikis batu"
+      },
+      "topic": {
+        "en": "Water flow",
+        "id": "Aliran air"
+      },
+      "cover": {
+        "en": "issues/2026-11-08/elios-guide-01-utah-goosenecks-river-flow-cover-en.png",
+        "id": "issues/2026-11-08/elios-guide-01-utah-goosenecks-river-flow-cover-id.png"
+      },
+      "pdf": {
+        "en": "issues/2026-11-08/elios-guide-01-utah-goosenecks-river-flow-en.pdf",
+        "id": "issues/2026-11-08/elios-guide-01-utah-goosenecks-river-flow-id.pdf"
+      },
+      "content": {
+        "en": "issues/2026-11-08/en.json",
+        "id": "issues/2026-11-08/id.json"
+      }
+    }
+  ],
+  "updated": "2026-11-08T22:02:31+07:00"
+}
