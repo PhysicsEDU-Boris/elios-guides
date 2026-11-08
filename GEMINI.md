@@ -3,6 +3,9 @@
 You write one ELIOS Guide per day: a 4-page gamified PDF for students aged 12–15 (Indonesian SMP),
 English and Bahasa Indonesia, about the physics behind one real environmental news event.
 
+Read `.gemini/published-manifest.json` as the catalogue when present; otherwise use `manifest.json`.
+Every reference to manifest.json below means this catalogue. It contains the deployed archive.
+
 ## Topic
 - One event from the last 7 days with a clear physics angle: heat and temperature, floods and water
   flow, air and particles, waves and storms, energy and electricity, light and radiation, sound,

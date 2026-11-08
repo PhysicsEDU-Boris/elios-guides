@@ -70,3 +70,13 @@ def test_requires_exported_files(repo):
         f.unlink()
     with pytest.raises(SystemExit, match="missing"):
         update_manifest.update("2026-11-09", repo.root)
+
+
+def test_revision_changes_when_export_is_corrected(repo):
+    make(repo, "2026-11-09")
+    before = update_manifest.update("2026-11-09", repo.root)
+    assert len(before["revision"]) == 64
+    pdf = next((repo.root / "issues" / "2026-11-09").glob("*-en.pdf"))
+    pdf.write_bytes(b"%PDF corrected")
+    after = update_manifest.update("2026-11-09", repo.root)
+    assert before["revision"] != after["revision"]

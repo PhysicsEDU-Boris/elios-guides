@@ -3,6 +3,7 @@
 Usage: python scripts/update_manifest.py YYYY-MM-DD
 """
 import json
+import hashlib
 import re
 import sys
 from datetime import datetime, timedelta, timezone
@@ -24,8 +25,13 @@ def update(date, root=ROOT, now=None):
         for name in (f"{base}-{l}.pdf", f"{base}-cover-{l}.png"):
             if not (root / folder / name).is_file():
                 raise SystemExit(f"missing {folder}/{name}; run export_figma.py first")
+    revision = hashlib.sha256()
+    for lang in ("en", "id"):
+        for name in (f"{base}-{lang}.pdf", f"{base}-cover-{lang}.png"):
+            revision.update((root / folder / name).read_bytes())
     xp = re.search(r"\d+", en.get("guide.xp", ""))
     entry = {
+        "revision": revision.hexdigest(),
         "date": date, "issue": en["_issue"], "slug": en["_slug"], "xp": int(xp.group()) if xp else 60,
         "title": {"en": en["cover.title"], "id": id_["cover.title"]},
         "topic": {"en": en["cover.topic"], "id": id_["cover.topic"]},
