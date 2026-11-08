@@ -74,11 +74,14 @@ jobs:
           # Free tier: Pro = 0 RPD, Flash = 5 RPM / 20 RPD. Flash Lite = 15 RPM / 250K TPM.
           # Research and fact-check use different models so each gets its own daily quota.
           # Per-minute 429s are retried with backoff by the CLI (general.maxAttempts, default 10).
+          # web search/fetch and loop checks ignore gemini_model and use gemini-3-flash-base
+          # (gemini-3-flash-preview, 5 RPM) and gemini-3-pro-preview (0 RPD); the settings below point
+          # them at the other Flash Lite model so the chat and its tools don't share one RPM limit.
           gemini_model: gemini-3.5-flash-lite
           # Allowlist: no shell, no edit/replace tool. Gemini CLI cannot limit writes to one folder,
           # so the "Only issues/<date> changed" step below enforces that.
           settings: |
-            {"model": {"maxSessionTurns": 60}, "tools": {"core": ["google_web_search", "web_fetch", "read_file", "write_file", "list_directory"]}}
+            {"model": {"maxSessionTurns": 60}, "privacy": {"usageStatisticsEnabled": false}, "modelConfigs": {"customAliases": {"gemini-3-flash-base": {"extends": "base", "modelConfig": {"model": "gemini-3.1-flash-lite"}}, "loop-detection-double-check": {"extends": "base", "modelConfig": {"model": "gemini-3.1-flash-lite"}}}}, "tools": {"core": ["google_web_search", "web_fetch", "read_file", "write_file", "list_directory"]}}
           prompt: >-
             Follow GEMINI.md exactly. Today is ${{ needs.prep.outputs.date }} (Asia/Jakarta).
             Write issues/${{ needs.prep.outputs.date }}/en.json, id.json, calc.py and sources.md.
@@ -101,7 +104,7 @@ jobs:
           gemini_debug: true # stream output to the log; GitHub masks the key as ***
           gemini_model: gemini-3.1-flash-lite
           settings: |
-            {"model": {"maxSessionTurns": 40}, "tools": {"core": ["google_web_search", "web_fetch", "read_file", "write_file", "list_directory"]}}
+            {"model": {"maxSessionTurns": 40}, "privacy": {"usageStatisticsEnabled": false}, "modelConfigs": {"customAliases": {"gemini-3-flash-base": {"extends": "base", "modelConfig": {"model": "gemini-3.5-flash-lite"}}, "loop-detection-double-check": {"extends": "base", "modelConfig": {"model": "gemini-3.5-flash-lite"}}}}, "tools": {"core": ["google_web_search", "web_fetch", "read_file", "write_file", "list_directory"]}}
           prompt: >-
             You did not write these files. Open every source URL in issues/${{ needs.prep.outputs.date }}/en.json
             and check every number, date, name and quiz answer, and that id.json says the same as en.json.
