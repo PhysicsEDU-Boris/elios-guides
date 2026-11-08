@@ -86,10 +86,9 @@ jobs:
             Follow GEMINI.md exactly. Today is ${{ needs.prep.outputs.date }} (Asia/Jakarta).
             Write issues/${{ needs.prep.outputs.date }}/en.json, id.json, calc.py and sources.md.
 
-      - name: Calc
-        id: calc
-        continue-on-error: true
-        run: python scripts/run_calc.py "issues/$DATE"
+      - name: Keep only the files research may write
+        # Gemini can read scripts/validate.py and once forged calc.out.json, check.json and cover.jpg.
+        run: find "issues/$DATE" -type f ! -name en.json ! -name id.json ! -name calc.py ! -name sources.md -print -delete
 
       - name: Fact-check
         id: factcheck
@@ -111,9 +110,17 @@ jobs:
             Write issues/${{ needs.prep.outputs.date }}/check.json as [{item, claim, source, pass, note}].
             Mark pass=false if you cannot confirm it. Do not change any other file.
 
+      - name: Keep only check.json from the fact-check
+        run: find "issues/$DATE" -type f ! -name en.json ! -name id.json ! -name calc.py ! -name sources.md ! -name check.json -print -delete
+
+      - name: Calc
+        id: calc
+        continue-on-error: true
+        run: python scripts/run_calc.py "issues/$DATE"
+
       - name: Only issues/<date> changed
         run: |
-          bad=$(git status --porcelain --untracked-files=all | cut -c4- | grep -v -e "^issues/$DATE/" -e '^\.gemini/' || true)
+          bad=$(git status --porcelain --untracked-files=all | cut -c4- | grep -v -e "^issues/$DATE/" -e '^\.gemini/' -e '^gemini-artifacts/' || true)
           if [ -n "$bad" ]; then
             echo "::error::Files outside issues/$DATE were changed:"
             echo "$bad"
