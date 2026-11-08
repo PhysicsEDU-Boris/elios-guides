@@ -212,3 +212,13 @@ def test_old_topic_ok(issue):
 def test_image_file_must_be_plain_name(issue):
     issue.en["_images"]["cover.image"]["file"] = "../cover.jpg"
     has(issue.errors(), "was not downloaded")
+
+
+def test_homepage_source(issue):
+    issue.en["_sources"][0]["url"] = "https://www.bmkg.go.id/"
+    has(issue.errors(), "en: source 1 url 'https://www.bmkg.go.id/' is a homepage")
+
+
+def test_issue_number_format(issue):
+    issue.id["_issue"] = "1"
+    has(issue.errors(), "id: _issue '1' must be at least two digits")

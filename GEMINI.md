@@ -11,6 +11,8 @@ English and Bahasa Indonesia, about the physics behind one real environmental ne
 - Not a slug or topic used in the last 14 entries of manifest.json.
 - At least 3 sources, at least one primary (BMKG, BNPB, NASA, NOAA, WMO, WHO, UNEP, UNFCCC,
   Copernicus, CREA, universities, peer-reviewed journals). News sites only for context.
+- Each source url is the exact article, report or data page you opened, never a homepage.
+  Its title and date are copied from that page.
 
 ## Facts
 - Every number, date, name and place comes from a source you opened, or from calc.py. Never invent.
@@ -41,7 +43,7 @@ English and Bahasa Indonesia, about the physics behind one real environmental ne
   to null and write "Illustration by ELIOS" in the credit.
 - source_url is the direct image file (https, image/jpeg or image/png, under 8 MB), not the web page
   about it. Wikimedia: an upload.wikimedia.org thumbnail at a standard width (e.g. 1280px-…).
-  file is a plain name such as cover.jpg or story.jpg.
+  file is a plain name such as cover.jpg or story.jpg. Never reuse a URL from the example files.
 
 ## Budget
 - The free API allows few requests. Use at most 6 web searches and 8 page fetches for research.
@@ -49,7 +51,9 @@ English and Bahasa Indonesia, about the physics behind one real environmental ne
   files you wrote.
 
 ## Files
-- Write only inside issues/<date>/. Anything else you change fails the run.
+- Write only en.json, id.json, calc.py and sources.md inside issues/<date>/. Other files are deleted.
+- Don't open scripts/ or tests/. They are for the checks, not for you.
+- _issue is two digits: one more than the newest issue in manifest.json, or "01" if it is empty.
 - schema/example.en.json and schema/example.calc.py show one complete, valid issue. Copy their shape,
   not their facts.
 

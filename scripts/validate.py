@@ -112,6 +112,11 @@ def check_lang(d, lang, folder):
         errs.append(f"{lang}: only {len(srcs)} sources, need at least 3")
     if not any(isinstance(s, dict) and s.get("primary") is True for s in srcs):
         errs.append(f"{lang}: no source has primary: true")
+    for src in srcs:
+        if isinstance(src, dict) and urlparse(str(src.get("url", ""))).path.strip("/") == "":
+            errs.append(f"{lang}: source {src.get('n')} url {src.get('url')!r} is a homepage; link the article or data page")
+    if not re.fullmatch(r"\d{2,}", str(d.get("_issue", ""))):
+        errs.append(f"{lang}: _issue {d.get('_issue')!r} must be at least two digits, e.g. \"03\"")
     for k, v in d.items():
         if k.startswith("_"):
             continue

@@ -5,9 +5,9 @@
   "_date": "2026-11-09",
   "_lang": "en",
   "_sources": [
-    {"n": 1, "publisher": "BMKG", "title": "Example source: daily weather outlook", "date": "2026-11-08", "url": "https://www.bmkg.go.id/", "primary": true},
-    {"n": 2, "publisher": "NASA Earth Observatory", "title": "Example source: urban heat islands", "date": "2026-11-01", "url": "https://earthobservatory.nasa.gov/", "primary": true},
-    {"n": 3, "publisher": "WMO", "title": "Example source: heat and health", "date": "2026-10-30", "url": "https://wmo.int/", "primary": false}
+    {"n": 1, "publisher": "BMKG", "title": "Example source: daily weather outlook", "date": "2026-11-08", "url": "https://www.bmkg.go.id/cuaca/prakiraan-cuaca", "primary": true},
+    {"n": 2, "publisher": "NASA Earth Observatory", "title": "Example source: urban heat islands", "date": "2026-11-01", "url": "https://earthobservatory.nasa.gov/topic/heat", "primary": true},
+    {"n": 3, "publisher": "WMO", "title": "Example source: heat and health", "date": "2026-10-30", "url": "https://wmo.int/topics/heatwave", "primary": false}
   ],
   "_images": {
     "cover.image": {"file": "cover.jpg", "source_url": "https://eoimages.gsfc.nasa.gov/images/imagerecords/example/example.jpg", "license": "Public domain (NASA)", "credit": "NASA Earth Observatory"},
