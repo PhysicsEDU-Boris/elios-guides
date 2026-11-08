@@ -5,44 +5,184 @@
   "_date": "2026-11-08",
   "_lang": "en",
   "_sources": [
-    {"n": 1, "publisher": "NASA Earth Observatory", "title": "Taking a Gander at Utah’s Goosenecks", "date": "2026-11-06", "url": "https://science.nasa.gov/earth/earth-observatory/taking-a-gander-at-utahs-goosenecks", "primary": true},
-    {"n": 2, "publisher": "NASA Earth Observatory", "title": "Cyprus: Island of Snakes, Cats, and Ophiolites", "date": "2026-11-05", "url": "https://science.nasa.gov/earth/earth-observatory/cyprus-island-of-snakes-cats-and-ophiolites", "primary": true},
-    {"n": 3, "publisher": "BMKG", "title": "BMKG Dorong Pemanfaatan Informasi MKG untuk Pengelolaan Bendungan yang Adaptif Terhadap Perubahan Iklim", "date": "2026-11-07", "url": "https://www.bmkg.go.id/berita", "primary": true}
+    {
+      "n": 1,
+      "publisher": "NASA Earth Observatory",
+      "title": "Taking a Gander at Utah’s Goosenecks",
+      "date": "2026-11-06",
+      "url": "https://science.nasa.gov/earth/earth-observatory/taking-a-gander-at-utahs-goosenecks",
+      "primary": true
+    },
+    {
+      "n": 2,
+      "publisher": "NASA Earth Observatory",
+      "title": "Cyprus: Island of Snakes, Cats, and Ophiolites",
+      "date": "2026-11-05",
+      "url": "https://science.nasa.gov/earth/earth-observatory/cyprus-island-of-snakes-cats-and-ophiolites",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "BMKG",
+      "title": "BMKG Dorong Pemanfaatan Informasi MKG untuk Pengelolaan Bendungan yang Adaptif Terhadap Perubahan Iklim",
+      "date": "2026-11-07",
+      "url": "https://www.bmkg.go.id/berita",
+      "primary": true
+    }
   ],
   "_images": {
-    "cover.image": {"file": "cover.jpg", "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Goosenecks_State_Park_San_Juan_River_Utah_2012.jpg/1280px-Goosenecks_State_Park_San_Juan_River_Utah_2012.jpg", "license": "Creative Commons Attribution 2.0", "credit": "Jim Trodel / Wikimedia Commons"},
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Goosenecks_San_Juan_River_Utah_2020.jpg/1280px-Goosenecks_San_Juan_River_Utah_2020.jpg",
+      "license": "CC0 1.0 (public domain dedication)",
+      "credit": "Jstuby / Wikimedia Commons"
+    },
     "story.image": null,
     "physics.diagram": null
   },
   "_graph.1.raw": 6.0,
   "_graph.2.raw": 9.0,
   "_graph.3.raw": 4.8,
-  "_answers": {"1": "b", "2": "a", "3": "c"},
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
   "_quiz_pool": [
-    {"question": "What formula calculates speed in motion?", "options": ["v = s × t", "v = s ÷ t", "v = t ÷ s", "v = m × v"], "answer": 1, "explanation": "Speed equals distance divided by time."},
-    {"question": "What is the unit of speed in SI?", "options": ["km/h", "m/s", "cm/s", "km/s"], "answer": 1, "explanation": "Metres per second (m/s) is the standard SI unit for speed."},
-    {"question": "If a river flows 120 m in 20 s, what is its speed?", "options": ["4 m/s", "6 m/s", "12 m/s", "24 m/s"], "answer": 1, "explanation": "120 divided by 20 equals 6 m/s."},
-    {"question": "What does s stand for in v = s ÷ t?", "options": ["Speed", "Second", "Distance", "Surface"], "answer": 2, "explanation": "s represents distance travelled."},
-    {"question": "Why do rivers carve deep loops like Goosenecks?", "options": ["Wind pushes water", "Flowing water erodes rock over time", "Earthquakes shake them", "Boats dig channels"], "answer": 1, "explanation": "Moving water gradually cuts through rock layers."},
-    {"question": "What does t stand for in v = s ÷ t?", "options": ["Temperature", "Time", "Total", "Turn"], "answer": 1, "explanation": "t stands for time taken."},
-    {"question": "Which material is eroded by rivers easily?", "options": ["Soft rock and soil", "Solid titanium", "Pure diamond", "Stainless steel"], "answer": 0, "explanation": "Moving water wears away softer rock and soil faster."},
-    {"question": "If time increases while distance is constant, speed…", "options": ["increases", "decreases", "stays the same", "doubles"], "answer": 1, "explanation": "Taking longer to cover the same distance means slower speed."},
-    {"question": "What helps monitor water flow in dams?", "options": ["Weather and water sensors", "Telescopes", "Magnets", "Stethoscopes"], "answer": 0, "explanation": "Sensors and meteorological data help manage water flow safely."},
-    {"question": "Water flowing in a river has what main type of energy?", "options": ["Kinetic energy", "Chemical energy", "Nuclear energy", "Sound energy"], "answer": 0, "explanation": "Motion energy is kinetic energy."}
+    {
+      "question": "What formula calculates speed in motion?",
+      "options": [
+        "v = s × t",
+        "v = s ÷ t",
+        "v = t ÷ s",
+        "v = m × v"
+      ],
+      "answer": 1,
+      "explanation": "Speed equals distance divided by time."
+    },
+    {
+      "question": "What is the unit of speed in SI?",
+      "options": [
+        "km/h",
+        "m/s",
+        "cm/s",
+        "km/s"
+      ],
+      "answer": 1,
+      "explanation": "Metres per second (m/s) is the standard SI unit for speed."
+    },
+    {
+      "question": "If a river flows 120 m in 20 s, what is its speed?",
+      "options": [
+        "4 m/s",
+        "6 m/s",
+        "12 m/s",
+        "24 m/s"
+      ],
+      "answer": 1,
+      "explanation": "120 divided by 20 equals 6 m/s."
+    },
+    {
+      "question": "What does s stand for in v = s ÷ t?",
+      "options": [
+        "Speed",
+        "Second",
+        "Distance",
+        "Surface"
+      ],
+      "answer": 2,
+      "explanation": "s represents distance travelled."
+    },
+    {
+      "question": "Why do rivers carve deep loops like Goosenecks?",
+      "options": [
+        "Wind pushes water",
+        "Flowing water erodes rock over time",
+        "Earthquakes shake them",
+        "Boats dig channels"
+      ],
+      "answer": 1,
+      "explanation": "Moving water gradually cuts through rock layers."
+    },
+    {
+      "question": "What does t stand for in v = s ÷ t?",
+      "options": [
+        "Temperature",
+        "Time",
+        "Total",
+        "Turn"
+      ],
+      "answer": 1,
+      "explanation": "t stands for time taken."
+    },
+    {
+      "question": "Which material is eroded by rivers easily?",
+      "options": [
+        "Soft rock and soil",
+        "Solid titanium",
+        "Pure diamond",
+        "Stainless steel"
+      ],
+      "answer": 0,
+      "explanation": "Moving water wears away softer rock and soil faster."
+    },
+    {
+      "question": "If time increases while distance is constant, speed…",
+      "options": [
+        "increases",
+        "decreases",
+        "stays the same",
+        "doubles"
+      ],
+      "answer": 1,
+      "explanation": "Taking longer to cover the same distance means slower speed."
+    },
+    {
+      "question": "What helps monitor water flow in dams?",
+      "options": [
+        "Weather and water sensors",
+        "Telescopes",
+        "Magnets",
+        "Stethoscopes"
+      ],
+      "answer": 0,
+      "explanation": "Sensors and meteorological data help manage water flow safely."
+    },
+    {
+      "question": "Water flowing in a river has what main type of energy?",
+      "options": [
+        "Kinetic energy",
+        "Chemical energy",
+        "Nuclear energy",
+        "Sound energy"
+      ],
+      "answer": 0,
+      "explanation": "Motion energy is kinetic energy."
+    }
   ],
   "_lab_rubric": {
-    "must_show": ["a small tray or inclined board with water", "a floating object like a cork or small leaf", "a ruler or timer measuring movement"],
-    "safety": ["no flame, no mains electricity, no chemicals", "only hands in the photo"],
+    "must_show": [
+      "a small tray or inclined board with water",
+      "a floating object like a cork or small leaf",
+      "a ruler or timer measuring movement"
+    ],
+    "safety": [
+      "no flame, no mains electricity, no chemicals",
+      "only hands in the photo"
+    ],
     "pass_if": "The photos show the setup and timing of the floating object over a measured distance."
   },
-  "_per_page": [{}, {}, {}, {}],
+  "_per_page": [
+    {},
+    {},
+    {},
+    {}
+  ],
   "_replace": {},
-
   "guide.issue_date": "#01 · 8 NOV 2026",
   "guide.lang": "EN",
   "guide.xp": "+60 XP",
   "footer.credit": "ELIOS Guides · Utah River Flow · Issue #01",
-
   "cover.title": "How fast rivers carve deep rocks",
   "cover.subtitle": "NASA satellites captured stunning river loops in Utah. Discover how flowing water measures up with speed, distance, and time.",
   "cover.image_caption": "Goosenecks of the San Juan River in Utah",
@@ -57,7 +197,6 @@
   "cover.level": "SMP · grade 7–9",
   "cover.xp_total": "Earn up to 60 XP",
   "cover.fun_fact": "San Juan River loops through rock layers that took millions of years to form.",
-
   "story.title": "The winding river of Utah",
   "story.lead": "Satellite images highlighted dramatic winding river bends in Utah [1]. Water flowing across the landscape moves rock and soil grain by grain [1].",
   "story.image_caption": "Deep river meanders carved into canyon rock",
@@ -76,7 +215,6 @@
   "timeline.1.text": "Water gathers in high ground and feeds river channels.",
   "timeline.2.text": "Streams rush downhill, gaining speed and carrying sediment.",
   "timeline.3.text": "Moving water carves deep loops and canyons into bedrock.",
-
   "physics.title": "Speed, distance and time",
   "physics.body_1": "To understand how fast a river flows, we measure two things: how far the water travels and how long it takes. Speed tells us the distance covered in each second.",
   "physics.body_2": "If distance increases, speed increases. If time increases for the same distance, speed decreases. We calculate speed by dividing distance by time.",
@@ -84,7 +222,7 @@
   "physics.equation_name": "Speed calculation equation",
   "legend.1.symbol": "v",
   "legend.1.meaning": "speed",
-  "legend.1.unit": "metres per second (m/s)",
+  "legend.1.unit": "m/s",
   "legend.2.symbol": "s",
   "legend.2.meaning": "distance",
   "legend.2.unit": "metre (m)",
@@ -116,7 +254,7 @@
   "table.r3c3": "4.8 m/s",
   "table.note": "Different speeds over the same 120 metre river distance.",
   "graph.title": "Water speed in different stream types",
-  "graph.1.label": "Goosenecks",
+  "graph.1.label": "San Juan",
   "graph.2.label": "Rapid",
   "graph.3.label": "Creek",
   "graph.1.value": "6 m/s",
@@ -124,7 +262,6 @@
   "graph.3.value": "4.8 m/s",
   "graph.note": "Rapids flow much faster than gentle creeks over identical distances.",
   "physics.tip": "Faster water flow carries heavier rocks and carves canyons deeper and faster.",
-
   "mission.title": "River flow mission",
   "quiz.answer_key": "Answer key: 1B · 2A · 3C",
   "quiz.1.question": "What equation calculates speed in physics?",
@@ -140,7 +277,7 @@
   "quiz.3.question": "Why do fast-flowing rivers erode rock faster?",
   "quiz.3.a": "They are colder",
   "quiz.3.b": "They contain salt",
-  "quiz.3.c": "They carry more kinetic energy and sediment",
+  "quiz.3.c": "More energy and sediment",
   "quiz.3.d": "They have more sunlight",
   "lab.title": "Measure stream speed at home",
   "lab.step_1": "Mark a 2-metre track along an inclined gutter or plastic tray with water.",
@@ -162,5 +299,5 @@
   "source.3": "[3] BMKG, BMKG Dorong Pemanfaatan Informasi MKG untuk Pengelolaan Bendungan, 7 Nov 2026",
   "source.4": "",
   "source.5": "",
-  "credit.images": "Cover: Jim Trodel / Wikimedia Commons (CC BY 2.0). Other pictures: Illustration by ELIOS."
+  "credit.images": "Cover: Jstuby / Wikimedia Commons (CC0). Other pictures: Illustration by ELIOS."
 }

@@ -5,50 +5,212 @@
   "_date": "2026-11-08",
   "_lang": "id",
   "_sources": [
-    {"n": 1, "publisher": "NASA Earth Observatory", "title": "Taking a Gander at Utah’s Goosenecks", "date": "2026-11-06", "url": "https://science.nasa.gov/earth/earth-observatory/taking-a-gander-at-utahs-goosenecks", "primary": true},
-    {"n": 2, "publisher": "NASA Earth Observatory", "title": "Cyprus: Island of Snakes, Cats, and Ophiolites", "date": "2026-11-05", "url": "https://science.nasa.gov/earth/earth-observatory/cyprus-island-of-snakes-cats-and-ophiolites", "primary": true},
-    {"n": 3, "publisher": "BMKG", "title": "BMKG Dorong Pemanfaatan Informasi MKG untuk Pengelolaan Bendungan yang Adaptif Terhadap Perubahan Iklim", "date": "2026-11-07", "url": "https://www.bmkg.go.id/berita", "primary": true}
+    {
+      "n": 1,
+      "publisher": "NASA Earth Observatory",
+      "title": "Taking a Gander at Utah’s Goosenecks",
+      "date": "2026-11-06",
+      "url": "https://science.nasa.gov/earth/earth-observatory/taking-a-gander-at-utahs-goosenecks",
+      "primary": true
+    },
+    {
+      "n": 2,
+      "publisher": "NASA Earth Observatory",
+      "title": "Cyprus: Island of Snakes, Cats, and Ophiolites",
+      "date": "2026-11-05",
+      "url": "https://science.nasa.gov/earth/earth-observatory/cyprus-island-of-snakes-cats-and-ophiolites",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "BMKG",
+      "title": "BMKG Dorong Pemanfaatan Informasi MKG untuk Pengelolaan Bendungan yang Adaptif Terhadap Perubahan Iklim",
+      "date": "2026-11-07",
+      "url": "https://www.bmkg.go.id/berita",
+      "primary": true
+    }
   ],
   "_images": {
-    "cover.image": {"file": "cover.jpg", "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Goosenecks_State_Park_San_Juan_River_Utah_2012.jpg/1280px-Goosenecks_State_Park_San_Juan_River_Utah_2012.jpg", "license": "Creative Commons Attribution 2.0", "credit": "Jim Trodel / Wikimedia Commons"},
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Goosenecks_San_Juan_River_Utah_2020.jpg/1280px-Goosenecks_San_Juan_River_Utah_2020.jpg",
+      "license": "CC0 1.0 (public domain dedication)",
+      "credit": "Jstuby / Wikimedia Commons"
+    },
     "story.image": null,
     "physics.diagram": null
   },
   "_graph.1.raw": 6.0,
   "_graph.2.raw": 9.0,
   "_graph.3.raw": 4.8,
-  "_answers": {"1": "b", "2": "a", "3": "c"},
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
   "_quiz_pool": [
-    {"question": "Rumus apa yang menghitung kelajuan dalam gerak?", "options": ["v = s × t", "v = s ÷ t", "v = t ÷ s", "v = m × v"], "answer": 1, "explanation": "Kelajuan sama dengan jarak dibagi waktu."},
-    {"question": "Apa satuan kelajuan dalam sistem SI?", "options": ["km/jam", "m/s", "cm/s", "km/s"], "answer": 1, "explanation": "Meter per sekon (m/s) adalah satuan SI untuk kelajuan."},
-    {"question": "Jika sungai mengalir 120 m dalam 20 s, berapa kelajuannya?", "options": ["4 m/s", "6 m/s", "12 m/s", "24 m/s"], "answer": 1, "explanation": "120 dibagi 20 menghasilkan 6 m/s."},
-    {"question": "Apa arti huruf s dalam rumus v = s ÷ t?", "options": ["Kelajuan", "Detik", "Jarak", "Permukaan"], "answer": 2, "explanation": "s melambangkan jarak yang ditempuh."},
-    {"question": "Mengapa sungai membentuk kurva seperti Goosenecks?", "options": ["Angin mendorong air", "Air mengalir mengikis batuan seiring waktu", "Gempa bumi mengguncang", "Perahu menggali alur"], "answer": 1, "explanation": "Air yang mengalir secara bertahap memotong lapisan batu."},
-    {"question": "Apa arti huruf t dalam rumus v = s ÷ t?", "options": ["Suhu", "Waktu", "Total", "Putaran"], "answer": 1, "explanation": "t melambangkan waktu yang diperlukan."},
-    {"question": "Bahan apa yang lebih mudah terkikis oleh sungai?", "options": ["Batu lunak dan tanah", "Titanium padat", "Berlian murni", "Baja tahan karat"], "answer": 0, "explanation": "Air mengalir mengikis batuan lunak lebih cepat."},
-    {"question": "Jika waktu bertambah namun jarak tetap, kelajuan...", "options": ["bertambah", "berkurang", "tetap sama", "melipatganda"], "answer": 1, "explanation": "Butuh waktu lebih lama untuk jarak yang sama berarti kelajuan lebih kecil."},
-    {"question": "Apa yang membantu memantau aliran air di bendungan?", "options": ["Sensor cuaca dan air", "Teleskop", "Magnet", "Stetoskop"], "answer": 0, "explanation": "Sensor dan data meteorologi membantu mengelola aliran air dengan aman."},
-    {"question": "Air yang mengalir di sungai memiliki jenis energi utama apa?", "options": ["Energi kinetik", "Energi kimia", "Energi nuklir", "Energi bunyi"], "answer": 0, "explanation": "Energi gerak adalah energi kinetik."}
+    {
+      "question": "Rumus apa yang menghitung kelajuan dalam gerak?",
+      "options": [
+        "v = s × t",
+        "v = s ÷ t",
+        "v = t ÷ s",
+        "v = m × v"
+      ],
+      "answer": 1,
+      "explanation": "Kelajuan sama dengan jarak dibagi waktu."
+    },
+    {
+      "question": "Apa satuan kelajuan dalam sistem SI?",
+      "options": [
+        "km/jam",
+        "m/s",
+        "cm/s",
+        "km/s"
+      ],
+      "answer": 1,
+      "explanation": "Meter per sekon (m/s) adalah satuan SI untuk kelajuan."
+    },
+    {
+      "question": "Jika sungai mengalir 120 m dalam 20 s, berapa kelajuannya?",
+      "options": [
+        "4 m/s",
+        "6 m/s",
+        "12 m/s",
+        "24 m/s"
+      ],
+      "answer": 1,
+      "explanation": "120 dibagi 20 menghasilkan 6 m/s."
+    },
+    {
+      "question": "Apa arti huruf s dalam rumus v = s ÷ t?",
+      "options": [
+        "Kelajuan",
+        "Detik",
+        "Jarak",
+        "Permukaan"
+      ],
+      "answer": 2,
+      "explanation": "s melambangkan jarak yang ditempuh."
+    },
+    {
+      "question": "Mengapa sungai membentuk kurva seperti Goosenecks?",
+      "options": [
+        "Angin mendorong air",
+        "Air mengalir mengikis batuan seiring waktu",
+        "Gempa bumi mengguncang",
+        "Perahu menggali alur"
+      ],
+      "answer": 1,
+      "explanation": "Air yang mengalir secara bertahap memotong lapisan batu."
+    },
+    {
+      "question": "Apa arti huruf t dalam rumus v = s ÷ t?",
+      "options": [
+        "Suhu",
+        "Waktu",
+        "Total",
+        "Putaran"
+      ],
+      "answer": 1,
+      "explanation": "t melambangkan waktu yang diperlukan."
+    },
+    {
+      "question": "Bahan apa yang lebih mudah terkikis oleh sungai?",
+      "options": [
+        "Batu lunak dan tanah",
+        "Titanium padat",
+        "Berlian murni",
+        "Baja tahan karat"
+      ],
+      "answer": 0,
+      "explanation": "Air mengalir mengikis batuan lunak lebih cepat."
+    },
+    {
+      "question": "Jika waktu bertambah namun jarak tetap, kelajuan...",
+      "options": [
+        "bertambah",
+        "berkurang",
+        "tetap sama",
+        "melipatganda"
+      ],
+      "answer": 1,
+      "explanation": "Butuh waktu lebih lama untuk jarak yang sama berarti kelajuan lebih kecil."
+    },
+    {
+      "question": "Apa yang membantu memantau aliran air di bendungan?",
+      "options": [
+        "Sensor cuaca dan air",
+        "Teleskop",
+        "Magnet",
+        "Stetoskop"
+      ],
+      "answer": 0,
+      "explanation": "Sensor dan data meteorologi membantu mengelola aliran air dengan aman."
+    },
+    {
+      "question": "Air yang mengalir di sungai memiliki jenis energi utama apa?",
+      "options": [
+        "Energi kinetik",
+        "Energi kimia",
+        "Energi nuklir",
+        "Energi bunyi"
+      ],
+      "answer": 0,
+      "explanation": "Energi gerak adalah energi kinetik."
+    }
   ],
   "_lab_rubric": {
-    "must_show": ["baki kecil atau papan miring dengan air", "benda mengapung seperti gabus atau daun", "penggaris atau pengukur waktu gerak"],
-    "safety": ["tanpa nyala api, tanpa listrik utama, tanpa bahan kimia", "hanya tangan dalam foto"],
+    "must_show": [
+      "baki kecil atau papan miring dengan air",
+      "benda mengapung seperti gabus atau daun",
+      "penggaris atau pengukur waktu gerak"
+    ],
+    "safety": [
+      "tanpa nyala api, tanpa listrik utama, tanpa bahan kimia",
+      "hanya tangan dalam foto"
+    ],
     "pass_if": "Foto menunjukkan penyiapan dan pengukuran waktu benda terapung pada jarak tertentu."
   },
   "_per_page": [
-    {"guide.stop_label": "Sampul"},
-    {"guide.stop_label": "Pos 1 · Ceritanya", "section.label": "POS 1 · CERITANYA", "section.xp": "+10 XP UNTUK MEMBACA"},
-    {"guide.stop_label": "Pos 2 · Fisikanya", "section.label": "POS 2 · FISIKANYA", "section.xp": "+20 XP UNTUK MENJAWAB"},
-    {"guide.stop_label": "Pos 3 · Misimu", "section.label": "POS 3 · MISIMU", "section.xp": "+30 XP UNTUK DIRAIH"}
+    {
+      "guide.stop_label": "Sampul"
+    },
+    {
+      "guide.stop_label": "Pos 1 · Ceritanya",
+      "section.label": "POS 1 · CERITANYA",
+      "section.xp": "+10 XP UNTUK MEMBACA"
+    },
+    {
+      "guide.stop_label": "Pos 2 · Fisikanya",
+      "section.label": "POS 2 · FISIKANYA",
+      "section.xp": "+20 XP UNTUK MENJAWAB"
+    },
+    {
+      "guide.stop_label": "Pos 3 · Misimu",
+      "section.label": "POS 3 · MISIMU",
+      "section.xp": "+30 XP UNTUK DIRAIH"
+    }
   ],
-  "_replace": {"stop": [["STOP","POS"]], "page ref": [["p.","hlm. "]]},
-
+  "_replace": {
+    "stop": [
+      [
+        "STOP",
+        "POS"
+      ]
+    ],
+    "page ref": [
+      [
+        "p.",
+        "hlm. "
+      ]
+    ]
+  },
   "guide.issue_date": "#01 · 8 NOV 2026",
   "guide.lang": "ID",
   "guide.xp": "+60 XP",
   "footer.credit": "Panduan ELIOS · Aliran Sungai Utah · Edisi 01",
-
-  "cover.title": "Seberapa cepat sungai mengikis batu",
+  "cover.title": "Secepat apa sungai mengikis batu",
   "cover.subtitle": "Satelit NASA menangkap kelokan sungai menakjubkan di Utah. Temukan bagaimana air mengalir diukur lewat kelajuan, jarak, dan waktu.",
   "cover.image_caption": "Kelokan Sungai San Juan di Utah",
   "cover.news_date": "Berita: 6 Nov 2026",
@@ -62,7 +224,6 @@
   "cover.level": "SMP · kelas 7–9",
   "cover.xp_total": "Raih hingga 60 XP",
   "cover.fun_fact": "Sungai San Juan meliuk melalui lapisan batu yang terbentuk jutaan tahun.",
-
   "story.title": "Sungai berliku di Utah",
   "story.lead": "Citra satelit menyoroti kelokan sungai berliku dramatis di Utah [1]. Air yang mengalir di bentang alam memindahkan batu dan tanah sedikit demi sedikit [1].",
   "story.image_caption": "Meander sungai dalam terukir di batu jurang",
@@ -81,7 +242,6 @@
   "timeline.1.text": "Air berkumpul di dataran tinggi dan mengisi alur sungai.",
   "timeline.2.text": "Arus deras menuruni lereng, menambah kelajuan dan sedimen.",
   "timeline.3.text": "Air mengalir mengukir kelokan dan jurang dalam pada batuan.",
-
   "physics.title": "Kelajuan, jarak, dan waktu",
   "physics.body_1": "Untuk memahami kelajuan sungai, kita mengukur dua hal: seberapa jauh air berjalan dan berapa lama waktunya. Kelajuan menunjukkan jarak yang ditempuh setiap detik.",
   "physics.body_2": "Jika jarak bertambah, kelajuan bertambah. Jika waktu bertambah untuk jarak yang sama, kelajuan berkurang. Kita menghitung kelajuan dengan membagi jarak dengan waktu.",
@@ -89,7 +249,7 @@
   "physics.equation_name": "Persamaan perhitungan kelajuan",
   "legend.1.symbol": "v",
   "legend.1.meaning": "kelajuan",
-  "legend.1.unit": "meter per sekon (m/s)",
+  "legend.1.unit": "m/s",
   "legend.2.symbol": "s",
   "legend.2.meaning": "jarak",
   "legend.2.unit": "meter (m)",
@@ -121,7 +281,7 @@
   "table.r3c3": "4,8 m/s",
   "table.note": "Kelajuan berbeda pada jarak sungai 120 meter yang sama.",
   "graph.title": "Kelajuan air pada berbagai jenis aliran",
-  "graph.1.label": "Gooseneck",
+  "graph.1.label": "San Juan",
   "graph.2.label": "Jeram",
   "graph.3.label": "Sungai",
   "graph.1.value": "6 m/s",
@@ -129,7 +289,6 @@
   "graph.3.value": "4,8 m/s",
   "graph.note": "Arus jeram mengalir jauh lebih cepat daripada anak sungai pada jarak sama.",
   "physics.tip": "Aliran air yang lebih cepat membawa batu berat serta mengukir jurang lebih cepat.",
-
   "mission.title": "Misi aliran sungai",
   "quiz.answer_key": "Kunci: 1B · 2A · 3C",
   "quiz.1.question": "Persamaan apa yang menghitung kelajuan dalam fisika?",
@@ -145,8 +304,8 @@
   "quiz.3.question": "Mengapa sungai berarus deras mengikis batu lebih cepat?",
   "quiz.3.a": "Airnya lebih dingin",
   "quiz.3.b": "Mengandung garam",
-  "quiz.3.c": "Membawa energi kinetik dan sedimen lebih besar",
-  "quiz.3.d": "Mendapat lebih banyak sinar matahari",
+  "quiz.3.c": "Energi & sedimen lebih besar",
+  "quiz.3.d": "Lebih banyak sinar matahari",
   "lab.title": "Ukur kelajuan arus di rumah",
   "lab.step_1": "Buat jalur 2 meter di sepanjang selokan miring atau baki plastik berisi air.",
   "lab.step_2": "Jatuhkan gabus atau daun kecil terapung di garis start.",
@@ -167,8 +326,7 @@
   "source.3": "[3] BMKG, BMKG Dorong Pemanfaatan Informasi MKG untuk Pengelolaan Bendungan, 7 Nov 2026",
   "source.4": "",
   "source.5": "",
-  "credit.images": "Sampul: Jim Trodel / Wikimedia Commons (CC BY 2.0). Gambar lain: Ilustrasi oleh ELIOS.",
-
+  "credit.images": "Sampul: Jstuby / Wikimedia Commons (CC0). Gambar lain: Ilustrasi oleh ELIOS.",
   "label.quest_map": "PETA MISIMU",
   "label.fun_fact": "TAHUKAH KAMU?",
   "label.timeline": "LINIMASA",
