@@ -37,7 +37,12 @@
       "license": "CC0 1.0 (public domain dedication)",
       "credit": "Jstuby / Wikimedia Commons"
     },
-    "story.image": null,
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/taking-a-gander-at-utah%E2%80%99s-goosenecks/ISS075-E-188830.jpg",
+      "license": "Public domain (NASA)",
+      "credit": "NASA astronaut photograph ISS075-E-188830"
+    },
     "physics.diagram": null
   },
   "_graph.1.raw": 6.0,
@@ -226,8 +231,8 @@
   "cover.fun_fact": "Kelokan sungai ini memotong batu berumur jutaan tahun.",
   "story.title": "Sungai berliku di Utah",
   "story.lead": "Citra satelit menyoroti kelokan sungai berliku dramatis di Utah [1]. Air yang mengalir di bentang alam memindahkan batu dan tanah sedikit demi sedikit [1].",
-  "story.image_caption": "Meander sungai dalam terukir di batu jurang",
-  "story.image_credit": "Ilustrasi oleh ELIOS",
+  "story.image_caption": "Kelokan Sungai San Juan, difoto dari stasiun luar angkasa pada 6 Okt 2026 [1]",
+  "story.image_credit": "Foto astronaut NASA ISS075-E-188830 (domain publik)",
   "stat.1.value": "120 m",
   "stat.2.value": "20 s",
   "stat.3.value": "6 m/s",
@@ -326,7 +331,7 @@
   "source.3": "[3] BMKG, BMKG Dorong Pemanfaatan Informasi MKG untuk Pengelolaan Bendungan, 7 Nov 2026",
   "source.4": "",
   "source.5": "",
-  "credit.images": "Sampul: Jstuby / Wikimedia Commons (CC0). Gambar lain: Ilustrasi oleh ELIOS.",
+  "credit.images": "Sampul: Jstuby / Wikimedia Commons (CC0). Cerita: foto astronaut NASA ISS075-E-188830 (domain publik).",
   "label.quest_map": "PETA MISIMU",
   "label.fun_fact": "TAHUKAH KAMU?",
   "label.timeline": "LINIMASA",

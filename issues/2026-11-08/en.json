@@ -37,7 +37,12 @@
       "license": "CC0 1.0 (public domain dedication)",
       "credit": "Jstuby / Wikimedia Commons"
     },
-    "story.image": null,
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/taking-a-gander-at-utah%E2%80%99s-goosenecks/ISS075-E-188830.jpg",
+      "license": "Public domain (NASA)",
+      "credit": "NASA astronaut photograph ISS075-E-188830"
+    },
     "physics.diagram": null
   },
   "_graph.1.raw": 6.0,
@@ -199,8 +204,8 @@
   "cover.fun_fact": "These river loops cut through rock millions of years old.",
   "story.title": "The winding river of Utah",
   "story.lead": "Satellite images highlighted dramatic winding river bends in Utah [1]. Water flowing across the landscape moves rock and soil grain by grain [1].",
-  "story.image_caption": "Deep river meanders carved into canyon rock",
-  "story.image_credit": "Illustration by ELIOS",
+  "story.image_caption": "The San Juan River’s goosenecks, photographed from the space station on 6 Oct 2026 [1]",
+  "story.image_credit": "NASA astronaut photograph ISS075-E-188830 (public domain)",
   "stat.1.value": "120 m",
   "stat.2.value": "20 s",
   "stat.3.value": "6 m/s",
@@ -299,5 +304,5 @@
   "source.3": "[3] BMKG, BMKG Dorong Pemanfaatan Informasi MKG untuk Pengelolaan Bendungan, 7 Nov 2026",
   "source.4": "",
   "source.5": "",
-  "credit.images": "Cover: Jstuby / Wikimedia Commons (CC0). Other pictures: Illustration by ELIOS."
+  "credit.images": "Cover: Jstuby / Wikimedia Commons (CC0). Story: NASA astronaut photo ISS075-E-188830 (public domain)."
 }
