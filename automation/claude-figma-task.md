@@ -1,3 +1,5 @@
+Schedule: every day at 05:00 Asia/Jakarta, including weekends.
+
 Task: put today's ELIOS Guide into Figma (EN and ID). Research and writing are already done by another
 agent; you only fill the template. Don't change the template, colours or font sizes.
 

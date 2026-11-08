@@ -1,0 +1,22 @@
+name: daily-publication-health
+
+on:
+  schedule:
+    - cron: '0 1 * * *' # 08:00 WIB, after research, layout and export
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Require today's published issue
+        run: |
+          TODAY=$(TZ=Asia/Jakarta date +%F)
+          curl --fail --retry 2 --max-time 30 -H 'Cache-Control: no-cache' \
+            https://physicsedu-boris.github.io/elios-guides/manifest.json \
+            | jq -e --arg today "$TODAY" 'any(.guides[]; .date == $today)'
+          echo "Today's ELIOS Guide is available." >> "$GITHUB_STEP_SUMMARY"
