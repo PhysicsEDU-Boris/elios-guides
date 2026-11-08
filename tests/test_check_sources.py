@@ -41,3 +41,13 @@ def test_main_exit_code(tmp_path, monkeypatch, capsys):
     monkeypatch.setattr(check_sources, "check", lambda u: "returns HTTP 404" if "b.gov" in u else None)
     assert check_sources.main(tmp_path) == 1
     assert "source 2 https://b.gov/x/y returns HTTP 404" in capsys.readouterr().out
+
+
+def test_validate_flag_adds_source_errors(issue, monkeypatch, capsys):
+    import validate
+    issue.write()
+    monkeypatch.setattr(check_sources, "errors", lambda folder: ["source 2 https://b.gov/x/y returns HTTP 404"])
+    args = [str(issue.folder), "--manifest", str(issue.manifest)]
+    assert validate.main(args) == 0
+    assert validate.main(args + ["--check-sources"]) == 1
+    assert "source 2 https://b.gov/x/y returns HTTP 404" in capsys.readouterr().out
