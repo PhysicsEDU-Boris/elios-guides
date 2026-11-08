@@ -1,0 +1,65 @@
+[
+  {
+    "item": "Source 1",
+    "claim": "NASA Earth Observatory, Taking a Gander at Utah’s Goosenecks, 6 Nov 2026",
+    "source": "https://science.nasa.gov/earth/earth-observatory/taking-a-gander-at-utahs-goosenecks",
+    "pass": true,
+    "note": "Verified via web fetch: published Nov 6, 2026."
+  },
+  {
+    "item": "Source 2",
+    "claim": "NASA Earth Observatory, Cyprus: Island of Snakes, Cats, and Ophiolites, 5 Nov 2026",
+    "source": "https://science.nasa.gov/earth/earth-observatory/cyprus-island-of-snakes-cats-and-ophiolites",
+    "pass": true,
+    "note": "Verified via web fetch: published Nov 5, 2026."
+  },
+  {
+    "item": "Source 3",
+    "claim": "BMKG, BMKG Dorong Pemanfaatan Informasi MKG untuk Pengelolaan Bendungan, 7 Nov 2026",
+    "source": "https://www.bmkg.go.id/berita",
+    "pass": true,
+    "note": "Verified via web fetch: published Nov 7, 2026."
+  },
+  {
+    "item": "Stat 1 / Example distance",
+    "claim": "s = 120 m",
+    "source": "calc.py / en.json",
+    "pass": true,
+    "note": "Consistent distance parameter used in worked example and table."
+  },
+  {
+    "item": "Stat 2 / Example time",
+    "claim": "t = 20 s",
+    "source": "calc.py / en.json",
+    "pass": true,
+    "note": "Consistent time parameter used in worked example and table."
+  },
+  {
+    "item": "Stat 3 / Example speed",
+    "claim": "v = 6 m/s",
+    "source": "calc.py / en.json",
+    "pass": true,
+    "note": "Calculated correctly as 120 ÷ 20 = 6 m/s."
+  },
+  {
+    "item": "Table & Graph values",
+    "claim": "Goosenecks: 6 m/s, Rapid: 9 m/s, Creek: 4.8 m/s",
+    "source": "calc.py / en.json",
+    "pass": true,
+    "note": "Verified via calc.py output and raw graph values."
+  },
+  {
+    "item": "Quiz Answer Key",
+    "claim": "Answer key: 1B · 2A · 3C",
+    "source": "en.json / id.json / _answers",
+    "pass": true,
+    "note": "Matches _answers dictionary: 1: b, 2: a, 3: c."
+  },
+  {
+    "item": "Localization (id.json vs en.json)",
+    "claim": "id.json matches en.json keys, facts, numbers, and answers",
+    "source": "issues/2026-11-08/id.json and en.json",
+    "pass": true,
+    "note": "All keys, numerical values, and quiz answers are identical and correctly localized."
+  }
+]
