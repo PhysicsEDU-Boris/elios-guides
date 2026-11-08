@@ -132,6 +132,58 @@ jobs:
         continue-on-error: true
         run: python scripts/fetch_images.py "issues/$DATE"
 
+      - name: First check
+        id: check1
+        run: |
+          set +e
+          python scripts/validate.py "issues/$DATE" --check-sources > "$RUNNER_TEMP/check1.txt" 2>&1
+          code=$?
+          set -e
+          cat "$RUNNER_TEMP/check1.txt"
+          echo "ok=$([ "$code" -eq 0 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          { echo "problems<<ELIOS_EOF"; cat "$RUNNER_TEMP/check1.txt"; echo "ELIOS_EOF"; } >> "$GITHUB_OUTPUT"
+
+      - name: Repair
+        # One short Gemini pass on the exact problem list; most failures are a few chars over a limit.
+        id: repair
+        if: steps.check1.outputs.ok != 'true' && hashFiles(format('issues/{0}/en.json', env.DATE)) != ''
+        continue-on-error: true
+        timeout-minutes: 10
+        uses: google-github-actions/run-gemini-cli@v0.1.22
+        env:
+          GEMINI_CLI_TRUST_WORKSPACE: "true"
+        with:
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+          gemini_cli_version: "0.67.0"
+          gemini_debug: true
+          gemini_model: gemini-3.5-flash-lite
+          settings: |
+            {"model": {"maxSessionTurns": 30}, "privacy": {"usageStatisticsEnabled": false}, "modelConfigs": {"customAliases": {"gemini-3-flash-base": {"extends": "base", "modelConfig": {"model": "gemini-3.1-flash-lite"}}, "loop-detection-double-check": {"extends": "base", "modelConfig": {"model": "gemini-3.1-flash-lite"}}}}, "tools": {"core": ["google_web_search", "web_fetch", "read_file", "write_file", "list_directory"]}}
+          prompt: >-
+            Follow GEMINI.md. issues/${{ env.DATE }}/en.json and id.json failed these checks:
+            ${{ steps.check1.outputs.problems }}
+            Fix only these problems, in both files, and keep en.json and id.json saying the same thing.
+            Over a limit: shorten the text, keep the facts and [n] tags. Image not downloaded: set
+            source_url to a direct image file you open and confirm, with its real license and credit,
+            or set the image to null and use "Illustration by ELIOS" in the credits. Source that
+            doesn't exist: replace it with the exact page you open, with its real title and date.
+            Change nothing else and write no other files.
+
+      - name: Keep only the files repair may write
+        if: steps.repair.outcome != 'skipped'
+        run: |
+          mkdir -p "issues/$DATE" && find "issues/$DATE" -type f ! -name en.json ! -name id.json ! -name calc.py ! -name sources.md ! -name check.json -print -delete
+          # undo anything repair changed outside issues/ (scripts, tests, manifest) before the final check
+          git ls-files -m | grep -v '^issues/' | xargs -r git checkout --
+          git clean -fdq -e issues/ -e .gemini/ -e gemini-artifacts/
+
+      - name: Calc and images again
+        if: steps.repair.outcome != 'skipped'
+        continue-on-error: true
+        run: |
+          python scripts/run_calc.py "issues/$DATE" || true
+          python scripts/fetch_images.py "issues/$DATE"
+
       - name: Validate
         id: validate
         env:
@@ -139,15 +191,12 @@ jobs:
           CALC: ${{ steps.calc.outcome }}
           FACTCHECK: ${{ steps.factcheck.outcome }}
           IMAGES: ${{ steps.images.outcome }}
+          REPAIR: ${{ steps.repair.outcome }}
         run: |
           set +e
-          python scripts/validate.py "issues/$DATE" > "$RUNNER_TEMP/validate.txt" 2>&1
+          # --check-sources opens every source url (Gemini's fact-check once approved invented ones).
+          python scripts/validate.py "issues/$DATE" --check-sources > "$RUNNER_TEMP/validate.txt" 2>&1
           code=$?
-          # Gemini's fact-check once approved invented article urls; this opens each one.
-          python scripts/check_sources.py "issues/$DATE" > "$RUNNER_TEMP/sources.txt" 2>&1 || {
-            code=1
-            { echo "SOURCES THAT DON'T EXIST:"; cat "$RUNNER_TEMP/sources.txt"; } >> "$RUNNER_TEMP/validate.txt"
-          }
           set -e
           cat "$RUNNER_TEMP/validate.txt"
           echo "ok=$([ "$code" -eq 0 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
@@ -159,7 +208,7 @@ jobs:
           {
             echo "Automated research for **$DATE** (run $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)."
             echo
-            echo "Steps: research **$RESEARCH** · calc **$CALC** · fact-check **$FACTCHECK** · images **$IMAGES**"
+            echo "Steps: research **$RESEARCH** · calc **$CALC** · fact-check **$FACTCHECK** · images **$IMAGES** · repair **$REPAIR**"
             echo
             echo '```'
             cat "$RUNNER_TEMP/validate.txt"

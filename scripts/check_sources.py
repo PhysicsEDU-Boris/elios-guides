@@ -42,9 +42,13 @@ def check(url):
     return None
 
 
-def main(folder):
+def errors(folder):
     sources = json.loads((Path(folder) / "en.json").read_text(encoding="utf-8")).get("_sources") or []
-    errs = [f"source {s.get('n')} {s.get('url')} {why}" for s in sources if (why := check(str(s.get("url", "")))) ]
+    return [f"source {s.get('n')} {s.get('url')} {why}" for s in sources if (why := check(str(s.get("url", ""))))]
+
+
+def main(folder):
+    errs = errors(folder)
     for e in errs:
         print(f"- {e}")
     return 1 if errs else 0

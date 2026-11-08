@@ -210,9 +210,12 @@ def check(folder, manifest_path=ROOT / "manifest.json"):
 
 def main(argv):
     if not argv or argv[0].startswith("-"):
-        sys.exit("usage: validate.py issues/YYYY-MM-DD [--manifest manifest.json]")
+        sys.exit("usage: validate.py issues/YYYY-MM-DD [--manifest manifest.json] [--check-sources]")
     manifest = Path(argv[argv.index("--manifest") + 1]) if "--manifest" in argv else ROOT / "manifest.json"
     errs = check(argv[0], manifest)
+    if "--check-sources" in argv and (Path(argv[0]) / "en.json").is_file():
+        import check_sources  # network: opens every source url
+        errs += check_sources.errors(argv[0])
     if errs:
         print(f"VALIDATION FAILED ({len(errs)} problems):")
         print("\n".join(f"- {e}" for e in errs))
