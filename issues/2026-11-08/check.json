@@ -1,0 +1,79 @@
+[
+  {
+    "item": "Source 1",
+    "claim": "NASA Earth Observatory article 'Taking a Gander at Utah’s Goosenecks' published on 6 Nov 2026",
+    "source": "https://earthobservatory.nasa.gov/images/154823/taking-a-gander-at-utahs-goosenecks",
+    "pass": true,
+    "note": "Verified via web fetch; title, date, and subject (San Juan River meanders in Utah) match."
+  },
+  {
+    "item": "Source 2",
+    "claim": "NASA Earth Observatory article 'Cyprus: Island of Snakes, Cats, and Ophiolites' published on 5 Nov 2026",
+    "source": "https://earthobservatory.nasa.gov/images/cyprus-island-of-snakes-cats-and-ophiolites",
+    "pass": true,
+    "note": "Verified via web fetch; title and date match."
+  },
+  {
+    "item": "Source 3",
+    "claim": "NASA Earth Observatory article 'Before the Dawn in America’s Heartland' published on 4 Nov 2026",
+    "source": "https://earthobservatory.nasa.gov/images/before-the-dawn-in-americas-heartland",
+    "pass": true,
+    "note": "Verified via web fetch; title and date match."
+  },
+  {
+    "item": "Stat 1 / Water Mass",
+    "claim": "Mass of one cubic metre of water is 1,000 kg",
+    "source": "Standard physical property of water / calc.py",
+    "pass": true,
+    "note": "Accurate physical constant."
+  },
+  {
+    "item": "Stat 2 / Gravitational Field Strength",
+    "claim": "Gravitational field strength g = 9.81 m/s²",
+    "source": "Standard physics value / calc.py",
+    "pass": true,
+    "note": "Accurate standard value for Earth."
+  },
+  {
+    "item": "Stat 3 / Example Potential Energy",
+    "claim": "Potential energy for a 10m drop of 1000 kg water is 98.1 kJ (98,100 J)",
+    "source": "calc.py / physics calculation (1000 * 9.81 * 10)",
+    "pass": true,
+    "note": "Calculation verified: 1000 * 9.81 * 10 = 98,100 J = 98.1 kJ."
+  },
+  {
+    "item": "Table Row 1",
+    "claim": "5 m drop, 1,000 kg -> 49.05 kJ",
+    "source": "calc.py / physics calculation (1000 * 9.81 * 5)",
+    "pass": true,
+    "note": "Calculation verified: 1000 * 9.81 * 5 = 49,050 J = 49.05 kJ."
+  },
+  {
+    "item": "Table Row 2",
+    "claim": "10 m drop, 1,000 kg -> 98.1 kJ",
+    "source": "calc.py / physics calculation (1000 * 9.81 * 10)",
+    "pass": true,
+    "note": "Calculation verified: 1000 * 9.81 * 10 = 98,100 J = 98.1 kJ."
+  },
+  {
+    "item": "Table Row 3",
+    "claim": "20 m drop, 1,000 kg -> 196.2 kJ",
+    "source": "calc.py / physics calculation (1000 * 9.81 * 20)",
+    "pass": true,
+    "note": "Calculation verified: 1000 * 9.81 * 20 = 196,200 J = 196.2 kJ."
+  },
+  {
+    "item": "Quiz Answers & Key",
+    "claim": "Quiz answers are 1B, 2A, 3C corresponding to Height, Colour of water, and Joule",
+    "source": "en.json / id.json",
+    "pass": true,
+    "note": "Answers correctly align with physics principles and question options."
+  },
+  {
+    "item": "id.json alignment",
+    "claim": "id.json says the same as en.json in natural Bahasa Indonesia",
+    "source": "issues/2026-11-08/id.json vs en.json",
+    "pass": true,
+    "note": "All keys, facts, numbers, and quiz answers match en.json. (Note: id.json has an extra 'editor': 1 field in quiz pool item 6 which does not affect functionality)."
+  }
+]
