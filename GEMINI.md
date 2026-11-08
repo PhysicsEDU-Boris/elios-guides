@@ -15,10 +15,17 @@ Every reference to manifest.json below means this catalogue. It contains the dep
 - At least 3 sources, at least one primary (BMKG, BNPB, NASA, NOAA, WMO, WHO, UNEP, UNFCCC,
   Copernicus, CREA, universities, peer-reviewed journals). News sites only for context.
 - Each source url is the exact article, report or data page you opened, never a homepage.
-  Its title and date are copied from that page.
+  Its title and date are copied from that page. Every source must be about this event: a script
+  checks that its article text names at least 2 topic keywords (words of _slug and cover.place plus
+  _keywords), and that each source is cited with [n] somewhere.
+- _theme: one of water, heat, air, energy, waste, storm (picks the cover mascot and the app colours).
+- _keywords: 2-4 extra words the sources use for this topic, including the Indonesian ones when a source
+  is Indonesian (e.g. ["banjir", "flood"]).
 
 ## Facts
 - Every number, date, name and place comes from a source you opened, or from calc.py. Never invent.
+  A script checks every number in stat.N.value, story.* and cover.*: it must be in a source page or
+  be a value calc.py computes. Numbers typed into calc.py are inputs and need a source too.
 - Put [n] tags (n = _sources entry) at the end of sentences that use a source.
 - Paraphrase. No quote longer than 10 words.
 
@@ -35,8 +42,12 @@ Every reference to manifest.json below means this catalogue. It contains the dep
   quiz.answer_key = "Answer key: 1B · 2A · 3C" (EN) / "Kunci: 1B · 2A · 3C" (ID).
 - Mini lab: cheap household items, no flame, no heat, no electricity from the mains, no chemicals
   beyond salt, sugar, flour, vinegar, baking soda. Children film only their hands.
-- _quiz_pool: 10 extra questions with a short explanation each. _lab_rubric: what photos of the lab
-  must show.
+- _quiz_explain (app only): for each printed question "1"-"3", "why" the right answer is right (one
+  sentence, max 140 chars) and optional "wrong": {"a": "...", ...} for wrong options only (max 100).
+- _quiz_pool (app only): 6 extra questions (at least 4), each {question, options (4), answer (index 0-3),
+  explanation}, for "Try the quiz again".
+- _lab_rubric (app only): {must_show: 2-4 things the photos must show, safety: [...], pass_if: one
+  sentence}. Write it in Bahasa Indonesia in id.json.
 - XP: section XP 10 + 20 + 30, guide.xp "+60 XP", badge.xp "0 / 60 XP".
 
 ## Images
@@ -44,12 +55,15 @@ Every reference to manifest.json below means this catalogue. It contains the dep
   with a CC licence (credit author + licence), BMKG. No news-agency photos, no children, no
   identifiable private people. Fill _images with source_url, license and credit. If none fits, set it
   to null and write "Illustration by ELIOS" in the credit.
-- source_url is the direct image file (https, image/jpeg or image/png, under 8 MB), not the web page
-  about it. Wikimedia: an upload.wikimedia.org thumbnail at a standard width (e.g. 1280px-…).
-  file is a plain name such as cover.jpg or story.jpg. Never reuse a URL from the example files.
+- source_url is the direct ORIGINAL image file (https, image/jpeg or image/png, under 30 MB), not the
+  web page about it and not a thumbnail. Wikimedia: the upload.wikimedia.org original (no /thumb/).
+  NASA/NOAA/USGS: the largest rendition offered. The cover photo needs a long side of at least
+  1600 px, the story photo 1200 px, and both must be sharp (no haze, motion blur or heavy JPEG blocks);
+  a script rejects the rest. file is a plain name such as cover.jpg or story.jpg. Never reuse a URL
+  from the example files.
 - story.image: when your main source is a NASA, NOAA, USGS or ESA article, use that article's main
-  image. Open the article and copy the image file url: the normal size, not the "_lrg" version
-  (it is often over 8 MB). The caption says what the photo shows and when it was taken, with the [n]
+  image. Open the article and copy the image file url of the largest version (the "_lrg" or original
+  file when it is under 30 MB). The caption says what the photo shows and when it was taken, with the [n]
   tag. The credit names the agency and the image ID (e.g. "NASA astronaut photograph ISS075-E-188830").
   Set story.image to null only if the main source has no reusable image.
 - NASA Earth Observatory now lives at science.nasa.gov/earth/earth-observatory/ and its images at
@@ -69,7 +83,7 @@ Every reference to manifest.json below means this catalogue. It contains the dep
   not their facts.
 
 ## id.json
-- Same keys, same facts, same correct answers, natural Bahasa Indonesia, decimal comma and dot
+- Same keys, same facts, same correct answers (also in _quiz_pool), same _theme, natural Bahasa Indonesia, decimal comma and dot
   thousands (9,81 · 5.310 · 57,8 jt). Months: JAN FEB MAR APR MEI JUN JUL AGU SEP OKT NOV DES.
 - Source titles stay in their original language.
 - Also set these labels:

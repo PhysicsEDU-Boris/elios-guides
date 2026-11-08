@@ -4,6 +4,7 @@ import sys
 from pathlib import Path
 
 import pytest
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -29,7 +30,24 @@ def id_from(en):
     d = dict(en, _lang="id", **{"guide.lang": "ID", "quiz.answer_key": "Kunci: 1B · 2A · 3C"}, **ID_LABELS)
     for k in NUMBER_KEYS:
         d[k] = d[k].translate(str.maketrans({",": ".", ".": ","}))
+    d["_lab_rubric"] = dict(en["_lab_rubric"], pass_if="Foto menunjukkan kedua gelas di awal dan setelah 20 menit.")
     return d
+
+
+def write_pdf(path, pages=4):
+    from pypdf import PdfWriter
+    writer = PdfWriter()
+    for _ in range(pages):
+        writer.add_blank_page(width=595, height=842)
+    with open(path, "wb") as stream:
+        writer.write(stream)
+
+
+def write_photos(folder, size=(2000, 1333)):
+    im = Image.new("RGB", size, "white")
+    im.save(folder / "photo.jpg", "JPEG", quality=85, progressive=True)
+    im.thumbnail((800, 800))
+    im.save(folder / "photo-800.jpg", "JPEG", quality=82, progressive=True)
 
 
 class Issue:
@@ -43,7 +61,7 @@ class Issue:
         self.calc = dict(CALC_OUT)
         self.check = [{"item": "stat.1", "claim": "4,200 J", "source": 2, "pass": True, "note": ""}]
         self.guides = []
-        (self.folder / "cover.jpg").write_bytes(b"jpg")
+        Image.new("RGB", (1600, 1000), "white").save(self.folder / "cover.jpg")
 
     def write(self):
         for name, obj in (("en.json", self.en), ("id.json", self.id), ("calc.out.json", self.calc), ("check.json", self.check)):

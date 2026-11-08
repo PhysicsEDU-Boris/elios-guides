@@ -37,6 +37,7 @@ jobs:
           [[ "$ISSUE_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]] || exit 1
       - uses: actions/checkout@v4
         with:
+          ref: main # the checks that apply are main's, also when called from a guide/<date> push
           path: tools
           persist-credentials: false
       - uses: actions/checkout@v4

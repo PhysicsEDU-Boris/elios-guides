@@ -1,0 +1,101 @@
+name: resync
+
+# Owner edits to an issue's text (on guide/<date> directly or by merging a correction PR into it):
+# check again, then either mark a Figma refill (resync.json) or publish app-only changes directly.
+on:
+  push:
+    branches: ["guide/**", "!guide/dry-run-**"]
+    paths: ["issues/*/en.json", "issues/*/id.json"]
+  pull_request:
+    branches: ["guide/**"]
+    paths: ["issues/*/en.json", "issues/*/id.json"]
+
+permissions:
+  contents: write
+  pull-requests: write
+  pages: write
+  id-token: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: resync-${{ github.base_ref || github.ref_name }}
+    outputs:
+      action: ${{ steps.decide.outputs.action }}
+      date: ${{ steps.date.outputs.date }}
+    steps:
+      - name: Pick date
+        id: date
+        env:
+          BRANCH: ${{ github.base_ref || github.ref_name }}
+        run: |
+          DATE="${BRANCH#guide/}"
+          if ! [[ "$DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then echo "::error::bad branch '$BRANCH'"; exit 1; fi
+          echo "DATE=$DATE" >> "$GITHUB_ENV"
+          echo "date=$DATE" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: ${{ github.event_name == 'push' }}
+
+      - name: Use main's checks
+        # The guide branch may carry old scripts; the rules that apply are main's.
+        run: |
+          git fetch origin main published
+          git checkout origin/main -- scripts schema requirements.txt
+          git show origin/published:manifest.json | jq --arg d "$DATE" 'del(.guides[] | select(.date == $d))' > "$RUNNER_TEMP/manifest.json"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: Validate and fact-check
+        id: validate
+        run: |
+          set +e
+          python scripts/validate.py "issues/$DATE" --manifest "$RUNNER_TEMP/manifest.json" --check-sources > "$RUNNER_TEMP/validate.txt" 2>&1
+          code=$?
+          set -e
+          cat "$RUNNER_TEMP/validate.txt"
+          { echo '```'; cat "$RUNNER_TEMP/validate.txt"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          exit "$code"
+
+      - name: Mark NEEDS FIX
+        if: failure() && steps.validate.outcome == 'failure' && github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr edit "guide/$DATE" --title "ELIOS Guide $DATE · NEEDS FIX" || echo "no PR for guide/$DATE"
+
+      - name: Decide
+        id: decide
+        if: github.event_name == 'push'
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/old"
+          for f in en.json id.json; do git show "$BEFORE:issues/$DATE/$f" > "$RUNNER_TEMP/old/$f" 2>/dev/null || rm -f "$RUNNER_TEMP/old/$f"; done
+          ACTION=$(python scripts/resync.py "issues/$DATE" "$RUNNER_TEMP/old")
+          echo "action=$ACTION" >> "$GITHUB_OUTPUT"
+          echo "Resync action: **$ACTION**" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Push resync.json for the Claude/Figma task
+        if: steps.decide.outputs.action == 'figma'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "issues/$DATE/resync.json"
+          git commit -m "resync: issue $DATE needs a Figma refill"
+          git push origin "HEAD:guide/$DATE"
+
+  publish:
+    # App-only fields changed and the issue is already in Figma: same date, new revision and content_sha.
+    needs: check
+    if: needs.check.outputs.action == 'publish'
+    uses: ./.github/workflows/publish.yml
+    with:
+      date: ${{ needs.check.outputs.date }}
