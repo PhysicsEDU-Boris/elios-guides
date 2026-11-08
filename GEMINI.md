@@ -44,6 +44,14 @@ English and Bahasa Indonesia, about the physics behind one real environmental ne
 - source_url is the direct image file (https, image/jpeg or image/png, under 8 MB), not the web page
   about it. Wikimedia: an upload.wikimedia.org thumbnail at a standard width (e.g. 1280px-…).
   file is a plain name such as cover.jpg or story.jpg. Never reuse a URL from the example files.
+- story.image: when your main source is a NASA, NOAA, USGS or ESA article, use that article's main
+  image. Open the article and copy the image file url: the normal size, not the "_lrg" version
+  (it is often over 8 MB). The caption says what the photo shows and when it was taken, with the [n]
+  tag. The credit names the agency and the image ID (e.g. "NASA astronaut photograph ISS075-E-188830").
+  Set story.image to null only if the main source has no reusable image.
+- NASA Earth Observatory now lives at science.nasa.gov/earth/earth-observatory/ and its images at
+  assets.science.nasa.gov. The old earthobservatory.nasa.gov and eoimages.gsfc.nasa.gov urls are gone.
+- Every source url is opened by a script after you finish. Invented or guessed urls fail the issue.
 
 ## Budget
 - The free API allows few requests. Use at most 6 web searches and 8 page fetches for research.
@@ -56,10 +64,6 @@ English and Bahasa Indonesia, about the physics behind one real environmental ne
 - _issue is two digits: one more than the newest issue in manifest.json, or "01" if it is empty.
 - schema/example.en.json and schema/example.calc.py show one complete, valid issue. Copy their shape,
   not their facts.
-
-- NASA Earth Observatory now lives at science.nasa.gov/earth/earth-observatory/ and its images at
-  assets.science.nasa.gov. The old earthobservatory.nasa.gov and eoimages.gsfc.nasa.gov urls are gone.
-- Every source url is opened by a script after you finish. Invented or guessed urls fail the issue.
 
 ## id.json
 - Same keys, same facts, same correct answers, natural Bahasa Indonesia, decimal comma and dot
