@@ -9,6 +9,11 @@ on:
         description: "Issue date YYYY-MM-DD (empty = today in Asia/Jakarta)"
         required: false
         type: string
+      dry_run:
+        description: "Dry run: write to guide/dry-run-<date>, never Figma, export or publish"
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -21,21 +26,26 @@ jobs:
     outputs:
       date: ${{ steps.date.outputs.date }}
       skip: ${{ steps.date.outputs.skip }}
+      branch: ${{ steps.date.outputs.branch }}
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ inputs.dry_run && github.ref || 'main' }}
           persist-credentials: false
       - name: Pick date and skip if it exists
         id: date
         env:
           INPUT_DATE: ${{ inputs.date }}
+          DRY_RUN: ${{ inputs.dry_run }}
         run: |
           DATE="${INPUT_DATE:-$(TZ=Asia/Jakarta date +%F)}"
           if ! [[ "$DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then echo "::error::bad date '$DATE'"; exit 1; fi
+          BRANCH="guide/$DATE"
+          if [ "$DRY_RUN" = "true" ]; then BRANCH="guide/dry-run-$DATE"; fi
           echo "date=$DATE" >> "$GITHUB_OUTPUT"
-          if [ -d "issues/$DATE" ] || git ls-remote --exit-code --heads origin "guide/$DATE" > /dev/null; then
-            echo "issues/$DATE already exists on main or guide/$DATE; nothing to do."
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+          if { [ "$DRY_RUN" != "true" ] && [ -d "issues/$DATE" ]; } || git ls-remote --exit-code --heads origin "$BRANCH" > /dev/null; then
+            echo "issues/$DATE already exists on main or $BRANCH; nothing to do."
             echo "skip=true" >> "$GITHUB_OUTPUT"
           fi
 
@@ -48,10 +58,12 @@ jobs:
       group: guide-${{ needs.prep.outputs.date }}
     env:
       DATE: ${{ needs.prep.outputs.date }}
+      BRANCH: ${{ needs.prep.outputs.branch }}
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          # Dry runs test the dispatched branch's scripts; real runs always use main.
+          ref: ${{ inputs.dry_run && github.ref || 'main' }}
           persist-credentials: false
 
       - uses: actions/setup-python@v5
@@ -107,6 +119,29 @@ jobs:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           gemini_cli_version: "0.67.0"
           gemini_debug: true # stream output to the log; GitHub masks the key as ***
+          # Stronger than Flash-Lite. Free tier Flash: 5 RPM / 20 RPD, used only here, so turns stay under 20.
+          # Override with the repository variable FACTCHECK_MODEL (e.g. after a paid key).
+          gemini_model: ${{ vars.FACTCHECK_MODEL || 'gemini-3-flash-preview' }}
+          settings: |
+            {"model": {"maxSessionTurns": 18}, "privacy": {"usageStatisticsEnabled": false}, "modelConfigs": {"customAliases": {"gemini-3-flash-base": {"extends": "base", "modelConfig": {"model": "gemini-3.5-flash-lite"}}, "loop-detection-double-check": {"extends": "base", "modelConfig": {"model": "gemini-3.5-flash-lite"}}}}, "tools": {"core": ["google_web_search", "web_fetch", "read_file", "write_file", "list_directory"]}}
+          prompt: >-
+            You did not write these files. Open every source URL in issues/${{ needs.prep.outputs.date }}/en.json
+            and check every number, date, name and quiz answer, and that id.json says the same as en.json.
+            Write issues/${{ needs.prep.outputs.date }}/check.json as [{item, claim, source, pass, note}].
+            Mark pass=false if you cannot confirm it. Do not change any other file.
+
+      - name: Fact-check again with Flash-Lite (stronger model out of quota)
+        id: factcheck_lite
+        if: steps.factcheck.outcome != 'success' || hashFiles(format('issues/{0}/check.json', env.DATE)) == ''
+        continue-on-error: true
+        timeout-minutes: 15
+        uses: google-github-actions/run-gemini-cli@v0.1.22
+        env:
+          GEMINI_CLI_TRUST_WORKSPACE: "true" # headless CI; without it the CLI refuses to run
+        with:
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+          gemini_cli_version: "0.67.0"
+          gemini_debug: true # stream output to the log; GitHub masks the key as ***
           gemini_model: gemini-3.1-flash-lite
           settings: |
             {"model": {"maxSessionTurns": 40}, "privacy": {"usageStatisticsEnabled": false}, "modelConfigs": {"customAliases": {"gemini-3-flash-base": {"extends": "base", "modelConfig": {"model": "gemini-3.5-flash-lite"}}, "loop-detection-double-check": {"extends": "base", "modelConfig": {"model": "gemini-3.5-flash-lite"}}}}, "tools": {"core": ["google_web_search", "web_fetch", "read_file", "write_file", "list_directory"]}}
@@ -136,7 +171,9 @@ jobs:
       - name: Fetch images
         id: images
         continue-on-error: true
-        run: python scripts/fetch_images.py "issues/$DATE"
+        run: |
+          set -o pipefail
+          python scripts/fetch_images.py "issues/$DATE" | tee "$RUNNER_TEMP/images.txt"
 
       - name: First check
         id: check1
@@ -187,8 +224,10 @@ jobs:
         if: steps.repair.outcome != 'skipped'
         continue-on-error: true
         run: |
+          set -o pipefail
           python scripts/run_calc.py "issues/$DATE" || true
-          python scripts/fetch_images.py "issues/$DATE"
+          # last attempt: a photo that still fails the size/sharpness/JPEG checks becomes null
+          python scripts/fetch_images.py "issues/$DATE" --drop-failed | tee "$RUNNER_TEMP/images.txt"
 
       - name: Validate
         id: validate
@@ -196,6 +235,8 @@ jobs:
           RESEARCH: ${{ steps.research.outcome }}
           CALC: ${{ steps.calc.outcome }}
           FACTCHECK: ${{ steps.factcheck.outcome }}
+          FACTCHECK_LITE: ${{ steps.factcheck_lite.outcome }}
+          DRY_RUN: ${{ inputs.dry_run }}
           IMAGES: ${{ steps.images.outcome }}
           REPAIR: ${{ steps.repair.outcome }}
         run: |
@@ -205,16 +246,24 @@ jobs:
           code=$?
           set -e
           cat "$RUNNER_TEMP/validate.txt"
+          cat "$RUNNER_TEMP/validate.txt" >> "$GITHUB_STEP_SUMMARY"
           echo "ok=$([ "$code" -eq 0 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          PREFIX=""
+          if [ "$DRY_RUN" = "true" ]; then PREFIX="DRY RUN · "; fi
           if [ "$code" -eq 0 ]; then
-            echo "title=ELIOS Guide $DATE · waiting for Figma" >> "$GITHUB_OUTPUT"
+            echo "title=${PREFIX}ELIOS Guide $DATE · waiting for Figma" >> "$GITHUB_OUTPUT"
           else
-            echo "title=ELIOS Guide $DATE · NEEDS FIX" >> "$GITHUB_OUTPUT"
+            echo "title=${PREFIX}ELIOS Guide $DATE · NEEDS FIX" >> "$GITHUB_OUTPUT"
           fi
           {
             echo "Automated research for **$DATE** (run $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)."
             echo
-            echo "Steps: research **$RESEARCH** · calc **$CALC** · fact-check **$FACTCHECK** · images **$IMAGES** · repair **$REPAIR**"
+            echo "Steps: research **$RESEARCH** · calc **$CALC** · fact-check **$FACTCHECK** (Flash-Lite fallback **$FACTCHECK_LITE**) · images **$IMAGES** · repair **$REPAIR**"
+            echo
+            echo "Photos (long side px, Laplacian variance, estimated JPEG quality):"
+            echo '```'
+            cat "$RUNNER_TEMP/images.txt" 2>/dev/null || echo "no image step output"
+            echo '```'
             echo
             echo '```'
             cat "$RUNNER_TEMP/validate.txt"
@@ -231,7 +280,7 @@ jobs:
         uses: peter-evans/create-pull-request@v8.1.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: guide/${{ env.DATE }}
+          branch: ${{ env.BRANCH }}
           base: main
           add-paths: issues/${{ env.DATE }}
           commit-message: "guide: research ${{ env.DATE }}"

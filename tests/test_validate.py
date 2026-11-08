@@ -222,3 +222,74 @@ def test_homepage_source(issue):
 def test_issue_number_format(issue):
     issue.id["_issue"] = "1"
     has(issue.errors(), "id: _issue '1' must be at least two digits")
+
+
+# --- G4: app-only fields, theme, photo and cover checks ---
+
+def test_theme_required_and_known(issue):
+    issue.en["_theme"] = issue.id["_theme"] = "space"
+    has(issue.errors(), "_theme must be one of")
+
+
+def test_theme_same_in_both(issue):
+    issue.id["_theme"] = "water"
+    has(issue.errors(), "_theme must be one of")
+
+
+def test_quiz_explain_missing(issue):
+    del issue.id["_quiz_explain"]["3"]
+    has(issue.errors(), "id: _quiz_explain needs entries")
+
+
+def test_quiz_explain_why_too_long(issue):
+    issue.en["_quiz_explain"]["1"]["why"] = "x" * 141
+    has(issue.errors(), "en: _quiz_explain.1.why")
+
+
+def test_quiz_explain_wrong_must_not_explain_the_right_option(issue):
+    issue.en["_quiz_explain"]["1"]["wrong"]["b"] = "Concrete is right."
+    has(issue.errors(), "en: _quiz_explain.1.wrong")
+
+
+def test_quiz_pool_needs_four(issue):
+    issue.en["_quiz_pool"] = issue.en["_quiz_pool"][:3]
+    issue.id["_quiz_pool"] = issue.id["_quiz_pool"][:3]
+    has(issue.errors(), "en: _quiz_pool needs at least 4 questions")
+
+
+def test_quiz_pool_answer_index_out_of_range(issue):
+    issue.en["_quiz_pool"][2] = dict(issue.en["_quiz_pool"][2], answer=4)
+    has(issue.errors(), "en: _quiz_pool[2].answer 4 is not an option index 0-3")
+
+
+def test_lab_rubric_missing_in_id(issue):
+    del issue.id["_lab_rubric"]
+    has(issue.errors(), "id: _lab_rubric needs")
+
+
+def test_lab_rubric_must_be_indonesian(issue):
+    issue.id["_lab_rubric"] = issue.en["_lab_rubric"]
+    has(issue.errors(), "id: _lab_rubric must be written in Indonesian")
+
+
+def test_cover_image_too_small(issue):
+    from PIL import Image
+    Image.new("RGB", (1280, 853)).save(issue.folder / "cover.jpg")
+    has(issue.errors(), "cover.image cover.jpg long side is 1280 px, needs at least 1600 px")
+
+
+def test_photo_rules(issue):
+    from PIL import Image
+    from conftest import write_photos
+    write_photos(issue.folder)
+    assert issue.errors() == []
+    Image.new("RGB", (2000, 1333)).save(issue.folder / "photo.jpg", "JPEG", quality=85)  # baseline, not progressive
+    has(issue.errors(), "photo.jpg must be a progressive RGB JPEG")
+    write_photos(issue.folder, (1500, 1000))
+    has(issue.errors(), "photo photo.jpg long side is 1500 px, needs at least 1600 px")
+
+
+def test_cover_png_scale_2(issue):
+    from PIL import Image
+    Image.new("RGB", (595, 842)).save(issue.folder / "elios-guide-00-x-cover-en.png")
+    has(issue.errors(), "is 595x842, needs at least 1190x1684")

@@ -50,7 +50,7 @@ def publish(date, source, site, check_urls=False):
         errors.append("invalid asset filename")
     if errors:
         raise ValueError("\n".join(errors))
-    names = ["en.json", "id.json"]
+    names, photos = update_manifest.public_files(en)
     for lang in ("en", "id"):
         pdf = f"{base}-{lang}.pdf"
         png = f"{base}-cover-{lang}.png"
@@ -60,12 +60,15 @@ def publish(date, source, site, check_urls=False):
             if image.format != "PNG":
                 raise ValueError(f"{png} must be a PNG")
             image.verify()
-        names += [pdf, png]
+    names += [n for n in photos if (folder / n).is_file()]  # validate.check already checked photo rules
     # All validation completes before touching the previously published site.
     target = site / "issues" / date
     target.mkdir(parents=True, exist_ok=True)
     for name in names:
         shutil.copyfile(folder / name, target / name)
+    for name in photos:
+        if name not in names:
+            (target / name).unlink(missing_ok=True)  # a re-publish without a photo must not keep the old one
     if not manifest.exists():
         manifest.write_text(json.dumps(catalogue))
     entry = update_manifest.update(date, site)

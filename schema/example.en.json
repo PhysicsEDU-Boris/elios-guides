@@ -2,6 +2,8 @@
   "_example": true,
   "_issue": "00",
   "_slug": "example-hot-city-surfaces",
+  "_theme": "heat",
+  "_keywords": ["urban heat", "panas"],
   "_date": "2026-11-09",
   "_lang": "en",
   "_sources": [
@@ -18,6 +20,11 @@
   "_graph.2.raw": 23.9,
   "_graph.3.raw": 22.8,
   "_answers": {"1": "b", "2": "a", "3": "c"},
+  "_quiz_explain": {
+    "1": {"why": "Concrete has a smaller specific heat than water, so the same energy warms it more.", "wrong": {"a": "Water has a big c, so it warms slowly.", "c": "Wet soil holds water, which slows warming.", "d": "Sea water has a big c, like all water."}},
+    "2": {"why": "Δ means 'change in', so ΔT is the change in temperature.", "wrong": {"b": "Time is t, not ΔT.", "c": "Thickness is not in this equation.", "d": "Total energy is Q."}},
+    "3": {"why": "Trees give shade and their water evaporates, which takes heat away.", "wrong": {"a": "Black roofs absorb more sunlight.", "b": "Car parks are dark concrete that store heat.", "d": "Windows do not change how much heat the street stores."}}
+  },
   "_quiz_pool": [
     {"question": "What does c stand for in Q = m × c × ΔT?", "options": ["Speed of light", "Specific heat capacity", "Celsius", "Current"], "answer": 1, "explanation": "c tells how much energy 1 kg needs to warm by 1 °C."},
     {"question": "Which warms fastest with the same energy?", "options": ["Water", "Concrete", "Sea", "Ice cream"], "answer": 1, "explanation": "Concrete has a smaller c than water, so its temperature rises more."},

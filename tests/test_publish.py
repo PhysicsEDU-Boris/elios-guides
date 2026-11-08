@@ -5,6 +5,7 @@ from PIL import Image
 from pypdf import PdfWriter
 
 import publish
+from conftest import write_photos
 
 
 def exported(issue):
@@ -18,7 +19,7 @@ def exported(issue):
             writer.add_blank_page(width=595, height=842)
         with open(issue.folder / f'{base}-{lang}.pdf', 'wb') as stream:
             writer.write(stream)
-        Image.new('RGB', (4, 4)).save(issue.folder / f'{base}-cover-{lang}.png')
+        Image.new('RGB', (1190, 1684)).save(issue.folder / f'{base}-cover-{lang}.png')
     return base
 
 
@@ -38,7 +39,22 @@ def test_publish_preserves_archive_and_copies_only_public_files(issue, tmp_path)
     assert len(json.loads((site / 'manifest.json').read_text())['guides']) == 2
 
 
-@pytest.mark.parametrize('failure', ['factcheck', 'example', 'pdf', 'png', 'symlink'])
+def test_publish_copies_photos_and_drops_stale_ones(issue, tmp_path):
+    exported(issue)
+    write_photos(issue.folder)
+    site = tmp_path / 'site'
+    site.mkdir()
+    entry = publish.publish('2026-11-09', issue.root, site)
+    out = site / 'issues' / '2026-11-09'
+    assert (out / 'photo.jpg').is_file() and (out / 'photo-800.jpg').is_file()
+    assert entry['photo']['src'] == 'issues/2026-11-09/photo.jpg'
+    for name in ('photo.jpg', 'photo-800.jpg'):
+        (issue.folder / name).unlink()
+    assert publish.publish('2026-11-09', issue.root, site)['photo'] is None
+    assert not (out / 'photo.jpg').exists()
+
+
+@pytest.mark.parametrize('failure', ['factcheck', 'example', 'pdf', 'png', 'symlink', 'small-png'])
 def test_invalid_issue_does_not_change_published_site(issue, tmp_path, failure):
     base = exported(issue)
     if failure == 'factcheck':
@@ -53,6 +69,8 @@ def test_invalid_issue_does_not_change_published_site(issue, tmp_path, failure):
             writer.write(stream)
     elif failure == 'png':
         (issue.folder / f'{base}-cover-id.png').write_bytes(b'bad')
+    elif failure == 'small-png':
+        Image.new('RGB', (595, 842)).save(issue.folder / f'{base}-cover-en.png')
     elif failure == 'symlink':
         (issue.folder / 'unexpected').symlink_to(issue.manifest)
     site = tmp_path / 'site'

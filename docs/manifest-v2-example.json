@@ -1,0 +1,58 @@
+{
+  "guides": [
+    {
+      "revision": "94f9f52ef22a7ed0f527f3f00335b29baf6e0d598a176ba7e48e531f43d9a93a",
+      "date": "2026-11-08",
+      "issue": "01",
+      "slug": "utah-goosenecks-river-flow",
+      "xp": 60,
+      "title": {
+        "en": "How fast rivers carve deep rocks",
+        "id": "Secepat apa sungai mengikis batu"
+      },
+      "topic": {
+        "en": "Water flow",
+        "id": "Aliran air"
+      },
+      "cover": {
+        "en": "issues/2026-11-08/elios-guide-01-utah-goosenecks-river-flow-cover-en.png",
+        "id": "issues/2026-11-08/elios-guide-01-utah-goosenecks-river-flow-cover-id.png"
+      },
+      "pdf": {
+        "en": "issues/2026-11-08/elios-guide-01-utah-goosenecks-river-flow-en.pdf",
+        "id": "issues/2026-11-08/elios-guide-01-utah-goosenecks-river-flow-id.pdf"
+      },
+      "content": {
+        "en": "issues/2026-11-08/en.json",
+        "id": "issues/2026-11-08/id.json"
+      },
+      "schema": 2,
+      "theme": "water",
+      "photo": {
+        "src": "issues/2026-11-08/photo.jpg",
+        "thumb": "issues/2026-11-08/photo-800.jpg",
+        "w": 2000,
+        "h": 1333,
+        "caption": {
+          "en": "Goosenecks of the San Juan River in Utah",
+          "id": "Kelokan Sungai San Juan di Utah"
+        },
+        "credit": "NASA astronaut photograph ISS075-E-188830",
+        "license": "Public domain (NASA)",
+        "source_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/taking-a-gander-at-utah%E2%80%99s-goosenecks/ISS075-E-188830.jpg"
+      },
+      "content_sha": {
+        "en": "fec749d107f97c887fc21dfffd9a1a6dc75ab1f9cf8293f1cb71ba4182b498b3",
+        "id": "8d4aec0a1539aaaaeac3af0172086b5edb3e0b294ccf972aa284cb29634f0b78"
+      },
+      "xp_parts": {
+        "story": 10,
+        "physics": 20,
+        "quiz": 10,
+        "lab": 20
+      },
+      "pages": 4
+    }
+  ],
+  "updated": "2026-11-09T00:34:11+07:00"
+}

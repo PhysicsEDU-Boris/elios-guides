@@ -1,0 +1,2 @@
+# Dates to rebuild from the current Figma template, one YYYY-MM-DD per line.
+# The Claude/Figma task rebuilds them, re-publishes the same dates and clears the lines by PR.

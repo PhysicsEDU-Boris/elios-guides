@@ -1,14 +1,10 @@
-# Daily guides — 8 November 2026
-- Branch: codex/daily-guides-publishing; owner review required, no merge or push to main.
-- Existing GEMINI_API_KEY / FIGMA_TOKEN names verified; values never read. Owner confirms Claude/Figma task runs daily.
-- Research 03:00 WIB daily; Figma 05:00; export invokes checked Pages publication; health check 08:00.
-- Publication uses a separate published archive and copies public assets only. Main and guide PRs stay independent.
-- Today (2026-11-08): EN/ID PDF assets from guide PR #12 passed source/content checks, four-page and PNG verification locally.
-- Local checks: 65 pytest tests pass; actionlint and git diff --check pass. Revision regression fails against old code, then passes restored.
-- Backend PR: https://github.com/PhysicsEDU-Boris/elios-guides/pull/16 (not merged).
-- Live export+publish succeeded: https://github.com/PhysicsEDU-Boris/elios-guides/actions/runs/42492874079.
-- Live manifest has 2026-11-08 with a revision; both public EN/ID PDFs have 4 pages and both PNGs verify.
-- Pages now uses Actions; published branch initialized; github-pages environment allows guide/* and the manual-test branch.
-- Owner must merge PR #16 to activate default-branch daily research/health and future export publication, and enable Actions failure notifications.
-- App PR #102: https://github.com/PhysicsEDU-Boris/ELIOS/pull/102 (base feature/live-scan, unmerged); app release required for the daily feed.
-- Known limit: automated fact/source/layout checks do not replace editorial judgement; quotas and scheduling may delay a day.
+# Daily guides — 9 November 2026 (G4-P app feed)
+- Branch: feat/g4-app-feed → PR to main (owner review; no merge, no push to main/published).
+- Decision 0002: manifest v2 (additive; `xp` stays 60, split in `xp_parts`), photo checks, fact check, edit sync.
+- Example v2 entry for 2026-11-08: docs/manifest-v2-example.json (NASA ISS075-E-188830 as photo).
+- Tests: python -m pytest -q; actionlint. New tests break-checked against main.
+- New workflow resync.yml (edits on guide/<date>); health check also fails on resync.json older than 24 h.
+- Owner: set the Claude/Figma task to 05:00 AND 17:00 WIB; optional repo variable FACTCHECK_MODEL.
+- Owner: after merge, re-run research for an issue to get a v2 entry; issue #01 needs _theme etc. to republish.
+- No new secrets. GEMINI_API_KEY / FIGMA_TOKEN unchanged (Actions secrets only).
+- Known limits: fact check matches numbers, not meaning; bot-blocked pages confirm nothing.

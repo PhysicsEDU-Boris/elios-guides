@@ -33,5 +33,6 @@
  "glossary.1.term":20,"glossary.2.term":20,"glossary.3.term":20,
  "glossary.1.def":70,"glossary.2.def":70,"glossary.3.def":70,
  "label.sources":60,
- "source.1":110,"source.2":110,"source.3":110,"source.4":110,"source.5":110,"credit.images":140
+ "source.1":110,"source.2":110,"source.3":110,"source.4":110,"source.5":110,"credit.images":140,
+ "_quiz_explain.why":140,"_quiz_explain.wrong":100,"_quiz_pool.min":4
 }

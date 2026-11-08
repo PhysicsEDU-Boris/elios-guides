@@ -20,3 +20,26 @@ jobs:
             https://physicsedu-boris.github.io/elios-guides/manifest.json \
             | jq -e --arg today "$TODAY" 'any(.guides[]; .date == $today)'
           echo "Today's ELIOS Guide is available." >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/checkout@v4
+        if: ${{ !cancelled() }}
+        with:
+          persist-credentials: false
+      - name: No Figma refill waiting longer than 24 h
+        if: ${{ !cancelled() }}
+        run: |
+          git fetch --depth=1 origin '+refs/heads/guide/*:refs/remotes/origin/guide/*'
+          now=$(date +%s)
+          stale=""
+          for ref in $(git for-each-ref --format='%(refname:short)' refs/remotes/origin/guide/); do
+            for f in $(git ls-tree -r --name-only "$ref" -- issues | grep '/resync\.json$' || true); do
+              created=$(git show "$ref:$f" | jq -r '.created // empty')
+              if [ -z "$created" ] || [ $(( now - $(date -d "$created" +%s) )) -gt 86400 ]; then
+                stale="$stale $ref:$f(${created:-no date})"
+              fi
+            done
+          done
+          if [ -n "$stale" ]; then
+            echo "::error::resync.json older than 24 h (Claude/Figma task did not refill):$stale"
+            exit 1
+          fi
+          echo "No stale resync.json." >> "$GITHUB_STEP_SUMMARY"
