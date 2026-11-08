@@ -1,7 +1,7 @@
 {
   "guides": [
     {
-      "revision": "1a7b77b75ace50ca641571cc9ece7247c006f96c7bcd57d1e55e39c9fcacb69b",
+      "revision": "6636626fbf4407ab0a6c8b5545e457c9c68e17a020c8aec0c6b0a05ba68ae084",
       "date": "2026-11-08",
       "issue": "01",
       "slug": "utah-goosenecks-river-flow",
@@ -28,5 +28,5 @@
       }
     }
   ],
-  "updated": "2026-11-08T22:02:31+07:00"
+  "updated": "2026-11-08T22:04:48+07:00"
 }
