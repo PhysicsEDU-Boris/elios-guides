@@ -1,0 +1,7 @@
+[
+  {"item": "stat.1", "claim": "1,000", "source": 1, "pass": true, "note": "Computed in calc.py"},
+  {"item": "stat.2", "claim": "9.8", "source": 1, "pass": true, "note": "Computed in calc.py"},
+  {"item": "stat.3", "claim": "19,600", "source": 1, "pass": true, "note": "Computed in calc.py"},
+  {"item": "cover.news_date", "claim": "8 Nov 2026", "source": 1, "pass": true, "note": "Computed in calc.py"},
+  {"item": "cover.fun_fact", "claim": "10 meters", "source": 3, "pass": true, "note": "Computed in calc.py"}
+]
