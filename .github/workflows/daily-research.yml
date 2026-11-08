@@ -43,7 +43,7 @@ jobs:
     needs: prep
     if: needs.prep.outputs.skip != 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     concurrency:
       group: guide-${{ needs.prep.outputs.date }}
     env:
@@ -61,12 +61,16 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Research and write
+        id: research
+        continue-on-error: true # partial files still go to a NEEDS FIX PR
+        timeout-minutes: 35
         uses: google-github-actions/run-gemini-cli@v0.1.22
         env:
           GEMINI_CLI_TRUST_WORKSPACE: "true" # headless CI; without it the CLI refuses to run
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           gemini_cli_version: "0.67.0"
+          gemini_debug: true # stream output to the log; GitHub masks the key as ***
           # Free tier: Pro = 0 RPD, Flash = 5 RPM / 20 RPD. Flash Lite = 15 RPM / 250K TPM.
           # Research and fact-check use different models so each gets its own daily quota.
           # Per-minute 429s are retried with backoff by the CLI (general.maxAttempts, default 10).
@@ -74,7 +78,7 @@ jobs:
           # Allowlist: no shell, no edit/replace tool. Gemini CLI cannot limit writes to one folder,
           # so the "Only issues/<date> changed" step below enforces that.
           settings: |
-            {"tools": {"core": ["google_web_search", "web_fetch", "read_file", "write_file", "list_directory"]}}
+            {"model": {"maxSessionTurns": 60}, "tools": {"core": ["google_web_search", "web_fetch", "read_file", "write_file", "list_directory"]}}
           prompt: >-
             Follow GEMINI.md exactly. Today is ${{ needs.prep.outputs.date }} (Asia/Jakarta).
             Write issues/${{ needs.prep.outputs.date }}/en.json, id.json, calc.py and sources.md.
@@ -87,15 +91,17 @@ jobs:
       - name: Fact-check
         id: factcheck
         continue-on-error: true
+        timeout-minutes: 15
         uses: google-github-actions/run-gemini-cli@v0.1.22
         env:
           GEMINI_CLI_TRUST_WORKSPACE: "true" # headless CI; without it the CLI refuses to run
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           gemini_cli_version: "0.67.0"
+          gemini_debug: true # stream output to the log; GitHub masks the key as ***
           gemini_model: gemini-3.1-flash-lite
           settings: |
-            {"tools": {"core": ["google_web_search", "web_fetch", "read_file", "write_file", "list_directory"]}}
+            {"model": {"maxSessionTurns": 40}, "tools": {"core": ["google_web_search", "web_fetch", "read_file", "write_file", "list_directory"]}}
           prompt: >-
             You did not write these files. Open every source URL in issues/${{ needs.prep.outputs.date }}/en.json
             and check every number, date, name and quiz answer, and that id.json says the same as en.json.
@@ -119,6 +125,7 @@ jobs:
       - name: Validate
         id: validate
         env:
+          RESEARCH: ${{ steps.research.outcome }}
           CALC: ${{ steps.calc.outcome }}
           FACTCHECK: ${{ steps.factcheck.outcome }}
           IMAGES: ${{ steps.images.outcome }}
@@ -128,6 +135,7 @@ jobs:
           code=$?
           set -e
           cat "$RUNNER_TEMP/validate.txt"
+          echo "ok=$([ "$code" -eq 0 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
           if [ "$code" -eq 0 ]; then
             echo "title=ELIOS Guide $DATE · waiting for Figma" >> "$GITHUB_OUTPUT"
           else
@@ -136,7 +144,7 @@ jobs:
           {
             echo "Automated research for **$DATE** (run $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)."
             echo
-            echo "Steps: calc **$CALC** · fact-check **$FACTCHECK** · images **$IMAGES**"
+            echo "Steps: research **$RESEARCH** · calc **$CALC** · fact-check **$FACTCHECK** · images **$IMAGES**"
             echo
             echo '```'
             cat "$RUNNER_TEMP/validate.txt"
@@ -160,3 +168,9 @@ jobs:
           title: ${{ steps.validate.outputs.title }}
           body-path: ${{ runner.temp }}/body.md
           draft: true
+
+      - name: Mark the run failed if validation failed
+        if: steps.validate.outputs.ok != 'true'
+        run: |
+          echo "::error::Validation failed or research did not finish; see the NEEDS FIX PR (if files were written) or the Validate step."
+          exit 1

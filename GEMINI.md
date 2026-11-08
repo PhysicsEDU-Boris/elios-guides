@@ -43,6 +43,11 @@ English and Bahasa Indonesia, about the physics behind one real environmental ne
   about it. Wikimedia: an upload.wikimedia.org thumbnail at a standard width (e.g. 1280px-…).
   file is a plain name such as cover.jpg or story.jpg.
 
+## Budget
+- The free API allows few requests. Use at most 6 web searches and 8 page fetches for research.
+- Write en.json first, then id.json, calc.py and sources.md. Write each file once; don't re-read
+  files you wrote.
+
 ## Files
 - Write only inside issues/<date>/. Anything else you change fails the run.
 - schema/example.en.json and schema/example.calc.py show one complete, valid issue. Copy their shape,
