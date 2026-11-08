@@ -1,0 +1,100 @@
+[
+  {
+    "item": "Source 1 date",
+    "claim": "6 Nov 2026",
+    "source": "https://science.nasa.gov/earth/earth-observatory/taking-a-gander-at-utahs-goosenecks/",
+    "pass": true,
+    "note": "Article date confirmed as November 6, 2026."
+  },
+  {
+    "item": "Source 1 title",
+    "claim": "Taking a Gander at Utah’s Goosenecks",
+    "source": "https://science.nasa.gov/earth/earth-observatory/taking-a-gander-at-utahs-goosenecks/",
+    "pass": true,
+    "note": "Title matches the source exactly."
+  },
+  {
+    "item": "Canyon depth",
+    "claim": "300 m",
+    "source": "https://science.nasa.gov/earth/earth-observatory/taking-a-gander-at-utahs-goosenecks/",
+    "pass": true,
+    "note": "Source mentions 'a canyon 1,000 feet (300 meters) deep'."
+  },
+  {
+    "item": "Fun fact distance (EN)",
+    "claim": "5.5 miles vs 1.3 miles",
+    "source": "https://science.nasa.gov/earth/earth-observatory/taking-a-gander-at-utahs-goosenecks/",
+    "pass": true,
+    "note": "Source confirms 'river travels 5.5 miles (8.9 kilometers) between two points that are only 1.3 miles (2.1 kilometers) apart'."
+  },
+  {
+    "item": "Fun fact distance (ID)",
+    "claim": "8,9 km vs 2,1 km",
+    "source": "https://science.nasa.gov/earth/earth-observatory/taking-a-gander-at-utahs-goosenecks/",
+    "pass": true,
+    "note": "Converted values (8.9 km and 2.1 km) match the metric equivalents in the source."
+  },
+  {
+    "item": "Rock age",
+    "claim": "300-million-year-old rock",
+    "source": "https://science.nasa.gov/earth/earth-observatory/taking-a-gander-at-utahs-goosenecks/",
+    "pass": true,
+    "note": "Source confirms 'carving its winding path deeper and deeper through 300-million-year-old rock'."
+  },
+  {
+    "item": "Astronaut photo ID",
+    "claim": "ISS075-E-188830",
+    "source": "https://science.nasa.gov/earth/earth-observatory/taking-a-gander-at-utahs-goosenecks/",
+    "pass": true,
+    "note": "Image ID is explicitly mentioned in the source."
+  },
+  {
+    "item": "Source 2 date",
+    "claim": "17 Sep 2026",
+    "source": "https://www.usgs.gov/special-topics/water-science-school/science/rivers-streams-and-creeks",
+    "pass": true,
+    "note": "Date confirmed."
+  },
+  {
+    "item": "Source 3 date",
+    "claim": "17 Jul 2026",
+    "source": "https://wmo.int/topics/water",
+    "pass": true,
+    "note": "Date confirmed (site content reflecting 2026 updates)."
+  },
+  {
+    "item": "Physics calculation (Ep_1)",
+    "claim": "2,943 kJ",
+    "source": "calc.py",
+    "pass": true,
+    "note": "1000 kg * 9.81 m/s² * 300 m = 2,943,000 J = 2,943 kJ. Calculation is correct."
+  },
+  {
+    "item": "Quiz 1 answer",
+    "claim": "b (Mass, gravity, and height)",
+    "source": "en.json",
+    "pass": true,
+    "note": "Correct factors for gravitational potential energy."
+  },
+  {
+    "item": "Quiz 2 answer",
+    "claim": "a (Height or vertical drop)",
+    "source": "en.json",
+    "pass": true,
+    "note": "Correct definition of h in Ep=mgh."
+  },
+  {
+    "item": "Quiz 3 answer",
+    "claim": "c (Higher drop and heavier water flow)",
+    "source": "en.json",
+    "pass": true,
+    "note": "Directly related to mass and height in the energy equation."
+  },
+  {
+    "item": "id.json labels",
+    "claim": "Mandatory Indonesian labels",
+    "source": "GEMINI.md",
+    "pass": false,
+    "note": "The labels label.quest_map, label.fun_fact, label.timeline, etc. required by GEMINI.md are missing from id.json."
+  }
+]
