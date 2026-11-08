@@ -1,0 +1,12 @@
+{
+  "rho": 1000,
+  "g": 9.81,
+  "h_example": 0.5,
+  "example_result": 4905.0,
+  "h_shallow": 0.2,
+  "P_shallow": 1962.0,
+  "h_doorstep": 0.5,
+  "P_doorstep": 4905.0,
+  "h_knee": 0.7,
+  "P_knee": 6867.0
+}
