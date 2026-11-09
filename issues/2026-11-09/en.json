@@ -1,19 +1,25 @@
 {
   "_example": false,
-  "_issue": "01",
+  "_issue": "02",
   "_slug": "utah-san-juan-river-meanders",
   "_theme": "water",
-  "_keywords": ["river", "water", "flow", "erosion"],
+  "_keywords": ["river", "water", "gravity", "mass"],
   "_date": "2026-11-09",
   "_lang": "en",
   "_sources": [
     {"n": 1, "publisher": "NASA Earth Observatory", "title": "Taking a Gander at Utah’s Goosenecks", "date": "6 Nov 2026", "url": "https://science.nasa.gov/earth/earth-observatory/taking-a-gander-at-utahs-goosenecks/", "primary": true},
-    {"n": 2, "publisher": "USGS", "title": "Rivers, Streams, and Creeks", "date": "17 Sep 2026", "url": "https://www.usgs.gov/special-topics/water-science-school/science/rivers-streams-and-creeks", "primary": true},
-    {"n": 3, "publisher": "WMO", "title": "Water", "date": "17 Jul 2026", "url": "https://wmo.int/topics/water", "primary": true}
+    {"n": 2, "publisher": "USGS", "title": "Rivers, Streams, and Creeks", "date": "17 Sep 2026", "url": "https://www.usgs.gov/water-science-school/science/rivers-streams-and-creeks", "primary": true},
+    {"n": 3, "publisher": "WMO", "title": "Water", "date": "17 Jul 2026", "url": "https://wmo.int/themes/water", "primary": true},
+    {"n": 4, "publisher": "NASA Glenn Research Center", "title": "Weight and Mass", "date": "n.d.", "url": "https://www.grc.nasa.gov/WWW/K-12/Enginesim/weight_and_mass.htm", "primary": true}
   ],
   "_images": {
     "cover.image": null,
-    "story.image": null,
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/taking-a-gander-at-utah%E2%80%99s-goosenecks/ISS075-E-188830.jpg",
+      "license": "Public domain (NASA)",
+      "credit": "NASA astronaut photograph ISS075-E-188830"
+    },
     "physics.diagram": null
   },
   "_graph.1.raw": 2943.0,
@@ -45,7 +51,7 @@
   "_per_page": [{}, {}, {}, {}],
   "_replace": {},
 
-  "guide.issue_date": "#01 · 9 NOV 2026",
+  "guide.issue_date": "#02 · 9 NOV 2026",
   "guide.lang": "EN",
   "guide.xp": "+60 XP",
   "footer.credit": "ELIOS Guides · Utah river meanders · Illustration by ELIOS",
@@ -55,7 +61,7 @@
   "cover.image_caption": "Goosenecks of the San Juan River",
   "cover.news_date": "News: 6 Nov 2026",
   "cover.place": "Utah, United States",
-  "cover.topic": "Rivers and water flow",
+  "cover.topic": "Potential energy",
   "cover.subject": "Physics · Energy",
   "quest.1.desc": "Read how rivers carve canyons",
   "quest.2.desc": "Use Ep = m × g × h",
@@ -63,17 +69,17 @@
   "cover.read_time": "12 min read",
   "cover.level": "SMP · grade 7–9",
   "cover.xp_total": "Earn up to 60 XP",
-  "cover.fun_fact": "The San Juan River travels 5.5 miles between two points that are only 1.3 miles apart as the goose flies.",
+  "cover.fun_fact": "The San Juan River travels 5.5 miles between two points that are only 1.3 miles apart as the goose flies. [1]",
 
   "story.title": "The winding San Juan River",
   "story.lead": "Space station astronauts photographed the stunning, horseshoe-shaped meanders of the San Juan River in Utah [1]. Millions of years ago, tectonic forces lifted the plateau, speeding up the water [1].",
-  "story.image_caption": "San Juan River meanders photographed from the International Space Station [1]",
-  "story.image_credit": "Illustration by ELIOS",
+  "story.image_caption": "San Juan River meanders, photographed from the ISS on 6 October 2026 [1]",
+  "story.image_credit": "NASA astronaut photograph ISS075-E-188830",
   "stat.1.value": "300 m",
   "stat.2.value": "9.81",
   "stat.3.value": "2,943 kJ",
   "stat.1.label": "depth of the canyon carved by the river",
-  "stat.2.label": "Earth gravity acceleration in m/s²",
+  "stat.2.label": "Earth gravity acceleration in m/s² [4]",
   "stat.3.label": "potential energy of 1 ton of water at 300 m",
   "story.body_1": "Rivers shape the face of our planet by moving water and sediment across landscapes [2]. When tectonic uplift raises a region, rivers gain steepness and erosive power [1]. The water cuts downward through 300-million-year-old rock, forming deep canyons and dramatic meanders known as goosenecks [1].",
   "story.body_2": "Water is vital for ecosystems and climate worldwide [3]. Understanding how flowing water stores and releases energy helps scientists protect river basins and manage water resources safely [2].",
@@ -103,7 +109,7 @@
   "legend.5.symbol": "",
   "legend.5.meaning": "",
   "legend.5.unit": "",
-  "physics.assumptions": "We assume constant gravity and mass of water without friction losses.",
+  "physics.assumptions": "Example masses, not measurements; use canyon depth as a drop; ignore friction. Gravity: 9.81 m/s² [4].",
   "example.step_1": "m = 1,000 kg, h = 300 m, g = 9.81",
   "example.step_2": "Ep = 1,000 × 9.81 × 300",
   "example.step_3": "Multiply: Ep = 2,943,000 J",
@@ -165,7 +171,7 @@
   "source.1": "[1] NASA Earth Observatory, Taking a Gander at Utah’s Goosenecks, 6 Nov 2026",
   "source.2": "[2] USGS, Rivers, Streams, and Creeks, 17 Sep 2026",
   "source.3": "[3] WMO, Water, 17 Jul 2026",
-  "source.4": "",
+  "source.4": "[4] NASA Glenn Research Center, Weight and Mass, n.d.",
   "source.5": "",
-  "credit.images": "Illustration by ELIOS"
+  "credit.images": "Story: NASA ISS075-E-188830 (public domain). Cover: Illustration by ELIOS."
 }

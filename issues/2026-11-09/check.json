@@ -51,14 +51,14 @@
   {
     "item": "Source 2 date",
     "claim": "17 Sep 2026",
-    "source": "https://www.usgs.gov/special-topics/water-science-school/science/rivers-streams-and-creeks",
+    "source": "https://www.usgs.gov/water-science-school/science/rivers-streams-and-creeks",
     "pass": true,
     "note": "Date confirmed."
   },
   {
     "item": "Source 3 date",
     "claim": "17 Jul 2026",
-    "source": "https://wmo.int/topics/water",
+    "source": "https://wmo.int/themes/water",
     "pass": true,
     "note": "Date confirmed (site content reflecting 2026 updates)."
   },
@@ -94,7 +94,14 @@
     "item": "id.json labels",
     "claim": "Mandatory Indonesian labels",
     "source": "GEMINI.md",
-    "pass": false,
-    "note": "The labels label.quest_map, label.fun_fact, label.timeline, etc. required by GEMINI.md are missing from id.json."
+    "pass": true,
+    "note": "Rechecked after repair: all 13 required Indonesian labels are present in id.json; checked against GEMINI.md."
+  },
+  {
+    "item": "Gravity constant",
+    "claim": "9.81 m/s² near Earth surface",
+    "source": "https://www.grc.nasa.gov/WWW/K-12/Enginesim/weight_and_mass.htm",
+    "pass": true,
+    "note": "Opened NASA Weight and Mass: metric gravitational acceleration is 9.81 m/s²; cited as [4]."
   }
 ]
