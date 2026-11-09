@@ -29,3 +29,8 @@ The service is hosted with Sites. Its source is maintained in the Site's separat
 the local checkout is `.local-sites/elios-photo-uploader`. Run `node --test` there. The site's
 `UPLOADER_TOKEN` is a runtime secret. The service needs no GitHub or Figma API token: the repository
 is public, and Figma's short-lived upload URL authorizes only the requested placement.
+
+The hosted transfer was tested on 2026-11-09 with two temporary Figma frames. Both returned
+success and their image fills matched the repository photo; the frames were removed afterward.
+The service has 11 passing tests. This verifies the cloud transfer, not Claude’s connector setup
+or whether the selected photograph is appropriate for the story.
