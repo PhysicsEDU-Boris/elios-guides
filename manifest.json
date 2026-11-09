@@ -1,1 +1,46 @@
-{"updated": null, "guides": []}
+{
+  "updated": "2026-11-09T11:27:08+07:00",
+  "guides": [
+    {
+      "revision": "6350ee4184afde7f1e16c22d6338a7f4e699387e32cb0302992f88653463ea02",
+      "date": "2026-11-09",
+      "issue": "02",
+      "slug": "utah-san-juan-river-meanders",
+      "xp": 60,
+      "title": {
+        "en": "Carving stone with water",
+        "id": "Mengukir batu dengan air"
+      },
+      "topic": {
+        "en": "Potential energy",
+        "id": "Energi potensial"
+      },
+      "cover": {
+        "en": "issues/2026-11-09/elios-guide-02-utah-san-juan-river-meanders-cover-en.png",
+        "id": "issues/2026-11-09/elios-guide-02-utah-san-juan-river-meanders-cover-id.png"
+      },
+      "pdf": {
+        "en": "issues/2026-11-09/elios-guide-02-utah-san-juan-river-meanders-en.pdf",
+        "id": "issues/2026-11-09/elios-guide-02-utah-san-juan-river-meanders-id.pdf"
+      },
+      "content": {
+        "en": "issues/2026-11-09/en.json",
+        "id": "issues/2026-11-09/id.json"
+      },
+      "schema": 2,
+      "theme": "water",
+      "photo": null,
+      "content_sha": {
+        "en": "10d16236dbb7c8810013cbd6590cc8e879daeb878b6e4816a09836ba9b75d2d8",
+        "id": "182263949ddc63651c1da95a8e07aee928fde1d70a696e45de2e96691026efe0"
+      },
+      "xp_parts": {
+        "story": 10,
+        "physics": 20,
+        "quiz": 10,
+        "lab": 20
+      },
+      "pages": 4
+    }
+  ]
+}
