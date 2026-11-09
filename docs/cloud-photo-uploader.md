@@ -11,7 +11,7 @@ In Claude, add a custom connector named **ELIOS photo uploader** with this endpo
 prompt. Enable the connector alongside GitHub publishing and Figma in both scheduled tasks.
 
 The tool `upload_guide_photo` takes `date`, `commit_sha`, `slot`, and one or two `uploads`, each
-containing `language`, `node_id`, and the fresh `submit_url`. It checks the current guide branch SHA,
+containing `language`, `node_id`, and the fresh `submit_url`. It verifies that the requested commit’s content and photo bytes still match the current guide branch,
 both language files, the nonempty passing fact-check report, the shared photo filename and licence,
 the image signature and its 10 MB limit. It rejects arbitrary destinations and redirects. Returned
 results include the file hash and per-language placement status. Partial failures are reported;
