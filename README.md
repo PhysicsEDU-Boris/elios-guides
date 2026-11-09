@@ -57,7 +57,9 @@ or when a number in `stat.N.value`, `story.*` or `cover.*` is in no source page 
 the previous one stays live. The Gemini fact-check step uses `gemini-3-flash-preview` (free tier
 5 RPM / 20 RPD, used only by this step, capped at 18 turns) and falls back to Flash-Lite
 (15 RPM) when that quota is spent. Set the repository variable `FACTCHECK_MODEL` to change it (e.g. a
-Pro model with a paid key). Research and repair stay on Flash-Lite.
+Pro model with a paid key). Research and repair stay on Flash-Lite. After a repair, the old
+`check.json` is discarded and an independent Flash-Lite pass checks the repaired files again.
+A missing or failing new report blocks publication; the earlier report is never reused.
 
 ## Edits after publication
 

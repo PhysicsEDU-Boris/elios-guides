@@ -88,7 +88,7 @@ jobs:
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           gemini_cli_version: "0.67.0"
-          gemini_debug: true # stream output to the log; GitHub masks the key as ***
+          # Keep debug off: its stderr becomes an action output and can exceed GitHub's object-size limit.
           # Free tier: Pro = 0 RPD, Flash = 5 RPM / 20 RPD. Flash Lite = 15 RPM / 250K TPM.
           # Research and fact-check use different models so each gets its own daily quota.
           # Per-minute 429s are retried with backoff by the CLI (general.maxAttempts, default 10).
@@ -118,7 +118,6 @@ jobs:
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           gemini_cli_version: "0.67.0"
-          gemini_debug: true # stream output to the log; GitHub masks the key as ***
           # Stronger than Flash-Lite. Free tier Flash: 5 RPM / 20 RPD, used only here, so turns stay under 20.
           # Override with the repository variable FACTCHECK_MODEL (e.g. after a paid key).
           gemini_model: ${{ vars.FACTCHECK_MODEL || 'gemini-3-flash-preview' }}
@@ -141,7 +140,6 @@ jobs:
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           gemini_cli_version: "0.67.0"
-          gemini_debug: true # stream output to the log; GitHub masks the key as ***
           gemini_model: gemini-3.1-flash-lite
           settings: |
             {"model": {"maxSessionTurns": 40}, "privacy": {"usageStatisticsEnabled": false}, "modelConfigs": {"customAliases": {"gemini-3-flash-base": {"extends": "base", "modelConfig": {"model": "gemini-3.5-flash-lite"}}, "loop-detection-double-check": {"extends": "base", "modelConfig": {"model": "gemini-3.5-flash-lite"}}}}, "tools": {"core": ["google_web_search", "web_fetch", "read_file", "write_file", "list_directory"]}}
@@ -198,7 +196,6 @@ jobs:
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           gemini_cli_version: "0.67.0"
-          gemini_debug: true
           gemini_model: gemini-3.5-flash-lite
           settings: |
             {"model": {"maxSessionTurns": 30}, "privacy": {"usageStatisticsEnabled": false}, "modelConfigs": {"customAliases": {"gemini-3-flash-base": {"extends": "base", "modelConfig": {"model": "gemini-3.1-flash-lite"}}, "loop-detection-double-check": {"extends": "base", "modelConfig": {"model": "gemini-3.1-flash-lite"}}}}, "tools": {"core": ["google_web_search", "web_fetch", "read_file", "write_file", "list_directory"]}}
@@ -229,6 +226,31 @@ jobs:
           # last attempt: a photo that still fails the size/sharpness/JPEG checks becomes null
           python scripts/fetch_images.py "issues/$DATE" --drop-failed | tee "$RUNNER_TEMP/images.txt"
 
+      - name: Discard the fact-check of the unrepaired files
+        if: steps.repair.outcome != 'skipped'
+        run: rm -f "issues/$DATE/check.json"
+
+      - name: Fact-check the repaired files
+        if: steps.repair.outcome != 'skipped'
+        id: recheck
+        continue-on-error: true
+        timeout-minutes: 10
+        uses: google-github-actions/run-gemini-cli@v0.1.22
+        env:
+          GEMINI_CLI_TRUST_WORKSPACE: "true"
+        with:
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+          gemini_cli_version: "0.67.0"
+          gemini_model: gemini-3.1-flash-lite
+          settings: |
+            {"model": {"maxSessionTurns": 30}, "privacy": {"usageStatisticsEnabled": false}, "modelConfigs": {"customAliases": {"gemini-3-flash-base": {"extends": "base", "modelConfig": {"model": "gemini-3.5-flash-lite"}}, "loop-detection-double-check": {"extends": "base", "modelConfig": {"model": "gemini-3.5-flash-lite"}}}}, "tools": {"core": ["google_web_search", "web_fetch", "read_file", "write_file", "list_directory"]}}
+          prompt: >-
+            You did not repair these files. Read the current issues/${{ env.DATE }}/en.json and id.json.
+            Open every source URL and check every number, date, name and quiz answer, bilingual agreement,
+            and the required Indonesian labels in GEMINI.md. Check the current files, not earlier errors.
+            Write issues/${{ env.DATE }}/check.json as [{item, claim, source, pass, note}].
+            Mark pass=false if you cannot confirm it. Do not change any other file.
+
       - name: Validate
         id: validate
         env:
@@ -236,6 +258,7 @@ jobs:
           CALC: ${{ steps.calc.outcome }}
           FACTCHECK: ${{ steps.factcheck.outcome }}
           FACTCHECK_LITE: ${{ steps.factcheck_lite.outcome }}
+          RECHECK: ${{ steps.recheck.outcome }}
           DRY_RUN: ${{ inputs.dry_run }}
           IMAGES: ${{ steps.images.outcome }}
           REPAIR: ${{ steps.repair.outcome }}
@@ -258,7 +281,7 @@ jobs:
           {
             echo "Automated research for **$DATE** (run $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)."
             echo
-            echo "Steps: research **$RESEARCH** · calc **$CALC** · fact-check **$FACTCHECK** (Flash-Lite fallback **$FACTCHECK_LITE**) · images **$IMAGES** · repair **$REPAIR**"
+            echo "Steps: research **$RESEARCH** · calc **$CALC** · fact-check **$FACTCHECK** (Flash-Lite fallback **$FACTCHECK_LITE**) · images **$IMAGES** · repair **$REPAIR** · repaired fact-check **$RECHECK**"
             echo
             echo "Photos (long side px, Laplacian variance, estimated JPEG quality):"
             echo '```'
