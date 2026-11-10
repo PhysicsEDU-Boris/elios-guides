@@ -1,0 +1,79 @@
+[
+  {
+    "item": "source.1",
+    "claim": "BMKG weather forecast and flood potential on 9 Nov 2026",
+    "source": "https://www.bmkg.go.id/cuaca/prakiraan-cuaca",
+    "pass": true,
+    "note": "URL reachable, publisher and date confirmed."
+  },
+  {
+    "item": "source.2",
+    "claim": "NASA Earth Observatory heavy rains and monsoon floods in Southeast Asia on 5 Nov 2026",
+    "source": "https://earthobservatory.nasa.gov/images/153400/heavy-rains-in-southeast-asia",
+    "pass": false,
+    "note": "Could not fetch URL directly in sandbox environment to confirm."
+  },
+  {
+    "item": "source.3",
+    "claim": "WMO hydrological monitoring and river flow on 1 Nov 2026",
+    "source": "https://public.wmo.int/en/media/news/heavy-rainfall-and-floods",
+    "pass": false,
+    "note": "Could not fetch URL directly in sandbox environment to confirm."
+  },
+  {
+    "item": "stat.1.value",
+    "claim": "Water flow rate 30 m³/s",
+    "source": "calc.py / calc.out.json",
+    "pass": true,
+    "note": "Computed correctly by calc.py."
+  },
+  {
+    "item": "stat.2.value",
+    "claim": "Flow speed 3 m/s",
+    "source": "calc.py / calc.out.json",
+    "pass": true,
+    "note": "Computed correctly by calc.py."
+  },
+  {
+    "item": "stat.3.value",
+    "claim": "Cross-sectional area 10 m²",
+    "source": "calc.py / calc.out.json",
+    "pass": true,
+    "note": "Computed correctly by calc.py."
+  },
+  {
+    "item": "cover.news_date",
+    "claim": "News date 9 Nov 2026",
+    "source": "[1] BMKG",
+    "pass": true,
+    "note": "Matches BMKG source date."
+  },
+  {
+    "item": "cover.place",
+    "claim": "Jakarta, Indonesia",
+    "source": "[1] BMKG",
+    "pass": true,
+    "note": "Matches Indonesian regional scope."
+  },
+  {
+    "item": "quiz.answer_key",
+    "claim": "Answer key matches _answers (1B, 2A, 3C)",
+    "source": "en.json / id.json _answers",
+    "pass": true,
+    "note": "Bilingual quiz answer keys correctly formatted and matching _answers."
+  },
+  {
+    "item": "bilingual_agreement",
+    "claim": "EN and ID editions have matching structure, keys, and values",
+    "source": "en.json and id.json",
+    "pass": true,
+    "note": "All required keys and structure match between en.json and id.json."
+  },
+  {
+    "item": "indonesian_labels",
+    "claim": "Required Indonesian labels specified in GEMINI.md are present in id.json",
+    "source": "GEMINI.md requirements",
+    "pass": true,
+    "note": "All required labels (label.quest_map, label.fun_fact, label.timeline, label.equation, label.example, label.graph, label.tip, label.quiz, label.lab, label.badge, quest.1/2/3.title, _per_page, _replace) are present in id.json."
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "area_m2": 10,
+  "velocity_ms": 3,
+  "discharge_m3s": 30,
+  "graph_1_raw": 30,
+  "graph_2_raw": 45.0,
+  "graph_3_raw": 60.0
+}
