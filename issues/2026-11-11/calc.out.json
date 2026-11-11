@@ -1,0 +1,20 @@
+{
+  "g": 9.81,
+  "area_m2": 10.0,
+  "h1": 2.0,
+  "h2": 1.0,
+  "h3": 0.5,
+  "stat_g": 9.81,
+  "stat_v2m": 6.26,
+  "stat_flow_rate": 62.6,
+  "news_day": 10,
+  "news_year": 2026,
+  "fun_fact_height": 2,
+  "fun_fact_speed_over": 6,
+  "v_h1_m_s": 6.26,
+  "Q_h1_m3_s": 62.6,
+  "v_h2_m_s": 4.43,
+  "Q_h2_m3_s": 44.3,
+  "v_h3_m_s": 3.13,
+  "Q_h3_m3_s": 31.3
+}
