@@ -1,0 +1,79 @@
+[
+  {
+    "item": "source.1",
+    "claim": "BMKG Prakiraan Cuaca, 10 Nov 2026, https://www.bmkg.go.id/cuaca/prakiraan-cuaca",
+    "source": "https://www.bmkg.go.id/cuaca/prakiraan-cuaca",
+    "pass": true,
+    "note": "URL is accessible and active on BMKG official portal."
+  },
+  {
+    "item": "source.2",
+    "claim": "BNPB Laporan Tanggap Darurat Bencana Banjir, 9 Nov 2026, https://bnpb.go.id/publikasi/laporan-bencana-banjir",
+    "source": "https://bnpb.go.id/publikasi/laporan-bencana-banjir",
+    "pass": false,
+    "note": "URL returned an error or was unavailable when fetched."
+  },
+  {
+    "item": "source.3",
+    "claim": "NASA Earth Observatory, 8 Nov 2026, https://earthobservatory.nasa.gov/",
+    "source": "https://earthobservatory.nasa.gov/",
+    "pass": true,
+    "note": "URL is accessible and active on NASA Earth Observatory portal."
+  },
+  {
+    "item": "stat.1.value",
+    "claim": "Acceleration due to gravity g = 9.81 m/s² (9,81 in ID)",
+    "source": "calc.py / physics constant",
+    "pass": true,
+    "note": "Confirmed by physical constant and calc.py calculation."
+  },
+  {
+    "item": "stat.2.value",
+    "claim": "Water flow speed from 2m height is 6.26 m/s (6,26 in ID)",
+    "source": "calc.py / v = √(2gh)",
+    "pass": true,
+    "note": "Confirmed by calc.py calculation (√(2 * 9.81 * 2) = 6.2625)."
+  },
+  {
+    "item": "stat.3.value",
+    "claim": "Water flow rate with 10 m² area is 62.6 m³/s (62,6 in ID)",
+    "source": "calc.py / Q = v * A",
+    "pass": true,
+    "note": "Confirmed by calc.py calculation (6.26 * 10 = 62.6)."
+  },
+  {
+    "item": "quiz.answer.1",
+    "claim": "Quiz question 1 correct answer is 'b' (Gravity and depth)",
+    "source": "en.json / id.json _answers",
+    "pass": true,
+    "note": "Matches physics principles of water flow."
+  },
+  {
+    "item": "quiz.answer.2",
+    "claim": "Quiz question 2 correct answer is 'a' (Acceleration due to gravity)",
+    "source": "en.json / id.json _answers",
+    "pass": true,
+    "note": "Matches definition of g in Torricelli's law."
+  },
+  {
+    "item": "quiz.answer.3",
+    "claim": "Quiz question 3 correct answer is 'c' (It increases)",
+    "source": "en.json / id.json _answers",
+    "pass": true,
+    "note": "Matches Torricelli's law where greater depth increases speed."
+  },
+  {
+    "item": "required_indonesian_labels",
+    "claim": "id.json must contain required Indonesian labels specified in GEMINI.md (label.quest_map, label.fun_fact, label.timeline, label.equation, label.example, label.graph, label.tip, label.quiz, label.lab, label.badge, quest.1.title, quest.2.title, quest.3.title)",
+    "source": "GEMINI.md / id.json",
+    "pass": false,
+    "note": "Required Indonesian labels and quest titles are missing from id.json."
+  },
+  {
+    "item": "bilingual_agreement",
+    "claim": "en.json and id.json structural agreement and proper translation",
+    "source": "en.json / id.json",
+    "pass": false,
+    "note": "id.json lacks required GEMINI.md section labels and quest titles, failing bilingual compliance requirements."
+  }
+]
