@@ -20,7 +20,8 @@ Never touch guide/dry-run-* branches.
    PhysicsEDU-Boris/elios-guides on branch guide/<date> and commit with push_files; do not depend on
    the terminal's GitHub token. If the branch does not exist, or its PR title
    contains "NEEDS FIX", stop for this date and report that.
-2. Read issues/<date>/en.json, id.json, check.json and figma/fill.js. If check.json has any
+2. Read issues/<date>/en.json, id.json and check.json from guide/<date>, and figma/fill.js from main
+   so older issues use the current Figma tool API. If check.json has any
    pass=false, stop for this date and report.
 3. Load the figma-use skill. For each language: take fill.js, replace __CONTENT__ with that file's JSON
    (as a JS object literal) and run it with use_figma on file pBZAnlSJnLGB5Je0tCth12. fill.js replaces

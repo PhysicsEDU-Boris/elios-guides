@@ -15,14 +15,16 @@ for (const old of page.children.filter(n => n.name === name)) old.remove();
 const issues = page.children.filter(n => n.name.startsWith('Issue '));
 const Y = issues.length ? Math.max(...issues.map(n => n.y + n.height)) + 108 : 1000;
 
-const wrap = figma.createAutoLayout('HORIZONTAL');
-wrap.name = name; wrap.itemSpacing = 48; wrap.fills = []; wrap.x = 0; wrap.y = Y;
+const wrapper = $fig.autoLayout({ name, layoutMode: 'HORIZONTAL', itemSpacing: 48, fills: [], x: 0, y: Y });
+await $fig.done();
+const wrap = wrapper.node;
 const pages = [];
 for (const id of TEMPLATES) {
   const comp = await figma.getNodeByIdAsync(id);
-  const inst = comp.createInstance();
-  wrap.appendChild(inst);
-  const f = inst.detachInstance();
+  const inst = $fig.instance(comp.id);
+  $fig.get(wrap.id).append(inst);
+  await $fig.done();
+  const f = inst.node.detachInstance();
   f.name = `${LANG} / ${comp.name.replace('Template / ', '')}`;
   pages.push(f);
 }
@@ -71,10 +73,9 @@ for (const [pi, key] of [[0, 'cover.image'], [1, 'story.image'], [2, 'physics.di
   fr.strokes = []; fr.clipsContent = true;
   const w = Math.round(fr.width), h = Math.round(fr.height);
   const svg = `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#CFFAFE"/><stop offset="0.75" stop-color="#F1F5F9"/></linearGradient></defs><rect width="${w}" height="${h}" fill="url(#g)"/><circle cx="${w * 0.75}" cy="${h * 0.3}" r="${h * 0.13}" fill="#FBBF24" fill-opacity="0.8"/><ellipse cx="${w * 0.5}" cy="${h * 1.05}" rx="${w * 0.7}" ry="${h * 0.3}" fill="#4ADE80"/><ellipse cx="${w * 0.1}" cy="${h}" rx="${w * 0.3}" ry="${h * 0.22}" fill="#15803D"/></svg>`;
-  const s = figma.createNodeFromSvg(svg);
-  s.name = 'placeholder illustration';
-  fr.appendChild(s); s.layoutPositioning = 'ABSOLUTE'; s.x = 0; s.y = 0;
+  $fig.get(fr.id).append($fig.svg(svg, { name: 'placeholder illustration', layoutPositioning: 'ABSOLUTE', x: 0, y: 0 }));
 }
+await $fig.done();
 
 // checks
 const fit = pages.map(p => {
