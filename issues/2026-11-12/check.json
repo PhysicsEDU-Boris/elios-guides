@@ -1,0 +1,65 @@
+[
+  {
+    "item": "Bengkulu daily rain",
+    "claim": "Bengkulu daily rain was 150 mm during the observed period",
+    "source": "1",
+    "pass": true,
+    "note": "Verified from BMKG source text: curah hujan tertinggi terpantau di bengkulu sebesar 150 mm/hari"
+  },
+  {
+    "item": "Aceh daily rain",
+    "claim": "Aceh daily rain was 140 mm during the observed period",
+    "source": "1",
+    "pass": true,
+    "note": "Verified from BMKG source text: aceh 140 mm/hari"
+  },
+  {
+    "item": "West Sumatra daily rain",
+    "claim": "West Sumatra daily rain was 121 mm during the observed period",
+    "source": "1",
+    "pass": true,
+    "note": "Verified from BMKG source text: sumatera barat 121 mm/hari"
+  },
+  {
+    "item": "River discharge equation calculation",
+    "claim": "For A = 10 m² and v = 2 m/s, Q = 20 m³/s",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculated Q = 10 × 2 = 20 m³/s"
+  },
+  {
+    "item": "Narrow section speed calculation",
+    "claim": "For Q = 20 m³/s and A2 = 4 m², v2 = 5.0 m/s",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculated v2 = 20 / 4 = 5.0 m/s"
+  },
+  {
+    "item": "Medium section speed calculation",
+    "claim": "For Q = 20 m³/s and A3 = 5 m², v3 = 4.0 m/s",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculated v3 = 20 / 5 = 4.0 m/s"
+  },
+  {
+    "item": "Quiz 1 explanation",
+    "claim": "At fixed Q = A × v, a smaller wet area requires a higher average water speed",
+    "source": "bilingual",
+    "pass": true,
+    "note": "Bilingual agreement and continuity physics check pass"
+  },
+  {
+    "item": "Quiz 2 explanation",
+    "claim": "Q is the volume of water passing a cross-section per second",
+    "source": "bilingual",
+    "pass": true,
+    "note": "Bilingual agreement and volumetric flow rate definition pass"
+  },
+  {
+    "item": "Quiz 3 explanation",
+    "claim": "Absorbent ground lets some rain soak into soil, reducing rapid surface runoff",
+    "source": "bilingual",
+    "pass": true,
+    "note": "Bilingual agreement and hydrology principles pass"
+  }
+]

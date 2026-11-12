@@ -1,1 +1,58 @@
-{"updated": null, "guides": []}
+{
+  "updated": "2026-11-12T21:18:48+07:00",
+  "guides": [
+    {
+      "revision": "7a27fd6b0a2477cd746b981c8d39d816d05a608cdc4a9f935e9079d39ed8c07b",
+      "date": "2026-11-12",
+      "issue": "03",
+      "slug": "indonesia-rain-river-discharge",
+      "xp": 60,
+      "title": {
+        "en": "Rain and river flow",
+        "id": "Hujan dan aliran sungai"
+      },
+      "topic": {
+        "en": "River water flow",
+        "id": "Aliran air sungai"
+      },
+      "cover": {
+        "en": "issues/2026-11-12/elios-guide-03-indonesia-rain-river-discharge-cover-en.png",
+        "id": "issues/2026-11-12/elios-guide-03-indonesia-rain-river-discharge-cover-id.png"
+      },
+      "pdf": {
+        "en": "issues/2026-11-12/elios-guide-03-indonesia-rain-river-discharge-en.pdf",
+        "id": "issues/2026-11-12/elios-guide-03-indonesia-rain-river-discharge-id.pdf"
+      },
+      "content": {
+        "en": "issues/2026-11-12/en.json",
+        "id": "issues/2026-11-12/id.json"
+      },
+      "schema": 2,
+      "theme": "water",
+      "photo": {
+        "src": "issues/2026-11-12/photo.jpg",
+        "thumb": "issues/2026-11-12/photo-800.jpg",
+        "w": 1333,
+        "h": 2000,
+        "caption": {
+          "en": "Ciliwung River (archive photo)",
+          "id": "Sungai Ciliwung (foto arsip)"
+        },
+        "credit": "FIYYNUT / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Ciliwung_01.jpg?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org"
+      },
+      "content_sha": {
+        "en": "d4eec4fcea36d8fd743a5c7c591dfa30bef4ea4dfeb65f76b203baf0d13dba78",
+        "id": "0f8c21335f2f207e02d53699461030f51f837ef6e11a79749c4b5d842aa332e1"
+      },
+      "xp_parts": {
+        "story": 10,
+        "physics": 20,
+        "quiz": 10,
+        "lab": 20
+      },
+      "pages": 4
+    }
+  ]
+}
