@@ -1,6 +1,47 @@
 {
   "guides": [
     {
+      "revision": "61fd39a830fea4a3606509f382bd3511091afc76be18be9e7fa538b8e8a008b1",
+      "date": "2026-11-12",
+      "issue": "03",
+      "slug": "indonesia-rain-river-discharge",
+      "xp": 60,
+      "title": {
+        "en": "Rain and river flow",
+        "id": "Hujan dan aliran sungai"
+      },
+      "topic": {
+        "en": "River water flow",
+        "id": "Aliran air sungai"
+      },
+      "cover": {
+        "en": "issues/2026-11-12/elios-guide-03-indonesia-rain-river-discharge-cover-en.png",
+        "id": "issues/2026-11-12/elios-guide-03-indonesia-rain-river-discharge-cover-id.png"
+      },
+      "pdf": {
+        "en": "issues/2026-11-12/elios-guide-03-indonesia-rain-river-discharge-en.pdf",
+        "id": "issues/2026-11-12/elios-guide-03-indonesia-rain-river-discharge-id.pdf"
+      },
+      "content": {
+        "en": "issues/2026-11-12/en.json",
+        "id": "issues/2026-11-12/id.json"
+      },
+      "schema": 2,
+      "theme": "water",
+      "photo": null,
+      "content_sha": {
+        "en": "08002e0f4b76ba09997b7b8133d5f77efaa77346bb200e86922dd1627184af30",
+        "id": "356dd08a02fff3e0c833bff6882d7ce4417cb60fe30a8c9560c0d7241184220a"
+      },
+      "xp_parts": {
+        "story": 10,
+        "physics": 20,
+        "quiz": 10,
+        "lab": 20
+      },
+      "pages": 4
+    },
+    {
       "revision": "12da9f70b22477a4e6834684521a96a3fe4e2e95462ef8f60e65fa1dd3a2e21e",
       "date": "2026-11-09",
       "issue": "02",
@@ -81,5 +122,5 @@
       }
     }
   ],
-  "updated": "2026-11-12T19:17:08+07:00"
+  "updated": "2026-11-12T20:12:22+07:00"
 }

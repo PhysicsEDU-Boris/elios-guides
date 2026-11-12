@@ -1,0 +1,330 @@
+{
+  "_issue": "03",
+  "_slug": "indonesia-rain-river-discharge",
+  "_theme": "water",
+  "_keywords": [
+    "hujan",
+    "rain",
+    "river",
+    "water"
+  ],
+  "_date": "2026-11-12",
+  "_lang": "en",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "BMKG",
+      "title": "Prakiraan Cuaca Indonesia Sepekan Periode 10 – 16 November 2026 Waspada Peningkatan Potensi Hujan di Wilayah Indonesia Sepekan ke Depan",
+      "date": "2026-11-10",
+      "url": "https://www.bmkg.go.id/cuaca/potensi-hujan-sepekan/prakiraan-cuaca-indonesia-sepekan-periode-10-16-november-2026-waspada-peningkatan-potensi-hujan-di-wilayah-indonesia-sepekan-ke-depan",
+      "primary": true
+    },
+    {
+      "n": 2,
+      "publisher": "USGS",
+      "title": "Streamflow and the Water Cycle",
+      "date": "2026-09-17",
+      "url": "https://www.usgs.gov/water-science-school/science/streamflow-and-water-cycle",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "USGS",
+      "title": "How Streamflow is Measured",
+      "date": "2026-09-17",
+      "url": "https://www.usgs.gov/water-science-school/science/how-streamflow-measured",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": null,
+    "story.image": null,
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 2,
+  "_graph.2.raw": 5.0,
+  "_graph.3.raw": 4.0,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "At fixed Q = A × v, a smaller wet area requires a higher average water speed.",
+      "wrong": {
+        "a": "Water still flows because discharge stays nonzero.",
+        "c": "Slower water through a smaller area would reduce discharge.",
+        "d": "At the same speed, a smaller area would reduce discharge."
+      }
+    },
+    "2": {
+      "why": "Q is the volume of water passing a cross-section per second.",
+      "wrong": {
+        "b": "Temperature measures hotness, not volume per second.",
+        "c": "River length is a distance, not volume per second.",
+        "d": "Air pressure is not a volume flow rate."
+      }
+    },
+    "3": {
+      "why": "Absorbent ground lets some rain soak into soil, reducing rapid surface runoff.",
+      "wrong": {
+        "a": "Narrowing riverbanks does not help soil absorb rainfall.",
+        "b": "Waste can block drains; it does not help rain soak into soil.",
+        "d": "Paving covers soil and reduces water absorption."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "What does Q stand for in river water flow?",
+      "options": [
+        "Quality",
+        "Discharge volume per second",
+        "Quantity",
+        "Quickness"
+      ],
+      "answer": 1,
+      "explanation": "Q is volumetric flow rate, volume passing per second."
+    },
+    {
+      "question": "At fixed discharge, if cross-section area A decreases, velocity v must...",
+      "options": [
+        "decrease",
+        "stay the same",
+        "increase",
+        "drop to zero"
+      ],
+      "answer": 2,
+      "explanation": "By continuity (Q = A × v), smaller area means higher speed."
+    },
+    {
+      "question": "What is the unit of volumetric flow rate Q?",
+      "options": [
+        "m/s",
+        "m²",
+        "m³/s",
+        "kg/s"
+      ],
+      "answer": 2,
+      "explanation": "Cubic meters per second (m³/s)."
+    },
+    {
+      "question": "Why do heavy rains cause river water levels to rise quickly?",
+      "options": [
+        "Water evaporates faster",
+        "Runoff enters faster than water drains",
+        "Rivers shrink",
+        "Wind pushes water"
+      ],
+      "answer": 1,
+      "explanation": "Heavy rain creates rapid surface runoff into rivers."
+    },
+    {
+      "question": "What does A represent in the river flow equation?",
+      "options": [
+        "Altitude",
+        "Cross-section area",
+        "Acceleration",
+        "Angle"
+      ],
+      "answer": 1,
+      "explanation": "A is the cross-sectional area of the channel."
+    },
+    {
+      "question": "Which measure helps reduce urban flood peaks?",
+      "options": [
+        "Paving every surface",
+        "Building retention ponds and parks",
+        "Straightening rivers with concrete",
+        "Removing trees"
+      ],
+      "answer": 1,
+      "explanation": "Retention ponds store peak water and slow down flow."
+    },
+    {
+      "question": "If A = 10 m² and v = 2 m/s, what is Q?",
+      "options": [
+        "10 m³/s",
+        "15 m³/s",
+        "20 m³/s",
+        "25 m³/s"
+      ],
+      "answer": 2,
+      "explanation": "Q = A × v = 10 × 2 = 20 m³/s."
+    },
+    {
+      "question": "What agencies monitor rainfall and floods in Indonesia?",
+      "options": [
+        "NASA only",
+        "BMKG and BNPB",
+        "WMO only",
+        "UNEP"
+      ],
+      "answer": 1,
+      "explanation": "BMKG monitors weather and BNPB manages disaster response."
+    },
+    {
+      "question": "At fixed discharge, what happens to speed when the wet area increases?",
+      "options": [
+        "It increases",
+        "It decreases",
+        "It stops",
+        "It doubles"
+      ],
+      "answer": 1,
+      "explanation": "Larger area means slower flow for the same discharge Q."
+    },
+    {
+      "question": "For steady incompressible flow with no side inflow, continuity means...",
+      "options": [
+        "flow rate Q is constant",
+        "velocity is constant",
+        "area is constant",
+        "temperature rises"
+      ],
+      "answer": 0,
+      "explanation": "Volume flow rate remains constant along the channel."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "two different channel widths using blocks or trays",
+      "pouring water at a steady rate",
+      "observing how fast water flows through narrow versus wide sections"
+    ],
+    "safety": [
+      "no flame, no hot water, no electrical appliances",
+      "only hands in the photo"
+    ],
+    "pass_if": "The photos show water flowing through two different channel widths and the student notes speed differences."
+  },
+  "_per_page": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "_replace": {},
+  "guide.issue_date": "#03 · 12 NOV 2026",
+  "guide.lang": "EN",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Rain and river flow · Illustration by ELIOS",
+  "cover.title": "Rain and river flow",
+  "cover.subtitle": "BMKG warns of heavy rain in Indonesia. Explore how river area and water speed help us understand the flow.",
+  "cover.image_caption": "Illustration of river water flow",
+  "cover.news_date": "News: 10 Nov 2026",
+  "cover.place": "Indonesia",
+  "cover.topic": "River water flow",
+  "cover.subject": "Physics · Water",
+  "quest.1.desc": "Read about river floods",
+  "quest.2.desc": "Use Q = A × v",
+  "quest.3.desc": "Quiz, mini lab and badge",
+  "cover.read_time": "12 min read",
+  "cover.level": "SMP · grade 7–9",
+  "cover.xp_total": "Earn up to 60 XP",
+  "cover.fun_fact": "For the same steady flow, halving the wet cross-section area doubles the average water speed. [3]",
+  "story.title": "Rain warnings and river flow",
+  "story.lead": "BMKG warned of heavy rain across parts of Indonesia in its November outlook. Bengkulu, Aceh and West Sumatra recorded high daily rainfall [1].",
+  "story.image_caption": "River flow illustration",
+  "story.image_credit": "Illustration by ELIOS",
+  "stat.1.value": "150 mm",
+  "stat.2.value": "140 mm",
+  "stat.3.value": "121 mm",
+  "stat.1.label": "Bengkulu daily rain in the observed period [1]",
+  "stat.2.label": "Aceh daily rain in the observed period [1]",
+  "stat.3.label": "West Sumatra daily rain in the observed period [1]",
+  "story.body_1": "Rain reaching the ground can soak into soil or flow downhill as runoff. Some runoff enters streams and rivers, carrying water toward the sea [2]. More incoming water can change river flow, so a rain warning is a reason to pay attention to local conditions.",
+  "story.body_2": "Scientists measure a river channel and its average water speed to work out discharge: the volume passing each second [3]. Our classroom example uses chosen values, not measurements of an Indonesian river.",
+  "timeline.1.date": "Observation",
+  "timeline.2.date": "Outlook",
+  "timeline.3.date": "Response",
+  "timeline.1.text": "Heavy daily rain was recorded in several regions [1].",
+  "timeline.2.text": "BMKG warned of more heavy rain in parts of Indonesia [1].",
+  "timeline.3.text": "Follow local warnings and observe conditions safely.",
+  "physics.title": "Water flow and continuity",
+  "physics.body_1": "How much water moves through a river per second is called discharge, Q. It depends on the cross-section area A and the speed of the water v.",
+  "physics.body_2": "For steady flow with no side inflow, discharge stays constant along a channel. A smaller wet cross-section then requires a higher average speed.",
+  "physics.equation": "Q = A × v",
+  "physics.equation_name": "River discharge equation",
+  "legend.1.symbol": "Q",
+  "legend.1.meaning": "discharge volume",
+  "legend.1.unit": "m³/s",
+  "legend.2.symbol": "A",
+  "legend.2.meaning": "cross-section area",
+  "legend.2.unit": "square meter",
+  "legend.3.symbol": "v",
+  "legend.3.meaning": "water velocity",
+  "legend.3.unit": "m/s",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "Chosen classroom values, not field data. Steady flow; no side inflow, compression or storage changes.",
+  "example.step_1": "A = 10 m², v = 2 m/s",
+  "example.step_2": "Q = 10 × 2",
+  "example.step_3": "Multiply: Q = 20 m³/s",
+  "example.result": "Q = 20 m³/s",
+  "table.h1": "Channel type",
+  "table.h2": "Area (m²)",
+  "table.h3": "Speed (m/s)",
+  "table.r1c1": "Wide river",
+  "table.r1c2": "10",
+  "table.r1c3": "2 m/s",
+  "table.r2c1": "Narrow gorge",
+  "table.r2c2": "4",
+  "table.r2c3": "5 m/s",
+  "table.r3c1": "Medium channel",
+  "table.r3c2": "5",
+  "table.r3c3": "4 m/s",
+  "table.note": "Same discharge Q (20 m³/s) through different areas.",
+  "graph.title": "Water speed in different channel sizes",
+  "graph.1.label": "Wide",
+  "graph.2.label": "Narrow",
+  "graph.3.label": "Medium",
+  "graph.1.value": "2 m/s",
+  "graph.2.value": "5 m/s",
+  "graph.3.value": "4 m/s",
+  "graph.note": "For fixed discharge, a smaller wet area means a higher average speed.",
+  "physics.tip": "For the same steady discharge, a smaller wet area needs a higher average speed. Real rivers also change depth.",
+  "mission.title": "Flood control mission",
+  "quiz.answer_key": "Answer key: 1B · 2A · 3C",
+  "quiz.1.question": "At fixed discharge, what happens to speed when the wet area decreases?",
+  "quiz.1.a": "It stops",
+  "quiz.1.b": "It increases",
+  "quiz.1.c": "It decreases",
+  "quiz.1.d": "It stays the same",
+  "quiz.2.question": "In Q = A × v, what does Q represent?",
+  "quiz.2.a": "Volume flow rate",
+  "quiz.2.b": "Water temperature",
+  "quiz.2.c": "River length",
+  "quiz.2.d": "Air pressure",
+  "quiz.3.question": "Which change can reduce rapid surface runoff?",
+  "quiz.3.a": "Narrowing riverbanks",
+  "quiz.3.b": "Dumping waste",
+  "quiz.3.c": "More ground that absorbs water",
+  "quiz.3.d": "Paving all soil",
+  "lab.title": "Mini lab: Channel flow",
+  "lab.step_1": "Build two different channel widths using blocks or trays.",
+  "lab.step_2": "Pour water at a steady rate through both channels.",
+  "lab.step_3": "Observe how fast water flows and note speed differences.",
+  "lab.question": "What changed in the water depth and speed? Keep your pouring rate steady.",
+  "badge.name": "Water Scout",
+  "badge.text": "Completed the river flow guide and mastery quiz.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Discharge",
+  "glossary.1.def": "Volume of water passing a point per second.",
+  "glossary.2.term": "Cross-section",
+  "glossary.2.def": "Area of a slice cut across a river channel.",
+  "glossary.3.term": "Runoff",
+  "glossary.3.def": "Rainwater that flows over land into rivers.",
+  "label.sources": "Sources and further reading",
+  "source.1": "[1] BMKG, Prakiraan Cuaca Indonesia Sepekan Periode 10–16 November 2026, 10 Nov 2026.",
+  "source.2": "[2] USGS, Streamflow and the Water Cycle, 17 Sep 2026.",
+  "source.3": "[3] USGS, How Streamflow is Measured, 17 Sep 2026.",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Illustration by ELIOS"
+}
