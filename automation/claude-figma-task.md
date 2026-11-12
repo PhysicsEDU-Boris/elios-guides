@@ -8,6 +8,8 @@ template frames 24:170, 25:221, 26:230, 27:248; work only in the issue wrapper f
 
 Each run does three jobs, in this order. Skip a job when it has nothing to do.
 A. Today's issue, when guide/<today> has no issues/<today>/figma.json yet.
+   Then catch up older guide/<date> branches that have a passing check.json, are not NEEDS FIX,
+   and have no figma.json. Process oldest first; never skip a repaired issue because its date passed.
 B. Refills: every guide/<date> branch whose issues/<date>/resync.json has a content_sha that differs
    from the content_sha in its figma.json (the owner edited printed text).
 C. Rebuilds: every date listed in automation/rebuild.txt on main (the owner changed the template).
@@ -48,6 +50,8 @@ Never touch guide/dry-run-* branches.
    upload fails, the connector is unavailable, or the photo is wrong, stop for that date before
    committing figma.json or triggering export. Report what needs fixing; do not publish a placeholder.
    Null images keep the template's illustration handling.
+   A raster fill is behind a slot's child layers: hide any `placeholder illustration` child as well
+   as `image.hint` after a successful upload, or the photograph can remain covered.
 8. One screenshot per wrapper (get_screenshot, maxDimension 1600). Look for clipped or overlapping text.
    Fix only by shortening text as in step 5.
 9. Write issues/<date>/figma.json:

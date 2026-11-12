@@ -277,6 +277,9 @@ def check(folder, manifest_path=ROOT / "manifest.json"):
     check_path = folder / "check.json"
     try:
         items = json.loads(check_path.read_text(encoding="utf-8"))
+        if not isinstance(items, list) or not items:
+            errs.append("check.json must be a nonempty list of verified claims")
+            items = []
         for it in items:
             if it.get("pass") is not True:
                 errs.append(f"fact-check failed: {it.get('item')}: {it.get('claim')} ({it.get('note')})")
@@ -290,6 +293,8 @@ def check(folder, manifest_path=ROOT / "manifest.json"):
         errs.append(f"{folder.name} is already in manifest.json")
     slug, topic = str(en.get("_slug", "")).lower(), str(en.get("cover.topic", "")).strip().lower()
     for g in guides[:14]:
+        if str(g.get("issue")) == str(en.get("_issue")) and g.get("date") != folder.name:
+            errs.append(f"issue number {en.get('_issue')!r} was used on {g.get('date')}")
         if str(g.get("slug", "")).lower() == slug:
             errs.append(f"slug {slug!r} was used on {g.get('date')}")
         if topic and str((g.get("topic") or {}).get("en", "")).strip().lower() == topic:
