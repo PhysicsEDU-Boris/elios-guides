@@ -1,5 +1,7 @@
 __pycache__/
 .pytest_cache/
-.gemini/
+.gemini/*
+!.gemini/published-manifest.json
+!.gemini/source-evidence.json
 .venv/
 gemini-artifacts/

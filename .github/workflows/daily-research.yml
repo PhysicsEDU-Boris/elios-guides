@@ -133,8 +133,7 @@ jobs:
         # Gemini can read scripts/validate.py and once forged calc.out.json, check.json and cover.jpg.
         run: mkdir -p "issues/$DATE" && find "issues/$DATE" -type f ! -name en.json ! -name id.json ! -name calc.py ! -name sources.md -print -delete
 
-      - name: Calc
-        id: calc
+      - name: Compute values for the independent checker
         continue-on-error: true
         run: python scripts/run_calc.py "issues/$DATE"
 
@@ -194,6 +193,11 @@ jobs:
 
       - name: Keep only check.json from the fact-check
         run: mkdir -p "issues/$DATE" && find "issues/$DATE" -type f ! -name en.json ! -name id.json ! -name calc.py ! -name sources.md ! -name check.json -print -delete
+
+      - name: Calc
+        id: calc
+        continue-on-error: true
+        run: python scripts/run_calc.py "issues/$DATE"
 
       - name: Only issues/<date> changed
         run: |

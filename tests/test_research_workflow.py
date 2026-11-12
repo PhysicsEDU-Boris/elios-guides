@@ -8,6 +8,18 @@ from pathlib import Path
 import pytest
 
 
+def test_gemini_can_read_generated_evidence_without_exposing_its_settings(tmp_path):
+    root = Path(__file__).resolve().parents[1]
+    (tmp_path / ".gitignore").write_text((root / ".gitignore").read_text())
+    (tmp_path / ".gemini").mkdir()
+    subprocess.run(["git", "init", "-q"], cwd=tmp_path, check=True)
+    for name, ignored in (("published-manifest.json", False), ("source-evidence.json", False), ("settings.json", True)):
+        path = f".gemini/{name}"
+        (tmp_path / path).write_text("{}")
+        result = subprocess.run(["git", "check-ignore", "-q", path], cwd=tmp_path)
+        assert result.returncode == int(not ignored)
+
+
 @pytest.mark.parametrize("resume,exists,filled,expected,output", [
     ("false", "true", "false", 0, "skip=true"),
     ("false", "false", "false", 0, "branch=guide/2026-11-12"),
