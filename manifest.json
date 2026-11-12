@@ -1,7 +1,7 @@
 {
   "guides": [
     {
-      "revision": "61fd39a830fea4a3606509f382bd3511091afc76be18be9e7fa538b8e8a008b1",
+      "revision": "50ab62bc2470fc7724954b1fd183158fa1ab6e5e11f69306b593b2043d6b567c",
       "date": "2026-11-12",
       "issue": "03",
       "slug": "indonesia-rain-river-discharge",
@@ -28,10 +28,22 @@
       },
       "schema": 2,
       "theme": "water",
-      "photo": null,
+      "photo": {
+        "src": "issues/2026-11-12/photo.jpg",
+        "thumb": "issues/2026-11-12/photo-800.jpg",
+        "w": 1333,
+        "h": 2000,
+        "caption": {
+          "en": "Ciliwung River (archive photo)",
+          "id": "Sungai Ciliwung (foto arsip)"
+        },
+        "credit": "FIYYNUT / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Ciliwung_01.jpg?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org"
+      },
       "content_sha": {
-        "en": "08002e0f4b76ba09997b7b8133d5f77efaa77346bb200e86922dd1627184af30",
-        "id": "356dd08a02fff3e0c833bff6882d7ce4417cb60fe30a8c9560c0d7241184220a"
+        "en": "d4eec4fcea36d8fd743a5c7c591dfa30bef4ea4dfeb65f76b203baf0d13dba78",
+        "id": "0f8c21335f2f207e02d53699461030f51f837ef6e11a79749c4b5d842aa332e1"
       },
       "xp_parts": {
         "story": 10,
@@ -135,5 +147,5 @@
       }
     }
   ],
-  "updated": "2026-11-12T20:44:33+07:00"
+  "updated": "2026-11-12T20:45:52+07:00"
 }

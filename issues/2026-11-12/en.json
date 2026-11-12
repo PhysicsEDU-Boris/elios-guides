@@ -37,8 +37,22 @@
     }
   ],
   "_images": {
-    "cover.image": null,
-    "story.image": null,
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Ciliwung_01.jpg?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "license": "CC BY-SA 4.0",
+      "credit": "FIYYNUT / Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Ciliwung_01.jpg",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Creek_in_Telaga_Warna_NR.jpg?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "license": "CC BY-SA 4.0",
+      "credit": "RXerself / Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Creek_in_Telaga_Warna_NR.jpg",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
     "physics.diagram": null
   },
   "_graph.1.raw": 2,
@@ -209,10 +223,10 @@
   "guide.issue_date": "#03 · 12 NOV 2026",
   "guide.lang": "EN",
   "guide.xp": "+60 XP",
-  "footer.credit": "ELIOS Guides · Rain and river flow · Illustration by ELIOS",
+  "footer.credit": "ELIOS Guides · Photos: Wikimedia Commons",
   "cover.title": "Rain and river flow",
   "cover.subtitle": "BMKG warns of heavy rain in Indonesia. Explore how river area and water speed help us understand the flow.",
-  "cover.image_caption": "Illustration of river water flow",
+  "cover.image_caption": "Ciliwung River (archive photo)",
   "cover.news_date": "News: 10 Nov 2026",
   "cover.place": "Indonesia",
   "cover.topic": "River water flow",
@@ -226,8 +240,8 @@
   "cover.fun_fact": "For the same steady flow, halving the wet cross-section area doubles the average water speed. [3]",
   "story.title": "Rain warnings and river flow",
   "story.lead": "BMKG warned of heavy rain across parts of Indonesia in its November outlook. Bengkulu, Aceh and West Sumatra recorded high daily rainfall [1].",
-  "story.image_caption": "River flow illustration",
-  "story.image_credit": "Illustration by ELIOS",
+  "story.image_caption": "Ciliwung headwaters at Telaga Warna (archive photo).",
+  "story.image_credit": "RXerself / Wikimedia Commons · CC BY-SA 4.0",
   "stat.1.value": "150 mm",
   "stat.2.value": "140 mm",
   "stat.3.value": "121 mm",
@@ -326,5 +340,5 @@
   "source.3": "[3] USGS, How Streamflow is Measured, 17 Sep 2026.",
   "source.4": "",
   "source.5": "",
-  "credit.images": "Illustration by ELIOS"
+  "credit.images": "FIYYNUT, RXerself / Wikimedia Commons · CC BY-SA 4.0 · cropped/resized · https://creativecommons.org/licenses/by-sa/4.0/"
 }
