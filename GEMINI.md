@@ -57,7 +57,9 @@ Every reference to manifest.json below means this catalogue. It contains the dep
 - Only reusable images: NASA, NOAA, USGS (public domain), ESA/Copernicus (credit), Wikimedia Commons
   with a CC licence (credit author + licence), BMKG. No news-agency photos, no children, no
   identifiable private people. Fill _images with source_url, license and credit. If none fits, set it
-  to null and write "Illustration by ELIOS" in the credit.
+  to null only for story.image or physics.diagram and write "Illustration by ELIOS" in their credit.
+  cover.image is required: find another relevant licensed photo if the first one fails. An archive
+  photo may illustrate the physics, but label it as an archive photo rather than the current event.
 - source_url is the direct ORIGINAL image file (https, image/jpeg or image/png, under 30 MB), not the
   web page about it and not a thumbnail. Wikimedia: the upload.wikimedia.org original (no /thumb/).
   NASA/NOAA/USGS: the largest rendition offered. The cover photo needs a long side of at least
@@ -71,7 +73,7 @@ Every reference to manifest.json below means this catalogue. It contains the dep
   Set story.image to null only if the main source has no reusable image.
 - cover.image: use the same verified photo as story.image when it also meets the cover size and
   quality rules. Give it its own file name (cover.jpg), matching caption and credit in both languages.
-  A null cover means no photograph in the app feed or the PDF cover, even if story.image is present.
+  A null cover blocks publication because the app feed requires a photograph.
 - NASA Earth Observatory now lives at science.nasa.gov/earth/earth-observatory/ and its images at
   assets.science.nasa.gov. The old earthobservatory.nasa.gov and eoimages.gsfc.nasa.gov urls are gone.
 - Every source url is opened by a script after you finish. Invented or guessed urls fail the issue.
