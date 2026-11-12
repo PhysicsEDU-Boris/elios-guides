@@ -43,8 +43,8 @@ original upload; NASA/NOAA/USGS: the writer must give the largest rendition, up 
 long side under 1600 px (cover) / 1200 px (story), Laplacian variance under 120 on a 1024 px grey copy
 (calibrated on `tests/fixtures/sharpness`: sharp 144–2945, blurry 13–88) and estimated JPEG quality
 under 70. It never upscales. Kept photos are saved at most 2000 px, sRGB, quality 85, progressive; the
-cover photo also as `photo.jpg` + `photo-800.jpg` (quality 82) for the app. On the last attempt a
-failing photo becomes `null` (no blurry fallback). Figma gets the full-resolution file; the cover PNG is
+cover photo also as `photo.jpg` + `photo-800.jpg` (quality 82) for the app. A failed optional story photo
+may become `null`; a missing cover photo or app thumbnail blocks publication. Figma gets the full-resolution file; the cover PNG is
 exported at scale 2 and must be at least 1190×1684.
 
 ## Fact check

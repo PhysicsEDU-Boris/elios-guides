@@ -23,6 +23,7 @@ Never touch guide/dry-run-* branches.
 2. Read issues/<date>/en.json, id.json and check.json from guide/<date>, and figma/fill.js from main
    so older issues use the current Figma tool API. If check.json has any
    pass=false, stop for this date and report.
+   A licensed cover.image and both app photo files are required; do not fill or publish a photo-less cover.
 3. Load the figma-use skill. For each language: take fill.js, replace __CONTENT__ with that file's JSON
    (as a JS object literal) and run it with use_figma on file pBZAnlSJnLGB5Je0tCth12. fill.js replaces
    the wrapper with the same name, so a refill or rebuild never leaves a duplicate; it always builds

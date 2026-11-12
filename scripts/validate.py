@@ -135,6 +135,8 @@ def check_lang(d, lang, folder):
                 errs.append(f"{lang}: {k} cites [{n}] but there is no _sources entry {n}")
 
     # images
+    if not (d.get("_images") or {}).get("cover.image"):
+        errs.append(f"{lang}: cover.image needs a licensed photo for the app card; it cannot be null")
     for key, img in (d.get("_images") or {}).items():
         if img is None:
             continue

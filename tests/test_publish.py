@@ -12,6 +12,7 @@ def exported(issue):
     issue.en['_example'] = False
     issue.id['_example'] = False
     issue.write()
+    write_photos(issue.folder)
     base = f"elios-guide-{issue.en['_issue']}-{issue.en['_slug']}"
     for lang in ('en', 'id'):
         writer = PdfWriter()
@@ -33,13 +34,13 @@ def test_publish_preserves_archive_and_copies_only_public_files(issue, tmp_path)
     publish.publish('2026-11-09', issue.root, site)
     guides = json.loads((site / 'manifest.json').read_text())['guides']
     assert [g['date'] for g in guides] == ['2026-11-09', '2026-11-08']
-    assert len(list((site / 'issues' / '2026-11-09').iterdir())) == 6
+    assert len(list((site / 'issues' / '2026-11-09').iterdir())) == 8
     assert not (site / 'issues' / '2026-11-09' / 'calc.py').exists()
     publish.publish('2026-11-09', issue.root, site)
     assert len(json.loads((site / 'manifest.json').read_text())['guides']) == 2
 
 
-def test_publish_copies_photos_and_drops_stale_ones(issue, tmp_path):
+def test_missing_photos_cannot_remove_an_existing_published_photo(issue, tmp_path):
     exported(issue)
     write_photos(issue.folder)
     site = tmp_path / 'site'
@@ -50,8 +51,11 @@ def test_publish_copies_photos_and_drops_stale_ones(issue, tmp_path):
     assert entry['photo']['src'] == 'issues/2026-11-09/photo.jpg'
     for name in ('photo.jpg', 'photo-800.jpg'):
         (issue.folder / name).unlink()
-    assert publish.publish('2026-11-09', issue.root, site)['photo'] is None
-    assert not (out / 'photo.jpg').exists()
+    before = (site / 'manifest.json').read_bytes()
+    with pytest.raises(ValueError, match='cover photo and app thumbnail are required'):
+        publish.publish('2026-11-09', issue.root, site)
+    assert (site / 'manifest.json').read_bytes() == before
+    assert (out / 'photo.jpg').exists() and (out / 'photo-800.jpg').exists()
 
 
 @pytest.mark.parametrize('failure', ['factcheck', 'example', 'pdf', 'png', 'symlink', 'small-png'])
