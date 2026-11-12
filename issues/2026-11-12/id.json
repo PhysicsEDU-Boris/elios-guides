@@ -1,0 +1,370 @@
+{
+  "_issue": "03",
+  "_slug": "indonesia-rain-river-discharge",
+  "_theme": "water",
+  "_keywords": [
+    "hujan",
+    "rain",
+    "river",
+    "water"
+  ],
+  "_date": "2026-11-12",
+  "_lang": "id",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "BMKG",
+      "title": "Prakiraan Cuaca Indonesia Sepekan Periode 10 – 16 November 2026 Waspada Peningkatan Potensi Hujan di Wilayah Indonesia Sepekan ke Depan",
+      "date": "2026-11-10",
+      "url": "https://www.bmkg.go.id/cuaca/potensi-hujan-sepekan/prakiraan-cuaca-indonesia-sepekan-periode-10-16-november-2026-waspada-peningkatan-potensi-hujan-di-wilayah-indonesia-sepekan-ke-depan",
+      "primary": true
+    },
+    {
+      "n": 2,
+      "publisher": "USGS",
+      "title": "Streamflow and the Water Cycle",
+      "date": "2026-09-17",
+      "url": "https://www.usgs.gov/water-science-school/science/streamflow-and-water-cycle",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "USGS",
+      "title": "How Streamflow is Measured",
+      "date": "2026-09-17",
+      "url": "https://www.usgs.gov/water-science-school/science/how-streamflow-measured",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": null,
+    "story.image": null,
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 2,
+  "_graph.2.raw": 5.0,
+  "_graph.3.raw": 4.0,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Pada Q = A × v yang tetap, luas basah lebih kecil memerlukan laju rata-rata air lebih tinggi.",
+      "wrong": {
+        "a": "Air tetap mengalir karena debit tidak nol.",
+        "c": "Air lebih lambat melalui luas lebih kecil akan menurunkan debit.",
+        "d": "Pada laju sama, luas lebih kecil akan menurunkan debit."
+      }
+    },
+    "2": {
+      "why": "Q adalah volume air yang melewati penampang tiap detik.",
+      "wrong": {
+        "b": "Suhu menyatakan panas dingin, bukan volume per detik.",
+        "c": "Panjang sungai adalah jarak, bukan volume per detik.",
+        "d": "Tekanan udara bukan laju volume aliran."
+      }
+    },
+    "3": {
+      "why": "Tanah penyerap membuat sebagian hujan meresap sehingga limpasan permukaan cepat berkurang.",
+      "wrong": {
+        "a": "Menyempitkan bantaran tidak membantu tanah menyerap hujan.",
+        "b": "Sampah dapat menyumbat saluran dan tidak membantu air meresap.",
+        "d": "Aspal menutupi tanah dan mengurangi penyerapan air."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "Apa arti Q dalam aliran air sungai?",
+      "options": [
+        "Kualitas",
+        "Volume debit per detik",
+        "Kuantitas",
+        "Kecepatan"
+      ],
+      "answer": 1,
+      "explanation": "Q adalah laju volume aliran, volume yang lewat per detik."
+    },
+    {
+      "question": "Pada debit tetap, jika luas penampang A berkurang, laju v harus...",
+      "options": [
+        "menurun",
+        "tetap sama",
+        "meningkat",
+        "turun ke nol"
+      ],
+      "answer": 2,
+      "explanation": "Berdasarkan kontinuitas (Q = A × v), luas lebih kecil berarti kecepatan lebih tinggi."
+    },
+    {
+      "question": "Apa satuan dari laju volume aliran Q?",
+      "options": [
+        "m/s",
+        "m²",
+        "m³/s",
+        "kg/s"
+      ],
+      "answer": 2,
+      "explanation": "Meter kubik per sekon (m³/s)."
+    },
+    {
+      "question": "Mengapa hujan lebat menyebabkan permukaan air sungai naik dengan cepat?",
+      "options": [
+        "Air menguap lebih cepat",
+        "Limpasan masuk lebih cepat daripada air keluar",
+        "Sungai menyusut",
+        "Angin mendorong air"
+      ],
+      "answer": 1,
+      "explanation": "Hujan lebat menciptakan limpasan permukaan yang cepat ke sungai."
+    },
+    {
+      "question": "Apa yang direpresentasikan oleh A dalam persamaan aliran sungai?",
+      "options": [
+        "Ketinggian",
+        "Luas penampang",
+        "Percepatan",
+        "Sudut"
+      ],
+      "answer": 1,
+      "explanation": "A adalah luas penampang lintang saluran."
+    },
+    {
+      "question": "Tindakan apa yang membantu mengurangi puncak banjir perkotaan?",
+      "options": [
+        "Mengaspal setiap permukaan",
+        "Membangun kolam retensi dan taman",
+        "Meluruskan sungai dengan beton",
+        "Menghilangkan pohon"
+      ],
+      "answer": 1,
+      "explanation": "Kolam retensi menyimpan air puncak dan memperlambat aliran."
+    },
+    {
+      "question": "Jika A = 10 m² dan v = 2 m/s, berapakah Q?",
+      "options": [
+        "10 m³/s",
+        "15 m³/s",
+        "20 m³/s",
+        "25 m³/s"
+      ],
+      "answer": 2,
+      "explanation": "Q = A × v = 10 × 2 = 20 m³/s."
+    },
+    {
+      "question": "Lembaga apa yang memantau curah hujan dan banjir di Indonesia?",
+      "options": [
+        "NASA saja",
+        "BMKG dan BNPB",
+        "WMO saja",
+        "UNEP"
+      ],
+      "answer": 1,
+      "explanation": "BMKG memantau cuaca dan BNPB mengelola penanganan bencana."
+    },
+    {
+      "question": "Pada debit tetap, bagaimana laju air jika luas basah bertambah?",
+      "options": [
+        "Meningkat",
+        "Menurun",
+        "Berhenti",
+        "Berlipat ganda"
+      ],
+      "answer": 1,
+      "explanation": "Luas yang lebih besar berarti aliran lebih lambat untuk debit Q yang sama."
+    },
+    {
+      "question": "Untuk aliran tunak tak termampatkan tanpa aliran samping, kontinuitas berarti...",
+      "options": [
+        "laju aliran Q konstan",
+        "kecepatan konstan",
+        "luas konstan",
+        "suhu naik"
+      ],
+      "answer": 0,
+      "explanation": "Laju volume aliran tetap konstan sepanjang saluran."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "dua lebar saluran berbeda menggunakan balok atau nampan",
+      "menuangkan air dengan laju tetap",
+      "mengamati kecepatan aliran pada saluran sempit versus lebar"
+    ],
+    "safety": [
+      "tanpa api, tanpa air panas, tanpa peralatan listrik",
+      "hanya tangan di dalam foto"
+    ],
+    "pass_if": "Foto menunjukkan air mengalir melalui dua lebar saluran berbeda dan siswa mencatat perbedaan kecepatannya."
+  },
+  "_per_page": [
+    {
+      "guide.stop_label": "Sampul"
+    },
+    {
+      "guide.stop_label": "Pos 1 · Ceritanya",
+      "section.label": "POS 1 · CERITANYA",
+      "section.xp": "+10 XP UNTUK MEMBACA"
+    },
+    {
+      "guide.stop_label": "Pos 2 · Fisikanya",
+      "section.label": "POS 2 · FISIKANYA",
+      "section.xp": "+20 XP UNTUK MENJAWAB"
+    },
+    {
+      "guide.stop_label": "Pos 3 · Misimu",
+      "section.label": "POS 3 · MISIMU",
+      "section.xp": "+30 XP UNTUK DIRAIH"
+    }
+  ],
+  "_replace": {
+    "stop": [
+      [
+        "STOP",
+        "POS"
+      ]
+    ],
+    "page ref": [
+      [
+        "p.",
+        "hlm. "
+      ]
+    ]
+  },
+  "guide.issue_date": "#03 · 12 NOV 2026",
+  "guide.lang": "ID",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Hujan dan aliran sungai · Ilustrasi oleh ELIOS",
+  "cover.title": "Hujan dan aliran sungai",
+  "cover.subtitle": "BMKG memperingatkan hujan lebat di Indonesia. Pelajari hubungan luas penampang sungai, kecepatan air dan debit.",
+  "cover.image_caption": "Ilustrasi aliran air sungai",
+  "cover.news_date": "Berita: 10 Nov 2026",
+  "cover.place": "Indonesia",
+  "cover.topic": "Aliran air sungai",
+  "cover.subject": "Fisika · Air",
+  "quest.1.desc": "Baca tentang banjir sungai",
+  "quest.2.desc": "Gunakan Q = A × v",
+  "quest.3.desc": "Kuis, lab mini, dan lencana",
+  "cover.read_time": "12 menit baca",
+  "cover.level": "SMP · kelas 7–9",
+  "cover.xp_total": "Raih hingga 60 XP",
+  "cover.fun_fact": "Pada debit tetap, luas penampang basah yang menjadi setengah membuat laju rata-rata air dua kali lipat. [3]",
+  "story.title": "Peringatan hujan dan aliran sungai",
+  "story.lead": "BMKG memperingatkan hujan lebat di sejumlah wilayah Indonesia pada prakiraan November. Bengkulu, Aceh dan Sumatera Barat mencatat hujan harian tinggi [1].",
+  "story.image_caption": "Ilustrasi aliran sungai",
+  "story.image_credit": "Ilustrasi oleh ELIOS",
+  "stat.1.value": "150 mm",
+  "stat.2.value": "140 mm",
+  "stat.3.value": "121 mm",
+  "stat.1.label": "Hujan harian Bengkulu pada periode pengamatan [1]",
+  "stat.2.label": "Hujan harian Aceh pada periode pengamatan [1]",
+  "stat.3.label": "Hujan harian Sumatera Barat pada periode pengamatan [1]",
+  "story.body_1": "Air hujan dapat meresap ke tanah atau mengalir menuruni lereng sebagai limpasan. Sebagiannya masuk ke anak sungai dan sungai, lalu mengalir menuju laut [2]. Tambahan air dapat mengubah aliran sungai. Karena itu, perhatikan peringatan hujan dan kondisi setempat.",
+  "story.body_2": "Ilmuwan mengukur penampang sungai dan laju rata-rata air untuk menghitung debit, yaitu volume yang lewat tiap detik [3]. Contoh kelas kita memakai nilai pilihan, bukan hasil pengukuran sungai di Indonesia.",
+  "timeline.1.date": "Pengamatan",
+  "timeline.2.date": "Prakiraan",
+  "timeline.3.date": "Tindakan",
+  "timeline.1.text": "Hujan harian tinggi tercatat di beberapa wilayah [1].",
+  "timeline.2.text": "BMKG mewaspadai hujan lebat lanjutan di sejumlah wilayah [1].",
+  "timeline.3.text": "Ikuti peringatan setempat dan amati kondisi dengan aman.",
+  "physics.title": "Aliran air dan kontinuitas",
+  "physics.body_1": "Jumlah air yang mengalir melalui sungai per detik disebut debit, Q. Ini bergantung pada luas penampang A dan kecepatan air v.",
+  "physics.body_2": "Pada aliran tunak tanpa aliran samping, debit tetap sepanjang saluran. Penampang basah yang lebih kecil memerlukan laju rata-rata lebih tinggi.",
+  "physics.equation": "Q = A × v",
+  "physics.equation_name": "Persamaan debit sungai",
+  "legend.1.symbol": "Q",
+  "legend.1.meaning": "volume debit",
+  "legend.1.unit": "m³/s",
+  "legend.2.symbol": "A",
+  "legend.2.meaning": "luas penampang",
+  "legend.2.unit": "meter persegi",
+  "legend.3.symbol": "v",
+  "legend.3.meaning": "kecepatan air",
+  "legend.3.unit": "m/s",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "Nilai contoh dipilih, bukan data lapangan. Aliran tunak; tanpa aliran samping atau perubahan simpanan.",
+  "example.step_1": "A = 10 m², v = 2 m/s",
+  "example.step_2": "Q = 10 × 2",
+  "example.step_3": "Kalikan: Q = 20 m³/s",
+  "example.result": "Q = 20 m³/s",
+  "table.h1": "Jenis saluran",
+  "table.h2": "Luas (m²)",
+  "table.h3": "Kecepatan (m/s)",
+  "table.r1c1": "Sungai lebar",
+  "table.r1c2": "10",
+  "table.r1c3": "2 m/s",
+  "table.r2c1": "Jurang sempit",
+  "table.r2c2": "4",
+  "table.r2c3": "5 m/s",
+  "table.r3c1": "Saluran sedang",
+  "table.r3c2": "5",
+  "table.r3c3": "4 m/s",
+  "table.note": "Debit Q sama (20 m³/s) melalui berbagai luas.",
+  "graph.title": "Kecepatan air di berbagai ukuran saluran",
+  "graph.1.label": "Lebar",
+  "graph.2.label": "Sempit",
+  "graph.3.label": "Sedang",
+  "graph.1.value": "2 m/s",
+  "graph.2.value": "5 m/s",
+  "graph.3.value": "4 m/s",
+  "graph.note": "Pada debit tetap, luas basah lebih kecil berarti laju rata-rata lebih tinggi.",
+  "physics.tip": "Pada debit tetap, luas basah lebih kecil perlu laju rata-rata lebih tinggi. Kedalaman sungai nyata juga berubah.",
+  "mission.title": "Misi pengendali banjir",
+  "quiz.answer_key": "Kunci: 1B · 2A · 3C",
+  "quiz.1.question": "Pada debit tetap, bagaimana laju air saat luas basah berkurang?",
+  "quiz.1.a": "Berhenti",
+  "quiz.1.b": "Meningkat",
+  "quiz.1.c": "Menurun",
+  "quiz.1.d": "Tetap sama",
+  "quiz.2.question": "Dalam Q = A × v, apa yang direpresentasikan oleh Q?",
+  "quiz.2.a": "Laju volume aliran",
+  "quiz.2.b": "Suhu air",
+  "quiz.2.c": "Panjang sungai",
+  "quiz.2.d": "Tekanan udara",
+  "quiz.3.question": "Perubahan apa yang mengurangi limpasan cepat?",
+  "quiz.3.a": "Menyempitkan bantaran sungai",
+  "quiz.3.b": "Membuang sampah",
+  "quiz.3.c": "Lebih banyak tanah penyerap",
+  "quiz.3.d": "Mengaspal semua tanah",
+  "lab.title": "Lab mini: Aliran saluran",
+  "lab.step_1": "Buat dua lebar saluran berbeda menggunakan balok atau nampan.",
+  "lab.step_2": "Tuangkan air dengan kecepatan tetap melalui kedua saluran.",
+  "lab.step_3": "Amati seberapa cepat air mengalir dan catat perbedaan kecepatannya.",
+  "lab.question": "Apa yang berubah pada kedalaman dan laju air? Jaga laju tuangan tetap.",
+  "badge.name": "Pramuka Air",
+  "badge.text": "Menyelesaikan panduan aliran sungai dan kuis penguasaan.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Debit",
+  "glossary.1.def": "Volume air yang melewati suatu titik per detik.",
+  "glossary.2.term": "Penampang",
+  "glossary.2.def": "Luas potongan melintang di saluran sungai.",
+  "glossary.3.term": "Limpasan",
+  "glossary.3.def": "Air hujan yang mengalir di atas tanah ke sungai.",
+  "label.sources": "Sumber dan bacaan lanjutan",
+  "source.1": "[1] BMKG, Prakiraan Cuaca Indonesia Sepekan Periode 10–16 November 2026, 10 Nov 2026.",
+  "source.2": "[2] USGS, Streamflow and the Water Cycle, 17 Sep 2026.",
+  "source.3": "[3] USGS, How Streamflow is Measured, 17 Sep 2026.",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Ilustrasi oleh ELIOS",
+  "label.quest_map": "PETA MISIMU",
+  "label.fun_fact": "TAHUKAH KAMU?",
+  "label.timeline": "LINIMASA",
+  "label.equation": "PERSAMAAN KUNCI",
+  "label.example": "CONTOH SOAL",
+  "label.graph": "GRAFIK",
+  "label.tip": "KATA BULB BUDDY",
+  "label.quiz": "KUIS KILAT · 3 SOAL · CENTANG SATU KOTAK",
+  "label.lab": "LAB MINI · COBA DI RUMAH ATAU SEKOLAH",
+  "label.badge": "LENCANA TERBUKA",
+  "quest.1.title": "Ceritanya",
+  "quest.2.title": "Fisikanya",
+  "quest.3.title": "Misimu"
+}
