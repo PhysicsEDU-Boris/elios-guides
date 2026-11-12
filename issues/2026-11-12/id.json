@@ -37,8 +37,22 @@
     }
   ],
   "_images": {
-    "cover.image": null,
-    "story.image": null,
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Ciliwung_01.jpg?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "license": "CC BY-SA 4.0",
+      "credit": "FIYYNUT / Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Ciliwung_01.jpg",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Creek_in_Telaga_Warna_NR.jpg?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "license": "CC BY-SA 4.0",
+      "credit": "RXerself / Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Creek_in_Telaga_Warna_NR.jpg",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
     "physics.diagram": null
   },
   "_graph.1.raw": 2,
@@ -236,10 +250,10 @@
   "guide.issue_date": "#03 · 12 NOV 2026",
   "guide.lang": "ID",
   "guide.xp": "+60 XP",
-  "footer.credit": "ELIOS Guides · Hujan dan aliran sungai · Ilustrasi oleh ELIOS",
+  "footer.credit": "ELIOS Guides · Foto: Wikimedia Commons",
   "cover.title": "Hujan dan aliran sungai",
   "cover.subtitle": "BMKG memperingatkan hujan lebat di Indonesia. Pelajari hubungan luas penampang sungai, kecepatan air dan debit.",
-  "cover.image_caption": "Ilustrasi aliran air sungai",
+  "cover.image_caption": "Sungai Ciliwung (foto arsip)",
   "cover.news_date": "Berita: 10 Nov 2026",
   "cover.place": "Indonesia",
   "cover.topic": "Aliran air sungai",
@@ -253,8 +267,8 @@
   "cover.fun_fact": "Pada debit tetap, luas penampang basah yang menjadi setengah membuat laju rata-rata air dua kali lipat. [3]",
   "story.title": "Peringatan hujan dan aliran sungai",
   "story.lead": "BMKG memperingatkan hujan lebat di sejumlah wilayah Indonesia pada prakiraan November. Bengkulu, Aceh dan Sumatera Barat mencatat hujan harian tinggi [1].",
-  "story.image_caption": "Ilustrasi aliran sungai",
-  "story.image_credit": "Ilustrasi oleh ELIOS",
+  "story.image_caption": "Hulu Ciliwung di Telaga Warna (foto arsip).",
+  "story.image_credit": "RXerself / Wikimedia Commons · CC BY-SA 4.0",
   "stat.1.value": "150 mm",
   "stat.2.value": "140 mm",
   "stat.3.value": "121 mm",
@@ -353,7 +367,7 @@
   "source.3": "[3] USGS, How Streamflow is Measured, 17 Sep 2026.",
   "source.4": "",
   "source.5": "",
-  "credit.images": "Ilustrasi oleh ELIOS",
+  "credit.images": "FIYYNUT, RXerself / Wikimedia Commons · CC BY-SA 4.0 · cropped/resized · https://creativecommons.org/licenses/by-sa/4.0/",
   "label.quest_map": "PETA MISIMU",
   "label.fun_fact": "TAHUKAH KAMU?",
   "label.timeline": "LINIMASA",
