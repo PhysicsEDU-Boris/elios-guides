@@ -92,43 +92,54 @@ def fact_errors(en, texts, computed):
     return errs
 
 
-def errors(folder):
+def errors(folder, evidence_path=None):
     folder = Path(folder)
     en = json.loads((folder / "en.json").read_text(encoding="utf-8"))
     sources = en.get("_sources") or []
     cited = {int(n) for k, v in en.items() if not k.startswith("_") for n in re.findall(r"\[(\d+)\]", str(v))}
     kws = keywords(en)
-    errs, texts = [], []
+    errs, texts, evidence = [], [], []
     for s in sources:
         n, url = s.get("n"), str(s.get("url", ""))
+        entry = {"n": n, "url": url, "text": ""}
+        evidence.append(entry)
         if n not in cited:
             errs.append(f"source {n} {url} is never cited with [{n}]")
         try:
             r = get(url)
         except requests.RequestException as e:
+            entry["error"] = type(e).__name__
             errs.append(f"source {n} {url} cannot be reached ({type(e).__name__})")
             continue
+        entry.update(status=r.status_code, final_url=r.url)
         if why := verdict(url, r):
+            entry["error"] = why
             errs.append(f"source {n} {url} {why}")
             continue
         if r.status_code in BLOCKED:
+            entry["error"] = "bot blocked; no verified source text"
             continue
         text = page_text(r.text)
+        # shortcut: long articles are excerpts; unconfirmed claims must fail the AI check.
+        entry.update(text=text[:16000], truncated=len(text) > 16000)
         texts.append(text)
         found = {k for k in kws if re.search(rf"\b{re.escape(k)}", text)}
         if len(found) < min(2, len(kws)):
             errs.append(f"source {n} {url} is off-topic: mentions {sorted(found) or 'none'} of the topic keywords {sorted(kws)}")
-    return errs + fact_errors(en, texts, calc_values(folder))
+    errs += fact_errors(en, texts, calc_values(folder))
+    if evidence_path is not None:
+        Path(evidence_path).write_text(json.dumps({"sources": evidence, "errors": errs}, ensure_ascii=False), encoding="utf-8")
+    return errs
 
 
-def main(folder):
-    errs = errors(folder)
+def main(folder, evidence_path=None):
+    errs = errors(folder, evidence_path)
     for e in errs:
         print(f"- {e}")
     return 1 if errs else 0
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        sys.exit("usage: check_sources.py issues/YYYY-MM-DD")
-    sys.exit(main(sys.argv[1]))
+    if len(sys.argv) not in (2, 4) or (len(sys.argv) == 4 and sys.argv[2] != "--evidence"):
+        sys.exit("usage: check_sources.py issues/YYYY-MM-DD [--evidence FILE]")
+    sys.exit(main(sys.argv[1], sys.argv[3] if len(sys.argv) == 4 else None))
