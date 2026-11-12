@@ -54,10 +54,11 @@ source and fails the issue as **NEEDS FIX** when a source is missing, never cite
 off-topic (its article text names fewer than 2 topic keywords from `_slug`, `cover.place`, `_keywords`),
 or when a number in `stat.N.value`, `story.*` or `cover.*` is in no source page and is not a value
 `calc.py` computes (literal inputs in `calc.py` need a source too). A failing issue is not published;
-the previous one stays live. The Gemini fact-check step uses `gemini-3-flash-preview` (free tier
-5 RPM / 20 RPD, used only by this step, capped at 18 turns) and falls back to Flash-Lite
-(15 RPM) when that quota is spent. Set the repository variable `FACTCHECK_MODEL` to change it (e.g. a
-Pro model with a paid key). Research and repair stay on Flash-Lite. After a repair, the old
+the previous one stays live. The independent fact-check uses one structured Gemini API request
+with bounded, fetched article text, rather than a CLI tool loop. It defaults to
+`gemini-3.5-flash-lite` and retries with `gemini-3.1-flash-lite` if the first report is incomplete.
+Set the repository variable `FACTCHECK_MODEL` to change the primary model. Research and repair
+still use Gemini CLI. After a repair, the old
 `check.json` is discarded and an independent Flash-Lite pass checks the repaired files again.
 A missing or failing new report blocks publication; the earlier report is never reused.
 
