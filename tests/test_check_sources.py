@@ -60,6 +60,15 @@ PAGE = "<html><nav>utah goosenecks river</nav><article><p>The San Juan River goo
 OFF = "<html><article><p>Cyprus has snakes, cats and one river.</p></article></html>"
 
 
+def test_main_article_is_not_replaced_by_a_related_article_card():
+    page = ('<main><h1>Rain outlook</h1><p>Aceh recorded 140 mm and Sumatera Barat 121 mm.</p>'
+            '<h2>Potensi Hujan Sepekan ke Depan Lainnya</h2>'
+            '<article><p>Unrelated rain total 999 mm.</p></article></main>')
+    text = check_sources.page_text(page)
+    assert '140 mm' in text and '121 mm' in text
+    assert '999' not in text and 'unrelated' not in text
+
+
 def issue_dir(tmp_path, en, calc_py="v = 11 / 2\nprint(v)\n", calc_out=None):
     base = {"_slug": "utah-goosenecks-river", "cover.place": "Utah, USA", "story.lead": "Loops of 5.5 miles [1].",
             "stat.1.value": "5.5 mi", "_sources": [{"n": 1, "url": "https://a.gov/x/y"}]}
