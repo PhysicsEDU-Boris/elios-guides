@@ -1,7 +1,7 @@
 {
   "guides": [
     {
-      "revision": "ba839fc050df7236f9246d44938c2152611a7d1b324f8ed493f0e4eb0f50c48b",
+      "revision": "12da9f70b22477a4e6834684521a96a3fe4e2e95462ef8f60e65fa1dd3a2e21e",
       "date": "2026-11-09",
       "issue": "02",
       "slug": "utah-san-juan-river-meanders",
@@ -28,10 +28,22 @@
       },
       "schema": 2,
       "theme": "water",
-      "photo": null,
+      "photo": {
+        "src": "issues/2026-11-09/photo.jpg",
+        "thumb": "issues/2026-11-09/photo-800.jpg",
+        "w": 2000,
+        "h": 1333,
+        "caption": {
+          "en": "Goosenecks of the San Juan River",
+          "id": "Kelokan Sungai San Juan"
+        },
+        "credit": "NASA astronaut photograph ISS075-E-188830",
+        "license": "Public domain (NASA)",
+        "source_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/taking-a-gander-at-utah%E2%80%99s-goosenecks/ISS075-E-188830.jpg"
+      },
       "content_sha": {
-        "en": "10d16236dbb7c8810013cbd6590cc8e879daeb878b6e4816a09836ba9b75d2d8",
-        "id": "182263949ddc63651c1da95a8e07aee928fde1d70a696e45de2e96691026efe0"
+        "en": "89356bd6fbf44482275ec80e004cbd9033eca08184676a84c65c43ce6d1c3bed",
+        "id": "7fab0dd8a0e954a8192860d0cdd721aed3cc0be43154cbe8d355d1b18fb2b9ad"
       },
       "xp_parts": {
         "story": 10,
@@ -69,5 +81,5 @@
       }
     }
   ],
-  "updated": "2026-11-09T11:34:59+07:00"
+  "updated": "2026-11-12T19:17:08+07:00"
 }
