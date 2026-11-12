@@ -78,6 +78,24 @@ def test_sourced_issue_passes(tmp_path, monkeypatch):
     assert check_sources.errors(issue_dir(tmp_path, {})) == []
 
 
+@pytest.mark.parametrize("status", [200, 403, 404])
+def test_evidence_preserves_fetch_failures_and_bounds_article_text(tmp_path, monkeypatch, status):
+    body = PAGE.replace('</article>', 'x' * 20000 + '</article>')
+    monkeypatch.setattr(check_sources, "get", lambda u: Resp(status, u, text=body))
+    folder = issue_dir(tmp_path, {})
+    output = tmp_path / "evidence.json"
+    errors = check_sources.errors(folder, output)
+    snapshot = json.loads(output.read_text())
+    source = snapshot["sources"][0]
+    assert snapshot["errors"] == errors
+    assert source["status"] == status and source["url"] == source["final_url"]
+    if status == 200:
+        assert source["truncated"] is True and len(source["text"]) == 16000
+        assert "San Juan".lower() in source["text"]
+    else:
+        assert source["text"] == "" and source["error"]
+
+
 def test_stat_not_in_source_fails(tmp_path, monkeypatch):
     pages(monkeypatch, {"a.gov": PAGE})
     errs = check_sources.errors(issue_dir(tmp_path, {"stat.2.value": "120 m"}))
