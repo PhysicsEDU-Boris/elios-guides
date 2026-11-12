@@ -1,0 +1,349 @@
+{
+  "_example": false,
+  "_issue": "02",
+  "_slug": "utah-san-juan-river-meanders",
+  "_theme": "water",
+  "_keywords": [
+    "river",
+    "water",
+    "gravity",
+    "mass"
+  ],
+  "_date": "2026-11-09",
+  "_lang": "en",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "NASA Earth Observatory",
+      "title": "Taking a Gander at Utah’s Goosenecks",
+      "date": "6 Nov 2026",
+      "url": "https://science.nasa.gov/earth/earth-observatory/taking-a-gander-at-utahs-goosenecks/",
+      "primary": true
+    },
+    {
+      "n": 2,
+      "publisher": "USGS",
+      "title": "Rivers, Streams, and Creeks",
+      "date": "17 Sep 2026",
+      "url": "https://www.usgs.gov/water-science-school/science/rivers-streams-and-creeks",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "WMO",
+      "title": "Water",
+      "date": "17 Jul 2026",
+      "url": "https://wmo.int/themes/water",
+      "primary": true
+    },
+    {
+      "n": 4,
+      "publisher": "NASA Glenn Research Center",
+      "title": "Weight and Mass",
+      "date": "n.d.",
+      "url": "https://www.grc.nasa.gov/WWW/K-12/Enginesim/weight_and_mass.htm",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/taking-a-gander-at-utah%E2%80%99s-goosenecks/ISS075-E-188830.jpg",
+      "license": "Public domain (NASA)",
+      "credit": "NASA astronaut photograph ISS075-E-188830"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/taking-a-gander-at-utah%E2%80%99s-goosenecks/ISS075-E-188830.jpg",
+      "license": "Public domain (NASA)",
+      "credit": "NASA astronaut photograph ISS075-E-188830"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 2943.0,
+  "_graph.2.raw": 5886.0,
+  "_graph.3.raw": 14715.0,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Gravitational potential energy depends directly on mass, gravity, and height.",
+      "wrong": {
+        "a": "Temperature does not determine potential energy.",
+        "c": "Wind speed does not power the water flow here.",
+        "d": "Air pressure does not directly equal Ep."
+      }
+    },
+    "2": {
+      "why": "h stands for the vertical height or drop of the water.",
+      "wrong": {
+        "b": "Mass is m, not h.",
+        "c": "Gravity is g, not h.",
+        "d": "Energy is Ep."
+      }
+    },
+    "3": {
+      "why": "Higher drops and heavier water streams give rivers more energy to carve rock.",
+      "wrong": {
+        "a": "Slower water has less kinetic and erosive energy.",
+        "b": "Dry riverbeds lack water mass and flow.",
+        "d": "Flat plains reduce water flow speed."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "What does Ep stand for in Ep = m × g × h?",
+      "options": [
+        "Electric power",
+        "Gravitational potential",
+        "Elastic pressure",
+        "Earth pressure"
+      ],
+      "answer": 1,
+      "explanation": "Ep is gravitational potential energy stored by height."
+    },
+    {
+      "question": "Which factor does NOT affect gravitational potential energy?",
+      "options": [
+        "Mass",
+        "Height",
+        "Color of water",
+        "Gravity"
+      ],
+      "answer": 2,
+      "explanation": "Color has no effect on gravitational energy."
+    },
+    {
+      "question": "What is the unit of gravitational potential energy Ep?",
+      "options": [
+        "Watt",
+        "Newton",
+        "Joule",
+        "Pascal"
+      ],
+      "answer": 2,
+      "explanation": "Energy is measured in joules (J)."
+    },
+    {
+      "question": "If you double the water mass, its potential energy…",
+      "options": [
+        "halves",
+        "stays the same",
+        "doubles",
+        "quadruples"
+      ],
+      "answer": 2,
+      "explanation": "Ep grows in direct proportion to mass m."
+    },
+    {
+      "question": "Why do rivers carve deep canyons when flowing from high plateaus?",
+      "options": [
+        "Water gains erosive power",
+        "Rivers are magnetic",
+        "Rocks are soft like clay",
+        "Rain is extremely hot"
+      ],
+      "answer": 0,
+      "explanation": "Falling water converts potential energy into kinetic energy to erode rock."
+    },
+    {
+      "question": "In Ep = m × g × h, what is g?",
+      "options": [
+        "Speed of sound",
+        "Gravity acceleration",
+        "Gram",
+        "Ground friction"
+      ],
+      "answer": 1,
+      "explanation": "g is acceleration due to gravity (approx 9.81 m/s²)."
+    },
+    {
+      "question": "What is a river meander?",
+      "options": [
+        "A straight pipe",
+        "A horseshoe river curve",
+        "An underground fall",
+        "A frozen glacier"
+      ],
+      "answer": 1,
+      "explanation": "Meanders are winding loops carved by river flow."
+    },
+    {
+      "question": "1 kJ is equal to how many joules?",
+      "options": [
+        "10 J",
+        "100 J",
+        "1,000 J",
+        "1,000,000 J"
+      ],
+      "answer": 2,
+      "explanation": "Kilo means one thousand."
+    },
+    {
+      "question": "Which value is standard for Earth gravity g in calculations?",
+      "options": [
+        "1.5 m/s²",
+        "9.81 m/s²",
+        "100 m/s²",
+        "300 m/s²"
+      ],
+      "answer": 1,
+      "explanation": "Earth's gravitational acceleration is roughly 9.81 m/s²."
+    },
+    {
+      "question": "What happens to potential energy when water flows down a 300 m canyon?",
+      "options": [
+        "It increases",
+        "It stays constant",
+        "It converts into motion",
+        "It disappears"
+      ],
+      "answer": 2,
+      "explanation": "Height decreases, converting potential energy into motion and erosion."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "a small tray or inclined board with sand or soil",
+      "pouring a cup of water down the incline",
+      "showing how flowing water cuts channels in the sand"
+    ],
+    "safety": [
+      "no flame, no hot water, no electricity",
+      "only hands in the photo"
+    ],
+    "pass_if": "The photos show water flowing down an inclined slope and carving channels in sand or soil."
+  },
+  "_per_page": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "_replace": {},
+  "guide.issue_date": "#02 · 9 NOV 2026",
+  "guide.lang": "EN",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Utah river meanders · Illustration by ELIOS",
+  "cover.title": "Carving stone with water",
+  "cover.subtitle": "How does a winding river cut deep canyons through ancient rock? Discover the gravitational energy behind river meanders.",
+  "cover.image_caption": "Goosenecks of the San Juan River",
+  "cover.news_date": "News: 6 Nov 2026",
+  "cover.place": "Utah, United States",
+  "cover.topic": "Potential energy",
+  "cover.subject": "Physics · Energy",
+  "quest.1.desc": "Read how rivers carve canyons",
+  "quest.2.desc": "Use Ep = m × g × h",
+  "quest.3.desc": "Quiz, mini lab and badge",
+  "cover.read_time": "12 min read",
+  "cover.level": "SMP · grade 7–9",
+  "cover.xp_total": "Earn up to 60 XP",
+  "cover.fun_fact": "The San Juan River travels 5.5 miles between two points that are only 1.3 miles apart as the goose flies. [1]",
+  "story.title": "The winding San Juan River",
+  "story.lead": "Space station astronauts photographed the stunning, horseshoe-shaped meanders of the San Juan River in Utah [1]. Millions of years ago, tectonic forces lifted the plateau, speeding up the water [1].",
+  "story.image_caption": "San Juan River meanders, photographed from the ISS on 6 October 2026 [1]",
+  "story.image_credit": "NASA astronaut photograph ISS075-E-188830",
+  "stat.1.value": "300 m",
+  "stat.2.value": "9.81",
+  "stat.3.value": "2,943 kJ",
+  "stat.1.label": "depth of the canyon carved by the river",
+  "stat.2.label": "Earth gravity acceleration in m/s² [4]",
+  "stat.3.label": "potential energy of 1 ton of water at 300 m",
+  "story.body_1": "Rivers shape the face of our planet by moving water and sediment across landscapes [2]. When tectonic uplift raises a region, rivers gain steepness and erosive power [1]. The water cuts downward through 300-million-year-old rock, forming deep canyons and dramatic meanders known as goosenecks [1].",
+  "story.body_2": "Water is vital for ecosystems and climate worldwide [3]. Understanding how flowing water stores and releases energy helps scientists protect river basins and manage water resources safely [2].",
+  "timeline.1.date": "Millions yrs",
+  "timeline.2.date": "Millions yrs",
+  "timeline.3.date": "Present day",
+  "timeline.1.text": "The San Juan River flows across a relatively flat plain.",
+  "timeline.2.text": "Tectonic forces uplift the Colorado Plateau, speeding up the river.",
+  "timeline.3.text": "The river carves deep meanders into 300-million-year-old rock.",
+  "physics.title": "Potential energy of water",
+  "physics.body_1": "Water perched high on a plateau holds gravitational potential energy due to its height above sea level. When water flows downward, this stored energy converts into motion and erosion.",
+  "physics.body_2": "The energy depends on three factors: mass, gravity, and height. More mass or a higher drop gives the river greater potential energy to carve stone.",
+  "physics.equation": "Ep = m × g × h",
+  "physics.equation_name": "Gravitational potential energy equation",
+  "legend.1.symbol": "Ep",
+  "legend.1.meaning": "potential energy",
+  "legend.1.unit": "joule (J)",
+  "legend.2.symbol": "m",
+  "legend.2.meaning": "mass",
+  "legend.2.unit": "kilogram (kg)",
+  "legend.3.symbol": "g",
+  "legend.3.meaning": "gravitational field",
+  "legend.3.unit": "m/s²",
+  "legend.4.symbol": "h",
+  "legend.4.meaning": "height / depth",
+  "legend.4.unit": "meter (m)",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "Example masses, not measurements; use canyon depth as a drop; ignore friction. Gravity: 9.81 m/s² [4].",
+  "example.step_1": "m = 1,000 kg, h = 300 m, g = 9.81",
+  "example.step_2": "Ep = 1,000 × 9.81 × 300",
+  "example.step_3": "Multiply: Ep = 2,943,000 J",
+  "example.result": "Ep = 2,943 kJ",
+  "table.h1": "Water Mass",
+  "table.h2": "Depth h",
+  "table.h3": "Energy Ep",
+  "table.r1c1": "1 ton",
+  "table.r1c2": "300 m",
+  "table.r1c3": "2,943 kJ",
+  "table.r2c1": "2 tons",
+  "table.r2c2": "300 m",
+  "table.r2c3": "5,886 kJ",
+  "table.r3c1": "5 tons",
+  "table.r3c2": "300 m",
+  "table.r3c3": "14,715 kJ",
+  "table.note": "Potential energy increases directly with the mass of water.",
+  "graph.title": "Potential energy for different water masses",
+  "graph.1.label": "1 ton",
+  "graph.2.label": "2 tons",
+  "graph.3.label": "5 tons",
+  "graph.1.value": "2,943 kJ",
+  "graph.2.value": "5,886 kJ",
+  "graph.3.value": "14,715 kJ",
+  "graph.note": "Heavier water masses store more gravitational energy at the same height.",
+  "physics.tip": "Higher drops and heavier water streams give rivers more energy to carve deep canyons over time.",
+  "mission.title": "River energy mission",
+  "quiz.answer_key": "Answer key: 1B · 2A · 3C",
+  "quiz.1.question": "What determines gravitational potential energy in Ep = m × g × h?",
+  "quiz.1.a": "Temperature and wind",
+  "quiz.1.b": "Mass, gravity, and height",
+  "quiz.1.c": "Speed and time",
+  "quiz.1.d": "Pressure and volume",
+  "quiz.2.question": "In the equation Ep = m × g × h, what does h represent?",
+  "quiz.2.a": "Height or vertical drop",
+  "quiz.2.b": "Mass of water",
+  "quiz.2.c": "Gravity acceleration",
+  "quiz.2.d": "Total energy",
+  "quiz.3.question": "Which factor gives a river more erosive energy to carve canyons?",
+  "quiz.3.a": "Slower water flow",
+  "quiz.3.b": "A flat dry desert plain",
+  "quiz.3.c": "Steeper drop and heavier flow",
+  "quiz.3.d": "Narrower riverbanks only",
+  "lab.title": "Water flow model",
+  "lab.step_1": "Place a small tray or tilted board covered with sand or soil.",
+  "lab.step_2": "Pour a cup of water steadily down the slope.",
+  "lab.step_3": "Observe how the flowing water carves channels and meanders.",
+  "lab.question": "How does water flow carve channels in the sand? Relate it to energy.",
+  "badge.name": "River Explorer",
+  "badge.text": "You learned how water stores energy and carves canyons.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Meander",
+  "glossary.2.term": "Potential energy",
+  "glossary.3.term": "Erosion",
+  "glossary.1.def": "A winding, horseshoe-shaped curve in a river channel.",
+  "glossary.2.def": "Stored energy an object has due to its position or height.",
+  "glossary.3.def": "Wearing away of rock and soil by flowing water.",
+  "label.sources": "Sources",
+  "source.1": "[1] NASA Earth Observatory, Taking a Gander at Utah’s Goosenecks, 6 Nov 2026",
+  "source.2": "[2] USGS, Rivers, Streams, and Creeks, 17 Sep 2026",
+  "source.3": "[3] WMO, Water, 17 Jul 2026",
+  "source.4": "[4] NASA Glenn Research Center, Weight and Mass, n.d.",
+  "source.5": "",
+  "credit.images": "Cover and story: NASA ISS075-E-188830 (public domain)."
+}

@@ -1,1 +1,58 @@
-{"updated": null, "guides": []}
+{
+  "updated": "2026-11-12T19:16:38+07:00",
+  "guides": [
+    {
+      "revision": "12da9f70b22477a4e6834684521a96a3fe4e2e95462ef8f60e65fa1dd3a2e21e",
+      "date": "2026-11-09",
+      "issue": "02",
+      "slug": "utah-san-juan-river-meanders",
+      "xp": 60,
+      "title": {
+        "en": "Carving stone with water",
+        "id": "Mengukir batu dengan air"
+      },
+      "topic": {
+        "en": "Potential energy",
+        "id": "Energi potensial"
+      },
+      "cover": {
+        "en": "issues/2026-11-09/elios-guide-02-utah-san-juan-river-meanders-cover-en.png",
+        "id": "issues/2026-11-09/elios-guide-02-utah-san-juan-river-meanders-cover-id.png"
+      },
+      "pdf": {
+        "en": "issues/2026-11-09/elios-guide-02-utah-san-juan-river-meanders-en.pdf",
+        "id": "issues/2026-11-09/elios-guide-02-utah-san-juan-river-meanders-id.pdf"
+      },
+      "content": {
+        "en": "issues/2026-11-09/en.json",
+        "id": "issues/2026-11-09/id.json"
+      },
+      "schema": 2,
+      "theme": "water",
+      "photo": {
+        "src": "issues/2026-11-09/photo.jpg",
+        "thumb": "issues/2026-11-09/photo-800.jpg",
+        "w": 2000,
+        "h": 1333,
+        "caption": {
+          "en": "Goosenecks of the San Juan River",
+          "id": "Kelokan Sungai San Juan"
+        },
+        "credit": "NASA astronaut photograph ISS075-E-188830",
+        "license": "Public domain (NASA)",
+        "source_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/taking-a-gander-at-utah%E2%80%99s-goosenecks/ISS075-E-188830.jpg"
+      },
+      "content_sha": {
+        "en": "89356bd6fbf44482275ec80e004cbd9033eca08184676a84c65c43ce6d1c3bed",
+        "id": "7fab0dd8a0e954a8192860d0cdd721aed3cc0be43154cbe8d355d1b18fb2b9ad"
+      },
+      "xp_parts": {
+        "story": 10,
+        "physics": 20,
+        "quiz": 10,
+        "lab": 20
+      },
+      "pages": 4
+    }
+  ]
+}
