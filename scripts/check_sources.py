@@ -58,8 +58,11 @@ def check(url):
 def page_text(page):
     """Visible article text of an HTML page, lower case (menus, footers and related links removed)."""
     t = re.sub(r"(?is)<(script|style|noscript|nav|header|footer|aside|form|svg)\b.*?</\1>", " ", page[:MAX_TEXT])
-    m = re.search(r"(?is)<article\b.*?</article>", t) or re.search(r"(?is)<main\b.*?</main>", t)
-    t = html.unescape(re.sub(r"<[^>]+>", " ", m.group(0) if m else t))
+    m = re.search(r"(?is)<main\b.*?</main>", t) or re.search(r"(?is)<article\b.*?</article>", t)
+    t = m.group(0) if m else t
+    # BMKG uses <article> for related cards; the news itself is directly inside <main>.
+    t = re.split(r"(?is)<h[23]\b[^>]*>[^<]*(?:\brelated\b|\blainnya\b)[^<]*</h[23]>", t, maxsplit=1)[0]
+    t = html.unescape(re.sub(r"<[^>]+>", " ", t))
     return re.sub(r"\s+", " ", t).lower()
 
 
