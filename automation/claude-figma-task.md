@@ -8,14 +8,17 @@ template frames 24:170, 25:221, 26:230, 27:248; work only in the issue wrapper f
 
 Each run does three jobs, in this order. Skip a job when it has nothing to do.
 A. Today's issue, when guide/<today> has no issues/<today>/figma.json yet.
+   Then catch up older guide/<date> branches that have a passing check.json, are not NEEDS FIX,
+   and have no figma.json. Process oldest first; never skip a repaired issue because its date passed.
 B. Refills: every guide/<date> branch whose issues/<date>/resync.json has a content_sha that differs
    from the content_sha in its figma.json (the owner edited printed text).
 C. Rebuilds: every date listed in automation/rebuild.txt on main (the owner changed the template).
 Never touch guide/dry-run-* branches.
 
 ## A. Fill one issue (also used by B and C)
-1. Today = the current date in Asia/Jakarta (YYYY-MM-DD). Attach the repo PhysicsEDU-Boris/elios-guides
-   with push access and clone branch guide/<date>. If the branch does not exist, or its PR title
+1. Today = the current date in Asia/Jakarta (YYYY-MM-DD). Use the GitHub publishing connector to read
+   PhysicsEDU-Boris/elios-guides on branch guide/<date> and commit with push_files; do not depend on
+   the terminal's GitHub token. If the branch does not exist, or its PR title
    contains "NEEDS FIX", stop for this date and report that.
 2. Read issues/<date>/en.json, id.json, check.json and figma/fill.js. If check.json has any
    pass=false, stop for this date and report.
@@ -24,20 +27,31 @@ Never touch guide/dry-run-* branches.
    the wrapper with the same name, so a refill or rebuild never leaves a duplicate; it always builds
    from the current template frames. Keep the returned wrapper id, page ids and slots.
 4. If missing is not empty or leftover is not empty: fix the JSON (only the text, never the facts),
-   commit the change and run fill.js again for that language.
+   keep the edit pending for the final commit and run fill.js again for that language.
 5. If any fit.ok is false: shorten the longest text on that page in the JSON (keep facts and [n] tags),
-   commit, run again. At most 3 tries, then stop and report.
+   update the pending edit and run again. At most 3 tries, then stop and report.
 6. Cover mascot: in each wrapper's cover page, swap the instance named `cover.mascot` with
    swapComponent to the Art component for en.json `_theme`:
    waste → binb3 (23:258) · heat → flame (23:248) · energy → bulb (23:204) ·
    air, storm, water → tree (23:226), unless the template's Art set has a closer match ·
    missing or other theme → bulb (23:204).
    Swap only that instance inside the wrapper; never edit the Art main components.
-7. Photos: for each entry in slots, call upload_assets with nodeIds=[slot id], scaleMode FILL, and
-   POST the bytes of issues/<date>/<_images[key].file> (image/jpeg) to the returned URL. These are the
-   full-resolution photos fetch_images.py kept (up to 2000 px): upload the file as it is, never a
-   resized or screenshot copy. Then hide the child layer named image.hint in that slot (one use_figma
-   call). If an image is null or the upload is blocked, leave the slot, say so in the report, keep going.
+7. Photos: use the **ELIOS photo uploader** cloud connector, not a shell POST. Read the latest full
+   SHA of guide/<date> and its photo files before uploading. Finish uploads before committing any
+   text changes, so the photo source remains that exact commit.
+   For each non-null _images entry, call Figma upload_assets with count=2, nodeIds=[EN slot id, ID slot
+   id], scaleMode FILL. Immediately call upload_guide_photo with date, commit_sha, slot (e.g.
+   story.image), and uploads [{language:"en",node_id:<EN id>,submit_url:<EN submitUrl>},
+   {language:"id",node_id:<ID id>,submit_url:<ID submitUrl>}]. Treat upload URLs as credentials:
+   pass them directly between tools, never put them in GitHub, logs, or reports.
+   The connector uploads the exact validated repository photo; it does not choose a replacement.
+   Request fresh URLs for failed targets only; never retry a single-use URL. After success, hide
+   each slot's image.hint and verify visually that the photo matches its caption. If a required
+   upload fails, the connector is unavailable, or the photo is wrong, stop for that date before
+   committing figma.json or triggering export. Report what needs fixing; do not publish a placeholder.
+   Null images keep the template's illustration handling.
+   A raster fill is behind a slot's child layers: hide any `placeholder illustration` child as well
+   as `image.hint` after a successful upload, or the photograph can remain covered.
 8. One screenshot per wrapper (get_screenshot, maxDimension 1600). Look for clipped or overlapping text.
    Fix only by shortening text as in step 5.
 9. Write issues/<date>/figma.json:
@@ -60,4 +74,4 @@ to main. Skip dates that branch has already removed. A rebuild keeps the date an
 
 ## Report
 5 lines per issue handled: date and job (A/B/C), both wrapper ids, mascot used, photo status, fixes
-and anything that failed.
+and anything that failed. Include the upload tool's file and photo_sha256, never its upload URLs.

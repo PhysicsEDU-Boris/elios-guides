@@ -187,6 +187,16 @@ def test_fact_check_missing(issue):
     has(validate.check(issue.folder, issue.manifest), "check.json is missing")
 
 
+def test_fact_check_empty_is_not_verified(issue):
+    issue.check = []
+    has(issue.errors(), "check.json must be a nonempty list")
+
+
+def test_issue_number_cannot_repeat_a_published_issue(issue):
+    issue.guides = [{"date": "2026-11-08", "issue": issue.en["_issue"]}]
+    has(issue.errors(), "issue number")
+
+
 def test_duplicate_date(issue):
     issue.guides = [{"date": "2026-11-09", "slug": "other", "topic": {"en": "Other"}}]
     has(issue.errors(), "2026-11-09 is already in manifest.json")

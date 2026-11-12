@@ -94,6 +94,9 @@ A missing or failing new report blocks publication; the earlier report is never 
 ## Retry
 
 For an already exported issue, run **publish** manually with its date (no Figma export needed).
+For a failed research issue that has not reached Figma, run **daily-research** with its date and
+**resume** enabled. It keeps the branch and repairs its files using the latest checks; filled issues
+are rejected so their layouts and exports cannot be accidentally replaced by research.
 For corrected Figma pages, run **export** manually with the date. Re-exporting the same date replaces
 its catalogue entry and preserves every other issue. Failed research branches are retained for repair;
 fix the branch rather than deleting a published issue. Never publish a `NEEDS FIX` issue by hand.
