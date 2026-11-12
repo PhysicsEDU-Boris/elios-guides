@@ -15,6 +15,9 @@ Every reference to manifest.json below means this catalogue. It contains the dep
 - At least 3 sources, at least one primary (BMKG, BNPB, NASA, NOAA, WMO, WHO, UNEP, UNFCCC,
   Copernicus, CREA, universities, peer-reviewed journals). News sites only for context.
 - Each source url is the exact article, report or data page you opened, never a homepage.
+  Verify the event and all source URLs before writing. A forecast homepage is not evidence that
+  a flood happened. If an event cannot be confirmed, choose another real event; never invent
+  a report or replace a missing article with an agency homepage.
   Its title and date are copied from that page. Every source must be about this event: a script
   checks that its article text names at least 2 topic keywords (words of _slug and cover.place plus
   _keywords), and that each source is cited with [n] somewhere.
@@ -66,6 +69,9 @@ Every reference to manifest.json below means this catalogue. It contains the dep
   file when it is under 30 MB). The caption says what the photo shows and when it was taken, with the [n]
   tag. The credit names the agency and the image ID (e.g. "NASA astronaut photograph ISS075-E-188830").
   Set story.image to null only if the main source has no reusable image.
+- cover.image: use the same verified photo as story.image when it also meets the cover size and
+  quality rules. Give it its own file name (cover.jpg), matching caption and credit in both languages.
+  A null cover means no photograph in the app feed or the PDF cover, even if story.image is present.
 - NASA Earth Observatory now lives at science.nasa.gov/earth/earth-observatory/ and its images at
   assets.science.nasa.gov. The old earthobservatory.nasa.gov and eoimages.gsfc.nasa.gov urls are gone.
 - Every source url is opened by a script after you finish. Invented or guessed urls fail the issue.
