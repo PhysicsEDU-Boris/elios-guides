@@ -3,17 +3,55 @@
   "_issue": "02",
   "_slug": "utah-san-juan-river-meanders",
   "_theme": "water",
-  "_keywords": ["river", "water", "gravity", "mass"],
+  "_keywords": [
+    "river",
+    "water",
+    "gravity",
+    "mass"
+  ],
   "_date": "2026-11-09",
   "_lang": "id",
   "_sources": [
-    {"n": 1, "publisher": "NASA Earth Observatory", "title": "Taking a Gander at Utah’s Goosenecks", "date": "6 NOV 2026", "url": "https://science.nasa.gov/earth/earth-observatory/taking-a-gander-at-utahs-goosenecks/", "primary": true},
-    {"n": 2, "publisher": "USGS", "title": "Rivers, Streams, and Creeks", "date": "17 SEP 2026", "url": "https://www.usgs.gov/water-science-school/science/rivers-streams-and-creeks", "primary": true},
-    {"n": 3, "publisher": "WMO", "title": "Water", "date": "17 JUL 2026", "url": "https://wmo.int/themes/water", "primary": true},
-    {"n": 4, "publisher": "NASA Glenn Research Center", "title": "Weight and Mass", "date": "n.d.", "url": "https://www.grc.nasa.gov/WWW/K-12/Enginesim/weight_and_mass.htm", "primary": true}
+    {
+      "n": 1,
+      "publisher": "NASA Earth Observatory",
+      "title": "Taking a Gander at Utah’s Goosenecks",
+      "date": "6 NOV 2026",
+      "url": "https://science.nasa.gov/earth/earth-observatory/taking-a-gander-at-utahs-goosenecks/",
+      "primary": true
+    },
+    {
+      "n": 2,
+      "publisher": "USGS",
+      "title": "Rivers, Streams, and Creeks",
+      "date": "17 SEP 2026",
+      "url": "https://www.usgs.gov/water-science-school/science/rivers-streams-and-creeks",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "WMO",
+      "title": "Water",
+      "date": "17 JUL 2026",
+      "url": "https://wmo.int/themes/water",
+      "primary": true
+    },
+    {
+      "n": 4,
+      "publisher": "NASA Glenn Research Center",
+      "title": "Weight and Mass",
+      "date": "n.d.",
+      "url": "https://www.grc.nasa.gov/WWW/K-12/Enginesim/weight_and_mass.htm",
+      "primary": true
+    }
   ],
   "_images": {
-    "cover.image": null,
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/taking-a-gander-at-utah%E2%80%99s-goosenecks/ISS075-E-188830.jpg",
+      "license": "Public domain (NASA)",
+      "credit": "NASA astronaut photograph ISS075-E-188830"
+    },
     "story.image": {
       "file": "story.jpg",
       "source_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/taking-a-gander-at-utah%E2%80%99s-goosenecks/ISS075-E-188830.jpg",
@@ -25,42 +63,199 @@
   "_graph.1.raw": 2943.0,
   "_graph.2.raw": 5886.0,
   "_graph.3.raw": 14715.0,
-  "_answers": {"1": "b", "2": "a", "3": "c"},
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
   "_quiz_explain": {
-    "1": {"why": "Energi potensial gravitasi bergantung pada massa, gravitasi, dan ketinggian.", "wrong": {"a": "Suhu tidak menentukan energi potensial.", "c": "Kecepatan angin tidak menggerakkan aliran air di sini.", "d": "Tekanan udara tidak sama langsung dengan Ep."}},
-    "2": {"why": "h adalah ketinggian vertikal atau penurunan air.", "wrong": {"b": "Massa adalah m, bukan h.", "c": "Gravitasi adalah g, bukan h.", "d": "Energi adalah Ep."}},
-    "3": {"why": "Jatuhan yang lebih tinggi dan aliran air yang berat memberi sungai energi untuk mengikis batu.", "wrong": {"a": "Air lambat memiliki energi kinetik dan kikisan lebih kecil.", "b": "Dasar sungai kering kekurangan massa air.", "d": "Dataran datar mengurangi kecepatan aliran."}}
+    "1": {
+      "why": "Energi potensial gravitasi bergantung pada massa, gravitasi, dan ketinggian.",
+      "wrong": {
+        "a": "Suhu tidak menentukan energi potensial.",
+        "c": "Kecepatan angin tidak menggerakkan aliran air di sini.",
+        "d": "Tekanan udara tidak sama langsung dengan Ep."
+      }
+    },
+    "2": {
+      "why": "h adalah ketinggian vertikal atau penurunan air.",
+      "wrong": {
+        "b": "Massa adalah m, bukan h.",
+        "c": "Gravitasi adalah g, bukan h.",
+        "d": "Energi adalah Ep."
+      }
+    },
+    "3": {
+      "why": "Jatuhan yang lebih tinggi dan aliran air yang berat memberi sungai energi untuk mengikis batu.",
+      "wrong": {
+        "a": "Air lambat memiliki energi kinetik dan kikisan lebih kecil.",
+        "b": "Dasar sungai kering kekurangan massa air.",
+        "d": "Dataran datar mengurangi kecepatan aliran."
+      }
+    }
   },
   "_quiz_pool": [
-    {"question": "Apa arti Ep dalam persamaan Ep = m × g × h?", "options": ["Daya listrik", "Energi potensial", "Tekanan elastis", "Tekanan bumi"], "answer": 1, "explanation": "Ep adalah energi potensial gravitasi yang disimpan oleh ketinggian."},
-    {"question": "Faktor manakah yang TIDAK memengaruhi energi potensial gravitasi?", "options": ["Massa", "Ketinggian", "Warna air", "Gravitasi"], "answer": 2, "explanation": "Warna tidak memengaruhi energi gravitasi."},
-    {"question": "Apa satuan dari energi potensial gravitasi Ep?", "options": ["Watt", "Newton", "Joule", "Pascal"], "answer": 2, "explanation": "Energi diukur dalam joule (J)."},
-    {"question": "Jika massa air dilipatgandakan, energi potensialnya…", "options": ["menjadi setengah", "tetap sama", "berlipat ganda", "menjadi empat kali"], "answer": 2, "explanation": "Ep tumbuh sebanding dengan massa m."},
-    {"question": "Mengapa sungai mengukir jurang dalam saat mengalir dari dataran tinggi?", "options": ["Air memperoleh tenaga kikisan", "Sungai bersifat magnetis", "Batuan sangat lunak", "Hujan sangat panas"], "answer": 0, "explanation": "Air yang jatuh mengubah energi potensial menjadi energi kinetik untuk mengikis batu."},
-    {"question": "Dalam Ep = m × g × h, apakah g itu?", "options": ["Kecepatan suara", "Percepatan gravitasi", "Gram", "Gesekan tanah"], "answer": 1, "explanation": "g adalah percepatan gravitasi (sekitar 9,81 m/s²)."},
-    {"question": "Apakah yang dimaksud meander sungai?", "options": ["Pipa lurus", "Lengkungan tapal kuda", "Air terjun", "Gletser"], "answer": 1, "explanation": "Meander adalah kelokan berkelok yang diukir aliran sungai."},
-    {"question": "1 kJ setara dengan berapa joule?", "options": ["10 J", "100 J", "1.000 J", "1.000.000 J"], "answer": 2, "explanation": "Kilo berarti seribu."},
-    {"question": "Berapakah nilai standar gravitasi bumi g dalam perhitungan?", "options": ["1,5 m/s²", "9,81 m/s²", "100 m/s²", "300 m/s²"], "answer": 1, "explanation": "Percepatan gravitasi bumi sekitar 9,81 m/s²."},
-    {"question": "Apa yang terjadi pada energi potensial saat air mengalir menuruni ngarai sedalam 300 m?", "options": ["Meningkat", "Tetap konstan", "Berubah jadi gerakan", "Menghilang"], "answer": 2, "explanation": "Ketinggian berkurang, mengubah energi potensial menjadi gerakan dan kikisan."}
+    {
+      "question": "Apa arti Ep dalam persamaan Ep = m × g × h?",
+      "options": [
+        "Daya listrik",
+        "Energi potensial",
+        "Tekanan elastis",
+        "Tekanan bumi"
+      ],
+      "answer": 1,
+      "explanation": "Ep adalah energi potensial gravitasi yang disimpan oleh ketinggian."
+    },
+    {
+      "question": "Faktor manakah yang TIDAK memengaruhi energi potensial gravitasi?",
+      "options": [
+        "Massa",
+        "Ketinggian",
+        "Warna air",
+        "Gravitasi"
+      ],
+      "answer": 2,
+      "explanation": "Warna tidak memengaruhi energi gravitasi."
+    },
+    {
+      "question": "Apa satuan dari energi potensial gravitasi Ep?",
+      "options": [
+        "Watt",
+        "Newton",
+        "Joule",
+        "Pascal"
+      ],
+      "answer": 2,
+      "explanation": "Energi diukur dalam joule (J)."
+    },
+    {
+      "question": "Jika massa air dilipatgandakan, energi potensialnya…",
+      "options": [
+        "menjadi setengah",
+        "tetap sama",
+        "berlipat ganda",
+        "menjadi empat kali"
+      ],
+      "answer": 2,
+      "explanation": "Ep tumbuh sebanding dengan massa m."
+    },
+    {
+      "question": "Mengapa sungai mengukir jurang dalam saat mengalir dari dataran tinggi?",
+      "options": [
+        "Air memperoleh tenaga kikisan",
+        "Sungai bersifat magnetis",
+        "Batuan sangat lunak",
+        "Hujan sangat panas"
+      ],
+      "answer": 0,
+      "explanation": "Air yang jatuh mengubah energi potensial menjadi energi kinetik untuk mengikis batu."
+    },
+    {
+      "question": "Dalam Ep = m × g × h, apakah g itu?",
+      "options": [
+        "Kecepatan suara",
+        "Percepatan gravitasi",
+        "Gram",
+        "Gesekan tanah"
+      ],
+      "answer": 1,
+      "explanation": "g adalah percepatan gravitasi (sekitar 9,81 m/s²)."
+    },
+    {
+      "question": "Apakah yang dimaksud meander sungai?",
+      "options": [
+        "Pipa lurus",
+        "Lengkungan tapal kuda",
+        "Air terjun",
+        "Gletser"
+      ],
+      "answer": 1,
+      "explanation": "Meander adalah kelokan berkelok yang diukir aliran sungai."
+    },
+    {
+      "question": "1 kJ setara dengan berapa joule?",
+      "options": [
+        "10 J",
+        "100 J",
+        "1.000 J",
+        "1.000.000 J"
+      ],
+      "answer": 2,
+      "explanation": "Kilo berarti seribu."
+    },
+    {
+      "question": "Berapakah nilai standar gravitasi bumi g dalam perhitungan?",
+      "options": [
+        "1,5 m/s²",
+        "9,81 m/s²",
+        "100 m/s²",
+        "300 m/s²"
+      ],
+      "answer": 1,
+      "explanation": "Percepatan gravitasi bumi sekitar 9,81 m/s²."
+    },
+    {
+      "question": "Apa yang terjadi pada energi potensial saat air mengalir menuruni ngarai sedalam 300 m?",
+      "options": [
+        "Meningkat",
+        "Tetap konstan",
+        "Berubah jadi gerakan",
+        "Menghilang"
+      ],
+      "answer": 2,
+      "explanation": "Ketinggian berkurang, mengubah energi potensial menjadi gerakan dan kikisan."
+    }
   ],
   "_lab_rubric": {
-    "must_show": ["nampan atau papan miring berisi pasir atau tanah", "menuangkan segelas air perlahan menuruni kemiringan", "menunjukkan bagaimana air mengalir mengikis saluran pasir"],
-    "safety": ["tanpa api, tanpa air panas, tanpa listrik", "hanya tangan dalam foto"],
+    "must_show": [
+      "nampan atau papan miring berisi pasir atau tanah",
+      "menuangkan segelas air perlahan menuruni kemiringan",
+      "menunjukkan bagaimana air mengalir mengikis saluran pasir"
+    ],
+    "safety": [
+      "tanpa api, tanpa air panas, tanpa listrik",
+      "hanya tangan dalam foto"
+    ],
     "pass_if": "Foto menunjukkan air mengalir menuruni lereng miring dan membentuk alur kikisan pada pasir atau tanah."
   },
   "_per_page": [
-    {"guide.stop_label": "Sampul"},
-    {"guide.stop_label": "Pos 1 · Ceritanya", "section.label": "POS 1 · CERITANYA", "section.xp": "+10 XP UNTUK MEMBACA"},
-    {"guide.stop_label": "Pos 2 · Fisikanya", "section.label": "POS 2 · FISIKANYA", "section.xp": "+20 XP UNTUK MENJAWAB"},
-    {"guide.stop_label": "Pos 3 · Misimu", "section.label": "POS 3 · MISIMU", "section.xp": "+30 XP UNTUK DIRAIH"}
+    {
+      "guide.stop_label": "Sampul"
+    },
+    {
+      "guide.stop_label": "Pos 1 · Ceritanya",
+      "section.label": "POS 1 · CERITANYA",
+      "section.xp": "+10 XP UNTUK MEMBACA"
+    },
+    {
+      "guide.stop_label": "Pos 2 · Fisikanya",
+      "section.label": "POS 2 · FISIKANYA",
+      "section.xp": "+20 XP UNTUK MENJAWAB"
+    },
+    {
+      "guide.stop_label": "Pos 3 · Misimu",
+      "section.label": "POS 3 · MISIMU",
+      "section.xp": "+30 XP UNTUK DIRAIH"
+    }
   ],
-  "_replace": {"stop": [["STOP", "POS"]], "page ref": [["p.", "hlm. "]]},
-
+  "_replace": {
+    "stop": [
+      [
+        "STOP",
+        "POS"
+      ]
+    ],
+    "page ref": [
+      [
+        "p.",
+        "hlm. "
+      ]
+    ]
+  },
   "guide.issue_date": "#02 · 9 NOV 2026",
   "guide.lang": "ID",
   "guide.xp": "+60 XP",
   "footer.credit": "ELIOS Guides · Meander sungai Utah · Ilustrasi oleh ELIOS",
-
   "cover.title": "Mengukir batu dengan air",
   "cover.subtitle": "Bagaimana sungai yang berkelok memotong ngarai dalam menembus batu purba? Temukan energi gravitasi di balik meander sungai.",
   "cover.image_caption": "Kelokan Sungai San Juan",
@@ -75,7 +270,6 @@
   "cover.level": "SMP · kelas 7–9",
   "cover.xp_total": "Raih hingga 60 XP",
   "cover.fun_fact": "Sungai San Juan menempuh jarak 8,9 km di antara dua titik yang hanya berjarak 2,1 km jika ditarik garis lurus. [1]",
-
   "story.title": "Sungai San Juan yang berkelok",
   "story.lead": "Astronot stasiun luar angkasa memotret meander berbentuk tapal kuda yang menakjubkan dari Sungai San Juan di Utah [1]. Jutaan tahun lalu, gaya tektonik mengangkat dataran tinggi, mempercepat aliran air [1].",
   "story.image_caption": "Kelokan Sungai San Juan, dipotret dari ISS pada 6 Oktober 2026 [1]",
@@ -178,7 +372,7 @@
   "source.3": "[3] WMO, Water, 17 JUL 2026",
   "source.4": "[4] NASA Glenn Research Center, Weight and Mass, n.d.",
   "source.5": "",
-  "credit.images": "Cerita: NASA ISS075-E-188830 (domain publik). Sampul: Ilustrasi oleh ELIOS.",
+  "credit.images": "Sampul dan cerita: NASA ISS075-E-188830 (domain publik).",
   "label.quest_map": "PETA MISIMU",
   "label.fun_fact": "TAHUKAH KAMU?",
   "label.timeline": "LINIMASA",
