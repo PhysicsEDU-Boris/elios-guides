@@ -10,6 +10,11 @@ In Claude, add a custom connector named **ELIOS photo uploader** with this endpo
 `Bearer <uploader credential>` supplied at setup; never put a credential in this repository or the task
 prompt. Enable the connector alongside GitHub publishing and Figma in both scheduled tasks.
 
+The built-in ChatGPT/Codex plugin uses `/mcp` and Sites' verified owner identity, with the owner
+configured in the runtime secret `UPLOADER_OWNER_EMAIL`. It does not need Claude's bearer header.
+Anonymous callers, other users and forged identity headers are rejected. `/claude-mcp` still needs
+the existing `UPLOADER_TOKEN`; repairing the built-in connection does not rotate that credential.
+
 The tool `upload_guide_photo` takes `date`, `commit_sha`, `slot`, and one or two `uploads`, each
 containing `language`, `node_id`, and the fresh `submit_url`. It verifies that the requested commit’s content and photo bytes still match the current guide branch,
 both language files, the nonempty passing fact-check report, the shared photo filename and licence,
@@ -32,5 +37,8 @@ is public, and Figma's short-lived upload URL authorizes only the requested plac
 
 The hosted transfer was tested on 2026-11-09 with two temporary Figma frames. Both returned
 success and their image fills matched the repository photo; the frames were removed afterward.
-The service has 11 passing tests. This verifies the cloud transfer, not Claude’s connector setup
+On 2026-11-12, the built-in connector uploaded the current issue's exact cover bytes into two
+temporary Figma frames. Both uploads succeeded, the rendered photo was checked, and the frames
+were removed. Anonymous, forged-identity and incorrect-bearer requests returned HTTP 401.
+The service has 14 passing tests. This verifies the cloud transfer, not Claude’s connector setup
 or whether the selected photograph is appropriate for the story.
