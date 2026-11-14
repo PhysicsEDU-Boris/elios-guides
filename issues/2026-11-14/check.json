@@ -1,0 +1,51 @@
+[
+  {
+    "item": "Weather Agency",
+    "claim": "BMKG provides nowcasting for rainfall and weather conditions in Indonesia.",
+    "source": "1",
+    "pass": true,
+    "note": "Source 1 confirms BMKG's role in weather nowcasting for Indonesia."
+  },
+  {
+    "item": "Jakarta Weather Mitigation",
+    "claim": "BMKG and BPBD Jakarta conducted weather modification operations in October 2026 to reduce air pollution.",
+    "source": "3",
+    "pass": true,
+    "note": "Source 3 reports on the weather modification operation in Jakarta, 21-25 October 2026."
+  },
+  {
+    "item": "Physics Calculation",
+    "claim": "For a mass of 14 kg and volume of 7 m³, density (ρ) is 2 kg/m³.",
+    "source": "calc",
+    "pass": true,
+    "note": "14 / 7 = 2. The calculation is accurate."
+  },
+  {
+    "item": "Quiz Answer 1",
+    "claim": "ρ stands for density in the equation ρ = m ÷ V.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "The quiz answer is consistent across both English and Indonesian versions."
+  },
+  {
+    "item": "Quiz Answer 2",
+    "claim": "If mass doubles while volume remains constant, density doubles.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "Doubling the mass in the same volume directly increases the density by a factor of two."
+  },
+  {
+    "item": "Quiz Answer 3",
+    "claim": "The standard SI unit for density is kg/m³.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "kg/m³ is correctly identified as the density unit."
+  },
+  {
+    "item": "Indonesian Language",
+    "claim": "The Indonesian label for density is 'Massa jenis'.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "The term 'Massa jenis' is correct for density in Indonesian scientific context."
+  }
+]

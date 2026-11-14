@@ -1,0 +1,14 @@
+{
+  "m_kg": 14,
+  "V_m3": 7,
+  "rho": 2.0,
+  "c_water_m": 10,
+  "c_water_V": 5,
+  "c_water_rho": 2,
+  "c_air_m": 14,
+  "c_air_V": 7,
+  "c_air_rho": 2,
+  "c_dense_m": 20,
+  "c_dense_V": 5,
+  "c_dense_rho": 4
+}
