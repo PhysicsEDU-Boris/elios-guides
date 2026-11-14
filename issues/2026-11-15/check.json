@@ -1,0 +1,37 @@
+[
+  {
+    "item": "Jakarta coastal flood source",
+    "claim": "BMKG reported on maritime safety and coastal conditions [1].",
+    "source": "1",
+    "pass": true,
+    "note": "Source 1 confirms BMKG's role in maritime safety and coastal hazard mitigation."
+  },
+  {
+    "item": "Hydrostatic pressure formula",
+    "claim": "P = ρ × g × h",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculation: At h=1m, P=9kPa; at h=2m, P=18kPa; at h=3m, P=27kPa (using rho=1, g=9)."
+  },
+  {
+    "item": "Bilingual agreement",
+    "claim": "The English and Indonesian labels follow the required schema and translation constraints.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "All requested labels and structure have been correctly implemented in both language versions."
+  },
+  {
+    "item": "Quiz correctness",
+    "claim": "Quiz questions 1, 2, and 3 accurately test physics and coastal flood concepts.",
+    "source": "calc",
+    "pass": true,
+    "note": "The physics logic and terminology (rho, pascal, pressure) are consistent with standard physics principles."
+  },
+  {
+    "item": "Source relevance",
+    "claim": "The provided sources support the topic of coastal floods and climate context.",
+    "source": "1",
+    "pass": true,
+    "note": "Source 1 directly links BMKG, maritime safety, and regional hazard mitigation in Indonesia."
+  }
+]
