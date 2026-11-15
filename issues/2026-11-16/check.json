@@ -1,0 +1,44 @@
+[
+  {
+    "item": "NASA source 1",
+    "claim": "Water surges into Navajo Reservoir due to heavy rain in the U.S. Southwest on Nov 11, 2026.",
+    "source": "1",
+    "pass": true,
+    "note": "Verified by NASA Earth Observatory text."
+  },
+  {
+    "item": "NASA source 2",
+    "claim": "Scotland’s Flow Country article dated Nov 12, 2026.",
+    "source": "2",
+    "pass": true,
+    "note": "Verified by NASA Earth Observatory text."
+  },
+  {
+    "item": "NASA source 3",
+    "claim": "A global rebound for mangroves article dated Nov 13, 2026.",
+    "source": "3",
+    "pass": true,
+    "note": "Verified by NASA Earth Observatory text."
+  },
+  {
+    "item": "Calculation of Q",
+    "claim": "If A = 12 m² and v = 4 m/s, Q = 48 m³/s.",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculation: 12 * 4 = 48."
+  },
+  {
+    "item": "Calculation of Flooded Flow",
+    "claim": "If A = 48 m² and v = 12 m/s, Q = 576 m³/s.",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculation: 48 * 12 = 576."
+  },
+  {
+    "item": "Bilingual agreement",
+    "claim": "Indonesian labels match English context constraints.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "All requested translations and structural adjustments were implemented."
+  }
+]

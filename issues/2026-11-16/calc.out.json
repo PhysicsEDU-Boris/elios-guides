@@ -1,0 +1,18 @@
+{
+  "A_m2": 12.0,
+  "v_ms": 4.0,
+  "Q_m3s": 48.0,
+  "stat_1": 48.0,
+  "stat_2": 4.0,
+  "stat_3": 12.0,
+  "table_r1c2": 3.0,
+  "table_r1c3": 6.0,
+  "table_r2c2": 12.0,
+  "table_r2c3": 48.0,
+  "table_r3c2": 48.0,
+  "table_r3c3": 576.0,
+  "example_result": 48.0,
+  "graph_1": 6.0,
+  "graph_2": 48.0,
+  "graph_3": 576.0
+}
