@@ -1,7 +1,7 @@
-// Public settings: the anon key is meant to be public (row-level security protects the data).
-// Never put the service_role key here.
+// Public settings: the publishable key is meant to be public (row-level security and the allow-list protect
+// the data). Never put a secret / service_role key here.
 window.ELIOS_CONFIG = {
-  supabaseUrl: "https://YOUR-PROJECT.supabase.co",
-  supabaseAnonKey: "YOUR-ANON-KEY",
+  supabaseUrl: "https://tymiikfebewqvuokoyru.supabase.co",
+  supabaseAnonKey: "sb_publishable_DXvKD2HJuVWGcEV9rnIibQ_NAt6go5T",
   pages: "https://physicsedu-boris.github.io/elios-guides/",
 };

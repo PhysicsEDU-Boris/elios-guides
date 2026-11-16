@@ -19,5 +19,5 @@ question and option texts come from the published guides on GitHub Pages.
 Access is by email magic link and the `dashboard_users` allow-list: anyone else who logs in is told they are
 not on the list and gets no data (the database refuses `question_stats()` for them).
 
-`supabase.min.js` is `@supabase/supabase-js` 2.45.4 (MIT licence), kept here so the page loads nothing from
+`supabase.min.js` is `@supabase/supabase-js` 2.117.3 (MIT licence), kept here so the page loads nothing from
 third-party CDNs. Guide text is always inserted as text, never as HTML.
