@@ -1,54 +1,185 @@
 {
   "_example": false,
-  "_issue": "04",
+  "_issue": "05",
   "_slug": "jakarta-urban-heat-island",
   "_theme": "heat",
-  "_keywords": ["urban heat", "temperature", "jakarta", "heat"],
+  "_keywords": [
+    "urban heat",
+    "temperature",
+    "jakarta",
+    "heat"
+  ],
   "_date": "2026-11-13",
   "_lang": "en",
   "_sources": [
-    {"n": 1, "publisher": "NASA Earth Observatory", "title": "Urban heat islands and surface temperatures", "date": "2026-11-01", "url": "https://earthobservatory.nasa.gov/topic/heat", "primary": true},
-    {"n": 2, "publisher": "NASA Earth Observatory", "title": "Urban heat islands and surface temperatures", "date": "2026-11-01", "url": "https://earthobservatory.nasa.gov/topic/heat", "primary": true},
-    {"n": 3, "publisher": "WMO", "title": "Global climate and temperature tracking", "date": "2026-10-30", "url": "https://wmo.int/topics/heatwave", "primary": false}
+    {
+      "n": 1,
+      "publisher": "NASA Earth Observatory",
+      "title": "Urban heat islands and surface temperatures",
+      "date": "2026-11-01",
+      "url": "https://earthobservatory.nasa.gov/topic/heat",
+      "primary": true
+    },
+    {
+      "n": 2,
+      "publisher": "NASA Earth Observatory",
+      "title": "Urban heat islands and surface temperatures",
+      "date": "2026-11-01",
+      "url": "https://earthobservatory.nasa.gov/topic/heat",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "WMO",
+      "title": "Global climate and temperature tracking",
+      "date": "2026-10-30",
+      "url": "https://wmo.int/topics/heatwave",
+      "primary": false
+    }
   ],
   "_images": {
-    "cover.image": {"file": "cover.jpg", "source_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/taking-a-gander-at-utah%E2%80%99s-goosenecks/ISS075-E-188830.jpg", "license": "Public domain (NASA)", "credit": "NASA astronaut photograph ISS075-E-188830"},
-    "story.image": null,
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Jakarta_Skyline_from_Swadarma%2C_Pesanggrahan.jpg/1280px-Jakarta_Skyline_from_Swadarma%2C_Pesanggrahan.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Nanami976 / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Jakarta_Skyline_from_Swadarma%2C_Pesanggrahan.jpg/1280px-Jakarta_Skyline_from_Swadarma%2C_Pesanggrahan.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Nanami976 / Wikimedia Commons"
+    },
     "physics.diagram": null
   },
   "_graph.1.raw": 5,
   "_graph.2.raw": 23.9,
   "_graph.3.raw": 22.8,
-  "_answers": {"1": "b", "2": "a", "3": "c"},
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
   "_quiz_explain": {
-    "1": {"why": "Concrete has a smaller specific heat than water, so the same energy warms it more.", "wrong": {"a": "Water has a big c, so it warms slowly.", "c": "Wet soil holds water, which slows warming.", "d": "Sea water has a big c, like all water."}},
-    "2": {"why": "ΔT is the change in temperature resulting from added heat energy.", "wrong": {"b": "Time is represented by t, not ΔT.", "c": "Thickness is not part of this equation.", "d": "Total energy is represented by Q."}},
-    "3": {"why": "Trees provide shade and evaporate water, which removes heat from the air.", "wrong": {"a": "Dark roofs absorb more solar energy.", "b": "Car parks store massive amounts of heat.", "d": "Windows do not change heat storage."}}
+    "1": {
+      "why": "Concrete has a smaller specific heat than water, so the same energy warms it more.",
+      "wrong": {
+        "a": "Water has a big c, so it warms slowly.",
+        "c": "Wet soil holds water, which slows warming.",
+        "d": "Sea water has a big c, like all water."
+      }
+    },
+    "2": {
+      "why": "ΔT is the change in temperature resulting from added heat energy.",
+      "wrong": {
+        "b": "Time is represented by t, not ΔT.",
+        "c": "Thickness is not part of this equation.",
+        "d": "Total energy is represented by Q."
+      }
+    },
+    "3": {
+      "why": "Trees provide shade and evaporate water, which removes heat from the air.",
+      "wrong": {
+        "a": "Dark roofs absorb more solar energy.",
+        "b": "Car parks store massive amounts of heat.",
+        "d": "Windows do not change heat storage."
+      }
+    }
   },
   "_quiz_pool": [
-    {"question": "What does c stand for in Q = m × c × ΔT?", "options": ["Speed of light", "Specific heat capacity", "Celsius", "Current"], "answer": 1, "explanation": "c tells how much energy 1 kg needs to warm by 1 °C."},
-    {"question": "Which warms fastest with the same energy?", "options": ["Water", "Concrete", "Sea", "Ice cream"], "answer": 1, "explanation": "Concrete has a smaller c than water, so its temperature rises more."},
-    {"question": "What is the unit of energy Q?", "options": ["Watt", "Newton", "Joule", "Kelvin"], "answer": 2, "explanation": "Energy is measured in joules (J)."},
-    {"question": "If you double the mass, the energy needed for the same ΔT…", "options": ["halves", "stays the same", "doubles", "is four times"], "answer": 2, "explanation": "Q grows in step with m."},
-    {"question": "Why do parks feel cooler than car parks?", "options": ["Plants and water store heat and evaporate water", "Parks are higher", "Grass is magnetic", "Cars make wind"], "answer": 0, "explanation": "Water has a big c and evaporation takes heat away."},
-    {"question": "ΔT means…", "options": ["the final temperature", "the change in temperature", "the time", "the thickness"], "answer": 1, "explanation": "Δ means 'change in'."}
+    {
+      "question": "What does c stand for in Q = m × c × ΔT?",
+      "options": [
+        "Speed of light",
+        "Specific heat capacity",
+        "Celsius",
+        "Current"
+      ],
+      "answer": 1,
+      "explanation": "c tells how much energy 1 kg needs to warm by 1 °C."
+    },
+    {
+      "question": "Which warms fastest with the same energy?",
+      "options": [
+        "Water",
+        "Concrete",
+        "Sea",
+        "Ice cream"
+      ],
+      "answer": 1,
+      "explanation": "Concrete has a smaller c than water, so its temperature rises more."
+    },
+    {
+      "question": "What is the unit of energy Q?",
+      "options": [
+        "Watt",
+        "Newton",
+        "Joule",
+        "Kelvin"
+      ],
+      "answer": 2,
+      "explanation": "Energy is measured in joules (J)."
+    },
+    {
+      "question": "If you double the mass, the energy needed for the same ΔT…",
+      "options": [
+        "halves",
+        "stays the same",
+        "doubles",
+        "is four times"
+      ],
+      "answer": 2,
+      "explanation": "Q grows in step with m."
+    },
+    {
+      "question": "Why do parks feel cooler than car parks?",
+      "options": [
+        "Plants and water store heat and evaporate water",
+        "Parks are higher",
+        "Grass is magnetic",
+        "Cars make wind"
+      ],
+      "answer": 0,
+      "explanation": "Water has a big c and evaporation takes heat away."
+    },
+    {
+      "question": "ΔT means…",
+      "options": [
+        "the final temperature",
+        "the change in temperature",
+        "the time",
+        "the thickness"
+      ],
+      "answer": 1,
+      "explanation": "Δ means 'change in'."
+    }
   ],
   "_lab_rubric": {
-    "must_show": ["two equal cups with water and soil", "both cups placed in sunlight", "temperature check after 20 minutes"],
-    "safety": ["no flame, no kettle, no mains electricity", "only hands in the photo"],
+    "must_show": [
+      "two equal cups with water and soil",
+      "both cups placed in sunlight",
+      "temperature check after 20 minutes"
+    ],
+    "safety": [
+      "no flame, no kettle, no mains electricity",
+      "only hands in the photo"
+    ],
     "pass_if": "The photos show both cups in the sun and record temperature differences."
   },
-  "_per_page": [{}, {}, {}, {}],
+  "_per_page": [
+    {},
+    {},
+    {},
+    {}
+  ],
   "_replace": {},
-
-  "guide.issue_date": "#04 · 13 NOV 2026",
+  "guide.issue_date": "#05 · 13 NOV 2026",
   "guide.lang": "EN",
   "guide.xp": "+60 XP",
-  "footer.credit": "ELIOS Guides · Issue 04 · Jakarta urban heat",
-
+  "footer.credit": "ELIOS Guides · Issue 05 · Jakarta urban heat",
   "cover.title": "Why city streets get so hot",
   "cover.subtitle": "Roads and roofs soak up sunlight all day. Find out why concrete warms faster than water, and how a city stays hot at night.",
-  "cover.image_caption": "A city seen from space",
+  "cover.image_caption": "Jakarta skyline (archive photo)",
   "cover.news_date": "News: 12 Nov 2026",
   "cover.place": "Jakarta, Indonesia",
   "cover.topic": "Heat and temperature",
@@ -60,11 +191,10 @@
   "cover.level": "SMP · grade 7–9",
   "cover.xp_total": "Earn up to 60 XP",
   "cover.fun_fact": "Water needs almost 5 times more energy than concrete to warm up by the same amount.",
-
   "story.title": "A hot week in the city",
   "story.lead": "Weather records note high daytime temperatures across Jakarta [1]. Streets and concrete roofs absorb intense sunlight, warming up much faster than green parks [2].",
-  "story.image_caption": "City surfaces and rooftop temperatures mapped from space",
-  "story.image_credit": "Illustration by ELIOS",
+  "story.image_caption": "Jakarta’s dense buildings and roads seen from Pesanggrahan",
+  "story.image_credit": "Nanami976 / Wikimedia Commons (CC BY-SA 4.0)",
   "stat.1.value": "100",
   "stat.2.value": "17",
   "stat.3.value": "5",
@@ -163,5 +293,5 @@
   "source.3": "[3] WMO, Global climate and temperature tracking, 30 Oct 2026",
   "source.4": "",
   "source.5": "",
-  "credit.images": "Cover: NASA Earth Observatory, public domain. Other pictures: Illustration by ELIOS."
+  "credit.images": "Cover and story: Nanami976 / Wikimedia Commons (CC BY-SA 4.0)."
 }
