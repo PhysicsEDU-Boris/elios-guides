@@ -54,6 +54,59 @@
       "pages": 4
     },
     {
+      "revision": "ef552dc2009fd4f0093dfef23b7d511ca47cba3cd023a054ad9f4e4f92ae1de5",
+      "date": "2026-11-13",
+      "issue": "05",
+      "slug": "jakarta-urban-heat-island",
+      "xp": 60,
+      "title": {
+        "en": "Why city streets get so hot",
+        "id": "Mengapa jalan kota panas"
+      },
+      "topic": {
+        "en": "Heat and temperature",
+        "id": "Suhu dan panas"
+      },
+      "cover": {
+        "en": "issues/2026-11-13/elios-guide-05-jakarta-urban-heat-island-cover-en.png",
+        "id": "issues/2026-11-13/elios-guide-05-jakarta-urban-heat-island-cover-id.png"
+      },
+      "pdf": {
+        "en": "issues/2026-11-13/elios-guide-05-jakarta-urban-heat-island-en.pdf",
+        "id": "issues/2026-11-13/elios-guide-05-jakarta-urban-heat-island-id.pdf"
+      },
+      "content": {
+        "en": "issues/2026-11-13/en.json",
+        "id": "issues/2026-11-13/id.json"
+      },
+      "schema": 2,
+      "theme": "heat",
+      "photo": {
+        "src": "issues/2026-11-13/photo.jpg",
+        "thumb": "issues/2026-11-13/photo-800.jpg",
+        "w": 2000,
+        "h": 1500,
+        "caption": {
+          "en": "Jakarta skyline (archive photo)",
+          "id": "Langit kota Jakarta (foto arsip)"
+        },
+        "credit": "Nanami976 / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Jakarta_Skyline_from_Swadarma%2C_Pesanggrahan.jpg/1280px-Jakarta_Skyline_from_Swadarma%2C_Pesanggrahan.jpg"
+      },
+      "content_sha": {
+        "en": "f363869c12bb3010d53746b9bd5f34953e939021428670182791987783afc067",
+        "id": "c8cdb65d3c50e2c8ad487843267b9fa8abe5364958460f3fa2db6ed60b59b77d"
+      },
+      "xp_parts": {
+        "story": 10,
+        "physics": 20,
+        "quiz": 10,
+        "lab": 20
+      },
+      "pages": 4
+    },
+    {
       "revision": "7a27fd6b0a2477cd746b981c8d39d816d05a608cdc4a9f935e9079d39ed8c07b",
       "date": "2026-11-12",
       "issue": "03",
@@ -200,5 +253,5 @@
       }
     }
   ],
-  "updated": "2026-11-16T12:21:40+07:00"
+  "updated": "2026-11-16T12:30:02+07:00"
 }
