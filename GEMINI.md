@@ -33,7 +33,15 @@ Every reference to manifest.json below means this catalogue. It contains the dep
 - Paraphrase. No quote longer than 10 words.
 
 ## Physics
-- One equation from the SMP / early SMA curriculum, written in Unicode (², ⁻⁵, ρ, μ, ×, ÷).
+- Choose the equation from schema/formulas.json (read it; 46 entries, core = SMP, stretch = SMA and
+  above). Pick the one that explains the event best and whose `themes` include your _theme. Set
+  `_formula` to its `id` in both files. Prefer a formula you have not used lately (validate.py rejects
+  one used in the last 30 issues) and a core one unless a stretch formula really fits; never two stretch
+  formulas in a row. For a stretch formula the second paragraph says in plain words what each symbol does.
+- Copy `text` into physics.equation exactly, and the bank's `symbols` into legend.1 to legend.N in
+  order (symbol exactly as written; meaning and unit in your own words, from the bank's hints; legend
+  rows after the last symbol stay empty). Constants such as σ or R need their value in physics.assumptions
+  or the worked example. Never invent or alter an equation. The PDF typesets it from `latex`.
 - Write calc.py (standard library only, no network, no files) that computes every value in the
   worked example, the table, the graph (_graph.N.raw) and any number in the text you calculated. It
   prints one JSON object. State the simplifications in physics.assumptions.

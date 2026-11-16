@@ -35,6 +35,17 @@ Each catalogue entry keeps every v1 field unchanged and adds:
 edit gives a new revision; the date and issue number never change. Example for 2026-11-08:
 [docs/manifest-v2-example.json](docs/manifest-v2-example.json).
 
+## Formula bank
+
+The key equation comes from [`schema/formulas.json`](schema/formulas.json): 46 formulas (21 core for SMP,
+25 stretch for SMA and above) across the six themes. Each has an `id`, `level`, `themes`, `text`
+(Unicode, shown in the app), `latex` (typeset in the PDF by the bundled KaTeX in `render/katex/`) and up
+to five `symbols` with a meaning and unit hint. The writer sets `_formula` to an id in both files;
+`validate.py` requires the same id, the exact `text` and the bank's legend symbols, rejects an id used in
+the last 30 issues, and rejects a stretch formula right after another stretch one. The manifest entry
+records `formula` (additive). To add a formula, append an entry; `tests/test_formulas.py` and the render
+test check the limits and that it typesets and fits the equation card.
+
 ## Photo rules
 
 `scripts/fetch_images.py` downloads the original file (Wikimedia `/thumb/` urls are turned into the

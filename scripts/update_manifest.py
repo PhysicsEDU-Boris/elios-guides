@@ -75,6 +75,7 @@ def update(date, root=ROOT, now=None):
         "photo": photo_entry(root, folder, en, id_),
         "content_sha": {l: sha((root / folder / f"{l}.json").read_bytes()) for l in ("en", "id")},
         "xp_parts": dict(XP_PARTS),
+        "formula": en.get("_formula"),  # id in schema/formulas.json; validate.py avoids repeats
         "pages": len(PdfReader(root / folder / f"{base}-en.pdf").pages),
     }
     path = root / "manifest.json"
