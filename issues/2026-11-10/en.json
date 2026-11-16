@@ -44,7 +44,12 @@
       "license": "CC BY-SA 4.0",
       "credit": "Nanami976 / Wikimedia Commons"
     },
-    "story.image": null,
+    "story.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Jakarta_Skyline_from_Swadarma%2C_Pesanggrahan.jpg/1280px-Jakarta_Skyline_from_Swadarma%2C_Pesanggrahan.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Nanami976 / Wikimedia Commons"
+    },
     "physics.diagram": null
   },
   "_graph.1.raw": 1.44,
