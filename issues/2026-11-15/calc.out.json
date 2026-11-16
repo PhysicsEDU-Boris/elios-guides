@@ -1,0 +1,17 @@
+{
+  "volume_m3": 3,
+  "mass_clean_ug": 45,
+  "mass_moderate_ug": 165,
+  "mass_unhealthy_ug": 450,
+  "conc_clean": 15.0,
+  "conc_moderate": 55.0,
+  "conc_unhealthy": 150.0,
+  "example_mass": 450,
+  "example_volume": 3,
+  "example_result": 150.0,
+  "life_loss_months": 8,
+  "news_day": 12,
+  "air_inhaled_kg": 14,
+  "water_drunk_kg": 2,
+  "food_eaten_kg": 1.5
+}
