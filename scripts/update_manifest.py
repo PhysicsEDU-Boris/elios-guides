@@ -81,6 +81,8 @@ def update(date, root=ROOT, now=None):
         "sources": repeats.issue_sources(en), "terms": repeats.issue_terms(en),  # repeat protection (repeats.py)
         "pages": len(PdfReader(root / folder / f"{base}-en.pdf").pages),
     }
+    if en.get("_remedial"):
+        entry["remedial"] = en["_remedial"]  # weak_questions.py avoids this concept for 14 days
     path = root / "manifest.json"
     manifest = json.loads(path.read_text(encoding="utf-8"))
     guides = [g for g in manifest.get("guides") or [] if g.get("date") != date] + [entry]

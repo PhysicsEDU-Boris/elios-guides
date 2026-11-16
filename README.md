@@ -35,6 +35,22 @@ Each catalogue entry keeps every v1 field unchanged and adds:
 edit gives a new revision; the date and issue number never change. Example for 2026-11-08:
 [docs/manifest-v2-example.json](docs/manifest-v2-example.json).
 
+## Remedial guides (every second day)
+
+The app backend already stores each student's first quiz attempt per question in Supabase (`guide_progress.quiz.first.answers`: `p1`-`p3`, right or wrong). [supabase/schema.sql](supabase/schema.sql) adds `question_stats()` over that data (no student identifiers) and the dashboard allow-list; nothing new is collected from students. The chosen option is not stored yet, so the most common wrong answer stays empty until the backend also saves `answers[].choice`.
+On every second day (even date ordinal; 16 Nov 2026 is one)
+`scripts/weak_questions.py` reads `question_stats()` with the service key, groups questions by the concept
+(formula) of their guide, and writes `.gemini/remedial-brief.json`: the concept students miss most, its three
+hardest questions, the right answer and the most common wrong answer. A concept needs 60 answers (30 per
+question) and is not repeated within 14 days. The writer then follows the "Remedial mode" section of
+[GEMINI.md](GEMINI.md): a real recent event that shows the concept, the misconception explained, three new
+quiz questions, and `_remedial` in both files (the manifest entry keeps it). Without the secrets, without
+enough answers or if Supabase is unreachable, the day stays a normal news guide. One issue per date is kept,
+so a remedial guide takes the place of that day's news guide.
+
+Setup: run `supabase/schema.sql` in the existing ELIOS Supabase project (SQL editor), add your email to `dashboard_users`, then set the
+Actions secrets `SUPABASE_URL` and `SUPABASE_SERVICE_KEY` (service key: never in the app or the dashboard).
+
 ## Repeat protection
 
 `scripts/repeats.py` compares a new issue with the last 60 catalogue entries, offline and without a model:

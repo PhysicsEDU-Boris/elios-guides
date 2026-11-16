@@ -36,6 +36,20 @@ Every reference to manifest.json below means this catalogue. It contains the dep
 - Put [n] tags (n = _sources entry) at the end of sentences that use a source.
 - Paraphrase. No quote longer than 10 words.
 
+## Remedial mode (only when .gemini/remedial-brief.json exists)
+- Every second day the build reads the quiz statistics and writes that file: the concept students miss
+  most, with the hardest questions, the right answer and the most common wrong answer. No file: write a
+  normal news guide and no `_remedial` key.
+- Same rules as any guide (a real event from the last 7 days, at least 3 sources, repeat protection) but
+  pick an event that shows this concept. Use the brief's `concept.formula` as `_formula`; if it is null,
+  use the bank formula whose `text` equals `concept.equation`, else the closest one for the theme.
+- Explain the mistake behind the most common wrong answers in physics.body_1, physics.body_2 and
+  physics.tip, kindly and without blaming students. Write 3 NEW quiz questions on the same concept with
+  different numbers and a fresh context: never copy a brief question, and make the wrong options the
+  common mistakes.
+- Set `_remedial` in both files: {"concept": <brief concept.key>, "questions": [up to 3 strings
+  "<guide_date>#<question_id>" taken from the brief]}.
+
 ## Physics
 - Choose the equation from schema/formulas.json (read it; 46 entries, core = SMP, stretch = SMA and
   above). Pick the one that explains the event best and whose `themes` include your _theme. Set
