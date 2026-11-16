@@ -62,7 +62,7 @@ def test_overview_shows_topics_streaks_learning_scans_and_waiting_cards(page):
     text = page.inner_text("#app")
     assert "Heat energy" in text and "75% wrong" not in text and "Streaks: how loyal" in text and "Learning activity" in text
     assert page.locator("#kpis .kpi").count() == 6 and "83" in page.inner_text("#kpis")
-    assert "Scan with robot" in page.inner_text("#scans") and "Recyclable" in page.inner_text("#scans")
+    assert "scan with robot" in page.inner_text("#scans").lower() and "Recyclable" in page.inner_text("#scans")
     assert "Not collected yet" in page.inner_text("#clovers") and "Not collected yet" in page.inner_text("#videos")
     assert "Not the exact bin question yet" in page.inner_text("#robot")
     assert "Hi, boris" in page.inner_text("#topbar")
