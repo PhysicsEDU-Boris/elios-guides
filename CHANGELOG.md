@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — 16 November 2026 (dashboard)
+
+- `dashboard/`: static Vercel page, Supabase email-link login with an allow-list, shows the most-missed questions (with the answer split per option once the backend stores the chosen option) and the next remedial concept.
+
 ## Unreleased — 16 November 2026 (remedial guides)
 
 - `supabase/schema.sql`: `question_stats()` over the quiz results the app backend already stores (`guide_progress`), plus the dashboard allow-list.
