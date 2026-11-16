@@ -1,0 +1,17 @@
+{
+  "volume_m3": 100,
+  "mass_clean": 1,
+  "mass_hazy": 5,
+  "mass_smog": 15,
+  "c_clean": 10.0,
+  "c_hazy": 50.0,
+  "c_smog": 150.0,
+  "read_min": 12,
+  "grade_start": 7,
+  "grade_end": 9,
+  "xp_total": 60,
+  "issue_num": 6,
+  "day": 11,
+  "year": 2026,
+  "particle_size": 2.5
+}
