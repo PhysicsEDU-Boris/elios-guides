@@ -91,3 +91,19 @@ end $$;
 
 revoke all on function public.insights_summary(int) from public, anon;
 grant execute on function public.insights_summary(int) to authenticated, service_role;
+
+-- Per guide day: how many students started the issue (any progress row) and finished each stop. Counts only.
+create or replace function public.magazine_stats(p_days int default 365)
+returns table (guide_date date, started bigint, story bigint, physics bigint, quiz bigint, lab bigint)
+language plpgsql security definer set search_path = public as $$
+begin
+  if coalesce(auth.role(), '') <> 'service_role'
+     and not exists (select 1 from public.dashboard_users u where lower(u.email) = lower(coalesce(auth.jwt() ->> 'email', ''))) then
+    raise exception 'not allowed' using errcode = '42501';
+  end if;
+  return query select gp.date, count(*), count(*) filter (where gp.stops ? 'story'), count(*) filter (where gp.stops ? 'physics'),
+    count(*) filter (where gp.stops ? 'quiz'), count(*) filter (where gp.stops ? 'lab')
+    from public.guide_progress gp where gp.updated_at >= now() - make_interval(days => p_days) group by gp.date order by gp.date desc;
+end $$;
+revoke all on function public.magazine_stats(int) from public, anon;
+grant execute on function public.magazine_stats(int) to authenticated, service_role;
