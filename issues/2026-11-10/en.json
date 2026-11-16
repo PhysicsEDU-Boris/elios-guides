@@ -1,0 +1,341 @@
+{
+  "_example": false,
+  "_issue": "06",
+  "_slug": "jakarta-air-quality-particles",
+  "_theme": "air",
+  "_keywords": [
+    "air quality",
+    "particles",
+    "kualitas udara",
+    "polusi"
+  ],
+  "_date": "2026-11-10",
+  "_lang": "en",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "ANTARA",
+      "title": "Kualitas udara Jakarta tidak sehat pada Selasa pagi",
+      "date": "2026-11-10",
+      "url": "https://www.antaranews.com/berita/5843011/kualitas-udara-jakarta-tidak-sehat-pada-selasa-pagi",
+      "primary": false
+    },
+    {
+      "n": 2,
+      "publisher": "Copernicus Atmosphere Monitoring Service",
+      "title": "Air quality",
+      "date": "2026-11-10",
+      "url": "https://atmosphere.copernicus.eu/air-quality",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "WHO",
+      "title": "Ambient (outdoor) air pollution",
+      "date": "2024-10-24",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Jakarta_Skyline_from_Swadarma%2C_Pesanggrahan.jpg/1280px-Jakarta_Skyline_from_Swadarma%2C_Pesanggrahan.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Nanami976 / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Jakarta_Skyline_from_Swadarma%2C_Pesanggrahan.jpg/1280px-Jakarta_Skyline_from_Swadarma%2C_Pesanggrahan.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Nanami976 / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 1.44,
+  "_graph.2.raw": 7.2,
+  "_graph.3.raw": 28.8,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Density is mass divided by volume.",
+      "wrong": {
+        "a": "Volume is not mass.",
+        "c": "Speed is distance over time.",
+        "d": "Pressure is force over area."
+      }
+    },
+    "2": {
+      "why": "Warm air expands, so its density decreases.",
+      "wrong": {
+        "b": "Warm air becomes lighter per volume.",
+        "c": "Density does not stay constant.",
+        "d": "Cold air is denser."
+      }
+    },
+    "3": {
+      "why": "Trees and wind help disperse and filter airborne particles.",
+      "wrong": {
+        "a": "More traffic adds smoke.",
+        "b": "Calm air traps dust.",
+        "d": "Factories increase particles."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "What does ρ stand for in ρ = m ÷ V?",
+      "options": [
+        "Pressure",
+        "Density",
+        "Power",
+        "Period"
+      ],
+      "answer": 1,
+      "explanation": "ρ stands for density, measuring how compact matter is."
+    },
+    {
+      "question": "What is the unit of density in SI?",
+      "options": [
+        "kg",
+        "m³",
+        "kg/m³",
+        "N/m²"
+      ],
+      "answer": 2,
+      "explanation": "Density is mass in kilograms divided by volume in cubic metres."
+    },
+    {
+      "question": "If mass doubles while volume stays the same, density…",
+      "options": [
+        "halves",
+        "stays the same",
+        "doubles",
+        "quadruples"
+      ],
+      "answer": 2,
+      "explanation": "Density is directly proportional to mass."
+    },
+    {
+      "question": "Why does warm air rise?",
+      "options": [
+        "It is denser",
+        "It has lower density",
+        "It is magnetic",
+        "It has higher pressure"
+      ],
+      "answer": 1,
+      "explanation": "Warm air expands and has lower density than cooler surrounding air."
+    },
+    {
+      "question": "What does PM2.5 mean?",
+      "options": [
+        "Particles under 2.5 mm",
+        "Particles under 2.5 µm",
+        "Pressure of 2.5 atm",
+        "Power of 2.5 W"
+      ],
+      "answer": 1,
+      "explanation": "PM2.5 refers to fine particulate matter smaller than 2.5 micrometres."
+    },
+    {
+      "question": "Which agency monitors weather and air in Indonesia?",
+      "options": [
+        "NASA",
+        "BMKG",
+        "WMO",
+        "NOAA"
+      ],
+      "answer": 1,
+      "explanation": "BMKG is Indonesia's meteorological, climatological, and geophysical agency."
+    },
+    {
+      "question": "If 1,000 m³ of air has a mass of 1,200 kg, its density is…",
+      "options": [
+        "1.0 kg/m³",
+        "1.2 kg/m³",
+        "1.3 kg/m³",
+        "2.2 kg/m³"
+      ],
+      "answer": 1,
+      "explanation": "1,200 ÷ 1,000 = 1.2 kg/m³."
+    },
+    {
+      "question": "Dense polluted air makes visibility…",
+      "options": [
+        "clearer",
+        "worse",
+        "brighter",
+        "unchanged"
+      ],
+      "answer": 1,
+      "explanation": "Suspended particles scatter light and reduce visibility."
+    },
+    {
+      "question": "What instrument helps measure air pollutants?",
+      "options": [
+        "Thermometer",
+        "Barometer",
+        "Air sensor",
+        "Voltmeter"
+      ],
+      "answer": 2,
+      "explanation": "Air sensors measure particulate concentrations in the atmosphere."
+    },
+    {
+      "question": "To find volume V when mass and density are known, use…",
+      "options": [
+        "V = m × ρ",
+        "V = m ÷ ρ",
+        "V = ρ ÷ m",
+        "V = m + ρ"
+      ],
+      "answer": 1,
+      "explanation": "From ρ = m ÷ V, volume V equals mass m divided by density ρ."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "two transparent jars or cups",
+      "smoke or dust simulation outside or near a window safely",
+      "observation of particle settling"
+    ],
+    "safety": [
+      "no flame, no mains electricity, no dangerous chemicals",
+      "only hands in the photo"
+    ],
+    "pass_if": "The photos show transparent containers and student observation of airborne particles."
+  },
+  "_per_page": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "_replace": {},
+  "guide.issue_date": "#06 · 10 NOV 2026",
+  "guide.lang": "EN",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Issue 6 · 10 Nov 2026",
+  "cover.title": "How dust and smoke fill the air",
+  "cover.subtitle": "Jakarta's air was rated unhealthy this week. Discover how density tells us how much dust and smoke hides in every cubic metre.",
+  "cover.image_caption": "Jakarta skyline (archive photo)",
+  "cover.news_date": "News: 10 Nov 2026",
+  "cover.place": "Jakarta, Indonesia",
+  "cover.topic": "Air and particles",
+  "cover.subject": "Physics · Density",
+  "quest.1.desc": "Read about the hazy morning",
+  "quest.2.desc": "Use ρ = m ÷ V for particles",
+  "quest.3.desc": "Quiz, mini lab and badge",
+  "cover.read_time": "12 min read",
+  "cover.level": "SMP · grade 7–9",
+  "cover.xp_total": "Earn up to 60 XP",
+  "cover.fun_fact": "A classroom holds about 180 kg of air but, on 10 Nov, only 7.2 mg of PM2.5.",
+  "story.title": "A hazy morning in the capital",
+  "story.lead": "On Tuesday morning, Jakarta's air was rated unhealthy [1]. Fine particles called PM2.5 reached 48 micrograms in every cubic metre of air [1].",
+  "story.image_caption": "Jakarta’s dense city seen from Pesanggrahan (archive photo)",
+  "story.image_credit": "Nanami976 / Wikimedia Commons",
+  "stat.1.value": "127",
+  "stat.2.value": "48 µg/m³",
+  "stat.3.value": "9.2 ×",
+  "stat.1.label": "Jakarta's air quality index at 07:00 WIB: unhealthy [1]",
+  "stat.2.label": "PM2.5 (dust, smoke and soot) in each cubic metre [1]",
+  "stat.3.label": "higher than the WHO yearly guideline for PM2.5 [1]",
+  "story.body_1": "PM2.5 means particles smaller than 2.5 micrometres, such as dust, smoke and soot [1]. Jakarta was the fifth-worst city in Indonesia that morning [1]. Agencies such as Copernicus combine satellite data and computer models to forecast what is in the air [2].",
+  "story.body_2": "The city's Environment Agency advised masks, staying indoors, closing windows and using air purifiers [1]. Fine particles cause heart and lung disease, and cleaner transport and greener cities help cut them [3].",
+  "timeline.1.date": "Morning",
+  "timeline.2.date": "Afternoon",
+  "timeline.3.date": "Evening",
+  "timeline.1.text": "Cool morning air traps dust and smoke close to the ground.",
+  "timeline.2.text": "Sunlight warms the air, causing it to expand and rise.",
+  "timeline.3.text": "Wind carries the particles away and mixes them into more air.",
+  "physics.title": "Density: mass in each cubic metre",
+  "physics.body_1": "Density tells us how much mass is packed into each cubic metre: ρ = m ÷ V. Clean air near sea level is about 1.2 kg/m³, so a 150 m³ classroom holds about 180 kg of air.",
+  "physics.body_2": "Pollution is measured the same way, in micrograms per cubic metre. Turn the equation around, m = ρ × V, to find how much particle mass a room holds. It is tiny, yet harmful.",
+  "physics.equation": "ρ = m ÷ V",
+  "physics.equation_name": "Density equation (m = ρ × V)",
+  "legend.1.symbol": "ρ",
+  "legend.1.meaning": "density or concentration",
+  "legend.1.unit": "kg/m³ · µg/m³",
+  "legend.2.symbol": "m",
+  "legend.2.meaning": "mass",
+  "legend.2.unit": "kg · mg · µg",
+  "legend.3.symbol": "V",
+  "legend.3.meaning": "volume",
+  "legend.3.unit": "cubic metre (m³)",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "We assume the particles are spread evenly through the room and the reading stays the same.",
+  "example.step_1": "ρ = 48 µg/m³, V = 150 m³",
+  "example.step_2": "m = ρ × V = 48 × 150",
+  "example.step_3": "m = 7,200 µg = 7.2 mg",
+  "example.result": "m = 7.2 mg",
+  "table.h1": "Room",
+  "table.h2": "Volume V (m³)",
+  "table.h3": "PM2.5 mass m (mg)",
+  "table.r1c1": "Bedroom",
+  "table.r1c2": "30",
+  "table.r1c3": "1.44",
+  "table.r2c1": "Classroom",
+  "table.r2c2": "150",
+  "table.r2c3": "7.2",
+  "table.r3c1": "School hall",
+  "table.r3c2": "600",
+  "table.r3c3": "28.8",
+  "table.note": "Same air (48 µg/m³), bigger room, more particle mass.",
+  "graph.title": "PM2.5 mass in rooms on 10 Nov",
+  "graph.1.label": "Bedroom",
+  "graph.2.label": "Class",
+  "graph.3.label": "Hall",
+  "graph.1.value": "1.44 mg",
+  "graph.2.value": "7.2 mg",
+  "graph.3.value": "28.8 mg",
+  "graph.note": "A room 20 times bigger holds 20 times more particle mass: m = ρ × V.",
+  "physics.tip": "Turn ρ = m ÷ V around to m = ρ × V: density times volume gives the mass in any space.",
+  "mission.title": "Air quality investigator mission",
+  "quiz.answer_key": "Answer key: 1B · 2A · 3C",
+  "quiz.1.question": "What does ρ represent in the density equation?",
+  "quiz.1.a": "Pressure",
+  "quiz.1.b": "Density",
+  "quiz.1.c": "Power",
+  "quiz.1.d": "Period",
+  "quiz.2.question": "How does warm air affect density?",
+  "quiz.2.a": "Density decreases",
+  "quiz.2.b": "Density increases",
+  "quiz.2.c": "Density stays constant",
+  "quiz.2.d": "Density becomes zero",
+  "quiz.3.question": "Which action helps clear urban air particles?",
+  "quiz.3.a": "More traffic exhaust",
+  "quiz.3.b": "Calm windless nights",
+  "quiz.3.c": "Trees and wind dispersion",
+  "quiz.3.d": "Burning dry leaves",
+  "lab.title": "Dust and settling test",
+  "lab.step_1": "Take two clear containers and observe dust particles in light.",
+  "lab.step_2": "Cover one container and leave the other open near a window.",
+  "lab.step_3": "Check after 30 minutes to see settled dust.",
+  "lab.question": "How did particles settle? Use density to explain air movement.",
+  "badge.name": "Air Guardian",
+  "badge.text": "You measured air pollution with density.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Density",
+  "glossary.2.term": "Particulate matter",
+  "glossary.3.term": "Atmosphere",
+  "glossary.1.def": "Mass per unit volume of a substance.",
+  "glossary.2.def": "Tiny solid or liquid particles suspended in the air.",
+  "glossary.3.def": "The layers of gases surrounding the Earth.",
+  "label.sources": "Sources",
+  "source.1": "[1] ANTARA, Kualitas udara Jakarta tidak sehat pada Selasa pagi, 10 Nov 2026",
+  "source.2": "[2] Copernicus Atmosphere Monitoring Service, Air quality",
+  "source.3": "[3] WHO, Ambient (outdoor) air pollution, 24 Oct 2024",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Cover & Story photo: Nanami976 / Wikimedia Commons (CC BY-SA 4.0). Other illustrations by ELIOS."
+}

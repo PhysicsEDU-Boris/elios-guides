@@ -160,6 +160,59 @@
       "pages": 4
     },
     {
+      "revision": "0ecb910b10df4a085d3aeb5fdc4eedb9ca5127cb59091df643e40ab4563f6edd",
+      "date": "2026-11-10",
+      "issue": "06",
+      "slug": "jakarta-air-quality-particles",
+      "xp": 60,
+      "title": {
+        "en": "How dust and smoke fill the air",
+        "id": "Debu dan asap di udara kota"
+      },
+      "topic": {
+        "en": "Air and particles",
+        "id": "Udara dan partikel"
+      },
+      "cover": {
+        "en": "issues/2026-11-10/elios-guide-06-jakarta-air-quality-particles-cover-en.png",
+        "id": "issues/2026-11-10/elios-guide-06-jakarta-air-quality-particles-cover-id.png"
+      },
+      "pdf": {
+        "en": "issues/2026-11-10/elios-guide-06-jakarta-air-quality-particles-en.pdf",
+        "id": "issues/2026-11-10/elios-guide-06-jakarta-air-quality-particles-id.pdf"
+      },
+      "content": {
+        "en": "issues/2026-11-10/en.json",
+        "id": "issues/2026-11-10/id.json"
+      },
+      "schema": 2,
+      "theme": "air",
+      "photo": {
+        "src": "issues/2026-11-10/photo.jpg",
+        "thumb": "issues/2026-11-10/photo-800.jpg",
+        "w": 2000,
+        "h": 1500,
+        "caption": {
+          "en": "Jakarta skyline (archive photo)",
+          "id": "Langit kota Jakarta (foto arsip)"
+        },
+        "credit": "Nanami976 / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Jakarta_Skyline_from_Swadarma%2C_Pesanggrahan.jpg/1280px-Jakarta_Skyline_from_Swadarma%2C_Pesanggrahan.jpg"
+      },
+      "content_sha": {
+        "en": "f4c7c45d9db953291cb02d3bb22ba4da02334cdbe8e1222d7c67dd1d580244ac",
+        "id": "591907e85bf22fa07719596ce77eba56358be2ef69a81ad3d4cc86e4a0ef5947"
+      },
+      "xp_parts": {
+        "story": 10,
+        "physics": 20,
+        "quiz": 10,
+        "lab": 20
+      },
+      "pages": 4
+    },
+    {
       "revision": "12da9f70b22477a4e6834684521a96a3fe4e2e95462ef8f60e65fa1dd3a2e21e",
       "date": "2026-11-09",
       "issue": "02",
@@ -253,5 +306,5 @@
       }
     }
   ],
-  "updated": "2026-11-16T12:30:02+07:00"
+  "updated": "2026-11-16T13:51:04+07:00"
 }
