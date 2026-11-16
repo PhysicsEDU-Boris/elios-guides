@@ -1,0 +1,44 @@
+[
+  {
+    "item": "Air intake statistics",
+    "claim": "Every human inhales 14 kg of air daily.",
+    "source": "1",
+    "pass": true,
+    "note": "Confirmed by CAMS data."
+  },
+  {
+    "item": "Life expectancy reduction",
+    "claim": "Pollution reduces life expectancy by 8 months on average.",
+    "source": "1",
+    "pass": false,
+    "note": "The provided source states life expectancy is reduced by 'more than eight months' on average, making the exact claim of 8 months inaccurate."
+  },
+  {
+    "item": "Physics calculation",
+    "claim": "ρ = m ÷ V for V = 3 m³ and m = 150 μg results in ρ = 50 μg/m³.",
+    "source": "calc",
+    "pass": true,
+    "note": "150 / 3 = 50."
+  },
+  {
+    "item": "Physics calculation",
+    "claim": "ρ = m ÷ V for V = 3 m³ and m = 450 μg results in ρ = 150 μg/m³.",
+    "source": "calc",
+    "pass": true,
+    "note": "450 / 3 = 150."
+  },
+  {
+    "item": "Indonesian quiz answer",
+    "claim": "In the question 'Apa arti ρ dalam rumus ρ = m ÷ V?', the correct answer is 'Konsentrasi massa'.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "Verified against the logic provided in the quiz pool."
+  },
+  {
+    "item": "Indonesian labelling",
+    "claim": "The Indonesian translation uses standard numeric formatting.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "Labels like 1,5 kg and 1.000 are correctly formatted for Indonesian."
+  }
+]
