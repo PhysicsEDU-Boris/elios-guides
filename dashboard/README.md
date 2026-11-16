@@ -13,6 +13,9 @@ question and option texts come from the published guides on GitHub Pages.
    key is public by design; never use the `service_role` key here.
 3. **Vercel**: import this repository, set **Root Directory** to `dashboard`, framework preset **Other**, no
    build command, no output directory. [vercel.json](vercel.json) adds `noindex`, no-store and anti-framing headers.
+   Live: project `elios-insights` (team `elios5`) at https://elios-insights.vercel.app, connected to this repository
+   through the Vercel GitHub app (installed on this repository only): every merge to `main` deploys the dashboard to
+   production, and each pull request gets a private preview.
 4. **Supabase Auth -> URL configuration**: set the Site URL and a Redirect URL to your Vercel address, so the
    email login link comes back to the dashboard.
 
