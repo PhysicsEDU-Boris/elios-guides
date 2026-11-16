@@ -10,7 +10,7 @@
 </head>
 <body>
 <header class="topbar" id="topbar" hidden>
- <div class="brand"><img src="assets/logo.svg" alt=""><div><div class="subhead">ELIOS Insights</div><small>Which questions students find tricky</small></div></div>
+ <div class="brand"><img src="assets/logo.svg" alt=""><div><div class="subhead">ELIOS Insights</div><small>How students learn, play and scan</small></div></div>
  <div class="spacer"></div>
  <div class="seg" id="period" role="group" aria-label="Period">
   <button data-days="7" aria-pressed="false">7 days</button><button data-days="30" aria-pressed="true">30 days</button><button data-days="90" aria-pressed="false">90 days</button>
@@ -56,18 +56,27 @@
 
 <main id="app" hidden>
  <p id="msg" role="status"></p>
- <div id="empty" class="stagecard" style="margin:24px auto" hidden>
-  <img src="assets/mascot-binb.svg" alt="" width="86">
-  <h2 class="display">Not enough answers yet</h2>
-  <p class="tx2">A question appears once enough students have answered it. Lower "Min. answers" or choose a longer period to see earlier ones.</p>
-  <div class="field" style="max-width:260px"><label for="min2">Min. answers per question</label><input id="min2" type="number" min="1" value="20"></div>
-  <button class="btn block" id="refresh" type="button">Refresh</button>
+ <nav class="tabs" id="tabs" aria-label="Sections">
+  <button class="chip" data-tab="overview" aria-pressed="true" type="button">Overview</button>
+  <button class="chip" data-tab="quiz" aria-pressed="false" type="button">Quiz topics</button>
+  <button class="chip" data-tab="scans" aria-pressed="false" type="button">Scans</button>
+  <button class="chip" data-tab="learning" aria-pressed="false" type="button">Learning</button>
+  <button class="chip" data-tab="loyalty" aria-pressed="false" type="button">Loyalty</button>
+ </nav>
+ <div class="kpis" id="kpis" data-tabs="overview"></div>
+ <div class="grid">
+  <section class="card2 wide" id="topics" data-tabs="overview quiz"></section>
+  <section class="card2" id="streaks" data-tabs="overview loyalty"></section>
+  <section class="card2 wide" id="learning" data-tabs="overview learning"></section>
+  <div class="stack" data-tabs="overview learning">
+   <section class="card2" id="clovers"></section>
+   <section class="card2" id="videos"></section>
+  </div>
+  <section class="card2 wide" id="scans" data-tabs="overview scans"></section>
+  <section class="card2" id="robot" data-tabs="overview scans"></section>
  </div>
- <div class="layout" id="content">
+ <div class="layout" id="content" data-tabs="quiz">
   <div class="col">
-   <section class="hero" id="hero"></section>
-   <div class="how" id="how" hidden>Every second day, the daily guide becomes a remedial guide on the concept students miss most. A concept needs 60 first-try answers, and it is not repeated within 14 days.</div>
-   <div class="tiles" id="tiles"></div>
    <div class="qhead" id="qhead">
     <h2 class="headline">Questions</h2><div class="spacer"></div>
     <span id="filters" style="display:flex;gap:8px;flex-wrap:wrap"></span>
@@ -79,9 +88,9 @@
    <div style="display:flex;align-items:baseline;gap:12px"><h2 class="headline">Concepts</h2><span class="spacer"></span><span class="small muted">hardest first</span></div>
    <div id="concepts" style="display:flex;flex-direction:column;gap:16px"></div>
    <div class="panel" id="calendar"></div>
-   <div class="privacy"><img src="assets/medal.svg" alt=""><span>Answers are counted anonymously. You will never see a name or an email here.</span></div>
   </aside>
  </div>
+ <div class="privacy"><img src="assets/medal.svg" alt=""><span>Everything here is counted anonymously. You will never see a name or an email.</span></div>
 </main>
 <script src="config.js"></script>
 <script src="supabase.min.js"></script>
