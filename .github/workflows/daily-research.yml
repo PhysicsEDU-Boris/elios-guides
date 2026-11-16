@@ -98,6 +98,13 @@ jobs:
           # The writer sometimes reads main's empty bootstrap catalogue instead.
           cp .gemini/published-manifest.json manifest.json
 
+      - name: Remedial brief (every second day, from the answer statistics)
+        # Writes .gemini/remedial-brief.json only when it is a remedial day and Supabase has enough answers.
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python scripts/weak_questions.py --date "$DATE" --manifest .gemini/published-manifest.json --out .gemini/remedial-brief.json
+
       - name: Restore the failed issue for repair
         if: needs.prep.outputs.resume == 'true'
         run: |
@@ -129,6 +136,7 @@ jobs:
             {"model": {"maxSessionTurns": 60}, "privacy": {"usageStatisticsEnabled": false}, "modelConfigs": {"customAliases": {"gemini-3-flash-base": {"extends": "base", "modelConfig": {"model": "gemini-3.1-flash-lite"}}, "loop-detection-double-check": {"extends": "base", "modelConfig": {"model": "gemini-3.1-flash-lite"}}}}, "tools": {"core": ["google_web_search", "web_fetch", "read_file", "write_file", "list_directory"]}}
           prompt: >-
             Follow GEMINI.md exactly. Today is ${{ needs.prep.outputs.date }} (Asia/Jakarta).
+            If .gemini/remedial-brief.json exists, today is a remedial day: follow the Remedial mode section.
             Write issues/${{ needs.prep.outputs.date }}/en.json, id.json, calc.py and sources.md.
 
       - name: Keep only the files research may write

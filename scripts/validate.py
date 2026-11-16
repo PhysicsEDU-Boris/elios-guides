@@ -260,11 +260,28 @@ def check_formula(docs, guides):
         symbols = [d.get(f"legend.{i}.symbol", "") for i in range(1, 6)]
         if [s for s in symbols if s] != [s[0] for s in f["symbols"]] or "" in symbols[:len(f["symbols"])]:
             errs.append(f"{lang}: legend symbols must be {[s[0] for s in f['symbols']]} in rows 1-{len(f['symbols'])}, empty after")
-    if any(g.get("formula") == fid for g in guides[:30]):
+    remedial = en.get("_remedial") or {}
+    if remedial.get("concept") in FORMULAS and remedial["concept"] != fid:
+        errs.append(f"remedial concept {remedial['concept']!r} must be the _formula {fid!r}")
+    if not remedial and any(g.get("formula") == fid for g in guides[:30]):  # a remedial guide repeats a formula on purpose
         errs.append(f"formula {fid!r} was used in the last 30 issues")
     if f["level"] == "stretch" and guides and (FORMULAS.get(guides[0].get("formula")) or {}).get("level") == "stretch":
         errs.append(f"formula {fid!r} is a stretch formula and so was the previous issue; pick a core one")
     return errs
+
+
+def check_remedial(docs):
+    """_remedial = {"concept": str, "questions": ["2026-11-08#q2", ...]}: same in both files, or absent."""
+    en, id_ = docs["en"], docs["id"]
+    r = en.get("_remedial")
+    if r is None and id_.get("_remedial") is None:
+        return []
+    if r != id_.get("_remedial"):
+        return ["_remedial must be identical in en.json and id.json"]
+    if not (isinstance(r, dict) and isinstance(r.get("concept"), str) and r["concept"].strip() and isinstance(r.get("questions"), list)
+            and 1 <= len(r["questions"]) <= 3 and all(re.fullmatch(r"\d{4}-\d{2}-\d{2}#(q[1-3]|p\d+)", str(q)) for q in r["questions"])):
+        return ['_remedial must be {"concept": "<id>", "questions": [1-3 strings like "2026-11-08#q2"]}']
+    return []
 
 
 def check(folder, manifest_path=ROOT / "manifest.json"):
@@ -329,6 +346,7 @@ def check(folder, manifest_path=ROOT / "manifest.json"):
         if topic and str((g.get("topic") or {}).get("en", "")).strip().lower() == topic:
             errs.append(f"topic {topic!r} was used on {g.get('date')}")
     others = [g for g in guides if g.get("date") != folder.name]
+    errs += check_remedial(docs)
     errs += check_formula(docs, others)
     errs += repeats.check(en, others)
     return errs

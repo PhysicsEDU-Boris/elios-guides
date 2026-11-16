@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased — 16 November 2026 (remedial guides)
+
+- Supabase schema for anonymous quiz-answer events and `question_stats()`; the event contract for the app is in `docs/answer-events.md`.
+- `scripts/weak_questions.py` builds a brief from the weakest concept every second day; GEMINI.md has a Remedial mode; `_remedial` is validated and recorded in the manifest (`remedial`).
+
 ## Unreleased — 16 November 2026 (repeat protection)
 
 - `scripts/repeats.py`: an issue is rejected when its main source article was already used in the last 60 issues, when two sources are shared, or when its words overlap 40% with one. Manifest entries gain `sources` and `terms`; older entries are backfilled in the research workflow.
