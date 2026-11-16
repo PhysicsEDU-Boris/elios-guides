@@ -1,6 +1,59 @@
 {
   "guides": [
     {
+      "revision": "5291c04c41cc6a969ff7252f087045a78390d7bb39ceca6ccd6527e4d5b36028",
+      "date": "2026-11-16",
+      "issue": "04",
+      "slug": "heavy-rain-and-river-floods",
+      "xp": 60,
+      "title": {
+        "en": "How heavy rain swells river flow",
+        "id": "Hujan lebat meluapkan sungai"
+      },
+      "topic": {
+        "en": "River floods",
+        "id": "Banjir sungai"
+      },
+      "cover": {
+        "en": "issues/2026-11-16/elios-guide-04-heavy-rain-and-river-floods-cover-en.png",
+        "id": "issues/2026-11-16/elios-guide-04-heavy-rain-and-river-floods-cover-id.png"
+      },
+      "pdf": {
+        "en": "issues/2026-11-16/elios-guide-04-heavy-rain-and-river-floods-en.pdf",
+        "id": "issues/2026-11-16/elios-guide-04-heavy-rain-and-river-floods-id.pdf"
+      },
+      "content": {
+        "en": "issues/2026-11-16/en.json",
+        "id": "issues/2026-11-16/id.json"
+      },
+      "schema": 2,
+      "theme": "water",
+      "photo": {
+        "src": "issues/2026-11-16/photo.jpg",
+        "thumb": "issues/2026-11-16/photo-800.jpg",
+        "w": 1333,
+        "h": 2000,
+        "caption": {
+          "en": "Ciliwung River (archive photo)",
+          "id": "Sungai Ciliwung (foto arsip)"
+        },
+        "credit": "FIYYNUT / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Ciliwung_01.jpg"
+      },
+      "content_sha": {
+        "en": "54c65c39d4b51a57d856fe0f0d46b4cec98469a6827c6d96dc675b17f9d6699e",
+        "id": "222f586c66551f6756096eb6701f42be8189d419bea3fef49d40c8274add1952"
+      },
+      "xp_parts": {
+        "story": 10,
+        "physics": 20,
+        "quiz": 10,
+        "lab": 20
+      },
+      "pages": 4
+    },
+    {
       "revision": "7a27fd6b0a2477cd746b981c8d39d816d05a608cdc4a9f935e9079d39ed8c07b",
       "date": "2026-11-12",
       "issue": "03",
@@ -147,5 +200,5 @@
       }
     }
   ],
-  "updated": "2026-11-12T21:19:24+07:00"
+  "updated": "2026-11-16T12:21:40+07:00"
 }
