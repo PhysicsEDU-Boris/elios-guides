@@ -17,6 +17,7 @@ ROWS = [
     {"guide_date": "2026-11-08", "question_id": "p2", "attempts": 30, "wrong": 6, "wrong_rate": 0.2,
      "chosen_a": 24, "chosen_b": 3, "chosen_c": 2, "chosen_d": 1, "top_wrong": "b"},
 ]
+SESSION = {"user": {"email": "boris@example.com"}}
 
 
 @pytest.fixture
@@ -27,7 +28,7 @@ def page(tmp_path):
         browser = p.chromium.launch()
     except Exception as error:
         pytest.skip(f"Chromium unavailable: {error}")
-    page = browser.new_page()
+    page = browser.new_page(viewport={"width": 1440, "height": 900})
     page.route("**/supabase.min.js", lambda route: route.fulfill(body="", content_type="text/javascript"))
     page.route(PAGES + "manifest.json", lambda r: r.fulfill(json={"guides": [{"date": "2026-11-08", "content": {"en": "issues/2026-11-08/en.json"}}]}))
     page.route(PAGES + "issues/2026-11-08/en.json", lambda r: r.fulfill(json=EN))
@@ -43,34 +44,70 @@ def stub(page, session, rpc_result):
         rpc: async () => ({json.dumps(rpc_result)}) }}) }};""")
 
 
-def test_logged_in_dashboard_shows_concepts_and_questions_without_parsing_html(page):
-    stub(page, {"user": {"email": "me@example.com"}}, {"data": ROWS, "error": None})
+def open_dashboard(page, rows=ROWS):
+    stub(page, SESSION, {"data": rows, "error": None})
     page.goto((ROOT / "dashboard" / "index.html").as_uri())
-    page.wait_for_selector("#questions .card")
+    page.wait_for_selector("#questions .qcard")
+
+
+def test_logged_in_dashboard_shows_the_figma_layout_without_parsing_html(page):
+    open_dashboard(page)
     text = page.inner_text("#app")
-    assert "Heat energy" in text and "70 answers on 2 question(s)" in text and "ready for a remedial guide" in text
-    assert "75%" in text and "A: option 1a" in text
-    assert page.locator("#questions img").count() == 0 and page.evaluate("window.pwned") is None  # guide text is never HTML
+    assert "Heat energy is the toughest topic right now" in text and "Mission control".lower() in text.lower()
+    assert "70 answers on 2 question(s)" in text and "ready for a remedial guide" in text.lower()
+    assert "75%" in text and "A: option 1a" in text and "Buddy tip" in text
+    assert page.locator("#questions img[src='x']").count() == 0 and page.evaluate("window.pwned") is None  # guide text is never HTML
     assert page.locator(".opt.no.top").count() == 2 and page.locator(".opt.ok").count() == 2
+    assert page.locator("#tiles .tile").count() == 4 and page.locator("#calendar .day").count() == 3
+    assert "Hi, boris" in page.inner_text("#topbar")
+
+
+def test_question_cards_expand_and_collapse_and_filters_work(page):
+    open_dashboard(page)
+    cards = page.locator("#questions .qcard")
+    assert cards.nth(0).get_attribute("data-open") == "true" and cards.nth(1).get_attribute("data-open") == "false"
+    cards.nth(1).locator(".header").click()
+    assert cards.nth(1).get_attribute("data-open") == "true"
+    page.get_by_role("button", name="Tough 1").click()
+    assert page.locator("#questions .qcard").count() == 1 and "75%" in page.inner_text("#questions")
+    page.get_by_role("button", name="All 2").click()
+    assert page.locator("#questions .qcard").count() == 2
+
+
+def test_theme_button_switches_between_light_and_dark(page):
+    open_dashboard(page)
+    assert page.get_attribute("html", "data-theme") == "light" and "Dark mode" in page.inner_text("#theme")
+    page.click("#theme")
+    assert page.get_attribute("html", "data-theme") == "dark" and "Light mode" in page.inner_text("#theme")
 
 
 def test_without_recorded_choices_it_shows_the_right_answer_instead_of_bars(page):
     rows = [dict(r, chosen_a=0, chosen_b=0, chosen_c=0, chosen_d=0, top_wrong=None) for r in ROWS]
-    stub(page, {"user": {"email": "me@example.com"}}, {"data": rows, "error": None})
-    page.goto((ROOT / "dashboard" / "index.html").as_uri())
-    page.wait_for_selector("#questions .card")
+    open_dashboard(page, rows)
     assert "is not recorded yet" in page.inner_text("#questions") and page.locator(".opt").count() == 0
     assert "Right answer B: option 1b" in page.inner_text("#questions")
 
 
-def test_logged_out_visitor_only_sees_the_login_form(page):
+def test_logged_out_visitor_only_sees_the_login_and_the_magic_link_flow(page):
     stub(page, None, {"data": [], "error": None})
     page.goto((ROOT / "dashboard" / "index.html").as_uri())
     page.wait_for_selector("#login:not([hidden])")
-    assert page.locator("#app").is_hidden() and "Heat energy" not in page.inner_text("body")
+    assert page.locator("#app").is_hidden() and page.locator("#topbar").is_hidden() and "Heat energy" not in page.inner_text("body")
+    page.fill("#email", "me@school.com")
+    page.get_by_role("button", name="Send my magic link").click()
+    page.wait_for_selector("#sent:not([hidden])")
+    assert "me@school.com" in page.inner_text("#sent") and "Check your inbox" in page.inner_text("#sent")
 
 
-def test_email_outside_the_allow_list_gets_a_clear_message(page):
+def test_email_outside_the_allow_list_gets_a_clear_screen(page):
     stub(page, {"user": {}}, {"data": None, "error": {"code": "42501", "message": "not allowed"}})
     page.goto((ROOT / "dashboard" / "index.html").as_uri())
-    page.wait_for_function("document.getElementById('msg').textContent.includes('allow-list')")
+    page.wait_for_selector("#denied:not([hidden])")
+    assert "not on the list" in page.inner_text("#denied") and page.locator("#app").is_hidden()
+
+
+def test_no_rows_shows_the_friendly_empty_state(page):
+    stub(page, SESSION, {"data": [], "error": None})
+    page.goto((ROOT / "dashboard" / "index.html").as_uri())
+    page.wait_for_selector("#empty:not([hidden])")
+    assert "Not enough answers yet" in page.inner_text("#empty") and page.locator("#content").is_hidden()
