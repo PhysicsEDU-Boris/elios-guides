@@ -159,6 +159,30 @@ jobs:
           FACTCHECK_MODEL: gemini-3.1-flash-lite
         run: python scripts/factcheck.py "issues/$DATE" .gemini/source-evidence.json
 
+      - name: Fact-check with the fallback provider (Gemini unavailable)
+        # Optional: set repo variables FALLBACK_BASE_URL (e.g. https://api.groq.com/openai/v1) and
+        # FALLBACK_MODEL, and secret FALLBACK_API_KEY. Skipped when unset or a report already exists.
+        if: vars.FALLBACK_BASE_URL != '' && hashFiles(format('issues/{0}/check.json', env.DATE)) == ''
+        continue-on-error: true
+        timeout-minutes: 5
+        env:
+          FALLBACK_BASE_URL: ${{ vars.FALLBACK_BASE_URL }}
+          FALLBACK_MODEL: ${{ vars.FALLBACK_MODEL }}
+          FALLBACK_API_KEY: ${{ secrets.FALLBACK_API_KEY }}
+        run: python scripts/factcheck.py "issues/$DATE" .gemini/source-evidence.json
+
+      - name: Fact-check with the second fallback provider
+        # Optional: set repo variables FALLBACK2_BASE_URL, FALLBACK2_MODEL and
+        # secret FALLBACK2_API_KEY. Skipped when unset or a report already exists.
+        if: vars.FALLBACK2_BASE_URL != '' && hashFiles(format('issues/{0}/check.json', env.DATE)) == ''
+        continue-on-error: true
+        timeout-minutes: 5
+        env:
+          FALLBACK_BASE_URL: ${{ vars.FALLBACK2_BASE_URL }}
+          FALLBACK_MODEL: ${{ vars.FALLBACK2_MODEL }}
+          FALLBACK_API_KEY: ${{ secrets.FALLBACK2_API_KEY }}
+        run: python scripts/factcheck.py "issues/$DATE" .gemini/source-evidence.json
+
       - name: Keep only check.json from the fact-check
         run: mkdir -p "issues/$DATE" && find "issues/$DATE" -type f ! -name en.json ! -name id.json ! -name calc.py ! -name sources.md ! -name check.json -print -delete
 
