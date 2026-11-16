@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-16T12:25:54+07:00",
+  "updated": "2026-11-16T12:29:24+07:00",
   "guides": [
     {
-      "revision": "c84728ad31be21f23ca922efd695a4ac37c0786a3ccac07e7a88090b735f15a6",
+      "revision": "ef552dc2009fd4f0093dfef23b7d511ca47cba3cd023a054ad9f4e4f92ae1de5",
       "date": "2026-11-13",
       "issue": "05",
       "slug": "jakarta-urban-heat-island",
@@ -43,8 +43,8 @@
         "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Jakarta_Skyline_from_Swadarma%2C_Pesanggrahan.jpg/1280px-Jakarta_Skyline_from_Swadarma%2C_Pesanggrahan.jpg"
       },
       "content_sha": {
-        "en": "e3f7e17b1540d832c3006aa4350edcd10e7e860abac9a68418767e0785d041c0",
-        "id": "3f5a860c9e62e09cb3d70fd8467f2eafd5575254229b39ccbeb445218cdc8581"
+        "en": "f363869c12bb3010d53746b9bd5f34953e939021428670182791987783afc067",
+        "id": "c8cdb65d3c50e2c8ad487843267b9fa8abe5364958460f3fa2db6ed60b59b77d"
       },
       "xp_parts": {
         "story": 10,
