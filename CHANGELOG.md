@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — 16 November 2026 (formula bank)
+
+- `schema/formulas.json`: 46 curated formulas (core and stretch) with LaTeX; the writer picks one by `_formula` instead of inventing an equation.
+- The PDF typesets equations with KaTeX (fractions, roots, exponents, logarithms); the equation limit is 40 characters and legend symbols 4.
+- `validate.py` checks the id, exact text and symbols, avoids repeats (30 issues) and back-to-back stretch formulas; manifest entries record `formula`.
+
 ## Unreleased — 16 November 2026 (no Figma)
 
 - PDFs and covers are rendered from `en.json`/`id.json` by `scripts/render_guide.py` (Chromium, `render/`), right after research passes. No Figma file, token, scheduled Claude task, `figma.json`, `resync.json` or `rebuild.txt`.

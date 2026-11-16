@@ -3,6 +3,7 @@
   "_issue": "00",
   "_slug": "example-hot-city-surfaces",
   "_theme": "heat",
+  "_formula": "heat-energy",
   "_keywords": ["urban heat", "panas"],
   "_date": "2026-11-09",
   "_lang": "en",

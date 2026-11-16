@@ -69,3 +69,33 @@ def test_missing_photo_file_blocks_the_issue(issue):
     (folder / "en.json").write_text(json.dumps(en), encoding="utf-8")
     with pytest.raises(RuntimeError, match="image did not load"):
         render_guide.render("2026-11-20", root)
+
+
+def test_every_formula_typesets_and_fits_its_card(chromium):
+    from playwright.sync_api import sync_playwright
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page(viewport={"width": 595, "height": 842})
+        page.goto((ROOT / "render" / "guide.html").as_uri())
+        page.evaluate("document.fonts.ready")
+        bad = page.evaluate("""(bank) => { const el = document.querySelector('[data-key="physics.equation"]'); el.style.fontSize = '16px';
+            return bank.filter(f => { katex.render(f.latex, el, { throwOnError: true }); return el.scrollWidth > el.clientWidth; }).map(f => f.id); }""",
+                            render_guide_bank())
+        browser.close()
+    assert bad == []
+
+
+def render_guide_bank():
+    return list(render_guide.BANK.values())
+
+
+def test_latex_braces_are_not_reported_as_leftover_placeholders(issue):
+    root, folder = issue
+    f = render_guide.BANK["planet-equilibrium-temperature"]  # latex has { } and fractions
+    for lang in ("en", "id"):
+        d = json.loads((folder / f"{lang}.json").read_text(encoding="utf-8"))
+        d["_formula"], d["physics.equation"] = f["id"], f["text"]
+        for i in range(1, 6):
+            d[f"legend.{i}.symbol"] = f["symbols"][i - 1][0] if i <= len(f["symbols"]) else ""
+        (folder / f"{lang}.json").write_text(json.dumps(d), encoding="utf-8")
+    assert len(render_guide.render("2026-11-20", root)) == 4

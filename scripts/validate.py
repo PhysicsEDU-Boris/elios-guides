@@ -240,6 +240,32 @@ def check_assets(folder, en):
     return errs
 
 
+FORMULAS = {f["id"]: f for f in json.loads((ROOT / "schema" / "formulas.json").read_text(encoding="utf-8"))}
+
+
+def check_formula(docs, guides):
+    """The equation comes from schema/formulas.json: same id, text and symbols in both files; no repeats."""
+    en = docs["en"]
+    fid = en.get("_formula")
+    f = FORMULAS.get(fid)
+    if not f:
+        return [f"_formula {fid!r} is not an id in schema/formulas.json"]
+    errs = []
+    for lang, d in docs.items():
+        if d.get("_formula") != fid:
+            errs.append(f"{lang}: _formula must be {fid!r}")
+        if d.get("physics.equation") != f["text"]:
+            errs.append(f"{lang}: physics.equation must be exactly {f['text']!r} for formula {fid!r}")
+        symbols = [d.get(f"legend.{i}.symbol", "") for i in range(1, 6)]
+        if [s for s in symbols if s] != [s[0] for s in f["symbols"]] or "" in symbols[:len(f["symbols"])]:
+            errs.append(f"{lang}: legend symbols must be {[s[0] for s in f['symbols']]} in rows 1-{len(f['symbols'])}, empty after")
+    if any(g.get("formula") == fid for g in guides[:30]):
+        errs.append(f"formula {fid!r} was used in the last 30 issues")
+    if f["level"] == "stretch" and guides and (FORMULAS.get(guides[0].get("formula")) or {}).get("level") == "stretch":
+        errs.append(f"formula {fid!r} is a stretch formula and so was the previous issue; pick a core one")
+    return errs
+
+
 def check(folder, manifest_path=ROOT / "manifest.json"):
     folder = Path(folder)
     errs = []
@@ -301,6 +327,7 @@ def check(folder, manifest_path=ROOT / "manifest.json"):
             errs.append(f"slug {slug!r} was used on {g.get('date')}")
         if topic and str((g.get("topic") or {}).get("en", "")).strip().lower() == topic:
             errs.append(f"topic {topic!r} was used on {g.get('date')}")
+    errs += check_formula(docs, [g for g in guides if g.get("date") != folder.name])
     return errs
 
 
