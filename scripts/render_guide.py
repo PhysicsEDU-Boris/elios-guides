@@ -33,7 +33,8 @@ def render(date, root=ROOT):
             page.evaluate("document.fonts.ready")
             result = page.evaluate(fill, {"content": content, "images": images,
                                           "mascot": MASCOT.get(content.get("_theme"), "bulb"),
-                                          "latex": BANK.get(content.get("_formula"), {}).get("latex")})
+                                          "latex": BANK.get(content.get("_formula"), {}).get("latex"),
+                                          "theme": content.get("_theme")})
             page.wait_for_function("[...document.images].every(i => i.complete)")
             broken = page.evaluate("[...document.images].filter(i => !i.naturalWidth).map(i => i.src.split('/').pop())")
             bad = [f"{lang}: {name}: {result[name]}" for name in ("missing", "leftover") if result[name]]

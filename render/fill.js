@@ -1,6 +1,9 @@
 // Fills render/guide.html from one language file. Port of the old figma/fill.js: a text element's
 // data-key is the JSON key it shows; empty values hide it. Returns problems for the caller to fail on.
-({ content: C, images: IMG, mascot, latex }) => {
+async ({ content: C, images: IMG, mascot, latex, theme }) => {
+  await Promise.all([...document.fonts].map(f => f.load())); // KaTeX fonts load lazily; measure with the real ones
+  const THEME_BG = { water: 'linear-gradient(135deg,#CFFAFE,#67E8F9)', heat: 'linear-gradient(135deg,#FEF3C7,#FCA5A5)', air: 'linear-gradient(135deg,#E0F2FE,#A5B4FC)',
+    energy: 'linear-gradient(135deg,#FEF9C3,#FBBF24)', waste: 'linear-gradient(135deg,#DCFCE7,#86EFAC)', storm: 'linear-gradient(135deg,#E2E8F0,#94A3B8)' };
   const pages = [...document.querySelectorAll('.page')];
   const $$ = (root, k) => [...root.querySelectorAll(`[data-key="${k}"]`)];
   const hide = e => { e.style.display = 'none'; };
@@ -30,7 +33,22 @@
     slot.style.border = 'none';
     if (IMG[key]) { const im = document.createElement('img'); im.src = IMG[key]; slot.append(im); continue; }
     if (key === 'physics.diagram') { hide(slot); continue; }
-    const { width: w, height: h } = slot.getBoundingClientRect(); // no licensed photo: soft scene
+    if (key === 'cover.image' && latex) { // no photo: a cover made from this issue's own equation
+      slot.style.background = THEME_BG[theme] || THEME_BG.water;
+      const box = document.createElement('div');
+      box.style.cssText = 'position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:0 12px';
+      const eqEl = document.createElement('span');
+      box.append(eqEl); slot.append(box);
+      katex.render(latex, eqEl, { throwOnError: true });
+      eqEl.style.flex = 'none';
+      eqEl.querySelector('.katex-html').style.whiteSpace = 'nowrap'; // KaTeX may break after "=", we shrink instead
+      let size = 34;
+      eqEl.style.fontSize = size + 'px';
+      while (eqEl.getBoundingClientRect().width > 238 && size > 14) eqEl.style.fontSize = (--size) + 'px';
+      $$(pages[0], 'cover.image_caption').forEach(e => { e.textContent = `${C['guide.lang'] === 'ID' ? 'Ilustrasi ELIOS' : 'ELIOS illustration'} · ${C['physics.equation_name']}`; });
+      continue;
+    }
+    const { width: w, height: h } = slot.getBoundingClientRect(); // no photo and no formula (old issue): soft scene
     slot.insertAdjacentHTML('beforeend', `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#CFFAFE"/><stop offset="0.75" stop-color="#F1F5F9"/></linearGradient></defs><rect width="${w}" height="${h}" fill="url(#g)"/><circle cx="${w * 0.75}" cy="${h * 0.3}" r="${h * 0.13}" fill="#FBBF24" fill-opacity="0.8"/><ellipse cx="${w * 0.5}" cy="${h * 1.05}" rx="${w * 0.7}" ry="${h * 0.3}" fill="#4ADE80"/><ellipse cx="${w * 0.1}" cy="${h}" rx="${w * 0.3}" ry="${h * 0.22}" fill="#15803D"/></svg>`);
   }
   const eq = { ok: true };

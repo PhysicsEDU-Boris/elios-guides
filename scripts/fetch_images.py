@@ -119,6 +119,33 @@ def drop(folder, key):
         p.write_text(json.dumps(d, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
+def commons_cover(folder):
+    """Last resort for a missing cover: the first Commons photo that passes the same checks."""
+    import find_images
+    en = json.loads((folder / "en.json").read_text(encoding="utf-8"))
+    try:
+        found = find_images.candidates(en)
+    except Exception as e:  # network or API trouble: the generated cover still works
+        print(f"cover.image: Commons search failed: {e}")
+        return
+    for img in found:
+        try:
+            nums = process(fetch(original_url(img["source_url"])), folder, "cover.image", "cover.jpg")
+        except Exception as e:
+            (folder / "cover.jpg").unlink(missing_ok=True)
+            print(f"cover.image: Commons candidate rejected: {e}")
+            continue
+        for lang, label in (("en", "Archive photo"), ("id", "Foto arsip")):
+            p = folder / f"{lang}.json"
+            d = json.loads(p.read_text(encoding="utf-8"))
+            d["_images"] = dict(d.get("_images") or {}, **{"cover.image": img})
+            d["cover.image_caption"] = f"{label} · {d.get('cover.place', '')}"[:40]
+            p.write_text(json.dumps(d, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        print(f"cover.image: Commons archive photo saved {nums} {img['source_url']}")
+        return
+    print("cover.image: no Commons photo; the PDF gets a generated ELIOS cover and the app its topic illustration")
+
+
 def main(folder, drop_failed=False):
     folder = Path(folder)
     images = json.loads((folder / "en.json").read_text(encoding="utf-8")).get("_images") or {}
@@ -143,6 +170,8 @@ def main(folder, drop_failed=False):
             if drop_failed:
                 drop(folder, key)
                 print(f"{key}: no usable photo, set to null (photo = null; the app shows the topic illustration)")
+    if drop_failed and not json.loads((folder / "en.json").read_text(encoding="utf-8")).get("_images", {}).get("cover.image"):
+        commons_cover(folder)
     return 1 if failed and not drop_failed else 0
 
 
