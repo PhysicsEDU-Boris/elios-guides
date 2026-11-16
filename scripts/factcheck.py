@@ -1,4 +1,4 @@
-"""Produce check.json with one non-streaming, structured Gemini request."""
+"""Produce check.json with one non-streaming, structured request (Gemini, or any OpenAI-compatible fallback)."""
 import json
 import os
 import re
@@ -24,7 +24,19 @@ quizzes and bilingual agreement. Each entry has item, claim, source (source numb
 'bilingual'), pass (boolean), and note. Never claim verification from an inaccessible source."""
 
 
-def factcheck(folder, key, model, evidence_path, root=ROOT):
+def post(url, headers, body, label):
+    for attempt in range(2):
+        response = requests.post(url, headers=headers, json=body, timeout=120)
+        if attempt == 0 and (response.status_code == 429 or response.status_code >= 500):
+            time.sleep(30)
+            continue
+        break
+    if response.status_code >= 400:
+        raise RuntimeError(f"{label} HTTP {response.status_code}")
+    return response
+
+
+def factcheck(folder, key, model, evidence_path, root=ROOT, base_url=None):
     folder = Path(folder)
     report = folder / "check.json"
     report.unlink(missing_ok=True)  # a failed request must never leave an earlier passing report
@@ -35,30 +47,39 @@ def factcheck(folder, key, model, evidence_path, root=ROOT):
     payload["calc.py"] = (folder / "calc.py").read_text(encoding="utf-8")
     payload["evidence"] = json.loads(Path(evidence_path).read_text(encoding="utf-8"))
     payload["Indonesian labels"] = (Path(root) / "GEMINI.md").read_text(encoding="utf-8").split("## id.json", 1)[1]
-    body = {"systemInstruction": {"parts": [{"text": PROMPT}]},
-            "contents": [{"role": "user", "parts": [{"text": json.dumps(payload, ensure_ascii=False)}]}],
-            "generationConfig": {"responseMimeType": "application/json", "responseJsonSchema": SCHEMA,
-                                 "maxOutputTokens": 8192}}
-    for attempt in range(2):
-        response = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
-                                 headers={"x-goog-api-key": key}, json=body, timeout=120)
-        if attempt == 0 and (response.status_code == 429 or response.status_code >= 500):
-            time.sleep(30)
-            continue
-        break
-    if response.status_code >= 400:
-        raise RuntimeError(f"Gemini HTTP {response.status_code}")
-    candidates = response.json().get("candidates") or []
-    if not candidates or candidates[0].get("finishReason") != "STOP":
-        raise ValueError("Gemini did not return a complete report")
-    parts = candidates[0].get("content", {}).get("parts", [])
-    items = json.loads("".join(p.get("text", "") for p in parts if not p.get("thought")))
+    user = json.dumps(payload, ensure_ascii=False)
+    if base_url:  # OpenAI-compatible fallback (Groq, OpenRouter, DeepSeek...): JSON mode needs an object
+        if not base_url.startswith("https://"):
+            raise ValueError("fallback base URL must be https")
+        label = "Fallback"
+        response = post(f"{base_url.rstrip('/')}/chat/completions", {"Authorization": f"Bearer {key}"},
+                        {"model": model, "max_tokens": 8192, "response_format": {"type": "json_object"},
+                         "messages": [{"role": "system", "content": PROMPT + ' Reply as {"items": [...]}.'},
+                                      {"role": "user", "content": user}]}, label)
+        choices = response.json().get("choices") or []
+        if not choices or choices[0].get("finish_reason") != "stop":
+            raise ValueError(f"{label} did not return a complete report")
+        items = json.loads(choices[0].get("message", {}).get("content") or "null")
+        items = items.get("items") if isinstance(items, dict) else items
+    else:
+        label = "Gemini"
+        response = post(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+                        {"x-goog-api-key": key},
+                        {"systemInstruction": {"parts": [{"text": PROMPT}]},
+                         "contents": [{"role": "user", "parts": [{"text": user}]}],
+                         "generationConfig": {"responseMimeType": "application/json",
+                                              "responseJsonSchema": SCHEMA, "maxOutputTokens": 8192}}, label)
+        candidates = response.json().get("candidates") or []
+        if not candidates or candidates[0].get("finishReason") != "STOP":
+            raise ValueError(f"{label} did not return a complete report")
+        parts = candidates[0].get("content", {}).get("parts", [])
+        items = json.loads("".join(p.get("text", "") for p in parts if not p.get("thought")))
     if not isinstance(items, list) or not items or any(
         not isinstance(it, dict) or type(it.get("pass")) is not bool or
         any(not isinstance(it.get(k), str) for k in FIELDS if k != "pass") or
         not it["item"].strip() or not it["claim"].strip() for it in items
     ):
-        raise ValueError("Gemini returned an invalid fact-check report")
+        raise ValueError(f"{label} returned an invalid fact-check report")
     with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", dir=folder, delete=False) as stream:
         stream.write(json.dumps(items, ensure_ascii=False, indent=2) + "\n")
     Path(stream.name).replace(report)
@@ -68,6 +89,11 @@ def factcheck(folder, key, model, evidence_path, root=ROOT):
 if __name__ == "__main__":
     if len(sys.argv) != 3:
         sys.exit("usage: factcheck.py ISSUE_FOLDER EVIDENCE_JSON")
-    items = factcheck(sys.argv[1], os.environ.get("GEMINI_API_KEY"),
-                      os.environ.get("FACTCHECK_MODEL", "gemini-3.5-flash-lite"), sys.argv[2])
+    env = os.environ.get
+    if env("FALLBACK_BASE_URL"):  # set only by the workflow's fallback step
+        items = factcheck(sys.argv[1], env("FALLBACK_API_KEY"), env("FALLBACK_MODEL", ""), sys.argv[2],
+                          base_url=env("FALLBACK_BASE_URL"))
+    else:
+        items = factcheck(sys.argv[1], env("GEMINI_API_KEY"), env("FACTCHECK_MODEL", "gemini-3.5-flash-lite"),
+                          sys.argv[2])
     print(f"Fact-checked {len(items)} claims; {sum(it['pass'] is False for it in items)} failed.")

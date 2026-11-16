@@ -73,3 +73,19 @@ def test_http_failure_does_not_print_the_api_key(setup, monkeypatch):
     with pytest.raises(RuntimeError) as error:
         factcheck.factcheck(folder, KEY, "gemini-3.5-flash-lite", evidence, root)
     assert "403" in str(error.value) and KEY not in str(error.value)
+
+
+def test_fallback_provider_uses_bearer_json_mode_and_unwraps_items(setup, monkeypatch):
+    folder, evidence, root = setup
+
+    def post(url, headers, json, timeout):
+        assert url == "https://api.example.com/v1/chat/completions"
+        assert headers == {"Authorization": f"Bearer {KEY}"} and json["response_format"] == {"type": "json_object"}
+        content = {"items": [ITEM]}
+        return type("R", (), {"status_code": 200, "json": lambda self: {"choices": [
+            {"finish_reason": "stop", "message": {"content": __import__("json").dumps(content)}}]}})()
+
+    monkeypatch.setattr(factcheck.requests, "post", post)
+    assert factcheck.factcheck(folder, KEY, "m", evidence, root, base_url="https://api.example.com/v1/") == [ITEM]
+    with pytest.raises(ValueError, match="https"):
+        factcheck.factcheck(folder, KEY, "m", evidence, root, base_url="http://api.example.com")
