@@ -1,0 +1,23 @@
+[
+  {
+    "item": "Source relevance",
+    "claim": "Sources 1, 2, and 3 provide evidence for air pollution, PM2.5, and Jakarta context.",
+    "source": "1, 2, 3",
+    "pass": false,
+    "note": "Fetched source data does not mention Jakarta, Indonesia, PM2.5, or air pollution levels; they focus on general heat and weather."
+  },
+  {
+    "item": "PM2.5 claim",
+    "claim": "PM2.5 particles are fine aerosols smaller than 2.5 micrometres.",
+    "source": "2",
+    "pass": false,
+    "note": "Source 2 does not contain any mention of PM2.5 or its size definition."
+  },
+  {
+    "item": "Physics calculation",
+    "claim": "C = 50 µg/m³ for a mass of 5 mg in 100 m³.",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculation matches the provided example (5 mg = 5000 µg; 5000 µg / 100 m³ = 50 µg/m³)."
+  }
+]
