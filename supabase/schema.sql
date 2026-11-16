@@ -42,3 +42,52 @@ grant execute on function public.question_stats(int, int) to authenticated, serv
 
 -- Dashboard access: add each person's login email, e.g.
 --   insert into public.dashboard_users values ('you@example.com');
+
+-- Overview numbers for the dashboard: guide reads, quiz/mini-lab stops, streaks, and scan types over the last
+-- p_days. Counts only, no student identifiers. Streak = longest run of guide days a student finished a stop on
+-- (a gap of up to 3 days is allowed so weekends without a guide do not break it). Scan device null = saved
+-- before ELIOS 3 existed (counted as "unknown", never guessed). The robot "which bin" numbers assume the first
+-- quiz question of an ELIOS 3 scan is the bin question.
+create or replace function public.insights_summary(p_days int default 30)
+returns jsonb language plpgsql security definer set search_path = public as $$
+declare out jsonb;
+begin
+  if coalesce(auth.role(), '') <> 'service_role'
+     and not exists (select 1 from public.dashboard_users u where lower(u.email) = lower(coalesce(auth.jwt() ->> 'email', ''))) then
+    raise exception 'not allowed' using errcode = '42501';
+  end if;
+  with gp as (select * from public.guide_progress where updated_at >= now() - make_interval(days => p_days)),
+  active as (select owner_id, date from gp where stops <> '{}'::jsonb),
+  marked as (select owner_id, date, case when date - lag(date) over (partition by owner_id order by date) <= 3 then 0 else 1 end as brk from active),
+  runs as (select owner_id, sum(brk) over (partition by owner_id order by date) as g from marked),
+  best as (select owner_id, max(c) as b from (select owner_id, g, count(*) as c from runs group by 1, 2) y group by 1),
+  sc as (select data from public.scan_history where updated_at >= now() - make_interval(days => p_days)),
+  robot as (select data -> 'questions' -> 0 ->> 'isCorrect' as ok, data -> 'questions' -> 0 ->> 'rightAnswer' as right_a, data -> 'questions' -> 0 ->> 'yourAnswer' as your_a
+            from sc where coalesce(data ->> 'kind', 'scan') = 'scan' and data ->> 'device' = 'elios' and jsonb_array_length(coalesce(data -> 'questions', '[]'::jsonb)) > 0)
+  select jsonb_build_object(
+    'students', (select count(distinct owner_id) from gp),
+    'stops', (select jsonb_build_object('days', count(*), 'story', count(*) filter (where stops ? 'story'), 'physics', count(*) filter (where stops ? 'physics'),
+                'quiz', count(*) filter (where stops ? 'quiz'), 'lab', count(*) filter (where stops ? 'lab')) from gp),
+    'per_day', (select coalesce(jsonb_agg(jsonb_build_object('date', date, 'story', story, 'physics', physics, 'quiz', quiz, 'lab', lab) order by date), '[]'::jsonb)
+                from (select date, count(*) filter (where stops ? 'story') as story, count(*) filter (where stops ? 'physics') as physics,
+                      count(*) filter (where stops ? 'quiz') as quiz, count(*) filter (where stops ? 'lab') as lab from gp group by date) d),
+    'streaks', jsonb_build_object(
+      'none', (select count(distinct owner_id) from gp where owner_id not in (select owner_id from best)),
+      'd1', (select count(*) from best where b = 1), 'd2_3', (select count(*) from best where b between 2 and 3),
+      'd4_6', (select count(*) from best where b between 4 and 6), 'd7', (select count(*) from best where b >= 7)),
+    'scans', jsonb_build_object(
+      'total', (select count(*) from sc),
+      'phone_quiz', (select count(*) from sc where coalesce(data ->> 'kind', 'scan') = 'scan' and data ->> 'device' = 'phone'),
+      'robot', (select count(*) from sc where coalesce(data ->> 'kind', 'scan') = 'scan' and data ->> 'device' = 'elios'),
+      'contribute', (select count(*) from sc where data ->> 'kind' = 'contribution'),
+      'unknown_device', (select count(*) from sc where coalesce(data ->> 'kind', 'scan') = 'scan' and data ->> 'device' is null),
+      'bins', (select coalesce(jsonb_object_agg(k, n), '{}'::jsonb) from (select coalesce(data ->> 'category', 'unknown') as k, count(*) as n from sc group by 1) b2),
+      'robot_first', jsonb_build_object('right', (select count(*) from robot where ok = 'true'), 'wrong', (select count(*) from robot where ok = 'false'),
+        'top_wrong', (select coalesce(jsonb_agg(jsonb_build_object('right', right_a, 'chosen', your_a, 'n', n)), '[]'::jsonb)
+                      from (select right_a, your_a, count(*) as n from robot where ok = 'false' group by 1, 2 order by 3 desc limit 5) t))))
+  into out;
+  return out;
+end $$;
+
+revoke all on function public.insights_summary(int) from public, anon;
+grant execute on function public.insights_summary(int) to authenticated, service_role;

@@ -1,4 +1,4 @@
-// ELIOS Question Insights: reads question_stats() from Supabase (allow-listed login) and the published guides.
+// ELIOS Insights: reads question_stats() and insights_summary() from Supabase (allow-listed login) and the published guides.
 // Guide text is always inserted as text, never as HTML.
 const MIN_CONCEPT = 60; // answers per concept before the remedial guide picks it (same as scripts/weak_questions.py)
 const LETTERS = ["a", "b", "c", "d"];
@@ -62,7 +62,7 @@ function nextRemedialDays(n, from = new Date()) {
   return out;
 }
 
-const state = { days: 30, filter: "all", rows: [], docs: {}, client: null };
+const state = { tab: "overview", days: 30, filter: "all", rows: [], docs: {}, client: null };
 
 function show(view) {
   for (const id of ["login", "sent", "denied", "app"]) $(id).hidden = id !== view;
@@ -75,36 +75,69 @@ function applyTheme(t) {
   try { localStorage.setItem("elios-theme", t); } catch { /* private window: keep it for this visit only */ }
 }
 
-function renderHero(concepts, totals) {
-  const hero = $("hero"); hero.replaceChildren();
-  blob(hero, -120, -140, 200, "--sky", 0.5); blob(hero, 740, 150, 170, "--sun", 0.55); blob(hero, 610, -90, 120, "--green", 0.4);
-  const top = concepts[0];
-  const ready = top && top.attempts >= MIN_CONCEPT;
-  const sub = top
-    ? `${pct(top.rate)} of answers were wrong. ` + (ready ? "A remedial guide is ready for the next remedial day." : `${MIN_CONCEPT - top.attempts} more answers unlock a remedial guide.`)
-    : `${pct(totals.wrong / totals.attempts)} of the first-try answers were wrong.`;
-  const fillPct = top ? Math.min(1, top.attempts / MIN_CONCEPT) : 0;
-  hero.append(
-    h("div", { class: "text" },
-      h("div", { class: "overline" }, "Mission control"),
-      h("h2", { class: "headline" }, top ? `${top.name} is the toughest topic right now` : "Here is how students are doing"),
-      h("p", { class: "tx2" }, sub),
-      top ? h("div", { class: "xp" }, h("div", { class: "track" }, h("div", { class: "fill", style: `width:${fillPct * 100}%` })),
-        h("span", {}, `${Math.min(top.attempts, MIN_CONCEPT)} / ${MIN_CONCEPT} answers${ready ? ": unlocked!" : ""}`)) : null,
-      h("div", { class: "actions" },
-        h("button", { class: "btn", props: { type: "button", onclick: () => $("qhead").scrollIntoView() } }, "See the questions"),
-        h("button", { class: "btn secondary", props: { type: "button", onclick: () => { $("how").hidden = !$("how").hidden; } } }, "How it works"))),
-    h("div", { class: "mascot" }, h("div", { class: "bubble" }, "Let’s fix this together!"), img("bulb")));
+const num = n => Number(n || 0).toLocaleString("en");
+const share = (a, b) => (b ? Math.round((a / b) * 100) : 0);
+function card(id, title, sub, ...kids) {
+  const e = $(id); e.replaceChildren(h("div", {}, h("h2", { class: "subhead" }, title), sub ? h("p", { class: "sub" }, sub) : null), ...kids.flat().filter(Boolean));
+}
+function rowbar(name, value, right, cls) {
+  return h("div", { class: "rowbar" }, h("div", { class: "hd" }, h("span", { class: "n" }, name), h("span", { class: "v" }, right)),
+    h("div", { class: "split" }, h("i", { class: cls || "ok", style: `width:${Math.max(0, Math.min(100, value))}%` })));
+}
+const waiting = (id, title, sub) => card(id, title, sub, chip("sun", "Waiting for the app to send this"), h("div", { class: "wait" }, h("div", { class: "big" }, "Not collected yet")));
+
+function renderKpis(sum, topics) {
+  const att = topics.reduce((t, c) => t + c.attempts, 0), bad = topics.reduce((t, c) => t + c.wrong, 0);
+  const defs = [["green", "Active students", num(sum.students)], ["sky", "Quiz accuracy", att ? `${share(att - bad, att)}%` : "-"],
+    ["sun", "7+ day streaks", num(sum.streaks.d7)], ["green", "Guides read", num(sum.stops.story)], ["coral", "Mini-lab runs", num(sum.stops.lab)], ["sky", "Scans", num(sum.scans.total)]];
+  $("kpis").replaceChildren(...defs.map(([t, l, v]) => h("div", { class: `kpi ${t}` }, h("span", { class: "overline" }, l), h("div", { class: "num" }, v))));
 }
 
-function renderTiles(concepts, totals, count) {
-  const top = concepts[0];
-  const defs = [["sky", "Answers", totals.attempts.toLocaleString("en"), "first tries only", "quest"],
-    ["green", "Questions", String(count), "with enough answers", "medal"],
-    ["sun", "Right first try", pct(1 - totals.wrong / totals.attempts), "of all answers", "flame"],
-    ["coral", "Toughest", top ? pct(top.rate) : "-", top ? `wrong: ${top.name}` : "no concept yet", "mascot-binb"]];
-  $("tiles").replaceChildren(...defs.map(([t, label, num, cap, icon]) => h("div", { class: `tile ${t}` },
-    h("div", { class: "top" }, h("span", { class: "overline" }, label), img(icon)), h("div", { class: "num" }, num), h("div", { class: "cap" }, cap))));
+function renderTopics(topics) {
+  card("topics", "Right and wrong answers by topic", "First try on each guide question, grouped by physics topic",
+    h("div", { style: "display:flex;gap:12px" }, chip("green", "Right"), chip("coral", "Wrong")),
+    topics.length ? topics.map(c => {
+      const ok = share(c.attempts - c.wrong, c.attempts);
+      return h("div", { class: "rowbar" }, h("div", { class: "hd" }, h("span", { class: "n" }, c.name), h("span", { class: "v" }, `${ok}% right · ${100 - ok}% wrong · ${c.attempts} answers`)),
+        h("div", { class: "split" }, h("i", { class: "ok", style: `width:${ok}%` }), h("i", { class: "bad", style: `width:${100 - ok}%` })));
+    }) : h("p", { class: "muted" }, "No quiz answers in this period yet."));
+}
+
+function renderStreaks(sum) {
+  const s = sum.streaks, tot = s.none + s.d1 + s.d2_3 + s.d4_6 + s.d7 || 1;
+  const rows = [["No streak", s.none], ["1 day", s.d1], ["2–3 days", s.d2_3], ["4–6 days", s.d4_6], ["7+ days", s.d7]];
+  card("streaks", "Streaks: how loyal are students", "Each student's longest run of guide days (a weekend gap does not break it)",
+    rows.map(([n, v]) => rowbar(n, share(v, tot), `${v} students`, "ok")),
+    h("div", { class: "note" }, `${share(s.d4_6 + s.d7, tot)}% of students kept a streak of 4 days or more.`));
+}
+
+function renderLearning(sum) {
+  const days = sum.per_day, top = Math.max(1, ...days.map(d => d.story + d.physics + d.quiz + d.lab));
+  const st = sum.stops, d = st.days || 1;
+  card("learning", "Learning activity", "Guide reads, quiz and mini-lab per day",
+    days.length ? h("div", { class: "bars" }, days.map(x => h("div", { class: "col1", attrs: { title: `${x.date}: story ${x.story}, physics ${x.physics}, quiz ${x.quiz}, mini-lab ${x.lab}` } },
+      h("i", { class: "s", style: `height:${(x.quiz + x.lab) / top * 100}%` }), h("i", { class: "g", style: `height:${(x.story + x.physics) / top * 100}%` })))) : h("p", { class: "muted" }, "No guide activity in this period yet."),
+    h("div", { style: "display:flex;gap:12px" }, chip("green", "Story and physics reads"), chip("sky", "Quiz and mini-lab")),
+    h("div", { class: "mini" }, [["Story read", st.story], ["Physics read", st.physics], ["Guide quiz done", st.quiz], ["Mini-lab passed", st.lab]]
+      .map(([n, v]) => h("div", {}, n, h("b", {}, `${share(v, d)}%`)))));
+}
+
+function renderScans(sum) {
+  const s = sum.scans, labels = { recyclable: "Recyclable", organic: "Organic", residu: "Residue", b3: "B3 hazardous" }, total = Object.values(s.bins).reduce((a, b) => a + b, 0) || 1;
+  card("scans", "Scan types", "What students use the camera for",
+    h("div", { class: "three" }, [["sky", "Scan and quiz (phone)", s.phone_quiz], ["green", "Scan with robot (ELIOS 3)", s.robot], ["sun", "Scan to contribute", s.contribute]]
+      .map(([t, l, v]) => h("div", { class: `kpi ${t}` }, h("span", { class: "overline" }, l), h("div", { class: "num" }, num(v))))),
+    s.unknown_device ? h("p", { class: "sub" }, `${num(s.unknown_device)} older scans were saved before the device was recorded, so they are not counted above.`) : null,
+    h("p", { class: "bold" }, "Bin info: where scanned items belong"),
+    Object.entries(s.bins).sort((a, b) => b[1] - a[1]).map(([k, v]) => rowbar(labels[k] || k, share(v, total), `${share(v, total)}% · ${v}`, "ok")));
+}
+
+function renderRobot(sum) {
+  const r = sum.scans.robot_first, n = r.right + r.wrong;
+  card("robot", "Robot scan: first question", "First quiz question after an ELIOS 3 scan",
+    chip("sun", "Not the exact bin question yet"),
+    n ? h("div", { class: "two" }, [["green", "Right", r.right], ["coral", "Wrong", r.wrong]].map(([t, l, v]) => h("div", { class: `kpi ${t}` }, h("span", { class: "overline" }, l), h("div", { class: "num" }, `${share(v, n)}%`)))) : h("p", { class: "muted" }, "No robot scans with a quiz yet."),
+    h("p", { class: "sub" }, "The app does not mark which question is the “which bin?” one, so this is the first question of each robot scan. Exact bin right/wrong needs a small app update."));
 }
 
 function renderFilters(rows) {
@@ -189,26 +222,34 @@ async function loadDocs(rows) {
   return docs;
 }
 
-const minValue = () => Number($("empty").hidden ? $("min").value : $("min2").value) || 20;
+const minValue = () => Number($("min").value) || 20;
+
+function setTab(tab) {
+  state.tab = tab;
+  for (const b of $("tabs").querySelectorAll("button")) b.setAttribute("aria-pressed", String(b.dataset.tab === tab));
+  for (const e of document.querySelectorAll("[data-tabs]")) e.classList.toggle("hidden-tab", !e.dataset.tabs.split(" ").includes(tab));
+}
 
 async function refresh() {
   const client = state.client;
   $("msg").textContent = "Loading...";
-  const { data, error } = await client.rpc("question_stats", { p_days: state.days, p_min: minValue() });
+  const [qs, all, sm] = await Promise.all([client.rpc("question_stats", { p_days: state.days, p_min: minValue() }),
+    client.rpc("question_stats", { p_days: state.days, p_min: 1 }), client.rpc("insights_summary", { p_days: state.days })]);
+  const error = qs.error || all.error || sm.error;
   if (error) {
     if (error.code === "42501") { show("denied"); return; }
     $("msg").textContent = `Could not load: ${error.message}`; return;
   }
   show("app");
-  state.rows = data; state.docs = await loadDocs(data);
-  const usable = data.filter(r => state.docs[r.guide_date] && questionOf(state.docs[r.guide_date], r.question_id));
-  $("msg").textContent = `${data.length} question(s) with at least ${minValue()} answers.`;
-  const empty = usable.length === 0;
-  $("empty").hidden = !empty; $("content").hidden = empty;
-  if (empty) return;
-  const concepts = groupConcepts(data, state.docs);
-  const totals = usable.reduce((t, r) => ({ attempts: t.attempts + r.attempts, wrong: t.wrong + r.wrong }), { attempts: 0, wrong: 0 });
-  renderHero(concepts, totals); renderTiles(concepts, totals, usable.length); renderFilters(usable); renderQuestions(); renderConcepts(concepts); renderCalendar(concepts);
+  state.rows = qs.data; state.docs = await loadDocs(all.data);
+  const usable = qs.data.filter(r => state.docs[r.guide_date] && questionOf(state.docs[r.guide_date], r.question_id));
+  $("msg").textContent = `Last ${state.days} days · ${sm.data.students} student(s) active.`;
+  const topics = groupConcepts(all.data, state.docs), concepts = groupConcepts(qs.data, state.docs);
+  renderKpis(sm.data, topics); renderTopics(topics); renderStreaks(sm.data); renderLearning(sm.data);
+  waiting("clovers", "Clovers earned", "Learning clovers per student"); waiting("videos", "Videos watched", "Watched vs started");
+  renderScans(sm.data); renderRobot(sm.data);
+  renderFilters(usable); renderQuestions(); renderConcepts(concepts); renderCalendar(concepts);
+  setTab(state.tab);
 }
 
 async function start() {
@@ -232,8 +273,8 @@ async function start() {
     for (const x of $("period").querySelectorAll("button")) x.setAttribute("aria-pressed", String(x === b));
     refresh();
   };
-  for (const id of ["min", "min2"]) $(id).onchange = e => { $("min").value = $("min2").value = e.target.value; refresh(); };
-  $("refresh").onclick = refresh;
+  $("min").onchange = refresh;
+  for (const b of $("tabs").querySelectorAll("button")) b.onclick = () => setTab(b.dataset.tab);
   const { data: { session } } = await client.auth.getSession();
   if (!session) { show("login"); return; }
   const who = (session.user && session.user.email) || "there";
