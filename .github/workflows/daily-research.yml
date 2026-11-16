@@ -53,8 +53,8 @@ jobs:
           echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
           if [ "$RESUME" = "true" ]; then
             git fetch --depth=1 origin "$BRANCH"
-            if git cat-file -e "FETCH_HEAD:issues/$DATE/figma.json" 2>/dev/null; then
-              echo "::error::Already filled in Figma; use resync for edits to this issue."
+            if git ls-tree -r --name-only FETCH_HEAD -- "issues/$DATE" | grep -q '\.pdf$'; then
+              echo "::error::Already exported; edit en.json/id.json on the branch and resync re-renders it."
               exit 1
             fi
             echo "resume=true" >> "$GITHUB_OUTPUT"
@@ -350,7 +350,7 @@ jobs:
           PREFIX=""
           if [ "$DRY_RUN" = "true" ]; then PREFIX="DRY RUN · "; fi
           if [ "$code" -eq 0 ]; then
-            echo "title=${PREFIX}ELIOS Guide $DATE · waiting for Figma" >> "$GITHUB_OUTPUT"
+            echo "title=${PREFIX}ELIOS Guide $DATE · rendering" >> "$GITHUB_OUTPUT"
           else
             echo "title=${PREFIX}ELIOS Guide $DATE · NEEDS FIX" >> "$GITHUB_OUTPUT"
           fi
@@ -369,9 +369,9 @@ jobs:
             echo '```'
             echo
             if [ "$code" -eq 0 ]; then
-              echo "Next: the 05:00 WIB Claude task fills Figma and pushes figma.json, which starts the PDF export."
+              echo "Next: the export job renders both PDFs and covers, then publishes."
             else
-              echo "Fix the files on this branch or run daily-research with this date and resume=true. The Claude task skips NEEDS FIX PRs."
+              echo "Fix the files on this branch or run daily-research with this date and resume=true. Nothing is rendered or published for a NEEDS FIX PR."
             fi
           } > "$RUNNER_TEMP/body.md"
 
@@ -392,3 +392,16 @@ jobs:
         run: |
           echo "::error::Validation failed or research did not finish; see the NEEDS FIX PR (if files were written) or the Validate step."
           exit 1
+
+  export:
+    # Render the PDFs and covers and publish. Skipped for dry runs and when validation failed.
+    needs: [prep, research]
+    if: needs.research.result == 'success' && !inputs.dry_run
+    permissions:
+      contents: write
+      pull-requests: write
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/export.yml
+    with:
+      date: ${{ needs.prep.outputs.date }}

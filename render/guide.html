@@ -1,0 +1,193 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.hero{position:relative;height:284px;flex:none;border-radius:28px;background:var(--green-tint);overflow:hidden}
+.hero>img,.hero>.abs{position:absolute}
+.flexc{display:flex;align-items:center;justify-content:center}
+.polaroid{background:var(--paper);display:flex;flex-direction:column;gap:7px;padding:10px 10px 12px;border-radius:10px;box-shadow:0 8px 18px rgba(15,23,41,.22);overflow:hidden;transform:rotate(4deg)}
+.slot{width:262px;height:178px;border-radius:12px;background:var(--raised);border:1.5px dashed var(--rule);overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
+.slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sticker{padding:5px 10px;border-radius:999px}
+.chips{display:flex;gap:6px}
+.chips .pill{padding:4px 10px;font-weight:600;font-size:9px;letter-spacing:.9px}
+.title{font-weight:900;font-size:40px;line-height:42px;letter-spacing:-.8px}
+.quest{display:flex;gap:10px}
+.stop{flex:1 0 0;min-width:1px;display:flex;flex-direction:column;gap:6px;padding:12px;border-radius:16px;overflow:hidden}
+.stop-top{display:flex;align-items:center;justify-content:space-between}
+.funfact{display:flex;gap:12px;align-items:center;padding:10px 14px 10px 12px;border-radius:16px;background:var(--amber-tint)}
+.funfact .txt{flex:1 0 0;min-width:1px;display:flex;flex-direction:column;gap:2px}
+
+.sec{display:flex;align-items:center;justify-content:space-between}
+.sec .pill{padding:4px 10px}
+.t-head{font-weight:700;font-size:22px;line-height:28px}
+.fig{display:flex;flex-direction:column;gap:5px}
+.fig .slot{width:100%;height:160px;border-radius:16px}
+.stats{display:flex;gap:10px;align-items:stretch}
+.stat{flex:1 0 0;min-width:1px;display:flex;flex-direction:column;gap:2px;padding:10px 12px;border-radius:16px;overflow:hidden}
+.stat b{font-weight:900;font-size:26px;line-height:28px;letter-spacing:-.52px}
+.stat span{font-size:10px;line-height:14px}
+.cols{display:flex;gap:18px;font-size:13px;line-height:19px}
+.cols p{flex:1 0 0;min-width:1px}
+.tl{display:flex;gap:10px}
+.tl>div{flex:1 0 0;min-width:1px;display:flex;flex-direction:column;gap:4px}
+.tl i{display:block;height:4px;border-radius:2px}
+.card{display:flex;flex-direction:column;overflow:hidden}
+.code{font-family:'Google Sans Code',monospace}
+.eqrow,.two{display:flex;gap:10px;align-items:stretch}
+.eq{flex:1 0 0;min-width:1px;background:var(--green-tint);border-radius:20px;padding:10px 14px;gap:5px}
+.legend{background:var(--paper);border-radius:12px;padding:6px 10px;gap:1px}
+.lrow{display:flex;gap:8px;align-items:center}
+.lrow .sym{width:28px;flex:none;font-weight:600;font-size:12px;line-height:16px;color:var(--green)}
+.lrow .mean{flex:1 0 0;min-width:1px;font-size:10px;line-height:14px}
+.lrow .unit{width:96px;flex:none;text-align:right;font-size:9px;line-height:12px;color:var(--secondary)}
+.dia{width:170px;flex:none;background:var(--raised);border:1.5px dashed var(--rule);border-radius:20px;align-items:center;justify-content:center;position:relative}
+.dia img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ex{flex:1 0 0;min-width:1px;background:var(--amber-tint);border-radius:16px;padding:10px 12px;gap:4px}
+.ex .code{font-size:9.5px;line-height:12px}
+.tbl{flex:1 0 0;min-width:1px;border:1px solid var(--rule);border-radius:16px;padding-bottom:6px;font-size:10px;line-height:14px}
+.tr{display:flex;gap:6px;align-items:center;padding:6px 10px}
+.tr span{flex:1 0 0;min-width:1px}
+.tr.h{background:var(--cyan-tint);color:var(--cyan);font-weight:600}
+.tr.alt{background:#f8fafc}
+.graph{flex:1 0 0;min-width:1px;background:#f8fafc;border-radius:16px;padding:10px 12px;gap:6px}
+.bar{display:flex;gap:8px;align-items:center}
+.bar .lab{width:70px;flex:none;font-weight:600;font-size:10px;line-height:14px}
+.bar i{display:block;height:12px;border-radius:6px;flex:none}
+.bar .val{font-weight:600;font-size:10px;line-height:14px;color:var(--secondary);white-space:nowrap}
+.tip{width:176px;flex:none;background:var(--cyan-tint);border-radius:16px;padding:8px 12px 8px 10px;gap:4px}
+.qcard{background:var(--paper);border:1px solid var(--rule);border-radius:16px;padding:7px 10px;gap:6px;flex:none}
+.qrow{display:flex;gap:8px;align-items:center}
+.qn{background:var(--ink);color:var(--paper);padding:3px 7px;border-radius:999px;font-weight:700;font-size:10px;line-height:12px;letter-spacing:.2px}
+.qq{flex:1 0 0;min-width:1px;font-weight:600;font-size:12.5px;line-height:17px}
+.opts{display:flex;gap:6px}
+.opt{flex:1 0 0;min-width:1px;display:flex;gap:6px;align-items:center;background:#f8fafc;border-radius:10px;padding:5px 8px 5px 5px;overflow:hidden;font-size:10px;line-height:14px}
+.tile{width:18px;height:18px;flex:none;border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:10px;line-height:12px;color:var(--paper)}
+.minilab{flex:1 0 0;min-width:1px;background:var(--green-tint);border-radius:20px;padding:9px 12px;gap:4px}
+.step{display:flex;gap:7px;align-items:flex-start;font-size:10px;line-height:14px}
+.cb{width:12px;height:12px;flex:none;border:1.5px solid var(--green);border-radius:3px;background:var(--paper)}
+.badge{width:170px;flex:none;background:var(--amber-tint);border-radius:20px;padding:8px 12px;gap:3px;align-items:center;text-align:center}
+.xpbar{width:100%;height:8px;border-radius:999px;background:var(--paper);display:flex}
+.xpbar i{display:block;height:8px;border-radius:4px;background:var(--sun);width:6px}
+.gloss{display:flex;gap:8px}
+.term{flex:1 0 0;min-width:1px;background:#f8fafc;border-radius:12px;padding:7px 10px;gap:2px}
+.term .tr2{display:flex;gap:5px;align-items:center;font-weight:600;font-size:10px;line-height:14px}
+.term .tr2 i{width:7px;height:7px;border-radius:50%;flex:none}
+.src{display:flex;flex-direction:column;gap:2px}
+.src p{font-size:8px;line-height:11px;color:var(--secondary)}
+.dot.done{background:var(--green)}
+[hidden-empty]{display:none!important}
+</style></head><body>
+<section class="page" id="p1">
+ <div class="header">
+  <div class="brand"><img class="art" src="assets/logo.svg" width="30" height="30" alt="">
+   <div class="brand-text"><span class="t-label" style="color:var(--green)" data-key="brand">ELIOS GUIDES</span><span class="t-caption" data-key="guide.stop_label">Cover</span></div></div>
+  <div class="badges">
+   <span class="pill chip-raised" data-key="guide.issue_date">#00 · 1 JAN 2026</span>
+   <span class="pill chip-ink" data-key="guide.lang">EN</span>
+   <span class="pill chip-sun"><img class="art" src="assets/flame.svg" width="10.29" height="12" alt=""><span data-key="guide.xp">+00 XP</span></span>
+  </div>
+ </div>
+ <div class="body">
+  <div class="hero">
+   <img src="assets/blob1.svg" style="left:-40px;top:-60px;width:200px;height:200px" alt="">
+   <img src="assets/blob2.svg" style="left:400px;top:190px;width:180px;height:180px" alt="">
+   <img src="assets/blob3.svg" style="left:300px;top:-50px;width:120px;height:120px" alt="">
+   <img src="assets/blob4.svg" style="left:150px;top:230px;width:90px;height:90px" alt="">
+   <div class="abs flexc" style="left:18.58px;top:50px;width:296.73px;height:240.13px"><div class="polaroid">
+     <div class="slot" data-slot="cover.image"><span class="t-caption" style="text-align:center" data-hint>IMAGE · cover.image<br>262 × 178 · fill, crop centre</span></div>
+     <p class="t-semi" style="width:262px" data-key="cover.image_caption">{cover.image_caption} · max 40 chars</p></div></div>
+   <div class="abs flexc" style="left:330px;top:23.54px;width:121.46px;height:32.38px"><div class="sticker pill" style="transform:rotate(-5deg);background:var(--coral);color:var(--paper)" data-key="cover.news_date">NEWS · 1 JAN 2026</div></div>
+   <div class="abs flexc" style="left:348.85px;top:74px;width:66.06px;height:25.37px"><div class="sticker pill" style="transform:rotate(3deg);background:var(--ink);color:var(--paper)" data-key="cover.place">{PLACE}</div></div>
+   <img id="mascot" src="assets/mascot-binb.svg" style="left:400px;top:146px;width:107.79px;height:128px" alt="">
+   <img src="assets/bulb.svg" style="left:322px;top:200px;width:59.09px;height:62px" alt="">
+  </div>
+  <div class="chips">
+   <span class="pill" style="background:var(--cyan-tint);color:var(--cyan)" data-key="cover.topic">{TOPIC}</span>
+   <span class="pill" style="background:var(--amber-tint);color:var(--amber)" data-key="cover.subject">{SUBJECT LINK}</span></div>
+  <p class="title" data-key="cover.title">{cover.title} max 34 chars</p>
+  <p class="t-lead" data-key="cover.subtitle">{cover.subtitle} One or two sentences that hook the reader: the news event plus the physics question. Max 150 chars.</p>
+  <p class="t-over" style="color:var(--green)" data-key="label.quest_map">YOUR QUEST MAP</p>
+  <div class="quest">
+   <div class="stop" style="background:var(--cyan-tint)"><div class="stop-top"><span class="pill" style="background:var(--sky)" data-key="stop">STOP 1</span><span class="t-semi" style="color:var(--secondary)" data-key="page ref">p.2</span></div><p class="t-sub" data-key="quest.1.title">The story</p><p class="t-caption" data-key="quest.1.desc">{quest.1.desc} max 40 chars</p></div>
+   <div class="stop" style="background:var(--amber-tint)"><div class="stop-top"><span class="pill" style="background:var(--sun)" data-key="stop">STOP 2</span><span class="t-semi" style="color:var(--secondary)" data-key="page ref">p.3</span></div><p class="t-sub" data-key="quest.2.title">The physics</p><p class="t-caption" data-key="quest.2.desc">{quest.2.desc} max 40 chars</p></div>
+   <div class="stop" style="background:var(--green-tint)"><div class="stop-top"><span class="pill" style="background:var(--accent)" data-key="stop">STOP 3</span><span class="t-semi" style="color:var(--secondary)" data-key="page ref">p.4</span></div><p class="t-sub" data-key="quest.3.title">Your mission</p><p class="t-caption" data-key="quest.3.desc">{quest.3.desc} max 40 chars</p></div>
+  </div>
+  <div class="row" style="gap:6px">
+   <span class="pill lg chip-raised" data-key="cover.read_time">{N} MIN READ</span>
+   <span class="pill lg chip-raised" data-key="cover.level">LEVEL {N} · {AUDIENCE}</span>
+   <span class="pill lg chip-sun"><img class="art" src="assets/flame-lg.svg" width="11.14" height="13" alt=""><span data-key="cover.xp_total">+{N} XP TO EARN</span></span></div>
+  <div class="funfact"><img class="art" src="assets/tree.svg" width="42.58" height="44" alt="">
+   <div class="txt"><p class="t-over" style="color:var(--amber)" data-key="label.fun_fact">DID YOU KNOW?</p><p class="t-body" data-key="cover.fun_fact">{cover.fun_fact} One surprising, sourced fact that makes a student want to open the guide. Max 120 chars.</p></div></div>
+ </div>
+ <div class="footer"><div class="rule"></div><div class="footer-row">
+  <span class="t-caption" data-key="footer.credit">ELIOS Guides · Environmental physics · Research checked {date}</span>
+  <div class="progress"><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="t-semi" data-key="page.number">1 / 4</span></div></div></div>
+</section><section class="page" id="p2"><div class="header"><div class="brand"><img class="art" src="assets/logo.svg" width="30" height="30" alt="">
+ <div class="brand-text"><span class="t-label" style="color:var(--green)" data-key="brand">ELIOS GUIDES</span><span class="t-caption" data-key="guide.stop_label">Stop 1 · The story</span></div></div>
+ <div class="badges"><span class="pill chip-raised" data-key="guide.issue_date">#00 · 1 JAN 2026</span><span class="pill chip-ink" data-key="guide.lang">EN</span>
+ <span class="pill chip-sun"><img class="art" src="assets/flame.svg" width="10.29" height="12" alt=""><span data-key="guide.xp">+00 XP</span></span></div></div><div class="body">
+<div class="sec"><span class="pill" style="background:var(--sky)" data-key="section.label">STOP 1 · THE STORY</span><span class="pill" style="background:var(--green-tint);color:var(--green)" data-key="section.xp">+10 XP FOR READING</span></div>
+<p class="t-head" data-key="story.title">{story.title} What happened, max 48 chars</p>
+<p class="t-lead" data-key="story.lead">{story.lead} Who, what, where, when in 2 sentences. Plain words for a 13-year-old reader. Max 220 chars.</p>
+<div class="fig"><div class="slot" data-slot="story.image"><span class="t-caption" style="text-align:center" data-hint>IMAGE · story.image<br>539 × 160 · news photo, satellite image or map</span></div>
+ <p class="t-caption" style="color:var(--ink)" data-key="story.image_caption">{story.image_caption} What the picture shows and its date. Max 110 chars.</p>
+ <p style="font-size:8px;line-height:14px;color:var(--secondary)" data-key="story.image_credit">{story.image_credit} Image: owner / agency, licence. Max 110 chars.</p></div>
+<div class="stats">
+ <div class="stat" style="background:#fee2e2"><b style="color:#b91c1c" data-key="stat.1.value">0,000</b><span data-key="stat.1.label">{stat.1.label} what the number means + source tag [n], max 80 chars</span></div>
+ <div class="stat" style="background:var(--amber-tint)"><b style="color:var(--amber)" data-key="stat.2.value">0,000</b><span data-key="stat.2.label">{stat.2.label} what the number means + source tag [n], max 80 chars</span></div>
+ <div class="stat" style="background:var(--cyan-tint)"><b style="color:var(--cyan)" data-key="stat.3.value">0,000</b><span data-key="stat.3.label">{stat.3.label} what the number means + source tag [n], max 80 chars</span></div></div>
+<div class="cols"><p data-key="story.body_1">{story.body_1} One paragraph, 280 to 340 chars. Short sentences, one idea each. Explain any hard word in the same sentence. Put source tags like [1] at the end of a sentence that uses a number or a claim from a source.</p>
+ <p data-key="story.body_2">{story.body_2} One paragraph, 280 to 340 chars. Short sentences, one idea each. Explain any hard word in the same sentence. Put source tags like [1] at the end of a sentence that uses a number or a claim from a source.</p></div>
+<p class="t-over" style="color:var(--green)" data-key="label.timeline">TIMELINE</p>
+<div class="tl">
+ <div><i style="background:var(--sky)"></i><span class="t-semi" data-key="timeline.1.date">{DATE}</span><span class="t-caption" data-key="timeline.1.text">{timeline.1.text} max 70 chars</span></div>
+ <div><i style="background:var(--sun)"></i><span class="t-semi" data-key="timeline.2.date">{DATE}</span><span class="t-caption" data-key="timeline.2.text">{timeline.2.text} max 70 chars</span></div>
+ <div><i style="background:var(--accent)"></i><span class="t-semi" data-key="timeline.3.date">{DATE}</span><span class="t-caption" data-key="timeline.3.text">{timeline.3.text} max 70 chars</span></div></div>
+</div><div class="footer"><div class="rule"></div><div class="footer-row"><span class="t-caption" data-key="footer.credit">ELIOS Guides · Environmental physics · Research checked {date}</span>
+ <div class="progress"><span class="dot done"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="t-semi" data-key="page.number">2 / 4</span></div></div></div></section><section class="page" id="p3"><div class="header"><div class="brand"><img class="art" src="assets/logo.svg" width="30" height="30" alt="">
+ <div class="brand-text"><span class="t-label" style="color:var(--green)" data-key="brand">ELIOS GUIDES</span><span class="t-caption" data-key="guide.stop_label">Stop 2 · The physics</span></div></div>
+ <div class="badges"><span class="pill chip-raised" data-key="guide.issue_date">#00 · 1 JAN 2026</span><span class="pill chip-ink" data-key="guide.lang">EN</span>
+ <span class="pill chip-sun"><img class="art" src="assets/flame.svg" width="10.29" height="12" alt=""><span data-key="guide.xp">+00 XP</span></span></div></div><div class="body" style="gap:10px">
+<div class="sec"><span class="pill" style="background:var(--sun)" data-key="section.label">STOP 2 · THE PHYSICS</span><span class="pill" style="background:var(--green-tint);color:var(--green)" data-key="section.xp">+20 XP FOR SOLVING</span></div>
+<p class="t-head" data-key="physics.title">{physics.title} The physics question, max 48 chars</p>
+<div class="cols"><p data-key="physics.body_1">{physics.body_1} The idea in everyday words, 200 to 260 chars. Link it to the story. Name the forces or energy flows involved.</p>
+ <p data-key="physics.body_2">{physics.body_2} The idea in everyday words, 200 to 260 chars. Link it to the story. Name the forces or energy flows involved.</p></div>
+<div class="eqrow"><div class="card eq"><p class="t-over" style="color:var(--green)" data-key="label.equation">THE KEY EQUATION</p>
+ <p class="code" style="font-weight:600;font-size:24px;line-height:31px;text-align:center" data-key="physics.equation">a = b × c</p>
+ <p class="t-caption" style="text-align:center" data-key="physics.equation_name">{physics.equation_name} name of the law, max 50 chars</p>
+ <div class="card legend"><div class="lrow" data-row="legend.1"><span class="sym code" data-key="legend.1.symbol">x</span><span class="mean" data-key="legend.1.meaning">{legend.1.meaning}</span><span class="unit code" data-key="legend.1.unit">unit</span></div><div class="lrow" data-row="legend.2"><span class="sym code" data-key="legend.2.symbol">x</span><span class="mean" data-key="legend.2.meaning">{legend.2.meaning}</span><span class="unit code" data-key="legend.2.unit">unit</span></div><div class="lrow" data-row="legend.3"><span class="sym code" data-key="legend.3.symbol">x</span><span class="mean" data-key="legend.3.meaning">{legend.3.meaning}</span><span class="unit code" data-key="legend.3.unit">unit</span></div><div class="lrow" data-row="legend.4"><span class="sym code" data-key="legend.4.symbol">x</span><span class="mean" data-key="legend.4.meaning">{legend.4.meaning}</span><span class="unit code" data-key="legend.4.unit">unit</span></div><div class="lrow" data-row="legend.5"><span class="sym code" data-key="legend.5.symbol">x</span><span class="mean" data-key="legend.5.meaning">{legend.5.meaning}</span><span class="unit code" data-key="legend.5.unit">unit</span></div></div>
+ <p style="font-size:8.5px;line-height:14px;color:var(--secondary)" data-key="physics.assumptions">{physics.assumptions} Simplifications used, max 110 chars. Leave rows empty if fewer than 5 symbols (hide the row).</p></div>
+ <div class="card dia" data-slot="physics.diagram"><span class="t-caption" style="text-align:center" data-hint>DIAGRAM · physics.diagram<br>170 wide · free-body sketch,<br>graph or image</span></div></div>
+<div class="two"><div class="card ex"><p class="t-over" style="color:var(--amber)" data-key="label.example">WORKED EXAMPLE</p>
+ <p class="code" data-key="example.step_1">{example.step_1} one line, max 60 chars</p><p class="code" data-key="example.step_2">{example.step_2} one line, max 60 chars</p><p class="code" data-key="example.step_3">{example.step_3} one line, max 60 chars</p>
+ <p style="font-weight:600;font-size:14px;line-height:22px;color:var(--amber)" data-key="example.result">{example.result} = answer with unit</p></div>
+ <div class="card tbl"><div class="tr h"><span data-key="table.h1">{H1}</span><span data-key="table.h2">{H2}</span><span data-key="table.h3">{H3}</span></div>
+ <div class="tr"><span data-key="table.r1c1">r1c1</span><span data-key="table.r1c2">r1c2</span><span data-key="table.r1c3">r1c3</span></div>
+ <div class="tr alt"><span data-key="table.r2c1">r2c1</span><span data-key="table.r2c2">r2c2</span><span data-key="table.r2c3">r2c3</span></div>
+ <div class="tr"><span data-key="table.r3c1">r3c1</span><span data-key="table.r3c2">r3c2</span><span data-key="table.r3c3">r3c3</span></div>
+ <p style="font-size:8px;line-height:normal;color:var(--secondary)" data-key="table.note">{table.note} source or note, max 60 chars</p></div></div>
+<div class="two"><div class="card graph"><div class="row" style="justify-content:space-between;white-space:nowrap"><span class="t-semi" data-key="graph.title">{graph.title} what is plotted, with unit</span><span class="t-over" style="font-weight:600;color:var(--secondary)" data-key="label.graph">GRAPH</span></div>
+ <div class="bar"><span class="lab" data-key="graph.1.label">{label}</span><i data-key="graph.1.bar" style="background:var(--coral);width:50px"></i><span class="val" data-key="graph.1.value">{value}</span></div>
+ <div class="bar"><span class="lab" data-key="graph.2.label">{label}</span><i data-key="graph.2.bar" style="background:var(--sun);width:110px"></i><span class="val" data-key="graph.2.value">{value}</span></div>
+ <div class="bar"><span class="lab" data-key="graph.3.label">{label}</span><i data-key="graph.3.bar" style="background:var(--sky);width:170px"></i><span class="val" data-key="graph.3.value">{value}</span></div>
+ <p style="font-size:8.5px;line-height:14px;color:var(--secondary)" data-key="graph.note">{graph.note} Bar width = value / max × 170 (max 170). Max 90 chars.</p></div>
+ <div class="card tip"><img class="art" src="assets/bulb.svg" width="26.69" height="28" alt=""><div><p class="t-over" style="color:var(--cyan)" data-key="label.tip">BULB BUDDY SAYS</p><p class="t-caption" style="color:var(--ink)" data-key="physics.tip">{physics.tip} Real-world twist or common mistake, max 140 chars.</p></div></div></div>
+</div><div class="footer"><div class="rule"></div><div class="footer-row"><span class="t-caption" data-key="footer.credit">ELIOS Guides · Environmental physics · Research checked {date}</span>
+ <div class="progress"><span class="dot done"></span><span class="dot done"></span><span class="dot on"></span><span class="dot"></span><span class="t-semi" data-key="page.number">3 / 4</span></div></div></div></section><section class="page" id="p4"><div class="header"><div class="brand"><img class="art" src="assets/logo.svg" width="30" height="30" alt="">
+ <div class="brand-text"><span class="t-label" style="color:var(--green)" data-key="brand">ELIOS GUIDES</span><span class="t-caption" data-key="guide.stop_label">Stop 3 · Your mission</span></div></div>
+ <div class="badges"><span class="pill chip-raised" data-key="guide.issue_date">#00 · 1 JAN 2026</span><span class="pill chip-ink" data-key="guide.lang">EN</span>
+ <span class="pill chip-sun"><img class="art" src="assets/flame.svg" width="10.29" height="12" alt=""><span data-key="guide.xp">+00 XP</span></span></div></div><div class="body" style="gap:8px">
+<div class="sec"><span class="pill" style="background:var(--accent)" data-key="section.label">STOP 3 · YOUR MISSION</span><span class="pill" style="background:var(--green-tint);color:var(--green)" data-key="section.xp">+30 XP TO EARN</span></div>
+<p class="t-head" data-key="mission.title">{mission.title} Mission name, max 40 chars</p>
+<div class="row" style="justify-content:space-between"><span class="t-over" style="color:var(--green);white-space:nowrap" data-key="label.quiz">QUICK QUIZ · 3 QUESTIONS · TICK ONE BOX</span><span class="t-caption" style="transform:rotate(180deg);white-space:nowrap" data-key="quiz.answer_key">Answer key: {1X · 2X · 3X}</span></div>
+<div class="card qcard"><div class="qrow"><span class="qn">Q1</span><span class="qq" data-key="quiz.1.question">{quiz.1.question} max 90 chars</span><span class="t-label" style="color:var(--green)">+5 XP</span></div><div class="opts"><div class="opt"><span class="tile" style="background:var(--quiz-red,#e21b3c);">A</span><span data-key="quiz.1.a">{option A} max 30 chars</span></div><div class="opt"><span class="tile" style="background:#1368ce;">B</span><span data-key="quiz.1.b">{option B} max 30 chars</span></div><div class="opt"><span class="tile" style="background:#d89e00;color:var(--ink)">C</span><span data-key="quiz.1.c">{option C} max 30 chars</span></div><div class="opt"><span class="tile" style="background:#26890c;">D</span><span data-key="quiz.1.d">{option D} max 30 chars</span></div></div></div><div class="card qcard"><div class="qrow"><span class="qn">Q2</span><span class="qq" data-key="quiz.2.question">{quiz.2.question} max 90 chars</span><span class="t-label" style="color:var(--green)">+5 XP</span></div><div class="opts"><div class="opt"><span class="tile" style="background:var(--quiz-red,#e21b3c);">A</span><span data-key="quiz.2.a">{option A} max 30 chars</span></div><div class="opt"><span class="tile" style="background:#1368ce;">B</span><span data-key="quiz.2.b">{option B} max 30 chars</span></div><div class="opt"><span class="tile" style="background:#d89e00;color:var(--ink)">C</span><span data-key="quiz.2.c">{option C} max 30 chars</span></div><div class="opt"><span class="tile" style="background:#26890c;">D</span><span data-key="quiz.2.d">{option D} max 30 chars</span></div></div></div><div class="card qcard"><div class="qrow"><span class="qn">Q3</span><span class="qq" data-key="quiz.3.question">{quiz.3.question} max 90 chars</span><span class="t-label" style="color:var(--green)">+5 XP</span></div><div class="opts"><div class="opt"><span class="tile" style="background:var(--quiz-red,#e21b3c);">A</span><span data-key="quiz.3.a">{option A} max 30 chars</span></div><div class="opt"><span class="tile" style="background:#1368ce;">B</span><span data-key="quiz.3.b">{option B} max 30 chars</span></div><div class="opt"><span class="tile" style="background:#d89e00;color:var(--ink)">C</span><span data-key="quiz.3.c">{option C} max 30 chars</span></div><div class="opt"><span class="tile" style="background:#26890c;">D</span><span data-key="quiz.3.d">{option D} max 30 chars</span></div></div></div>
+<div class="two"><div class="card minilab"><div class="row" style="gap:8px"><img class="art" src="assets/quest.svg" width="30" height="30" alt=""><div style="flex:1 0 0;min-width:1px"><p class="t-over" style="color:var(--green)" data-key="label.lab">MINI LAB · TRY AT HOME OR SCHOOL</p><p class="t-sub" data-key="lab.title">{lab.title} max 40 chars</p></div></div>
+ <div class="step"><span class="cb"></span><span data-key="lab.step_1">{lab.step_1} one action, max 80 chars</span></div><div class="step"><span class="cb"></span><span data-key="lab.step_2">{lab.step_2} one action, max 80 chars</span></div><div class="step"><span class="cb"></span><span data-key="lab.step_3">{lab.step_3} one action, max 80 chars</span></div>
+ <p class="t-semi" style="color:var(--green)" data-key="lab.question">{lab.question} What should the student notice? max 90 chars</p></div>
+ <div class="card badge"><img class="art" src="assets/medal.svg" width="33.94" height="40" alt=""><p class="t-over" style="color:var(--amber)" data-key="label.badge">BADGE UNLOCKED</p><p class="t-sub" data-key="badge.name">{badge.name}</p><p class="t-caption" data-key="badge.text">{badge.text} how to earn it, max 60 chars</p><div class="xpbar"><i data-key="xp.fill"></i></div><p class="t-label" data-key="badge.xp">{0} / {60} XP</p></div></div>
+<div class="gloss">
+ <div class="card term"><div class="tr2"><i style="background:var(--sky)"></i><span data-key="glossary.1.term">{term}</span></div><p style="font-size:9px;line-height:14px;color:var(--secondary)" data-key="glossary.1.def">{glossary.1.def} max 70 chars</p></div>
+ <div class="card term"><div class="tr2"><i style="background:var(--sun)"></i><span data-key="glossary.2.term">{term}</span></div><p style="font-size:9px;line-height:14px;color:var(--secondary)" data-key="glossary.2.def">{glossary.2.def} max 70 chars</p></div>
+ <div class="card term"><div class="tr2"><i style="background:var(--coral)"></i><span data-key="glossary.3.term">{term}</span></div><p style="font-size:9px;line-height:14px;color:var(--secondary)" data-key="glossary.3.def">{glossary.3.def} max 70 chars</p></div></div>
+<div class="src"><p class="t-over" style="color:var(--ink);font-size:9px;line-height:12px" data-key="label.sources">SOURCES &amp; IMAGE CREDITS · ACCESSED {date}</p><p data-key="source.1">[1] {source.1} Publisher. Title. Date. (empty = hide row)</p><p data-key="source.2">[2] {source.2} Publisher. Title. Date. (empty = hide row)</p><p data-key="source.3">[3] {source.3} Publisher. Title. Date. (empty = hide row)</p><p data-key="source.4">[4] {source.4} Publisher. Title. Date. (empty = hide row)</p><p data-key="source.5">[5] {source.5} Publisher. Title. Date. (empty = hide row)</p><p data-key="credit.images">{credit.images} Image credits and licences, max 140 chars.</p></div>
+</div><div class="footer"><div class="rule"></div><div class="footer-row"><span class="t-caption" data-key="footer.credit">ELIOS Guides · Environmental physics · Research checked {date}</span>
+ <div class="progress"><span class="dot done"></span><span class="dot done"></span><span class="dot done"></span><span class="dot on"></span><span class="t-semi" data-key="page.number">4 / 4</span></div></div></div></section></body></html>

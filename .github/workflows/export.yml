@@ -1,9 +1,11 @@
 name: export
 
 on:
-  push:
-    branches: ["guide/**"]
-    paths: ["issues/*/figma.json"]
+  workflow_call:
+    inputs:
+      date:
+        required: true
+        type: string
   workflow_dispatch:
     inputs:
       date:
@@ -55,10 +57,10 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git merge --no-edit -X theirs origin/main
 
-      - name: Export PDF and cover from Figma
-        env:
-          FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
-        run: python scripts/export_figma.py "$DATE"
+      - name: Render PDFs and covers
+        run: |
+          python -m playwright install --with-deps chromium
+          python scripts/render_guide.py "$DATE"
 
       - name: Update manifest
         run: python scripts/update_manifest.py "$DATE"

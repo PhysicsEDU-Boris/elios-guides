@@ -56,7 +56,7 @@ def update(date, root=ROOT, now=None):
     required, optional = public_files(en)
     for name in required:
         if not (root / folder / name).is_file():
-            raise SystemExit(f"missing {folder}/{name}; run export_figma.py first")
+            raise SystemExit(f"missing {folder}/{name}; run render_guide.py first")
     revision = hashlib.sha256()
     for name in required + [n for n in optional if (root / folder / n).is_file()]:
         revision.update((root / folder / name).read_bytes())

@@ -24,15 +24,15 @@ def test_gemini_can_read_generated_evidence_without_exposing_its_settings(tmp_pa
     ("false", "true", "false", 0, "skip=true"),
     ("false", "false", "false", 0, "branch=guide/2026-11-12"),
     ("true", "true", "false", 0, "resume=true"),
-    ("true", "true", "true", 1, "Already filled in Figma"),
+    ("true", "true", "true", 1, "Already exported"),
     ("true", "false", "false", 1, "branch=guide/2026-11-12"),
 ])
-def test_resume_preserves_failed_branches_and_rejects_filled_issues(tmp_path, resume, exists, filled, expected, output):
+def test_resume_preserves_failed_branches_and_rejects_exported_issues(tmp_path, resume, exists, filled, expected, output):
     workflow = (Path(__file__).resolve().parents[1] / ".github/workflows/daily-research.yml").read_text()
     block = workflow.split("      - name: Pick date and skip if it exists\n", 1)[1]
     script = textwrap.dedent(re.search(r"        run: \|\n(.*?)(?=\n  research:)", block, re.S)[1])
     git = tmp_path / "git"
-    git.write_text('#!/bin/bash\ncase "$1" in\nfetch|ls-remote) test "$EXISTS" = true;;\ncat-file) test "$FILLED" = true;;\n*) exit 99;;\nesac\n')
+    git.write_text('#!/bin/bash\ncase "$1" in\nfetch|ls-remote) test "$EXISTS" = true;;\nls-tree) test "$FILLED" = true && echo issues/2026-11-12/guide-en.pdf;;\n*) exit 99;;\nesac\n')
     git.chmod(0o755)
     out = tmp_path / "output"
     result = subprocess.run(["bash", "-e", "-o", "pipefail", "-c", script], cwd=tmp_path,

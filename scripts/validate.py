@@ -1,4 +1,4 @@
-"""Check one issue folder before it goes to Figma.
+"""Check one issue folder before it is rendered.
 
 Usage: python scripts/validate.py issues/YYYY-MM-DD [--manifest manifest.json]
 Exit 0 = OK, exit 1 = prints the list of problems.
