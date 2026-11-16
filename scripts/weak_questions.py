@@ -10,6 +10,7 @@ COOLDOWN_DAYS days (manifest entry field `remedial.concept`).
 import argparse
 import json
 import os
+import re
 import sys
 from datetime import date
 from pathlib import Path
@@ -34,14 +35,14 @@ def concept_of(en):
 
 
 def question_of(en, qid):
-    """(question, {letter: option}, correct letter) for q1-q3 or pN of the guide's quiz pool; None if absent."""
+    """(question, {letter: option}, correct letter) for p1-p3 (printed) or pool-N (0-based quiz pool, as the app names them); None if absent."""
     try:
-        if qid.startswith("q"):
+        if re.fullmatch(r"p[1-3]", qid):
             n = qid[1:]
             return (en[f"quiz.{n}.question"], {l: en[f"quiz.{n}.{l}"] for l in LETTERS}, str(en["_answers"][n]).lower())
-        q = en["_quiz_pool"][int(qid[1:]) - 1]
+        q = en["_quiz_pool"][int(re.fullmatch(r"pool-(\d{1,2})", qid)[1])]
         return q["question"], dict(zip(LETTERS, q["options"])), LETTERS[int(q["answer"])]
-    except (KeyError, IndexError, ValueError, TypeError):
+    except (KeyError, IndexError, ValueError, TypeError):  # TypeError: no regex match
         return None
 
 

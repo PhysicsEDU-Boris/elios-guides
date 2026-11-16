@@ -2,7 +2,7 @@
 
 ## Unreleased — 16 November 2026 (remedial guides)
 
-- Supabase schema for anonymous quiz-answer events and `question_stats()`; the event contract for the app is in `docs/answer-events.md`.
+- `supabase/schema.sql`: `question_stats()` over the quiz results the app backend already stores (`guide_progress`), plus the dashboard allow-list.
 - `scripts/weak_questions.py` builds a brief from the weakest concept every second day; GEMINI.md has a Remedial mode; `_remedial` is validated and recorded in the manifest (`remedial`).
 
 ## Unreleased — 16 November 2026 (repeat protection)

@@ -279,8 +279,8 @@ def check_remedial(docs):
     if r != id_.get("_remedial"):
         return ["_remedial must be identical in en.json and id.json"]
     if not (isinstance(r, dict) and isinstance(r.get("concept"), str) and r["concept"].strip() and isinstance(r.get("questions"), list)
-            and 1 <= len(r["questions"]) <= 3 and all(re.fullmatch(r"\d{4}-\d{2}-\d{2}#(q[1-3]|p\d+)", str(q)) for q in r["questions"])):
-        return ['_remedial must be {"concept": "<id>", "questions": [1-3 strings like "2026-11-08#q2"]}']
+            and 1 <= len(r["questions"]) <= 3 and all(re.fullmatch(r"\d{4}-\d{2}-\d{2}#(p[1-3]|pool-\d+)", str(q)) for q in r["questions"])):
+        return ['_remedial must be {"concept": "<id>", "questions": [1-3 strings like "2026-11-08#p2"]}']
     return []
 
 
