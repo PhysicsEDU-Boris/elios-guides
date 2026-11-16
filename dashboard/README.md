@@ -1,6 +1,6 @@
 # ELIOS Question Insights (dashboard)
 
-A static page: no build step, no server code. It shows, for a period you choose, which quiz questions are
+A static page: no build step, no server code. Its look follows the "ELIOS Insights Dashboard" Figma design (gamified, joyful, easy to read): a mission card, big stat tiles, expandable question cards with A-D answer bars, a concepts sidebar and a remedial calendar, in Light and Dark themes (the Dark mode button; it follows the system setting by default). It shows, for a period you choose, which quiz questions are
 missed most, how the answers split across A-D (right answer green, most common wrong answer dark red), and
 which concept (formula) is next in line for a remedial guide. Data comes from `question_stats()` in Supabase (built on the quiz results the app already stores; the wrong option chosen is shown once the backend saves it);
 question and option texts come from the published guides on GitHub Pages.
@@ -19,5 +19,5 @@ question and option texts come from the published guides on GitHub Pages.
 Access is by email magic link and the `dashboard_users` allow-list: anyone else who logs in is told they are
 not on the list and gets no data (the database refuses `question_stats()` for them).
 
-`supabase.min.js` is `@supabase/supabase-js` 2.117.3 (MIT licence), kept here so the page loads nothing from
+Files: `index.html` (structure), `style.css` (tokens = the Figma ELIOS Color variables), `app.js` (data and rendering), `assets/` (mascots from the guides), `fonts/` (Google Sans Flex). `supabase.min.js` is `@supabase/supabase-js` 2.117.3 (MIT licence), kept here so the page loads nothing from
 third-party CDNs. Guide text is always inserted as text, never as HTML.

@@ -5,46 +5,83 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>ELIOS Question Insights</title>
-<style>
-:root{--bg:#f8fafc;--card:#fff;--ink:#0f172a;--muted:#475569;--rule:#cbd5e1;--green:#15803d;--red:#b91c1c;--amber:#b45309;--good:#4ade80;--bad:#f87171;--top:#dc2626}
-@media (prefers-color-scheme:dark){:root{--bg:#0b1220;--card:#111a2e;--ink:#e2e8f0;--muted:#94a3b8;--rule:#27344d;--green:#4ade80;--red:#f87171;--amber:#fbbf24;--good:#22c55e;--bad:#7f1d1d;--top:#f87171}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,Segoe UI,sans-serif}
-main{max-width:1000px;margin:0 auto;padding:20px 16px 48px}
-h1{font-size:22px;margin:0 0 4px}h2{font-size:16px;margin:28px 0 8px}p.sub{margin:0 0 16px;color:var(--muted)}
-.bar{display:flex;gap:12px;flex-wrap:wrap;align-items:end;margin:12px 0}
-label{display:flex;flex-direction:column;font-size:12px;color:var(--muted);gap:4px}
-select,input,button{font:inherit;padding:8px 10px;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink)}
-button{cursor:pointer;background:var(--green);color:#fff;border-color:transparent}button.link{background:none;color:var(--muted);border-color:var(--rule)}
-.card{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:12px 14px;margin:8px 0}
-.row{display:grid;grid-template-columns:1fr 120px;gap:12px;align-items:start}
-.q{font-weight:600}.meta{color:var(--muted);font-size:13px}
-.rate{font-size:22px;font-weight:700;text-align:right}.rate small{display:block;font-size:12px;font-weight:400;color:var(--muted)}
-.opts{display:grid;gap:4px;margin-top:8px}.opt{display:grid;grid-template-columns:150px 1fr 46px;gap:8px;align-items:center;font-size:13px}
-.opt .t{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.track{background:var(--rule);border-radius:4px;height:10px;overflow:hidden}.fill{height:10px}
-.ok .fill{background:var(--good)}.no .fill{background:var(--bad)}.no.top .fill{background:var(--top)}.top .t{font-weight:600}
-.pill{display:inline-block;padding:1px 8px;border-radius:999px;font-size:12px;border:1px solid var(--rule);color:var(--muted)}.pill.ready{color:var(--green);border-color:var(--green)}
-#msg{color:var(--muted)}[hidden]{display:none!important}
-@media (max-width:560px){.row{grid-template-columns:1fr}.rate{text-align:left}.opt{grid-template-columns:100px 1fr 40px}}
-</style>
+<link rel="icon" href="assets/logo.svg">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
- <h1>ELIOS Question Insights</h1>
- <p class="sub">Which quiz questions students miss most, and which concept the next remedial guide will cover.</p>
- <section id="login" hidden>
-  <div class="card"><form id="loginForm" class="bar"><label>Email<input id="email" type="email" required autocomplete="email"></label><button>Send login link</button></form>
-  <p id="loginMsg" class="meta"></p></div>
- </section>
- <section id="app" hidden>
-  <div class="bar">
-   <label>Period<select id="days"><option value="7">last 7 days</option><option value="30" selected>last 30 days</option><option value="90">last 90 days</option></select></label>
-   <label>Min. answers per question<input id="min" type="number" min="1" value="20" style="width:90px"></label>
-   <button id="refresh">Refresh</button><button id="logout" class="link">Log out</button>
+<header class="topbar" id="topbar" hidden>
+ <div class="brand"><img src="assets/logo.svg" alt=""><div><div class="subhead">ELIOS Insights</div><small>Which questions students find tricky</small></div></div>
+ <div class="spacer"></div>
+ <div class="seg" id="period" role="group" aria-label="Period">
+  <button data-days="7" aria-pressed="false">7 days</button><button data-days="30" aria-pressed="true">30 days</button><button data-days="90" aria-pressed="false">90 days</button>
+ </div>
+ <button class="btn secondary" id="theme" type="button">Dark mode</button>
+ <button class="user" id="user" type="button" title="Log out"><span class="avatar" id="avatar">B</span><span id="hello">Hi</span></button>
+</header>
+
+<section id="login" class="stage" hidden>
+ <div class="stagecard">
+  <div class="brand"><img src="assets/logo.svg" alt=""><h1 class="headline">ELIOS Insights</h1></div>
+  <div class="art"><div class="bubble">Ready to see how students are doing?</div><img src="assets/bulb.svg" alt=""></div>
+  <h2 class="display">Welcome back!</h2>
+  <p class="tx2">We will email you a magic link. No password needed.</p>
+  <form id="loginForm" class="field-wrap" style="width:100%;display:flex;flex-direction:column;gap:20px">
+   <div class="field"><label for="email">Your email</label><input id="email" type="email" required autocomplete="email" placeholder="you@school.com"></div>
+   <button class="btn block" type="submit">Send my magic link</button>
+  </form>
+  <p id="loginMsg" class="small tx2" role="status"></p>
+  <span class="chip sky">Only invited emails can open the dashboard</span>
+ </div>
+</section>
+
+<section id="sent" class="stage" hidden>
+ <div class="stagecard">
+  <div class="brand"><img src="assets/logo.svg" alt=""><h1 class="headline">ELIOS Insights</h1></div>
+  <div class="art"><div class="bubble">Link on its way!</div><img src="assets/bulb.svg" alt=""></div>
+  <h2 class="display">Check your inbox</h2>
+  <p class="tx2">We sent a link to <b id="sentTo"></b>. It works for one hour.</p>
+  <div class="steps"><div class="step a"><i>1</i>Open the email from ELIOS</div><div class="step b"><i>2</i>Tap "Log in" inside it</div><div class="step c"><i>3</i>You are in! Welcome to the dashboard</div></div>
+  <button class="btn ghost" id="again" type="button">Use another email</button>
+ </div>
+</section>
+
+<section id="denied" class="stage" hidden>
+ <div class="stagecard">
+  <img src="assets/mascot-binb.svg" alt="" width="86">
+  <h2 class="display">This email is not on the list</h2>
+  <p class="tx2">Ask the dashboard owner to add your email, then log in again. No data was shown.</p>
+  <button class="btn block" id="deniedBack" type="button">Try another email</button>
+ </div>
+</section>
+
+<main id="app" hidden>
+ <p id="msg" role="status"></p>
+ <div id="empty" class="stagecard" style="margin:24px auto" hidden>
+  <img src="assets/mascot-binb.svg" alt="" width="86">
+  <h2 class="display">Not enough answers yet</h2>
+  <p class="tx2">A question appears once enough students have answered it. Lower "Min. answers" or choose a longer period to see earlier ones.</p>
+  <div class="field" style="max-width:260px"><label for="min2">Min. answers per question</label><input id="min2" type="number" min="1" value="20"></div>
+  <button class="btn block" id="refresh" type="button">Refresh</button>
+ </div>
+ <div class="layout" id="content">
+  <div class="col">
+   <section class="hero" id="hero"></section>
+   <div class="how" id="how" hidden>Every second day, the daily guide becomes a remedial guide on the concept students miss most. A concept needs 60 first-try answers, and it is not repeated within 14 days.</div>
+   <div class="tiles" id="tiles"></div>
+   <div class="qhead" id="qhead">
+    <h2 class="headline">Questions</h2><div class="spacer"></div>
+    <span id="filters" style="display:flex;gap:8px;flex-wrap:wrap"></span>
+    <label>Min. answers <input id="min" type="number" min="1" value="20"></label>
+   </div>
+   <div class="list" id="questions"></div>
   </div>
-  <p id="msg"></p>
-  <h2>Concepts</h2><div id="concepts"></div>
-  <h2>Questions</h2><div id="questions"></div>
- </section>
+  <aside class="side">
+   <div style="display:flex;align-items:baseline;gap:12px"><h2 class="headline">Concepts</h2><span class="spacer"></span><span class="small muted">hardest first</span></div>
+   <div id="concepts" style="display:flex;flex-direction:column;gap:16px"></div>
+   <div class="panel" id="calendar"></div>
+   <div class="privacy"><img src="assets/medal.svg" alt=""><span>Answers are counted anonymously. You will never see a name or an email here.</span></div>
+  </aside>
+ </div>
 </main>
 <script src="config.js"></script>
 <script src="supabase.min.js"></script>

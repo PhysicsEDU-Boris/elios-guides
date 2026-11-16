@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — 17 November 2026 (dashboard restyle)
+
+- `dashboard/` restyled to match the Figma ELIOS Insights design: mission card, stat tiles, expandable question cards, working Tough/Tricky/Easy filters, concepts and remedial calendar sidebar, login/check-inbox/empty/not-allowed screens, Light and Dark themes, mobile layout.
+
 ## Unreleased — 16 November 2026 (dashboard)
 
 - `dashboard/`: static Vercel page, Supabase email-link login with an allow-list, shows the most-missed questions (with the answer split per option once the backend stores the chosen option) and the next remedial concept.
