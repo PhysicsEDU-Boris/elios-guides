@@ -48,6 +48,8 @@ quiz questions, and `_remedial` in both files (the manifest entry keeps it). Wit
 enough answers or if Supabase is unreachable, the day stays a normal news guide. One issue per date is kept,
 so a remedial guide takes the place of that day's news guide.
 
+The private dashboard for these statistics is in [dashboard/](dashboard/README.md) (Vercel, Supabase email login).
+
 Setup: create a Supabase project, run `supabase/schema.sql`, add your email to `dashboard_users`, then set the
 Actions secrets `SUPABASE_URL` and `SUPABASE_SERVICE_KEY` (service key: never in the app or the dashboard).
 The app needs the anon key and the logging described in `docs/answer-events.md`.

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ELIOS Question Insights</title>
+<style>
+:root{--bg:#f8fafc;--card:#fff;--ink:#0f172a;--muted:#475569;--rule:#cbd5e1;--green:#15803d;--red:#b91c1c;--amber:#b45309;--good:#4ade80;--bad:#f87171;--top:#dc2626}
+@media (prefers-color-scheme:dark){:root{--bg:#0b1220;--card:#111a2e;--ink:#e2e8f0;--muted:#94a3b8;--rule:#27344d;--green:#4ade80;--red:#f87171;--amber:#fbbf24;--good:#22c55e;--bad:#7f1d1d;--top:#f87171}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:1000px;margin:0 auto;padding:20px 16px 48px}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:16px;margin:28px 0 8px}p.sub{margin:0 0 16px;color:var(--muted)}
+.bar{display:flex;gap:12px;flex-wrap:wrap;align-items:end;margin:12px 0}
+label{display:flex;flex-direction:column;font-size:12px;color:var(--muted);gap:4px}
+select,input,button{font:inherit;padding:8px 10px;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink)}
+button{cursor:pointer;background:var(--green);color:#fff;border-color:transparent}button.link{background:none;color:var(--muted);border-color:var(--rule)}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:12px 14px;margin:8px 0}
+.row{display:grid;grid-template-columns:1fr 120px;gap:12px;align-items:start}
+.q{font-weight:600}.meta{color:var(--muted);font-size:13px}
+.rate{font-size:22px;font-weight:700;text-align:right}.rate small{display:block;font-size:12px;font-weight:400;color:var(--muted)}
+.opts{display:grid;gap:4px;margin-top:8px}.opt{display:grid;grid-template-columns:150px 1fr 46px;gap:8px;align-items:center;font-size:13px}
+.opt .t{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.track{background:var(--rule);border-radius:4px;height:10px;overflow:hidden}.fill{height:10px}
+.ok .fill{background:var(--good)}.no .fill{background:var(--bad)}.no.top .fill{background:var(--top)}.top .t{font-weight:600}
+.pill{display:inline-block;padding:1px 8px;border-radius:999px;font-size:12px;border:1px solid var(--rule);color:var(--muted)}.pill.ready{color:var(--green);border-color:var(--green)}
+#msg{color:var(--muted)}[hidden]{display:none!important}
+@media (max-width:560px){.row{grid-template-columns:1fr}.rate{text-align:left}.opt{grid-template-columns:100px 1fr 40px}}
+</style>
+</head>
+<body>
+<main>
+ <h1>ELIOS Question Insights</h1>
+ <p class="sub">Which quiz questions students miss most, and which concept the next remedial guide will cover.</p>
+ <section id="login" hidden>
+  <div class="card"><form id="loginForm" class="bar"><label>Email<input id="email" type="email" required autocomplete="email"></label><button>Send login link</button></form>
+  <p id="loginMsg" class="meta"></p></div>
+ </section>
+ <section id="app" hidden>
+  <div class="bar">
+   <label>Period<select id="days"><option value="7">last 7 days</option><option value="30" selected>last 30 days</option><option value="90">last 90 days</option></select></label>
+   <label>Min. answers per question<input id="min" type="number" min="1" value="20" style="width:90px"></label>
+   <button id="refresh">Refresh</button><button id="logout" class="link">Log out</button>
+  </div>
+  <p id="msg"></p>
+  <h2>Concepts</h2><div id="concepts"></div>
+  <h2>Questions</h2><div id="questions"></div>
+ </section>
+</main>
+<script src="config.js"></script>
+<script src="supabase.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
