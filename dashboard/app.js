@@ -6,14 +6,16 @@ function conceptOf(en) {
   return { key: en._formula || en["physics.equation"] || "?", name: en["physics.equation_name"] || en["physics.equation"] || "?" };
 }
 
-// Question text, options and correct letter for q1-q3 or pN of the quiz pool; null when it cannot be found.
+// Question text, options and correct letter for p1-p3 (printed) or pool-N (0-based retry pool), the app's ids;
+// null when it cannot be found.
 function questionOf(en, qid) {
   try {
-    if (qid[0] === "q") {
-      const n = qid.slice(1);
+    const printed = /^p([1-3])$/.exec(qid);
+    if (printed) {
+      const n = printed[1];
       return { text: en[`quiz.${n}.question`], options: LETTERS.map(l => en[`quiz.${n}.${l}`]), correct: String(en._answers[n]).toLowerCase() };
     }
-    const q = en._quiz_pool[Number(qid.slice(1)) - 1];
+    const q = en._quiz_pool[Number(/^pool-(\d{1,2})$/.exec(qid)[1])];
     return { text: q.question, options: q.options, correct: LETTERS[q.answer] };
   } catch { return null; }
 }
@@ -58,10 +60,13 @@ function renderQuestions(rows, docs) {
       h("div", { class: "row" },
         h("div", {}, h("div", { class: "q" }, q.text), h("div", { class: "meta" }, `${r.guide_date} · ${r.question_id} · ${conceptOf(en).name} · ${r.attempts} answers`)),
         h("div", { class: "rate" }, pct(Number(r.wrong_rate)), h("small", {}, "wrong"))),
-      h("div", { class: "opts" }, LETTERS.map((l, i) => h("div", { class: `opt ${l === q.correct ? "ok" : "no"}${l === r.top_wrong ? " top" : ""}` },
-        h("span", { class: "t", props: { title: q.options[i] } }, `${l.toUpperCase()}: ${q.options[i] ?? ""}`),
-        h("div", { class: "track" }, h("div", { class: "fill", style: `width:${(counts[i] / r.attempts) * 100}%` })),
-        h("span", {}, pct(counts[i] / r.attempts)))))));
+      counts.some(n => n > 0)
+        ? h("div", { class: "opts" }, LETTERS.map((l, i) => h("div", { class: `opt ${l === q.correct ? "ok" : "no"}${l === r.top_wrong ? " top" : ""}` },
+          h("span", { class: "t", props: { title: q.options[i] } }, `${l.toUpperCase()}: ${q.options[i] ?? ""}`),
+          h("div", { class: "track" }, h("div", { class: "fill", style: `width:${(counts[i] / r.attempts) * 100}%` })),
+          h("span", {}, pct(counts[i] / r.attempts)))))
+        // the backend does not store the chosen option yet: show the right answer only
+        : h("div", { class: "meta", style: "margin-top:6px" }, `Right answer ${q.correct.toUpperCase()}: ${q.options[LETTERS.indexOf(q.correct)] ?? ""}. Which wrong option was chosen is not recorded yet.`)));
   }
   return cards.length ? cards : [h("p", { class: "meta" }, "No question has enough answers for this period.")];
 }

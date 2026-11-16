@@ -2,12 +2,12 @@
 
 A static page: no build step, no server code. It shows, for a period you choose, which quiz questions are
 missed most, how the answers split across A-D (right answer green, most common wrong answer dark red), and
-which concept (formula) is next in line for a remedial guide. Data comes from `question_stats()` in Supabase;
+which concept (formula) is next in line for a remedial guide. Data comes from `question_stats()` in Supabase (built on the quiz results the app already stores; the wrong option chosen is shown once the backend saves it);
 question and option texts come from the published guides on GitHub Pages.
 
 ## Set up
 
-1. **Supabase**: run [../supabase/schema.sql](../supabase/schema.sql) in the SQL editor, then allow yourself:
+1. **Supabase**: run [../supabase/schema.sql](../supabase/schema.sql) in the SQL editor of the existing ELIOS project, then allow yourself:
    `insert into public.dashboard_users values ('you@example.com');`
 2. **Config**: put the project URL and the **anon** key in [config.js](config.js) (Settings -> API). The anon
    key is public by design; never use the `service_role` key here.

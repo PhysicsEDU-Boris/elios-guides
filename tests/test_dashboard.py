@@ -12,9 +12,9 @@ for i in (1, 2, 3):
     for letter in "abcd":
         EN[f"quiz.{i}.{letter}"] = f"option {i}{letter}"
 ROWS = [
-    {"guide_date": "2026-11-08", "question_id": "q1", "attempts": 40, "wrong": 30, "wrong_rate": 0.75,
+    {"guide_date": "2026-11-08", "question_id": "p1", "attempts": 40, "wrong": 30, "wrong_rate": 0.75,
      "chosen_a": 20, "chosen_b": 10, "chosen_c": 6, "chosen_d": 4, "top_wrong": "a"},
-    {"guide_date": "2026-11-08", "question_id": "q2", "attempts": 30, "wrong": 6, "wrong_rate": 0.2,
+    {"guide_date": "2026-11-08", "question_id": "p2", "attempts": 30, "wrong": 6, "wrong_rate": 0.2,
      "chosen_a": 24, "chosen_b": 3, "chosen_c": 2, "chosen_d": 1, "top_wrong": "b"},
 ]
 
@@ -52,6 +52,15 @@ def test_logged_in_dashboard_shows_concepts_and_questions_without_parsing_html(p
     assert "75%" in text and "A: option 1a" in text
     assert page.locator("#questions img").count() == 0 and page.evaluate("window.pwned") is None  # guide text is never HTML
     assert page.locator(".opt.no.top").count() == 2 and page.locator(".opt.ok").count() == 2
+
+
+def test_without_recorded_choices_it_shows_the_right_answer_instead_of_bars(page):
+    rows = [dict(r, chosen_a=0, chosen_b=0, chosen_c=0, chosen_d=0, top_wrong=None) for r in ROWS]
+    stub(page, {"user": {"email": "me@example.com"}}, {"data": rows, "error": None})
+    page.goto((ROOT / "dashboard" / "index.html").as_uri())
+    page.wait_for_selector("#questions .card")
+    assert "is not recorded yet" in page.inner_text("#questions") and page.locator(".opt").count() == 0
+    assert "Right answer B: option 1b" in page.inner_text("#questions")
 
 
 def test_logged_out_visitor_only_sees_the_login_form(page):
