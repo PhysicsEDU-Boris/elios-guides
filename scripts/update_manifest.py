@@ -13,6 +13,8 @@ from pathlib import Path
 from PIL import Image
 from pypdf import PdfReader
 
+import repeats
+
 ROOT = Path(__file__).resolve().parent.parent
 WIB = timezone(timedelta(hours=7))
 KEEP = 365
@@ -76,6 +78,7 @@ def update(date, root=ROOT, now=None):
         "content_sha": {l: sha((root / folder / f"{l}.json").read_bytes()) for l in ("en", "id")},
         "xp_parts": dict(XP_PARTS),
         "formula": en.get("_formula"),  # id in schema/formulas.json; validate.py avoids repeats
+        "sources": repeats.issue_sources(en), "terms": repeats.issue_terms(en),  # repeat protection (repeats.py)
         "pages": len(PdfReader(root / folder / f"{base}-en.pdf").pages),
     }
     path = root / "manifest.json"

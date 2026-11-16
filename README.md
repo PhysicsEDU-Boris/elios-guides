@@ -35,6 +35,17 @@ Each catalogue entry keeps every v1 field unchanged and adds:
 edit gives a new revision; the date and issue number never change. Example for 2026-11-08:
 [docs/manifest-v2-example.json](docs/manifest-v2-example.json).
 
+## Repeat protection
+
+`scripts/repeats.py` compares a new issue with the last 60 catalogue entries, offline and without a model:
+its first source article was already the main source of one, two or more sources are shared, or the
+title, topic, slug, place and keywords share at least 40% of their words (plural-insensitive). Manifest
+entries store `sources` and `terms` (additive); `backfill_repeats.py` fills them for older entries from
+their `en.json` on `published` (a local copy; the branch is never changed). Replaying the real
+catalogue flags exactly one issue, 2026-11-09, which reused the NASA Goosenecks article of 2026-11-08.
+The word check alone scored that pair only 19%, so the source check is the main safeguard. Not caught:
+the same event reported from entirely different sources in different words.
+
 ## Formula bank
 
 The key equation comes from [`schema/formulas.json`](schema/formulas.json): 46 formulas (21 core for SMP,

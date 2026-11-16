@@ -93,6 +93,8 @@ jobs:
           mkdir -p .gemini
           git fetch origin published
           git show FETCH_HEAD:manifest.json > .gemini/published-manifest.json
+          # Older entries lack the sources/terms that repeat protection compares; read them from the issues.
+          python scripts/backfill_repeats.py .gemini/published-manifest.json origin/published
           # The writer sometimes reads main's empty bootstrap catalogue instead.
           cp .gemini/published-manifest.json manifest.json
 

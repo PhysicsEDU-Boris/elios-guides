@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — 16 November 2026 (repeat protection)
+
+- `scripts/repeats.py`: an issue is rejected when its main source article was already used in the last 60 issues, when two sources are shared, or when its words overlap 40% with one. Manifest entries gain `sources` and `terms`; older entries are backfilled in the research workflow.
+
 ## Unreleased — 16 November 2026 (cover fallback)
 
 - `cover.image` may be null: Wikimedia Commons archive photo first (`scripts/find_images.py`), then a generated ELIOS cover from the equation. Replaces the rule that a missing cover photo blocks publication.

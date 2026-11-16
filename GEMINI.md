@@ -11,7 +11,11 @@ Every reference to manifest.json below means this catalogue. It contains the dep
   flow, air and particles, waves and storms, energy and electricity, light and radiation, sound,
   sea level, waste and recycling. Prefer Indonesia and Southeast Asia; otherwise global news students
   know about.
-- Not a slug or topic used in the last 14 entries of manifest.json.
+- Not a slug or topic used in the last 14 entries of manifest.json, and not an event already covered:
+  each entry lists its `sources` (normalized urls) and `terms`. validate.py rejects an issue whose
+  first source article was used in the last 60 issues, that shares two or more sources with one, or
+  whose title, topic, slug, place and keywords share 40% of their words with one. Pick a different
+  event and a different main article; a new angle on the same article is a repeat.
 - At least 3 sources, at least one primary (BMKG, BNPB, NASA, NOAA, WMO, WHO, UNEP, UNFCCC,
   Copernicus, CREA, universities, peer-reviewed journals). News sites only for context.
 - Each source url is the exact article, report or data page you opened, never a homepage.
