@@ -36,7 +36,9 @@ def page(tmp_path):
         pytest.skip(f"Chromium unavailable: {error}")
     page = browser.new_page(viewport={"width": 1440, "height": 900})
     page.route("**/supabase.min.js", lambda route: route.fulfill(body="", content_type="text/javascript"))
-    page.route(PAGES + "manifest.json", lambda r: r.fulfill(json={"guides": [{"date": "2026-11-08", "content": {"en": "issues/2026-11-08/en.json"}}]}))
+    page.route(PAGES + "manifest.json", lambda r: r.fulfill(json={"guides": [{"date": "2026-11-08", "issue": "01", "title": {"en": "Heat story", "id": "Cerita panas"}, "topic": {"en": "Heat"},
+        "photo": {"thumb": "issues/2026-11-08/photo-800.jpg"}, "pdf": {"en": "issues/2026-11-08/en.pdf", "id": "issues/2026-11-08/id.pdf"},
+        "content": {"en": "issues/2026-11-08/en.json", "id": "issues/2026-11-08/en.json"}}]}))
     page.route(PAGES + "issues/2026-11-08/en.json", lambda r: r.fulfill(json=EN))
     yield page
     browser.close()
@@ -47,7 +49,7 @@ def stub(page, session, rpc_result):
     page.add_init_script(f"""window.supabase = {{ createClient: () => ({{
         auth: {{ getSession: async () => ({{ data: {{ session: {json.dumps(session)} }} }}), signOut: async () => {{}},
                  signInWithOtp: async () => ({{ error: null }}) }},
-        rpc: async (name) => name === "insights_summary" && !{json.dumps(rpc_result)}.error ? {json.dumps({"data": SUMMARY, "error": None})} : ({json.dumps(rpc_result)}) }}) }};""")
+        rpc: async (name) => name === "magazine_stats" ? {{ data: [{{guide_date: "2026-11-08", started: 3, story: 3, physics: 2, quiz: 1, lab: 0}}], error: null }} : name === "insights_summary" && !{json.dumps(rpc_result)}.error ? {json.dumps({"data": SUMMARY, "error": None})} : ({json.dumps(rpc_result)}) }}) }};""")
 
 
 def open_dashboard(page, rows=ROWS, tab="quiz"):
@@ -129,3 +131,13 @@ def test_no_rows_shows_friendly_empty_texts(page):
     assert "No quiz answers in this period yet" in page.inner_text("#topics")
     page.click("#tabs [data-tab=quiz]")
     assert "No question has enough answers" in page.inner_text("#questions")
+
+
+def test_magazines_tab_lists_issues_and_shows_content_and_progress(page):
+    open_dashboard(page, tab="magazines")
+    page.wait_for_selector("#mdetail .mhead")
+    assert "Heat story" in page.inner_text("#mlist") and "3 started" in page.inner_text("#mlist")
+    assert "#01" in page.inner_text("#mhealth")
+    detail = page.inner_text("#mdetail")
+    assert "Heat energy" in detail and "Quiz done" in detail and "33%" in detail
+    assert page.locator("#mdetail a[href$='en.pdf']").count() == 1 and page.evaluate("window.pwned") is None

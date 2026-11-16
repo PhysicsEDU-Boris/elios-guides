@@ -62,7 +62,7 @@ function nextRemedialDays(n, from = new Date()) {
   return out;
 }
 
-const state = { tab: "overview", days: 30, filter: "all", rows: [], docs: {}, client: null };
+const state = { mlang: "en", tab: "overview", days: 30, filter: "all", rows: [], docs: {}, client: null };
 
 function show(view) {
   for (const id of ["login", "sent", "denied", "app"]) $(id).hidden = id !== view;
@@ -250,6 +250,79 @@ async function refresh() {
   renderScans(sm.data); renderRobot(sm.data);
   renderFilters(usable); renderQuestions(); renderConcepts(concepts); renderCalendar(concepts);
   setTab(state.tab);
+  renderMagazines();
+}
+
+// ---- Magazines tab: published issues, their content, and how students did ----
+const dayLabel = iso => new Date(`${iso}T00:00:00Z`).toLocaleDateString("en", { weekday: "short", day: "numeric", timeZone: "UTC" });
+const safeUrl = u => (/^https?:\/\//.test(u) ? u : null);
+function healthRow(guides) {
+  const have = new Map(guides.map(g => [g.date, g]));
+  const dates = guides.map(g => g.date).sort(), today = new Date().toISOString().slice(0, 10), cells = [];
+  let missing = 0;
+  for (let d = new Date(`${dates[0]}T00:00:00Z`); d.toISOString().slice(0, 10) <= today; d.setUTCDate(d.getUTCDate() + 1)) {
+    const iso = d.toISOString().slice(0, 10), g = have.get(iso), pending = !g && iso === today;
+    if (!g && !pending) missing++;
+    cells.push(h("div", { class: `hday ${g ? "ok" : "none"}` }, h("span", {}, dayLabel(iso)), h("b", {}, g ? `#${g.issue}` : pending ? "Today" : "None")));
+  }
+  $("mhealth").replaceChildren(h("div", { class: "hhead" }, h("h2", { class: "subhead" }, "Publishing health"), chip(missing ? "sun" : "green", missing ? `${missing} day(s) without a magazine` : "A magazine every day")), h("div", { class: "hdays" }, cells));
+}
+function progressRow(label, n, total, cls) {
+  const p = share(n, total);
+  return h("div", { class: "rowbar" }, h("div", { class: "hd" }, h("span", { class: "n" }, label), h("span", { class: "v" }, `${p}% · ${n}`)), h("div", { class: "split" }, h("i", { class: cls, style: `width:${p}%` })));
+}
+async function renderDetail(g) {
+  const base = window.ELIOS_CONFIG.pages, st = state.mstats.get(g.date) || { started: 0, story: 0, physics: 0, quiz: 0, lab: 0 };
+  let en = null;
+  try { en = await (await fetch(base + (g.content[state.mlang] || g.content.en))).json(); } catch { /* content not readable */ }
+  const t = k => (en && en[k]) || "";
+  const sec = (title, tone, ...kids) => h("div", { class: `msec ${tone}` }, h("span", { class: "overline" }, title), ...kids.filter(Boolean));
+  const legend = [1, 2, 3, 4, 5].filter(i => t(`legend.${i}.symbol`)).map(i => `${t(`legend.${i}.symbol`)} ${t(`legend.${i}.meaning`)} (${t(`legend.${i}.unit`)})`).join(" · ");
+  const quiz = [1, 2, 3].filter(i => t(`quiz.${i}.question`)).map(i => {
+    const right = String(en._answers[i]).toLowerCase();
+    return h("div", { class: "mq" }, h("b", {}, `${i}. ${t(`quiz.${i}.question`)}`), ...LETTERS.map(l => h("div", { class: l === right ? "mo ok" : "mo" }, `${l.toUpperCase()}: ${t(`quiz.${i}.${l}`)}${l === right ? "  ✓" : ""}`)));
+  });
+  const steps = [1, 2, 3, 4].map(i => t(`lab.step_${i}`)).filter(Boolean);
+  const srcs = ((en && en._sources) || []).map(x => { const u = safeUrl(x.url); return h("div", {}, `[${x.n}] ${x.publisher}: ${x.title} `, u ? h("a", { attrs: { href: u, target: "_blank", rel: "noopener noreferrer" } }, "link") : null); });
+  const qrows = state.mq.filter(r => r.guide_date === g.date && /^p[1-3]$/.test(r.question_id)).sort((a, b) => a.question_id.localeCompare(b.question_id));
+  const pdf = safeUrl(base + (g.pdf[state.mlang] || g.pdf.en));
+  $("mdetail").replaceChildren(
+    h("div", { class: "mhead" }, h("img", { class: "mcover", attrs: { src: base + g.photo.thumb, alt: "" } }),
+      h("div", { class: "mtitle" }, h("span", { class: "overline" }, `Issue ${g.issue} · ${g.date} · ${g.topic.en}`), h("h2", { class: "headline" }, g.title[state.mlang] || g.title.en),
+        h("p", { class: "small muted" }, [t("cover.subject"), t("cover.read_time"), t("cover.level"), t("cover.xp_total")].filter(Boolean).join(" · ")),
+        pdf ? h("a", { class: "btn secondary", attrs: { href: pdf, target: "_blank", rel: "noopener noreferrer" } }, "Open PDF") : null),
+      h("div", { class: "seg" }, ["en", "id"].map(l => h("button", { attrs: { "aria-pressed": String(state.mlang === l) }, props: { type: "button", onclick: () => { state.mlang = l; renderDetail(g); } } }, l.toUpperCase())))),
+    h("div", { class: "mcols" },
+      h("div", { class: "mcontent" },
+        en ? [sec("Story", "raised", h("b", {}, t("story.title")), h("p", {}, t("story.lead")), h("p", { class: "tx2" }, t("story.body_1")), h("p", { class: "tx2" }, t("story.body_2"))),
+          sec("Physics", "sky", h("b", {}, `${t("physics.equation")}  ·  ${t("physics.equation_name")}`), h("p", { class: "tx2" }, legend), h("p", { class: "tx2" }, t("physics.body_1"))),
+          sec("Quiz · 3 questions", "green", quiz), sec("Mini-lab", "sun", h("b", {}, t("lab.title")), steps.map(x => h("div", {}, `• ${x}`)), h("p", { class: "tx2" }, t("lab.question"))),
+          sec("Sources", "raised", srcs)] : h("p", { class: "muted" }, "This magazine's content could not be loaded.")),
+      h("div", { class: "mstats" }, h("h3", { class: "subhead" }, "How students did"),
+        st.started ? [progressRow("Started", st.started, st.started, "s"), progressRow("Story read", st.story, st.started, "ok"), progressRow("Physics read", st.physics, st.started, "ok"),
+          progressRow("Quiz done", st.quiz, st.started, "ok"), progressRow("Mini-lab passed", st.lab, st.started, "ok")] : chip("sun", "Published but untouched: nobody has started it"),
+        qrows.length ? [h("p", { class: "bold" }, "Quiz: right vs wrong (first try)"), qrows.map(r => { const ok = share(r.attempts - r.wrong, r.attempts);
+          return h("div", { class: "rowbar" }, h("div", { class: "hd" }, h("span", { class: "n" }, qLabel(r.question_id)), h("span", { class: "v" }, `${ok}% right · ${r.attempts} answers`)),
+            h("div", { class: "split" }, h("i", { class: "ok", style: `width:${ok}%` }), h("i", { class: "bad", style: `width:${100 - ok}%` }))); })] : null)));
+}
+async function renderMagazines() {
+  const base = window.ELIOS_CONFIG.pages, client = state.client;
+  try { state.manifest ||= await (await fetch(base + "manifest.json")).json(); } catch { $("mlist").textContent = "The published list could not be loaded."; return; }
+  const [ms, qs] = await Promise.all([client.rpc("magazine_stats", { p_days: 365 }), client.rpc("question_stats", { p_days: 365, p_min: 1 })]);
+  state.mstats = new Map((ms.data || []).map(r => [r.guide_date, r])); state.mq = qs.data || [];
+  const guides = [...state.manifest.guides].sort((a, b) => b.date.localeCompare(a.date));
+  healthRow(guides);
+  state.msel ||= guides[0].date;
+  const draw = () => {
+    $("mlist").replaceChildren(h("h2", { class: "subhead" }, "Published magazines"), ...guides.map(g => {
+      const n = (state.mstats.get(g.date) || {}).started || 0;
+      return h("div", { class: `mrow${g.date === state.msel ? " sel" : ""}`, props: { onclick: () => { state.msel = g.date; draw(); renderDetail(g); } } },
+        h("img", { attrs: { src: base + g.photo.thumb, alt: "" } }),
+        h("div", { class: "mt" }, h("span", { class: "overline" }, `#${g.issue} · ${g.date}`), h("b", {}, g.title.en), h("span", { class: "small tx2" }, g.topic.en)),
+        chip(n ? "green" : "sun", n ? `${n} started` : "Untouched"));
+    }));
+  };
+  draw(); await renderDetail(guides.find(g => g.date === state.msel) || guides[0]);
 }
 
 async function start() {
