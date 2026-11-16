@@ -1,0 +1,368 @@
+{
+  "_example": false,
+  "_issue": "06",
+  "_slug": "jakarta-air-quality-particles",
+  "_theme": "air",
+  "_keywords": [
+    "air quality",
+    "particles",
+    "kualitas udara",
+    "polusi"
+  ],
+  "_date": "2026-11-10",
+  "_lang": "id",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "ANTARA",
+      "title": "Kualitas udara Jakarta tidak sehat pada Selasa pagi",
+      "date": "2026-11-10",
+      "url": "https://www.antaranews.com/berita/5843011/kualitas-udara-jakarta-tidak-sehat-pada-selasa-pagi",
+      "primary": false
+    },
+    {
+      "n": 2,
+      "publisher": "Copernicus Atmosphere Monitoring Service",
+      "title": "Air quality",
+      "date": "2026-11-10",
+      "url": "https://atmosphere.copernicus.eu/air-quality",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "WHO",
+      "title": "Ambient (outdoor) air pollution",
+      "date": "2024-10-24",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Jakarta_Skyline_from_Swadarma%2C_Pesanggrahan.jpg/1280px-Jakarta_Skyline_from_Swadarma%2C_Pesanggrahan.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Nanami976 / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Jakarta_Skyline_from_Swadarma%2C_Pesanggrahan.jpg/1280px-Jakarta_Skyline_from_Swadarma%2C_Pesanggrahan.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Nanami976 / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 1.44,
+  "_graph.2.raw": 7.2,
+  "_graph.3.raw": 28.8,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Massa jenis adalah massa dibagi volume.",
+      "wrong": {
+        "a": "Volume bukan massa.",
+        "c": "Kecepatan adalah jarak dibagi waktu.",
+        "d": "Tekanan adalah gaya dibagi luas."
+      }
+    },
+    "2": {
+      "why": "Udara hangat memuai sehingga massa jenisnya menurun.",
+      "wrong": {
+        "b": "Udara hangat lebih ringan per volume.",
+        "c": "Massa jenis tidak tetap.",
+        "d": "Udara dingin lebih padat."
+      }
+    },
+    "3": {
+      "why": "Pohon dan angin membantu menyebarkan serta menyaring partikel di udara.",
+      "wrong": {
+        "a": "Asap kendaraan menambah polusi.",
+        "b": "Udara tenang menjebak debu.",
+        "d": "Pabrik meningkatkan partikel."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "Apa lambang ρ dalam persamaan ρ = m ÷ V?",
+      "options": [
+        "Tekanan",
+        "Massa jenis",
+        "Daya",
+        "Periode"
+      ],
+      "answer": 1,
+      "explanation": "ρ melambangkan massa jenis yang mengukur seberapa padat suatu zat."
+    },
+    {
+      "question": "Apa satuan massa jenis dalam SI?",
+      "options": [
+        "kg",
+        "m³",
+        "kg/m³",
+        "N/m²"
+      ],
+      "answer": 2,
+      "explanation": "Massa jenis adalah massa dalam kilogram dibagi volume dalam meter kubik."
+    },
+    {
+      "question": "Jika massa berlipat ganda sedangkan volume tetap, massa jenis…",
+      "options": [
+        "menjadi setengah",
+        "tetap sama",
+        "berlipat ganda",
+        "menjadi empat kali"
+      ],
+      "answer": 2,
+      "explanation": "Massa jenis berbanding lurus dengan massa."
+    },
+    {
+      "question": "Mengapa udara hangat naik?",
+      "options": [
+        "Lebih padat",
+        "Massa jenisnya lebih kecil",
+        "Bersifat magnetis",
+        "Tekanannya lebih tinggi"
+      ],
+      "answer": 1,
+      "explanation": "Udara hangat memuai dan memiliki massa jenis lebih kecil daripada udara dingin."
+    },
+    {
+      "question": "Apa arti PM2.5?",
+      "options": [
+        "Partikel di bawah 2,5 mm",
+        "Partikel halus di bawah 2,5 µm",
+        "Tekanan 2,5 atm",
+        "Daya 2,5 W"
+      ],
+      "answer": 1,
+      "explanation": "PM2.5 adalah partikel materi halus berukuran di bawah 2,5 mikrometer."
+    },
+    {
+      "question": "Lembaga mana yang memantau cuaca dan udara di Indonesia?",
+      "options": [
+        "NASA",
+        "BMKG",
+        "WMO",
+        "NOAA"
+      ],
+      "answer": 1,
+      "explanation": "BMKG adalah lembaga meteorologi, klimatologi, dan geofisika di Indonesia."
+    },
+    {
+      "question": "Jika 1.000 m³ udara memiliki massa 1.200 kg, massa jenisnya adalah…",
+      "options": [
+        "1,0 kg/m³",
+        "1,2 kg/m³",
+        "1,3 kg/m³",
+        "2,2 kg/m³"
+      ],
+      "answer": 1,
+      "explanation": "1.200 ÷ 1.000 = 1,2 kg/m³."
+    },
+    {
+      "question": "Udara berpolusi yang padat membuat jarak pandang menjadi…",
+      "options": [
+        "lebih jelas",
+        "memburuk",
+        "lebih terang",
+        "tetap"
+      ],
+      "answer": 1,
+      "explanation": "Partikel tersuspensi menyebarkan cahaya dan mengurangi jarak pandang."
+    },
+    {
+      "question": "Alat apa yang membantu mengukur polutan udara?",
+      "options": [
+        "Termometer",
+        "Barometer",
+        "Sensor udara",
+        "Voltmeter"
+      ],
+      "answer": 2,
+      "explanation": "Sensor udara mengukur konsentrasi partikel di atmosfer."
+    },
+    {
+      "question": "Untuk mencari volume V saat massa dan massa jenis diketahui, gunakan…",
+      "options": [
+        "V = m × ρ",
+        "V = m ÷ ρ",
+        "V = ρ ÷ m",
+        "V = m + ρ"
+      ],
+      "answer": 1,
+      "explanation": "Dari ρ = m ÷ V, volume V sama dengan massa m dibagi massa jenis ρ."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "dua wadah atau gelas transparan",
+      "simulasi debu atau asap di luar atau dekat jendela secara aman",
+      "pengamatan pengendapan partikel"
+    ],
+    "safety": [
+      "tanpa nyala api, tanpa listrik utama, tanpa bahan kimia berbahaya",
+      "hanya tangan di dalam foto"
+    ],
+    "pass_if": "Foto menunjukkan wadah transparan dan pengamatan siswa terhadap partikel udara."
+  },
+  "_per_page": [
+    {
+      "guide.stop_label": "Sampul"
+    },
+    {
+      "guide.stop_label": "Pos 1 · Ceritanya",
+      "section.label": "POS 1 · CERITANYA",
+      "section.xp": "+10 XP UNTUK MEMBACA"
+    },
+    {
+      "guide.stop_label": "Pos 2 · Fisikanya",
+      "section.label": "POS 2 · FISIKANYA",
+      "section.xp": "+20 XP UNTUK MENJAWAB"
+    },
+    {
+      "guide.stop_label": "Pos 3 · Misimu",
+      "section.label": "POS 3 · MISIMU",
+      "section.xp": "+30 XP UNTUK DIRAIH"
+    }
+  ],
+  "_replace": {
+    "stop": [
+      [
+        "STOP",
+        "POS"
+      ]
+    ],
+    "page ref": [
+      [
+        "p.",
+        "hlm. "
+      ]
+    ]
+  },
+  "guide.issue_date": "#06 · 10 NOV 2026",
+  "guide.lang": "ID",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Edisi 6 · 10 Nov 2026",
+  "cover.title": "Debu dan asap di udara kota",
+  "cover.subtitle": "Udara Jakarta dinilai tidak sehat pekan ini. Pelajari bagaimana massa jenis menunjukkan banyaknya debu dan asap di tiap meter kubik.",
+  "cover.image_caption": "Langit kota Jakarta (foto arsip)",
+  "cover.news_date": "Berita: 10 Nov 2026",
+  "cover.place": "Jakarta, Indonesia",
+  "cover.topic": "Udara dan partikel",
+  "cover.subject": "Fisika · Massa jenis",
+  "quest.1.desc": "Baca kisah pagi berkabut",
+  "quest.2.desc": "Pakai ρ = m ÷ V",
+  "quest.3.desc": "Kuis, lab mini, dan lencana",
+  "cover.read_time": "12 mnt baca",
+  "cover.level": "SMP · kelas 7–9",
+  "cover.xp_total": "Raih hingga 60 XP",
+  "cover.fun_fact": "Kelas berisi ±180 kg udara, tetapi pada 10 Nov hanya 7,2 mg PM2.5.",
+  "story.title": "Pagi berkabut di ibu kota",
+  "story.lead": "Pada Selasa pagi, udara Jakarta dinilai tidak sehat [1]. Partikel halus PM2.5 mencapai 48 mikrogram di setiap meter kubik udara [1].",
+  "story.image_caption": "Kota Jakarta yang padat dilihat dari Pesanggrahan (foto arsip)",
+  "story.image_credit": "Nanami976 / Wikimedia Commons",
+  "stat.1.value": "127",
+  "stat.2.value": "48 µg/m³",
+  "stat.3.value": "9,2 ×",
+  "stat.1.label": "indeks kualitas udara Jakarta pukul 07.00 WIB: tidak sehat [1]",
+  "stat.2.label": "PM2.5 (debu, asap, jelaga) di tiap meter kubik [1]",
+  "stat.3.label": "lebih tinggi dari panduan tahunan WHO untuk PM2.5 [1]",
+  "story.body_1": "PM2.5 adalah partikel lebih kecil dari 2,5 mikrometer, seperti debu, asap, dan jelaga [1]. Pagi itu Jakarta menjadi kota kelima terburuk di Indonesia [1]. Lembaga seperti Copernicus memadukan data satelit dan model komputer untuk meramal isi udara [2].",
+  "story.body_2": "Dinas Lingkungan Hidup menyarankan masker, tetap di dalam ruangan, menutup jendela, dan memakai penyaring udara [1]. Partikel halus memicu penyakit jantung dan paru; transportasi bersih dan kota hijau membantu menguranginya [3].",
+  "timeline.1.date": "Pagi",
+  "timeline.2.date": "Siang",
+  "timeline.3.date": "Malam",
+  "timeline.1.text": "Udara pagi yang dingin menjebak debu dan asap dekat permukaan tanah.",
+  "timeline.2.text": "Sinar matahari menghangatkan udara sehingga memuai dan naik ke atas.",
+  "timeline.3.text": "Angin membawa partikel pergi dan mencampurnya dengan udara lain.",
+  "physics.title": "Massa jenis: massa tiap meter kubik",
+  "physics.body_1": "Massa jenis menunjukkan berapa massa yang ada di setiap meter kubik: ρ = m ÷ V. Udara bersih dekat permukaan laut sekitar 1,2 kg/m³, jadi kelas 150 m³ berisi sekitar 180 kg udara.",
+  "physics.body_2": "Polusi diukur dengan cara yang sama, dalam mikrogram per meter kubik. Balik persamaannya, m = ρ × V, untuk mencari massa partikel di sebuah ruangan. Sangat kecil, tetapi berbahaya.",
+  "physics.equation": "ρ = m ÷ V",
+  "physics.equation_name": "Persamaan massa jenis (m = ρ × V)",
+  "legend.1.symbol": "ρ",
+  "legend.1.meaning": "massa jenis atau konsentrasi",
+  "legend.1.unit": "kg/m³ · µg/m³",
+  "legend.2.symbol": "m",
+  "legend.2.meaning": "massa",
+  "legend.2.unit": "kg · mg · µg",
+  "legend.3.symbol": "V",
+  "legend.3.meaning": "volume",
+  "legend.3.unit": "meter kubik (m³)",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "Kita anggap partikel tersebar merata di ruangan dan nilai pengukurannya tetap.",
+  "example.step_1": "ρ = 48 µg/m³, V = 150 m³",
+  "example.step_2": "m = ρ × V = 48 × 150",
+  "example.step_3": "m = 7.200 µg = 7,2 mg",
+  "example.result": "m = 7,2 mg",
+  "table.h1": "Ruangan",
+  "table.h2": "Volume V (m³)",
+  "table.h3": "Massa PM2.5 m (mg)",
+  "table.r1c1": "Kamar tidur",
+  "table.r1c2": "30",
+  "table.r1c3": "1,44",
+  "table.r2c1": "Ruang kelas",
+  "table.r2c2": "150",
+  "table.r2c3": "7,2",
+  "table.r3c1": "Aula sekolah",
+  "table.r3c2": "600",
+  "table.r3c3": "28,8",
+  "table.note": "Udara sama (48 µg/m³), ruang lebih besar, massa lebih besar.",
+  "graph.title": "Massa PM2.5 di ruangan pada 10 Nov",
+  "graph.1.label": "Kamar",
+  "graph.2.label": "Kelas",
+  "graph.3.label": "Aula",
+  "graph.1.value": "1,44 mg",
+  "graph.2.value": "7,2 mg",
+  "graph.3.value": "28,8 mg",
+  "graph.note": "Ruang 20 kali lebih besar menampung massa partikel 20 kali lebih banyak: m = ρ × V.",
+  "physics.tip": "Balik ρ = m ÷ V menjadi m = ρ × V: massa jenis kali volume memberi massa di ruang mana pun.",
+  "mission.title": "Misi penyelidik kualitas udara",
+  "quiz.answer_key": "Kunci: 1B · 2A · 3C",
+  "quiz.1.question": "Apa arti lambang ρ dalam persamaan massa jenis?",
+  "quiz.1.a": "Tekanan",
+  "quiz.1.b": "Massa jenis",
+  "quiz.1.c": "Daya",
+  "quiz.1.d": "Periode",
+  "quiz.2.question": "Bagaimana udara hangat memengaruhi massa jenis?",
+  "quiz.2.a": "Massa jenis berkurang",
+  "quiz.2.b": "Massa jenis bertambah",
+  "quiz.2.c": "Massa jenis tetap",
+  "quiz.2.d": "Massa jenis nol",
+  "quiz.3.question": "Tindakan apa yang membantu menjernihkan partikel udara kota?",
+  "quiz.3.a": "Asap kendaraan lebih banyak",
+  "quiz.3.b": "Malam hari tanpa angin",
+  "quiz.3.c": "Pohon dan tiupan angin",
+  "quiz.3.d": "Membakar daun kering",
+  "lab.title": "Uji debu dan pengendapan",
+  "lab.step_1": "Siapkan dua wadah transparan dan amati partikel debu dalam cahaya.",
+  "lab.step_2": "Tutup satu wadah dan biarkan wadah lainnya terbuka di dekat jendela.",
+  "lab.step_3": "Periksa setelah 30 menit untuk melihat debu yang mengendap.",
+  "lab.question": "Bagaimana partikel mengendap? Gunakan massa jenis untuk menjelaskan udara.",
+  "badge.name": "Penjaga Udara",
+  "badge.text": "Kamu mengukur polusi udara dengan massa jenis.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Massa jenis",
+  "glossary.2.term": "Partikulat",
+  "glossary.3.term": "Atmosfer",
+  "glossary.1.def": "Massa per satuan volume suatu zat.",
+  "glossary.2.def": "Partikel padat atau cair kecil yang melayang di udara.",
+  "glossary.3.def": "Lapisan gas yang menyelimuti Bumi.",
+  "label.sources": "Sumber",
+  "source.1": "[1] ANTARA, Kualitas udara Jakarta tidak sehat pada Selasa pagi, 10 Nov 2026",
+  "source.2": "[2] Copernicus Atmosphere Monitoring Service, Air quality",
+  "source.3": "[3] WHO, Ambient (outdoor) air pollution, 24 Okt 2024",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Foto sampul & cerita: Nanami976 / Wikimedia Commons (CC BY-SA 4.0). Ilustrasi lain oleh ELIOS."
+}

@@ -1,0 +1,15 @@
+{
+  "rho_air": 1.2,
+  "pm25": 48,
+  "who_multiple": 9.2,
+  "who_guideline": 5.22,
+  "air_mass_classroom_kg": 180.0,
+  "V_bedroom": 30,
+  "pm_mg_bedroom": 1.44,
+  "V_classroom": 150,
+  "pm_mg_classroom": 7.2,
+  "V_hall": 600,
+  "pm_mg_hall": 28.8,
+  "pm_ug_classroom": 7200,
+  "who_mg_classroom": 0.78
+}

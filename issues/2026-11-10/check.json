@@ -1,0 +1,79 @@
+[
+  {
+    "item": "cover.news_date",
+    "claim": "News: 10 Nov 2026",
+    "source": "https://www.antaranews.com/berita/5843011/kualitas-udara-jakarta-tidak-sehat-pada-selasa-pagi",
+    "pass": true,
+    "note": "ANTARA datePublished 2026-11-10T08:13:48+07:00, Tuesday. Manual check by Claude on 2026-11-16 against the fetched page."
+  },
+  {
+    "item": "story.lead",
+    "claim": "Jakarta air rated unhealthy on Tuesday morning",
+    "source": "https://www.antaranews.com/berita/5843011/kualitas-udara-jakarta-tidak-sehat-pada-selasa-pagi",
+    "pass": true,
+    "note": "\"kualitas udara di Jakarta tidak sehat pada Selasa pagi pukul 07.00 WIB\". Manual check by Claude on 2026-11-16 against the fetched page."
+  },
+  {
+    "item": "stat.1.value",
+    "claim": "AQI 127 at 07:00 WIB",
+    "source": "https://www.antaranews.com/berita/5843011/kualitas-udara-jakarta-tidak-sehat-pada-selasa-pagi",
+    "pass": true,
+    "note": "\"IQAir mencatat kualitas udara Jakarta berada pada poin 127\". Manual check by Claude on 2026-11-16 against the fetched page."
+  },
+  {
+    "item": "stat.2.value",
+    "claim": "PM2.5 48 µg/m³",
+    "source": "https://www.antaranews.com/berita/5843011/kualitas-udara-jakarta-tidak-sehat-pada-selasa-pagi",
+    "pass": true,
+    "note": "\"konsentrasi polutan PM 2,5 sebesar 48 mikrogram per meter kubik\". Manual check by Claude on 2026-11-16 against the fetched page."
+  },
+  {
+    "item": "stat.3.value",
+    "claim": "9.2 × WHO annual guideline",
+    "source": "https://www.antaranews.com/berita/5843011/kualitas-udara-jakarta-tidak-sehat-pada-selasa-pagi",
+    "pass": true,
+    "note": "\"9,2 kali lebih tinggi dari nilai panduan kualitas udara tahunan ... WHO\". Manual check by Claude on 2026-11-16 against the fetched page."
+  },
+  {
+    "item": "story.body_1",
+    "claim": "PM2.5 under 2.5 µm: dust, smoke, soot; Jakarta 5th-worst in Indonesia",
+    "source": "https://www.antaranews.com/berita/5843011/kualitas-udara-jakarta-tidak-sehat-pada-selasa-pagi",
+    "pass": true,
+    "note": "\"partikel berukuran lebih kecil 2,5 mikron ... debu, asap dan jelaga\"; \"urutan kelima terburuk se-Indonesia\". Manual check by Claude on 2026-11-16 against the fetched page."
+  },
+  {
+    "item": "story.body_1",
+    "claim": "Copernicus combines satellite data and models to forecast air composition",
+    "source": "https://atmosphere.copernicus.eu/air-quality",
+    "pass": true,
+    "note": "Page: combines models with satellite and non-satellite observations, \"daily forecasts of the composition of the air worldwide\". Manual check by Claude on 2026-11-16 against the fetched page."
+  },
+  {
+    "item": "story.body_2",
+    "claim": "Advice: masks, stay indoors, close windows, air purifiers",
+    "source": "https://www.antaranews.com/berita/5843011/kualitas-udara-jakarta-tidak-sehat-pada-selasa-pagi",
+    "pass": true,
+    "note": "\"mengenakan masker ... menghindari beraktivitas di luar ruangan, menutup jendela ... menyalakan penyaring udara\". Manual check by Claude on 2026-11-16 against the fetched page."
+  },
+  {
+    "item": "story.body_2",
+    "claim": "Fine particles cause heart and lung disease; cleaner transport and greener cities reduce sources",
+    "source": "https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health",
+    "pass": true,
+    "note": "\"fine particulate matter, which causes cardiovascular and respiratory disease, and cancers\"; cleaner transport and green, compact cities listed. Manual check by Claude on 2026-11-16 against the fetched page."
+  },
+  {
+    "item": "physics",
+    "claim": "rho_air 1.2 kg/m³; m = ρ × V; table, graph and example values",
+    "source": "calc.py",
+    "pass": true,
+    "note": "Computed by calc.py from ρ = 48 µg/m³ and room volumes; 1.2 kg/m³ is the standard sea-level air density. Manual check by Claude on 2026-11-16 against the fetched page."
+  },
+  {
+    "item": "bilingual",
+    "claim": "id.json states the same facts and answers as en.json",
+    "source": "en.json / id.json",
+    "pass": true,
+    "note": "Same keys, numbers (decimal comma in id), sources and answer key 1B · 2A · 3C. Manual check by Claude on 2026-11-16 against the fetched page."
+  }
+]
