@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — 16 November 2026 (no Figma)
+
+- PDFs and covers are rendered from `en.json`/`id.json` by `scripts/render_guide.py` (Chromium, `render/`), right after research passes. No Figma file, token, scheduled Claude task, `figma.json`, `resync.json` or `rebuild.txt`.
+- Edits to printed text re-render and publish through `resync.yml`; the 08:00 stale-refill check is gone.
+- Fact-check fallback chain: Gemini, alternate Gemini model, then optional Groq and OpenRouter (OpenAI-compatible).
+
 ## Unreleased — 9 November 2026 (G4 app feed, decision 0002)
 
 - Manifest v2 (additive): `schema`, `theme`, `photo`, `content_sha`, `xp_parts`, `pages`; `revision` now covers JSON and photos.

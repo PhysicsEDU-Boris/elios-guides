@@ -1,7 +1,7 @@
 name: resync
 
 # Owner edits to an issue's text (on guide/<date> directly or by merging a correction PR into it):
-# check again, then either mark a Figma refill (resync.json) or publish app-only changes directly.
+# check again, then re-render and publish (printed text) or publish directly (app-only fields).
 on:
   push:
     branches: ["guide/**", "!guide/dry-run-**"]
@@ -83,17 +83,16 @@ jobs:
           echo "action=$ACTION" >> "$GITHUB_OUTPUT"
           echo "Resync action: **$ACTION**" >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Push resync.json for the Claude/Figma task
-        if: steps.decide.outputs.action == 'figma'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "issues/$DATE/resync.json"
-          git commit -m "resync: issue $DATE needs a Figma refill"
-          git push origin "HEAD:guide/$DATE"
+  export:
+    # Printed text changed, or the issue was never exported (a fixed NEEDS FIX branch).
+    needs: check
+    if: needs.check.outputs.action == 'export'
+    uses: ./.github/workflows/export.yml
+    with:
+      date: ${{ needs.check.outputs.date }}
 
   publish:
-    # App-only fields changed and the issue is already in Figma: same date, new revision and content_sha.
+    # Only app fields changed: same PDFs, new revision and content_sha.
     needs: check
     if: needs.check.outputs.action == 'publish'
     uses: ./.github/workflows/publish.yml
