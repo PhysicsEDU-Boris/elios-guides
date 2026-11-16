@@ -1,0 +1,37 @@
+[
+  {
+    "item": "Calculation for air density",
+    "claim": "Density of sea-level air is 1.2 kg/m³, warm air is 1.0 kg/m³, and polluted air is 1.3 kg/m³ using 1,000 m³ volume.",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculations consistent: 1,200/1,000 = 1.2, 1,000/1,000 = 1.0, 1,300/1,000 = 1.3."
+  },
+  {
+    "item": "BMKG as air quality source",
+    "claim": "BMKG monitors weather and air in Indonesia.",
+    "source": "1",
+    "pass": false,
+    "note": "The provided BMKG URL is a generic weather forecast landing page and does not contain text verifying its role as an air quality monitoring agency for Jakarta as claimed in the story."
+  },
+  {
+    "item": "Pollution transport",
+    "claim": "Pollution is transported from one location to another by wind patterns in the atmosphere.",
+    "source": "2",
+    "pass": true,
+    "note": "The source explicitly states: 'pollution is transported from one location to another by wind patterns in the atmosphere'."
+  },
+  {
+    "item": "Bilingual agreement",
+    "claim": "The English and Indonesian labels follow the requested format and translations.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "Indonesian labels match requested naming conventions (e.g., KUIS KILAT, LAB MINI) and decimal/thousands formatting."
+  },
+  {
+    "item": "News date accuracy",
+    "claim": "News: 9 Nov 2026",
+    "source": "1",
+    "pass": false,
+    "note": "Source 1 URL does not contain any text mentioning November 9, 2026, or any news content."
+  }
+]
