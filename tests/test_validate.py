@@ -288,10 +288,10 @@ def test_cover_image_too_small(issue):
     has(issue.errors(), "cover.image cover.jpg long side is 1280 px, needs at least 1600 px")
 
 
-def test_null_cover_cannot_silently_become_an_app_placeholder(issue):
+def test_null_cover_is_allowed_and_becomes_a_generated_cover(issue):
     issue.en["_images"]["cover.image"] = None
     issue.id["_images"]["cover.image"] = None
-    has(issue.errors(), "cover.image needs a licensed photo")
+    assert not any("cover.image" in e for e in issue.errors())
 
 
 def test_photo_rules(issue):

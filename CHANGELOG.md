@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased — 16 November 2026 (cover fallback)
+
+- `cover.image` may be null: Wikimedia Commons archive photo first (`scripts/find_images.py`), then a generated ELIOS cover from the equation. Replaces the rule that a missing cover photo blocks publication.
+- Renderer waits for KaTeX fonts before measuring, so equations are fitted with the real font.
+
 ## Unreleased — 16 November 2026 (formula bank)
 
 - `schema/formulas.json`: 46 curated formulas (core and stretch) with LaTeX; the writer picks one by `_formula` instead of inventing an equation.

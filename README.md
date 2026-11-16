@@ -54,7 +54,11 @@ long side under 1600 px (cover) / 1200 px (story), Laplacian variance under 120 
 (calibrated on `tests/fixtures/sharpness`: sharp 144–2945, blurry 13–88) and estimated JPEG quality
 under 70. It never upscales. Kept photos are saved at most 2000 px, sRGB, quality 85, progressive; the
 cover photo also as `photo.jpg` + `photo-800.jpg` (quality 82) for the app. A failed optional story photo
-may become `null`; a missing cover photo or app thumbnail blocks publication. The renderer embeds the full-resolution file; the cover PNG is
+may become `null`. A failed or missing cover photo is replaced, in order, by a Wikimedia Commons archive
+photo ([`find_images.py`](scripts/find_images.py): CC0, public domain, CC BY or CC BY-SA, same size and
+sharpness checks, captioned "Archive photo · place"), then by an ELIOS cover drawn from the issue's own
+equation on a theme gradient. The app card shows its topic illustration when `photo` is `null`. News-site
+photos are never used (copyrighted). The renderer embeds the full-resolution file; the cover PNG is
 rendered at scale 2 and must be at least 1190×1684.
 
 ## Fact check
