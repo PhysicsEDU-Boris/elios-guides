@@ -2,53 +2,224 @@
   "_issue": "04",
   "_slug": "heavy-rain-and-river-floods",
   "_theme": "water",
-  "_keywords": ["banjir", "flood", "hujan", "rain"],
+  "_keywords": [
+    "banjir",
+    "flood",
+    "hujan",
+    "rain"
+  ],
   "_date": "2026-11-16",
   "_lang": "en",
   "_sources": [
-    {"n": 1, "publisher": "NASA Earth Observatory", "title": "Water surges into navajo reservoir", "date": "2026-11-11", "url": "https://science.nasa.gov/earth/earth-observatory/", "primary": true},
-    {"n": 2, "publisher": "NASA Earth Observatory", "title": "Scotland’s flow country", "date": "2026-11-12", "url": "https://science.nasa.gov/earth/earth-observatory/", "primary": true},
-    {"n": 3, "publisher": "NASA Earth Observatory", "title": "A global rebound for mangroves", "date": "2026-11-13", "url": "https://science.nasa.gov/earth/earth-observatory/", "primary": true}
+    {
+      "n": 1,
+      "publisher": "NASA Earth Observatory",
+      "title": "Water surges into navajo reservoir",
+      "date": "2026-11-11",
+      "url": "https://science.nasa.gov/earth/earth-observatory/",
+      "primary": true
+    },
+    {
+      "n": 2,
+      "publisher": "NASA Earth Observatory",
+      "title": "Scotland’s flow country",
+      "date": "2026-11-12",
+      "url": "https://science.nasa.gov/earth/earth-observatory/",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "NASA Earth Observatory",
+      "title": "A global rebound for mangroves",
+      "date": "2026-11-13",
+      "url": "https://science.nasa.gov/earth/earth-observatory/",
+      "primary": true
+    }
   ],
   "_images": {
-    "cover.image": {"file": "cover.jpg", "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Ciliwung_01.jpg", "license": "CC BY-SA 4.0", "credit": "FIYYNUT / Wikimedia Commons"},
-    "story.image": null,
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Ciliwung_01.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "FIYYNUT / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Ciliwung_01.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "FIYYNUT / Wikimedia Commons"
+    },
     "physics.diagram": null
   },
   "_graph.1.raw": 6.0,
   "_graph.2.raw": 48.0,
   "_graph.3.raw": 576.0,
-  "_answers": {"1": "a", "2": "b", "3": "c"},
+  "_answers": {
+    "1": "a",
+    "2": "b",
+    "3": "c"
+  },
   "_quiz_explain": {
-    "1": {"why": "Volumetric flow rate Q equals cross-sectional area A multiplied by velocity v.", "wrong": {"b": "Area is not added to velocity.", "c": "Velocity is not divided by area.", "d": "Time is not multiplied directly here."}},
-    "2": {"why": "If a river widens and deepens, its cross-sectional area A increases, raising discharge.", "wrong": {"a": "Narrower area reduces flow volume.", "c": "Water temperature does not directly set flow rate.", "d": "Colour does not affect flow."}},
-    "3": {"why": "Clearing river channels and planting trees reduces peak flood velocity and erosion.", "wrong": {"a": "Building concrete walls without care can worsen downstream surges.", "b": "Narrowing channels increases speed dangerously.", "d": "Removing vegetation causes more runoff."}}
+    "1": {
+      "why": "Volumetric flow rate Q equals cross-sectional area A multiplied by velocity v.",
+      "wrong": {
+        "b": "Area is not added to velocity.",
+        "c": "Velocity is not divided by area.",
+        "d": "Time is not multiplied directly here."
+      }
+    },
+    "2": {
+      "why": "If a river widens and deepens, its cross-sectional area A increases, raising discharge.",
+      "wrong": {
+        "a": "Narrower area reduces flow volume.",
+        "c": "Water temperature does not directly set flow rate.",
+        "d": "Colour does not affect flow."
+      }
+    },
+    "3": {
+      "why": "Clearing river channels and planting trees reduces peak flood velocity and erosion.",
+      "wrong": {
+        "a": "Building concrete walls without care can worsen downstream surges.",
+        "b": "Narrowing channels increases speed dangerously.",
+        "d": "Removing vegetation causes more runoff."
+      }
+    }
   },
   "_quiz_pool": [
-    {"question": "What does Q stand for in river physics?", "options": ["Volumetric flow rate", "Heat energy", "Mass", "Temperature"], "answer": 0, "explanation": "Q is the volume of water passing per second."},
-    {"question": "What is the unit of flow velocity v?", "options": ["m/s", "m²", "kg", "J"], "answer": 0, "explanation": "Velocity is distance divided by time (m/s)."},
-    {"question": "If cross-sectional area A is 12 m² and velocity v is 4 m/s, Q is…", "options": ["6 m³/s", "48 m³/s", "16 m³/s", "576 m³/s"], "answer": 1, "explanation": "12 × 4 = 48 cubic meters per second."},
-    {"question": "During heavy rain, why do rivers overflow?", "options": ["Q exceeds channel capacity", "Water shrinks", "Gravity stops", "Rivers freeze"], "answer": 0, "explanation": "When water volume and speed surge, Q exceeds what the channel can hold."},
-    {"question": "What does A represent in Q = A × v?", "options": ["Cross-sectional area", "Acceleration", "Altitude", "Air pressure"], "answer": 0, "explanation": "A is the area of the river channel cut."},
-    {"question": "Which agency monitors weather and rain globally?", "options": ["NASA Earth Observatory", "WMO", "WHO", "UNEP"], "answer": 0, "explanation": "NASA Earth Observatory tracks Earth systems."},
-    {"question": "What happens to river flow when heavy rain falls upstream?", "options": ["Discharge increases rapidly", "Flow stops", "Water turns into gas", "Nothing changes"], "answer": 0, "explanation": "More runoff swells rivers quickly."},
-    {"question": "What is the unit for cross-sectional area A?", "options": ["Square meters (m²)", "Meters (m)", "Seconds (s)", "Joules (J)"], "answer": 0, "explanation": "Area is measured in square meters."},
-    {"question": "Which organisation handles disaster response and flood data?", "options": ["NASA", "BMKG", "WMO", "WHO"], "answer": 0, "explanation": "NASA monitors flood and rain events."},
-    {"question": "Why do natural river bends slow down water flow?", "options": ["Friction and curves dissipate energy", "Gravity pushes upstream", "Water disappears", "Bends speed up water"], "answer": 0, "explanation": "Curves and friction slow down water movement."}
+    {
+      "question": "What does Q stand for in river physics?",
+      "options": [
+        "Volumetric flow rate",
+        "Heat energy",
+        "Mass",
+        "Temperature"
+      ],
+      "answer": 0,
+      "explanation": "Q is the volume of water passing per second."
+    },
+    {
+      "question": "What is the unit of flow velocity v?",
+      "options": [
+        "m/s",
+        "m²",
+        "kg",
+        "J"
+      ],
+      "answer": 0,
+      "explanation": "Velocity is distance divided by time (m/s)."
+    },
+    {
+      "question": "If cross-sectional area A is 12 m² and velocity v is 4 m/s, Q is…",
+      "options": [
+        "6 m³/s",
+        "48 m³/s",
+        "16 m³/s",
+        "576 m³/s"
+      ],
+      "answer": 1,
+      "explanation": "12 × 4 = 48 cubic meters per second."
+    },
+    {
+      "question": "During heavy rain, why do rivers overflow?",
+      "options": [
+        "Q exceeds channel capacity",
+        "Water shrinks",
+        "Gravity stops",
+        "Rivers freeze"
+      ],
+      "answer": 0,
+      "explanation": "When water volume and speed surge, Q exceeds what the channel can hold."
+    },
+    {
+      "question": "What does A represent in Q = A × v?",
+      "options": [
+        "Cross-sectional area",
+        "Acceleration",
+        "Altitude",
+        "Air pressure"
+      ],
+      "answer": 0,
+      "explanation": "A is the area of the river channel cut."
+    },
+    {
+      "question": "Which agency monitors weather and rain globally?",
+      "options": [
+        "NASA Earth Observatory",
+        "WMO",
+        "WHO",
+        "UNEP"
+      ],
+      "answer": 0,
+      "explanation": "NASA Earth Observatory tracks Earth systems."
+    },
+    {
+      "question": "What happens to river flow when heavy rain falls upstream?",
+      "options": [
+        "Discharge increases rapidly",
+        "Flow stops",
+        "Water turns into gas",
+        "Nothing changes"
+      ],
+      "answer": 0,
+      "explanation": "More runoff swells rivers quickly."
+    },
+    {
+      "question": "What is the unit for cross-sectional area A?",
+      "options": [
+        "Square meters (m²)",
+        "Meters (m)",
+        "Seconds (s)",
+        "Joules (J)"
+      ],
+      "answer": 0,
+      "explanation": "Area is measured in square meters."
+    },
+    {
+      "question": "Which organisation handles disaster response and flood data?",
+      "options": [
+        "NASA",
+        "BMKG",
+        "WMO",
+        "WHO"
+      ],
+      "answer": 0,
+      "explanation": "NASA monitors flood and rain events."
+    },
+    {
+      "question": "Why do natural river bends slow down water flow?",
+      "options": [
+        "Friction and curves dissipate energy",
+        "Gravity pushes upstream",
+        "Water disappears",
+        "Bends speed up water"
+      ],
+      "answer": 0,
+      "explanation": "Curves and friction slow down water movement."
+    }
   ],
   "_lab_rubric": {
-    "must_show": ["a tilted tray or gutter with flowing water", "measuring water speed with a floating leaf", "calculating or timing flow across a marked distance"],
-    "safety": ["no flame, no electrical appliances near water", "only hands in the photo"],
+    "must_show": [
+      "a tilted tray or gutter with flowing water",
+      "measuring water speed with a floating leaf",
+      "calculating or timing flow across a marked distance"
+    ],
+    "safety": [
+      "no flame, no electrical appliances near water",
+      "only hands in the photo"
+    ],
     "pass_if": "The photos show a model water channel experiment and timing how fast water moves."
   },
-  "_per_page": [{}, {}, {}, {}],
+  "_per_page": [
+    {},
+    {},
+    {},
+    {}
+  ],
   "_replace": {},
-
   "guide.issue_date": "#04 · 16 NOV 2026",
   "guide.lang": "EN",
   "guide.xp": "+60 XP",
   "footer.credit": "ELIOS Guides · Issue 04 · Heavy Rain and Floods",
-
   "cover.title": "How heavy rain swells river flow",
   "cover.subtitle": "Heavy seasonal rains fill rivers and cause floods. Discover how scientists measure water discharge using area and velocity.",
   "cover.image_caption": "Ciliwung River (archive photo)",
@@ -63,7 +234,6 @@
   "cover.level": "SMP · grade 7–9",
   "cover.xp_total": "Earn up to 60 XP",
   "cover.fun_fact": "A major river in flood can carry thousands of cubic meters of water every single second.",
-
   "story.title": "Monsoon rains and rising rivers",
   "story.lead": "Satellites and field reports tracked heavy rain and flooded rivers [1]. When rain pours upstream, water surges rapidly [2].",
   "story.image_caption": "Ciliwung River during high water flow",
@@ -82,7 +252,6 @@
   "timeline.1.text": "Rain falls heavily over catchments and hills [1].",
   "timeline.2.text": "Water rushes down slopes into main river channels [2].",
   "timeline.3.text": "Rivers reach maximum discharge before flowing to the sea [3].",
-
   "physics.title": "Calculating water discharge",
   "physics.body_1": "To find out how much water flows through a river, physicists calculate volumetric flow rate, Q. It depends on the size of the river channel and how fast the water moves.",
   "physics.body_2": "Cross-sectional area A is width times depth. Velocity v is how fast the water travels forward.",
@@ -130,7 +299,6 @@
   "graph.3.value": "576 m³/s",
   "graph.note": "Floods increase water volume tenfold compared to normal river flow.",
   "physics.tip": "Double the area or double the speed, and the water flow rate Q doubles too.",
-
   "mission.title": "River Flow Mission",
   "quiz.answer_key": "Answer key: 1A · 2B · 3C",
   "quiz.1.question": "What is the correct equation for volumetric flow rate Q?",
