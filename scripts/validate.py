@@ -11,6 +11,8 @@ from urllib.parse import urlparse
 
 from PIL import Image
 
+import repeats
+
 ROOT = Path(__file__).resolve().parent.parent
 LIMITS = json.loads((ROOT / "schema" / "limits.json").read_text(encoding="utf-8"))
 ALLOWED_DOMAINS = ("nasa.gov", "noaa.gov", "usgs.gov", "esa.int", "copernicus.eu", "wikimedia.org", "bmkg.go.id")
@@ -326,7 +328,9 @@ def check(folder, manifest_path=ROOT / "manifest.json"):
             errs.append(f"slug {slug!r} was used on {g.get('date')}")
         if topic and str((g.get("topic") or {}).get("en", "")).strip().lower() == topic:
             errs.append(f"topic {topic!r} was used on {g.get('date')}")
-    errs += check_formula(docs, [g for g in guides if g.get("date") != folder.name])
+    others = [g for g in guides if g.get("date") != folder.name]
+    errs += check_formula(docs, others)
+    errs += repeats.check(en, others)
     return errs
 
 
