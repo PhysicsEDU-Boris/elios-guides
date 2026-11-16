@@ -1,0 +1,11 @@
+{
+  "force_N": 30,
+  "area_m2": 5,
+  "pressure_Pa": 6.0,
+  "area_surface_a": 5,
+  "pressure_surface_a": 6.0,
+  "area_surface_b": 1,
+  "pressure_surface_b": 30.0,
+  "area_surface_c": 6,
+  "pressure_surface_c": 5.0
+}

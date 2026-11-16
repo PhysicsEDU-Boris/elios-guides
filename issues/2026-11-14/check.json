@@ -1,0 +1,65 @@
+[
+  {
+    "item": "Atmospheric pressure definition",
+    "claim": "Atmospheric pressure is caused by the collision of air particles with surfaces.",
+    "source": "2",
+    "pass": true,
+    "note": "WMO defines the atmosphere as components including gas particles that interact and exert pressure."
+  },
+  {
+    "item": "Wind generation",
+    "claim": "Wind is caused by differences in air pressure where air moves from high to low.",
+    "source": "1",
+    "pass": true,
+    "note": "Source confirms atmospheric pressure is a key meteorological element determining wind flow."
+  },
+  {
+    "item": "Calculation: Pressure (30N/5m²)",
+    "claim": "Pressure with 30N force on 5m² area is 6 Pa.",
+    "source": "calc",
+    "pass": true,
+    "note": "30 / 5 = 6. Calculation verified."
+  },
+  {
+    "item": "Calculation: Pressure (30N/1m²)",
+    "claim": "Pressure with 30N force on 1m² area is 30 Pa.",
+    "source": "calc",
+    "pass": true,
+    "note": "30 / 1 = 30. Calculation verified."
+  },
+  {
+    "item": "Calculation: Pressure (30N/6m²)",
+    "claim": "Pressure with 30N force on 6m² area is 5 Pa.",
+    "source": "calc",
+    "pass": true,
+    "note": "30 / 6 = 5. Calculation verified."
+  },
+  {
+    "item": "Quiz Answer 1",
+    "claim": "If area decreases while force stays the same, pressure increases.",
+    "source": "calc",
+    "pass": true,
+    "note": "Matches physics formula P = F/A where denominator decreases, result increases."
+  },
+  {
+    "item": "Quiz Answer 2",
+    "claim": "In P = F / A, P represents pressure.",
+    "source": "1",
+    "pass": true,
+    "note": "Standard meteorological and physical terminology."
+  },
+  {
+    "item": "Quiz Answer 3",
+    "claim": "Wind is caused by differences in air pressure.",
+    "source": "1",
+    "pass": true,
+    "note": "Confirmed by WMO documentation on weather and wind dynamics."
+  },
+  {
+    "item": "Bilingual Agreement (ID)",
+    "claim": "Indonesian labels and terms are accurate translations of physics concepts.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "Terminology like 'Tekanan' for pressure and 'Luas' for area are correctly used."
+  }
+]
