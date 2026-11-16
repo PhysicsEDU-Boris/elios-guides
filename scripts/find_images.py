@@ -33,5 +33,6 @@ def candidates(en, min_side=1600, limit=5):
         if info.get("mime") != "image/jpeg" or max(info.get("width", 0), info.get("height", 0)) < min_side or not OK_LICENSE.match(lic):
             continue
         author = clean((meta.get("Artist") or {}).get("value")) or "Unknown author"
-        out.append({"file": "cover.jpg", "source_url": info["url"].split("?")[0],  # Commons appends utm tracking parameters "license": lic, "credit": f"{author[:80]} / Wikimedia Commons"})
+        url = info["url"].split("?")[0]  # Commons appends utm tracking parameters
+        out.append({"file": "cover.jpg", "source_url": url, "license": lic, "credit": f"{author[:80]} / Wikimedia Commons"})
     return out[:limit]
