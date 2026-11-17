@@ -3,52 +3,182 @@
   "_slug": "strong-winds-and-kinetic-energy",
   "_theme": "storm",
   "_formula": "kinetic-energy",
-  "_keywords": ["angin", "wind", "storm", "badai", "speed", "indonesia", "cuaca", "peringatan"],
+  "_keywords": [
+    "angin",
+    "wind",
+    "storm",
+    "badai",
+    "speed",
+    "indonesia",
+    "cuaca",
+    "peringatan"
+  ],
   "_date": "2026-11-17",
   "_lang": "en",
   "_sources": [
-    {"n": 1, "publisher": "BMKG", "title": "Prakiraan Cuaca Ekstrem dan Peringatan Dini", "date": "2026-11-17", "url": "https://www.bmkg.go.id/cuaca/peringatan-dini-cuaca", "primary": true},
-    {"n": 2, "publisher": "NOAA National Weather Service", "title": "Beaufort Wind Scale", "date": "2026-11-17", "url": "https://www.weather.gov/mfl/beaufort", "primary": true},
-    {"n": 3, "publisher": "Copernicus", "title": "Air Quality Monitoring and Forecasts", "date": "2026-10-28", "url": "https://atmosphere.copernicus.eu/air-quality", "primary": false}
+    {
+      "n": 1,
+      "publisher": "BMKG",
+      "title": "Prakiraan Cuaca Ekstrem dan Peringatan Dini",
+      "date": "2026-11-17",
+      "url": "https://www.bmkg.go.id/cuaca/peringatan-dini-cuaca",
+      "primary": true
+    },
+    {
+      "n": 2,
+      "publisher": "NOAA National Weather Service",
+      "title": "Beaufort Wind Scale",
+      "date": "2026-11-17",
+      "url": "https://www.weather.gov/mfl/beaufort",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "Copernicus",
+      "title": "Air Quality Monitoring and Forecasts",
+      "date": "2026-10-28",
+      "url": "https://atmosphere.copernicus.eu/air-quality",
+      "primary": false
+    }
   ],
   "_images": {
-    "cover.image": null,
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/ParmaMelor_AMO_TMO_2009279_lrg.jpg",
+      "license": "Public domain",
+      "credit": "NASA image courtesy the MODIS Rapid Response Team at NASA GSFC. Caption by Holli / Wikimedia Commons"
+    },
     "story.image": null,
     "physics.diagram": null
   },
   "_graph.1.raw": 12.5,
   "_graph.2.raw": 112.5,
   "_graph.3.raw": 312.5,
-  "_answers": {"1": "a", "2": "b", "3": "c"},
+  "_answers": {
+    "1": "a",
+    "2": "b",
+    "3": "c"
+  },
   "_quiz_explain": {
-    "1": {"why": "Because speed v is squared in Ek = ½mv², doubling speed multiplies energy by four.", "wrong": {"b": "Double speed gives four times energy, not double.", "c": "Energy changes with speed squared.", "d": "Energy increases, it does not halve."}},
-    "2": {"why": "In Ek = ½ × m × v², letter v represents speed.", "wrong": {"a": "Volume is V, not v.", "c": "Voltage is V in electric circuits.", "d": "Viscosity is a fluid property."}},
-    "3": {"why": "Higher speed gives much greater kinetic energy, hitting objects harder.", "wrong": {"a": "Air mass does not change much.", "b": "Temperature is not the main damage factor.", "d": "Gravity remains constant."}}
+    "1": {
+      "why": "Because speed v is squared in Ek = ½mv², doubling speed multiplies energy by four.",
+      "wrong": {
+        "b": "Double speed gives four times energy, not double.",
+        "c": "Energy changes with speed squared.",
+        "d": "Energy increases, it does not halve."
+      }
+    },
+    "2": {
+      "why": "In Ek = ½ × m × v², letter v represents speed.",
+      "wrong": {
+        "a": "Volume is V, not v.",
+        "c": "Voltage is V in electric circuits.",
+        "d": "Viscosity is a fluid property."
+      }
+    },
+    "3": {
+      "why": "Higher speed gives much greater kinetic energy, hitting objects harder.",
+      "wrong": {
+        "a": "Air mass does not change much.",
+        "b": "Temperature is not the main damage factor.",
+        "d": "Gravity remains constant."
+      }
+    }
   },
   "_quiz_pool": [
-    {"question": "What does Ek stand for in physics?", "options": ["Kinetic energy", "Earth quake", "Electric key", "Extra kelvin"], "answer": 0, "explanation": "Ek stands for kinetic energy."},
-    {"question": "Which factor has its square in the kinetic energy formula?", "options": ["Mass", "Speed", "Height", "Gravity"], "answer": 1, "explanation": "Speed v is squared (v²)."},
-    {"question": "If mass is 1 kg and speed is 10 m/s, what is Ek?", "options": ["10 J", "50 J", "100 J", "200 J"], "answer": 1, "explanation": "Ek = 0.5 × 1 × 10² = 50 J."},
-    {"question": "What causes wind to blow in the atmosphere?", "options": ["Differences in air pressure", "Moon phases", "Ocean tides", "Magnetic fields"], "answer": 0, "explanation": "Air flows from high to low pressure areas."},
-    {"question": "What unit is used for kinetic energy?", "options": ["Watt", "Joule", "Newton", "Pascal"], "answer": 1, "explanation": "Energy is measured in joules (J)."},
-    {"question": "If speed triples (3×), how does kinetic energy change?", "options": ["Triples (3×)", "Six times (6×)", "Nine times (9×)", "Twelve times (12×)"], "answer": 2, "explanation": "3 squared is 9, so energy increases 9 times."}
+    {
+      "question": "What does Ek stand for in physics?",
+      "options": [
+        "Kinetic energy",
+        "Earth quake",
+        "Electric key",
+        "Extra kelvin"
+      ],
+      "answer": 0,
+      "explanation": "Ek stands for kinetic energy."
+    },
+    {
+      "question": "Which factor has its square in the kinetic energy formula?",
+      "options": [
+        "Mass",
+        "Speed",
+        "Height",
+        "Gravity"
+      ],
+      "answer": 1,
+      "explanation": "Speed v is squared (v²)."
+    },
+    {
+      "question": "If mass is 1 kg and speed is 10 m/s, what is Ek?",
+      "options": [
+        "10 J",
+        "50 J",
+        "100 J",
+        "200 J"
+      ],
+      "answer": 1,
+      "explanation": "Ek = 0.5 × 1 × 10² = 50 J."
+    },
+    {
+      "question": "What causes wind to blow in the atmosphere?",
+      "options": [
+        "Differences in air pressure",
+        "Moon phases",
+        "Ocean tides",
+        "Magnetic fields"
+      ],
+      "answer": 0,
+      "explanation": "Air flows from high to low pressure areas."
+    },
+    {
+      "question": "What unit is used for kinetic energy?",
+      "options": [
+        "Watt",
+        "Joule",
+        "Newton",
+        "Pascal"
+      ],
+      "answer": 1,
+      "explanation": "Energy is measured in joules (J)."
+    },
+    {
+      "question": "If speed triples (3×), how does kinetic energy change?",
+      "options": [
+        "Triples (3×)",
+        "Six times (6×)",
+        "Nine times (9×)",
+        "Twelve times (12×)"
+      ],
+      "answer": 2,
+      "explanation": "3 squared is 9, so energy increases 9 times."
+    }
   ],
   "_lab_rubric": {
-    "must_show": ["a paper fan made by hand", "testing airflow at slow and fast waving speeds", "showing hand feeling the wind push"],
-    "safety": ["no flame, no mains electricity", "only hands in photos"],
+    "must_show": [
+      "a paper fan made by hand",
+      "testing airflow at slow and fast waving speeds",
+      "showing hand feeling the wind push"
+    ],
+    "safety": [
+      "no flame, no mains electricity",
+      "only hands in photos"
+    ],
     "pass_if": "The photos show the paper fan and testing air push at different speeds."
   },
-  "_per_page": [{}, {}, {}, {}],
+  "_per_page": [
+    {},
+    {},
+    {},
+    {}
+  ],
   "_replace": {},
-
   "guide.issue_date": "#07 · 17 NOV 2026",
   "guide.lang": "EN",
   "guide.xp": "+60 XP",
   "footer.credit": "ELIOS Guides · Issue 07 · Public interest physics",
-
   "cover.title": "How fast winds pack massive energy",
   "cover.subtitle": "Storms bring powerful gusts across Indonesia. Discover why doubling wind speed multiplies kinetic energy four times.",
-  "cover.image_caption": "Wind and storm clouds",
+  "cover.image_caption": "Archive photo · Jakarta, Indonesia",
   "cover.news_date": "News: 17 Nov 2026",
   "cover.place": "Jakarta, Indonesia",
   "cover.topic": "Storms and wind",
@@ -60,7 +190,6 @@
   "cover.level": "SMP · grade 7–9",
   "cover.xp_total": "Earn up to 60 XP",
   "cover.fun_fact": "If wind speed doubles, its kinetic energy increases four times because speed is squared.",
-
   "story.title": "When strong winds strike",
   "story.lead": "Weather agencies issued warnings for severe wind gusts and thunderstorms [1]. Fast-moving air carries huge energy [2].",
   "story.image_caption": "Storm clouds over the city",
@@ -79,7 +208,6 @@
   "timeline.1.text": "Air pressure drops and winds begin to pick up speed.",
   "timeline.2.text": "Strong gusts hammer buildings and trees with high kinetic energy.",
   "timeline.3.text": "Storm clouds move away and winds calm down.",
-
   "physics.title": "Kinetic energy of moving air",
   "physics.body_1": "Any moving object has kinetic energy. For wind, the energy depends on the mass of the air and how fast it travels.",
   "physics.body_2": "In the formula Ek = ½ × m × v², speed v is squared. That means doubling the speed quadruples the energy.",
@@ -127,7 +255,6 @@
   "graph.3.value": "312.5 J",
   "graph.note": "Speed squared means storm wind carries much more energy.",
   "physics.tip": "Because v is squared in Ek = ½mv², doubling wind speed multiplies its energy by four!",
-
   "mission.title": "Storm energy mission",
   "quiz.answer_key": "Answer key: 1A · 2B · 3C",
   "quiz.1.question": "What happens to kinetic energy if wind speed doubles?",
