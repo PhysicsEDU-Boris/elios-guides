@@ -26,7 +26,8 @@ def chat(base, key, model, system, user):
     body = {"model": model, "max_tokens": 16000, "temperature": 0.3,
             "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]}
     if "openrouter.ai" in base:  # OpenRouter runs the web search itself (Exa), for any model
-        body["plugins"] = [{"id": "web", "max_results": 6}]
+        body["plugins"] = [{"id": "web", "max_results": 3}]
+        body["reasoning"] = {"effort": "low"}  # reasoning tokens count against max_tokens
     elif model.startswith("openai/gpt-oss"):  # Groq runs the search itself; other models must search on their own
         body["tools"] = [{"type": "browser_search"}]
     for attempt in range(3):
