@@ -1,7 +1,7 @@
 {
   "guides": [
     {
-      "revision": "2355780aa9226a5995caf06d5e88352c79e6680d599e51b9f8698766b55b0bf5",
+      "revision": "3fe7e182d7100108012701625c751e8ffa2069be8712aa187083ca3bbd7dc8ee",
       "date": "2026-11-17",
       "issue": "07",
       "slug": "strong-winds-and-kinetic-energy",
@@ -383,5 +383,5 @@
       }
     }
   ],
-  "updated": "2026-11-17T11:36:10+07:00"
+  "updated": "2026-11-17T11:36:52+07:00"
 }
