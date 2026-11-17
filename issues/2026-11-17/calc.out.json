@@ -1,0 +1,9 @@
+{
+  "m_kg": 1,
+  "v_breeze": 5,
+  "v_strong": 15,
+  "v_storm": 25,
+  "ek_breeze": 12.5,
+  "ek_strong": 112.5,
+  "ek_storm": 312.5
+}
