@@ -56,3 +56,16 @@ def test_no_commons_photo_keeps_the_cover_null(tmp_path, monkeypatch):
     monkeypatch.setattr(find_images, "candidates", lambda en: (_ for _ in ()).throw(OSError("offline")))
     fetch_images.commons_cover(tmp_path)  # must not raise
     assert json.loads((tmp_path / "en.json").read_text())["_images"]["cover.image"] is None
+
+
+def test_narrower_queries_are_tried_when_the_long_one_finds_nothing(monkeypatch):
+    asked = []
+
+    def get(url, params, **kw):
+        asked.append(params["gsrsearch"])
+        pages = [page(1, "https://upload.wikimedia.org/a.jpg", "CC0")] if "storm" in params["gsrsearch"] else []
+        return Reply(pages)
+    monkeypatch.setattr(find_images.requests, "get", get)
+    found = find_images.candidates({"cover.place": "Jakarta, Indonesia", "_keywords": ["angin", "storm"], "_theme": "storm"})
+    assert [c["source_url"].rsplit("/", 1)[1] for c in found] == ["a.jpg"]
+    assert asked[0].startswith("storm angin")
