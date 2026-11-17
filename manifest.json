@@ -1,6 +1,71 @@
 {
   "guides": [
     {
+      "revision": "06f5bea8c30b329830af1c3472795428cb117b377980e8519528ffca48189dd0",
+      "date": "2026-11-17",
+      "issue": "07",
+      "slug": "strong-winds-and-kinetic-energy",
+      "xp": 60,
+      "title": {
+        "en": "How fast winds pack massive energy",
+        "id": "Kekuatan besar angin kencang"
+      },
+      "topic": {
+        "en": "Storms and wind",
+        "id": "Badai dan angin"
+      },
+      "cover": {
+        "en": "issues/2026-11-17/elios-guide-07-strong-winds-and-kinetic-energy-cover-en.png",
+        "id": "issues/2026-11-17/elios-guide-07-strong-winds-and-kinetic-energy-cover-id.png"
+      },
+      "pdf": {
+        "en": "issues/2026-11-17/elios-guide-07-strong-winds-and-kinetic-energy-en.pdf",
+        "id": "issues/2026-11-17/elios-guide-07-strong-winds-and-kinetic-energy-id.pdf"
+      },
+      "content": {
+        "en": "issues/2026-11-17/en.json",
+        "id": "issues/2026-11-17/id.json"
+      },
+      "schema": 2,
+      "theme": "storm",
+      "photo": null,
+      "content_sha": {
+        "en": "438a4d1b0965be679397bf97efe8f5bfcfceb7c3a1a6f842c3266170328fba65",
+        "id": "dc2f8c8d7be3c72a509cff4e4c1a8c8546dcc2693a3b3923ea917a355e46ecb5"
+      },
+      "xp_parts": {
+        "story": 10,
+        "physics": 20,
+        "quiz": 10,
+        "lab": 20
+      },
+      "formula": "kinetic-energy",
+      "sources": [
+        "atmosphere.copernicus.eu/air-quality",
+        "bmkg.go.id/cuaca/peringatan-dini-cuaca",
+        "weather.gov/mfl/beaufort"
+      ],
+      "terms": [
+        "angin",
+        "badai",
+        "cuaca",
+        "energy",
+        "fast",
+        "jakarta",
+        "kinetic",
+        "massive",
+        "pack",
+        "peringatan",
+        "speed",
+        "storm",
+        "strike",
+        "strong",
+        "when",
+        "wind"
+      ],
+      "pages": 4
+    },
+    {
       "revision": "5291c04c41cc6a969ff7252f087045a78390d7bb39ceca6ccd6527e4d5b36028",
       "date": "2026-11-16",
       "issue": "04",
@@ -306,5 +371,5 @@
       }
     }
   ],
-  "updated": "2026-11-16T13:51:04+07:00"
+  "updated": "2026-11-17T10:42:11+07:00"
 }
