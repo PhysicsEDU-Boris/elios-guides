@@ -44,11 +44,16 @@
   "_images": {
     "cover.image": {
       "file": "cover.jpg",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/ParmaMelor_AMO_TMO_2009279_lrg.jpg",
-      "license": "Public domain",
-      "credit": "NASA image courtesy the MODIS Rapid Response Team at NASA GSFC. Caption by Holli / Wikimedia Commons"
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Joshua_Tree_Park_approaching_thunderstorm_02_2013.jpg",
+      "license": "CC BY-SA 3.0",
+      "credit": "Tuxyso / Wikimedia Commons"
     },
-    "story.image": null,
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Port_and_lighthouse_overnight_storm_with_lightning_in_Port-la-Nouvelle.jpg",
+      "license": "CC BY 2.0",
+      "credit": "Maxime Raynal from France / Wikimedia Commons"
+    },
     "physics.diagram": null
   },
   "_graph.1.raw": 12.5,
@@ -205,7 +210,7 @@
   "footer.credit": "ELIOS Guides · Edisi 07 · Fisika kepentingan publik",
   "cover.title": "Kekuatan besar angin kencang",
   "cover.subtitle": "Badai membawa tiupan angin kuat di Indonesia. Ketahui mengapa kecepatan angin ganda melipatgandakan energi empat kali.",
-  "cover.image_caption": "Foto arsip · Jakarta, Indonesia",
+  "cover.image_caption": "Foto arsip · storm",
   "cover.news_date": "Berita: 17 Nov 2026",
   "cover.place": "Jakarta, Indonesia",
   "cover.topic": "Badai dan angin",
@@ -219,8 +224,8 @@
   "cover.fun_fact": "Jika kecepatan angin menjadi dua kali lipat, energi kinetiknya naik empat kali karena kecepatan dikuadratkan.",
   "story.title": "Saat angin kencang menerjang",
   "story.lead": "Badan meteorologi mengeluarkan peringatan dini untuk angin kencang dan badai [1]. Udara yang bergerak cepat membawa energi besar [2].",
-  "story.image_caption": "Awan badai di atas kota",
-  "story.image_credit": "Ilustrasi oleh ELIOS",
+  "story.image_caption": "Foto arsip · Port and lighthouse overnight storm with lightning in Port-la-Nouvelle",
+  "story.image_credit": "Maxime Raynal from France / Wikimedia Commons, CC BY 2.0",
   "stat.1.value": "12,5 J",
   "stat.2.value": "112,5 J",
   "stat.3.value": "312,5 J",
