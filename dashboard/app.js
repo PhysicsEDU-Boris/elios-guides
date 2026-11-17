@@ -287,7 +287,7 @@ async function renderDetail(g) {
   const qrows = state.mq.filter(r => r.guide_date === g.date && /^p[1-3]$/.test(r.question_id)).sort((a, b) => a.question_id.localeCompare(b.question_id));
   const pdf = safeUrl(base + (g.pdf[state.mlang] || g.pdf.en));
   $("mdetail").replaceChildren(
-    h("div", { class: "mhead" }, h("img", { class: "mcover", attrs: { src: base + g.photo.thumb, alt: "" } }),
+    h("div", { class: "mhead" }, g.photo ? h("img", { class: "mcover", attrs: { src: base + g.photo.thumb, alt: "" } }) : null,
       h("div", { class: "mtitle" }, h("span", { class: "overline" }, `Issue ${g.issue} · ${g.date} · ${g.topic.en}`), h("h2", { class: "headline" }, g.title[state.mlang] || g.title.en),
         h("p", { class: "small muted" }, [t("cover.subject"), t("cover.read_time"), t("cover.level"), t("cover.xp_total")].filter(Boolean).join(" · ")),
         pdf ? h("a", { class: "btn secondary", attrs: { href: pdf, target: "_blank", rel: "noopener noreferrer" } }, "Open PDF") : null),
@@ -317,7 +317,7 @@ async function renderMagazines() {
     $("mlist").replaceChildren(h("h2", { class: "subhead" }, "Published magazines"), ...guides.map(g => {
       const n = (state.mstats.get(g.date) || {}).started || 0;
       return h("div", { class: `mrow${g.date === state.msel ? " sel" : ""}`, props: { onclick: () => { state.msel = g.date; draw(); renderDetail(g); } } },
-        h("img", { attrs: { src: base + g.photo.thumb, alt: "" } }),
+        g.photo ? h("img", { attrs: { src: base + g.photo.thumb, alt: "" } }) : h("div", { class: "mnophoto" }),
         h("div", { class: "mt" }, h("span", { class: "overline" }, `#${g.issue} · ${g.date}`), h("b", {}, g.title.en), h("span", { class: "small tx2" }, g.topic.en)),
         chip(n ? "green" : "sun", n ? `${n} started` : "Untouched"));
     }));

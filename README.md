@@ -124,6 +124,8 @@ A missing or failing new report blocks publication; the earlier report is never 
 - Secret: `GEMINI_API_KEY` (own AI Studio project, sufficient model quota). Optional fact-check
   fallbacks: variables `FALLBACK_BASE_URL`/`FALLBACK_MODEL` + secret `FALLBACK_API_KEY` (e.g. Groq), and the
   same with `FALLBACK2_` (e.g. OpenRouter); each runs only when the one before left no `check.json`.
+  Research and both repairs also fall back to `scripts/research_fallback.py` when Gemini fails: it uses
+  `RESEARCH_BASE_URL`/`RESEARCH_MODEL`/`RESEARCH_API_KEY` (default: the `FALLBACK2_*` OpenRouter settings; its web plugin does the search). Test it with `daily-research` input `force_fallback`.
 - Rendering needs no token: GitHub Actions installs Chromium (`python -m playwright install chromium`).
 - Initialize `published` with `manifest.json` containing `{"updated":null,"guides":[]}` if absent.
   Do not replace an existing archive. The initial validated issue may also be published there.
