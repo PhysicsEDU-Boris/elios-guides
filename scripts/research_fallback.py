@@ -45,7 +45,7 @@ def chat(base, key, model, system, user):
             raise ValueError(f"research provider HTTP {r.status_code}: {r.text[:300]}")
         choice = (r.json().get("choices") or [{}])[0]
         if choice.get("finish_reason") != "stop":
-            raise ValueError("research provider stopped before finishing (too long or filtered)")
+            raise ValueError(f"research provider stopped early: finish_reason={choice.get('finish_reason')!r} usage={r.json().get('usage')} tail={(choice.get('message', {}).get('content') or '')[-200:]!r}")
         return choice["message"]["content"] or ""
     raise ValueError("research provider kept returning 429/5xx")
 
