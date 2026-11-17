@@ -41,7 +41,8 @@ def publish(date, source, site, check_urls=False):
         errors += check_sources.errors(folder)
     en = json.loads((folder / "en.json").read_text())
     id_ = json.loads((folder / "id.json").read_text())
-    if update_manifest.photo_entry(source, Path("issues") / date, en, id_) is None:
+    # cover.image null is allowed (generated cover); a declared photo must have its files.
+    if (en.get("_images") or {}).get("cover.image") and update_manifest.photo_entry(source, Path("issues") / date, en, id_) is None:
         errors.append("cover photo and app thumbnail are required; run fetch_images.py before publishing")
     if en.get("_example") or id_.get("_example"):
         errors.append("cannot publish an example")

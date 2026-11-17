@@ -81,3 +81,14 @@ def test_invalid_issue_does_not_change_published_site(issue, tmp_path, failure):
     with pytest.raises(Exception):
         publish.publish('2026-11-09', issue.root, site)
     assert not site.exists()
+
+
+def test_null_cover_publishes_with_generated_cover(issue, tmp_path):
+    exported(issue)
+    issue.en['_images'] = {'cover.image': None}
+    issue.write()
+    for name in ('photo.jpg', 'photo-800.jpg'):
+        (issue.folder / name).unlink()
+    site = tmp_path / 'site'
+    site.mkdir()
+    assert publish.publish('2026-11-09', issue.root, site)['photo'] is None
