@@ -3,57 +3,209 @@
   "_slug": "strong-winds-and-kinetic-energy",
   "_theme": "storm",
   "_formula": "kinetic-energy",
-  "_keywords": ["angin", "wind", "storm", "badai", "speed", "indonesia", "cuaca", "peringatan"],
+  "_keywords": [
+    "angin",
+    "wind",
+    "storm",
+    "badai",
+    "speed",
+    "indonesia",
+    "cuaca",
+    "peringatan"
+  ],
   "_date": "2026-11-17",
   "_lang": "id",
   "_sources": [
-    {"n": 1, "publisher": "BMKG", "title": "Prakiraan Cuaca Ekstrem dan Peringatan Dini", "date": "2026-11-17", "url": "https://www.bmkg.go.id/cuaca/peringatan-dini-cuaca", "primary": true},
-    {"n": 2, "publisher": "NOAA National Weather Service", "title": "Beaufort Wind Scale", "date": "2026-11-17", "url": "https://www.weather.gov/mfl/beaufort", "primary": true},
-    {"n": 3, "publisher": "Copernicus", "title": "Air Quality Monitoring and Forecasts", "date": "2026-10-28", "url": "https://atmosphere.copernicus.eu/air-quality", "primary": false}
+    {
+      "n": 1,
+      "publisher": "BMKG",
+      "title": "Prakiraan Cuaca Ekstrem dan Peringatan Dini",
+      "date": "2026-11-17",
+      "url": "https://www.bmkg.go.id/cuaca/peringatan-dini-cuaca",
+      "primary": true
+    },
+    {
+      "n": 2,
+      "publisher": "NOAA National Weather Service",
+      "title": "Beaufort Wind Scale",
+      "date": "2026-11-17",
+      "url": "https://www.weather.gov/mfl/beaufort",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "Copernicus",
+      "title": "Air Quality Monitoring and Forecasts",
+      "date": "2026-10-28",
+      "url": "https://atmosphere.copernicus.eu/air-quality",
+      "primary": false
+    }
   ],
   "_images": {
-    "cover.image": null,
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/ParmaMelor_AMO_TMO_2009279_lrg.jpg",
+      "license": "Public domain",
+      "credit": "NASA image courtesy the MODIS Rapid Response Team at NASA GSFC. Caption by Holli / Wikimedia Commons"
+    },
     "story.image": null,
     "physics.diagram": null
   },
   "_graph.1.raw": 12.5,
   "_graph.2.raw": 112.5,
   "_graph.3.raw": 312.5,
-  "_answers": {"1": "a", "2": "b", "3": "c"},
+  "_answers": {
+    "1": "a",
+    "2": "b",
+    "3": "c"
+  },
   "_quiz_explain": {
-    "1": {"why": "Karena v dikuadratkan dalam Ek = ½mv², kecepatan ganda melipatgandakan energi empat kali.", "wrong": {"b": "Kecepatan ganda menghasilkan energi empat kali lipat.", "c": "Energi berubah sebanding kuadrat kecepatan.", "d": "Energi bertambah besar, bukan setengahnya."}},
-    "2": {"why": "Dalam rumus Ek = ½ × m × v², huruf v menyatakan kecepatan.", "wrong": {"a": "Volume dilambangkan huruf V.", "c": "Tegangan listrik dilambangkan huruf V.", "d": "Viskositas adalah sifat fluida."}},
-    "3": {"why": "Kecepatan tinggi membawa energi kinetik jauh lebih besar pada benda.", "wrong": {"a": "Massa udara tidak banyak berubah.", "b": "Suhu bukan faktor utama kerusakan.", "d": "Gravitasi tetap konstan."}}
+    "1": {
+      "why": "Karena v dikuadratkan dalam Ek = ½mv², kecepatan ganda melipatgandakan energi empat kali.",
+      "wrong": {
+        "b": "Kecepatan ganda menghasilkan energi empat kali lipat.",
+        "c": "Energi berubah sebanding kuadrat kecepatan.",
+        "d": "Energi bertambah besar, bukan setengahnya."
+      }
+    },
+    "2": {
+      "why": "Dalam rumus Ek = ½ × m × v², huruf v menyatakan kecepatan.",
+      "wrong": {
+        "a": "Volume dilambangkan huruf V.",
+        "c": "Tegangan listrik dilambangkan huruf V.",
+        "d": "Viskositas adalah sifat fluida."
+      }
+    },
+    "3": {
+      "why": "Kecepatan tinggi membawa energi kinetik jauh lebih besar pada benda.",
+      "wrong": {
+        "a": "Massa udara tidak banyak berubah.",
+        "b": "Suhu bukan faktor utama kerusakan.",
+        "d": "Gravitasi tetap konstan."
+      }
+    }
   },
   "_quiz_pool": [
-    {"question": "Apa arti lambang Ek dalam fisika?", "options": ["Energi kinetik", "Gempa bumi", "Kunci elektrik", "Kelvin ekstra"], "answer": 0, "explanation": "Ek adalah singkatan dari energi kinetik."},
-    {"question": "Faktor mana yang dikuadratkan dalam rumus energi kinetik?", "options": ["Massa", "Kecepatan", "Ketinggian", "Gravitasi"], "answer": 1, "explanation": "Kecepatan v dikuadratkan (v²)."},
-    {"question": "Jika massa 1 kg dan kecepatan 10 m/s, berapa Ek?", "options": ["10 J", "50 J", "100 J", "200 J"], "answer": 1, "explanation": "Ek = 0,5 × 1 × 10² = 50 J."},
-    {"question": "Apa penyebab utama angin berhembus di atmosfer?", "options": ["Perbedaan tekanan udara", "Fase bulan", "Pasang surut air laut", "Medan magnet"], "answer": 0, "explanation": "Udara mengalir dari tekanan tinggi ke rendah."},
-    {"question": "Satuan apa yang digunakan untuk energi kinetik?", "options": ["Watt", "Joule", "Newton", "Pascal"], "answer": 1, "explanation": "Energi diukur dalam satuan joule (J)."},
-    {"question": "Jika kecepatan angin menjadi tiga kali lipat (3×), bagaimana energi kinetiknya?", "options": ["Tiga kali lipat", "Enam kali lipat", "Sembilan kali lipat", "Dua belas kali lipat"], "answer": 2, "explanation": "3 dikuadratkan adalah 9, jadi energi naik 9 kali."}
+    {
+      "question": "Apa arti lambang Ek dalam fisika?",
+      "options": [
+        "Energi kinetik",
+        "Gempa bumi",
+        "Kunci elektrik",
+        "Kelvin ekstra"
+      ],
+      "answer": 0,
+      "explanation": "Ek adalah singkatan dari energi kinetik."
+    },
+    {
+      "question": "Faktor mana yang dikuadratkan dalam rumus energi kinetik?",
+      "options": [
+        "Massa",
+        "Kecepatan",
+        "Ketinggian",
+        "Gravitasi"
+      ],
+      "answer": 1,
+      "explanation": "Kecepatan v dikuadratkan (v²)."
+    },
+    {
+      "question": "Jika massa 1 kg dan kecepatan 10 m/s, berapa Ek?",
+      "options": [
+        "10 J",
+        "50 J",
+        "100 J",
+        "200 J"
+      ],
+      "answer": 1,
+      "explanation": "Ek = 0,5 × 1 × 10² = 50 J."
+    },
+    {
+      "question": "Apa penyebab utama angin berhembus di atmosfer?",
+      "options": [
+        "Perbedaan tekanan udara",
+        "Fase bulan",
+        "Pasang surut air laut",
+        "Medan magnet"
+      ],
+      "answer": 0,
+      "explanation": "Udara mengalir dari tekanan tinggi ke rendah."
+    },
+    {
+      "question": "Satuan apa yang digunakan untuk energi kinetik?",
+      "options": [
+        "Watt",
+        "Joule",
+        "Newton",
+        "Pascal"
+      ],
+      "answer": 1,
+      "explanation": "Energi diukur dalam satuan joule (J)."
+    },
+    {
+      "question": "Jika kecepatan angin menjadi tiga kali lipat (3×), bagaimana energi kinetiknya?",
+      "options": [
+        "Tiga kali lipat",
+        "Enam kali lipat",
+        "Sembilan kali lipat",
+        "Dua belas kali lipat"
+      ],
+      "answer": 2,
+      "explanation": "3 dikuadratkan adalah 9, jadi energi naik 9 kali."
+    }
   ],
   "_lab_rubric": {
-    "must_show": ["kipas kertas buatan sendiri", "menguji aliran udara pada kecepatan lambat dan cepat", "menunjukkan tangan merasakan tiupan angin"],
-    "safety": ["tanpa api, tanpa listrik utama", "hanya tangan dalam foto"],
+    "must_show": [
+      "kipas kertas buatan sendiri",
+      "menguji aliran udara pada kecepatan lambat dan cepat",
+      "menunjukkan tangan merasakan tiupan angin"
+    ],
+    "safety": [
+      "tanpa api, tanpa listrik utama",
+      "hanya tangan dalam foto"
+    ],
     "pass_if": "Foto menunjukkan kipas kertas dan pengujian dorongan udara pada berbagai kecepatan."
   },
   "_per_page": [
-    {"guide.stop_label":"Sampul"},
-    {"guide.stop_label":"Pos 1 · Ceritanya","section.label":"POS 1 · CERITANYA","section.xp":"+10 XP UNTUK MEMBACA"},
-    {"guide.stop_label":"Pos 2 · Fisikanya","section.label":"POS 2 · FISIKANYA","section.xp":"+20 XP UNTUK MENJAWAB"},
-    {"guide.stop_label":"Pos 3 · Misimu","section.label":"POS 3 · MISIMU","section.xp":"+30 XP UNTUK DIRAIH"}
+    {
+      "guide.stop_label": "Sampul"
+    },
+    {
+      "guide.stop_label": "Pos 1 · Ceritanya",
+      "section.label": "POS 1 · CERITANYA",
+      "section.xp": "+10 XP UNTUK MEMBACA"
+    },
+    {
+      "guide.stop_label": "Pos 2 · Fisikanya",
+      "section.label": "POS 2 · FISIKANYA",
+      "section.xp": "+20 XP UNTUK MENJAWAB"
+    },
+    {
+      "guide.stop_label": "Pos 3 · Misimu",
+      "section.label": "POS 3 · MISIMU",
+      "section.xp": "+30 XP UNTUK DIRAIH"
+    }
   ],
-  "_replace": {"stop": [["STOP","POS"]], "page ref": [["p.","hlm. "]]},
-
+  "_replace": {
+    "stop": [
+      [
+        "STOP",
+        "POS"
+      ]
+    ],
+    "page ref": [
+      [
+        "p.",
+        "hlm. "
+      ]
+    ]
+  },
   "guide.issue_date": "#07 · 17 NOV 2026",
   "guide.lang": "ID",
   "guide.xp": "+60 XP",
   "footer.credit": "ELIOS Guides · Edisi 07 · Fisika kepentingan publik",
-
   "cover.title": "Kekuatan besar angin kencang",
   "cover.subtitle": "Badai membawa tiupan angin kuat di Indonesia. Ketahui mengapa kecepatan angin ganda melipatgandakan energi empat kali.",
-  "cover.image_caption": "Angin dan awan badai",
+  "cover.image_caption": "Foto arsip · Jakarta, Indonesia",
   "cover.news_date": "Berita: 17 Nov 2026",
   "cover.place": "Jakarta, Indonesia",
   "cover.topic": "Badai dan angin",
@@ -65,7 +217,6 @@
   "cover.level": "SMP · kelas 7–9",
   "cover.xp_total": "Raih hingga 60 XP",
   "cover.fun_fact": "Jika kecepatan angin menjadi dua kali lipat, energi kinetiknya naik empat kali karena kecepatan dikuadratkan.",
-
   "story.title": "Saat angin kencang menerjang",
   "story.lead": "Badan meteorologi mengeluarkan peringatan dini untuk angin kencang dan badai [1]. Udara yang bergerak cepat membawa energi besar [2].",
   "story.image_caption": "Awan badai di atas kota",
@@ -84,7 +235,6 @@
   "timeline.1.text": "Tekanan udara turun dan angin mulai bertambah kencang.",
   "timeline.2.text": "Tiupan kuat menghantam bangunan dengan energi kinetik tinggi.",
   "timeline.3.text": "Awan badai berlalu dan angin kembali tenang.",
-
   "physics.title": "Energi kinetik udara bergerak",
   "physics.body_1": "Setiap benda yang bergerak memiliki energi kinetik. Pada angin, besarnya energi bergantung pada massa udara dan kecepatan geraknya.",
   "physics.body_2": "Dalam rumus Ek = ½ × m × v², kecepatan v dikuadratkan. Artinya, menggandakan kecepatan membuat energi menjadi empat kali lipat.",
@@ -132,7 +282,6 @@
   "graph.3.value": "312,5 J",
   "graph.note": "Kuadrat kecepatan membuat angin badai membawa energi jauh lebih besar.",
   "physics.tip": "Karena v dikuadratkan dalam Ek = ½mv², menggandakan kecepatan angin melipatgandakan energinya empat kali!",
-
   "mission.title": "Misi energi badai",
   "quiz.answer_key": "Kunci: 1A · 2B · 3C",
   "quiz.1.question": "Apa yang terjadi pada energi kinetik jika kecepatan angin menjadi dua kali lipat?",
@@ -171,7 +320,6 @@
   "source.4": "",
   "source.5": "",
   "credit.images": "Ilustrasi sampul oleh ELIOS; ilustrasi cerita oleh ELIOS.",
-
   "label.quest_map": "PETA MISIMU",
   "label.fun_fact": "TAHUKAH KAMU?",
   "label.timeline": "LINIMASA",
