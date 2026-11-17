@@ -146,13 +146,13 @@ jobs:
 
       - name: Research with the fallback provider (Gemini failed)
         # Optional: repo variables RESEARCH_BASE_URL / RESEARCH_MODEL and secret RESEARCH_API_KEY
-        # (default: the FALLBACK_* Groq settings with groq/compound, which searches the web itself).
+        # (default: the FALLBACK_* Groq settings with openai/gpt-oss-120b, searched by Groq's browser_search).
         if: needs.prep.outputs.resume != 'true' && (steps.research.outcome != 'success' || hashFiles(format('issues/{0}/en.json', env.DATE)) == '') && (vars.RESEARCH_BASE_URL || vars.FALLBACK_BASE_URL) != ''
         continue-on-error: true
         timeout-minutes: 20
         env:
           RESEARCH_BASE_URL: ${{ vars.RESEARCH_BASE_URL || vars.FALLBACK_BASE_URL }}
-          RESEARCH_MODEL: ${{ vars.RESEARCH_MODEL || 'groq/compound' }}
+          RESEARCH_MODEL: ${{ vars.RESEARCH_MODEL || 'openai/gpt-oss-120b' }}
           RESEARCH_API_KEY: ${{ secrets.RESEARCH_API_KEY || secrets.FALLBACK_API_KEY }}
         run: python scripts/research_fallback.py "issues/$DATE"
 
@@ -273,13 +273,13 @@ jobs:
 
       - name: Repair with the fallback provider (Gemini repair 1 failed)
         # Optional: repo variables RESEARCH_BASE_URL / RESEARCH_MODEL and secret RESEARCH_API_KEY
-        # (default: the FALLBACK_* Groq settings with groq/compound, which searches the web itself).
+        # (default: the FALLBACK_* Groq settings with openai/gpt-oss-120b, searched by Groq's browser_search).
         if: steps.repair.outcome == 'failure' && (vars.RESEARCH_BASE_URL || vars.FALLBACK_BASE_URL) != ''
         continue-on-error: true
         timeout-minutes: 20
         env:
           RESEARCH_BASE_URL: ${{ vars.RESEARCH_BASE_URL || vars.FALLBACK_BASE_URL }}
-          RESEARCH_MODEL: ${{ vars.RESEARCH_MODEL || 'groq/compound' }}
+          RESEARCH_MODEL: ${{ vars.RESEARCH_MODEL || 'openai/gpt-oss-120b' }}
           RESEARCH_API_KEY: ${{ secrets.RESEARCH_API_KEY || secrets.FALLBACK_API_KEY }}
           PROBLEMS: ${{ steps.check1.outputs.problems }}
         run: |
@@ -343,13 +343,13 @@ jobs:
 
       - name: Repair with the fallback provider (Gemini repair 2 failed)
         # Optional: repo variables RESEARCH_BASE_URL / RESEARCH_MODEL and secret RESEARCH_API_KEY
-        # (default: the FALLBACK_* Groq settings with groq/compound, which searches the web itself).
+        # (default: the FALLBACK_* Groq settings with openai/gpt-oss-120b, searched by Groq's browser_search).
         if: steps.repair2.outcome == 'failure' && (vars.RESEARCH_BASE_URL || vars.FALLBACK_BASE_URL) != ''
         continue-on-error: true
         timeout-minutes: 20
         env:
           RESEARCH_BASE_URL: ${{ vars.RESEARCH_BASE_URL || vars.FALLBACK_BASE_URL }}
-          RESEARCH_MODEL: ${{ vars.RESEARCH_MODEL || 'groq/compound' }}
+          RESEARCH_MODEL: ${{ vars.RESEARCH_MODEL || 'openai/gpt-oss-120b' }}
           RESEARCH_API_KEY: ${{ secrets.RESEARCH_API_KEY || secrets.FALLBACK_API_KEY }}
           PROBLEMS: ${{ steps.check2.outputs.problems }}
         run: |

@@ -126,7 +126,7 @@ A missing or failing new report blocks publication; the earlier report is never 
   same with `FALLBACK2_` (e.g. OpenRouter); each runs only when the one before left no `check.json`.
   Research and both repairs also fall back to `scripts/research_fallback.py` when Gemini fails: it uses
   `RESEARCH_BASE_URL`/`RESEARCH_MODEL`/`RESEARCH_API_KEY` (default: the `FALLBACK_*` Groq settings with
-  `groq/compound`, which searches the web). Test it with `daily-research` input `force_fallback`.
+  `openai/gpt-oss-120b` (Groq's browser_search)). Test it with `daily-research` input `force_fallback`.
 - Rendering needs no token: GitHub Actions installs Chromium (`python -m playwright install chromium`).
 - Initialize `published` with `manifest.json` containing `{"updated":null,"guides":[]}` if absent.
   Do not replace an existing archive. The initial validated issue may also be published there.

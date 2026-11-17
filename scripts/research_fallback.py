@@ -1,8 +1,8 @@
 """Write (or repair) an issue with an OpenAI-compatible provider when Gemini CLI could not.
 
 Usage: python scripts/research_fallback.py issues/YYYY-MM-DD [--problems FILE]
-Env: RESEARCH_BASE_URL, RESEARCH_API_KEY, RESEARCH_MODEL (default groq/compound, which searches the web
-server-side; any chat model with built-in search works, e.g. an OpenCode one).
+Env: RESEARCH_BASE_URL, RESEARCH_API_KEY, RESEARCH_MODEL (default openai/gpt-oss-120b with Groq's
+server-side browser_search; any chat model that searches on its own works, e.g. an OpenCode one).
 Three calls: en.json (searches the web, or fixes the listed problems), id.json (translation),
 calc.py. sources.md is built from en.json. The normal validate + repair steps still judge the result.
 """
@@ -25,6 +25,8 @@ def chat(base, key, model, system, user):
         raise ValueError("research base URL must be https")
     body = {"model": model, "max_tokens": 8000, "temperature": 0.3,
             "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]}
+    if model.startswith("openai/gpt-oss"):  # Groq runs the search itself; other models must search on their own
+        body["tools"] = [{"type": "browser_search"}]
     for attempt in range(3):
         r = requests.post(f"{base.rstrip('/')}/chat/completions", headers={"Authorization": f"Bearer {key}"},
                           json=body, timeout=300)
@@ -127,6 +129,6 @@ if __name__ == "__main__":
     env = os.environ.get
     if not (env("RESEARCH_BASE_URL") and env("RESEARCH_API_KEY")):
         sys.exit("RESEARCH_BASE_URL and RESEARCH_API_KEY are required")
-    run(a.folder, env("RESEARCH_BASE_URL"), env("RESEARCH_API_KEY"), env("RESEARCH_MODEL") or "groq/compound",
+    run(a.folder, env("RESEARCH_BASE_URL"), env("RESEARCH_API_KEY"), env("RESEARCH_MODEL") or "openai/gpt-oss-120b",
         read(a.problems, 6000) if a.problems else None)
     print(f"Wrote {a.folder} with the fallback provider.")
