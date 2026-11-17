@@ -25,7 +25,9 @@ def chat(base, key, model, system, user):
         raise ValueError("research base URL must be https")
     body = {"model": model, "max_tokens": 8000, "temperature": 0.3,
             "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]}
-    if model.startswith("openai/gpt-oss"):  # Groq runs the search itself; other models must search on their own
+    if "openrouter.ai" in base:  # OpenRouter runs the web search itself (Exa), for any model
+        body["plugins"] = [{"id": "web", "max_results": 6}]
+    elif model.startswith("openai/gpt-oss"):  # Groq runs the search itself; other models must search on their own
         body["tools"] = [{"type": "browser_search"}]
     for attempt in range(3):
         r = requests.post(f"{base.rstrip('/')}/chat/completions", headers={"Authorization": f"Bearer {key}"},
