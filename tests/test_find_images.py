@@ -42,10 +42,10 @@ def test_failed_cover_falls_back_to_a_commons_archive_photo(tmp_path, monkeypatc
     for lang in ("en", "id"):
         (tmp_path / f"{lang}.json").write_text(json.dumps({"cover.place": "Utah, USA", "cover.image_caption": "old", "_images": {"cover.image": None}}))
     img = {"file": "cover.jpg", "source_url": "https://upload.wikimedia.org/a.jpg", "license": "CC0", "credit": "Ana / Wikimedia Commons"}
-    monkeypatch.setattr(find_images, "candidates", lambda en: [img])
+    monkeypatch.setattr(find_images, "candidates", lambda en, **kw: [img])
     monkeypatch.setattr(fetch_images, "fetch", lambda url: b"bytes")
     monkeypatch.setattr(fetch_images, "process", lambda data, folder, key, name: (folder / name).write_bytes(b"x") or {"px": 2400})
-    fetch_images.commons_cover(tmp_path)
+    fetch_images.commons_photo(tmp_path, "cover.image", "cover.jpg")
     en, id_ = (json.loads((tmp_path / f"{l}.json").read_text()) for l in ("en", "id"))
     assert en["_images"]["cover.image"] == img and en["cover.image_caption"] == "Archive photo · Utah, USA"
     assert id_["cover.image_caption"] == "Foto arsip · Utah, USA"
@@ -53,8 +53,8 @@ def test_failed_cover_falls_back_to_a_commons_archive_photo(tmp_path, monkeypatc
 
 def test_no_commons_photo_keeps_the_cover_null(tmp_path, monkeypatch):
     (tmp_path / "en.json").write_text(json.dumps({"_images": {"cover.image": None}}))
-    monkeypatch.setattr(find_images, "candidates", lambda en: (_ for _ in ()).throw(OSError("offline")))
-    fetch_images.commons_cover(tmp_path)  # must not raise
+    monkeypatch.setattr(find_images, "candidates", lambda en, **kw: (_ for _ in ()).throw(OSError("offline")))
+    fetch_images.commons_photo(tmp_path, "cover.image", "cover.jpg")  # must not raise
     assert json.loads((tmp_path / "en.json").read_text())["_images"]["cover.image"] is None
 
 
@@ -69,3 +69,17 @@ def test_narrower_queries_are_tried_when_the_long_one_finds_nothing(monkeypatch)
     found = find_images.candidates({"cover.place": "Jakarta, Indonesia", "_keywords": ["angin", "storm"], "_theme": "storm"})
     assert [c["source_url"].rsplit("/", 1)[1] for c in found] == ["a.jpg"]
     assert asked[0].startswith("storm angin")
+
+
+def test_story_picture_gets_its_own_archive_photo_and_credit(tmp_path, monkeypatch):
+    for lang in ("en", "id"):
+        (tmp_path / f"{lang}.json").write_text(json.dumps({"cover.place": "Utah, USA", "story.image_caption": "old", "story.image_credit": "Illustration by ELIOS", "_images": {"story.image": None}}))
+    a = {"file": "cover.jpg", "source_url": "https://upload.wikimedia.org/cover.jpg", "license": "CC0", "credit": "Ana / Wikimedia Commons"}
+    b = {"file": "cover.jpg", "source_url": "https://upload.wikimedia.org/b.jpg", "license": "CC BY 4.0", "credit": "Bo / Wikimedia Commons"}
+    monkeypatch.setattr(find_images, "candidates", lambda en, **kw: [a, b])
+    monkeypatch.setattr(fetch_images, "fetch", lambda url: b"bytes")
+    monkeypatch.setattr(fetch_images, "process", lambda data, folder, key, name: (folder / name).write_bytes(b"x") or {"px": 2400})
+    used = fetch_images.commons_photo(tmp_path, "story.image", "story.jpg", skip=[a["source_url"]])
+    en = json.loads((tmp_path / "en.json").read_text())
+    assert used == b["source_url"] and en["_images"]["story.image"]["file"] == "story.jpg"
+    assert en["story.image_credit"] == "Bo / Wikimedia Commons, CC BY 4.0" and en["story.image_caption"] == "Archive photo · Utah, USA"
