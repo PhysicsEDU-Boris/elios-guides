@@ -4,6 +4,7 @@ Used by fetch_images.py --drop-failed when the writer's cover photo failed or wa
 are never candidates: they are copyrighted. Returns _images entries ready for en.json/id.json.
 """
 import re
+from urllib.parse import unquote
 
 import requests
 
@@ -34,6 +35,12 @@ def search(query, min_side):
     return out
 
 
+def title(url):
+    """Readable title from a Commons file url: 'Joshua_Tree_Park_approaching_thunderstorm_02_2013.jpg' -> words."""
+    stem = unquote(url.rsplit("/", 1)[-1]).rsplit(".", 1)[0]
+    return re.sub(r"\s+", " ", re.sub(r"[_]+|\s*\(\d+\)", " ", stem)).strip()
+
+
 def candidates(en, min_side=1600, limit=5):
     """Commons photos for this issue, big enough for the cover.
 
@@ -52,6 +59,9 @@ def candidates(en, min_side=1600, limit=5):
             if img["source_url"] not in seen:
                 seen.add(img["source_url"])
                 out.append(img)
-        if len(out) >= limit:
+        if len(out) >= 3 * limit:
             break
+    # a file whose name mentions the theme or a keyword is far more likely to show it (stable sort keeps the rest)
+    terms = [t.lower() for t in [theme] + words if len(t) >= 4]
+    out.sort(key=lambda i: not any(t in i["source_url"].rsplit("/", 1)[-1].lower() for t in terms))
     return out[:limit]

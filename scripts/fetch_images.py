@@ -146,10 +146,11 @@ def commons_photo(folder, key, name, skip=()):
             p = folder / f"{lang}.json"
             d = json.loads(p.read_text(encoding="utf-8"))
             d["_images"] = dict(d.get("_images") or {}, **{key: img})
+            # say what the photo is; the news place would claim it shows the event
             if cover:
-                d["cover.image_caption"] = f"{label} · {d.get('cover.place', '')}"[:40]
+                d["cover.image_caption"] = f"{label} · {d.get('_theme', '')}"[:40]
             else:
-                d["story.image_caption"] = f"{label} · {d.get('cover.place', '')}"[:110]
+                d["story.image_caption"] = f"{label} · {find_images.title(img['source_url'])}"[:110]
                 d["story.image_credit"] = f"{img['credit']}, {img['license']}"[:110]
             p.write_text(json.dumps(d, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         print(f"{key}: Commons archive photo saved {nums} {img['source_url']}")

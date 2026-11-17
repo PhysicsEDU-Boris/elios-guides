@@ -40,15 +40,15 @@ def test_no_place_or_keywords_means_no_search(monkeypatch):
 
 def test_failed_cover_falls_back_to_a_commons_archive_photo(tmp_path, monkeypatch):
     for lang in ("en", "id"):
-        (tmp_path / f"{lang}.json").write_text(json.dumps({"cover.place": "Utah, USA", "cover.image_caption": "old", "_images": {"cover.image": None}}))
+        (tmp_path / f"{lang}.json").write_text(json.dumps({"cover.place": "Utah, USA", "cover.image_caption": "old", "_theme": "storm", "_images": {"cover.image": None}}))
     img = {"file": "cover.jpg", "source_url": "https://upload.wikimedia.org/a.jpg", "license": "CC0", "credit": "Ana / Wikimedia Commons"}
     monkeypatch.setattr(find_images, "candidates", lambda en, **kw: [img])
     monkeypatch.setattr(fetch_images, "fetch", lambda url: b"bytes")
     monkeypatch.setattr(fetch_images, "process", lambda data, folder, key, name: (folder / name).write_bytes(b"x") or {"px": 2400})
     fetch_images.commons_photo(tmp_path, "cover.image", "cover.jpg")
     en, id_ = (json.loads((tmp_path / f"{l}.json").read_text()) for l in ("en", "id"))
-    assert en["_images"]["cover.image"] == img and en["cover.image_caption"] == "Archive photo · Utah, USA"
-    assert id_["cover.image_caption"] == "Foto arsip · Utah, USA"
+    assert en["_images"]["cover.image"] == img and en["cover.image_caption"] == "Archive photo · storm"
+    assert id_["cover.image_caption"] == "Foto arsip · storm"
 
 
 def test_no_commons_photo_keeps_the_cover_null(tmp_path, monkeypatch):
@@ -82,4 +82,12 @@ def test_story_picture_gets_its_own_archive_photo_and_credit(tmp_path, monkeypat
     used = fetch_images.commons_photo(tmp_path, "story.image", "story.jpg", skip=[a["source_url"]])
     en = json.loads((tmp_path / "en.json").read_text())
     assert used == b["source_url"] and en["_images"]["story.image"]["file"] == "story.jpg"
-    assert en["story.image_credit"] == "Bo / Wikimedia Commons, CC BY 4.0" and en["story.image_caption"] == "Archive photo · Utah, USA"
+    assert en["story.image_credit"] == "Bo / Wikimedia Commons, CC BY 4.0" and en["story.image_caption"] == "Archive photo · b"
+
+
+def test_files_named_after_the_topic_rank_first(monkeypatch):
+    pages = [page(1, "https://upload.wikimedia.org/Skyline.jpg", "CC0"), page(2, "https://upload.wikimedia.org/Big_thunderstorm_2013.jpg", "CC0")]
+    monkeypatch.setattr(find_images.requests, "get", lambda *a, **kw: Reply(pages))
+    found = find_images.candidates({"_theme": "storm", "_keywords": ["wind"]})
+    assert found[0]["source_url"].endswith("Big_thunderstorm_2013.jpg")
+    assert find_images.title("https://x/y/Big_thunderstorm_%282%29_2013.jpg") == "Big thunderstorm 2013"
