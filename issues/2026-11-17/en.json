@@ -44,11 +44,16 @@
   "_images": {
     "cover.image": {
       "file": "cover.jpg",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/ParmaMelor_AMO_TMO_2009279_lrg.jpg",
-      "license": "Public domain",
-      "credit": "NASA image courtesy the MODIS Rapid Response Team at NASA GSFC. Caption by Holli / Wikimedia Commons"
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Joshua_Tree_Park_approaching_thunderstorm_02_2013.jpg",
+      "license": "CC BY-SA 3.0",
+      "credit": "Tuxyso / Wikimedia Commons"
     },
-    "story.image": null,
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Port_and_lighthouse_overnight_storm_with_lightning_in_Port-la-Nouvelle.jpg",
+      "license": "CC BY 2.0",
+      "credit": "Maxime Raynal from France / Wikimedia Commons"
+    },
     "physics.diagram": null
   },
   "_graph.1.raw": 12.5,
@@ -178,7 +183,7 @@
   "footer.credit": "ELIOS Guides · Issue 07 · Public interest physics",
   "cover.title": "How fast winds pack massive energy",
   "cover.subtitle": "Storms bring powerful gusts across Indonesia. Discover why doubling wind speed multiplies kinetic energy four times.",
-  "cover.image_caption": "Archive photo · Jakarta, Indonesia",
+  "cover.image_caption": "Archive photo · storm",
   "cover.news_date": "News: 17 Nov 2026",
   "cover.place": "Jakarta, Indonesia",
   "cover.topic": "Storms and wind",
@@ -192,8 +197,8 @@
   "cover.fun_fact": "If wind speed doubles, its kinetic energy increases four times because speed is squared.",
   "story.title": "When strong winds strike",
   "story.lead": "Weather agencies issued warnings for severe wind gusts and thunderstorms [1]. Fast-moving air carries huge energy [2].",
-  "story.image_caption": "Storm clouds over the city",
-  "story.image_credit": "Illustration by ELIOS",
+  "story.image_caption": "Archive photo · Port and lighthouse overnight storm with lightning in Port-la-Nouvelle",
+  "story.image_credit": "Maxime Raynal from France / Wikimedia Commons, CC BY 2.0",
   "stat.1.value": "12.5 J",
   "stat.2.value": "112.5 J",
   "stat.3.value": "312.5 J",

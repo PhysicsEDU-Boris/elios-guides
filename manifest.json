@@ -1,7 +1,7 @@
 {
   "guides": [
     {
-      "revision": "3fe7e182d7100108012701625c751e8ffa2069be8712aa187083ca3bbd7dc8ee",
+      "revision": "abc4d3ec12b329d1e3257a683144de2f131b2f44856bd5bad425b71b2057d8dd",
       "date": "2026-11-17",
       "issue": "07",
       "slug": "strong-winds-and-kinetic-energy",
@@ -32,18 +32,18 @@
         "src": "issues/2026-11-17/photo.jpg",
         "thumb": "issues/2026-11-17/photo-800.jpg",
         "w": 2000,
-        "h": 1490,
+        "h": 1114,
         "caption": {
-          "en": "Archive photo · Jakarta, Indonesia",
-          "id": "Foto arsip · Jakarta, Indonesia"
+          "en": "Archive photo · storm",
+          "id": "Foto arsip · storm"
         },
-        "credit": "NASA image courtesy the MODIS Rapid Response Team at NASA GSFC. Caption by Holli / Wikimedia Commons",
-        "license": "Public domain",
-        "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/ParmaMelor_AMO_TMO_2009279_lrg.jpg"
+        "credit": "Tuxyso / Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Joshua_Tree_Park_approaching_thunderstorm_02_2013.jpg"
       },
       "content_sha": {
-        "en": "b4337dacb4cdf389d8fde923b5316e41a783e66b752af01b5948babbfa38dfd0",
-        "id": "e6b37c6fe95fb320d0385f700ace88059482ac69a987070ecfb92abd28c0d4f9"
+        "en": "979cfbbd562ed6577b565526f47363eab0dd9809a301c1b3d3c1563433bd6f4b",
+        "id": "0dc87a23fb431815e25d609d81edbd56fe1258b4f287880205468dd75dd09b1c"
       },
       "xp_parts": {
         "story": 10,
@@ -383,5 +383,5 @@
       }
     }
   ],
-  "updated": "2026-11-17T11:36:52+07:00"
+  "updated": "2026-11-17T11:41:48+07:00"
 }
