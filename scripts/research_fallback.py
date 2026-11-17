@@ -31,6 +31,12 @@ def chat(base, key, model, system, user):
         if r.status_code == 429 or r.status_code >= 500:
             time.sleep(20 * (attempt + 1))
             continue
+        if r.status_code == 404:  # wrong model name: say which ones this key can use
+            try:
+                ids = [m["id"] for m in requests.get(f"{base.rstrip('/')}/models", headers={"Authorization": f"Bearer {key}"}, timeout=30).json()["data"]]
+            except (requests.RequestException, KeyError, ValueError):
+                ids = []
+            raise ValueError(f"research provider HTTP 404: {r.text[:200]} Available models: {ids}")
         if not r.ok:
             raise ValueError(f"research provider HTTP {r.status_code}: {r.text[:300]}")
         choice = (r.json().get("choices") or [{}])[0]
