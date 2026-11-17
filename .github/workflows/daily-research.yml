@@ -14,6 +14,11 @@ on:
         required: false
         type: boolean
         default: false
+      force_fallback:
+        description: "Skip Gemini and write the issue with the fallback provider (to test it)"
+        required: false
+        type: boolean
+        default: false
       resume:
         description: "Repair an existing unfilled guide branch without deleting its files"
         required: false
@@ -112,7 +117,7 @@ jobs:
           git checkout FETCH_HEAD -- "issues/$DATE"
 
       - name: Research and write
-        if: needs.prep.outputs.resume != 'true'
+        if: needs.prep.outputs.resume != 'true' && !inputs.force_fallback
         id: research
         continue-on-error: true # partial files still go to a NEEDS FIX PR
         timeout-minutes: 35
@@ -138,6 +143,18 @@ jobs:
             Follow GEMINI.md exactly. Today is ${{ needs.prep.outputs.date }} (Asia/Jakarta).
             If .gemini/remedial-brief.json exists, today is a remedial day: follow the Remedial mode section.
             Write issues/${{ needs.prep.outputs.date }}/en.json, id.json, calc.py and sources.md.
+
+      - name: Research with the fallback provider (Gemini failed)
+        # Optional: repo variables RESEARCH_BASE_URL / RESEARCH_MODEL and secret RESEARCH_API_KEY
+        # (default: the FALLBACK_* Groq settings with groq/compound, which searches the web itself).
+        if: needs.prep.outputs.resume != 'true' && (steps.research.outcome != 'success' || hashFiles(format('issues/{0}/en.json', env.DATE)) == '') && (vars.RESEARCH_BASE_URL || vars.FALLBACK_BASE_URL) != ''
+        continue-on-error: true
+        timeout-minutes: 20
+        env:
+          RESEARCH_BASE_URL: ${{ vars.RESEARCH_BASE_URL || vars.FALLBACK_BASE_URL }}
+          RESEARCH_MODEL: ${{ vars.RESEARCH_MODEL || 'groq/compound' }}
+          RESEARCH_API_KEY: ${{ secrets.RESEARCH_API_KEY || secrets.FALLBACK_API_KEY }}
+        run: python scripts/research_fallback.py "issues/$DATE"
 
       - name: Keep only the files research may write
         # Gemini can read scripts/validate.py and once forged calc.out.json, check.json and cover.jpg.
@@ -254,6 +271,21 @@ jobs:
             doesn't exist: replace it with the exact page you open, with its real title and date.
             Change nothing else and write no other files.
 
+      - name: Repair with the fallback provider (Gemini repair 1 failed)
+        # Optional: repo variables RESEARCH_BASE_URL / RESEARCH_MODEL and secret RESEARCH_API_KEY
+        # (default: the FALLBACK_* Groq settings with groq/compound, which searches the web itself).
+        if: steps.repair.outcome == 'failure' && (vars.RESEARCH_BASE_URL || vars.FALLBACK_BASE_URL) != ''
+        continue-on-error: true
+        timeout-minutes: 20
+        env:
+          RESEARCH_BASE_URL: ${{ vars.RESEARCH_BASE_URL || vars.FALLBACK_BASE_URL }}
+          RESEARCH_MODEL: ${{ vars.RESEARCH_MODEL || 'groq/compound' }}
+          RESEARCH_API_KEY: ${{ secrets.RESEARCH_API_KEY || secrets.FALLBACK_API_KEY }}
+          PROBLEMS: ${{ steps.check1.outputs.problems }}
+        run: |
+          printf '%s' "$PROBLEMS" > "$RUNNER_TEMP/problems.txt"
+          python scripts/research_fallback.py "issues/$DATE" --problems "$RUNNER_TEMP/problems.txt"
+
       - name: Keep only the files repair may write
         if: steps.repair.outcome != 'skipped'
         run: |
@@ -308,6 +340,21 @@ jobs:
             Read .gemini/published-manifest.json for the next issue number and recent topics.
             Correct every remaining content, length, calculation and bilingual error. Do not change
             any other files. Do not claim a problem is fixed without writing the corrected files.
+
+      - name: Repair with the fallback provider (Gemini repair 2 failed)
+        # Optional: repo variables RESEARCH_BASE_URL / RESEARCH_MODEL and secret RESEARCH_API_KEY
+        # (default: the FALLBACK_* Groq settings with groq/compound, which searches the web itself).
+        if: steps.repair2.outcome == 'failure' && (vars.RESEARCH_BASE_URL || vars.FALLBACK_BASE_URL) != ''
+        continue-on-error: true
+        timeout-minutes: 20
+        env:
+          RESEARCH_BASE_URL: ${{ vars.RESEARCH_BASE_URL || vars.FALLBACK_BASE_URL }}
+          RESEARCH_MODEL: ${{ vars.RESEARCH_MODEL || 'groq/compound' }}
+          RESEARCH_API_KEY: ${{ secrets.RESEARCH_API_KEY || secrets.FALLBACK_API_KEY }}
+          PROBLEMS: ${{ steps.check2.outputs.problems }}
+        run: |
+          printf '%s' "$PROBLEMS" > "$RUNNER_TEMP/problems.txt"
+          python scripts/research_fallback.py "issues/$DATE" --problems "$RUNNER_TEMP/problems.txt"
 
       - name: Recompute after the second repair and discard untrusted outputs
         if: steps.repair2.outcome != 'skipped'
