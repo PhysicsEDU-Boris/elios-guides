@@ -23,7 +23,7 @@ MAX_CONTEXT = 12000
 def chat(base, key, model, system, user):
     if not base.startswith("https://"):
         raise ValueError("research base URL must be https")
-    body = {"model": model, "max_tokens": 8000, "temperature": 0.3,
+    body = {"model": model, "max_tokens": 16000, "temperature": 0.3,
             "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]}
     if "openrouter.ai" in base:  # OpenRouter runs the web search itself (Exa), for any model
         body["plugins"] = [{"id": "web", "max_results": 6}]
