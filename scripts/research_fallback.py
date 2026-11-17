@@ -31,7 +31,8 @@ def chat(base, key, model, system, user):
         if r.status_code == 429 or r.status_code >= 500:
             time.sleep(20 * (attempt + 1))
             continue
-        r.raise_for_status()
+        if not r.ok:
+            raise ValueError(f"research provider HTTP {r.status_code}: {r.text[:300]}")
         choice = (r.json().get("choices") or [{}])[0]
         if choice.get("finish_reason") != "stop":
             raise ValueError("research provider stopped before finishing (too long or filtered)")
