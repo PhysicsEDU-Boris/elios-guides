@@ -1,1 +1,80 @@
-{"updated": null, "guides": []}
+{
+  "updated": "2026-11-19T01:50:45+07:00",
+  "guides": [
+    {
+      "revision": "259f2cb790f0fa352e2718a6ef25fbd0de79d0a2ef6dbac3271dc392b6ec2ffd",
+      "date": "2026-11-18",
+      "issue": "08",
+      "slug": "solar-power-and-panel-efficiency",
+      "xp": 60,
+      "title": {
+        "en": "How solar panels generate power",
+        "id": "Cara panel surya hasilkan listrik"
+      },
+      "topic": {
+        "en": "Energy and electricity",
+        "id": "Energi dan listrik"
+      },
+      "cover": {
+        "en": "issues/2026-11-18/elios-guide-08-solar-power-and-panel-efficiency-cover-en.png",
+        "id": "issues/2026-11-18/elios-guide-08-solar-power-and-panel-efficiency-cover-id.png"
+      },
+      "pdf": {
+        "en": "issues/2026-11-18/elios-guide-08-solar-power-and-panel-efficiency-en.pdf",
+        "id": "issues/2026-11-18/elios-guide-08-solar-power-and-panel-efficiency-id.pdf"
+      },
+      "content": {
+        "en": "issues/2026-11-18/en.json",
+        "id": "issues/2026-11-18/id.json"
+      },
+      "schema": 2,
+      "theme": "energy",
+      "photo": {
+        "src": "issues/2026-11-18/photo.jpg",
+        "thumb": "issues/2026-11-18/photo-800.jpg",
+        "w": 2000,
+        "h": 1499,
+        "caption": {
+          "en": "Archive photo · energy",
+          "id": "Foto arsip · energi"
+        },
+        "credit": "David Shankbone / Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/David_Faiman_of_the_Ben-Gurion_National_Solar_Energy_Center.jpg"
+      },
+      "content_sha": {
+        "en": "156743a5f1b97a301f62a1f5dd50b6ff1e29de95fcc949fbfb88ca0d339dfd4d",
+        "id": "e31d6b10c2c2da725571d6a119da135926f6ff0b91635acb7ff666ab51f0afd5"
+      },
+      "xp_parts": {
+        "story": 10,
+        "physics": 20,
+        "quiz": 10,
+        "lab": 20
+      },
+      "formula": "solar-panel-output",
+      "sources": [
+        "atmosphere.copernicus.eu/air-quality",
+        "wmo.int/topics/climate",
+        "wmo.int/topics/energy"
+      ],
+      "terms": [
+        "air",
+        "atmosphere",
+        "clean",
+        "efficiency",
+        "electricity",
+        "energy",
+        "generate",
+        "jakarta",
+        "panel",
+        "power",
+        "quality",
+        "solar",
+        "sun",
+        "surya"
+      ],
+      "pages": 4
+    }
+  ]
+}
