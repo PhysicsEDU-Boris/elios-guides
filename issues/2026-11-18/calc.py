@@ -16,7 +16,7 @@ P_3 = int(eta * A_3 * G)
 G_g1 = 150 * 2
 P_g1 = int(eta * A * G_g1)
 
-G_g2 = 200 * 2
+G_g2 = 8 * 50
 P_g2 = int(eta * A * G_g2)
 
 day = 6 * 2
