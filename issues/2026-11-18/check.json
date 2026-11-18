@@ -1,0 +1,51 @@
+[
+  {
+    "item": "Solar panel power output calculation",
+    "claim": "P = 0.20 x 2 x 500 = 200 W",
+    "source": "calc",
+    "pass": true,
+    "note": "Verified arithmetic: 0.20 * 2 * 500 = 200"
+  },
+  {
+    "item": "Solar panel power output calculation 2",
+    "claim": "P = 0.10 x 2 x 500 = 100 W",
+    "source": "calc",
+    "pass": true,
+    "note": "Verified arithmetic: 0.10 * 2 * 500 = 100"
+  },
+  {
+    "item": "Solar panel power output calculation 3",
+    "claim": "P = 0.20 x 1 x 500 = 100 W",
+    "source": "calc",
+    "pass": true,
+    "note": "Verified arithmetic: 0.20 * 1 * 500 = 100"
+  },
+  {
+    "item": "Solar panel power output graph value 1",
+    "claim": "P = 0.20 x 2 x 300 = 120 W",
+    "source": "calc",
+    "pass": true,
+    "note": "Verified arithmetic: 0.20 * 2 * 300 = 120"
+  },
+  {
+    "item": "Solar panel power output graph value 2",
+    "claim": "P = 0.20 x 2 x 400 = 160 W",
+    "source": "calc",
+    "pass": true,
+    "note": "Verified arithmetic: 0.20 * 2 * 400 = 160"
+  },
+  {
+    "item": "WMO energy and weather",
+    "claim": "Solar generation varies with atmospheric conditions and sunlight.",
+    "source": "1",
+    "pass": true,
+    "note": "Confirmed by source 1 ('wind and solar generation rise and fall with atmospheric conditions')."
+  },
+  {
+    "item": "WMO climate and energy reports",
+    "claim": "Climate and weather reports track solar radiation to help power grids plan electricity supply.",
+    "source": "2",
+    "pass": true,
+    "note": "Confirmed by source 2 regarding climate systems and decision-making."
+  }
+]
