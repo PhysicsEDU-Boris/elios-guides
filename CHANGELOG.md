@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — 19 November 2026 (cover title width)
+
+- `validate.py` measures the width of `cover.title` with the real cover font (limit 530 of the 539 px box) and `schema/limits.json` lowers it from 34 to 28 characters: a title that wraps to two lines overflowed page 1 and failed the render after validation had passed (2026-11-19, Indonesian title of 28 chars).
+
 ## Unreleased — 19 November 2026 (source rule)
 
 - `check_sources.py`: `stat.N.value` and `cover.fun_fact` may use the worked example's typed-in `calc.py` inputs (it rejected `0.2 Hz`/`15 m` and `200 W` on two days running); story and news numbers still need a source.
