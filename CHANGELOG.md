@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased — 19 November 2026 (repair guard)
+
+- `scripts/keep_better.py`: after each repair pass the issue is validated again and the repair is thrown away if it left more problems than before (a Flash-Lite repair once deleted ~40 keys of an almost valid issue and published nothing).
+- The second repair now uses `gemini-3-flash-preview` (stronger than Flash-Lite; free tier is 20 requests/day, so it is limited to 20 turns).
+
 ## Unreleased — 17 November 2026 (dashboard restyle)
 
 - `dashboard/` restyled to match the Figma ELIOS Insights design: mission card, stat tiles, expandable question cards, working Tough/Tricky/Easy filters, concepts and remedial calendar sidebar, login/check-inbox/empty/not-allowed screens, Light and Dark themes, mobile layout.

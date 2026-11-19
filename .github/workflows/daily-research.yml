@@ -245,6 +245,10 @@ jobs:
           echo "ok=$([ "$code" -eq 0 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
           { echo "problems<<ELIOS_EOF"; cat "$RUNNER_TEMP/check1.txt"; echo "ELIOS_EOF"; } >> "$GITHUB_OUTPUT"
 
+      - name: Snapshot before the first repair
+        if: steps.check1.outputs.ok != 'true' && hashFiles(format('issues/{0}/en.json', env.DATE)) != ''
+        run: rm -rf "$RUNNER_TEMP/snap1" && cp -r "issues/$DATE" "$RUNNER_TEMP/snap1"
+
       - name: Repair
         # One short Gemini pass on the exact problem list; most failures are a few chars over a limit.
         id: repair
@@ -303,6 +307,16 @@ jobs:
           # A photo that still fails the size/sharpness/JPEG checks becomes null.
           python scripts/fetch_images.py "issues/$DATE" --drop-failed | tee "$RUNNER_TEMP/images.txt"
 
+      - name: Keep the first repair only if it left fewer problems
+        # A flash-lite repair once deleted most keys of an almost valid issue; never let a repair make it worse.
+        if: steps.repair.outcome != 'skipped'
+        continue-on-error: true
+        run: |
+          BASE=$(grep -oP 'VALIDATION FAILED \(\K[0-9]+' "$RUNNER_TEMP/check1.txt" || echo 0)
+          python scripts/keep_better.py "issues/$DATE" "$RUNNER_TEMP/snap1" "$BASE" --manifest .gemini/published-manifest.json --check-sources
+          python scripts/run_calc.py "issues/$DATE" || true
+          python scripts/fetch_images.py "issues/$DATE" --drop-failed | tee "$RUNNER_TEMP/images.txt"
+
       - name: Check the repaired content before the independent fact-check
         id: check2
         if: steps.repair.outcome != 'skipped'
@@ -315,6 +329,10 @@ jobs:
           echo "ok=$([ "$code" -eq 0 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
           { echo "problems<<ELIOS_EOF"; cat "$RUNNER_TEMP/check2.txt"; echo "ELIOS_EOF"; } >> "$GITHUB_OUTPUT"
 
+      - name: Snapshot before the second repair
+        if: steps.check2.outputs.ok == 'false'
+        run: rm -rf "$RUNNER_TEMP/snap2" && cp -r "issues/$DATE" "$RUNNER_TEMP/snap2"
+
       - name: Repair problems introduced or left by the first repair
         id: repair2
         if: steps.check2.outputs.ok == 'false'
@@ -326,9 +344,10 @@ jobs:
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           gemini_cli_version: "0.67.0"
-          gemini_model: gemini-3.5-flash-lite
+          # Escalate: full Flash is stronger than Flash Lite (free tier 20 RPD, so keep the turn count low).
+          gemini_model: gemini-3-flash-preview
           settings: |
-            {"model": {"maxSessionTurns": 30}, "privacy": {"usageStatisticsEnabled": false}, "modelConfigs": {"customAliases": {"gemini-3-flash-base": {"extends": "base", "modelConfig": {"model": "gemini-3.1-flash-lite"}}, "loop-detection-double-check": {"extends": "base", "modelConfig": {"model": "gemini-3.1-flash-lite"}}}}, "tools": {"core": ["google_web_search", "web_fetch", "read_file", "write_file", "list_directory"]}}
+            {"model": {"maxSessionTurns": 20}, "privacy": {"usageStatisticsEnabled": false}, "modelConfigs": {"customAliases": {"gemini-3-flash-base": {"extends": "base", "modelConfig": {"model": "gemini-3.1-flash-lite"}}, "loop-detection-double-check": {"extends": "base", "modelConfig": {"model": "gemini-3.1-flash-lite"}}}}, "tools": {"core": ["google_web_search", "web_fetch", "read_file", "write_file", "list_directory"]}}
           prompt: >-
             Follow GEMINI.md. Repair issues/${{ env.DATE }}/en.json, id.json, calc.py and sources.md.
             The previous repair left these current problems: ${{ steps.check2.outputs.problems }}
@@ -363,6 +382,15 @@ jobs:
           find "issues/$DATE" -type f ! -name en.json ! -name id.json ! -name calc.py ! -name sources.md -delete
           git ls-files -m | grep -v -e '^issues/' -e '^manifest.json$' | xargs -r git checkout --
           git clean -fdq -e issues/ -e .gemini/ -e gemini-artifacts/
+          python scripts/run_calc.py "issues/$DATE" || true
+          python scripts/fetch_images.py "issues/$DATE" --drop-failed | tee "$RUNNER_TEMP/images.txt"
+
+      - name: Keep the second repair only if it left fewer problems
+        if: steps.repair2.outcome != 'skipped'
+        continue-on-error: true
+        run: |
+          BASE=$(grep -oP 'VALIDATION FAILED \(\K[0-9]+' "$RUNNER_TEMP/check2.txt" || echo 0)
+          python scripts/keep_better.py "issues/$DATE" "$RUNNER_TEMP/snap2" "$BASE" --manifest .gemini/published-manifest.json --check-sources
           python scripts/run_calc.py "issues/$DATE" || true
           python scripts/fetch_images.py "issues/$DATE" --drop-failed | tee "$RUNNER_TEMP/images.txt"
 
