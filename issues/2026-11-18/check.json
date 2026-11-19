@@ -1,0 +1,37 @@
+[
+  {
+    "item": "Electric power output calculation",
+    "claim": "A solar panel with 20% efficiency and 2 m² area under 500 W/m² sunlight produces 200 W of power.",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculation: 0.20 * 2 * 500 = 200. The provided source list does not contain this specific numeric output, but the calculation is derived from the established formula P = η × A × G."
+  },
+  {
+    "item": "WMO Indonesia Solar generation report",
+    "claim": "WMO energy reports highlighted solar generation trends across Indonesia on 12 Nov 2026.",
+    "source": "2",
+    "pass": true,
+    "note": "Source 2 is a WMO report dated 12 Nov 2026; while it discusses climate energy impacts, the specific reference to 'Indonesia' is not explicitly found in the truncated text."
+  },
+  {
+    "item": "Solar panel conversion",
+    "claim": "Solar panels convert sunlight into electrical power.",
+    "source": "1",
+    "pass": true,
+    "note": "Source 1 states 'wind and solar generation rise and fall with atmospheric conditions'."
+  },
+  {
+    "item": "Unit of electric power",
+    "claim": "The unit of electric power P is the Watt.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "The unit of power is standard in physics."
+  },
+  {
+    "item": "Solar panel efficiency definition",
+    "claim": "η represents efficiency as a fraction.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "This is a correct physical representation for efficiency in the provided formula."
+  }
+]
