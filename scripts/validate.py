@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 from urllib.parse import urlparse
 
-from PIL import Image
+from PIL import Image, ImageFont
 
 import repeats
 
@@ -86,6 +86,20 @@ def answer_key_letters(text):
     return {n: l.lower() for n, l in re.findall(r"([123])\s*([A-Da-d])\b", text or "")}
 
 
+# The cover title is one 40 px line (Google Sans Flex 900, -0.8 px letter-spacing) in a 539 px box. A second
+# line pushes page 1 over its height, so the render fails (2026-11-19: id title of 28 chars wrapped).
+# Characters are not widths ("Why city streets get so hot" fits, "Why Warm Water Moves Waves" does not), so
+# measure with the real font. 530 leaves a few px of margin below the 539 px box.
+TITLE_MAX_PX = 530
+_TITLE_FONT = []
+
+
+def title_width(text):
+    if not _TITLE_FONT:
+        _TITLE_FONT.append(ImageFont.truetype(str(ROOT / "render" / "fonts" / "GoogleSansFlex-900.ttf"), 40))
+    return _TITLE_FONT[0].getlength(text) - 0.8 * len(text)
+
+
 def check_lang(d, lang, folder):
     errs = []
     for k, limit in LIMITS.items():
@@ -102,6 +116,9 @@ def check_lang(d, lang, folder):
             errs.append(f"{lang}: {k} is empty (only legend.4/5.* and source.4/5 may be empty)")
         if len(v) > limit:
             errs.append(f"{lang}: {k} is {len(v)} chars, limit {limit}")
+        elif k == "cover.title" and title_width(v) > TITLE_MAX_PX:
+            errs.append(f"{lang}: cover.title {v!r} is too wide for one line ({title_width(v):.0f} > {TITLE_MAX_PX} px); "
+                        "shorten it to about 24 characters, fewer capital letters")
     for k, v in d.items():
         if any(c in s for s in strings(v) for c in "{}"):
             errs.append(f"{lang}: {k} contains {{ or }}")

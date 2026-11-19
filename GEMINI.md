@@ -68,6 +68,9 @@ Every reference to manifest.json below means this catalogue. It contains the dep
 ## Writing
 - A 13-year-old reader: short sentences, one idea each, explain hard words in the same sentence.
 - Keep to schema/limits.json. Fill every key. Use "" only where the schema allows it.
+- cover.title is one line of big type: about 24 characters in both languages (28 at most). The validator
+  measures its pixel width; capital letters and m/w are wide ("Why Warm Water Moves Waves" wraps), so write
+  sentence case and a short Indonesian title (it is longer than English). A wrapped title fails the render.
 - Quiz: 3 questions, 4 options each, exactly one correct, not all the same letter.
   quiz.answer_key = "Answer key: 1B · 2A · 3C" (EN) / "Kunci: 1B · 2A · 3C" (ID).
 - Mini lab: cheap household items, no flame, no heat, no electricity from the mains, no chemicals

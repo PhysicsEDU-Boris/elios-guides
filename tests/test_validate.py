@@ -41,8 +41,8 @@ def test_optional_may_be_empty(issue):
 
 
 def test_over_limit(issue):
-    issue.id["cover.title"] = "x" * 35
-    has(issue.errors(), "id: cover.title is 35 chars, limit 34")
+    issue.id["cover.title"] = "x" * 29
+    has(issue.errors(), "id: cover.title is 29 chars, limit 28")
 
 
 def test_braces(issue):
@@ -309,3 +309,15 @@ def test_cover_png_scale_2(issue):
     from PIL import Image
     Image.new("RGB", (595, 842)).save(issue.folder / "elios-guide-00-x-cover-en.png")
     has(issue.errors(), "is 595x842, needs at least 1190x1684")
+
+
+def test_wide_cover_title_that_would_wrap_is_rejected(issue):
+    # 26 chars, under the character limit, but capital letters are wide: two lines overflow page 1.
+    issue.en["cover.title"] = "Why Warm Water Moves Waves"
+    has(issue.errors(), "en: cover.title 'Why Warm Water Moves Waves' is too wide for one line")
+
+
+def test_cover_titles_that_fit_one_line_pass(issue):
+    issue.en["cover.title"] = "Why city streets get so hot"
+    issue.id["cover.title"] = "Laju gelombang laut"
+    assert issue.errors() == []
