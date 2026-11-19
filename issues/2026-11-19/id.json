@@ -1,0 +1,382 @@
+{
+  "_example": false,
+  "_issue": "09",
+  "_slug": "coastal-ocean-waves-and-speed",
+  "_theme": "storm",
+  "_formula": "wave-speed",
+  "_keywords": [
+    "wave",
+    "gelombang",
+    "speed",
+    "kecepatan"
+  ],
+  "_date": "2026-11-19",
+  "_lang": "id",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "NOAA",
+      "title": "NOAA JetStream: Ocean Waves",
+      "date": "2026-01-15",
+      "url": "https://www.noaa.gov/jetstream/ocean/waves",
+      "primary": true
+    },
+    {
+      "n": 2,
+      "publisher": "WMO",
+      "title": "WMO Weather Topics and Marine Forecasting",
+      "date": "2026-10-15",
+      "url": "https://wmo.int/topics/weather",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "Wikipedia",
+      "title": "Wind wave",
+      "date": "2026-11-19",
+      "url": "https://en.wikipedia.org/wiki/Wind_wave",
+      "primary": false
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/A_storm_at_Pors-Loubous.jpg",
+      "license": "CC BY 1.0",
+      "credit": "Henri Camus / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Cascading_waves_at_Kallbadhuset_Lysekil.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "W.carter / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 3.0,
+  "_graph.2.raw": 2.0,
+  "_graph.3.raw": 200.0,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Panjang gelombang adalah jarak antara dua puncak gelombang berturut-turut.",
+      "wrong": {
+        "a": "Ketinggian mengukur amplitudo, bukan panjang gelombang.",
+        "c": "Kecepatan angin memengaruhi pembentukan, bukan definisi panjang gelombang.",
+        "d": "Kedalaman air memengaruhi bentuk gelombang."
+      }
+    },
+    "2": {
+      "why": "Frekuensi diukur dalam hertz (Hz), yang berarti siklus per detik.",
+      "wrong": {
+        "b": "Meter mengukur panjang atau jarak.",
+        "c": "Newton mengukur gaya.",
+        "d": "Joule mengukur energi."
+      }
+    },
+    "3": {
+      "why": "Kalikan frekuensi (0,5) dengan panjang gelombang (4) untuk mendapatkan 2,0 m/s.",
+      "wrong": {
+        "a": "0,125 berasal dari pembagian yang salah.",
+        "b": "1,0 adalah perhitungan yang salah.",
+        "d": "8,0 merupakan perkalian yang keliru."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "Apa yang diukur oleh panjang gelombang?",
+      "options": [
+        "Jarak antara puncak gelombang",
+        "Ketinggian air",
+        "Kecepatan angin",
+        "Suhu air"
+      ],
+      "answer": 0,
+      "explanation": "Panjang gelombang adalah jarak dari satu puncak ke puncak berikutnya."
+    },
+    {
+      "question": "Apakah satuan dari cepat rambat gelombang v?",
+      "options": [
+        "Meter per detik (m/s)",
+        "Hertz (Hz)",
+        "Newton (N)",
+        "Joule (J)"
+      ],
+      "answer": 0,
+      "explanation": "Kecepatan adalah jarak dibagi waktu, diukur dalam m/s."
+    },
+    {
+      "question": "Jika frekuensi meningkat sementara panjang gelombang tetap, cepat rambat...",
+      "options": [
+        "meningkat",
+        "menurun",
+        "tetap sama",
+        "turun ke nol"
+      ],
+      "answer": 0,
+      "explanation": "Cepat rambat berbanding lurus dengan frekuensi."
+    },
+    {
+      "question": "Apa yang memicu pembentukan riak angin di lautan?",
+      "options": [
+        "Gesekan angin yang bertiup di permukaan air",
+        "Rotasi bumi",
+        "Gravitasi bulan",
+        "Gempa bawah laut"
+      ],
+      "answer": 0,
+      "explanation": "Gesekan angin memindahkan energi ke permukaan air."
+    },
+    {
+      "question": "Apa yang diukur oleh frekuensi f?",
+      "options": [
+        "Gelombang yang melewati suatu titik per detik",
+        "Jarak total gelombang",
+        "Ketinggian puncak gelombang",
+        "Massa air"
+      ],
+      "answer": 0,
+      "explanation": "Frekuensi menghitung siklus per detik dalam hertz."
+    },
+    {
+      "question": "Di air dalam, swell samudra yang panjang merambat...",
+      "options": [
+        "lebih cepat dari riak pendek",
+        "lebih lambat dari riak pendek",
+        "pada kecepatan nol",
+        "mundur"
+      ],
+      "answer": 0,
+      "explanation": "Panjang gelombang yang lebih besar meningkatkan kecepatan."
+    },
+    {
+      "question": "Berapakah nilai 1 hertz?",
+      "options": [
+        "1 siklus per detik",
+        "60 siklus per detik",
+        "1 meter per detik",
+        "1 joule per detik"
+      ],
+      "answer": 0,
+      "explanation": "Hertz didefinisikan sebagai siklus per detik."
+    },
+    {
+      "question": "Mengapa gelombang laut melambat di dekat pantai?",
+      "options": [
+        "Air menjadi dangkal dan berinteraksi dengan dasar laut",
+        "Udara menjadi lebih hangat",
+        "Kadar garam berubah",
+        "Angin berhenti bertiup"
+      ],
+      "answer": 0,
+      "explanation": "Gesekan dasar laut dangkal memperlambat laju gelombang."
+    },
+    {
+      "question": "Properti gelombang manakah yang dilambangkan oleh huruf lambda (λ)?",
+      "options": [
+        "Panjang gelombang",
+        "Frekuensi",
+        "Cepat rambat",
+        "Amplitudo"
+      ],
+      "answer": 0,
+      "explanation": "Lambda adalah huruf Yunani untuk panjang gelombang."
+    },
+    {
+      "question": "Apa yang dibawa melintasi samudra oleh sebuah gelombang?",
+      "options": [
+        "Energi",
+        "Massa air",
+        "Garam",
+        "Ikan"
+      ],
+      "answer": 0,
+      "explanation": "Gelombang mentransfer energi tanpa memindahkan massa air secara permanen ke depan."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "dua nampan atau wadah air dengan riak",
+      "penggaris atau jari pengetuk",
+      "gerakan riak air"
+    ],
+    "safety": [
+      "tanpa api, tanpa ketel, tanpa listrik utama",
+      "hanya tangan dalam foto"
+    ],
+    "pass_if": "Foto menunjukkan riak air dan siswa mengamati pergerakan gelombang."
+  },
+  "_per_page": [
+    {
+      "guide.stop_label": "Sampul"
+    },
+    {
+      "guide.stop_label": "Pos 1 · Ceritanya",
+      "section.label": "POS 1 · CERITANYA",
+      "section.xp": "+10 XP UNTUK MEMBACA"
+    },
+    {
+      "guide.stop_label": "Pos 2 · Fisikanya",
+      "section.label": "POS 2 · FISIKANYA",
+      "section.xp": "+20 XP UNTUK MENJAWAB"
+    },
+    {
+      "guide.stop_label": "Pos 3 · Misimu",
+      "section.label": "POS 3 · MISIMU",
+      "section.xp": "+30 XP UNTUK DIRAIH"
+    }
+  ],
+  "_replace": {
+    "stop": [
+      [
+        "STOP",
+        "POS"
+      ]
+    ],
+    "page ref": [
+      [
+        "p.",
+        "hlm. "
+      ]
+    ]
+  },
+  "guide.issue_date": "#09 · 19 NOV 2026",
+  "guide.lang": "ID",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Edisi 09 · 2026",
+  "cover.title": "Laju gelombang laut",
+  "cover.subtitle": "Angin meniup air, mengirim gelombang kuat ke pantai. Pelajari bagaimana frekuensi dan panjang gelombang menentukan kecepatan gelombang.",
+  "cover.image_caption": "Foto arsip · storm",
+  "cover.news_date": "Berita: 18 Nov 2026",
+  "cover.place": "Laut Jawa, Indonesia",
+  "cover.topic": "Badai dan gelombang",
+  "cover.subject": "Fisika · Gelombang",
+  "quest.1.desc": "Baca cara terbentuknya gelombang laut",
+  "quest.2.desc": "Hitung kecepatan dengan v = f × λ",
+  "quest.3.desc": "Kuis, lab mini dan lencana",
+  "cover.read_time": "12 menit baca",
+  "cover.level": "SMP · kelas 7–9",
+  "cover.xp_total": "Raih hingga 60 XP",
+  "cover.fun_fact": "Gelombang laut yang panjang merambat lebih cepat di air dalam daripada riak pendek.",
+  "story.title": "Saat angin bertemu lautan luas",
+  "story.lead": "Angin kencang yang bertiup di atas samudra memindahkan energi ke dalam air, menciptakan gelombang ritmis yang bergulir menuju daratan [1].",
+  "story.image_caption": "Foto arsip · Cascading waves at Kallbadhuset Lysekil",
+  "story.image_credit": "W.carter / Wikimedia Commons, CC BY-SA 4.0",
+  "stat.1.value": "0,2",
+  "stat.2.value": "15",
+  "stat.3.value": "3,0",
+  "stat.1.label": "frekuensi gelombang dalam hertz (Hz)",
+  "stat.2.label": "panjang gelombang dalam meter (m)",
+  "stat.3.label": "cepat rambat gelombang dalam meter per detik (m/s)",
+  "story.body_1": "Ketika angin stabil bertiup di permukaan air, gesekan mendorong air membentuk riak dan gelombang yang semakin besar [2]. Saat kecepatan angin meningkat, gelombang ini mengumpulkan energi dan bergerak melintasi cekungan samudra luas menuju wilayah pesisir [1].",
+  "story.body_2": "Ketika gelombang mencapai perairan dangkal, kecepatan gelombang berubah dan tingginya bertambah sebelum pecah di pantai [3]. Memahami bagaimana cepat rambat gelombang bergantung pada frekuensi dan panjang gelombang membantu ilmuwan memantau keselamatan pesisir.",
+  "timeline.1.date": "Pembentukan",
+  "timeline.2.date": "Perambatan",
+  "timeline.3.date": "Pecah",
+  "timeline.1.text": "Angin memindahkan energi ke permukaan air, membangun gelombang.",
+  "timeline.2.text": "Gelombang merambat melintasi laut membawa energi kinetik.",
+  "timeline.3.text": "Gelombang melambat di air dangkal dan pecah di pantai.",
+  "physics.title": "Seberapa cepat gelombang merambat?",
+  "physics.body_1": "Sebuah gelombang mengalirkan energi melalui air tanpa membawa air itu sendiri jauh-jauh. Kecepatan gelombang bergantung seberapa sering gelombang melintas dan jarak antar puncak gelombang.",
+  "physics.body_2": "Kita menghitung cepat rambat gelombang, v, dengan mengalikan frekuensi gelombang, f, dengan panjang gelombang, λ. Frekuensi lebih tinggi atau panjang gelombang lebih besar berarti kecepatan lebih besar.",
+  "physics.equation": "v = f × λ",
+  "physics.equation_name": "Persamaan cepat rambat gelombang",
+  "legend.1.symbol": "v",
+  "legend.1.meaning": "cepat rambat gelombang",
+  "legend.1.unit": "m/s",
+  "legend.2.symbol": "f",
+  "legend.2.meaning": "frekuensi",
+  "legend.2.unit": "hertz (Hz)",
+  "legend.3.symbol": "λ",
+  "legend.3.meaning": "panjang gelombang",
+  "legend.3.unit": "meter (m)",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "Kita berasumsi gelombang sinusoidal beraturan yang merambat di air dalam tanpa kehilangan energi.",
+  "example.step_1": "f = 0,2 Hz, λ = 15 m",
+  "example.step_2": "v = 0,2 × 15",
+  "example.step_3": "Kalikan: v = 3,0 m/s",
+  "example.result": "v = 3,0 m/s",
+  "table.h1": "Jenis Gelombang",
+  "table.h2": "Frekuensi (Hz)",
+  "table.h3": "Panjang Gelombang (m)",
+  "table.r1c1": "Swell samudra",
+  "table.r1c2": "0,2",
+  "table.r1c3": "15 m",
+  "table.r2c1": "Riak angin",
+  "table.r2c2": "0,5",
+  "table.r2c3": "4 m",
+  "table.r3c1": "Tsunami panjang",
+  "table.r3c2": "0,002",
+  "table.r3c3": "100.000 m",
+  "table.note": "Gelombang memiliki frekuensi dan panjang berbeda.",
+  "graph.title": "Perbandingan cepat rambat gelombang",
+  "graph.1.label": "Swell",
+  "graph.2.label": "Riak",
+  "graph.3.label": "Tsunami",
+  "graph.1.value": "3,0 m/s",
+  "graph.2.value": "2,0 m/s",
+  "graph.3.value": "200,0 m/s",
+  "graph.note": "Panjang gelombang dan frekuensi menentukan seberapa cepat setiap gelombang merambat.",
+  "physics.tip": "Panjang gelombang λ adalah jarak dari satu puncak gelombang ke puncak berikutnya.",
+  "mission.title": "Misi Penjelajah Gelombang",
+  "quiz.answer_key": "Kunci: 1B · 2A · 3C",
+  "quiz.1.question": "Apa yang diukur oleh panjang gelombang λ?",
+  "quiz.1.a": "Ketinggian gelombang",
+  "quiz.1.b": "Jarak antara puncak gelombang",
+  "quiz.1.c": "Kecepatan angin",
+  "quiz.1.d": "Kedalaman air",
+  "quiz.2.question": "Dalam v = f × λ, apakah satuan dari frekuensi f?",
+  "quiz.2.a": "Hertz (Hz)",
+  "quiz.2.b": "Meter (m)",
+  "quiz.2.c": "Newton (N)",
+  "quiz.2.d": "Joule (J)",
+  "quiz.3.question": "Jika frekuensi 0,5 Hz dan panjang gelombang 4 m, berapakah cepat rambat gelombang v?",
+  "quiz.3.a": "0,125 m/s",
+  "quiz.3.b": "1,0 m/s",
+  "quiz.3.c": "2,0 m/s",
+  "quiz.3.d": "8,0 m/s",
+  "lab.title": "Uji riak air dengan penggaris",
+  "lab.step_1": "Isi nampan dangkal dengan air dan biarkan tenang.",
+  "lab.step_2": "Ketuk wadah dengan jari sekali per detik untuk membuat riak.",
+  "lab.step_3": "Amati seberapa cepat riak bergerak melintasi nampan.",
+  "lab.question": "Apa yang terjadi pada kecepatan riak jika Anda mengetuk lebih cepat?",
+  "badge.name": "Ahli Gelombang",
+  "badge.text": "Kamu menguasai fisika gelombang laut.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Frekuensi",
+  "glossary.2.term": "Panjang gelombang",
+  "glossary.3.term": "Cepat rambat",
+  "glossary.1.def": "Jumlah puncak gelombang yang melewati suatu titik setiap detik.",
+  "glossary.2.def": "Jarak antara dua titik yang bersesuaian pada gelombang.",
+  "glossary.3.def": "Seberapa cepat puncak gelombang merambat melintasi air.",
+  "label.quest_map": "PETA MISIMU",
+  "label.fun_fact": "TAHUKAH KAMU?",
+  "label.timeline": "LINIMASA",
+  "label.equation": "PERSAMAAN KUNCI",
+  "label.example": "CONTOH SOAL",
+  "label.graph": "GRAFIK",
+  "label.tip": "KATA BULB BUDDY",
+  "label.quiz": "KUIS KILAT · 3 SOAL · CENTANG SATU KOTAK",
+  "label.lab": "LAB MINI · COBA DI RUMAH ATAU SEKOLAH",
+  "label.badge": "LENCANA TERBUKA",
+  "quest.1.title": "Ceritanya",
+  "quest.2.title": "Fisikanya",
+  "quest.3.title": "Misimu",
+  "label.sources": "Sumber",
+  "source.1": "[1] NOAA, NOAA JetStream: Ocean Waves, 15 Jan 2026",
+  "source.2": "[2] WMO, WMO Weather Topics and Marine Forecasting, 15 Oct 2026",
+  "source.3": "[3] Wikipedia, Wind wave, 19 Nov 2026 (diakses)",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Sampul: Ilustrasi oleh ELIOS. Gambar lain: Ilustrasi oleh ELIOS."
+}

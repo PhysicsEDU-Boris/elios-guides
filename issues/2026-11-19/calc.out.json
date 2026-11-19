@@ -1,0 +1,13 @@
+{
+  "f_hz": 0.2,
+  "lam_m": 15,
+  "v_ms": 3.0,
+  "chop_f": 0.5,
+  "chop_lam": 4,
+  "tsunami_f": 0.002,
+  "tsunami_lam": 100000,
+  "news_day": 18,
+  "swell_v": 3.0,
+  "chop_v": 2.0,
+  "tsunami_v": 200.0
+}
