@@ -101,7 +101,9 @@ the previous one stays live. The independent fact-check uses one structured Gemi
 with bounded, fetched article text, rather than a CLI tool loop. It defaults to
 `gemini-3.5-flash-lite` and retries with `gemini-3.1-flash-lite` if the first report is incomplete.
 Set the repository variable `FACTCHECK_MODEL` to change the primary model. Research and repair
-still use Gemini CLI. After a repair, the old
+still use Gemini CLI. Each repair pass is guarded by `scripts/keep_better.py`: if it leaves more validation
+problems than before, the files from before the repair are restored. The second repair uses the stronger
+`gemini-3-flash-preview`. After a repair, the old
 `check.json` is discarded and an independent Flash-Lite pass checks the repaired files again.
 A missing or failing new report blocks publication; the earlier report is never reused.
 
