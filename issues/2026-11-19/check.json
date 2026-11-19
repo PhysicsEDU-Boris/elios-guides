@@ -1,0 +1,44 @@
+[
+  {
+    "item": "Wave speed calculation (swell)",
+    "claim": "0.2 Hz multiplied by 15 m equals 3.0 m/s",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculation verified via calc script: 0.2 * 15 = 3.0"
+  },
+  {
+    "item": "Wave speed calculation (chop)",
+    "claim": "0.5 Hz multiplied by 4 m equals 2.0 m/s",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculation verified via calc script: 0.5 * 4 = 2.0"
+  },
+  {
+    "item": "Wave speed calculation (tsunami)",
+    "claim": "0.002 Hz multiplied by 100000 m equals 200.0 m/s",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculation verified via calc script: 0.002 * 100000 = 200.0"
+  },
+  {
+    "item": "WMO weather definition",
+    "claim": "Weather is the state of the atmosphere at a particular time, as defined by meteorological elements including temperature, precipitation, atmospheric pressure, wind and humidity.",
+    "source": "2",
+    "pass": true,
+    "note": "Verified directly from WMO source text."
+  },
+  {
+    "item": "Wikipedia wind wave generation",
+    "claim": "Wind waves are surface waves that occur on the free surface of bodies of water as a result of the wind blowing over the water's surface.",
+    "source": "3",
+    "pass": true,
+    "note": "Verified directly from Wikipedia wind wave source text."
+  },
+  {
+    "item": "Indonesian labels and agreement",
+    "claim": "Indonesian translation keys, decimal commas, structure, and required labels match specifications.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "All required Indonesian labels and per_page/replace structures are present and correctly formatted."
+  }
+]
