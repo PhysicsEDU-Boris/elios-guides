@@ -32,7 +32,8 @@ Every reference to manifest.json below means this catalogue. It contains the dep
 ## Facts
 - Every number, date, name and place comes from a source you opened, or from calc.py. Never invent.
   A script checks every number in stat.N.value, story.* and cover.*: it must be in a source page or
-  be a value calc.py computes. Numbers typed into calc.py are inputs and need a source too.
+  be a value calc.py computes. The stat tiles and cover.fun_fact (the worked example) may also use the
+  example inputs typed into calc.py; story.* and the news date still need a source page.
 - Put [n] tags (n = _sources entry) at the end of sentences that use a source.
 - Paraphrase. No quote longer than 10 words.
 

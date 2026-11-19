@@ -6,7 +6,8 @@ A source fails if it can't be reached, returns 404/410/5xx, redirects to the sam
 url on that site redirects to (an invented article url that lands on the section's front page),
 is never cited ([n]), or does not mention the topic (fewer than 2 topic keywords in its article text).
 Every number in stat.N.value, story.* and cover.* must appear in a source page or be a value calc.py
-computed (numbers typed into calc.py are inputs; they need a source too).
+computed. Numbers typed into calc.py are inputs: the stat tiles and cover.fun_fact (the worked example)
+may use them, but story.* and cover news numbers must still be in a source.
 """
 import ast
 import html
@@ -72,25 +73,35 @@ def keywords(en):
     return kws
 
 
-def calc_values(folder):
-    """calc.out.json values that calc.py computed, i.e. not typed in as a literal number."""
+def calc_values(folder, inputs=False):
+    """calc.out.json values that calc.py computed, i.e. not typed in as a literal number.
+    With inputs=True the typed-in example inputs count too (every calc.out.json value)."""
     try:
         values = flat_numbers(json.loads((folder / "calc.out.json").read_text(encoding="utf-8")))
         tree = ast.parse((folder / "calc.py").read_text(encoding="utf-8"))
     except (OSError, ValueError, SyntaxError):
         return []
+    if inputs:
+        return list(values)
     literals = [float(n.value) for n in ast.walk(tree) if isinstance(n, ast.Constant) and type(n.value) in (int, float)]
     return [v for v in values if not any(v == lit for lit in literals)]
 
 
-def fact_errors(en, texts, computed):
+def is_worked_example(key):
+    """The stat tiles and the fun fact restate the worked example (its inputs and result), which is
+    illustrative, not a claim about the world; story and news numbers are facts and need a source."""
+    return key == "cover.fun_fact" or (key.startswith("stat.") and key.endswith(".value"))
+
+
+def fact_errors(en, texts, computed, example_inputs=()):
     errs = []
     # "20 million years" in a source is 20,000,000, not a source for "20 s".
     sourced = [max(cands) for t in texts for lang in ("en", "id") for cands in parse_numbers(t, lang)]
     keys = [f"stat.{i}.value" for i in (1, 2, 3)] + [k for k in en if k.startswith(("story.", "cover.")) and k not in EXEMPT]
     for k in keys:
         for cands in parse_numbers(en.get(k, ""), "en"):
-            if not any(close(n, sourced) or close(n, computed) for n in cands):
+            allowed = list(computed) + list(example_inputs) if is_worked_example(k) else computed
+            if not any(close(n, sourced) or close(n, allowed) for n in cands):
                 errs.append(f"{k} = {en.get(k)!r}: {min(cands):g} is not in any source page or computed by calc.py")
     return errs
 
@@ -129,7 +140,7 @@ def errors(folder, evidence_path=None):
         found = {k for k in kws if re.search(rf"\b{re.escape(k)}", text)}
         if len(found) < min(2, len(kws)):
             errs.append(f"source {n} {url} is off-topic: mentions {sorted(found) or 'none'} of the topic keywords {sorted(kws)}")
-    errs += fact_errors(en, texts, calc_values(folder))
+    errs += fact_errors(en, texts, calc_values(folder), calc_values(folder, inputs=True))
     if evidence_path is not None:
         Path(evidence_path).write_text(json.dumps({"sources": evidence, "errors": errs}, ensure_ascii=False), encoding="utf-8")
     return errs
