@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — 19 November 2026 (source rule)
+
+- `check_sources.py`: `stat.N.value` and `cover.fun_fact` may use the worked example's typed-in `calc.py` inputs (it rejected `0.2 Hz`/`15 m` and `200 W` on two days running); story and news numbers still need a source.
+
 ## Unreleased — 19 November 2026 (repair guard)
 
 - `scripts/keep_better.py`: after each repair pass the issue is validated again and the repair is thrown away if it left more problems than before (a Flash-Lite repair once deleted ~40 keys of an almost valid issue and published nothing).

@@ -126,6 +126,24 @@ def test_calc_inputs_need_a_source_but_computed_values_do_not(tmp_path, monkeypa
     assert not any(": 6 is not" in e for e in errs), errs
 
 
+def test_worked_example_inputs_are_allowed_in_stat_tiles_and_fun_fact(tmp_path, monkeypatch):
+    pages(monkeypatch, {"a.gov": PAGE})
+    calc = "s = 120\nt = 20\nprint(s / t)\n"
+    folder = issue_dir(tmp_path, {"stat.1.value": "120", "stat.2.value": "20", "stat.3.value": "6",
+                                  "cover.fun_fact": "120 m in 20 s is 6 m/s."}, calc, {"s": 120, "t": 20, "v": 6.0})
+    assert check_sources.errors(folder) == []
+
+
+def test_worked_example_allowance_does_not_cover_other_numbers(tmp_path, monkeypatch):
+    pages(monkeypatch, {"a.gov": PAGE})
+    calc = "s = 120\nt = 20\nprint(s / t)\n"
+    folder = issue_dir(tmp_path, {"stat.1.value": "999", "story.body_1": "It moved 120 m [1].", "cover.news_date": "News: 120 Oct"},
+                       calc, {"s": 120, "t": 20, "v": 6.0})
+    errs = check_sources.errors(folder)
+    assert any("stat.1.value" in e and "999" in e for e in errs)
+    assert any("story.body_1" in e for e in errs) and any("cover.news_date" in e for e in errs), errs
+
+
 def test_cover_and_story_numbers_are_checked_but_boilerplate_is_not(tmp_path, monkeypatch):
     pages(monkeypatch, {"a.gov": PAGE})
     folder = issue_dir(tmp_path, {"cover.news_date": "News: 7 Oct 2026", "cover.read_time": "12 min read", "cover.xp_total": "60 XP"})

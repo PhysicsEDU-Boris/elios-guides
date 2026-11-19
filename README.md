@@ -96,7 +96,7 @@ rendered at scale 2 and must be at least 1190×1684.
 source and fails the issue as **NEEDS FIX** when a source is missing, never cited with `[n]`, or
 off-topic (its article text names fewer than 2 topic keywords from `_slug`, `cover.place`, `_keywords`),
 or when a number in `stat.N.value`, `story.*` or `cover.*` is in no source page and is not a value
-`calc.py` computes (literal inputs in `calc.py` need a source too). A failing issue is not published;
+`calc.py` computes (the stat tiles and `cover.fun_fact` may use the worked example's typed-in inputs; story and news numbers still need a source). A failing issue is not published;
 the previous one stays live. The independent fact-check uses one structured Gemini API request
 with bounded, fetched article text, rather than a CLI tool loop. It defaults to
 `gemini-3.5-flash-lite` and retries with `gemini-3.1-flash-lite` if the first report is incomplete.
