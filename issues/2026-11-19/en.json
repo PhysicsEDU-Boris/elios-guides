@@ -1,0 +1,342 @@
+{
+  "_example": false,
+  "_issue": "09",
+  "_slug": "coastal-ocean-waves-and-speed",
+  "_theme": "storm",
+  "_formula": "wave-speed",
+  "_keywords": [
+    "wave",
+    "gelombang",
+    "speed",
+    "kecepatan"
+  ],
+  "_date": "2026-11-19",
+  "_lang": "en",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "NOAA",
+      "title": "NOAA JetStream: Ocean Waves",
+      "date": "2026-01-15",
+      "url": "https://www.noaa.gov/jetstream/ocean/waves",
+      "primary": true
+    },
+    {
+      "n": 2,
+      "publisher": "WMO",
+      "title": "WMO Weather Topics and Marine Forecasting",
+      "date": "2026-10-15",
+      "url": "https://wmo.int/topics/weather",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "Wikipedia",
+      "title": "Wind wave",
+      "date": "2026-11-19",
+      "url": "https://en.wikipedia.org/wiki/Wind_wave",
+      "primary": false
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/A_storm_at_Pors-Loubous.jpg",
+      "license": "CC BY 1.0",
+      "credit": "Henri Camus / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Cascading_waves_at_Kallbadhuset_Lysekil.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "W.carter / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 3.0,
+  "_graph.2.raw": 2.0,
+  "_graph.3.raw": 200.0,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Wavelength is the distance between two consecutive wave crests.",
+      "wrong": {
+        "a": "Height measures amplitude, not wavelength.",
+        "c": "Wind speed affects generation, not wavelength definition.",
+        "d": "Water depth affects wave shape, not wavelength itself."
+      }
+    },
+    "2": {
+      "why": "Frequency is measured in hertz (Hz), meaning cycles per second.",
+      "wrong": {
+        "b": "Metres measure wavelength or distance.",
+        "c": "Newtons measure force.",
+        "d": "Joules measure energy."
+      }
+    },
+    "3": {
+      "why": "Multiply frequency (0.5) by wavelength (4) to get 2.0 m/s.",
+      "wrong": {
+        "a": "0.125 comes from division or wrong math.",
+        "b": "1.0 is incorrect calculation.",
+        "d": "8.0 multiplies incorrectly."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "What does wavelength measure?",
+      "options": [
+        "Distance between wave crests",
+        "Height of the water",
+        "Wind speed",
+        "Water temperature"
+      ],
+      "answer": 0,
+      "explanation": "Wavelength is the distance from one crest to the next."
+    },
+    {
+      "question": "What is the unit of wave speed v?",
+      "options": [
+        "Metres per second (m/s)",
+        "Hertz (Hz)",
+        "Newtons (N)",
+        "Joules (J)"
+      ],
+      "answer": 0,
+      "explanation": "Speed is distance divided by time, measured in m/s."
+    },
+    {
+      "question": "If frequency increases while wavelength stays constant, wave speed...",
+      "options": [
+        "increases",
+        "decreases",
+        "stays the same",
+        "drops to zero"
+      ],
+      "answer": 0,
+      "explanation": "Speed is directly proportional to frequency."
+    },
+    {
+      "question": "What drives the formation of wind chop on the ocean?",
+      "options": [
+        "Friction from wind blowing across the water surface",
+        "Earth rotation",
+        "Moon gravity",
+        "Underwater earthquakes"
+      ],
+      "answer": 0,
+      "explanation": "Wind friction transfers energy to the water surface."
+    },
+    {
+      "question": "What does frequency f measure?",
+      "options": [
+        "Waves passing a point per second",
+        "Total distance of the wave",
+        "Height of the wave crest",
+        "Mass of the water"
+      ],
+      "answer": 0,
+      "explanation": "Frequency counts cycles per second in hertz."
+    },
+    {
+      "question": "In deep water, long ocean swells travel...",
+      "options": [
+        "faster than short choppy waves",
+        "slower than short choppy waves",
+        "at zero speed",
+        "backwards"
+      ],
+      "answer": 0,
+      "explanation": "Longer wavelength increases wave speed."
+    },
+    {
+      "question": "What is 1 hertz equal to?",
+      "options": [
+        "1 cycle per second",
+        "60 cycles per second",
+        "1 metre per second",
+        "1 joule per second"
+      ],
+      "answer": 0,
+      "explanation": "Hertz is defined as cycles per second."
+    },
+    {
+      "question": "Why do ocean waves slow down near the coast?",
+      "options": [
+        "Water becomes shallow and interacts with the seabed",
+        "The air gets warmer",
+        "Salt content changes",
+        "Wind stops blowing"
+      ],
+      "answer": 0,
+      "explanation": "Shallow water seabed friction slows wave progression."
+    },
+    {
+      "question": "Which wave property is represented by lambda (λ)?",
+      "options": [
+        "Wavelength",
+        "Frequency",
+        "Wave speed",
+        "Amplitude"
+      ],
+      "answer": 0,
+      "explanation": "Lambda is the Greek letter used for wavelength."
+    },
+    {
+      "question": "What is transferred across the ocean by a wave?",
+      "options": [
+        "Energy",
+        "Water mass",
+        "Salt",
+        "Fish"
+      ],
+      "answer": 0,
+      "explanation": "Waves transport energy without permanently moving water mass forward."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "two nampan atau wadah air dengan riak",
+      "penggaris atau jari pengetuk",
+      "gerakan riak air"
+    ],
+    "safety": [
+      "tanpa api, tanpa ketel, tanpa listrik utama",
+      "hanya tangan dalam foto"
+    ],
+    "pass_if": "Foto menunjukkan riak air dan siswa mengamati pergerakan gelombang."
+  },
+  "_per_page": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "_replace": {},
+  "guide.issue_date": "#09 · 19 NOV 2026",
+  "guide.lang": "EN",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Issue 09 · 2026",
+  "cover.title": "How ocean waves travel",
+  "cover.subtitle": "Wind whips up the water surface, sending powerful waves toward the coast. Discover how frequency and wavelength determine wave speed.",
+  "cover.image_caption": "Archive photo · storm",
+  "cover.news_date": "News: 18 Nov 2026",
+  "cover.place": "Java Sea, Indonesia",
+  "cover.topic": "Waves and storms",
+  "cover.subject": "Physics · Waves",
+  "quest.1.desc": "Read how ocean waves form and travel",
+  "quest.2.desc": "Use v = f × λ to calculate wave speed",
+  "quest.3.desc": "Quiz, mini lab and badge",
+  "cover.read_time": "12 min read",
+  "cover.level": "SMP · grade 7–9",
+  "cover.xp_total": "Earn up to 60 XP",
+  "cover.fun_fact": "Longer ocean waves travel faster across deep water than short choppy ripples.",
+  "story.title": "When wind meets the open sea",
+  "story.lead": "Strong winds blowing across the ocean transfer energy into the water, creating rhythmic waves that roll toward the shore [1].",
+  "story.image_caption": "Archive photo · Cascading waves at Kallbadhuset Lysekil",
+  "story.image_credit": "W.carter / Wikimedia Commons, CC BY-SA 4.0",
+  "stat.1.value": "0.2",
+  "stat.2.value": "15",
+  "stat.3.value": "3.0",
+  "stat.1.label": "wave frequency in hertz (Hz)",
+  "stat.2.label": "wavelength in metres (m)",
+  "stat.3.label": "wave speed in metres per second (m/s)",
+  "story.body_1": "When steady winds blow across the water surface, friction pushes the water into ripples and growing waves [2]. As wind speed increases, these waves gather energy and travel across vast ocean basins toward coastal regions [1].",
+  "story.body_2": "When waves reach shallow coastal waters, their speed changes and they rise higher before breaking on the shore [3]. Understanding how wave speed depends on frequency and wavelength helps scientists track coastal safety.",
+  "timeline.1.date": "Generation",
+  "timeline.2.date": "Travel",
+  "timeline.3.date": "Breaking",
+  "timeline.1.text": "Wind transfers energy to the water surface, building waves.",
+  "timeline.2.text": "Waves propagate across the sea carrying kinetic energy.",
+  "timeline.3.text": "Waves slow down in shallow water and break on the shore.",
+  "physics.title": "How fast do waves travel?",
+  "physics.body_1": "A wave moves energy through water without carrying the water itself far away. The speed of a wave depends on how frequently the waves pass by and the distance between wave crests.",
+  "physics.body_2": "We calculate wave speed, v, by multiplying the wave frequency, f, by the wavelength, λ. Higher frequency or longer wavelength means greater speed.",
+  "physics.equation": "v = f × λ",
+  "physics.equation_name": "Wave speed equation",
+  "legend.1.symbol": "v",
+  "legend.1.meaning": "wave speed",
+  "legend.1.unit": "m/s",
+  "legend.2.symbol": "f",
+  "legend.2.meaning": "frequency",
+  "legend.2.unit": "hertz (Hz)",
+  "legend.3.symbol": "λ",
+  "legend.3.meaning": "wavelength",
+  "legend.3.unit": "metre (m)",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "We assume regular sinusoidal waves travelling in deep water without energy loss.",
+  "example.step_1": "f = 0.2 Hz, λ = 15 m",
+  "example.step_2": "v = 0.2 × 15",
+  "example.step_3": "Multiply: v = 3.0 m/s",
+  "example.result": "v = 3.0 m/s",
+  "table.h1": "Wave Type",
+  "table.h2": "Frequency (Hz)",
+  "table.h3": "Wavelength (m)",
+  "table.r1c1": "Ocean swell",
+  "table.r1c2": "0.2",
+  "table.r1c3": "15 m",
+  "table.r2c1": "Wind chop",
+  "table.r2c2": "0.5",
+  "table.r2c3": "4 m",
+  "table.r3c1": "Long tsunami",
+  "table.r3c2": "0.002",
+  "table.r3c3": "100,000 m",
+  "table.note": "Different waves have distinct frequencies and wavelengths.",
+  "graph.title": "Wave speed comparison",
+  "graph.1.label": "Swell",
+  "graph.2.label": "Chop",
+  "graph.3.label": "Tsunami",
+  "graph.1.value": "3.0 m/s",
+  "graph.2.value": "2.0 m/s",
+  "graph.3.value": "200.0 m/s",
+  "graph.note": "Wavelength and frequency determine how fast each wave travels.",
+  "physics.tip": "Wavelength λ is the distance from one wave crest to the next crest.",
+  "mission.title": "Wave Explorer Mission",
+  "quiz.answer_key": "Answer key: 1B · 2A · 3C",
+  "quiz.1.question": "What does wavelength λ measure?",
+  "quiz.1.a": "Height of the wave",
+  "quiz.1.b": "Distance between wave crests",
+  "quiz.1.c": "Speed of the wind",
+  "quiz.1.d": "Depth of the water",
+  "quiz.2.question": "In v = f × λ, what is the unit of frequency f?",
+  "quiz.2.a": "Hertz (Hz)",
+  "quiz.2.b": "Metres (m)",
+  "quiz.2.c": "Newtons (N)",
+  "quiz.2.d": "Joules (J)",
+  "quiz.3.question": "If frequency is 0.5 Hz and wavelength is 4 m, what is the wave speed v?",
+  "quiz.3.a": "0.125 m/s",
+  "quiz.3.b": "1.0 m/s",
+  "quiz.3.c": "2.0 m/s",
+  "quiz.3.d": "8.0 m/s",
+  "lab.title": "Water ripple test with a ruler",
+  "lab.step_1": "Fill a shallow tray with water and let it settle.",
+  "lab.step_2": "Tap one end gently with your finger once per second to make ripples.",
+  "lab.step_3": "Observe how fast the ripples move across the tray.",
+  "lab.question": "What happens to the ripple speed if you tap faster?",
+  "badge.name": "Wave Master",
+  "badge.text": "You mastered the physics of ocean waves.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Frequency",
+  "glossary.2.term": "Wavelength",
+  "glossary.3.term": "Wave speed",
+  "glossary.1.def": "Number of wave crests passing a point each second.",
+  "glossary.2.def": "Distance between two matching points on a wave.",
+  "glossary.3.def": "How fast a wave crest travels across the water.",
+  "label.sources": "Sources",
+  "source.1": "[1] NOAA, NOAA JetStream: Ocean Waves, 15 Jan 2026",
+  "source.2": "[2] WMO, WMO Weather Topics and Marine Forecasting, 15 Oct 2026",
+  "source.3": "[3] Wikipedia, Wind wave, 19 Nov 2026 (accessed)",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Cover: Illustration by ELIOS. Other pictures: Illustration by ELIOS."
+}

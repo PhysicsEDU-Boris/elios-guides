@@ -1,6 +1,81 @@
 {
   "guides": [
     {
+      "revision": "be0d461b184180341caac04b5b0c4f7d918454fe235c0c459a46a97642e97173",
+      "date": "2026-11-19",
+      "issue": "09",
+      "slug": "coastal-ocean-waves-and-speed",
+      "xp": 60,
+      "title": {
+        "en": "How ocean waves travel",
+        "id": "Laju gelombang laut"
+      },
+      "topic": {
+        "en": "Waves and storms",
+        "id": "Badai dan gelombang"
+      },
+      "cover": {
+        "en": "issues/2026-11-19/elios-guide-09-coastal-ocean-waves-and-speed-cover-en.png",
+        "id": "issues/2026-11-19/elios-guide-09-coastal-ocean-waves-and-speed-cover-id.png"
+      },
+      "pdf": {
+        "en": "issues/2026-11-19/elios-guide-09-coastal-ocean-waves-and-speed-en.pdf",
+        "id": "issues/2026-11-19/elios-guide-09-coastal-ocean-waves-and-speed-id.pdf"
+      },
+      "content": {
+        "en": "issues/2026-11-19/en.json",
+        "id": "issues/2026-11-19/id.json"
+      },
+      "schema": 2,
+      "theme": "storm",
+      "photo": {
+        "src": "issues/2026-11-19/photo.jpg",
+        "thumb": "issues/2026-11-19/photo-800.jpg",
+        "w": 2000,
+        "h": 1499,
+        "caption": {
+          "en": "Archive photo · storm",
+          "id": "Foto arsip · storm"
+        },
+        "credit": "Henri Camus / Wikimedia Commons",
+        "license": "CC BY 1.0",
+        "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/A_storm_at_Pors-Loubous.jpg"
+      },
+      "content_sha": {
+        "en": "cf9f05a903a36f23da664ea80372cb29d742abaf5fd2bf1b1107dc6d3133c6fd",
+        "id": "0ef12ebc93413281d1ccd0887f38714c78e5ca91d3cf21d24fa25abf7a9f0593"
+      },
+      "xp_parts": {
+        "story": 10,
+        "physics": 20,
+        "quiz": 10,
+        "lab": 20
+      },
+      "formula": "wave-speed",
+      "sources": [
+        "en.wikipedia.org/wiki/wind_wave",
+        "noaa.gov/jetstream/ocean/waves",
+        "wmo.int/topics/weather"
+      ],
+      "terms": [
+        "coastal",
+        "gelombang",
+        "java",
+        "kecepatan",
+        "meet",
+        "ocean",
+        "open",
+        "sea",
+        "speed",
+        "storm",
+        "travel",
+        "wave",
+        "when",
+        "wind"
+      ],
+      "pages": 4
+    },
+    {
       "revision": "259f2cb790f0fa352e2718a6ef25fbd0de79d0a2ef6dbac3271dc392b6ec2ffd",
       "date": "2026-11-18",
       "issue": "08",
@@ -458,5 +533,5 @@
       }
     }
   ],
-  "updated": "2026-11-19T01:51:21+07:00"
+  "updated": "2026-11-19T17:40:25+07:00"
 }
