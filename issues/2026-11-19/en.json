@@ -1,0 +1,292 @@
+{
+  "_example": false,
+  "_issue": "09",
+  "_slug": "storm-wind-speed-and-weather-hazards",
+  "_theme": "storm",
+  "_formula": "speed",
+  "_keywords": [
+    "storm",
+    "wind",
+    "speed",
+    "weather",
+    "badai",
+    "angin"
+  ],
+  "_date": "2026-11-19",
+  "_lang": "en",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "WMO",
+      "title": "Weather",
+      "date": "2026-11-15",
+      "url": "https://wmo.int/topics/weather",
+      "primary": true
+    },
+    {
+      "n": 2,
+      "publisher": "NASA",
+      "title": "Natural Hazards",
+      "date": "2026-11-14",
+      "url": "https://science.nasa.gov/earth/natural-hazards/",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "UNEP",
+      "title": "Ocean, Seas and Coasts",
+      "date": "2026-11-10",
+      "url": "https://www.unep.org/topics/ocean-seas-and-coasts",
+      "primary": false
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Ocean_beach_at_low_tide_against_the_sun.jpg",
+      "license": "CC BY-SA 3.0",
+      "credit": "Brocken Inaglory / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Seal_Rocks%2C_Ocean_Beach%2C_San_Francisco.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Radomianin / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 10,
+  "_graph.2.raw": 20,
+  "_graph.3.raw": 30,
+  "_answers": {
+    "1": "a",
+    "2": "b",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Speed is distance divided by time (v = s ÷ t).",
+      "wrong": {
+        "b": "Multiplying distance by time is wrong.",
+        "c": "Subtracting time is incorrect.",
+        "d": "Dividing time by distance is upside down."
+      }
+    },
+    "2": {
+      "why": "Strong wind speed determines how fast weather systems and hazards travel.",
+      "wrong": {
+        "a": "Low temperature does not define speed.",
+        "c": "Cloud cover is not speed.",
+        "d": "Humidity is water vapour."
+      }
+    },
+    "3": {
+      "why": "Meteorological agencies track storm tracks and wind speeds to issue timely warnings.",
+      "wrong": {
+        "a": "Ignoring weather prevents preparedness.",
+        "b": "Solar panels do not track storms.",
+        "d": "Tides are separate from wind speed."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "What does v stand for in v = s ÷ t?",
+      "options": [
+        "Speed",
+        "Volume",
+        "Voltage",
+        "Velocity squared"
+      ],
+      "answer": 0,
+      "explanation": "v represents speed, measured in metres per second (m/s)."
+    },
+    {
+      "question": "If a weather front travels 1,200 metres in 40 seconds, what is its speed?",
+      "options": [
+        "20 m/s",
+        "30 m/s",
+        "40 m/s",
+        "50 m/s"
+      ],
+      "answer": 1,
+      "explanation": "1,200 m divided by 40 s equals 30 m/s."
+    },
+    {
+      "question": "What is the SI unit of distance s?",
+      "options": [
+        "Kilogram",
+        "Metre",
+        "Second",
+        "Joule"
+      ],
+      "answer": 1,
+      "explanation": "Distance is measured in metres (m)."
+    },
+    {
+      "question": "Which agency coordinates worldwide weather observations?",
+      "options": [
+        "WMO",
+        "NASA",
+        "UNEP",
+        "UNESCO"
+      ],
+      "answer": 0,
+      "explanation": "The World Meteorological Organization (WMO) coordinates global weather monitoring."
+    },
+    {
+      "question": "What does t represent in the speed formula?",
+      "options": [
+        "Temperature",
+        "Time",
+        "Tension",
+        "Thickness"
+      ],
+      "answer": 1,
+      "explanation": "t stands for time elapsed, measured in seconds (s)."
+    },
+    {
+      "question": "Why do weather agencies monitor storm wind speeds?",
+      "options": [
+        "To issue early warnings",
+        "To generate electricity",
+        "To measure ocean salt",
+        "To count clouds"
+      ],
+      "answer": 0,
+      "explanation": "Tracking speed helps protect lives and property through early warnings."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "a light paper streamer or ribbon outdoors",
+      "a stopwatch measuring how long it takes to flutter across a measured distance",
+      "student hands holding the tools safely"
+    ],
+    "safety": [
+      "no flame, no mains electricity, no strong wind hazards",
+      "only hands in the photo"
+    ],
+    "pass_if": "The photos show the measured distance and the stopwatch timing the streamer in the wind."
+  },
+  "_per_page": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "_replace": {},
+  "guide.issue_date": "#09 · 19 NOV 2026",
+  "guide.lang": "EN",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Issue 09 · Published November 2026",
+  "cover.title": "How fast weather systems travel",
+  "cover.subtitle": "Storms and wind bring rapid changes to our environment. Find out how weather scientists measure speed and keep communities safe.",
+  "cover.image_caption": "Weather systems monitored from space",
+  "cover.news_date": "News: 15 Nov 2026",
+  "cover.place": "Global & Indonesia",
+  "cover.topic": "Storms and weather speed",
+  "cover.subject": "Physics · Speed",
+  "quest.1.desc": "Read how storms move across regions",
+  "quest.2.desc": "Use v = s ÷ t for wind and weather",
+  "quest.3.desc": "Quiz, mini lab and badge",
+  "cover.read_time": "12 min read",
+  "cover.level": "SMP · grade 7–9",
+  "cover.xp_total": "Earn up to 60 XP",
+  "cover.fun_fact": "Severe weather alerts rely on accurate speed measurements to protect people in hours or minutes.",
+  "story.title": "Tracking fast-moving storms",
+  "story.lead": "Weather is the state of the atmosphere at a particular time, defined by temperature, precipitation, pressure, wind and humidity [1]. Extreme weather events can have serious impacts on society [1].",
+  "story.image_caption": "Coastal weather monitoring from Earth observation satellites",
+  "story.image_credit": "NASA Earth Observatory",
+  "stat.1.value": "1,200",
+  "stat.2.value": "40",
+  "stat.3.value": "30",
+  "stat.1.label": "metres distance measured in example",
+  "stat.2.label": "seconds elapsed for weather front",
+  "stat.3.label": "metres per second wind speed result",
+  "story.body_1": "The World Meteorological Organization (WMO) coordinates global observations to produce timely weather forecasts and early warning systems [1]. Weather describes short-term events that require forecasts to plan daily life and prepare for hazards [1].",
+  "story.body_2": "Natural hazard research provides global data that enhance our assessment and predictive capabilities to anticipate and reduce risks [2]. Coastal and marine ecosystems also face pressure from climate change and storms [3].",
+  "timeline.1.date": "Observation",
+  "timeline.2.date": "Tracking",
+  "timeline.3.date": "Warning",
+  "timeline.1.text": "Satellites and stations detect atmospheric changes.",
+  "timeline.2.text": "Scientists calculate storm speed and trajectory.",
+  "timeline.3.text": "Communities receive timely severe weather warnings.",
+  "physics.title": "Measuring weather speed",
+  "physics.body_1": "To understand how fast a weather system or wind front moves, scientists measure the distance it travels and how long it takes.",
+  "physics.body_2": "Speed tells us how many metres something moves in each second. Knowing this helps predict when a storm will strike.",
+  "physics.equation": "v = s ÷ t",
+  "physics.equation_name": "Speed equation",
+  "legend.1.symbol": "v",
+  "legend.1.meaning": "speed",
+  "legend.1.unit": "m/s",
+  "legend.2.symbol": "s",
+  "legend.2.meaning": "distance",
+  "legend.2.unit": "metre (m)",
+  "legend.3.symbol": "t",
+  "legend.3.meaning": "time",
+  "legend.3.unit": "second (s)",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "We assume the weather front travels at a steady speed over the measured straight-line distance.",
+  "example.step_1": "Distance s = 1,200 m, time t = 40 s",
+  "example.step_2": "v = 1,200 ÷ 40",
+  "example.step_3": "Divide: v = 30 m/s",
+  "example.result": "v = 30 m/s",
+  "table.h1": "Condition",
+  "table.h2": "Distance s (m)",
+  "table.h3": "Time t (s), Speed v (m/s)",
+  "table.r1c1": "Breeze",
+  "table.r1c2": "400",
+  "table.r1c3": "40 s -> 10 m/s",
+  "table.r2c1": "Strong wind",
+  "table.r2c2": "800",
+  "table.r2c3": "40 s -> 20 m/s",
+  "table.r3c1": "Storm front",
+  "table.r3c2": "1,200",
+  "table.r3c3": "40 s -> 30 m/s",
+  "graph.title": "Wind and weather speed comparison",
+  "graph.x_label": "Weather condition",
+  "graph.y_label": "Speed v (m/s)",
+  "graph.b1": "Breeze",
+  "graph.b2": "Strong wind",
+  "graph.b3": "Storm front",
+  "tip.label": "BULB BUDDY TIP",
+  "tip.text": "Always check units! Converting seconds to minutes or metres to kilometres helps keep your calculations exact.",
+  "quiz.label": "QUICK QUIZ · 3 QUESTIONS · TICK ONE BOX",
+  "quiz.q1": "What does equation v = s ÷ t calculate?",
+  "quiz.q1a": "Speed",
+  "quiz.q1b": "Mass",
+  "quiz.q1c": "Temperature",
+  "quiz.q1d": "Density",
+  "quiz.q2": "If s = 1,200 m and t = 40 s, what is v?",
+  "quiz.q2a": "10 m/s",
+  "quiz.q2b": "30 m/s",
+  "quiz.q2c": "40 m/s",
+  "quiz.q2d": "1,240 m/s",
+  "quiz.q3": "Why do meteorologists track storm speeds?",
+  "quiz.q3a": "To issue early warnings",
+  "quiz.q3b": "To cool the ocean",
+  "quiz.q3c": "To stop rain",
+  "quiz.q3d": "To heat buildings",
+  "quiz.answer_key": "Answer key: 1A · 2B · 3A",
+  "lab.label": "MINI LAB · TRY AT HOME OR SCHOOL",
+  "lab.title": "Measure wind speed with a streamer",
+  "lab.subtitle": "Use a light paper ribbon and a stopwatch to test how wind speed moves objects outdoors.",
+  "lab.step_1": "Measure a 10-metre track outdoors where there is a gentle breeze.",
+  "lab.st1_sub": "Mark the start and finish lines clearly.",
+  "lab.step_2": "Hold a light paper streamer and time how long it takes the breeze to carry your marker across.",
+  "lab.st2_sub": "Record the time t in seconds.",
+  "lab.step_3": "Calculate speed v = s ÷ t to find the wind speed.",
+  "lab.st3_sub": "Compare results on calm and breezy days.",
+  "badge.title": "WEATHER TRACKER BADGE",
+  "badge.xp": "0 / 60 XP",
+  "badge.desc": "Earned by mastering weather speed and safety science.",
+  "badge.action": "Claim your badge",
+  "badge.unlocked": "Badge unlocked! You understand how meteorologists track storms.",
+  "footer.page": "Page 1 of 4"
+}

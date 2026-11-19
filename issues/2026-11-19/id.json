@@ -1,0 +1,332 @@
+{
+  "_example": false,
+  "_issue": "09",
+  "_slug": "storm-wind-speed-and-weather-hazards",
+  "_theme": "storm",
+  "_formula": "speed",
+  "_keywords": [
+    "storm",
+    "wind",
+    "speed",
+    "weather",
+    "badai",
+    "angin"
+  ],
+  "_date": "2026-11-19",
+  "_lang": "id",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "WMO",
+      "title": "Weather",
+      "date": "2026-11-15",
+      "url": "https://wmo.int/topics/weather",
+      "primary": true
+    },
+    {
+      "n": 2,
+      "publisher": "NASA",
+      "title": "Natural Hazards",
+      "date": "2026-11-14",
+      "url": "https://science.nasa.gov/earth/natural-hazards/",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "UNEP",
+      "title": "Ocean, Seas and Coasts",
+      "date": "2026-11-10",
+      "url": "https://www.unep.org/topics/ocean-seas-and-coasts",
+      "primary": false
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Ocean_beach_at_low_tide_against_the_sun.jpg",
+      "license": "CC BY-SA 3.0",
+      "credit": "Brocken Inaglory / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Seal_Rocks%2C_Ocean_Beach%2C_San_Francisco.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Radomianin / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 10,
+  "_graph.2.raw": 20,
+  "_graph.3.raw": 30,
+  "_answers": {
+    "1": "a",
+    "2": "b",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Kelajuan adalah jarak dibagi waktu (v = s ÷ t).",
+      "wrong": {
+        "b": "Mengalikan jarak dengan waktu tidak tepat.",
+        "c": "Mengurangi waktu adalah keliru.",
+        "d": "Membagi waktu dengan jarak terbalik."
+      }
+    },
+    "2": {
+      "why": "Kecepatan angin yang kuat menentukan seberapa cepat sistem cuaca bergerak.",
+      "wrong": {
+        "a": "Suhu rendah bukan penentu kelajuan.",
+        "c": "Tutupan awan bukan kelajuan.",
+        "d": "Kelembapan adalah uap air."
+      }
+    },
+    "3": {
+      "why": "Badan meteorologi memantau jalur badai dan kecepatan angin untuk peringatan dini.",
+      "wrong": {
+        "a": "Mengabaikan cuaca menghambat kesiapsiagaan.",
+        "b": "Panel surya tidak melacak badai.",
+        "d": "Pasang surut berbeda dari kecepatan angin."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "Apa arti v dalam rumus v = s ÷ t?",
+      "options": [
+        "Kelajuan",
+        "Volume",
+        "Tegangan",
+        "Massa"
+      ],
+      "answer": 0,
+      "explanation": "v melambangkan kelajuan, diukur dalam meter per sekon (m/s)."
+    },
+    {
+      "question": "Jika front cuaca menempuh 1.200 meter dalam 40 sekon, berapa kelajuannya?",
+      "options": [
+        "20 m/s",
+        "30 m/s",
+        "40 m/s",
+        "50 m/s"
+      ],
+      "answer": 1,
+      "explanation": "1.200 m dibagi 40 s menghasilkan 30 m/s."
+    },
+    {
+      "question": "Apa satuan SI untuk jarak s?",
+      "options": [
+        "Kilogram",
+        "Meter",
+        "Sekon",
+        "Joule"
+      ],
+      "answer": 1,
+      "explanation": "Jarak diukur dalam satuan meter (m)."
+    },
+    {
+      "question": "Lembaga mana yang mengkoordinasikan pengamatan cuaca global?",
+      "options": [
+        "WMO",
+        "NASA",
+        "UNEP",
+        "UNESCO"
+      ],
+      "answer": 0,
+      "explanation": "Organisasi Meteorologi Dunia (WMO) mengkoordinasikan pemantauan cuaca global."
+    },
+    {
+      "question": "Apa arti t dalam persamaan kelajuan?",
+      "options": [
+        "Suhu",
+        "Waktu",
+        "Tegangan",
+        "Ketebalan"
+      ],
+      "answer": 1,
+      "explanation": "t adalah waktu yang berlalu, diukur dalam sekon (s)."
+    },
+    {
+      "question": "Mengapa badan cuaca memantau kecepatan angin badai?",
+      "options": [
+        "Untuk memberi peringatan dini",
+        "Untuk menghasilkan listrik",
+        "Untuk mengukur garam laut",
+        "Untuk menghitung awan"
+      ],
+      "answer": 0,
+      "explanation": "Pelacakan kelajuan membantu melindungi keselamatan jiwa melalui peringatan dini."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "pita kertas ringan atau rumbai di luar ruangan",
+      "stopwatch yang mengukur waktu tempuh pada jarak tertentu",
+      "tangan siswa memegang alat dengan aman"
+    ],
+    "safety": [
+      "tanpa api, tanpa listrik utama, tanpa bahaya angin kencang",
+      "hanya tangan dalam foto"
+    ],
+    "pass_if": "Foto menunjukkan jarak ukur dan stopwatch saat mengukur pita kertas tertiup angin."
+  },
+  "_per_page": [
+    {
+      "guide.stop_label": "Sampul"
+    },
+    {
+      "guide.stop_label": "Pos 1 · Ceritanya",
+      "section.label": "POS 1 · CERITANYA",
+      "section.xp": "+10 XP UNTUK MEMBACA"
+    },
+    {
+      "guide.stop_label": "Pos 2 · Fisikanya",
+      "section.label": "POS 2 · FISIKANYA",
+      "section.xp": "+20 XP UNTUK MENJAWAB"
+    },
+    {
+      "guide.stop_label": "Pos 3 · Misimu",
+      "section.label": "POS 3 · MISIMU",
+      "section.xp": "+30 XP UNTUK DIRAIH"
+    }
+  ],
+  "_replace": {
+    "page ref": [
+      [
+        "p.",
+        "hlm. "
+      ]
+    ],
+    "stop": [
+      [
+        "STOP",
+        "POS"
+      ]
+    ]
+  },
+  "guide.issue_date": "#09 · 19 NOV 2026",
+  "guide.lang": "ID",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Edisi 09 · Terbit November 2026",
+  "cover.title": "Seberapa cepat sistem cuaca bergerak",
+  "cover.subtitle": "Badai dan angin membawa perubahan cepat pada lingkungan. Kenali cara ilmuwan cuaca mengukur kelajuan dan menjaga keselamatan.",
+  "cover.image_caption": "Sistem cuaca dipantau dari antariksa",
+  "cover.news_date": "Berita: 15 Nov 2026",
+  "cover.place": "Global & Indonesia",
+  "cover.topic": "Badai dan kecepatan cuaca",
+  "cover.subject": "Fisika · Kelajuan",
+  "quest.1.desc": "Baca bagaimana badai melintasi wilayah",
+  "quest.2.desc": "Gunakan v = s ÷ t untuk angin dan cuaca",
+  "quest.3.desc": "Kuis, lab mini dan lencana",
+  "cover.read_time": "12 mnt baca",
+  "cover.level": "SMP · kelas 7–9",
+  "cover.xp_total": "Raih hingga 60 XP",
+  "cover.fun_fact": "Peringatan cuaca ekstrem mengandalkan pengukuran kelajuan yang akurat untuk melindungi masyarakat.",
+  "label.quest_map": "PETA MISIMU",
+  "label.fun_fact": "TAHUKAH KAMU?",
+  "label.timeline": "LINIMASA",
+  "label.equation": "PERSAMAAN KUNCI",
+  "label.example": "CONTOH SOAL",
+  "label.graph": "GRAFIK",
+  "label.tip": "KATA BULB BUDDY",
+  "label.quiz": "KUIS KILAT · 3 SOAL · CENTANG SATU KOTAK",
+  "label.lab": "LAB MINI · COBA DI RUMAH ATAU SEKOLAH",
+  "label.badge": "LENCANA TERBUKA",
+  "quest.1.title": "Ceritanya",
+  "quest.2.title": "Fisikanya",
+  "quest.3.title": "Misimu",
+  "story.title": "Melacak badai bergerak cepat",
+  "story.lead": "Cuaca adalah keadaan atmosfer pada waktu tertentu yang ditentukan oleh suhu, curah hujan, tekanan, angin dan kelembapan [1]. Peristiwa cuaca ekstrem berdampak serius bagi masyarakat [1].",
+  "story.image_caption": "Pemantauan cuaca pesisir dari satelit pengamatan bumi",
+  "story.image_credit": "NASA Earth Observatory",
+  "stat.1.value": "1.200",
+  "stat.2.value": "40",
+  "stat.3.value": "30",
+  "stat.1.label": "meter jarak terukur dalam contoh",
+  "stat.2.label": "sekon waktu front cuaca",
+  "stat.3.label": "meter per sekon hasil kelajuan angin",
+  "story.body_1": "Organisasi Meteorologi Dunia (WMO) mengkoordinasikan pengamatan global untuk menghasilkan prakiraan cuaca dan sistem peringatan dini yang tepat waktu [1]. Cuaca menguraikan peristiwa jangka pendek yang membutuhkan prakiraan untuk merencanakan kehidupan harian [1].",
+  "story.body_2": "Riset bahaya alam menyediakan data global yang meningkatkan kemampuan kita menilai serta mengantisipasi risiko [2]. Ekosistem pesisir dan laut juga menghadapi tekanan dari perubahan iklim serta badai [3].",
+  "timeline.1.date": "Pengamatan",
+  "timeline.2.date": "Pelacakan",
+  "timeline.3.date": "Peringatan",
+  "timeline.1.text": "Satelit dan stasiun mendeteksi perubahan atmosfer.",
+  "timeline.2.text": "Ilmuwan menghitung kecepatan dan lintasan badai.",
+  "timeline.3.text": "Masyarakat menerima peringatan dini cuaca ekstrem.",
+  "physics.title": "Mengukur kelajuan cuaca",
+  "physics.body_1": "Untuk memahami seberapa cepat sistem cuaca atau front angin bergerak, ilmuwan mengukur jarak tempuh dan waktu yang dibutuhkan.",
+  "physics.body_2": "Kelajuan memberi tahu kita berapa meter sesuatu berpindah pada setiap sekon. Pengetahuan ini membantu memperkirakan kedatangan badai.",
+  "physics.equation": "v = s ÷ t",
+  "physics.equation_name": "Persamaan kelajuan",
+  "legend.1.symbol": "v",
+  "legend.1.meaning": "kelajuan",
+  "legend.1.unit": "m/s",
+  "legend.2.symbol": "s",
+  "legend.2.meaning": "jarak",
+  "legend.2.unit": "meter (m)",
+  "legend.3.symbol": "t",
+  "legend.3.meaning": "waktu",
+  "legend.3.unit": "sekon (s)",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "Kita berasumsi front cuaca bergerak dengan kelajuan tetap pada jarak lurus yang diukur.",
+  "example.step_1": "Jarak s = 1.200 m, waktu t = 40 s",
+  "example.step_2": "v = 1.200 ÷ 40",
+  "example.step_3": "Bagi: v = 30 m/s",
+  "example.result": "v = 30 m/s",
+  "table.h1": "Kondisi",
+  "table.h2": "Jarak s (m)",
+  "table.h3": "Waktu t (s), Kelajuan v (m/s)",
+  "table.r1c1": "Angin sepkoi",
+  "table.r1c2": "400",
+  "table.r1c3": "40 s -> 10 m/s",
+  "table.r2c1": "Angin kencang",
+  "table.r2c2": "800",
+  "table.r2c3": "40 s -> 20 m/s",
+  "table.r3c1": "Front badai",
+  "table.r3c2": "1.200",
+  "table.r3c3": "40 s -> 30 m/s",
+  "graph.title": "Perbandingan kelajuan angin dan cuaca",
+  "graph.x_label": "Kondisi cuaca",
+  "graph.y_label": "Kelajuan v (m/s)",
+  "graph.b1": "Angin sepkoi",
+  "graph.b2": "Angin kencang",
+  "graph.b3": "Front badai",
+  "tip.label": "KATA BULB BUDDY",
+  "tip.text": "Selalu periksa satuan! Mengubah sekon ke menit atau meter ke kilometer membantu menjaga perhitungan tetap tepat.",
+  "quiz.label": "KUIS KILAT · 3 SOAL · CENTANG SATU KOTAK",
+  "quiz.q1": "Apa yang dihitung oleh persamaan v = s ÷ t?",
+  "quiz.q1a": "Kelajuan",
+  "quiz.q1b": "Massa",
+  "quiz.q1c": "Suhu",
+  "quiz.q1d": "Massa jenis",
+  "quiz.q2": "Jika s = 1.200 m dan t = 40 s, berapakah v?",
+  "quiz.q2a": "10 m/s",
+  "quiz.q2b": "30 m/s",
+  "quiz.q2c": "40 m/s",
+  "quiz.q2d": "1.240 m/s",
+  "quiz.q3": "Mengapa meteorolog melacak kelajuan badai?",
+  "quiz.q3a": "Untuk memberi peringatan dini",
+  "quiz.q3b": "Untuk mendinginkan laut",
+  "quiz.q3c": "Untuk menghentikan hujan",
+  "quiz.q3d": "Untuk memanaskan bangunan",
+  "quiz.answer_key": "Kunci: 1A · 2B · 3A",
+  "lab.label": "LAB MINI · COBA DI RUMAH ATAU SEKOLAH",
+  "lab.title": "Mengukur kelajuan angin dengan pita",
+  "lab.subtitle": "Gunakan pita kertas ringan dan stopwatch untuk menguji bagaimana kelajuan angin menggerakkan benda di luar ruangan.",
+  "lab.step_1": "Ukur jalur sepanjang 10 meter di luar ruangan yang berangin sepoi.",
+  "lab.st1_sub": "Tandai garis awal dan akhir dengan jelas.",
+  "lab.step_2": "Pegang pita kertas ringan dan ukur waktu yang dibutuhkan angin membawa pita melintasi jalur.",
+  "lab.st2_sub": "Catat waktu t dalam sekon.",
+  "lab.step_3": "Hitung kelajuan v = s ÷ t untuk mengetahui kelajuan angin.",
+  "lab.st3_sub": "Bandingkan hasil pada hari tenang dan berangin.",
+  "badge.title": "LENCANA PENJEJAK CUACA",
+  "badge.xp": "0 / 60 XP",
+  "badge.desc": "Diperoleh dengan menguasai sains kelajuan cuaca dan keselamatan.",
+  "badge.action": "Klaim lencanamu",
+  "badge.unlocked": "Lencana terbuka! Kamu memahami cara meteorolog melacak badai.",
+  "footer.page": "Halaman 1 dari 4"
+}

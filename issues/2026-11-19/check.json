@@ -1,0 +1,51 @@
+[
+  {
+    "item": "WMO Coordination",
+    "claim": "The WMO coordinates worldwide efforts to produce timely weather forecasts.",
+    "source": "1",
+    "pass": true,
+    "note": "Verified by WMO source."
+  },
+  {
+    "item": "NASA Data Usage",
+    "claim": "NASA missions provide global data that help assess and reduce natural hazard risks.",
+    "source": "2",
+    "pass": true,
+    "note": "Verified by NASA source."
+  },
+  {
+    "item": "Speed Formula Calculation",
+    "claim": "1,200 m / 40 s = 30 m/s.",
+    "source": "calc",
+    "pass": true,
+    "note": "Mathematical verification of the provided example."
+  },
+  {
+    "item": "Quiz Answer 1",
+    "claim": "v represents speed.",
+    "source": "1",
+    "pass": true,
+    "note": "Scientific standard as per WMO's weather definitions."
+  },
+  {
+    "item": "Quiz Answer 2",
+    "claim": "If distance s = 1,200 m and time t = 40 s, then speed v = 30 m/s.",
+    "source": "calc",
+    "pass": true,
+    "note": "Mathematical verification confirms 30 m/s."
+  },
+  {
+    "item": "Quiz Answer 3",
+    "claim": "Meteorologists track storm speeds to issue early warnings.",
+    "source": "1",
+    "pass": true,
+    "note": "Verified by WMO mission to protect lives through timely action."
+  },
+  {
+    "item": "Bilingual Agreement",
+    "claim": "Indonesian labels match English schema requirements.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "Labels, navigation headers, and translations comply with the requested format."
+  }
+]
