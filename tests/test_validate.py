@@ -96,8 +96,8 @@ def test_bad_citation(issue):
 
 
 def test_too_few_sources(issue):
-    issue.en["_sources"] = issue.en["_sources"][:2]
-    has(issue.errors(), "en: only 2 sources")
+    issue.en["_sources"] = issue.en["_sources"][:1]
+    has(issue.errors(), "en: only 1 sources")
 
 
 def test_no_primary(issue):
