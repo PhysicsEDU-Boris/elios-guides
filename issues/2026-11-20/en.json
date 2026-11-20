@@ -32,10 +32,10 @@
     },
     {
       "n": 3,
-      "publisher": "BMKG",
-      "title": "Peringatan Dini Cuaca",
+      "publisher": "Copernicus",
+      "title": "Global fire monitoring",
       "date": "2026-11-20",
-      "url": "https://www.bmkg.go.id/cuaca/peringatan-dini-cuaca",
+      "url": "https://atmosphere.copernicus.eu/global-fire-monitoring",
       "primary": true
     }
   ],
@@ -253,7 +253,7 @@
   "timeline.3.date": "Haze",
   "timeline.1.text": "Forests and peatlands dry out, becoming very easy to ignite.",
   "timeline.2.text": "Hotspots spread across corporate concessions and vulnerable lands [1].",
-  "timeline.3.text": "Thick smoke fills the air, raising density and quality [3].",
+  "timeline.3.text": "Fires release fine particles, and smoke spreads through the air [3].",
   "physics.title": "Mass, volume and density",
   "physics.body_1": "When forest fires burn, they release massive amounts of smoke, ash, and gases into the atmosphere. To understand how concentrated this smoke is, physicists use density: how much mass is packed into a given volume.",
   "physics.body_2": "Density is mass divided by volume. If you take a specific volume of air, adding soot and ash increases its mass, making the air denser with harmful particles.",
@@ -335,7 +335,7 @@
   "label.sources": "Sources",
   "source.1": "[1] Mongabay Indonesia, Menagih Keseriusan Pemerintah Tindak Karhutla di Konsesi Perusahaan, 20 Nov 2026",
   "source.2": "[2] Mongabay Indonesia, Nasib Satwa Liar Terdampak Kebakaran Hutan, 18 Nov 2026",
-  "source.3": "[3] BMKG, Peringatan Dini Cuaca, 20 Nov 2026",
+  "source.3": "[3] Copernicus (CAMS), Global fire monitoring, accessed 20 Nov 2026",
   "source.4": "",
   "source.5": "",
   "credit.images": "Cover: Illustration by ELIOS. Other pictures: Illustration by ELIOS."

@@ -32,10 +32,10 @@
     },
     {
       "n": 3,
-      "publisher": "BMKG",
-      "title": "Peringatan Dini Cuaca",
+      "publisher": "Copernicus",
+      "title": "Global fire monitoring",
       "date": "2026-11-20",
-      "url": "https://www.bmkg.go.id/cuaca/peringatan-dini-cuaca",
+      "url": "https://atmosphere.copernicus.eu/global-fire-monitoring",
       "primary": true
     }
   ],
@@ -280,7 +280,7 @@
   "timeline.3.date": "Kabut asap",
   "timeline.1.text": "Hutan dan lahan gambut mengering, menjadi sangat mudah terbakar.",
   "timeline.2.text": "Titik panas menyebar di area konsesi perusahaan dan lahan rentan [1].",
-  "timeline.3.text": "Asap tebal memenuhi udara, menaikkan massa jenis partikel [3].",
+  "timeline.3.text": "Kebakaran melepas partikel halus, lalu asapnya menyebar di udara [3].",
   "physics.title": "Massa, volume, dan massa jenis",
   "physics.body_1": "Saat kebakaran hutan terjadi, api melepaskan banyak asap, abu, dan gas ke atmosfer. Untuk memahami seberapa pekat asap tersebut, fisikawan menggunakan massa jenis: seberapa besar massa yang dikemas dalam volume tertentu.",
   "physics.body_2": "Massa jenis adalah massa dibagi volume. Pada volume udara tertentu, penambahan jelaga dan abu meningkatkan massanya, membuat udara menjadi lebih padat oleh partikel berbahaya.",
@@ -362,7 +362,7 @@
   "label.sources": "Sumber",
   "source.1": "[1] Mongabay Indonesia, Menagih Keseriusan Pemerintah Tindak Karhutla di Konsesi Perusahaan, 20 Nov 2026",
   "source.2": "[2] Mongabay Indonesia, Nasib Satwa Liar Terdampak Kebakaran Hutan, 18 Nov 2026",
-  "source.3": "[3] BMKG, Peringatan Dini Cuaca, 20 Nov 2026",
+  "source.3": "[3] Copernicus (CAMS), Global fire monitoring, diakses 20 Nov 2026",
   "source.4": "",
   "source.5": "",
   "credit.images": "Sampul: Ilustrasi oleh ELIOS. Gambar lain: Ilustrasi oleh ELIOS.",
