@@ -1,6 +1,81 @@
 {
   "guides": [
     {
+      "revision": "eba0ef910d65fd6af9f0b64decdddc7d11bb6213fb62112c5ea9f1d3bcad0d06",
+      "date": "2026-11-20",
+      "issue": "10",
+      "slug": "indonesia-forest-fires-and-smoke",
+      "xp": 60,
+      "title": {
+        "en": "How smoke and ash fill the air",
+        "id": "Asap dan abu di udara kita"
+      },
+      "topic": {
+        "en": "Smoke haze",
+        "id": "Kabut asap"
+      },
+      "cover": {
+        "en": "issues/2026-11-20/elios-guide-10-indonesia-forest-fires-and-smoke-cover-en.png",
+        "id": "issues/2026-11-20/elios-guide-10-indonesia-forest-fires-and-smoke-cover-id.png"
+      },
+      "pdf": {
+        "en": "issues/2026-11-20/elios-guide-10-indonesia-forest-fires-and-smoke-en.pdf",
+        "id": "issues/2026-11-20/elios-guide-10-indonesia-forest-fires-and-smoke-id.pdf"
+      },
+      "content": {
+        "en": "issues/2026-11-20/en.json",
+        "id": "issues/2026-11-20/id.json"
+      },
+      "schema": 2,
+      "theme": "air",
+      "photo": {
+        "src": "issues/2026-11-20/photo.jpg",
+        "thumb": "issues/2026-11-20/photo-800.jpg",
+        "w": 2000,
+        "h": 1333,
+        "caption": {
+          "en": "Archive photo · air",
+          "id": "Foto arsip · air"
+        },
+        "credit": "Ivuvisual / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Pemadam_Kebakaran.jpg"
+      },
+      "content_sha": {
+        "en": "0c0c0f9e04d01bbe071081853d1da368b53913b8194258e76834f7664722853d",
+        "id": "84864c50ecc03e30c1464805c22c5f51fa7e79a2113f6da35e966276a049d575"
+      },
+      "xp_parts": {
+        "story": 10,
+        "physics": 20,
+        "quiz": 10,
+        "lab": 20
+      },
+      "formula": "density",
+      "sources": [
+        "atmosphere.copernicus.eu/global-fire-monitoring",
+        "mongabay.co.id/2026/11/18/nasib-satwa-liar-terdampak-kebakaran-hutan",
+        "mongabay.co.id/2026/11/20/menagih-keseriusan-pemerintah-tindak-karhutla-di-konsesi-perusahaan-1"
+      ],
+      "terms": [
+        "air",
+        "asap",
+        "ash",
+        "fill",
+        "fire",
+        "forest",
+        "haze",
+        "hazy",
+        "hotspot",
+        "karhutla",
+        "kebakaran",
+        "skie",
+        "smoke",
+        "udara"
+      ],
+      "pages": 4
+    },
+    {
       "revision": "be0d461b184180341caac04b5b0c4f7d918454fe235c0c459a46a97642e97173",
       "date": "2026-11-19",
       "issue": "09",
@@ -533,5 +608,5 @@
       }
     }
   ],
-  "updated": "2026-11-19T17:40:25+07:00"
+  "updated": "2026-11-20T10:06:00+07:00"
 }

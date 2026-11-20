@@ -1,0 +1,342 @@
+{
+  "_example": false,
+  "_issue": "10",
+  "_slug": "indonesia-forest-fires-and-smoke",
+  "_theme": "air",
+  "_formula": "density",
+  "_keywords": [
+    "karhutla",
+    "kebakaran",
+    "hotspot",
+    "udara",
+    "asap"
+  ],
+  "_date": "2026-11-20",
+  "_lang": "en",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "Mongabay Indonesia",
+      "title": "Menagih Keseriusan Pemerintah Tindak Karhutla di Konsesi Perusahaan",
+      "date": "2026-11-20",
+      "url": "https://mongabay.co.id/2026/11/20/menagih-keseriusan-pemerintah-tindak-karhutla-di-konsesi-perusahaan-1/",
+      "primary": false
+    },
+    {
+      "n": 2,
+      "publisher": "Mongabay Indonesia",
+      "title": "Nasib Satwa Liar Terdampak Kebakaran Hutan",
+      "date": "2026-11-18",
+      "url": "https://mongabay.co.id/2026/11/18/nasib-satwa-liar-terdampak-kebakaran-hutan/",
+      "primary": false
+    },
+    {
+      "n": 3,
+      "publisher": "Copernicus",
+      "title": "Global fire monitoring",
+      "date": "2026-11-20",
+      "url": "https://atmosphere.copernicus.eu/global-fire-monitoring",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Pemadam_Kebakaran.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Ivuvisual / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Demonstrasi_memadam_api_semasa_kawad_kebakaran.jpg",
+      "license": "CC BY 4.0",
+      "credit": "CECELIVIANAH J / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 0.0012,
+  "_graph.2.raw": 0.0015,
+  "_graph.3.raw": 0.0027,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Density measures how much mass is packed into a given volume.",
+      "wrong": {
+        "a": "Total weight depends on size.",
+        "c": "Temperature measures heat energy.",
+        "d": "Speed is distance divided by time."
+      }
+    },
+    "2": {
+      "why": "V stands for volume in the density equation.",
+      "wrong": {
+        "b": "Velocity is speed in a direction.",
+        "c": "Voltage is electrical potential.",
+        "d": "Viscosity is fluid thickness."
+      }
+    },
+    "3": {
+      "why": "Adding soot and ash increases the mass of particles in the same air volume, raising density.",
+      "wrong": {
+        "a": "Soot adds particles, not removes air.",
+        "b": "Mass increases when smoke is added.",
+        "d": "Smoke does not turn air into water."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "What does density measure?",
+      "options": [
+        "Speed",
+        "Mass packed into a volume",
+        "Temperature",
+        "Energy"
+      ],
+      "answer": 1,
+      "explanation": "Density is mass divided by volume."
+    },
+    {
+      "question": "What is the unit of density in SI?",
+      "options": [
+        "kg",
+        "m³",
+        "kg/m³",
+        "N/m²"
+      ],
+      "answer": 2,
+      "explanation": "Density is measured in kilograms per cubic metre."
+    },
+    {
+      "question": "If you add heavy smoke to air, what happens to its density?",
+      "options": [
+        "Decreases",
+        "Stays the same",
+        "Increases",
+        "Becomes zero"
+      ],
+      "answer": 2,
+      "explanation": "More mass in the same volume increases density."
+    },
+    {
+      "question": "What does m stand for in ρ = m ÷ V?",
+      "options": [
+        "Metre",
+        "Mass",
+        "Mole",
+        "Momentum"
+      ],
+      "answer": 1,
+      "explanation": "m stands for mass."
+    },
+    {
+      "question": "What does V stand for in ρ = m ÷ V?",
+      "options": [
+        "Voltage",
+        "Velocity",
+        "Volume",
+        "Vacuum"
+      ],
+      "answer": 2,
+      "explanation": "V stands for volume."
+    },
+    {
+      "question": "Why is smoke haze harmful?",
+      "options": [
+        "It makes air glow",
+        "It carries tiny particles that affect breathing",
+        "It cools the ground too much",
+        "It creates rain"
+      ],
+      "answer": 1,
+      "explanation": "Smoke particles harm respiratory health."
+    },
+    {
+      "question": "Which gas or particle is added by forest fires?",
+      "options": [
+        "Pure gold",
+        "Ash and soot",
+        "Ice crystals",
+        "Helium"
+      ],
+      "answer": 1,
+      "explanation": "Fires release ash, soot, and smoke particles."
+    },
+    {
+      "question": "What does 1 kg/m³ mean?",
+      "options": [
+        "1 kg in 1 cubic metre",
+        "1 kg in 1 litre",
+        "1 gram in 1 m³",
+        "1 tonne in 1 m³"
+      ],
+      "answer": 0,
+      "explanation": "It means one kilogram of mass in every cubic metre of space."
+    },
+    {
+      "question": "Where were many hotspots found during forest fires?",
+      "options": [
+        "In deep oceans",
+        "Inside corporate concessions",
+        "On high mountains",
+        "At the North Pole"
+      ],
+      "answer": 1,
+      "explanation": "Reports show many hotspots were in corporate working areas."
+    },
+    {
+      "question": "What tool helps monitor air quality and smoke from space?",
+      "options": [
+        "Satellites",
+        "Thermometers",
+        "Magnets",
+        "Rulers"
+      ],
+      "answer": 0,
+      "explanation": "Satellites monitor smoke and air composition worldwide."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "two containers or jars, one with clean air and one with smoke from safe burning like paper or incense",
+      "measuring or observing the visibility inside each container",
+      "safety precautions and hands in the photo"
+    ],
+    "safety": [
+      "no open wild flames, adult supervision required, only hands in photos"
+    ],
+    "pass_if": "The photos show containers with clean air versus smoke, and the student explains particle density."
+  },
+  "_per_page": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "_replace": {},
+  "guide.issue_date": "#10 · 20 NOV 2026",
+  "guide.lang": "EN",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Issue 10 · 2026",
+  "cover.title": "How smoke and ash fill the air",
+  "cover.subtitle": "Forest fires send thousands of hotspots and thick smoke across Indonesia. Discover what density tells us about smoke particles in the air.",
+  "cover.image_caption": "Archive photo · air",
+  "cover.news_date": "News: 20 Nov 2026",
+  "cover.place": "Indonesia",
+  "cover.topic": "Smoke haze",
+  "cover.subject": "Physics · Density",
+  "quest.1.desc": "Read about forest fires and haze",
+  "quest.2.desc": "Use ρ = m ÷ V for air and smoke",
+  "quest.3.desc": "Quiz, mini lab and badge",
+  "cover.read_time": "12 min read",
+  "cover.level": "SMP · grade 7–9",
+  "cover.xp_total": "Earn up to 60 XP",
+  "cover.fun_fact": "Between January and September 2026, Indonesia recorded 30,927 hotspots across forests and land [1].",
+  "story.title": "Fires, smoke and hazy skies",
+  "story.lead": "Between January and September 2026, thousands of hotspots flared up across Indonesia's forests and land [1]. Thick smoke filled the air, reducing visibility and harming people and wildlife [2].",
+  "story.image_caption": "Archive photo · Demonstrasi memadam api semasa kawad kebakaran",
+  "story.image_credit": "CECELIVIANAH J / Wikimedia Commons, CC BY 4.0",
+  "stat.1.value": "30,927",
+  "stat.2.value": "9,951",
+  "stat.3.value": "50%",
+  "stat.1.label": "hotspots recorded in Indonesia (Jan–Sep 2026)",
+  "stat.2.label": "hotspots located inside corporate concessions",
+  "stat.3.label": "of all hotspots were inside corporate working areas",
+  "story.body_1": "Forest and land fires, known as karhutla, happen during dry spells and damage ecosystems [1]. Reports show that half of all hotspots were inside working areas of palm oil and forestry corporations [1]. West Kalimantan and Central Kalimantan recorded the highest numbers [1].",
+  "story.body_2": "Thick smoke carries tiny ash and soot particles that spread across regions and even cross borders [1]. Breathing smoky air harms health, especially for children and wildlife struggling with habitat loss and respiratory stress [2].",
+  "timeline.1.date": "Dry spell",
+  "timeline.2.date": "Ignition",
+  "timeline.3.date": "Haze",
+  "timeline.1.text": "Forests and peatlands dry out, becoming very easy to ignite.",
+  "timeline.2.text": "Hotspots spread across corporate concessions and vulnerable lands [1].",
+  "timeline.3.text": "Fires release fine particles, and smoke spreads through the air [3].",
+  "physics.title": "Mass, volume and density",
+  "physics.body_1": "When forest fires burn, they release massive amounts of smoke, ash, and gases into the atmosphere. To understand how concentrated this smoke is, physicists use density: how much mass is packed into a given volume.",
+  "physics.body_2": "Density is mass divided by volume. If you take a specific volume of air, adding soot and ash increases its mass, making the air denser with harmful particles.",
+  "physics.equation": "ρ = m ÷ V",
+  "physics.equation_name": "Density equation",
+  "legend.1.symbol": "ρ",
+  "legend.1.meaning": "density",
+  "legend.1.unit": "kg/m³",
+  "legend.2.symbol": "m",
+  "legend.2.meaning": "mass",
+  "legend.2.unit": "kilogram (kg)",
+  "legend.3.symbol": "V",
+  "legend.3.meaning": "volume",
+  "legend.3.unit": "m³",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "We assume smoke particles mix evenly through the tested air volume.",
+  "example.step_1": "m = 0.015 kg soot, V = 50 m³ air",
+  "example.step_2": "ρ = 0.015 ÷ 50",
+  "example.step_3": "Divide: ρ = 0.0003 kg/m³",
+  "example.result": "ρ = 0.0003 kg/m³",
+  "table.h1": "Air condition",
+  "table.h2": "Mass (kg in 50 m³)",
+  "table.h3": "Density (kg/m³)",
+  "table.r1c1": "Clean air",
+  "table.r1c2": "0.060",
+  "table.r1c3": "0.0012",
+  "table.r2c1": "Light smoke",
+  "table.r2c2": "0.075",
+  "table.r2c3": "0.0015",
+  "table.r3c1": "Heavy smoke haze",
+  "table.r3c2": "0.135",
+  "table.r3c3": "0.0027",
+  "table.note": "Adding ash and soot increases air particle density.",
+  "graph.title": "Air density with different smoke levels",
+  "graph.1.label": "Clean",
+  "graph.2.label": "Light",
+  "graph.3.label": "Heavy",
+  "graph.1.value": "0.0012",
+  "graph.2.value": "0.0015",
+  "graph.3.value": "0.0027",
+  "graph.note": "Heavy smoke haze nearly doubles the particle density compared to clean air.",
+  "physics.tip": "More mass in the same volume means higher density. Thick smoke means more soot particles packed into every cubic metre of air!",
+  "mission.title": "Clean air mission",
+  "quiz.answer_key": "Answer key: 1B · 2A · 3C",
+  "quiz.1.question": "What does density measure in a material or gas?",
+  "quiz.1.a": "Total weight",
+  "quiz.1.b": "Mass in a given volume",
+  "quiz.1.c": "Temperature",
+  "quiz.1.d": "Speed of sound",
+  "quiz.2.question": "In ρ = m ÷ V, what does V stand for?",
+  "quiz.2.a": "Volume",
+  "quiz.2.b": "Velocity",
+  "quiz.2.c": "Voltage",
+  "quiz.2.d": "Viscosity",
+  "quiz.3.question": "Why does adding smoke and soot to air change its density?",
+  "quiz.3.a": "It removes air molecules",
+  "quiz.3.b": "It decreases mass",
+  "quiz.3.c": "Adds mass in same volume",
+  "quiz.3.d": "It changes air into water",
+  "lab.title": "Smoke and air test",
+  "lab.step_1": "Prepare two clear jars or containers to represent air spaces.",
+  "lab.step_2": "Observe how smoke or particulate matter fills space compared to clean air.",
+  "lab.step_3": "Compare how packed the particles are in each space.",
+  "lab.question": "How does adding smoke increase particle density in the air?",
+  "badge.name": "Air Guardian",
+  "badge.text": "You explored how smoke particles affect air density.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Density",
+  "glossary.2.term": "Hotspot",
+  "glossary.3.term": "Haze",
+  "glossary.1.def": "Mass divided by volume, showing how tightly matter is packed.",
+  "glossary.2.def": "An area detected by satellites showing high heat from fires.",
+  "glossary.3.def": "Atmospheric obscurity caused by smoke, dust, and pollution.",
+  "label.sources": "Sources",
+  "source.1": "[1] Mongabay Indonesia, Menagih Keseriusan Pemerintah Tindak Karhutla di Konsesi Perusahaan, 20 Nov 2026",
+  "source.2": "[2] Mongabay Indonesia, Nasib Satwa Liar Terdampak Kebakaran Hutan, 18 Nov 2026",
+  "source.3": "[3] Copernicus (CAMS), Global fire monitoring, accessed 20 Nov 2026",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Cover: Illustration by ELIOS. Other pictures: Illustration by ELIOS."
+}
