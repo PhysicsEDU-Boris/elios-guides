@@ -95,17 +95,19 @@ def run(folder, base, key, model, problems=None, root=ROOT):
               "real pages for every source; never invent a URL, title, date or number.")
     catalogue = read(root / ".gemini/published-manifest.json") or read(root / "manifest.json")
     remedial = read(root / ".gemini/remedial-brief.json")
+    news = read(root / ".gemini/news-candidates.json", 40000)
+    news = f"\nRecent articles a script opened (source 1 must be one of the `news` entries):\n{news}\n" if news else ""
     folder.mkdir(parents=True, exist_ok=True)
     if problems:
         task = (f"Repair issues/{date}/en.json. These checks failed:\n{problems}\n\nCurrent en.json:\n"
                 f"{read(folder / 'en.json', 30000)}\n\nSource evidence (pages that were opened):\n"
-                f"{read(root / '.gemini/source-evidence.json')}\n\nFix only these problems. A source that is "
+                f"{read(root / '.gemini/source-evidence.json')}\n{news}\nFix only these problems. A source that is "
                 "missing, off-topic or a homepage is replaced by the exact article you find and open. "
                 "Reply with the complete corrected en.json object only.")
     else:
         task = (f"Today is {date} (Asia/Jakarta). Write issues/{date}/en.json now. Catalogue of published "
                 f"issues (next _issue number, topics and sources to avoid):\n{catalogue}\n"
-                + (f"\nRemedial brief (today is a remedial day):\n{remedial}\n" if remedial else "")
+                + (f"\nRemedial brief (today is a remedial day):\n{remedial}\n" if remedial else "") + news
                 + "\nReply with the complete en.json object only.")
     en = extract(chat(base, key, model, system, task), "json")
     if not isinstance(en.get("_sources"), list) or not en["_sources"]:

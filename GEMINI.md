@@ -16,6 +16,10 @@ Every reference to manifest.json below means this catalogue. It contains the dep
   first source article was used in the last 60 issues, that shares two or more sources with one, or
   whose title, topic, slug, place and keywords share 40% of their words with one. Pick a different
   event and a different main article; a new angle on the same article is a repeat.
+- Start from `.gemini/news-candidates.json` when it exists: a script already opened these recent articles.
+  Pick one `news` entry as the event and source 1 (url, title and date exactly as listed; cover.news_date is
+  its date) and take facts and numbers from its `text`. A `primary` entry there is a ready primary source.
+  Search the web only for what the candidates lack, and only if no candidate fits do you pick another event.
 - At least 3 sources, at least one primary (BMKG, BNPB, NASA, NOAA, WMO, WHO, UNEP, UNFCCC,
   Copernicus, CREA, universities, peer-reviewed journals). News sites only for context.
 - Each source url is the exact article, report or data page you opened, never a homepage.

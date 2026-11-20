@@ -110,6 +110,10 @@ jobs:
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
         run: python scripts/weak_questions.py --date "$DATE" --manifest .gemini/published-manifest.json --out .gemini/remedial-brief.json
 
+      - name: Find recent news articles
+        # Real, dated, already-opened articles: the writer picks its event here instead of guessing topic pages.
+        run: python scripts/find_news.py "$DATE" --manifest .gemini/published-manifest.json --out .gemini/news-candidates.json || true
+
       - name: Restore the failed issue for repair
         if: needs.prep.outputs.resume == 'true'
         run: |
@@ -142,6 +146,9 @@ jobs:
           prompt: >-
             Follow GEMINI.md exactly. Today is ${{ needs.prep.outputs.date }} (Asia/Jakarta).
             If .gemini/remedial-brief.json exists, today is a remedial day: follow the Remedial mode section.
+            Read .gemini/news-candidates.json first: source 1 must be one of its `news` articles (url, title
+            and date copied exactly; cover.news_date is that date), and write the story from its `text`.
+            Use a `primary` entry there, or one agency page you open, as the primary source.
             Write issues/${{ needs.prep.outputs.date }}/en.json, id.json, calc.py and sources.md.
 
       - name: Research with the fallback provider (Gemini failed)
@@ -268,6 +275,7 @@ jobs:
             Follow GEMINI.md. issues/${{ env.DATE }}/en.json and id.json failed these checks:
             ${{ steps.check1.outputs.problems }}
             Read .gemini/source-evidence.json first; reuse confirmed article URLs and facts instead of guessing replacements.
+            A source that is missing, off-topic, a homepage or already used: replace it with an article from .gemini/news-candidates.json.
             Fix only these problems, in both files, and keep en.json and id.json saying the same thing.
             Over a limit: shorten the text, keep the facts and [n] tags. Image not downloaded: set
             source_url to a direct image file you open and confirm, with its real license and credit,
@@ -354,8 +362,8 @@ jobs:
             Missing check.json is expected: an independent checker runs after you; never write it.
             Read .gemini/source-evidence.json first and reuse confirmed sources.
             Open replacement source article URLs before using them. Never replace a missing article
-            with a homepage or invent a title, date or event. If this event cannot be confirmed,
-            research a real event from the last 7 days and update both languages consistently.
+            with a homepage or invent a title, date or event. If this event cannot be confirmed or repeats one,
+            pick another article from .gemini/news-candidates.json and rewrite both languages around it.
             Read .gemini/published-manifest.json for the next issue number and recent topics.
             Correct every remaining content, length, calculation and bilingual error. Do not change
             any other files. Do not claim a problem is fixed without writing the corrected files.
