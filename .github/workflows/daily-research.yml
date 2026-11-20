@@ -155,7 +155,8 @@ jobs:
             Pick ONE of these as the event. Do not search for a different event; validate.py rejects
             any source 1 that is not on this list. Read .gemini/news-candidates.json for its text: source 1 is that article (url, title
             and date copied exactly; cover.news_date is that date), and write the story from its `text`.
-            Use a `primary` entry there, or one agency page you open, as the primary source.
+            Use a `primary` entry there, or one agency page you open, as the primary source. Other articles
+            on this list about the same event are good extra sources; never add a source you have not opened.
             Write issues/${{ needs.prep.outputs.date }}/en.json, id.json, calc.py and sources.md.
 
       - name: Research with the fallback provider (Gemini failed)

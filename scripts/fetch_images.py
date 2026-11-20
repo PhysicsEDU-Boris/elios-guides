@@ -150,7 +150,9 @@ def commons_photo(folder, key, name, skip=()):
             if cover:
                 d["cover.image_caption"] = f"{label} · {d.get('_theme', '')}"[:40]
             else:
-                d["story.image_caption"] = f"{label} · {find_images.title(img['source_url'])}"[:110]
+                # Commons titles carry dates and upload ids ("Peat 2012-04 1335015153") that fail the number check
+                what = re.sub(r"\s+", " ", re.sub(r"[\d_.:-]+", " ", find_images.title(img["source_url"]))).strip() or d.get("_theme", "")
+                d["story.image_caption"] = f"{label} · {what}"[:110]
                 d["story.image_credit"] = f"{img['credit']}, {img['license']}"[:110]
             p.write_text(json.dumps(d, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         print(f"{key}: Commons archive photo saved {nums} {img['source_url']}")
