@@ -1,0 +1,382 @@
+{
+  "_example": false,
+  "_issue": "10",
+  "_slug": "indonesia-forest-fires-and-smoke",
+  "_theme": "air",
+  "_formula": "density",
+  "_keywords": [
+    "karhutla",
+    "kebakaran",
+    "hotspot",
+    "udara",
+    "asap"
+  ],
+  "_date": "2026-11-20",
+  "_lang": "id",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "Mongabay Indonesia",
+      "title": "Menagih Keseriusan Pemerintah Tindak Karhutla di Konsesi Perusahaan",
+      "date": "2026-11-20",
+      "url": "https://mongabay.co.id/2026/11/20/menagih-keseriusan-pemerintah-tindak-karhutla-di-konsesi-perusahaan-1/",
+      "primary": false
+    },
+    {
+      "n": 2,
+      "publisher": "Mongabay Indonesia",
+      "title": "Nasib Satwa Liar Terdampak Kebakaran Hutan",
+      "date": "2026-11-18",
+      "url": "https://mongabay.co.id/2026/11/18/nasib-satwa-liar-terdampak-kebakaran-hutan/",
+      "primary": false
+    },
+    {
+      "n": 3,
+      "publisher": "BMKG",
+      "title": "Peringatan Dini Cuaca",
+      "date": "2026-11-20",
+      "url": "https://www.bmkg.go.id/cuaca/peringatan-dini-cuaca",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Pemadam_Kebakaran.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Ivuvisual / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Demonstrasi_memadam_api_semasa_kawad_kebakaran.jpg",
+      "license": "CC BY 4.0",
+      "credit": "CECELIVIANAH J / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 0.0012,
+  "_graph.2.raw": 0.0015,
+  "_graph.3.raw": 0.0027,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Massa jenis mengukur seberapa besar massa yang terkandung dalam volume tertentu.",
+      "wrong": {
+        "a": "Berat total bergantung pada ukuran.",
+        "c": "Suhu mengukur energi panas.",
+        "d": "Kecepatan adalah jarak dibagi waktu."
+      }
+    },
+    "2": {
+      "why": "V adalah singkatan volume dalam rumus massa jenis.",
+      "wrong": {
+        "b": "Kecepatan adalah perpindahan tiap waktu.",
+        "c": "Tegangan adalah potensial listrik.",
+        "d": "Viskositas adalah kekentalan fluida."
+      }
+    },
+    "3": {
+      "why": "Menambahkan jelaga dan abu meningkatkan massa partikel dalam volume udara yang sama, sehingga massa jenis naik.",
+      "wrong": {
+        "a": "Asap menambah partikel, bukan mengurangi udara.",
+        "b": "Massa bertambah saat asap ditambahkan.",
+        "d": "Asap tidak mengubah udara menjadi air."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "Apa yang diukur oleh massa jenis (densitas)?",
+      "options": [
+        "Kecepatan",
+        "Massa dalam volume tertentu",
+        "Suhu",
+        "Energi"
+      ],
+      "answer": 1,
+      "explanation": "Massa jenis adalah massa dibagi volume."
+    },
+    {
+      "question": "Apa satuan SI untuk massa jenis?",
+      "options": [
+        "kg",
+        "m³",
+        "kg/m³",
+        "N/m²"
+      ],
+      "answer": 2,
+      "explanation": "Massa jenis diukur dalam kilogram per meter kubik."
+    },
+    {
+      "question": "Jika asap tebal ditambahkan ke udara, apa yang terjadi pada massa jenisnya?",
+      "options": [
+        "Menurun",
+        "Tetap",
+        "Meningkat",
+        "Menjadi nol"
+      ],
+      "answer": 2,
+      "explanation": "Lebih banyak massa dalam volume yang sama meningkatkan massa jenis."
+    },
+    {
+      "question": "Apa arti m dalam rumus ρ = m ÷ V?",
+      "options": [
+        "Meter",
+        "Massa",
+        "Mol",
+        "Momentum"
+      ],
+      "answer": 1,
+      "explanation": "m adalah massa."
+    },
+    {
+      "question": "Apa arti V dalam rumus ρ = m ÷ V?",
+      "options": [
+        "Tegangan",
+        "Kecepatan",
+        "Volume",
+        "Vakum"
+      ],
+      "answer": 2,
+      "explanation": "V adalah volume."
+    },
+    {
+      "question": "Mengapa kabut asap berbahaya?",
+      "options": [
+        "Membuat udara bercahaya",
+        "Membawa partikel kecil yang mengganggu pernapasan",
+        "Mendinginkan tanah",
+        "Menghasilkan hujan"
+      ],
+      "answer": 1,
+      "explanation": "Partikel asap merusak kesehatan pernapasan."
+    },
+    {
+      "question": "Partikel apa yang dilepaskan oleh kebakaran hutan?",
+      "options": [
+        "Emas murni",
+        "Abu dan jelaga",
+        "Kristal es",
+        "Helium"
+      ],
+      "answer": 1,
+      "explanation": "Kebakaran melepaskan abu, jelaga, dan partikel asap."
+    },
+    {
+      "question": "Apa arti 1 kg/m³?",
+      "options": [
+        "1 kg dalam 1 meter kubik",
+        "1 kg dalam 1 liter",
+        "1 gram dalam 1 m³",
+        "1 ton dalam 1 m³"
+      ],
+      "answer": 0,
+      "explanation": "Artinya satu kilogram massa dalam setiap meter kubik."
+    },
+    {
+      "question": "Di mana banyak titik panas (hotspot) ditemukan saat karhutla?",
+      "options": [
+        "Di laut dalam",
+        "Di dalam konsesi perusahaan",
+        "Di gunung tinggi",
+        "Di Kutub Utara"
+      ],
+      "answer": 1,
+      "explanation": "Laporan menunjukkan banyak titik panas berada di wilayah kerja korporasi."
+    },
+    {
+      "question": "Alat apa yang membantu memantau kualitas udara dan asap dari angkasa?",
+      "options": [
+        "Satelit",
+        "Termometer",
+        "Magnet",
+        "Penggaris"
+      ],
+      "answer": 0,
+      "explanation": "Satelit memantau komposisi udara dan asap secara global."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "dua wadah atau stoples, satu berisi udara bersih dan satu berisi asap dari pembakaran aman seperti dupa",
+      "mengamati visibilitas di dalam masing-masing wadah",
+      "tindakan keselamatan dan tangan di foto"
+    ],
+    "safety": [
+      "tanpa nyala api liar, pengawasan orang dewasa, hanya tangan dalam foto"
+    ],
+    "pass_if": "Foto menunjukkan wadah berisi udara bersih versus asap, dan siswa menjelaskan massa jenis partikel."
+  },
+  "_per_page": [
+    {
+      "guide.stop_label": "Sampul"
+    },
+    {
+      "guide.stop_label": "Pos 1 · Ceritanya",
+      "section.label": "POS 1 · CERITANYA",
+      "section.xp": "+10 XP UNTUK MEMBACA"
+    },
+    {
+      "guide.stop_label": "Pos 2 · Fisikanya",
+      "section.label": "POS 2 · FISIKANYA",
+      "section.xp": "+20 XP UNTUK MENJAWAB"
+    },
+    {
+      "guide.stop_label": "Pos 3 · Misimu",
+      "section.label": "POS 3 · MISIMU",
+      "section.xp": "+30 XP UNTUK DIRAIH"
+    }
+  ],
+  "_replace": {
+    "stop": [
+      [
+        "STOP",
+        "POS"
+      ]
+    ],
+    "page ref": [
+      [
+        "p.",
+        "hlm. "
+      ]
+    ]
+  },
+  "guide.issue_date": "#10 · 20 NOV 2026",
+  "guide.lang": "ID",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Edisi 10 · 2026",
+  "cover.title": "Asap dan abu di udara kita",
+  "cover.subtitle": "Kebakaran hutan memicu ribuan titik panas dan asap tebal di Indonesia. Cari tahu apa kata massa jenis tentang partikel udara.",
+  "cover.image_caption": "Foto arsip · air",
+  "cover.news_date": "Berita: 20 Nov 2026",
+  "cover.place": "Indonesia",
+  "cover.topic": "Kabut asap",
+  "cover.subject": "Fisika · Massa Jenis",
+  "quest.1.desc": "Baca tentang karhutla dan kabut asap",
+  "quest.2.desc": "Gunakan ρ = m ÷ V untuk udara",
+  "quest.3.desc": "Kuis, lab mini, dan lencana",
+  "cover.read_time": "12 mnt baca",
+  "cover.level": "SMP · kelas 7–9",
+  "cover.xp_total": "Raih hingga 60 XP",
+  "cover.fun_fact": "Sepanjang Januari hingga September 2026, Indonesia mencatat 30.927 titik panas di hutan dan lahan [1].",
+  "story.title": "Kebakaran, asap, dan langit kabut",
+  "story.lead": "Antara Januari dan September 2026, ribuan titik panas muncul di hutan dan lahan Indonesia [1]. Asap tebal memenuhi udara, menurunkan jarak pandang serta merugikan warga dan satwa liar [2].",
+  "story.image_caption": "Foto arsip · Demonstrasi memadam api semasa kawad kebakaran",
+  "story.image_credit": "CECELIVIANAH J / Wikimedia Commons, CC BY 4.0",
+  "stat.1.value": "30.927",
+  "stat.2.value": "9.951",
+  "stat.3.value": "50%",
+  "stat.1.label": "titik panas tercatat di Indonesia (Jan–Sep 2026)",
+  "stat.2.label": "titik panas yang berada di dalam konsesi perusahaan",
+  "stat.3.label": "dari seluruh titik panas berada di area kerja korporasi",
+  "story.body_1": "Kebakaran hutan dan lahan (karhutla) sering terjadi saat musim kemarau dan merusak ekosistem [1]. Laporan menunjukkan setengah dari seluruh titik panas berada di area kerja korporasi sawit dan kehutanan [1]. Kalimantan Barat dan Kalimantan Tengah mencatat jumlah tertinggi [1].",
+  "story.body_2": "Asap tebal membawa partikel abu dan jelaga kecil yang menyebar antar wilayah hingga lintas batas negara [1]. Menghirup udara berasap membahayakan kesehatan, terutama anak-anak dan satwa liar yang tertekan akibat kehilangan habitat [2].",
+  "timeline.1.date": "Musim kemarau",
+  "timeline.2.date": "Pematikan",
+  "timeline.3.date": "Kabut asap",
+  "timeline.1.text": "Hutan dan lahan gambut mengering, menjadi sangat mudah terbakar.",
+  "timeline.2.text": "Titik panas menyebar di area konsesi perusahaan dan lahan rentan [1].",
+  "timeline.3.text": "Asap tebal memenuhi udara, menaikkan massa jenis partikel [3].",
+  "physics.title": "Massa, volume, dan massa jenis",
+  "physics.body_1": "Saat kebakaran hutan terjadi, api melepaskan banyak asap, abu, dan gas ke atmosfer. Untuk memahami seberapa pekat asap tersebut, fisikawan menggunakan massa jenis: seberapa besar massa yang dikemas dalam volume tertentu.",
+  "physics.body_2": "Massa jenis adalah massa dibagi volume. Pada volume udara tertentu, penambahan jelaga dan abu meningkatkan massanya, membuat udara menjadi lebih padat oleh partikel berbahaya.",
+  "physics.equation": "ρ = m ÷ V",
+  "physics.equation_name": "Persamaan massa jenis",
+  "legend.1.symbol": "ρ",
+  "legend.1.meaning": "massa jenis",
+  "legend.1.unit": "kg/m³",
+  "legend.2.symbol": "m",
+  "legend.2.meaning": "massa",
+  "legend.2.unit": "kilogram (kg)",
+  "legend.3.symbol": "V",
+  "legend.3.meaning": "volume",
+  "legend.3.unit": "m³",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "Kami berasumsi partikel asap tercampur merata di seluruh volume udara yang diuji.",
+  "example.step_1": "m = 0,015 kg jelaga, V = 50 m³",
+  "example.step_2": "ρ = 0,015 ÷ 50",
+  "example.step_3": "Bagi: ρ = 0,0003 kg/m³",
+  "example.result": "ρ = 0,0003 kg/m³",
+  "table.h1": "Kondisi udara",
+  "table.h2": "Massa (kg dlm 50 m³)",
+  "table.h3": "Massa jenis (kg/m³)",
+  "table.r1c1": "Udara bersih",
+  "table.r1c2": "0,060",
+  "table.r1c3": "0,0012",
+  "table.r2c1": "Asap ringan",
+  "table.r2c2": "0,075",
+  "table.r2c3": "0,0015",
+  "table.r3c1": "Kabut asap tebal",
+  "table.r3c2": "0,135",
+  "table.r3c3": "0,0027",
+  "table.note": "Penambahan abu dan jelaga menaikkan massa jenis udara.",
+  "graph.title": "Massa jenis udara dengan tingkat asap",
+  "graph.1.label": "Bersih",
+  "graph.2.label": "Ringan",
+  "graph.3.label": "Tebal",
+  "graph.1.value": "0,0012",
+  "graph.2.value": "0,0015",
+  "graph.3.value": "0,0027",
+  "graph.note": "Kabut asap tebal hampir melipatgandakan massa jenis partikel dibanding udara bersih.",
+  "physics.tip": "Lebih banyak massa dalam volume sama berarti massa jenis tinggi. Asap tebal berarti banyak jelaga dalam setiap meter kubik!",
+  "mission.title": "Misi udara bersih",
+  "quiz.answer_key": "Kunci: 1B · 2A · 3C",
+  "quiz.1.question": "Apa yang diukur oleh massa jenis dalam suatu bahan atau gas?",
+  "quiz.1.a": "Berat total",
+  "quiz.1.b": "Massa dalam volume tertentu",
+  "quiz.1.c": "Suhu",
+  "quiz.1.d": "Kecepatan suara",
+  "quiz.2.question": "Dalam ρ = m ÷ V, apa arti V?",
+  "quiz.2.a": "Volume",
+  "quiz.2.b": "Kecepatan",
+  "quiz.2.c": "Tegangan",
+  "quiz.2.d": "Viskositas",
+  "quiz.3.question": "Mengapa menambahkan asap dan jelaga ke udara mengubah massa jenisnya?",
+  "quiz.3.a": "Menghilangkan molekul udara",
+  "quiz.3.b": "Mengurangi massa",
+  "quiz.3.c": "Menambah massa di volume sama",
+  "quiz.3.d": "Mengubah udara menjadi air",
+  "lab.title": "Uji asap dan udara",
+  "lab.step_1": "Siapkan dua wadah atau stoples jernih untuk mewakili ruang udara.",
+  "lab.step_2": "Amati bagaimana asap mengisi ruang dibanding udara bersih.",
+  "lab.step_3": "Bandingkan seberapa padat partikel di setiap ruang.",
+  "lab.question": "Bagaimana penambahan asap menaikkan massa jenis partikel di udara?",
+  "badge.name": "Penjaga Udara",
+  "badge.text": "Kamu menjelajahi pengaruh partikel asap pada massa jenis.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Massa jenis",
+  "glossary.2.term": "Titik panas",
+  "glossary.3.term": "Kabut asap",
+  "glossary.1.def": "Massa dibagi volume, menunjukkan seberapa padat materi dikemas.",
+  "glossary.2.def": "Area terdeteksi satelit menunjukkan panas tinggi akibat kebakaran.",
+  "glossary.3.def": "Kekaburan atmosfer yang disebabkan oleh asap, debu, dan polusi.",
+  "label.sources": "Sumber",
+  "source.1": "[1] Mongabay Indonesia, Menagih Keseriusan Pemerintah Tindak Karhutla di Konsesi Perusahaan, 20 Nov 2026",
+  "source.2": "[2] Mongabay Indonesia, Nasib Satwa Liar Terdampak Kebakaran Hutan, 18 Nov 2026",
+  "source.3": "[3] BMKG, Peringatan Dini Cuaca, 20 Nov 2026",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Sampul: Ilustrasi oleh ELIOS. Gambar lain: Ilustrasi oleh ELIOS.",
+  "label.quest_map": "PETA MISIMU",
+  "label.fun_fact": "TAHUKAH KAMU?",
+  "label.timeline": "LINIMASA",
+  "label.equation": "PERSAMAAN KUNCI",
+  "label.example": "CONTOH SOAL",
+  "label.graph": "GRAFIK",
+  "label.tip": "KATA BULB BUDDY",
+  "label.quiz": "KUIS KILAT · 3 SOAL · CENTANG SATU KOTAK",
+  "label.lab": "LAB MINI · COBA DI RUMAH ATAU SEKOLAH",
+  "label.badge": "LENCANA TERBUKA",
+  "quest.1.title": "Ceritanya",
+  "quest.2.title": "Fisikanya",
+  "quest.3.title": "Misimu"
+}

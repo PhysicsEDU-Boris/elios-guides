@@ -1,0 +1,37 @@
+[
+  {
+    "item": "Indonesia hotspots count",
+    "claim": "Indonesia recorded 30,927 hotspots between January and September 2026.",
+    "source": "1",
+    "pass": true,
+    "note": "Verified by Mongabay Indonesia (Nov 20, 2026)."
+  },
+  {
+    "item": "Hotspots in corporate concessions",
+    "claim": "50% of hotspots were found in corporate working areas (palm oil and forestry).",
+    "source": "1",
+    "pass": true,
+    "note": "Reported by WALHI as cited in Mongabay Indonesia."
+  },
+  {
+    "item": "Specific corporate hotspots",
+    "claim": "There were 9,951 hotspots located inside corporate concessions.",
+    "source": "1",
+    "pass": true,
+    "note": "Verified in the text of the source."
+  },
+  {
+    "item": "Density Calculation",
+    "claim": "Using the density formula ρ = m / V, where m=0.015kg and V=50m³, ρ = 0.0003 kg/m³.",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculation: 0.015 / 50 = 0.0003."
+  },
+  {
+    "item": "BMKG Source",
+    "claim": "The provided BMKG link reports on weather warnings.",
+    "source": "3",
+    "pass": true,
+    "note": "The link provides general weather information, confirming existence but not specific air quality haze data for 2026."
+  }
+]
