@@ -20,8 +20,8 @@ Every reference to manifest.json below means this catalogue. It contains the dep
   Pick one `news` entry as the event and source 1 (url, title and date exactly as listed; cover.news_date is
   its date) and take facts and numbers from its `text`. A `primary` entry there is a ready primary source.
   Search the web only for what the candidates lack, and only if no candidate fits do you pick another event.
-- At least 3 sources, at least one primary (BMKG, BNPB, NASA, NOAA, WMO, WHO, UNEP, UNFCCC,
-  Copernicus, CREA, universities, peer-reviewed journals). News sites only for context.
+- At least 2 sources (the news article and a primary one), at least one primary (BMKG, BNPB, NASA, NOAA, WMO, WHO, UNEP, UNFCCC,
+  Copernicus, CREA, universities, peer-reviewed journals). The news article is the event; the primary source backs the science.
 - Each source url is the exact article, report or data page you opened, never a homepage.
   Verify the event and all source URLs before writing. A forecast homepage is not evidence that
   a flood happened. If an event cannot be confirmed, choose another real event; never invent
@@ -45,7 +45,7 @@ Every reference to manifest.json below means this catalogue. It contains the dep
 - Every second day the build reads the quiz statistics and writes that file: the concept students miss
   most, with the hardest questions, the right answer and the most common wrong answer. No file: write a
   normal news guide and no `_remedial` key.
-- Same rules as any guide (a real event from the last 7 days, at least 3 sources, repeat protection) but
+- Same rules as any guide (a real event from the last 7 days, at least 2 sources, repeat protection) but
   pick an event that shows this concept. Use the brief's `concept.formula` as `_formula`; if it is null,
   use the bank formula whose `text` equals `concept.equation`, else the closest one for the theme.
 - Explain the mistake behind the most common wrong answers in physics.body_1, physics.body_2 and

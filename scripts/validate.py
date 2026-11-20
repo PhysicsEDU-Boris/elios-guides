@@ -16,7 +16,7 @@ import repeats
 ROOT = Path(__file__).resolve().parent.parent
 LIMITS = json.loads((ROOT / "schema" / "limits.json").read_text(encoding="utf-8"))
 ALLOWED_DOMAINS = ("nasa.gov", "noaa.gov", "usgs.gov", "esa.int", "copernicus.eu", "wikimedia.org", "bmkg.go.id")
-OPTIONAL = {f"legend.{i}.{p}" for i in (4, 5) for p in ("symbol", "meaning", "unit")} | {"source.4", "source.5"}
+OPTIONAL = {f"legend.{i}.{p}" for i in (4, 5) for p in ("symbol", "meaning", "unit")} | {"source.3", "source.4", "source.5"}
 # keys only id.json may have (see GEMINI.md)
 ID_EXTRA = {
     "label.quest_map", "label.fun_fact", "label.timeline", "label.equation", "label.example",
@@ -99,7 +99,7 @@ def check_lang(d, lang, folder):
             errs.append(f"{lang}: {k} must be a string")
             continue
         if v == "" and k not in OPTIONAL:
-            errs.append(f"{lang}: {k} is empty (only legend.4/5.* and source.4/5 may be empty)")
+            errs.append(f"{lang}: {k} is empty (only legend.4/5.* and source.3-5 may be empty)")
         if len(v) > limit:
             errs.append(f"{lang}: {k} is {len(v)} chars, limit {limit}")
     for k, v in d.items():
@@ -120,8 +120,8 @@ def check_lang(d, lang, folder):
     # sources
     srcs = d.get("_sources") or []
     ns = {s.get("n") for s in srcs if isinstance(s, dict)}
-    if len(srcs) < 3:
-        errs.append(f"{lang}: only {len(srcs)} sources, need at least 3")
+    if len(srcs) < 2:
+        errs.append(f"{lang}: only {len(srcs)} sources, need at least 2")
     if not any(isinstance(s, dict) and s.get("primary") is True for s in srcs):
         errs.append(f"{lang}: no source has primary: true")
     for src in srcs:
