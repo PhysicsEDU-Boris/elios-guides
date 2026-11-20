@@ -1,0 +1,339 @@
+{
+  "_example": false,
+  "_issue": "10",
+  "_slug": "indonesia-forest-fires-smoke-density",
+  "_theme": "air",
+  "_formula": "density",
+  "_keywords": [
+    "karhutla",
+    "hotspots",
+    "kebakaran",
+    "konsesi",
+    "indonesia"
+  ],
+  "_date": "2026-11-21",
+  "_lang": "id",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "Mongabay Indonesia",
+      "title": "Menagih Keseriusan Pemerintah Tindak Karhutla di Konsesi Perusahaan",
+      "date": "2026-11-20",
+      "url": "https://mongabay.co.id/2026/11/20/menagih-keseriusan-pemerintah-tindak-karhutla-di-konsesi-perusahaan-1/",
+      "primary": false
+    },
+    {
+      "n": 2,
+      "publisher": "BMKG",
+      "title": "Prakiraan Cuaca Indonesia Sepekan",
+      "date": "2026-11-10",
+      "url": "https://www.bmkg.go.id/cuaca/potensi-hujan-sepekan/prakiraan-cuaca-indonesia-sepekan-periode-10-16-november-2026-waspada-peningkatan-potensi-hujan-di-wilayah-indonesia-sepekan-ke-depan",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "NASA",
+      "title": "Weight and Mass",
+      "date": "2026-11-01",
+      "url": "https://grc.nasa.gov/www/k-12/enginesim/weight_and_mass.htm",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/A_peat_bog_below_the_top_of_Doune_Hill%2C_Luss_Hills%2C_Scotland.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Michal Klajban / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Peat_2012-04_1335015153.JPG",
+      "license": "CC BY 4.0",
+      "credit": "Artyom Svetlov / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 500,
+  "_graph.2.raw": 425,
+  "_graph.3.raw": 250,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Massa jenis mengukur massa per satuan volume suatu zat seperti asap dan udara.",
+      "wrong": {
+        "a": "Volume diukur dalam meter kubik.",
+        "c": "Gaya diukur dalam newton.",
+        "d": "Suhu dalam Celsius."
+      }
+    },
+    "2": {
+      "why": "Massa dibagi volume menghasilkan nilai massa jenis dalam kg per meter kubik.",
+      "wrong": {
+        "b": "Perkalian massa dan volume tidak tepat.",
+        "c": "Volume dibagi massa adalah kebalikan massa jenis.",
+        "d": "Pengurangan massa dan volume tidak valid."
+      }
+    },
+    "3": {
+      "why": "Kebakaran melepaskan partikel asap padat ke udara di berbagai wilayah [1].",
+      "wrong": {
+        "a": "Hujan mendinginkan udara.",
+        "b": "Angin menyebarkan partikel asap.",
+        "d": "Awan menghalangi matahari."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "Apa arti rho (ρ) dalam persamaan massa jenis?",
+      "options": [
+        "Tekanan",
+        "Massa jenis",
+        "Volume",
+        "Massa"
+      ],
+      "answer": 1,
+      "explanation": "Rho adalah massa jenis dalam kg/m³."
+    },
+    {
+      "question": "Satuan apa yang digunakan untuk massa jenis dalam fisika?",
+      "options": [
+        "kg/m³",
+        "J/kg",
+        "N/m²",
+        "W/m"
+      ],
+      "answer": 0,
+      "explanation": "Massa jenis diukur dalam kilogram per meter kubik."
+    },
+    {
+      "question": "Jika massa bertambah sementara volume tetap, massa jenis akan...",
+      "options": [
+        "turun",
+        "naik",
+        "tetap",
+        "nol"
+      ],
+      "answer": 1,
+      "explanation": "Massa lebih besar pada volume sama menaikkan massa jenis."
+    },
+    {
+      "question": "Apa arti V dalam perhitungan massa jenis?",
+      "options": [
+        "Kecepatan",
+        "Volume",
+        "Tegangan",
+        "Viskositas"
+      ],
+      "answer": 1,
+      "explanation": "V melambangkan volume dalam meter kubik."
+    },
+    {
+      "question": "Apa yang dideteksi sensor satelit sebagai titik panas?",
+      "options": [
+        "Sungai",
+        "Titik api kebakaran",
+        "Lapisan awan",
+        "Kecepatan angin"
+      ],
+      "answer": 1,
+      "explanation": "Titik panas menandakan panas tinggi dari kebakaran."
+    },
+    {
+      "question": "Apa arti m dalam persamaan fisika?",
+      "options": [
+        "Momentum",
+        "Massa",
+        "Menit",
+        "Besaran"
+      ],
+      "answer": 1,
+      "explanation": "m adalah massa dalam kilogram."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "dua wadah dengan volume sama",
+      "bahan rumah tangga berbeda",
+      "perbandingan massa dan volume"
+    ],
+    "safety": [
+      "tanpa nyala api atau listrik utama",
+      "hanya tangan dalam foto"
+    ],
+    "pass_if": "Siswa menunjukkan pemahaman perbedaan massa jenis antar bahan."
+  },
+  "_per_page": [
+    {
+      "guide.stop_label": "Sampul"
+    },
+    {
+      "guide.stop_label": "Pos 1 · Ceritanya",
+      "section.label": "POS 1 · CERITANYA",
+      "section.xp": "+10 XP UNTUK MEMBACA"
+    },
+    {
+      "guide.stop_label": "Pos 2 · Fisikanya",
+      "section.label": "POS 2 · FISIKANYA",
+      "section.xp": "+20 XP UNTUK MENJAWAB"
+    },
+    {
+      "guide.stop_label": "Pos 3 · Misimu",
+      "section.label": "POS 3 · MISIMU",
+      "section.xp": "+30 XP UNTUK DIRAIH"
+    }
+  ],
+  "_replace": {
+    "stop": [
+      [
+        "STOP",
+        "POS"
+      ]
+    ],
+    "page ref": [
+      [
+        "p.",
+        "hlm. "
+      ]
+    ]
+  },
+  "guide.issue_date": "#10 · 21 NOV 2026",
+  "guide.lang": "ID",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Edisi #10 · CC BY 4.0",
+  "cover.title": "Massa jenis asap kebakaran hutan",
+  "cover.subtitle": "Kebakaran hutan di konsesi perusahaan melepaskan asap dan partikel padat. Pelajari fisika massa jenis pada asap dan udara.",
+  "cover.image_caption": "Foto arsip · air",
+  "cover.news_date": "Berita: 20 Nov 2026",
+  "cover.place": "Kalimantan Barat",
+  "cover.topic": "Udara dan asap",
+  "cover.subject": "Fisika · Massa jenis",
+  "quest.1.desc": "Baca tentang kebakaran hutan",
+  "quest.2.desc": "Gunakan rho = m dibagi V",
+  "quest.3.desc": "Kuis, lab mini dan lencana",
+  "cover.read_time": "12 mnt baca",
+  "cover.level": "SMP · kelas 7–9",
+  "cover.xp_total": "Raih hingga 60 XP",
+  "cover.fun_fact": "Partikel asap dari kebakaran lahan memiliki massa jenis tinggi, menyebarkan kabut asap di Indonesia.",
+  "story.title": "Kebakaran di konsesi perusahaan",
+  "story.lead": "Ribuan titik panas tercatat di Indonesia, dengan banyak yang berada di dalam konsesi sawit dan kayu [1]. Badan cuaca memantau peristiwa ini saat transisi musim [2].",
+  "story.image_caption": "Foto arsip · Peat 2012-04 1335015153",
+  "story.image_credit": "Artyom Svetlov / Wikimedia Commons, CC BY 4.0",
+  "stat.1.value": "30.927",
+  "stat.2.value": "9.529",
+  "stat.3.value": "9.951",
+  "stat.1.label": "total titik panas tercatat di Indonesia dari Jan hingga Sep 2026",
+  "stat.2.label": "titik panas terdeteksi di provinsi Kalimantan Barat",
+  "stat.3.label": "titik panas ditemukan di dalam konsesi perusahaan",
+  "story.body_1": "Kebakaran hutan dan lahan menciptakan tekanan ekologis parah dan melepaskan asap padat ke udara [1]. Sistem pemantauan satelit mendeteksi anomali ini sebagai titik panas [1].",
+  "story.body_2": "Memahami massa jenis partikel asap membantu ilmuwan menilai kualitas udara dan dampak lingkungan [2]. Tata kelola dan penegakan hukum sangat penting untuk pencegahan [1].",
+  "timeline.1.date": "Januari",
+  "timeline.2.date": "September",
+  "timeline.3.date": "November",
+  "timeline.1.text": "Pemantauan titik panas dimulai di berbagai provinsi [1].",
+  "timeline.2.text": "Puluhan ribu titik panas tercatat oleh sensor satelit [1].",
+  "timeline.3.text": "Pihak berwenang mendesak akuntabilitas korporasi [1].",
+  "physics.title": "Perhitungan massa jenis",
+  "physics.body_1": "Saat bahan terbakar, mereka melepaskan asap dan abu dengan massa dan volume tertentu. Massa jenis menunjukkan seberapa padat materi dalam ruang.",
+  "physics.body_2": "Massa jenis rho sama dengan massa dibagi volume. Partikel asap padat bertahan di udara atau mengendap perlahan bergantung pada kondisi atmosfer.",
+  "physics.equation": "ρ = m ÷ V",
+  "physics.equation_name": "Persamaan massa jenis",
+  "legend.1.symbol": "ρ",
+  "legend.1.meaning": "massa jenis",
+  "legend.1.unit": "kg/m³",
+  "legend.2.symbol": "m",
+  "legend.2.meaning": "massa",
+  "legend.2.unit": "kilogram (kg)",
+  "legend.3.symbol": "V",
+  "legend.3.meaning": "volume",
+  "legend.3.unit": "m³",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "Mengasumsikan komposisi seragam dan volume konstan selama dispersi partikel.",
+  "example.step_1": "Diketahui m=1000 kg, V=2 m³",
+  "example.step_2": "Massa jenis rho = 1.000 kg ÷ 2 m³",
+  "example.step_3": "rho = 500",
+  "example.result": "ρ = 500 kg/m³",
+  "table.h1": "Bahan",
+  "table.h2": "Massa & volume",
+  "table.h3": "Massa jenis (ρ)",
+  "table.r1c1": "Partikel asap",
+  "table.r1c2": "1.000 kg, 2 m³",
+  "table.r1c3": "500 kg/m³",
+  "table.r2c1": "Lapisan abu",
+  "table.r2c2": "850 kg, 2 m³",
+  "table.r2c3": "425 kg/m³",
+  "table.r3c1": "Udara bersih",
+  "table.r3c2": "500 kg, 2 m³",
+  "table.r3c3": "250 kg/m³",
+  "table.note": "Bahan memiliki nilai massa jenis berbeda.",
+  "graph.title": "Perbandingan Massa Jenis (kg/m³)",
+  "graph.1.label": "Asap",
+  "graph.2.label": "Abu",
+  "graph.3.label": "Udara",
+  "graph.1.value": "500",
+  "graph.2.value": "425",
+  "graph.3.value": "250",
+  "graph.note": "Perbandingan massa jenis asap, abu, dan udara.",
+  "physics.tip": "Massa jenis lebih tinggi berarti lebih banyak massa dalam setiap meter kubik.",
+  "mission.title": "Selidiki massa jenis asap",
+  "quiz.answer_key": "Kunci: 1B · 2A · 3C",
+  "quiz.1.question": "Apa arti rho dalam persamaan massa jenis?",
+  "quiz.1.a": "Tekanan",
+  "quiz.1.b": "Massa jenis",
+  "quiz.1.c": "Volume",
+  "quiz.1.d": "Suhu",
+  "quiz.2.question": "Bagaimana massa jenis dihitung dari massa dan volume?",
+  "quiz.2.a": "Massa dibagi volume",
+  "quiz.2.b": "Massa dikali volume",
+  "quiz.2.c": "Volume dibagi massa",
+  "quiz.2.d": "Massa dikurangi volume",
+  "quiz.3.question": "Mengapa kebakaran hutan memengaruhi kualitas udara regional?",
+  "quiz.3.a": "Hujan lebat mendinginkan area",
+  "quiz.3.b": "Angin kencang ciptakan suara",
+  "quiz.3.c": "Kebakaran lepas asap padat",
+  "quiz.3.d": "Awan memantulkan cahaya",
+  "lab.title": "Lab Mini: Membandingkan Massa Jenis",
+  "lab.step_1": "Ambil dua wadah volume sama berisi bahan berbeda.",
+  "lab.step_2": "Ukur massa menggunakan timbangan digital.",
+  "lab.step_3": "Hitung massa jenis dengan membagi massa dengan volume.",
+  "lab.question": "Bahan mana yang memiliki massa jenis lebih tinggi, dan mengapa?",
+  "badge.name": "Penjelajah Massa Jenis",
+  "badge.text": "Selesai Panduan #10 fisika massa jenis.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Titik panas",
+  "glossary.1.def": "Anomali termal yang dideteksi satelit menandakan panas radiasi tinggi.",
+  "glossary.2.term": "Volume",
+  "glossary.2.def": "Jumlah ruang tiga dimensi yang ditempati oleh suatu objek.",
+  "glossary.3.term": "Massa jenis",
+  "glossary.3.def": "Massa per satuan volume suatu zat.",
+  "label.sources": "Sumber dan Referensi",
+  "source.1": "Mongabay Indonesia, Menagih Keseriusan Pemerintah Tindak Karhutla di Konsesi Perusahaan, 20 Nov 2026.",
+  "source.2": "BMKG, Prakiraan Cuaca Indonesia Sepekan, 10 Nov 2026.",
+  "source.3": "NASA, Weight and Mass, 1 Nov 2026.",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Ilustrasi oleh ELIOS",
+  "label.quest_map": "PETA MISIMU",
+  "label.fun_fact": "TAHUKAH KAMU?",
+  "label.timeline": "LINIMASA",
+  "label.equation": "PERSAMAAN KUNCI",
+  "label.example": "CONTOH SOAL",
+  "label.graph": "GRAFIK",
+  "label.tip": "KATA BULB BUDDY",
+  "label.quiz": "KUIS KILAT · 3 SOAL · CENTANG SATU KOTAK",
+  "label.lab": "LAB MINI · COBA DI RUMAH ATAU SEKOLAH",
+  "label.badge": "LENCANA TERBUKA",
+  "quest.1.title": "Ceritanya",
+  "quest.2.title": "Fisikanya",
+  "quest.3.title": "Misimu"
+}

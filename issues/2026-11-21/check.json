@@ -1,0 +1,44 @@
+[
+  {
+    "item": "Total hotspots Jan-Sep 2026",
+    "claim": "30,927 hotspots were recorded in Indonesia between January and September 2026.",
+    "source": "1",
+    "pass": true,
+    "note": "Source 1 states 30,927 hotspots were monitored in Indonesia during this period."
+  },
+  {
+    "item": "Hotspots in West Kalimantan",
+    "claim": "9,529 hotspots were detected in West Kalimantan province.",
+    "source": "1",
+    "pass": true,
+    "note": "Source 1 confirms 9,529 hotspots for West Kalimantan."
+  },
+  {
+    "item": "Hotspots in corporate concessions",
+    "claim": "9,951 hotspots were found inside corporate concessions.",
+    "source": "1",
+    "pass": true,
+    "note": "Source 1 confirms 9,951 hotspots found in corporate concession areas."
+  },
+  {
+    "item": "Density calculation",
+    "claim": "Density = Mass / Volume (ρ = m ÷ V)",
+    "source": "calc",
+    "pass": true,
+    "note": "The physics calculation ρ = 1,000 / 2 = 500 is mathematically correct for the smoke particle example."
+  },
+  {
+    "item": "Quiz Answer 1",
+    "claim": "Rho (ρ) represents density.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "Consistent with standard physics terminology in both languages."
+  },
+  {
+    "item": "Indonesian labels",
+    "claim": "Indonesian labels and structure follow the required schema.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "All requested labels for the Indonesian version are correctly translated and placed."
+  }
+]
