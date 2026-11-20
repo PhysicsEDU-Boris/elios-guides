@@ -1,0 +1,342 @@
+{
+  "_issue": "10",
+  "_slug": "water-pressure-and-lake-depth",
+  "_theme": "water",
+  "_formula": "hydrostatic-pressure",
+  "_keywords": [
+    "water",
+    "pressure",
+    "depth",
+    "tekanan",
+    "air"
+  ],
+  "_date": "2026-11-20",
+  "_lang": "en",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "USGS",
+      "title": "Water Science School: Streamflow and the water cycle",
+      "date": "2026-11-18",
+      "url": "https://www.usgs.gov/water-science-school/science/streamflow-and-water-cycle",
+      "primary": true
+    },
+    {
+      "n": 2,
+      "publisher": "USGS",
+      "title": "Water Science School: How streamflow is measured",
+      "date": "2026-11-15",
+      "url": "https://www.usgs.gov/water-science-school/science/how-streamflow-measured",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "WMO",
+      "title": "Water resources and hydro power",
+      "date": "2026-11-10",
+      "url": "https://wmo.int/topics/water",
+      "primary": false
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Drop_of_water_on_water-resistant_textile_%28100%25_polyester%29.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Petar Milošević / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Three_buffaloes_heads_above_water_in_Si_Phan_Don.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Basile Morin / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 49000,
+  "_graph.2.raw": 98000,
+  "_graph.3.raw": 196000,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Pressure grows directly with depth, so doubling the depth doubles the pressure.",
+      "wrong": {
+        "a": "Pressure increases with depth, it does not stay the same.",
+        "c": "Pressure increases, it does not halve.",
+        "d": "Pressure is highest at the bottom, not zero."
+      }
+    },
+    "2": {
+      "why": "In hydrostatic pressure, ρ stands for fluid density in kg/m³.",
+      "wrong": {
+        "b": "Gravity is represented by g.",
+        "c": "Height or depth is represented by h.",
+        "d": "Power is not in this equation."
+      }
+    },
+    "3": {
+      "why": "Water pressure is much greater at the bottom, requiring thicker walls to hold it back.",
+      "wrong": {
+        "a": "Wall thickness is for strength, not saving concrete.",
+        "b": "Air temperature does not change wall thickness needs.",
+        "d": "Dam walls are not built for catching fish."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "What happens to water pressure as you go deeper in a lake?",
+      "options": [
+        "It decreases",
+        "It increases",
+        "It stays constant",
+        "It drops to zero"
+      ],
+      "answer": 1,
+      "explanation": "The weight of more water above increases the pressure."
+    },
+    {
+      "question": "What is the unit of pressure in SI?",
+      "options": [
+        "Newton",
+        "Joule",
+        "Pascal",
+        "Watt"
+      ],
+      "answer": 2,
+      "explanation": "Pressure is measured in pascals (Pa)."
+    },
+    {
+      "question": "In p = ρ × g × h, what does h represent?",
+      "options": [
+        "Heat",
+        "Height or depth",
+        "Humidity",
+        "Horsepower"
+      ],
+      "answer": 1,
+      "explanation": "h is the depth below the fluid surface in metres."
+    },
+    {
+      "question": "What is the density of pure water (ρ)?",
+      "options": [
+        "1 kg/m³",
+        "10 kg/m³",
+        "1,000 kg/m³",
+        "1,000,000 kg/m³"
+      ],
+      "answer": 2,
+      "explanation": "Water density is about 1,000 kg/m³."
+    },
+    {
+      "question": "Why do deep-sea submarines need very strong hulls?",
+      "options": [
+        "To stay warm",
+        "To resist huge water pressure",
+        "To move faster",
+        "To catch light"
+      ],
+      "answer": 1,
+      "explanation": "Deep water exerts immense hydrostatic pressure."
+    },
+    {
+      "question": "If depth is tripled, how does hydrostatic pressure change?",
+      "options": [
+        "It triples",
+        "It stays the same",
+        "It increases nine times",
+        "It halves"
+      ],
+      "answer": 0,
+      "explanation": "Pressure is directly proportional to depth h."
+    },
+    {
+      "question": "What force pulls water downward in a reservoir?",
+      "options": [
+        "Magnetism",
+        "Gravity",
+        "Friction",
+        "Electricity"
+      ],
+      "answer": 1,
+      "explanation": "Gravity pulls mass down, creating weight and pressure."
+    },
+    {
+      "question": "Which of these is a primary source for water and earth science?",
+      "options": [
+        "A cartoon blog",
+        "USGS",
+        "A movie review",
+        "A toy store website"
+      ],
+      "answer": 1,
+      "explanation": "USGS provides scientific data and water monitoring reports."
+    },
+    {
+      "question": "Does water pressure push only downward?",
+      "options": [
+        "Yes, only down",
+        "No, it pushes in all directions",
+        "Only upward",
+        "Only sideways"
+      ],
+      "answer": 1,
+      "explanation": "Fluid pressure acts equally in all directions at a given depth."
+    },
+    {
+      "question": "What is standard gravity g used in these calculations?",
+      "options": [
+        "1.5 m/s²",
+        "9.8 m/s²",
+        "100 m/s²",
+        "300 m/s²"
+      ],
+      "answer": 1,
+      "explanation": "Earth's gravity is approximately 9.8 m/s²."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "an empty plastic bottle with multiple holes at different heights",
+      "water squirting out of the holes",
+      "a ruler or measuring surface showing jet distance"
+    ],
+    "safety": [
+      "no flame, no hot water, no electricity",
+      "only hands in the photo"
+    ],
+    "pass_if": "The photos show water squirting further from the lower hole due to greater pressure."
+  },
+  "_per_page": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "_replace": {},
+  "guide.issue_date": "#10 · 20 NOV 2026",
+  "guide.lang": "EN",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Issue 10 · 20 November 2026",
+  "cover.title": "How water pressure builds",
+  "cover.subtitle": "Water pushes down with heavy force as you go deeper. Discover how pressure grows underwater and why deep structures need tough walls.",
+  "cover.image_caption": "Archive photo · water",
+  "cover.news_date": "News: 19 Nov 2026",
+  "cover.place": "Jakarta, Indonesia",
+  "cover.topic": "Water pressure",
+  "cover.subject": "Physics · Pressure",
+  "quest.1.desc": "Read how water pressure builds",
+  "quest.2.desc": "Use p = ρ × g × h",
+  "quest.3.desc": "Quiz, mini lab and badge",
+  "cover.read_time": "12 min read",
+  "cover.level": "SMP · grade 7–9",
+  "cover.xp_total": "Earn up to 60 XP",
+  "cover.fun_fact": "Water pressure increases by about 9,800 pascals for every single metre of depth.",
+  "story.title": "Deep water and hidden force",
+  "story.lead": "Rain and river runoff fill lakes and reservoirs across the region [1]. As water collects in deep basins, the pressure at the bottom rises significantly [2].",
+  "story.image_caption": "Archive photo · Three buffaloes heads above water in Si Phan Don",
+  "story.image_credit": "Basile Morin / Wikimedia Commons, CC BY-SA 4.0",
+  "stat.1.value": "1,000",
+  "stat.2.value": "9.8",
+  "stat.3.value": "10 m",
+  "stat.1.label": "water density in kg/m³",
+  "stat.2.label": "gravity in m/s²",
+  "stat.3.label": "depth for 98,000 Pa pressure",
+  "story.body_1": "A water has mass, and Earth's gravity pulls it down. When water piles up deep in a lake or behind a dam, the layers above push down on the layers below [2]. This squeezing force is called hydrostatic pressure.",
+  "story.body_2": "Engineers must design dam walls and underwater equipment to withstand this immense pressure [3]. The deeper you go, the stronger the push becomes against every square metre of surface [2].",
+  "timeline.1.date": "Surface",
+  "timeline.2.date": "5 m depth",
+  "timeline.3.date": "10 m depth",
+  "timeline.1.text": "Water pressure equals atmospheric pressure at the top.",
+  "timeline.2.text": "Pressure increases as water weight above presses down.",
+  "timeline.3.text": "Pressure reaches about 196,000 Pa at ten metres.",
+  "physics.title": "Pressure in a fluid",
+  "physics.body_1": "Hydrostatic pressure depends on three things: how dense the fluid is, how strong gravity is, and how deep you are below the surface.",
+  "physics.body_2": "The equation p = ρ × g × h shows that pressure grows in a straight line with depth. Double the depth, and you double the pressure.",
+  "physics.equation": "p = ρ × g × h",
+  "physics.equation_name": "Hydrostatic pressure equation",
+  "legend.1.symbol": "p",
+  "legend.1.meaning": "pressure",
+  "legend.1.unit": "pascal (Pa)",
+  "legend.2.symbol": "ρ",
+  "legend.2.meaning": "fluid density",
+  "legend.2.unit": "kg/m³",
+  "legend.3.symbol": "g",
+  "legend.3.meaning": "gravity",
+  "legend.3.unit": "9.8 m/s²",
+  "legend.4.symbol": "h",
+  "legend.4.meaning": "depth",
+  "legend.4.unit": "metre (m)",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "We assume water density is constant and ignore air pressure at the surface for the added fluid pressure.",
+  "example.step_1": "ρ = 1,000 kg/m³, g = 9.8, h = 10 m",
+  "example.step_2": "p = 1,000 × 9.8 × 10",
+  "example.step_3": "Multiply: p = 98,000 Pa",
+  "example.result": "p = 98,000 Pa",
+  "table.h1": "Depth (m)",
+  "table.h2": "Density (kg/m³)",
+  "table.h3": "Pressure (Pa)",
+  "table.r1c1": "5 m",
+  "table.r1c2": "1,000",
+  "table.r1c3": "49,000 Pa",
+  "table.r2c1": "10 m",
+  "table.r2c2": "1,000",
+  "table.r2c3": "98,000 Pa",
+  "table.r3c1": "20 m",
+  "table.r3c2": "1,000",
+  "table.r3c3": "196,000 Pa",
+  "table.note": "Pressure doubles when depth doubles.",
+  "graph.title": "Water pressure at different depths",
+  "graph.1.label": "5 m",
+  "graph.2.label": "10 m",
+  "graph.3.label": "20 m",
+  "graph.1.value": "49,000 Pa",
+  "graph.2.value": "98,000 Pa",
+  "graph.3.value": "196,000 Pa",
+  "graph.note": "Pressure increases directly with water depth.",
+  "physics.tip": "Remember that fluid pressure pushes equally in all directions, not just downward!",
+  "mission.title": "Deep water pressure mission",
+  "quiz.answer_key": "Answer key: 1B · 2A · 3C",
+  "quiz.1.question": "What happens to water pressure when you go twice as deep?",
+  "quiz.1.a": "It stays the same",
+  "quiz.1.b": "It doubles",
+  "quiz.1.c": "It halves",
+  "quiz.1.d": "It drops to zero",
+  "quiz.2.question": "In p = ρ × g × h, what does ρ stand for?",
+  "quiz.2.a": "Fluid density",
+  "quiz.2.b": "Gravity",
+  "quiz.2.c": "Height",
+  "quiz.2.d": "Power",
+  "quiz.3.question": "Why must dam walls be thicker at the bottom than at the top?",
+  "quiz.3.a": "To save concrete",
+  "quiz.3.b": "Air is colder at bottom",
+  "quiz.3.c": "To withstand high pressure",
+  "quiz.3.d": "To catch fish",
+  "lab.title": "Water bottle jet test",
+  "lab.step_1": "Poke three small holes at different heights in an empty plastic bottle.",
+  "lab.step_2": "Cover the holes with tape, fill the bottle with water, and place it in a sink.",
+  "lab.step_3": "Remove tape quickly and observe how far water jets shoot from each hole.",
+  "lab.question": "Which hole shoots water the furthest? Explain why using the idea of depth h.",
+  "badge.name": "Pressure Pioneer",
+  "badge.text": "You mastered how water pressure builds with depth.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Hydrostatic pressure",
+  "glossary.2.term": "Density",
+  "glossary.3.term": "Pascal",
+  "glossary.1.def": "Pressure exerted by a fluid at rest due to the force of gravity.",
+  "glossary.2.def": "Mass per unit volume of a substance.",
+  "glossary.3.def": "The SI unit of pressure, equal to one newton per square metre.",
+  "label.sources": "Sources",
+  "source.1": "[1] USGS, Water Science School: Streamflow and the water cycle, 18 Nov 2026",
+  "source.2": "[2] USGS, Water Science School: How streamflow is measured, 15 Nov 2026",
+  "source.3": "[3] WMO, Water resources and hydro power, 10 Nov 2026",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Cover: Illustration by ELIOS. Other pictures: Illustration by ELIOS."
+}

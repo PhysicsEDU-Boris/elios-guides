@@ -1,0 +1,369 @@
+{
+  "_issue": "10",
+  "_slug": "water-pressure-and-lake-depth",
+  "_theme": "water",
+  "_formula": "hydrostatic-pressure",
+  "_keywords": [
+    "water",
+    "pressure",
+    "depth",
+    "tekanan",
+    "air"
+  ],
+  "_date": "2026-11-20",
+  "_lang": "id",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "USGS",
+      "title": "Water Science School: Streamflow and the water cycle",
+      "date": "2026-11-18",
+      "url": "https://www.usgs.gov/water-science-school/science/streamflow-and-water-cycle",
+      "primary": true
+    },
+    {
+      "n": 2,
+      "publisher": "USGS",
+      "title": "Water Science School: How streamflow is measured",
+      "date": "2026-11-15",
+      "url": "https://www.usgs.gov/water-science-school/science/how-streamflow-measured",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "WMO",
+      "title": "Water resources and hydro power",
+      "date": "2026-11-10",
+      "url": "https://wmo.int/topics/water",
+      "primary": false
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Drop_of_water_on_water-resistant_textile_%28100%25_polyester%29.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Petar Milošević / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Three_buffaloes_heads_above_water_in_Si_Phan_Don.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Basile Morin / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 49000,
+  "_graph.2.raw": 98000,
+  "_graph.3.raw": 196000,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Tekanan air naik sebanding dengan kedalaman, sehingga dua kali lebih dalam berarti tekanannya dua kali lipat.",
+      "wrong": {
+        "a": "Tekanan bertambah seiring kedalaman, tidak tetap.",
+        "c": "Tekanan bertambah, bukan berkurang setengah.",
+        "d": "Tekanan paling besar di dasar, bukan nol."
+      }
+    },
+    "2": {
+      "why": "Dalam persamaan tekanan hidrostatis, ρ melambangkan massa jenis fluida dalam kg/m³.",
+      "wrong": {
+        "b": "Gravitasi dilambangkan dengan g.",
+        "c": "Kedalaman atau tinggi dilambangkan dengan h.",
+        "d": "Daya tidak ada dalam persamaan ini."
+      }
+    },
+    "3": {
+      "why": "Tekanan air jauh lebih besar di bagian dasar, sehingga dinding bendungan butuh ketahanan ekstra.",
+      "wrong": {
+        "a": "Ketebalan dinding untuk kekuatan, bukan menghemat beton.",
+        "b": "Suhu udara tidak mengubah kebutuhan ketebalan dinding.",
+        "d": "Dinding bendungan bukan untuk menangkap ikan."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "Apa yang terjadi pada tekanan air saat Anda menyelam lebih dalam di danau?",
+      "options": [
+        "Menurun",
+        "Meningkat",
+        "Tetap konstan",
+        "Menjadi nol"
+      ],
+      "answer": 1,
+      "explanation": "Berat air di atasnya membuat tekanan semakin besar."
+    },
+    {
+      "question": "Apa satuan tekanan dalam Sistem Internasional (SI)?",
+      "options": [
+        "Newton",
+        "Joule",
+        "Pascal",
+        "Watt"
+      ],
+      "answer": 2,
+      "explanation": "Tekanan diukur dalam pascal (Pa)."
+    },
+    {
+      "question": "Dalam persamaan p = ρ × g × h, apa arti h?",
+      "options": [
+        "Panas",
+        "Kedalaman atau ketinggian",
+        "Kelembapan",
+        "Daya"
+      ],
+      "answer": 1,
+      "explanation": "h adalah kedalaman di bawah permukaan fluida dalam meter."
+    },
+    {
+      "question": "Berapa massa jenis air murni (ρ)?",
+      "options": [
+        "1 kg/m³",
+        "10 kg/m³",
+        "1.000 kg/m³",
+        "1.000.000 kg/m³"
+      ],
+      "answer": 2,
+      "explanation": "Massa jenis air sekitar 1.000 kg/m³."
+    },
+    {
+      "question": "Mengapa kapal selam laut dalam memerlukan lambung yang sangat kuat?",
+      "options": [
+        "Agar tetap hangat",
+        "Untuk menahan tekanan air yang sangat besar",
+        "Agar bergerak lebih cepat",
+        "Untuk menangkap cahaya"
+      ],
+      "answer": 1,
+      "explanation": "Air yang sangat dalam menghasilkan tekanan hidrostatis yang luar biasa."
+    },
+    {
+      "question": "Jika kedalaman dijadikan tiga kali lipat, bagaimana tekanan hidrostatisnya?",
+      "options": [
+        "Menjadi tiga kali lipat",
+        "Tetap sama",
+        "Menjadi sembilan kali lipat",
+        "Menjadi setengahnya"
+      ],
+      "answer": 0,
+      "explanation": "Tekanan berbanding lurus dengan kedalaman h."
+    },
+    {
+      "question": "Gaya apa yang menarik air ke bawah di dalam waduk?",
+      "options": [
+        "Kemagnetan",
+        "Gravitasi",
+        "Gesekan",
+        "Listrik"
+      ],
+      "answer": 1,
+      "explanation": "Gravitasi menarik massa ke bawah, menciptakan berat dan tekanan."
+    },
+    {
+      "question": "Manakah yang merupakan sumber utama untuk ilmu bumi dan air?",
+      "options": [
+        "Blog kartun",
+        "USGS",
+        "Ulasan film",
+        "Situs toko mainan"
+      ],
+      "answer": 1,
+      "explanation": "USGS menyediakan data ilmiah dan laporan pemantauan air."
+    },
+    {
+      "question": "Apakah tekanan air hanya menekan ke bawah?",
+      "options": [
+        "Ya, hanya ke bawah",
+        "Tidak, menekan ke segala arah",
+        "Hanya ke atas",
+        "Hanya ke samping"
+      ],
+      "answer": 1,
+      "explanation": "Tekanan fluida bekerja sama kuat ke segala arah pada kedalaman tertentu."
+    },
+    {
+      "question": "Berapa nilai percepatan gravitasi g standar yang digunakan?",
+      "options": [
+        "1,5 m/s²",
+        "9,8 m/s²",
+        "100 m/s²",
+        "300 m/s²"
+      ],
+      "answer": 1,
+      "explanation": "Gravitasi Bumi bernilai sekitar 9,8 m/s²."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "botol plastik kosong dengan beberapa lubang pada ketinggian berbeda",
+      "air menyemprot keluar dari lubang-lubang tersebut",
+      "penggaris atau bidang ukur yang menunjukkan jarak semprotan"
+    ],
+    "safety": [
+      "tanpa nyala api, tanpa air panas, tanpa listrik",
+      "hanya tangan dalam foto"
+    ],
+    "pass_if": "Foto menunjukkan air menyemprot lebih jauh dari lubang yang lebih rendah karena tekanan yang lebih besar."
+  },
+  "_per_page": [
+    {
+      "guide.stop_label": "Sampul"
+    },
+    {
+      "guide.stop_label": "Pos 1 · Ceritanya",
+      "section.label": "POS 1 · CERITANYA",
+      "section.xp": "+10 XP UNTUK MEMBACA"
+    },
+    {
+      "guide.stop_label": "Pos 2 · Fisikanya",
+      "section.label": "POS 2 · FISIKANYA",
+      "section.xp": "+20 XP UNTUK MENJAWAB"
+    },
+    {
+      "guide.stop_label": "Pos 3 · Misimu",
+      "section.label": "POS 3 · MISIMU",
+      "section.xp": "+30 XP UNTUK DIRAIH"
+    }
+  ],
+  "_replace": {
+    "stop": [
+      [
+        "STOP",
+        "POS"
+      ]
+    ],
+    "page ref": [
+      [
+        "p.",
+        "hlm. "
+      ]
+    ]
+  },
+  "guide.issue_date": "#10 · 20 NOV 2026",
+  "guide.lang": "ID",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Edisi 10 · 20 November 2026",
+  "cover.title": "Tekanan air seiring kedalaman",
+  "cover.subtitle": "Air menekan dengan gaya besar saat Anda semakin dalam. Temukan bagaimana tekanan tumbuh di dalam air dan mengapa dinding butuh ketahanan.",
+  "cover.image_caption": "Foto arsip · water",
+  "cover.news_date": "Berita: 19 Nov 2026",
+  "cover.place": "Jakarta, Indonesia",
+  "cover.topic": "Tekanan air",
+  "cover.subject": "Fisika · Tekanan",
+  "quest.1.desc": "Baca bagaimana tekanan air terbentuk",
+  "quest.2.desc": "Gunakan persamaan p = ρ × g × h",
+  "quest.3.desc": "Kuis, lab mini, dan lencana",
+  "cover.read_time": "12 mnt baca",
+  "cover.level": "SMP · kelas 7–9",
+  "cover.xp_total": "Raih hingga 60 XP",
+  "cover.fun_fact": "Tekanan air meningkat sekitar 9.800 pascal untuk setiap satu meter kedalaman.",
+  "story.title": "Air dalam dan kekuatan tersembunyi",
+  "story.lead": "Hujan dan aliran sungai mengisi danau serta waduk di berbagai wilayah [1]. Saat air terkumpul di cekungan yang dalam, tekanan di dasarnya meningkat drastis [2].",
+  "story.image_caption": "Foto arsip · Three buffaloes heads above water in Si Phan Don",
+  "story.image_credit": "Basile Morin / Wikimedia Commons, CC BY-SA 4.0",
+  "stat.1.value": "1.000",
+  "stat.2.value": "9,8",
+  "stat.3.value": "10 m",
+  "stat.1.label": "massa jenis air dalam kg/m³",
+  "stat.2.label": "gravitasi dalam m/s²",
+  "stat.3.label": "kedalaman untuk tekanan 98.000 Pa",
+  "story.body_1": "Air memiliki massa, dan gravitasi Bumi menariknya ke bawah. Ketika air menumpuk di danau yang dalam atau di balik bendungan, lapisan di atas menekan lapisan di bawah [2]. Gaya tekan ini disebut tekanan hidrostatis.",
+  "story.body_2": "Para insinyur harus merancang dinding bendungan dan alat bawah air agar mampu menahan tekanan luar biasa ini [3]. Semakin dalam Anda menyelam, semakin kuat dorongan pada setiap meter persegi permukaan [2].",
+  "timeline.1.date": "Permukaan",
+  "timeline.2.date": "Kedalaman 5 m",
+  "timeline.3.date": "Kedalaman 10 m",
+  "timeline.1.text": "Tekanan air menyamai tekanan atmosfer di bagian paling atas.",
+  "timeline.2.text": "Tekanan meningkat seiring berat air di atas menekan ke bawah.",
+  "timeline.3.text": "Tekanan mencapai sekitar 196.000 Pa pada kedalaman sepuluh meter.",
+  "physics.title": "Tekanan dalam fluida",
+  "physics.body_1": "Tekanan hidrostatis bergantung pada tiga hal: seberapa padat fluida tersebut, seberapa besar gravitasi, dan seberapa dalam posisi Anda di bawah permukaan.",
+  "physics.body_2": "Persamaan p = ρ × g × h menunjukkan bahwa tekanan tumbuh secara lurus dengan kedalaman. Gandakan kedalamannya, maka tekanan pun menjadi dua kali lipat.",
+  "physics.equation": "p = ρ × g × h",
+  "physics.equation_name": "Persamaan tekanan hidrostatis",
+  "legend.1.symbol": "p",
+  "legend.1.meaning": "tekanan",
+  "legend.1.unit": "pascal (Pa)",
+  "legend.2.symbol": "ρ",
+  "legend.2.meaning": "massa jenis fluida",
+  "legend.2.unit": "kg/m³",
+  "legend.3.symbol": "g",
+  "legend.3.meaning": "gravitasi",
+  "legend.3.unit": "9,8 m/s²",
+  "legend.4.symbol": "h",
+  "legend.4.meaning": "kedalaman",
+  "legend.4.unit": "meter (m)",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "Kita anggap massa jenis air konstan dan abaikan tekanan udara permukaan untuk tambahan tekanan fluida.",
+  "example.step_1": "ρ = 1.000 kg/m³, g = 9,8, h = 10 m",
+  "example.step_2": "p = 1.000 × 9,8 × 10",
+  "example.step_3": "Kalikan: p = 98.000 Pa",
+  "example.result": "p = 98.000 Pa",
+  "table.h1": "Kedalaman (m)",
+  "table.h2": "Massa jenis (kg/m³)",
+  "table.h3": "Tekanan (Pa)",
+  "table.r1c1": "5 m",
+  "table.r1c2": "1.000",
+  "table.r1c3": "49.000 Pa",
+  "table.r2c1": "10 m",
+  "table.r2c2": "1.000",
+  "table.r2c3": "98.000 Pa",
+  "table.r3c1": "20 m",
+  "table.r3c2": "1.000",
+  "table.r3c3": "196.000 Pa",
+  "table.note": "Tekanan berlipat ganda saat kedalaman digandakan.",
+  "graph.title": "Tekanan air pada berbagai kedalaman",
+  "graph.1.label": "5 m",
+  "graph.2.label": "10 m",
+  "graph.3.label": "20 m",
+  "graph.1.value": "49.000 Pa",
+  "graph.2.value": "98.000 Pa",
+  "graph.3.value": "196.000 Pa",
+  "graph.note": "Tekanan meningkat secara langsung dengan kedalaman air.",
+  "physics.tip": "Ingatlah bahwa tekanan fluida menekan secara merata ke segala arah, bukan hanya ke bawah!",
+  "mission.title": "Misi tekanan air dalam",
+  "quiz.answer_key": "Kunci: 1B · 2A · 3C",
+  "quiz.1.question": "Apa yang terjadi pada tekanan air saat Anda pergi dua kali lebih dalam?",
+  "quiz.1.a": "Tetap sama",
+  "quiz.1.b": "Menjadi dua kali lipat",
+  "quiz.1.c": "Menjadi setengahnya",
+  "quiz.1.d": "Turun menjadi nol",
+  "quiz.2.question": "Dalam p = ρ × g × h, apakah arti dari ρ?",
+  "quiz.2.a": "Massa jenis fluida",
+  "quiz.2.b": "Gravitasi",
+  "quiz.2.c": "Ketinggian",
+  "quiz.2.d": "Daya",
+  "quiz.3.question": "Mengapa dinding bendungan harus lebih tebal di bagian bawah daripada di atas?",
+  "quiz.3.a": "Untuk menghemat beton",
+  "quiz.3.b": "Udara lebih dingin di bawah",
+  "quiz.3.c": "Untuk menahan tekanan tinggi",
+  "quiz.3.d": "Untuk menangkap ikan",
+  "lab.title": "Uji semprotan botol air",
+  "lab.step_1": "Buat tiga lubang kecil pada ketinggian berbeda di botol plastik kosong.",
+  "lab.step_2": "Tutup lubang dengan selotip, isi botol dengan air, dan taruh di bak cuci.",
+  "lab.step_3": "Buka selotip cepat dan amati seberapa jauh semprotan air dari tiap lubang.",
+  "lab.question": "Lubang mana menyemprot air paling jauh? Jelaskan dengan konsep kedalaman h.",
+  "badge.name": "Perintis Tekanan",
+  "badge.text": "Anda menguasai cara tekanan air terbentuk dengan kedalaman.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Tekanan hidrostatis",
+  "glossary.2.term": "Massa jenis",
+  "glossary.3.term": "Pascal",
+  "glossary.1.def": "Tekanan yang diberikan oleh fluida diam akibat gaya gravitasi.",
+  "glossary.2.def": "Massa setiap satuan volume suatu zat.",
+  "glossary.3.def": "Satuan SI untuk tekanan, setara dengan satu newton per meter persegi.",
+  "label.sources": "Sumber",
+  "source.1": "[1] USGS, Water Science School: Streamflow and the water cycle, 18 Nov 2026",
+  "source.2": "[2] USGS, Water Science School: How streamflow is measured, 15 Nov 2026",
+  "source.3": "[3] WMO, Water resources and hydro power, 10 Nov 2026",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Sampul: Ilustrasi oleh ELIOS. Gambar lain: Ilustrasi oleh ELIOS."
+}

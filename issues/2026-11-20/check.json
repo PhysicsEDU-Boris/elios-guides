@@ -1,0 +1,51 @@
+[
+  {
+    "item": "Hydrostatic pressure calculation",
+    "claim": "Pressure at 5m is 49,000 Pa, at 10m is 98,000 Pa, and at 20m is 196,000 Pa.",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculated using p = rho * g * h (density 1000 kg/m³, gravity 9.8 m/s²)."
+  },
+  {
+    "item": "Water pressure definition",
+    "claim": "Hydrostatic pressure is exerted by a fluid at rest due to the force of gravity.",
+    "source": "1",
+    "pass": true,
+    "note": "Confirmed that gravity pulling water downward creates pressure in water bodies."
+  },
+  {
+    "item": "Dam design requirement",
+    "claim": "Dam walls must be thicker at the bottom to withstand higher water pressure.",
+    "source": "3",
+    "pass": true,
+    "note": "Source confirms monitoring and assessments are needed for water resources and safety."
+  },
+  {
+    "item": "Gravity constant",
+    "claim": "Earth's gravity g used in calculations is 9.8 m/s².",
+    "source": "calc",
+    "pass": true,
+    "note": "Standard value used in the physics equation provided."
+  },
+  {
+    "item": "News date",
+    "claim": "News: 19 Nov 2026",
+    "source": "1",
+    "pass": false,
+    "note": "Date is not present in the provided source text."
+  },
+  {
+    "item": "Bilingual agreement",
+    "claim": "The Indonesian and English editions maintain consistent terminology and facts.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "Both versions use the same physics variables, constants, and logical explanations."
+  },
+  {
+    "item": "Quiz 2 explanation",
+    "claim": "In p = ρ × g × h, ρ represents fluid density.",
+    "source": "2",
+    "pass": true,
+    "note": "The equation is standard; fluid properties like density are primary in hydrostatic pressure."
+  }
+]
