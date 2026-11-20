@@ -1,0 +1,334 @@
+{
+  "_example": false,
+  "_issue": "10",
+  "_slug": "sierra-leone-coastal-plastic-waste",
+  "_theme": "waste",
+  "_formula": "density",
+  "_keywords": [
+    "plastic",
+    "waste",
+    "pollution",
+    "density"
+  ],
+  "_date": "2026-11-22",
+  "_lang": "en",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "Mongabay",
+      "title": "Catching more plastic than fish in Sierra Leone’s coastal Mahera",
+      "date": "19 Nov 2026",
+      "url": "https://news.mongabay.com/2026/11/catching-more-plastic-than-fish-in-sierra-leones-coastal-mahera/",
+      "primary": false
+    },
+    {
+      "n": 2,
+      "publisher": "UNEP",
+      "title": "Marine Plastic Pollution and Coastal Ecosystems",
+      "date": "2026",
+      "url": "https://www.unep.org/",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Plastic_Pollution_in_Ghana.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Muntaka Chasant / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Plastic_pollution.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Mandeiya flower / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 623,
+  "_graph.2.raw": 1246,
+  "_graph.3.raw": 1000,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Fishers frequently catch single-use plastic bottles and wrappers in their nets.",
+      "wrong": {
+        "a": "Seaweed is natural and rarely blocks nets.",
+        "c": "Coral reefs are fixed habitats.",
+        "d": "Freshwater fish live inland."
+      }
+    },
+    "2": {
+      "why": "ρ = m ÷ V calculates density by dividing mass by volume.",
+      "wrong": {
+        "b": "Pressure is force divided by area.",
+        "c": "Speed is distance divided by time.",
+        "d": "Volume is space occupied."
+      }
+    },
+    "3": {
+      "why": "Community cleanups and waste management help reduce coastal plastic pollution.",
+      "wrong": {
+        "a": "Burning plastic pollutes the air.",
+        "b": "Ignoring waste harms ecosystems.",
+        "d": "Stopping fishing is unnecessary."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "What main item do fishers frequently catch in their nets along with fish?",
+      "options": [
+        "Seaweed",
+        "Plastic bottles and waste",
+        "Coral reefs",
+        "Freshwater fish"
+      ],
+      "answer": 1,
+      "explanation": "Fishers catch plastic bottles and waste."
+    },
+    {
+      "question": "In ρ = m ÷ V, what does ρ represent?",
+      "options": [
+        "Density",
+        "Pressure",
+        "Speed",
+        "Volume"
+      ],
+      "answer": 0,
+      "explanation": "ρ represents density."
+    },
+    {
+      "question": "What helps reduce coastal plastic pollution according to reports?",
+      "options": [
+        "Burning all plastic",
+        "Ignoring beach waste",
+        "Community cleanup programs",
+        "Stopping fishing entirely"
+      ],
+      "answer": 2,
+      "explanation": "Community cleanups help reduce plastic pollution."
+    },
+    {
+      "question": "What unit measures density in standard physics?",
+      "options": [
+        "kg/m³",
+        "Joule",
+        "Watt",
+        "Newton"
+      ],
+      "answer": 0,
+      "explanation": "Density is measured in kg/m³."
+    },
+    {
+      "question": "Why do plastic bottles float on water?",
+      "options": [
+        "They have lower density than water",
+        "They are magnetic",
+        "They are very heavy",
+        "They absorb water"
+      ],
+      "answer": 0,
+      "explanation": "Lower density makes objects float."
+    },
+    {
+      "question": "How much litter was recorded across four beaches in Sierra Leone?",
+      "options": [
+        "100 kg",
+        "1,246 kg",
+        "5,000 kg",
+        "10,000 kg"
+      ],
+      "answer": 1,
+      "explanation": "1,246 kg of litter was recorded."
+    },
+    {
+      "question": "What does m stand for in density equations?",
+      "options": [
+        "Mass",
+        "Meter",
+        "Minute",
+        "Magnet"
+      ],
+      "answer": 0,
+      "explanation": "m stands for mass."
+    },
+    {
+      "question": "What does V stand for in density equations?",
+      "options": [
+        "Voltage",
+        "Volume",
+        "Velocity",
+        "Viscosity"
+      ],
+      "answer": 1,
+      "explanation": "V stands for volume."
+    },
+    {
+      "question": "Which ministry launched clean-up initiatives in Sierra Leone?",
+      "options": [
+        "Ministry of Environment and Climate Change",
+        "Ministry of Finance",
+        "Ministry of Education",
+        "Ministry of Transport"
+      ],
+      "answer": 0,
+      "explanation": "Ministry of Environment and Climate Change."
+    },
+    {
+      "question": "Why is plastic pollution harmful to fishers?",
+      "options": [
+        "It damages nets and delays fishing",
+        "It makes fish faster",
+        "It cleans the water",
+        "It improves boat speed"
+      ],
+      "answer": 0,
+      "explanation": "Plastic damages nets and delays fishing trips."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "transparent container with water",
+      "plastic bottle and metal spoon",
+      "student hands dropping items"
+    ],
+    "safety": [
+      "no flame, no mains electricity",
+      "only hands in photos"
+    ],
+    "pass_if": "Photos show the plastic bottle floating and the metal spoon sinking."
+  },
+  "_per_page": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "_replace": {},
+  "guide.issue_date": "#10 · 22 NOV 2026",
+  "guide.lang": "EN",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Issue 10 · 2026",
+  "cover.title": "Plastic waste on coastal shores",
+  "cover.subtitle": "Plastic waste litters beaches and fills fishing nets in Sierra Leone. Discover how density helps measure plastic pollution in the ocean.",
+  "cover.image_caption": "Archive photo · waste",
+  "cover.news_date": "News: 19 Nov 2026",
+  "cover.place": "Port Loko, Sierra Leone",
+  "cover.topic": "Waste and plastic",
+  "cover.subject": "Physics · Density",
+  "quest.1.desc": "Read about coastal plastic pollution",
+  "quest.2.desc": "Use ρ = m ÷ V for materials",
+  "quest.3.desc": "Quiz, mini lab and badge",
+  "cover.read_time": "12 min read",
+  "cover.level": "SMP · grade 7–9",
+  "cover.xp_total": "Earn up to 60 XP",
+  "cover.fun_fact": "Over 72,000 pieces of litter were recorded across four coastal beaches.",
+  "story.title": "Catching more plastic than fish",
+  "story.lead": "On coastal beaches in Sierra Leone, fishers haul in nets filled with plastic bottles and water sachets instead of fish [1]. Plastic waste disrupts daily fishing work and increases operating expenses [1].",
+  "story.image_caption": "Archive photo · Plastic pollution",
+  "story.image_credit": "Mandeiya flower / Wikimedia Commons, CC BY-SA 4.0",
+  "stat.1.value": "1,246 kg",
+  "stat.2.value": "72,901",
+  "stat.3.value": "130,000",
+  "stat.1.label": "total weight of litter across four beaches",
+  "stat.2.label": "number of litter pieces recorded in study",
+  "stat.3.label": "annual metric tons of plastic waste",
+  "story.body_1": "Fisher Sheriff Kamara finds single-use plastics caught in his nets almost every week [1]. Removing entangled plastic waste takes considerable time, causing delayed catches and added repair costs [1]. International environmental reports highlight how marine plastic threatens aquatic life and coastal communities [2].",
+  "story.body_2": "Women fish traders also bear financial burdens when fresh fish deliveries are delayed and ice or firewood expenses rise [1]. Managing plastic waste requires stronger coastal waste management systems and community cleanup efforts [1] [2].",
+  "timeline.1.date": "Morning",
+  "timeline.2.date": "Afternoon",
+  "timeline.3.date": "Evening",
+  "timeline.1.text": "Fishers set out to sea in boats powered by petrol.",
+  "timeline.2.text": "Nets haul in plastic bottles and wrappers alongside fish.",
+  "timeline.3.text": "Traders process fish and clean nets from debris.",
+  "physics.title": "Density and material properties",
+  "physics.body_1": "Density tells us how much mass is packed into a specific volume. Different materials have different densities, determining whether they float or sink in water.",
+  "physics.body_2": "Measuring density helps scientists and environmental groups analyze plastic waste accumulation in coastal ecosystems [2].",
+  "physics.equation": "ρ = m ÷ V",
+  "physics.equation_name": "Density equation",
+  "legend.1.symbol": "ρ",
+  "legend.1.meaning": "density",
+  "legend.1.unit": "kg/m³",
+  "legend.2.symbol": "m",
+  "legend.2.meaning": "mass",
+  "legend.2.unit": "kg",
+  "legend.3.symbol": "V",
+  "legend.3.meaning": "volume",
+  "legend.3.unit": "m³",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "We assume uniform mass distribution and regular volume measurements for solid objects.",
+  "example.step_1": "m = 1,246 kg, V = 2 m³",
+  "example.step_2": "ρ = 1,246 ÷ 2",
+  "example.step_3": "Divide: ρ = 623 kg/m³",
+  "example.result": "ρ = 623 kg/m³",
+  "table.h1": "Material",
+  "table.h2": "Mass (kg)",
+  "table.h3": "Density (kg/m³)",
+  "table.r1c1": "Plastic litter",
+  "table.r1c2": "1,246",
+  "table.r1c3": "623 kg/m³",
+  "table.r2c1": "Water",
+  "table.r2c2": "1,000",
+  "table.r2c3": "1,000 kg/m³",
+  "table.r3c1": "Wood block",
+  "table.r3c2": "600",
+  "table.r3c3": "600 kg/m³",
+  "table.note": "Materials have mass and volume.",
+  "graph.title": "Material density comparison",
+  "graph.1.label": "Plastic",
+  "graph.2.label": "Litter",
+  "graph.3.label": "Water",
+  "graph.1.value": "623 kg/m³",
+  "graph.2.value": "1,246 kg",
+  "graph.3.value": "1,000 kg/m³",
+  "graph.note": "Comparing mass and density helps identify floating debris in coastal waters.",
+  "physics.tip": "Objects with a lower density than water will float on the ocean surface.",
+  "mission.title": "Coastal plastic mission",
+  "quiz.answer_key": "Answer key: 1B · 2A · 3C",
+  "quiz.1.question": "What main item do fishers frequently catch in their nets along with fish?",
+  "quiz.1.a": "Seaweed",
+  "quiz.1.b": "Plastic bottles",
+  "quiz.1.c": "Coral reefs",
+  "quiz.1.d": "Freshwater fish",
+  "quiz.2.question": "In ρ = m ÷ V, what does ρ represent?",
+  "quiz.2.a": "Density",
+  "quiz.2.b": "Pressure",
+  "quiz.2.c": "Speed",
+  "quiz.2.d": "Volume",
+  "quiz.3.question": "What helps reduce coastal plastic pollution according to reports?",
+  "quiz.3.a": "Burning all",
+  "quiz.3.b": "Ignoring waste",
+  "quiz.3.c": "Cleanups",
+  "quiz.3.d": "Stopping fish",
+  "lab.title": "Density test: sink or float?",
+  "lab.step_1": "Fill a transparent container with clean water.",
+  "lab.step_2": "Drop a small plastic bottle and a metal spoon into the water.",
+  "lab.step_3": "Observe which object floats and which object sinks.",
+  "lab.question": "Why did the plastic bottle float while the spoon sank?",
+  "badge.name": "Ocean Guardian",
+  "badge.text": "You learned about coastal plastic waste and density.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Density",
+  "glossary.2.term": "Plastic waste",
+  "glossary.3.term": "Ecosystem",
+  "glossary.1.def": "Mass packed into a specific volume.",
+  "glossary.2.def": "Discarded single-use plastics polluting the environment.",
+  "glossary.3.def": "Living organisms and their physical environment.",
+  "label.sources": "Sources",
+  "source.1": "[1] Mongabay, Catching more plastic than fish in Sierra Leone’s coastal Mahera, 19 Nov 2026",
+  "source.2": "[2] UNEP, Marine Plastic Pollution and Coastal Ecosystems, 2026",
+  "source.3": "",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Cover and story: Illustration by ELIOS."
+}

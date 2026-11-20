@@ -1,0 +1,37 @@
+[
+  {
+    "item": "Total litter recorded",
+    "claim": "A study recorded 72,901 pieces of litter weighing 1,246 kilograms across four beaches in Sierra Leone over 11 months.",
+    "source": "1",
+    "pass": true,
+    "note": "The figures match the provided source text."
+  },
+  {
+    "item": "Calculation of Density (ρ)",
+    "claim": "ρ = 1,246 kg / 2 m³ = 623 kg/m³.",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculation follows the formula ρ = m ÷ V with the provided values."
+  },
+  {
+    "item": "Impact of plastic on fishing",
+    "claim": "Plastic waste damages fishing nets and causes delayed catches and financial loss for fishers.",
+    "source": "1",
+    "pass": true,
+    "note": "The source confirms these operational and financial impacts."
+  },
+  {
+    "item": "Indonesian labels translation",
+    "claim": "Bilingual agreement for Indonesian labels and terminology.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "Indonesian content adheres to correct scientific terms like 'massa jenis' (density) and reflects the requested structure."
+  },
+  {
+    "item": "UNEP reporting",
+    "claim": "UNEP works to manage chemicals and waste to reduce pollution.",
+    "source": "2",
+    "pass": true,
+    "note": "Verified by the UNEP website content provided."
+  }
+]
