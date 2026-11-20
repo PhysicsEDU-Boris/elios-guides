@@ -1,0 +1,361 @@
+{
+  "_example": false,
+  "_issue": "10",
+  "_slug": "sierra-leone-coastal-plastic-waste",
+  "_theme": "waste",
+  "_formula": "density",
+  "_keywords": [
+    "plastic",
+    "waste",
+    "pollution",
+    "density"
+  ],
+  "_date": "2026-11-22",
+  "_lang": "id",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "Mongabay",
+      "title": "Catching more plastic than fish in Sierra Leone’s coastal Mahera",
+      "date": "19 Nov 2026",
+      "url": "https://news.mongabay.com/2026/11/catching-more-plastic-than-fish-in-sierra-leones-coastal-mahera/",
+      "primary": false
+    },
+    {
+      "n": 2,
+      "publisher": "UNEP",
+      "title": "Marine Plastic Pollution and Coastal Ecosystems",
+      "date": "2026",
+      "url": "https://www.unep.org/",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Plastic_Pollution_in_Ghana.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Muntaka Chasant / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Plastic_pollution.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Mandeiya flower / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 623,
+  "_graph.2.raw": 1246,
+  "_graph.3.raw": 1000,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Nelayan sering menangkap botol plastik dan kemasan sekali pakai di jaring mereka.",
+      "wrong": {
+        "a": "Rumput laut bersifat alami dan jarang menyumbat jaring.",
+        "c": "Terumbu karang adalah habitat tetap.",
+        "d": "Ikan air tawar hidup di daratan."
+      }
+    },
+    "2": {
+      "why": "ρ = m ÷ V menghitung massa jenis dengan membagi massa dengan volume.",
+      "wrong": {
+        "b": "Tekanan adalah gaya dibagi luas.",
+        "c": "Kecepatan adalah jarak dibagi waktu.",
+        "d": "Volume adalah ruang yang ditempati."
+      }
+    },
+    "3": {
+      "why": "Pembersihan pantai dan pengelolaan sampah membantu mengurangi polusi plastik.",
+      "wrong": {
+        "a": "Membakar plastik mencemari udara.",
+        "b": "Mengabaikan sampah merusak ekosistem.",
+        "d": "Menghentikan penangkapan ikan tidak diperlukan."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "Benda apa yang sering tertangkap nelayan di jaring bersama ikan?",
+      "options": [
+        "Rumput laut",
+        "Botol dan sampah plastik",
+        "Terumbu karang",
+        "Ikan air tawar"
+      ],
+      "answer": 1,
+      "explanation": "Nelayan menangkap botol dan sampah plastik."
+    },
+    {
+      "question": "Dalam ρ = m ÷ V, apakah arti ρ?",
+      "options": [
+        "Massa jenis",
+        "Tekanan",
+        "Kecepatan",
+        "Volume"
+      ],
+      "answer": 0,
+      "explanation": "ρ adalah massa jenis."
+    },
+    {
+      "question": "Apa yang membantu mengurangi polusi plastik pesisir menurut laporan?",
+      "options": [
+        "Membakar semua plastik",
+        "Mengabaikan sampah pantai",
+        "Program pembersihan bersama",
+        "Menghentikan penangkapan ikan"
+      ],
+      "answer": 2,
+      "explanation": "Pembersihan bersama membantu mengurangi polusi."
+    },
+    {
+      "question": "Satuan apa yang mengukur massa jenis dalam fisika?",
+      "options": [
+        "kg/m³",
+        "Joule",
+        "Watt",
+        "Newton"
+      ],
+      "answer": 0,
+      "explanation": "Massa jenis diukur dalam kg/m³."
+    },
+    {
+      "question": "Mengapa botol plastik mengapung di air?",
+      "options": [
+        "Massa jenisnya lebih kecil dari air",
+        "Bersifat magnetis",
+        "Sangat berat",
+        "Menyerap air"
+      ],
+      "answer": 0,
+      "explanation": "Massa jenis lebih kecil membuat benda mengapung."
+    },
+    {
+      "question": "Berapa banyak sampah yang tercatat di empat pantai Sierra Leone?",
+      "options": [
+        "100 kg",
+        "1.246 kg",
+        "5.000 kg",
+        "10.000 kg"
+      ],
+      "answer": 1,
+      "explanation": "1.246 kg sampah tercatat."
+    },
+    {
+      "question": "Apakah arti m dalam persamaan massa jenis?",
+      "options": [
+        "Massa",
+        "Meter",
+        "Menit",
+        "Magnet"
+      ],
+      "answer": 0,
+      "explanation": "m adalah massa."
+    },
+    {
+      "question": "Apakah arti V dalam persamaan massa jenis?",
+      "options": [
+        "Tegangan",
+        "Volume",
+        "Kecepatan",
+        "Viskositas"
+      ],
+      "answer": 1,
+      "explanation": "V adalah volume."
+    },
+    {
+      "question": "Kementerian apa yang meluncurkan inisiatif pembersihan di Sierra Leone?",
+      "options": [
+        "Kementerian Lingkungan Hidup",
+        "Kementerian Keuangan",
+        "Kementerian Pendidikan",
+        "Kementerian Perhubungan"
+      ],
+      "answer": 0,
+      "explanation": "Kementerian Lingkungan Hidup."
+    },
+    {
+      "question": "Mengapa polusi plastik merugikan nelayan?",
+      "options": [
+        "Merusak jaring dan menunda melaut",
+        "Membuat ikan lebih cepat",
+        "Membersihkan air",
+        "Meningkatkan kecepatan perahu"
+      ],
+      "answer": 0,
+      "explanation": "Plastik merusak jaring dan menunda perjalanan melaut."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "wadah transparan berisi air",
+      "botol plastik dan sendok logam",
+      "tangan siswa memasukkan benda"
+    ],
+    "safety": [
+      "tanpa nyala api, tanpa listrik utama",
+      "hanya tangan dalam foto"
+    ],
+    "pass_if": "Foto menunjukkan botol plastik mengapung dan sendok logam tenggelam."
+  },
+  "_per_page": [
+    {
+      "guide.stop_label": "Sampul"
+    },
+    {
+      "guide.stop_label": "Pos 1 · Ceritanya",
+      "section.label": "POS 1 · CERITANYA",
+      "section.xp": "+10 XP UNTUK MEMBACA"
+    },
+    {
+      "guide.stop_label": "Pos 2 · Fisikanya",
+      "section.label": "POS 2 · FISIKANYA",
+      "section.xp": "+20 XP UNTUK MENJAWAB"
+    },
+    {
+      "guide.stop_label": "Pos 3 · Misimu",
+      "section.label": "POS 3 · MISIMU",
+      "section.xp": "+30 XP UNTUK DIRAIH"
+    }
+  ],
+  "_replace": {
+    "stop": [
+      [
+        "STOP",
+        "POS"
+      ]
+    ],
+    "page ref": [
+      [
+        "p.",
+        "hlm. "
+      ]
+    ]
+  },
+  "guide.issue_date": "#10 · 22 NOV 2026",
+  "guide.lang": "ID",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Edisi 10 · 2026",
+  "cover.title": "Sampah plastik di pantai pesisir",
+  "cover.subtitle": "Sampah plastik mengotori pantai dan memenuhi jaring nelayan di Sierra Leone. Pelajari bagaimana massa jenis mengukur polusi plastik di laut.",
+  "cover.image_caption": "Foto arsip · waste",
+  "cover.news_date": "Berita: 19 Nov 2026",
+  "cover.place": "Port Loko, Sierra Leone",
+  "cover.topic": "Sampah dan plastik",
+  "cover.subject": "Fisika · Massa jenis",
+  "quest.1.desc": "Baca tentang polusi plastik pesisir",
+  "quest.2.desc": "Gunakan ρ = m ÷ V untuk bahan",
+  "quest.3.desc": "Kuis, lab mini, dan lencana",
+  "cover.read_time": "12 mnt baca",
+  "cover.level": "SMP · kelas 7–9",
+  "cover.xp_total": "Raih hingga 60 XP",
+  "cover.fun_fact": "Lebih dari 72.000 potong sampah tercatat di empat pantai pesisir.",
+  "story.title": "Lebih banyak plastik daripada ikan",
+  "story.lead": "Di pantai pesisir Sierra Leone, nelayan menarik jaring yang penuh dengan botol plastik dan kantong kemasan alih-alih ikan [1]. Sampah plastik mengganggu pekerjaan nelayan dan menambah biaya operasional [1].",
+  "story.image_caption": "Foto arsip · Plastic pollution",
+  "story.image_credit": "Mandeiya flower / Wikimedia Commons, CC BY-SA 4.0",
+  "stat.1.value": "1.246 kg",
+  "stat.2.value": "72.901",
+  "stat.3.value": "130.000",
+  "stat.1.label": "total berat sampah di empat pantai",
+  "stat.2.label": "jumlah potongan sampah dalam studi",
+  "stat.3.label": "ton metrik sampah plastik tahunan",
+  "story.body_1": "Nelayan Sheriff Kamara menemukan plastik sekali pakai tersangkut di jaringnya hampir setiap minggu [1]. Membersihkan sampah plastik memakan banyak waktu, menyebabkan penangkapan tertunda dan biaya perbaikan [1]. Laporan lingkungan internasional menyoroti bagaimana plastik laut mengancam kehidupan akuatik dan masyarakat pesisir [2].",
+  "story.body_2": "Pedagang ikan perempuan juga menanggung beban finansial ketika pengiriman ikan segar tertunda serta biaya es atau kayu bakar meningkat [1]. Pengelolaan sampah plastik membutuhkan sistem persampahan pesisir dan pembersihan bersama [1] [2].",
+  "timeline.1.date": "Pagi",
+  "timeline.2.date": "Siang",
+  "timeline.3.date": "Sore",
+  "timeline.1.text": "Nelayan berangkat ke laut dengan perahu bermesin bensin.",
+  "timeline.2.text": "Jaring mengangkat botol plastik dan kemasan bersama ikan.",
+  "timeline.3.text": "Pedagang mengolah ikan dan membersihkan jaring dari puing.",
+  "physics.title": "Massa jenis dan sifat bahan",
+  "physics.body_1": "Massa jenis menunjukkan seberapa banyak massa yang dikemas dalam volume tertentu. Bahan yang berbeda memiliki massa jenis berbeda, menentukan apakah bahan mengapung atau tenggelam di air.",
+  "physics.body_2": "Mengukur massa jenis membantu ilmuwan dan kelompok lingkungan menganalisis penumpukan sampah plastik di ekosistem pesisir [2].",
+  "physics.equation": "ρ = m ÷ V",
+  "physics.equation_name": "Persamaan massa jenis",
+  "legend.1.symbol": "ρ",
+  "legend.1.meaning": "massa jenis",
+  "legend.1.unit": "kg/m³",
+  "legend.2.symbol": "m",
+  "legend.2.meaning": "massa",
+  "legend.2.unit": "kg",
+  "legend.3.symbol": "V",
+  "legend.3.meaning": "volume",
+  "legend.3.unit": "m³",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "Kami berasumsi distribusi massa seragam dan pengukuran volume teratur untuk benda padat.",
+  "example.step_1": "m = 1.246 kg, V = 2 m³",
+  "example.step_2": "ρ = 1.246 ÷ 2",
+  "example.step_3": "Pembagian: ρ = 623 kg/m³",
+  "example.result": "ρ = 623 kg/m³",
+  "table.h1": "Bahan",
+  "table.h2": "Massa (kg)",
+  "table.h3": "Massa jenis (kg/m³)",
+  "table.r1c1": "Sampah plastik",
+  "table.r1c2": "1.246",
+  "table.r1c3": "623 kg/m³",
+  "table.r2c1": "Air",
+  "table.r2c2": "1.000",
+  "table.r2c3": "1.000 kg/m³",
+  "table.r3c1": "Balok kayu",
+  "table.r3c2": "600",
+  "table.r3c3": "600 kg/m³",
+  "table.note": "Bahan memiliki massa dan volume.",
+  "graph.title": "Perbandingan massa jenis bahan",
+  "graph.1.label": "Plastik",
+  "graph.2.label": "Sampah",
+  "graph.3.label": "Air",
+  "graph.1.value": "623 kg/m³",
+  "graph.2.value": "1.246 kg",
+  "graph.3.value": "1.000 kg/m³",
+  "graph.note": "Membandingkan massa dan massa jenis membantu mengidentifikasi puing terapung di perairan.",
+  "physics.tip": "Benda dengan massa jenis lebih kecil daripada air akan mengapung di permukaan laut.",
+  "mission.title": "Misi plastik pesisir",
+  "quiz.answer_key": "Kunci: 1B · 2A · 3C",
+  "quiz.1.question": "Benda apa yang sering ditangkap nelayan di jaring bersama ikan?",
+  "quiz.1.a": "Rumput laut",
+  "quiz.1.b": "Botol plastik",
+  "quiz.1.c": "Terumbu karang",
+  "quiz.1.d": "Ikan air tawar",
+  "quiz.2.question": "Dalam ρ = m ÷ V, apakah arti ρ?",
+  "quiz.2.a": "Massa jenis",
+  "quiz.2.b": "Tekanan",
+  "quiz.2.c": "Kecepatan",
+  "quiz.2.d": "Volume",
+  "quiz.3.question": "Apa yang membantu mengurangi polusi plastik pesisir menurut laporan?",
+  "quiz.3.a": "Membakar semua",
+  "quiz.3.b": "Mengabaikan",
+  "quiz.3.c": "Pembersihan",
+  "quiz.3.d": "Hentikan ikan",
+  "lab.title": "Uji massa jenis: mengapung?",
+  "lab.step_1": "Isi wadah transparan dengan air bersih.",
+  "lab.step_2": "Masukkan botol plastik kecil dan sendok logam ke dalam air.",
+  "lab.step_3": "Amati benda mana yang mengapung dan mana yang tenggelam.",
+  "lab.question": "Mengapa botol plastik mengapung sedangkan sendok tenggelam?",
+  "badge.name": "Penjaga Laut",
+  "badge.text": "Anda mempelajari sampah plastik pesisir dan massa jenis.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Massa jenis",
+  "glossary.2.term": "Sampah plastik",
+  "glossary.3.term": "Ekosistem",
+  "glossary.1.def": "Massa yang dikemas dalam volume tertentu.",
+  "glossary.2.def": "Plastik sekali pakai terbuang yang mencemari lingkungan.",
+  "glossary.3.def": "Organisme hidup dan lingkungan fisiknya.",
+  "label.sources": "Sumber",
+  "source.1": "[1] Mongabay, Catching more plastic than fish in Sierra Leone’s coastal Mahera, 19 Nov 2026",
+  "source.2": "[2] UNEP, Marine Plastic Pollution and Coastal Ecosystems, 2026",
+  "source.3": "",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Sampul dan cerita: Ilustrasi oleh ELIOS."
+}
