@@ -1,0 +1,298 @@
+{
+  "_example": false,
+  "_issue": "10",
+  "_slug": "appliances-energy-efficiency",
+  "_theme": "energy",
+  "_formula": "efficiency",
+  "_keywords": [
+    "energy",
+    "climate",
+    "air",
+    "quality"
+  ],
+  "_date": "2026-11-20",
+  "_lang": "en",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "WMO",
+      "title": "Energy and Climate",
+      "date": "2026-11-15",
+      "url": "https://wmo.int/topics/energy",
+      "primary": true
+    },
+    {
+      "n": 2,
+      "publisher": "NASA Earth Observatory",
+      "title": "NASA Earth Observatory",
+      "date": "2026-11-18",
+      "url": "https://science.nasa.gov/earth/earth-observatory",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "Copernicus",
+      "title": "Air Quality",
+      "date": "2026-11-14",
+      "url": "https://atmosphere.copernicus.eu/air-quality",
+      "primary": false
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/2023-05-20_02_LNG_tanker%2C_GULF_ENERGY_-_IMO_7390143.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Gordon Leggett / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Dallas_Energy_Plaza.jpg",
+      "license": "CC BY 3.0",
+      "credit": "Photo: Andreas Praefcke / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 80.0,
+  "_graph.2.raw": 50.0,
+  "_graph.3.raw": 5.0,
+  "_answers": {
+    "1": "a",
+    "2": "b",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Efficiency is useful energy out divided by energy in multiplied by 100%.",
+      "wrong": {
+        "b": "Multiplying by 1,000 is incorrect.",
+        "c": "Energy out is divided by energy in, not vice versa.",
+        "d": "Time is not part of the basic efficiency formula."
+      }
+    },
+    "2": {
+      "why": "LED lamps turn most electrical energy into light rather than waste heat.",
+      "wrong": {
+        "a": "Old bulbs waste most energy as heat.",
+        "c": "Fans convert electrical energy into kinetic energy.",
+        "d": "Heaters turn electricity into thermal energy."
+      }
+    },
+    "3": {
+      "why": "A higher efficiency means less wasted energy and lower electricity use.",
+      "wrong": {
+        "a": "High efficiency does not mean using more energy.",
+        "b": "Efficiency does not make appliances heavier.",
+        "d": "Efficiency reduces waste heat."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "What does efficiency η measure?",
+      "options": [
+        "Useful energy out vs energy in",
+        "Total mass",
+        "Operating voltage",
+        "Current speed"
+      ],
+      "answer": 0,
+      "explanation": "Efficiency compares useful output energy to total input energy."
+    },
+    {
+      "question": "Which appliance wastes the most energy as heat?",
+      "options": [
+        "LED lamp",
+        "Incandescent bulb",
+        "Solar panel",
+        "Wind turbine"
+      ],
+      "answer": 1,
+      "explanation": "Old incandescent bulbs turn electrical energy into heat."
+    },
+    {
+      "question": "What is the unit of efficiency η?",
+      "options": [
+        "Joules",
+        "Percent (%)",
+        "Watts",
+        "Volts"
+      ],
+      "answer": 1,
+      "explanation": "Efficiency is expressed as a percentage or fraction."
+    },
+    {
+      "question": "If energy in is 1,000 J and useful energy out is 800 J, efficiency is…",
+      "options": [
+        "8%",
+        "80%",
+        "800%",
+        "0.8%"
+      ],
+      "answer": 1,
+      "explanation": "800 ÷ 1,000 × 100% = 80.0%."
+    },
+    {
+      "question": "Why do we want higher efficiency appliances?",
+      "options": [
+        "To save energy and reduce waste",
+        "To make them heavier",
+        "To increase heat loss",
+        "To use more power"
+      ],
+      "answer": 0,
+      "explanation": "Higher efficiency saves resources and electricity."
+    },
+    {
+      "question": "What happens to the wasted energy in an appliance?",
+      "options": [
+        "It disappears",
+        "It turns into heat or sound",
+        "It becomes electricity",
+        "It turns into water"
+      ],
+      "answer": 1,
+      "explanation": "Energy is conserved, turning into unwanted heat or sound."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "two different lamps or electronic devices",
+      "power ratings listed on labels",
+      "safe comparison without mains electrical exposure"
+    ],
+    "safety": [
+      "no mains electricity exposure",
+      "only hands in the photo"
+    ],
+    "pass_if": "The photos show appliance labels and the student compares their power ratings safely."
+  },
+  "_per_page": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "_replace": {},
+  "guide.issue_date": "#10 · 15 NOV 2026",
+  "guide.lang": "EN",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Issue 10 · 2026",
+  "cover.title": "How appliances use energy",
+  "cover.subtitle": "Every device turns electricity into useful work and heat. Discover how efficiency measures wasted energy and saves power.",
+  "cover.image_caption": "Archive photo · energy",
+  "cover.news_date": "News: 15 Nov 2026",
+  "cover.place": "Jakarta, Indonesia",
+  "cover.topic": "Energy efficiency",
+  "cover.subject": "Physics · Energy",
+  "quest.1.desc": "Read how appliances use energy",
+  "quest.2.desc": "Use efficiency η = Eout ÷ Ein",
+  "quest.3.desc": "Quiz, mini lab and badge",
+  "cover.read_time": "12 min read",
+  "cover.level": "SMP · grade 7–9",
+  "cover.xp_total": "Earn up to 60 XP",
+  "cover.fun_fact": "An LED lamp achieves 80.0% efficiency, turning most electrical energy into light.",
+  "story.title": "Saving energy in daily life",
+  "story.lead": "Power grids supply electricity to homes and schools every day [1]. Weather forecasts and energy reports remind us to use power wisely [1].",
+  "story.image_caption": "Archive photo · Dallas Energy Plaza",
+  "story.image_credit": "Photo: Andreas Praefcke / Wikimedia Commons, CC BY 3.0",
+  "stat.1.value": "80%",
+  "stat.2.value": "50%",
+  "stat.3.value": "5%",
+  "stat.1.label": "efficiency of an LED lamp",
+  "stat.2.label": "efficiency of an electric fan",
+  "stat.3.label": "efficiency of an incandescent bulb",
+  "story.body_1": "When electricity flows through an appliance, it does useful work like lighting a room or spinning a fan [2]. But not all energy becomes useful work; much of it escapes as heat [3].",
+  "story.body_2": "Choosing high-efficiency devices reduces electricity demand on power plants [1]. This lowers fuel use and greenhouse gas emissions while saving money for families [3].",
+  "timeline.1.date": "Power In",
+  "timeline.2.date": "Conversion",
+  "timeline.3.date": "Output",
+  "timeline.1.text": "Electrical energy enters the appliance from the grid [1].",
+  "timeline.2.text": "The device converts electricity into motion, light, and heat [2].",
+  "timeline.3.text": "Useful energy performs the task while excess heat escapes [3].",
+  "physics.title": "Energy efficiency equation",
+  "physics.body_1": "Efficiency compares how much useful energy comes out of a device to how much total energy went in [1]. Because some energy always turns into heat, useful output is never more than input [3].",
+  "physics.body_2": "We calculate efficiency as a percentage. A higher percentage means less wasted energy and better performance for the same power [2].",
+  "physics.equation": "η = Eout ÷ Ein × 100%",
+  "physics.equation_name": "Efficiency formula",
+  "legend.1.symbol": "η",
+  "legend.1.meaning": "efficiency",
+  "legend.1.unit": "%",
+  "legend.2.symbol": "Eout",
+  "legend.2.meaning": "useful energy out",
+  "legend.2.unit": "joule (J)",
+  "legend.3.symbol": "Ein",
+  "legend.3.meaning": "energy in",
+  "legend.3.unit": "joule (J)",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "We assume steady operation and measure energy input over a fixed time interval [1].",
+  "example.step_1": "Ein = 1,000 J of electrical energy",
+  "example.step_2": "Eout = 800 J useful light energy",
+  "example.step_3": "η = 800 ÷ 1,000 × 100%",
+  "example.result": "η = 80.0%",
+  "table.h1": "Appliance",
+  "table.h2": "Energy In (J)",
+  "table.h3": "Efficiency η (%)",
+  "table.r1c1": "LED lamp",
+  "table.r1c2": "1,000",
+  "table.r1c3": "80.0%",
+  "table.r2c1": "Electric fan",
+  "table.r2c2": "1,000",
+  "table.r2c3": "50.0%",
+  "table.r3c1": "Incandescent bulb",
+  "table.r3c2": "1,000",
+  "table.r3c3": "5.0%",
+  "table.note": "Same energy in, very different useful outputs.",
+  "graph.title": "Efficiency of different appliances",
+  "graph.1.label": "LED",
+  "graph.2.label": "Fan",
+  "graph.3.label": "Bulb",
+  "graph.1.value": "80.0%",
+  "graph.2.value": "50.0%",
+  "graph.3.value": "5.0%",
+  "graph.note": "LED lamps achieve high efficiency compared to traditional bulbs.",
+  "physics.tip": "Higher efficiency means more useful work and less wasted heat energy.",
+  "mission.title": "Energy efficiency mission",
+  "quiz.answer_key": "Answer key: 1A · 2B · 3C",
+  "quiz.1.question": "What does efficiency η compare?",
+  "quiz.1.a": "Energy out vs energy in",
+  "quiz.1.b": "Total mass and volume",
+  "quiz.1.c": "Voltage and current",
+  "quiz.1.d": "Time and distance",
+  "quiz.2.question": "Which device converts most energy into light efficiently?",
+  "quiz.2.a": "Incandescent bulb",
+  "quiz.2.b": "LED lamp",
+  "quiz.2.c": "Electric heater",
+  "quiz.2.d": "Toaster",
+  "quiz.3.question": "Why is high efficiency important for appliances?",
+  "quiz.3.a": "It makes devices heavier",
+  "quiz.3.b": "It increases heat waste",
+  "quiz.3.c": "It saves power and cuts waste",
+  "quiz.3.d": "It slows down energy flow",
+  "lab.title": "Mini Lab · Appliance Power Check",
+  "lab.step_1": "Look at labels or manuals of two household electronic devices [1].",
+  "lab.step_2": "Note their power ratings and how they convert energy [2].",
+  "lab.step_3": "Take a photo of your notes showing safe inspection of device labels [3].",
+  "lab.question": "Which device uses more power, and what energy forms does it produce?",
+  "badge.name": "Energy Expert",
+  "badge.text": "Mastered energy efficiency and appliance power ratings.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Efficiency",
+  "glossary.1.def": "The ratio of useful output energy to total input energy.",
+  "glossary.2.term": "Energy",
+  "glossary.2.def": "The capacity to do work or produce heat.",
+  "glossary.3.term": "Power",
+  "glossary.3.def": "The rate at which energy is used or transferred.",
+  "label.sources": "Sources & Notes",
+  "source.1": "[1] WMO, Energy and Climate, 2026. https://wmo.int/topics/energy",
+  "source.2": "[2] NASA, Earth Observatory, 2026. https://science.nasa.gov/earth/earth-observatory",
+  "source.3": "[3] Copernicus, Air Quality, 2026. https://atmosphere.copernicus.eu/air-quality",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Cover illustration by ELIOS; story illustration by ELIOS."
+}

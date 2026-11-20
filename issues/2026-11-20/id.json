@@ -1,0 +1,325 @@
+{
+  "_example": false,
+  "_issue": "10",
+  "_slug": "appliances-energy-efficiency",
+  "_theme": "energy",
+  "_formula": "efficiency",
+  "_keywords": [
+    "energy",
+    "climate",
+    "air",
+    "quality"
+  ],
+  "_date": "2026-11-20",
+  "_lang": "id",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "WMO",
+      "title": "Energy and Climate",
+      "date": "2026-11-15",
+      "url": "https://wmo.int/topics/energy",
+      "primary": true
+    },
+    {
+      "n": 2,
+      "publisher": "NASA Earth Observatory",
+      "title": "NASA Earth Observatory",
+      "date": "2026-11-18",
+      "url": "https://science.nasa.gov/earth/earth-observatory",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "Copernicus",
+      "title": "Air Quality",
+      "date": "2026-11-14",
+      "url": "https://atmosphere.copernicus.eu/air-quality",
+      "primary": false
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/2023-05-20_02_LNG_tanker%2C_GULF_ENERGY_-_IMO_7390143.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Gordon Leggett / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Dallas_Energy_Plaza.jpg",
+      "license": "CC BY 3.0",
+      "credit": "Photo: Andreas Praefcke / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 80.0,
+  "_graph.2.raw": 50.0,
+  "_graph.3.raw": 5.0,
+  "_answers": {
+    "1": "a",
+    "2": "b",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Efisiensi adalah energi berguna keluar dibagi energi masuk dikali 100%.",
+      "wrong": {
+        "b": "Mengalikan dengan 1.000 adalah salah.",
+        "c": "Energi keluar dibagi energi masuk, bukan sebaliknya.",
+        "d": "Waktu bukan bagian dari rumus efisiensi."
+      }
+    },
+    "2": {
+      "why": "Lampu LED mengubah sebagian besar energi listrik menjadi cahaya bukan panas.",
+      "wrong": {
+        "a": "Lampu pijar lama membuang banyak energi sebagai panas.",
+        "c": "Kipas mengubah energi listrik menjadi gerak.",
+        "d": "Pemanas mengubah listrik menjadi kalor."
+      }
+    },
+    "3": {
+      "why": "Efisiensi tinggi berarti sedikit energi terbuang dan hemat listrik.",
+      "wrong": {
+        "a": "Efisiensi tinggi tidak berarti boros energi.",
+        "b": "Efisiensi tidak membuat alat lebih berat.",
+        "d": "Efisiensi mengurangi panas terbuang."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "Apa yang diukur oleh efisiensi η?",
+      "options": [
+        "Energi berguna keluar vs energi masuk",
+        "Massa total",
+        "Tegangan kerja",
+        "Kecepatan arus"
+      ],
+      "answer": 0,
+      "explanation": "Efisiensi membandingkan energi output berguna dengan energi input total."
+    },
+    {
+      "question": "Alat manakah yang paling banyak membuang energi sebagai panas?",
+      "options": [
+        "Lampu LED",
+        "Lampu pijar",
+        "Panel surya",
+        "Turbin angin"
+      ],
+      "answer": 1,
+      "explanation": "Lampu pijar lama mengubah energi listrik menjadi panas."
+    },
+    {
+      "question": "Apa satuan dari efisiensi η?",
+      "options": [
+        "Joule",
+        "Persen (%)",
+        "Watt",
+        "Volt"
+      ],
+      "answer": 1,
+      "explanation": "Efisiensi dinyatakan dalam bentuk persentase."
+    },
+    {
+      "question": "Jika energi masuk 1.000 J dan energi berguna keluar 800 J, efisiensinya…",
+      "options": [
+        "8%",
+        "80%",
+        "800%",
+        "0,8%"
+      ],
+      "answer": 1,
+      "explanation": "800 ÷ 1.000 × 100% = 80,0%."
+    },
+    {
+      "question": "Mengapa kita memilih alat berefisiensi tinggi?",
+      "options": [
+        "Untuk menghemat energi dan mengurangi limbah",
+        "Agar alat lebih berat",
+        "Untuk menambah panas",
+        "Untuk memakai daya besar"
+      ],
+      "answer": 0,
+      "explanation": "Efisiensi tinggi menghemat sumber daya dan listrik."
+    },
+    {
+      "question": "Apa yang terjadi pada energi yang terbuang pada alat?",
+      "options": [
+        "Hilang lenyap",
+        "Berubah menjadi panas atau bunyi",
+        "Menjadi listrik",
+        "Menjadi air"
+      ],
+      "answer": 1,
+      "explanation": "Energi kekal, berubah menjadi panas atau bunyi yang tidak diinginkan."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "dua perangkat elektronik berbeda",
+      "label daya listrik pada perangkat",
+      "pemeriksaan aman tanpa paparan listrik utama"
+    ],
+    "safety": [
+      "tanpa menyentuh stopkontak atau listrik utama",
+      "hanya tangan dalam foto"
+    ],
+    "pass_if": "Foto menunjukkan label daya alat dan siswa membandingkan dayanya dengan aman."
+  },
+  "_per_page": [
+    {
+      "guide.stop_label": "Sampul"
+    },
+    {
+      "guide.stop_label": "Pos 1 · Ceritanya",
+      "section.label": "POS 1 · CERITANYA",
+      "section.xp": "+10 XP UNTUK MEMBACA"
+    },
+    {
+      "guide.stop_label": "Pos 2 · Fisikanya",
+      "section.label": "POS 2 · FISIKANYA",
+      "section.xp": "+20 XP UNTUK MENJAWAB"
+    },
+    {
+      "guide.stop_label": "Pos 3 · Misimu",
+      "section.label": "POS 3 · MISIMU",
+      "section.xp": "+30 XP UNTUK DIRAIH"
+    }
+  ],
+  "_replace": {
+    "stop": [
+      [
+        "STOP",
+        "POS"
+      ]
+    ],
+    "page ref": [
+      [
+        "p.",
+        "hlm. "
+      ]
+    ]
+  },
+  "guide.issue_date": "#10 · 15 NOV 2026",
+  "guide.lang": "ID",
+  "guide.xp": "+60 XP",
+  "footer.credit": "Panduan ELIOS · Edisi 10 · 2026",
+  "cover.title": "Cara alat listrik gunakan energi",
+  "cover.subtitle": "Setiap alat ubah listrik jadi kerja berguna dan panas. Pelajari cara efisiensi ukur energi terbuang dan hemat daya.",
+  "cover.image_caption": "Foto arsip · energy",
+  "cover.news_date": "Berita: 15 Nov 2026",
+  "cover.place": "Jakarta, Indonesia",
+  "cover.topic": "Efisiensi energi",
+  "cover.subject": "Fisika · Energi",
+  "quest.1.desc": "Baca cara alat gunakan energi",
+  "quest.2.desc": "Gunakan efisiensi η = Eout ÷ Ein",
+  "quest.3.desc": "Kuis, lab mini, dan lencana",
+  "cover.read_time": "12 mnt baca",
+  "cover.level": "SMP · kelas 7–9",
+  "cover.xp_total": "Raih hingga 60 XP",
+  "cover.fun_fact": "Lampu LED mencapai efisiensi 80,0%, mengubah sebagian besar listrik jadi cahaya.",
+  "story.title": "Hemat energi dalam keseharian",
+  "story.lead": "Jaringan listrik pasok daya ke rumah dan sekolah tiap hari [1]. Prakiraan cuaca dan laporan energi ingatkan kita guna daya bijak [1].",
+  "story.image_caption": "Foto arsip · Dallas Energy Plaza",
+  "story.image_credit": "Photo: Andreas Praefcke / Wikimedia Commons, CC BY 3.0",
+  "stat.1.value": "80,0%",
+  "stat.2.value": "50,0%",
+  "stat.3.value": "5,0%",
+  "stat.1.label": "efisiensi lampu LED",
+  "stat.2.label": "efisiensi kipas angin listrik",
+  "stat.3.label": "efisiensi lampu pijar",
+  "story.body_1": "Saat listrik mengalir lewat alat, alat buat kerja berguna seperti terangi ruangan atau putar kipas [2]. Namun tak semua energi jadi kerja berguna; banyak lepas sebagai panas [3].",
+  "story.body_2": "Memilih perangkat hemat daya kurangi permintaan listrik di pembangkit [1]. Ini tekan bahan bakar dan emisi gas rumah kaca sekaligus hemat biaya keluarga [3].",
+  "timeline.1.date": "Daya Masuk",
+  "timeline.2.date": "Perubahan",
+  "timeline.3.date": "Hasil Guna",
+  "timeline.1.text": "Energi listrik masuk ke perangkat dari jaringan [1].",
+  "timeline.2.text": "Perangkat ubah listrik jadi gerak, cahaya, dan panas [2].",
+  "timeline.3.text": "Energi berguna jalankan tugas sementara panas sisa lepas [3].",
+  "physics.title": "Persamaan efisiensi energi",
+  "physics.body_1": "Efisiensi bandingkan seberapa besar energi berguna keluar perangkat dengan total energi masuk [1]. Karena sebagian energi selalu jadi panas, hasil tak pernah lebih dari masukan [3].",
+  "physics.body_2": "Kita hitung efisiensi sebagai persentase. Persentase lebih tinggi berarti energi terbuang lebih sedikit dan kinerja lebih baik untuk daya sama [2].",
+  "physics.equation": "η = Eout ÷ Ein × 100%",
+  "physics.equation_name": "Rumus efisiensi",
+  "legend.1.symbol": "η",
+  "legend.1.meaning": "efisiensi",
+  "legend.1.unit": "%",
+  "legend.2.symbol": "Eout",
+  "legend.2.meaning": "energi berguna keluar",
+  "legend.2.unit": "joule (J)",
+  "legend.3.symbol": "Ein",
+  "legend.3.meaning": "energi masuk",
+  "legend.3.unit": "joule (J)",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "Kami asumsikan operasi stabil dan ukur masukan energi pada selang waktu tetap [1].",
+  "example.step_1": "Ein = 1.000 J energi listrik",
+  "example.step_2": "Eout = 800 J energi cahaya berguna",
+  "example.step_3": "η = 800 ÷ 1.000 × 100%",
+  "example.result": "η = 80,0%",
+  "table.h1": "Perangkat",
+  "table.h2": "Energi Masuk (J)",
+  "table.h3": "Efisiensi η (%)",
+  "table.r1c1": "Lampu LED",
+  "table.r1c2": "1.000",
+  "table.r1c3": "80,0%",
+  "table.r2c1": "Kipas angin",
+  "table.r2c2": "1.000",
+  "table.r2c3": "50,0%",
+  "table.r3c1": "Lampu pijar",
+  "table.r3c2": "1.000",
+  "table.r3c3": "5,0%",
+  "table.note": "Energi masuk sama, hasil berguna sangat beda.",
+  "graph.title": "Efisiensi berbagai perangkat",
+  "graph.1.label": "LED",
+  "graph.2.label": "Kipas",
+  "graph.3.label": "Pijar",
+  "graph.1.value": "80,0%",
+  "graph.2.value": "50,0%",
+  "graph.3.value": "5,0%",
+  "graph.note": "Lampu LED capai efisiensi tinggi dibanding lampu tradisional.",
+  "physics.tip": "Efisiensi tinggi berarti kerja berguna lebih banyak dan panas terbuang lebih sedikit.",
+  "mission.title": "Misi efisiensi energi",
+  "quiz.answer_key": "Kunci: 1A · 2B · 3C",
+  "quiz.1.question": "Apa yang dibandingkan oleh efisiensi η?",
+  "quiz.1.a": "Energi keluar vs energi masuk",
+  "quiz.1.b": "Massa dan volume total",
+  "quiz.1.c": "Tegangan dan arus",
+  "quiz.1.d": "Waktu dan jarak",
+  "quiz.2.question": "Perangkat mana yang paling efisien ubah energi jadi cahaya?",
+  "quiz.2.a": "Lampu pijar",
+  "quiz.2.b": "Lampu LED",
+  "quiz.2.c": "Pemanas listrik",
+  "quiz.2.d": "Pemanggang roti",
+  "quiz.3.question": "Mengapa efisiensi tinggi penting bagi peralatan?",
+  "quiz.3.a": "Membuat perangkat berat",
+  "quiz.3.b": "Meningkatkan limbah panas",
+  "quiz.3.c": "Hemat listrik, kurangi limbah",
+  "quiz.3.d": "Memperlambat arus energi",
+  "lab.title": "Lab Mini · Cek Daya Perangkat",
+  "lab.step_1": "Perhatikan label dua perangkat elektronik rumah [1].",
+  "lab.step_2": "Catat besar daya watt dan cara ubah energi [2].",
+  "lab.step_3": "Foto catatan pemeriksaan label perangkat secara aman [3].",
+  "lab.question": "Perangkat mana gunakan daya lebih besar dan hasilkan energi apa?",
+  "badge.name": "Ahli Energi",
+  "badge.text": "Menguasai efisiensi energi dan daya perangkat listrik.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Efisiensi",
+  "glossary.1.def": "Rasio energi output berguna terhadap total energi input.",
+  "glossary.2.term": "Energi",
+  "glossary.2.def": "Kemampuan untuk melakukan kerja atau menghasilkan panas.",
+  "glossary.3.term": "Daya",
+  "glossary.3.def": "Laju energi yang digunakan atau ditransfer.",
+  "label.sources": "Sumber & Catatan",
+  "source.1": "[1] WMO, Energy and Climate, 2026. https://wmo.int/topics/energy",
+  "source.2": "[2] NASA, Earth Observatory, 2026. https://science.nasa.gov/earth/earth-observatory",
+  "source.3": "[3] Copernicus, Air Quality, 2026. https://atmosphere.copernicus.eu/air-quality",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Ilustrasi sampul oleh ELIOS; ilustrasi cerita oleh ELIOS."
+}

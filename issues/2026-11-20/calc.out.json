@@ -1,0 +1,9 @@
+{
+  "Ein_J": 1000,
+  "Eout_LED lamp": 800,
+  "eta_LED lamp": 80.0,
+  "Eout_Electric fan": 500,
+  "eta_Electric fan": 50.0,
+  "Eout_Incandescent bulb": 50,
+  "eta_Incandescent bulb": 5.0
+}

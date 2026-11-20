@@ -1,0 +1,51 @@
+[
+  {
+    "item": "Efficiency of LED lamp",
+    "claim": "80.0% efficiency of an LED lamp",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculation: 800 J / 1,000 J = 0.8 or 80.0%."
+  },
+  {
+    "item": "Efficiency of electric fan",
+    "claim": "50.0% efficiency of an electric fan",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculation: 500 J / 1,000 J = 0.5 or 50.0%."
+  },
+  {
+    "item": "Efficiency of incandescent bulb",
+    "claim": "5.0% efficiency of an incandescent bulb",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculation: 50 J / 1,000 J = 0.05 or 5.0%."
+  },
+  {
+    "item": "Efficiency formula",
+    "claim": "η = Eout ÷ Ein × 100%",
+    "source": "1",
+    "pass": true,
+    "note": "Formula is consistent with standard energy physics definitions described in the context."
+  },
+  {
+    "item": "Energy loss as heat",
+    "claim": "Appliances lose efficiency or curtail output when energy turns into heat.",
+    "source": "1",
+    "pass": true,
+    "note": "WMO states thermal power plants lose efficiency when cooling, confirming heat waste as a factor in efficiency."
+  },
+  {
+    "item": "News date verification",
+    "claim": "The news date is 15 Nov 2026.",
+    "source": "1",
+    "pass": false,
+    "note": "Source 1 mentions 'Energy and Climate' dated 2026-11-15 but does not label it as 'News' for this specific guide."
+  },
+  {
+    "item": "Indonesian labels",
+    "claim": "Indonesian labels use decimal commas and correct month abbreviations.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "The labels conform to the requested formatting."
+  }
+]
