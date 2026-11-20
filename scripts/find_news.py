@@ -107,6 +107,19 @@ def find(day, used, fetch=get):
     return out
 
 
+def source_errors(en, news_path):
+    """Source 1 must be one of the opened `news` articles; no candidates file means no rule (resync, old issues)."""
+    try:
+        news = json.loads(Path(news_path).read_text(encoding="utf-8")).get("news") or []
+    except (OSError, ValueError):
+        return []
+    first = norm_url(((en.get("_sources") or [{}])[0] or {}).get("url"))
+    if not news or first in {norm_url(c["url"]) for c in news}:
+        return []
+    listed = "; ".join(f"{c['url']} ({c['date']}: {c['title'][:60]})" for c in news)
+    return [f"source 1 {first or 'is missing'} is not a news candidate; use one of: {listed}"]
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("date")
@@ -121,8 +134,10 @@ def main(argv=None):
     out = find(date.fromisoformat(a.date), used)
     Path(a.out).write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"{len(out['news'])} news and {len(out['primary'])} primary candidates")
-    for c in out["news"] + out["primary"]:
-        print(f"  {c['date']} {c['publisher']}: {c['title'][:90]}")
+    for c in out["news"]:  # the workflow puts these "- " lines into the writer's prompt
+        print(f"- {c['date']} {c['publisher']}: {c['title'][:90]} {c['url']}")
+    for c in out["primary"]:
+        print(f"  primary: {c['date']} {c['publisher']}: {c['title'][:90]} {c['url']}")
     return 0 if out["news"] else 1
 
 

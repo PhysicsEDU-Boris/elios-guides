@@ -112,7 +112,11 @@ jobs:
 
       - name: Find recent news articles
         # Real, dated, already-opened articles: the writer picks its event here instead of guessing topic pages.
-        run: python scripts/find_news.py "$DATE" --manifest .gemini/published-manifest.json --out .gemini/news-candidates.json || true
+        id: news
+        run: |
+          python scripts/find_news.py "$DATE" --manifest .gemini/published-manifest.json --out .gemini/news-candidates.json > "$RUNNER_TEMP/news.txt" || true
+          cat "$RUNNER_TEMP/news.txt"
+          { echo "list<<ELIOS_EOF"; grep '^- ' "$RUNNER_TEMP/news.txt" || true; echo "ELIOS_EOF"; } >> "$GITHUB_OUTPUT"
 
       - name: Restore the failed issue for repair
         if: needs.prep.outputs.resume == 'true'
@@ -146,7 +150,10 @@ jobs:
           prompt: >-
             Follow GEMINI.md exactly. Today is ${{ needs.prep.outputs.date }} (Asia/Jakarta).
             If .gemini/remedial-brief.json exists, today is a remedial day: follow the Remedial mode section.
-            Read .gemini/news-candidates.json first: source 1 must be one of its `news` articles (url, title
+            Today's news articles, already opened by a script (date, publisher, title, url):
+            ${{ steps.news.outputs.list }}
+            Pick ONE of these as the event. Do not search for a different event; validate.py rejects
+            any source 1 that is not on this list. Read .gemini/news-candidates.json for its text: source 1 is that article (url, title
             and date copied exactly; cover.news_date is that date), and write the story from its `text`.
             Use a `primary` entry there, or one agency page you open, as the primary source.
             Write issues/${{ needs.prep.outputs.date }}/en.json, id.json, calc.py and sources.md.
@@ -245,7 +252,7 @@ jobs:
         id: check1
         run: |
           set +e
-          python scripts/validate.py "issues/$DATE" --manifest .gemini/published-manifest.json --check-sources > "$RUNNER_TEMP/check1.txt" 2>&1
+          python scripts/validate.py "issues/$DATE" --manifest .gemini/published-manifest.json --check-sources --news .gemini/news-candidates.json > "$RUNNER_TEMP/check1.txt" 2>&1
           code=$?
           set -e
           cat "$RUNNER_TEMP/check1.txt"
@@ -330,7 +337,7 @@ jobs:
         if: steps.repair.outcome != 'skipped'
         run: |
           set +e
-          python scripts/validate.py "issues/$DATE" --manifest .gemini/published-manifest.json --check-sources > "$RUNNER_TEMP/check2.txt" 2>&1
+          python scripts/validate.py "issues/$DATE" --manifest .gemini/published-manifest.json --check-sources --news .gemini/news-candidates.json > "$RUNNER_TEMP/check2.txt" 2>&1
           code=$?
           set -e
           cat "$RUNNER_TEMP/check2.txt"
@@ -434,7 +441,7 @@ jobs:
         run: |
           set +e
           # --check-sources opens every source url (Gemini's fact-check once approved invented ones).
-          python scripts/validate.py "issues/$DATE" --manifest .gemini/published-manifest.json --check-sources > "$RUNNER_TEMP/validate.txt" 2>&1
+          python scripts/validate.py "issues/$DATE" --manifest .gemini/published-manifest.json --check-sources --news .gemini/news-candidates.json > "$RUNNER_TEMP/validate.txt" 2>&1
           code=$?
           set -e
           cat "$RUNNER_TEMP/validate.txt"

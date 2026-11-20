@@ -32,3 +32,13 @@ def test_find_keeps_recent_on_topic_unused_articles_with_text(monkeypatch):
     assert [c["url"] for c in out["news"]] == ["https://n.id/banjir"]  # not off-topic, old or already used
     c = out["news"][0]
     assert c["date"] == "2026-11-19" and "1.2 m" in c["text"] and out["primary"] == []
+
+
+def test_source_errors_only_when_source_1_is_not_a_candidate(tmp_path):
+    news = tmp_path / "news.json"
+    news.write_text('{"news": [{"url": "https://www.n.id/banjir/", "date": "2026-11-19", "title": "Banjir"}]}')
+    ok = {"_sources": [{"url": "https://n.id/banjir"}]}
+    bad = {"_sources": [{"url": "https://usgs.gov/water"}]}
+    assert find_news.source_errors(ok, news) == []
+    assert "https://www.n.id/banjir/" in find_news.source_errors(bad, news)[0]
+    assert find_news.source_errors(bad, tmp_path / "none.json") == []  # resync has no candidates file
