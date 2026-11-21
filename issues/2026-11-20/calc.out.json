@@ -1,0 +1,10 @@
+{
+  "V_m3": 50,
+  "m_clean": 0.06,
+  "m_light": 0.075,
+  "m_heavy": 0.135,
+  "dens_clean": 0.0012,
+  "dens_light": 0.0015,
+  "dens_heavy": 0.0027,
+  "dens_soot": 0.0003
+}
