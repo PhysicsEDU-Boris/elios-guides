@@ -1,0 +1,11 @@
+{
+  "m_kg": 1,
+  "dT_example": 5,
+  "Q_J": 21000,
+  "c_water": 4200,
+  "dT_water": 5.0,
+  "c_concrete": 880,
+  "dT_concrete": 23.86,
+  "c_asphalt": 920,
+  "dT_asphalt": 22.83
+}

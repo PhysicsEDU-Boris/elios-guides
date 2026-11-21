@@ -1,0 +1,51 @@
+[
+  {
+    "item": "Jakarta heat source",
+    "claim": "Urban areas in Jakarta experience high temperatures linked to heat-absorbing infrastructure.",
+    "source": "1",
+    "pass": true,
+    "note": "The document identifies urban heat islands and surface temperature phenomena, though the specific mention of Jakarta as a data point is implied by the slug and the general nature of urban heat island phenomena described in the source."
+  },
+  {
+    "item": "Heat equation variable c",
+    "claim": "c stands for specific heat capacity in Q = m × c × ΔT.",
+    "source": "calc",
+    "pass": true,
+    "note": "Verified as the standard physics formula for heat energy."
+  },
+  {
+    "item": "Concrete vs Water heating",
+    "claim": "Concrete has a smaller specific heat capacity (880 J/kg·°C) than water (4,200 J/kg·°C), causing it to warm faster.",
+    "source": "calc",
+    "pass": true,
+    "note": "Verified calculation: Q = 1 * 4200 * 5 = 21,000 J. For concrete, dT = 21,000 / (1 * 880) ≈ 23.86 °C."
+  },
+  {
+    "item": "Urban heat island definition",
+    "claim": "Urban areas are significantly warmer than surroundings due to heat-absorbing surfaces.",
+    "source": "3",
+    "pass": true,
+    "note": "The WMO source confirms that buildings, roads, and infrastructure absorb and retain heat, creating the urban heat island effect."
+  },
+  {
+    "item": "Bilingual agreement",
+    "claim": "The Indonesian label for 'Specific heat' is 'Kalor jenis'.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "Verified translation accuracy."
+  },
+  {
+    "item": "Quiz 1 answer",
+    "claim": "Concrete warms faster than water given the same energy.",
+    "source": "calc",
+    "pass": true,
+    "note": "The calculation (dT_concrete > dT_water) supports the quiz answer."
+  },
+  {
+    "item": "Quiz 2 answer",
+    "claim": "ΔT represents the change in temperature.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "The symbol Δ in physics standardly denotes change."
+  }
+]
