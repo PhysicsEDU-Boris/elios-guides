@@ -1,0 +1,339 @@
+{
+  "_issue": "11",
+  "_slug": "japan-offshore-wind-power",
+  "_theme": "energy",
+  "_formula": "power",
+  "_keywords": [
+    "wind",
+    "offshore",
+    "energy",
+    "angin",
+    "energi"
+  ],
+  "_date": "2026-11-21",
+  "_lang": "id",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "Mongabay",
+      "title": "Japan looks to offshore wind to boost energy security, but hurdles remain",
+      "date": "20 Nov 2026",
+      "url": "https://news.mongabay.com/2026/11/japan-looks-to-offshore-wind-to-boost-energy-security-but-hurdles-remain/",
+      "primary": false
+    },
+    {
+      "n": 2,
+      "publisher": "WMO",
+      "title": "Energy and climate",
+      "date": "1 Nov 2026",
+      "url": "https://wmo.int/topics/energy",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "Mongabay",
+      "title": "Floating wind is building ‘A lot of momentum’ toward commercialization",
+      "date": "20 Nov 2026",
+      "url": "https://news.mongabay.com/2026/11/floating-wind-is-building-a-lot-of-momentum-toward-commercialization/",
+      "primary": false
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Power_County_Wind_Farm_002.jpg",
+      "license": "Public domain",
+      "credit": "ENERGY.GOV / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Wind_turbines%2C_Wind_energy%2C_Mirny%2C_Crimea.jpg",
+      "license": "CC BY 4.0",
+      "credit": "Vyacheslav Argenberg / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 1.5,
+  "_graph.2.raw": 5.0,
+  "_graph.3.raw": 16.8,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Daya adalah energi yang ditransfer dibagi dengan waktu.",
+      "wrong": {
+        "a": "Energi sama dengan daya kali waktu.",
+        "c": "Gaya kali jarak adalah usaha.",
+        "d": "Volt kali ampere adalah daya listrik."
+      }
+    },
+    "2": {
+      "why": "Watt adalah satuan untuk mengukur daya listrik.",
+      "wrong": {
+        "b": "Joule mengukur energi.",
+        "c": "Newton mengukur gaya.",
+        "d": "Sekon mengukur waktu."
+      }
+    },
+    "3": {
+      "why": "Turbin terapung dapat dipasang di perairan laut yang dalam.",
+      "wrong": {
+        "a": "Turbin dasar butuh air dangkal.",
+        "b": "Kecepatan angin bervariasi.",
+        "d": "Turbin tetap butuh angin."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "Rumus apa yang digunakan untuk menghitung daya P?",
+      "options": [
+        "P = W ÷ t",
+        "P = m × a",
+        "P = F × s",
+        "P = ρ × V"
+      ],
+      "answer": 0,
+      "explanation": "Daya adalah energi atau usaha dibagi waktu."
+    },
+    {
+      "question": "Apa satuan internasional untuk daya?",
+      "options": [
+        "Joule",
+        "Watt",
+        "Newton",
+        "Volt"
+      ],
+      "answer": 1,
+      "explanation": "Daya diukur dalam watt (W)."
+    },
+    {
+      "question": "Jika turbin menghasilkan 15.000.000 J dalam 10 detik, dayanya adalah...",
+      "options": [
+        "150 W",
+        "1.500 W",
+        "150.000 W",
+        "1.500.000 W"
+      ],
+      "answer": 3,
+      "explanation": "15.000.000 ÷ 10 = 1.500.000 watt (1,5 MW)."
+    },
+    {
+      "question": "Mengapa Jepang menggunakan turbin angin terapung?",
+      "options": [
+        "Laut dalam di dekat pantai curam",
+        "Tidak ada angin di darat",
+        "Perawatan lebih murah",
+        "Stok ikan lebih baik"
+      ],
+      "answer": 0,
+      "explanation": "Rak tinjau benua yang sempit membuat turbin terapung sangat penting di air dalam."
+    },
+    {
+      "question": "Apa arti W dalam rumus P = W ÷ t?",
+      "options": [
+        "Berat",
+        "Usaha atau energi",
+        "Kecepatan angin",
+        "Lebar"
+      ],
+      "answer": 1,
+      "explanation": "W adalah usaha atau energi dalam satuan joule."
+    },
+    {
+      "question": "Berapa tingkat kemandirian energi Jepang pada tahun fiskal 2024?",
+      "options": [
+        "1,5%",
+        "16,4%",
+        "50%",
+        "90%"
+      ],
+      "answer": 1,
+      "explanation": "Kemandirian energi Jepang adalah 16,4% pada tahun fiskal 2024."
+    }
+  ],
+  "_lab_source": null,
+  "_lab_rubric": {
+    "must_show": [
+      "kincir angin kertas atau kipas",
+      "penghitung waktu 10 detik",
+      "jumlah putaran kincir"
+    ],
+    "safety": [
+      "tanpa nyala api, tanpa listrik PLN",
+      "hanya tangan dalam foto"
+    ],
+    "pass_if": "Foto menunjukkan kincir berputar dan pengukuran waktu dengan jam atau ponsel."
+  },
+  "_per_page": [
+    {
+      "guide.stop_label": "Sampul"
+    },
+    {
+      "guide.stop_label": "Pos 1 · Ceritanya",
+      "section.label": "POS 1 · CERITANYA",
+      "section.xp": "+10 XP UNTUK MEMBACA"
+    },
+    {
+      "guide.stop_label": "Pos 2 · Fisikanya",
+      "section.label": "POS 2 · FISIKANYA",
+      "section.xp": "+20 XP UNTUK MENJAWAB"
+    },
+    {
+      "guide.stop_label": "Pos 3 · Misimu",
+      "section.label": "POS 3 · MISIMU",
+      "section.xp": "+30 XP UNTUK DIRAIH"
+    }
+  ],
+  "_replace": {
+    "stop": [
+      [
+        "STOP",
+        "POS"
+      ]
+    ],
+    "page ref": [
+      [
+        "p.",
+        "hlm. "
+      ]
+    ]
+  },
+  "guide.issue_date": "#11 · 21 NOV 2026",
+  "guide.lang": "ID",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Edisi 11 · 21 Nov 2026",
+  "cover.title": "Cara turbin angin hasilkan daya",
+  "cover.subtitle": "Jepang beralih ke ladang angin lepas pantai dan terapung untuk energi. Pelajari fisika di balik perhitungan daya listrik dari angin.",
+  "cover.image_caption": "Foto arsip · energy",
+  "cover.news_date": "Berita: 20 Nov 2026",
+  "cover.place": "Tokyo, Jepang",
+  "cover.topic": "Angin lepas pantai",
+  "cover.subject": "Fisika · Daya",
+  "quest.1.desc": "Baca tentang ladang angin lepas pantai",
+  "quest.2.desc": "Gunakan P = W ÷ t untuk daya",
+  "quest.3.desc": "Kuis, lab mini dan lencana",
+  "cover.read_time": "12 menit baca",
+  "cover.level": "SMP · kelas 7–9",
+  "cover.xp_total": "Raih hingga 60 XP",
+  "cover.fun_fact": "Jepang menargetkan kapasitas angin lepas pantai 30 hingga 45 gigawatt pada tahun 2040.",
+  "story.title": "Memanfaatkan angin laut",
+  "story.lead": "Jepang sangat bergantung pada energi impor, dengan tingkat kemandirian hanya 16,4% [1]. Tenaga angin lepas pantai menawarkan sumber energi bersih [1].",
+  "story.image_caption": "Foto arsip · Wind turbines, Wind energy, Mirny, Crimea",
+  "story.image_credit": "Vyacheslav Argenberg / Wikimedia Commons, CC BY 4.0",
+  "stat.1.value": "16,4%",
+  "stat.2.value": "0,5 GW",
+  "stat.3.value": "16,8 MW",
+  "stat.1.label": "tingkat kemandirian energi pada tahun fiskal 2024",
+  "stat.2.label": "kapasitas operasional angin lepas pantai saat ini",
+  "stat.3.label": "kapasitas ladang angin terapung Goto",
+  "story.body_1": "Jepang memiliki potensi besar untuk energi angin lepas pantai di sepanjang garis pantainya [1]. Proyek komersial mulai beroperasi menghasilkan listrik bersih [1].",
+  "story.body_2": "Karena landas kontinen Jepang sempit, turbin angin terapung sangat penting untuk perairan dalam [1]. Ladang angin terapung Goto di Nagasaki mulai beroperasi [1].",
+  "timeline.1.date": "2013",
+  "timeline.2.date": "2022",
+  "timeline.3.date": "2026",
+  "timeline.1.text": "Jepang luncurkan proyek angin terapung di Fukushima.",
+  "timeline.2.text": "Ladang angin lepas pantai komersial beroperasi di Akita.",
+  "timeline.3.text": "Ladang angin terapung komersial Goto beroperasi di Nagasaki.",
+  "physics.title": "Menghitung daya dan energi",
+  "physics.body_1": "Daya menunjukkan seberapa cepat energi ditransfer atau dihasilkan. Saat angin mendorong bilah turbin, energi kinetik diubah menjadi energi listrik dari waktu ke waktu.",
+  "physics.body_2": "Daya sama dengan energi yang dihasilkan dibagi waktu yang diperlukan. Lebih banyak energi dalam waktu singkat berarti daya yang dihasilkan semakin besar.",
+  "physics.equation": "P = W ÷ t",
+  "physics.equation_name": "Persamaan daya",
+  "legend.1.symbol": "P",
+  "legend.1.meaning": "daya",
+  "legend.1.unit": "watt (W)",
+  "legend.2.symbol": "W",
+  "legend.2.meaning": "usaha atau energi",
+  "legend.2.unit": "joule (J)",
+  "legend.3.symbol": "t",
+  "legend.3.meaning": "waktu",
+  "legend.3.unit": "sekon (s)",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "Kami mengasumsikan laju transfer energi konstan dan mengabaikan gesekan mekanis.",
+  "example.step_1": "W = 15.000.000 J, waktu t = 10 s",
+  "example.step_2": "P = 15.000.000 ÷ 10 s",
+  "example.step_3": "Hitung daya: P = 1.500.000 W",
+  "example.result": "P = 1.500.000 W",
+  "table.h1": "Proyek Turbin Angin",
+  "table.h2": "Energi (MJ dalam 10 s)",
+  "table.h3": "Keluaran Daya",
+  "table.r1c1": "Turbin percontohan",
+  "table.r1c2": "15 MJ",
+  "table.r1c3": "1,5 MW",
+  "table.r2c2": "50 MJ",
+  "table.r2c1": "Ladang standar",
+  "table.r2c3": "5,0 MW",
+  "table.r3c1": "Ladang terapung Goto",
+  "table.r3c2": "168 MJ",
+  "table.r3c3": "16,8 MW",
+  "table.note": "Daya adalah energi yang dihasilkan dibagi waktu.",
+  "graph.title": "Keluaran daya pada berbagai proyek angin",
+  "graph.1.label": "Pilot",
+  "graph.2.label": "Standar",
+  "graph.3.label": "Goto",
+  "graph.1.value": "1,5 MW",
+  "graph.2.value": "5,0 MW",
+  "graph.3.value": "16,8 MW",
+  "graph.note": "Ladang angin yang lebih besar menghasilkan lebih banyak daya per detik.",
+  "physics.tip": "Daya mengukur seberapa cepat energi disalurkan. Turbin 1,5 MW menyalurkan 1.500.000 joule energi setiap detik!",
+  "mission.title": "Misi Tenaga Angin",
+  "quiz.answer_key": "Kunci: 1B · 2A · 3C",
+  "quiz.1.question": "Apa yang diukur oleh daya P dalam fisika?",
+  "quiz.1.a": "Total jarak perjalanan",
+  "quiz.1.b": "Laju transfer energi",
+  "quiz.1.c": "Total massa turbin",
+  "quiz.1.d": "Suhu udara sekitar",
+  "quiz.2.question": "Apa satuan internasional untuk daya listrik?",
+  "quiz.2.a": "Watt",
+  "quiz.2.b": "Joule",
+  "quiz.2.c": "Newton",
+  "quiz.2.d": "Sekon",
+  "quiz.3.question": "Mengapa turbin angin terapung penting untuk perairan dalam?",
+  "quiz.3.a": "Tidak butuh angin sama sekali",
+  "quiz.3.b": "Lebih murah dari darat",
+  "quiz.3.c": "Laut terlalu dalam",
+  "quiz.3.d": "Listrik tak terbatas",
+  "lab.title": "Uji daya kincir angin",
+  "lab.step_1": "Buat atau pegang kincir angin kertas di depan kipas angin lembut.",
+  "lab.step_2": "Hitung berapa banyak putaran penuh dalam tepat 10 detik.",
+  "lab.step_3": "Hitung putaran per detik untuk melihat kecepatan angin.",
+  "lab.question": "Bagaimana tiupan yang lebih kuat mengubah putaran per detik?",
+  "badge.name": "Insinyur Angin",
+  "badge.text": "Anda menguasai fisika tenaga angin dan daya.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Daya",
+  "glossary.2.term": "Angin lepas pantai",
+  "glossary.3.term": "Kemandirian energi",
+  "glossary.1.def": "Laju energi yang dihasilkan atau digunakan dari waktu ke waktu.",
+  "glossary.2.def": "Turbin angin yang dipasang di perairan laut.",
+  "glossary.3.def": "Memproduksi energi sendiri secara domestik tanpa impor.",
+  "label.sources": "Sumber",
+  "source.1": "[1] Mongabay, Japan looks to offshore wind to boost energy security, but hurdles remain, 20 Nov 2026",
+  "source.2": "[2] WMO, Energy and climate, 1 Nov 2026",
+  "source.3": "[3] Mongabay, Floating wind is building A lot of momentum toward commercialization, 20 Nov 2026",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Foto: Wikimedia Commons (CC BY). Gambar lain: Ilustrasi oleh ELIOS.",
+  "label.quest_map": "PETA MISIMU",
+  "label.fun_fact": "TAHUKAH KAMU?",
+  "label.timeline": "LINIMASA",
+  "label.equation": "PERSAMAAN KUNCI",
+  "label.example": "CONTOH SOAL",
+  "label.graph": "GRAFIK",
+  "label.tip": "KATA BULB BUDDY",
+  "label.quiz": "KUIS KILAT · 3 SOAL · CENTANG SATU KOTAK",
+  "label.lab": "LAB MINI · COBA DI RUMAH ATAU SEKOLAH",
+  "label.badge": "LENCANA TERBUKA",
+  "quest.1.title": "Ceritanya",
+  "quest.2.title": "Fisikanya",
+  "quest.3.title": "Misimu"
+}

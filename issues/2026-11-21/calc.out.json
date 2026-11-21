@@ -1,0 +1,12 @@
+{
+  "energy_J": 15000000,
+  "time_s": 10,
+  "power_W": 1500000.0,
+  "power_MW": 1.5,
+  "energy_1_MJ": 15,
+  "power_1_MW": 1.5,
+  "energy_2_MJ": 50,
+  "power_2_MW": 5.0,
+  "energy_3_MJ": 168,
+  "power_3_MW": 16.8
+}

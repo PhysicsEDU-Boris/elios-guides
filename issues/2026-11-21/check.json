@@ -1,0 +1,44 @@
+[
+  {
+    "item": "Japan's energy self-sufficiency rate",
+    "claim": "Japan's energy self-sufficiency rate was 16.4% in fiscal year 2024.",
+    "source": "1",
+    "pass": true,
+    "note": "Confirmed by Mongabay article."
+  },
+  {
+    "item": "Goto floating wind farm capacity",
+    "claim": "The Goto floating wind farm produces 16.8 MW.",
+    "source": "1",
+    "pass": true,
+    "note": "Confirmed by Mongabay report on the Goto project."
+  },
+  {
+    "item": "Power calculation",
+    "claim": "P = 15,000,000 J / 10 s = 1,500,000 W (1.5 MW).",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculation matches example logic."
+  },
+  {
+    "item": "Physics Quiz Question 1",
+    "claim": "Power (P) is defined as the rate of energy transfer.",
+    "source": "2",
+    "pass": true,
+    "note": "Matches definition of power in energy systems."
+  },
+  {
+    "item": "Indonesian labels",
+    "claim": "The translated labels for the Indonesian version follow the required structure.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "Labels such as PETA MISIMU, TAHUKAH KAMU?, and others have been applied correctly."
+  },
+  {
+    "item": "Floating wind rationale",
+    "claim": "Japan uses floating wind turbines because its narrow continental shelf limits fixed-bottom platforms in deep waters.",
+    "source": "1",
+    "pass": true,
+    "note": "Confirmed as the primary driver for floating wind adoption in Japan."
+  }
+]

@@ -1,0 +1,313 @@
+{
+  "_issue": "11",
+  "_slug": "japan-offshore-wind-power",
+  "_theme": "energy",
+  "_formula": "power",
+  "_keywords": [
+    "wind",
+    "offshore",
+    "energy",
+    "angin",
+    "energi"
+  ],
+  "_date": "2026-11-21",
+  "_lang": "en",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "Mongabay",
+      "title": "Japan looks to offshore wind to boost energy security, but hurdles remain",
+      "date": "20 Nov 2026",
+      "url": "https://news.mongabay.com/2026/11/japan-looks-to-offshore-wind-to-boost-energy-security-but-hurdles-remain/",
+      "primary": false
+    },
+    {
+      "n": 2,
+      "publisher": "WMO",
+      "title": "Energy and climate",
+      "date": "1 Nov 2026",
+      "url": "https://wmo.int/topics/energy",
+      "primary": true
+    },
+    {
+      "n": 3,
+      "publisher": "Mongabay",
+      "title": "Floating wind is building ‘A lot of momentum’ toward commercialization",
+      "date": "20 Nov 2026",
+      "url": "https://news.mongabay.com/2026/11/floating-wind-is-building-a-lot-of-momentum-toward-commercialization/",
+      "primary": false
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Power_County_Wind_Farm_002.jpg",
+      "license": "Public domain",
+      "credit": "ENERGY.GOV / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Wind_turbines%2C_Wind_energy%2C_Mirny%2C_Crimea.jpg",
+      "license": "CC BY 4.0",
+      "credit": "Vyacheslav Argenberg / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 1.5,
+  "_graph.2.raw": 5.0,
+  "_graph.3.raw": 16.8,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Power is energy transferred divided by the time taken.",
+      "wrong": {
+        "a": "Energy used equals power times time.",
+        "c": "Force times distance is work.",
+        "d": "Voltage times current is electrical power."
+      }
+    },
+    "2": {
+      "why": "Watts measure power, which is energy per second.",
+      "wrong": {
+        "b": "Joules measure energy.",
+        "c": "Newtons measure force.",
+        "d": "Seconds measure time."
+      }
+    },
+    "3": {
+      "why": "Floating wind turbines can be deployed in deep ocean waters where shores are steep.",
+      "wrong": {
+        "a": "Fixed turbines need shallow water.",
+        "b": "Wind speed decreases near the equator usually.",
+        "d": "Wind farms stop working in light breezes."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "What formula calculates power P?",
+      "options": [
+        "P = W ÷ t",
+        "P = m × a",
+        "P = F × s",
+        "P = ρ × V"
+      ],
+      "answer": 0,
+      "explanation": "Power is energy or work divided by time."
+    },
+    {
+      "question": "What is the unit of power?",
+      "options": [
+        "Joule",
+        "Watt",
+        "Newton",
+        "Volt"
+      ],
+      "answer": 1,
+      "explanation": "Power is measured in watts (W)."
+    },
+    {
+      "question": "If a turbine produces 15,000,000 J in 10 seconds, its power is...",
+      "options": [
+        "150 W",
+        "1,500 W",
+        "150,000 W",
+        "1,500,000 W"
+      ],
+      "answer": 3,
+      "explanation": "15,000,000 ÷ 10 = 1,500,000 watts (1.5 MW)."
+    },
+    {
+      "question": "Why does Japan use floating wind turbines?",
+      "options": [
+        "Deep waters near steep coasts",
+        "No wind on land",
+        "Cheaper maintenance",
+        "Better fish stocks"
+      ],
+      "answer": 0,
+      "explanation": "Japan's narrow continental shelf makes floating turbines necessary for deep waters."
+    },
+    {
+      "question": "What does W stand for in P = W ÷ t?",
+      "options": [
+        "Weight",
+        "Work or energy",
+        "Wind speed",
+        "Width"
+      ],
+      "answer": 1,
+      "explanation": "W stands for work or energy in joules."
+    },
+    {
+      "question": "Energy self-sufficiency in Japan was what percent in 2024?",
+      "options": [
+        "1.5%",
+        "16.4%",
+        "50%",
+        "90%"
+      ],
+      "answer": 1,
+      "explanation": "Japan's energy self-sufficiency was 16.4% in fiscal year 2024."
+    }
+  ],
+  "_lab_source": null,
+  "_lab_rubric": {
+    "must_show": [
+      "a small toy pinwheel or fan",
+      "timing how many seconds it takes to spin 10 times",
+      "measuring distance or counting rotations"
+    ],
+    "safety": [
+      "no flame, no mains electricity",
+      "only hands in the photo"
+    ],
+    "pass_if": "The photos show a pinwheel spinning and timing with a watch or phone."
+  },
+  "_per_page": [
+    {
+      "guide.stop_label": "Cover"
+    },
+    {
+      "guide.stop_label": "Post 1 · The Story",
+      "section.label": "POST 1 · THE STORY",
+      "section.xp": "+10 XP FOR READING"
+    },
+    {
+      "guide.stop_label": "Post 2 · The Physics",
+      "section.label": "POST 2 · THE PHYSICS",
+      "section.xp": "+20 XP FOR ANSWERING"
+    },
+    {
+      "guide.stop_label": "Post 3 · Your Mission",
+      "section.label": "POST 3 · YOUR MISSION",
+      "section.xp": "+30 XP FOR ACHIEVING"
+    }
+  ],
+  "_replace": {},
+  "guide.issue_date": "#11 · 21 NOV 2026",
+  "guide.lang": "EN",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Issue 11 · 21 Nov 2026",
+  "cover.title": "How wind turbines generate power",
+  "cover.subtitle": "Japan is turning to offshore and floating wind farms to boost energy security. Discover how physics calculates electrical power from moving air.",
+  "cover.image_caption": "Archive photo · energy",
+  "cover.news_date": "News: 20 Nov 2026",
+  "cover.place": "Tokyo, Japan",
+  "cover.topic": "Offshore wind power",
+  "cover.subject": "Physics · Power",
+  "quest.1.desc": "Read about offshore wind farms",
+  "quest.2.desc": "Use P = W ÷ t for power",
+  "quest.3.desc": "Quiz, mini lab and badge",
+  "cover.read_time": "12 min read",
+  "cover.level": "SMP · grade 7–9",
+  "cover.xp_total": "Earn up to 60 XP",
+  "cover.fun_fact": "Japan aims for 30 to 45 gigawatts of offshore wind capacity by the year 2040.",
+  "story.title": "Harnessing offshore winds",
+  "story.lead": "Japan relies heavily on imported energy, with a self-sufficiency rate of just 16.4% [1]. Offshore wind power offers a sustainable domestic energy source [1].",
+  "story.image_caption": "Archive photo · Wind turbines, Wind energy, Mirny, Crimea",
+  "story.image_credit": "Vyacheslav Argenberg / Wikimedia Commons, CC BY 4.0",
+  "stat.1.value": "16.4%",
+  "stat.2.value": "0.5 GW",
+  "stat.3.value": "16.8 MW",
+  "stat.1.label": "energy self-sufficiency rate in fiscal year 2024",
+  "stat.2.label": "current operational offshore wind capacity",
+  "stat.3.label": "capacity of Goto floating wind farm",
+  "story.body_1": "Japan has immense potential for offshore wind energy along its extensive coastline [1]. Commercial projects have begun coming online, generating clean electricity for homes and businesses [1].",
+  "story.body_2": "Because Japan has a narrow continental shelf, floating wind turbines are crucial for deep waters [1]. The Goto floating wind farm in Nagasaki prefecture recently began commercial operation [1].",
+  "timeline.1.date": "2013",
+  "timeline.2.date": "2022",
+  "timeline.3.date": "2026",
+  "timeline.1.text": "Japan launches first floating wind project in Fukushima.",
+  "timeline.2.text": "Commercial fixed-bottom offshore wind farms open in Akita.",
+  "timeline.3.text": "Goto commercial floating wind farm begins operation in Nagasaki.",
+  "physics.title": "Calculating power and energy",
+  "physics.body_1": "Power tells us how fast energy is transferred or generated. When wind pushes turbine blades, they convert kinetic energy into electrical energy over time.",
+  "physics.body_2": "Power is equal to the energy produced divided by the time taken. More energy in less time means greater power output.",
+  "physics.equation": "P = W ÷ t",
+  "physics.equation_name": "Power equation",
+  "legend.1.symbol": "P",
+  "legend.1.meaning": "power",
+  "legend.1.unit": "watt (W)",
+  "legend.2.symbol": "W",
+  "legend.2.meaning": "work or energy",
+  "legend.2.unit": "joule (J)",
+  "legend.3.symbol": "t",
+  "legend.3.meaning": "time",
+  "legend.3.unit": "second (s)",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "We assume constant energy transfer rate and ignore mechanical friction losses.",
+  "example.step_1": "W = 15,000,000 J, time t = 10 s",
+  "example.step_2": "P = 15,000,000 ÷ 10 s",
+  "example.step_3": "Calculate power: P = 1,500,000 W",
+  "example.result": "P = 1,500,000 W",
+  "table.h1": "Wind Turbine Project",
+  "table.h2": "Energy (MJ in 10 s)",
+  "table.h3": "Power Output",
+  "table.r1c1": "Pilot turbine",
+  "table.r1c2": "15 MJ",
+  "table.r1c3": "1.5 MW",
+  "table.r2c2": "50 MJ",
+  "table.r2c1": "Standard farm",
+  "table.r2c3": "5.0 MW",
+  "table.r3c1": "Goto floating farm",
+  "table.r3c2": "168 MJ",
+  "table.r3c3": "16.8 MW",
+  "table.note": "Power equals energy generated divided by time.",
+  "graph.title": "Power output across different wind projects",
+  "graph.1.label": "Pilot",
+  "graph.2.label": "Standard",
+  "graph.3.label": "Goto",
+  "graph.1.value": "1.5 MW",
+  "graph.2.value": "5.0 MW",
+  "graph.3.value": "16.8 MW",
+  "graph.note": "Larger wind farms generate more power per second.",
+  "physics.tip": "Power measures how fast energy is delivered. A 1.5 MW turbine delivers 1,500,000 joules of energy every single second!",
+  "mission.title": "Wind Power Mission",
+  "quiz.answer_key": "Answer key: 1B · 2A · 3C",
+  "quiz.1.question": "What does power P measure in physics?",
+  "quiz.1.a": "Total distance traveled",
+  "quiz.1.b": "Rate of energy transfer",
+  "quiz.1.c": "Total mass of the turbine",
+  "quiz.1.d": "Temperature of the air",
+  "quiz.2.question": "What is the standard SI unit of electrical power?",
+  "quiz.2.a": "Watt",
+  "quiz.2.b": "Joule",
+  "quiz.2.c": "Newton",
+  "quiz.2.d": "Second",
+  "quiz.3.question": "Why are floating wind turbines important for deep waters?",
+  "quiz.3.a": "They do not need any wind",
+  "quiz.3.b": "Cheaper than land turbines",
+  "quiz.3.c": "Seas too deep for fixed base",
+  "quiz.3.d": "Generate infinite power",
+  "lab.title": "Pinwheel power test",
+  "lab.step_1": "Make or hold a small paper pinwheel in front of a gentle fan or breeze.",
+  "lab.step_2": "Count how many full rotations it makes in exactly 10 seconds.",
+  "lab.step_3": "Calculate rotations per second to see how speed changes with wind.",
+  "lab.question": "How did blowing harder change the rotations per second?",
+  "badge.name": "Wind Engineer",
+  "badge.text": "You mastered the physics of wind power and energy.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Power",
+  "glossary.2.term": "Offshore wind",
+  "glossary.3.term": "Self-sufficiency",
+  "glossary.1.def": "The rate at which energy is generated or used over time.",
+  "glossary.2.def": "Wind turbines installed in ocean or sea waters.",
+  "glossary.3.def": "Producing enough energy domestically without imports.",
+  "label.sources": "Sources",
+  "source.1": "[1] Mongabay, Japan looks to offshore wind to boost energy security, but hurdles remain, 20 Nov 2026",
+  "source.2": "[2] WMO, Energy and climate, 1 Nov 2026",
+  "source.3": "[3] Mongabay, Floating wind is building A lot of momentum toward commercialization, 20 Nov 2026",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Photos: Wikimedia Commons (CC BY). Other pictures: Illustration by ELIOS."
+}
