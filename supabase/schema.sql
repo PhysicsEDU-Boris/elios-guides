@@ -107,3 +107,32 @@ begin
 end $$;
 revoke all on function public.magazine_stats(int) from public, anon;
 grant execute on function public.magazine_stats(int) to authenticated, service_role;
+
+-- Videos and clovers from the app's learning snapshots (elios-clean migration 202611210001_learning_snapshots:
+-- one row per student, the latest snapshot wins). Students whose snapshot changed in the last p_days. Counts only.
+create or replace function public.learning_stats(p_days int default 30)
+returns jsonb language plpgsql security definer set search_path = public as $$
+declare out jsonb;
+begin
+  if coalesce(auth.role(), '') <> 'service_role'
+     and not exists (select 1 from public.dashboard_users u where lower(u.email) = lower(coalesce(auth.jwt() ->> 'email', ''))) then
+    raise exception 'not allowed' using errcode = '42501';
+  end if;
+  with s as (select *, case when clovers_possible > 0 then clovers_earned * 100.0 / clovers_possible else 0 end as pct
+             from public.learning_snapshots where updated_at >= now() - make_interval(days => p_days)),
+  v as (select id, count(*) as started, count(*) filter (where id = any(s.watched_video_ids)) as watched
+        from s, unnest(s.started_video_ids) id group by id)
+  select jsonb_build_object(
+    'students', (select count(*) from s),
+    'clovers', (select jsonb_build_object('earned', coalesce(sum(clovers_earned), 0), 'possible', coalesce(sum(clovers_possible), 0),
+      'b0', count(*) filter (where clovers_earned = 0), 'b1', count(*) filter (where clovers_earned > 0 and pct <= 25),
+      'b2', count(*) filter (where pct > 25 and pct <= 50), 'b3', count(*) filter (where pct > 50 and pct <= 75),
+      'b4', count(*) filter (where pct > 75)) from s),
+    'videos', jsonb_build_object('started', (select coalesce(sum(started), 0) from v), 'watched', (select coalesce(sum(watched), 0) from v),
+      'top', (select coalesce(jsonb_agg(jsonb_build_object('id', id, 'started', started, 'watched', watched) order by started desc, id), '[]'::jsonb)
+              from (select * from v order by started desc, id limit 8) t)))
+  into out;
+  return out;
+end $$;
+revoke all on function public.learning_stats(int) from public, anon;
+grant execute on function public.learning_stats(int) to authenticated, service_role;

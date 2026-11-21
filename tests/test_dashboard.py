@@ -45,29 +45,40 @@ def page(tmp_path):
     p.stop()
 
 
-def stub(page, session, rpc_result):
+LEARNING = {"students": 4, "clovers": {"earned": 30, "possible": 120, "b0": 1, "b1": 1, "b2": 2, "b3": 0, "b4": 0},
+            "videos": {"started": 9, "watched": 5, "top": [{"id": "composting_fundamentals", "started": 4, "watched": 3}]}}
+
+
+def stub(page, session, rpc_result, learning={"data": LEARNING, "error": None}):
     page.add_init_script(f"""window.supabase = {{ createClient: () => ({{
         auth: {{ getSession: async () => ({{ data: {{ session: {json.dumps(session)} }} }}), signOut: async () => {{}},
                  signInWithOtp: async () => ({{ error: null }}) }},
-        rpc: async (name) => name === "magazine_stats" ? {{ data: [{{guide_date: "2026-11-08", started: 3, story: 3, physics: 2, quiz: 1, lab: 0}}], error: null }} : name === "insights_summary" && !{json.dumps(rpc_result)}.error ? {json.dumps({"data": SUMMARY, "error": None})} : ({json.dumps(rpc_result)}) }}) }};""")
+        rpc: async (name) => name === "learning_stats" ? ({json.dumps(learning)}) : name === "magazine_stats" ? {{ data: [{{guide_date: "2026-11-08", started: 3, story: 3, physics: 2, quiz: 1, lab: 0}}], error: null }} : name === "insights_summary" && !{json.dumps(rpc_result)}.error ? {json.dumps({"data": SUMMARY, "error": None})} : ({json.dumps(rpc_result)}) }}) }};""")
 
 
-def open_dashboard(page, rows=ROWS, tab="quiz"):
-    stub(page, SESSION, {"data": rows, "error": None})
+def open_dashboard(page, rows=ROWS, tab="quiz", **kw):
+    stub(page, SESSION, {"data": rows, "error": None}, **kw)
     page.goto((ROOT / "dashboard" / "index.html").as_uri())
     page.wait_for_selector("#questions .qcard", state="attached")
     page.click(f"#tabs [data-tab={tab}]")
 
 
-def test_overview_shows_topics_streaks_learning_scans_and_waiting_cards(page):
+def test_overview_shows_topics_streaks_learning_scans_clovers_and_videos(page):
     open_dashboard(page, tab="overview")
     text = page.inner_text("#app")
     assert "Heat energy" in text and "75% wrong" not in text and "Streaks: how loyal" in text and "Learning activity" in text
     assert page.locator("#kpis .kpi").count() == 6 and "83" in page.inner_text("#kpis")
     assert "scan with robot" in page.inner_text("#scans").lower() and "Recyclable" in page.inner_text("#scans")
-    assert "Not collected yet" in page.inner_text("#clovers") and "Not collected yet" in page.inner_text("#videos")
+    assert "25%" in page.inner_text("#clovers") and "2 students" in page.inner_text("#clovers")
+    assert "composting fundamentals" in page.inner_text("#videos") and "3 of 4 finished" in page.inner_text("#videos")
     assert "Not the exact bin question yet" in page.inner_text("#robot")
     assert "Hi, boris" in page.inner_text("#topbar")
+
+
+def test_clovers_and_videos_wait_until_learning_stats_exists(page):
+    open_dashboard(page, tab="overview", learning={"data": None, "error": {"message": "function learning_stats does not exist"}})
+    assert "Not collected yet" in page.inner_text("#clovers") and "Not collected yet" in page.inner_text("#videos")
+    assert "Learning activity" in page.inner_text("#app")
 
 
 def test_quiz_tab_shows_questions_concepts_and_calendar_without_parsing_html(page):
