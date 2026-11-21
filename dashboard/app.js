@@ -84,6 +84,7 @@ function rowbar(name, value, right, cls) {
   return h("div", { class: "rowbar" }, h("div", { class: "hd" }, h("span", { class: "n" }, name), h("span", { class: "v" }, right)),
     h("div", { class: "split" }, h("i", { class: cls || "ok", style: `width:${Math.max(0, Math.min(100, value))}%` })));
 }
+const kpi = ([t, l, v]) => h("div", { class: `kpi ${t}` }, h("span", { class: "overline" }, l), h("div", { class: "num" }, v));
 const waiting = (id, title, sub) => card(id, title, sub, chip("sun", "Waiting for the app to send this"), h("div", { class: "wait" }, h("div", { class: "big" }, "Not collected yet")));
 
 function renderKpis(sum, topics) {
@@ -120,6 +121,21 @@ function renderLearning(sum) {
     h("div", { style: "display:flex;gap:12px" }, chip("green", "Story and physics reads"), chip("sky", "Quiz and mini-lab")),
     h("div", { class: "mini" }, [["Story read", st.story], ["Physics read", st.physics], ["Guide quiz done", st.quiz], ["Mini-lab passed", st.lab]]
       .map(([n, v]) => h("div", {}, n, h("b", {}, `${share(v, d)}%`)))));
+}
+
+function renderClovers(l) {
+  const c = l.clovers, n = l.students || 1;
+  card("clovers", "Clovers earned", "Learning clovers per student: videos, module guides, quizzes, simulations and Daily Guides",
+    h("div", { class: "two" }, [["green", "Clovers earned", `${share(c.earned, c.possible)}%`], ["sky", "Students", num(l.students)]].map(kpi)),
+    [["None yet", c.b0], ["1–25%", c.b1], ["26–50%", c.b2], ["51–75%", c.b3], ["76–100%", c.b4]].map(([k, v]) => rowbar(k, share(v, n), `${v} students`, "ok")));
+}
+
+function renderVideos(l) {
+  const v = l.videos;
+  card("videos", "Videos watched", "Watched to the end vs started, most opened videos first",
+    h("div", { class: "two" }, [["green", "Watched to the end", num(v.watched)], ["sun", "Started", num(v.started)]].map(kpi)),
+    v.top.length ? v.top.map(x => rowbar(x.id.replace(/[_-]+/g, " "), share(x.watched, x.started), `${x.watched} of ${x.started} finished`, "ok"))
+      : h("p", { class: "muted" }, "No videos opened in this period yet."));
 }
 
 function renderScans(sum) {
@@ -233,8 +249,9 @@ function setTab(tab) {
 async function refresh() {
   const client = state.client;
   $("msg").textContent = "Loading...";
-  const [qs, all, sm] = await Promise.all([client.rpc("question_stats", { p_days: state.days, p_min: minValue() }),
-    client.rpc("question_stats", { p_days: state.days, p_min: 1 }), client.rpc("insights_summary", { p_days: state.days })]);
+  const [qs, all, sm, ls] = await Promise.all([client.rpc("question_stats", { p_days: state.days, p_min: minValue() }),
+    client.rpc("question_stats", { p_days: state.days, p_min: 1 }), client.rpc("insights_summary", { p_days: state.days }),
+    client.rpc("learning_stats", { p_days: state.days })]);
   const error = qs.error || all.error || sm.error;
   if (error) {
     if (error.code === "42501") { show("denied"); return; }
@@ -246,7 +263,9 @@ async function refresh() {
   $("msg").textContent = `Last ${state.days} days · ${sm.data.students} student(s) active.`;
   const topics = groupConcepts(all.data, state.docs), concepts = groupConcepts(qs.data, state.docs);
   renderKpis(sm.data, topics); renderTopics(topics); renderStreaks(sm.data); renderLearning(sm.data);
-  waiting("clovers", "Clovers earned", "Learning clovers per student"); waiting("videos", "Videos watched", "Watched vs started");
+  // learning_stats fails until its SQL is run, and is empty until the app update sends snapshots.
+  if (!ls.error && ls.data?.students) { renderClovers(ls.data); renderVideos(ls.data); }
+  else { waiting("clovers", "Clovers earned", "Learning clovers per student"); waiting("videos", "Videos watched", "Watched vs started"); }
   renderScans(sm.data); renderRobot(sm.data);
   renderFilters(usable); renderQuestions(); renderConcepts(concepts); renderCalendar(concepts);
   setTab(state.tab);
