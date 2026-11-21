@@ -1,1 +1,82 @@
-{"updated": null, "guides": []}
+{
+  "updated": "2026-11-17T11:44:24+07:00",
+  "guides": [
+    {
+      "revision": "22ebfc4d42dbfff2591dd344c779a91d6ea314508f33698021ee0c837bbafb1f",
+      "date": "2026-11-17",
+      "issue": "07",
+      "slug": "strong-winds-and-kinetic-energy",
+      "xp": 60,
+      "title": {
+        "en": "How fast winds pack massive energy",
+        "id": "Kekuatan besar angin kencang"
+      },
+      "topic": {
+        "en": "Storms and wind",
+        "id": "Badai dan angin"
+      },
+      "cover": {
+        "en": "issues/2026-11-17/elios-guide-07-strong-winds-and-kinetic-energy-cover-en.png",
+        "id": "issues/2026-11-17/elios-guide-07-strong-winds-and-kinetic-energy-cover-id.png"
+      },
+      "pdf": {
+        "en": "issues/2026-11-17/elios-guide-07-strong-winds-and-kinetic-energy-en.pdf",
+        "id": "issues/2026-11-17/elios-guide-07-strong-winds-and-kinetic-energy-id.pdf"
+      },
+      "content": {
+        "en": "issues/2026-11-17/en.json",
+        "id": "issues/2026-11-17/id.json"
+      },
+      "schema": 2,
+      "theme": "storm",
+      "photo": {
+        "src": "issues/2026-11-17/photo.jpg",
+        "thumb": "issues/2026-11-17/photo-800.jpg",
+        "w": 2000,
+        "h": 1114,
+        "caption": {
+          "en": "Archive photo · storm",
+          "id": "Foto arsip · storm"
+        },
+        "credit": "Tuxyso / Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Joshua_Tree_Park_approaching_thunderstorm_02_2013.jpg"
+      },
+      "content_sha": {
+        "en": "979cfbbd562ed6577b565526f47363eab0dd9809a301c1b3d3c1563433bd6f4b",
+        "id": "0dc87a23fb431815e25d609d81edbd56fe1258b4f287880205468dd75dd09b1c"
+      },
+      "xp_parts": {
+        "story": 10,
+        "physics": 20,
+        "quiz": 10,
+        "lab": 20
+      },
+      "formula": "kinetic-energy",
+      "sources": [
+        "atmosphere.copernicus.eu/air-quality",
+        "bmkg.go.id/cuaca/peringatan-dini-cuaca",
+        "weather.gov/mfl/beaufort"
+      ],
+      "terms": [
+        "angin",
+        "badai",
+        "cuaca",
+        "energy",
+        "fast",
+        "jakarta",
+        "kinetic",
+        "massive",
+        "pack",
+        "peringatan",
+        "speed",
+        "storm",
+        "strike",
+        "strong",
+        "when",
+        "wind"
+      ],
+      "pages": 4
+    }
+  ]
+}

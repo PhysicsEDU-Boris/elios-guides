@@ -1,0 +1,51 @@
+[
+  {
+    "item": "stat.1",
+    "claim": "Kinetic energy for 1 kg of air at 5 m/s is 12.5 J",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculated Ek = 0.5 * 1 * (5^2) = 12.5 J"
+  },
+  {
+    "item": "stat.2",
+    "claim": "Kinetic energy for 1 kg of air at 15 m/s is 112.5 J",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculated Ek = 0.5 * 1 * (15^2) = 112.5 J"
+  },
+  {
+    "item": "stat.3",
+    "claim": "Kinetic energy for 1 kg of air at 25 m/s is 312.5 J",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculated Ek = 0.5 * 1 * (25^2) = 312.5 J"
+  },
+  {
+    "item": "story.lead",
+    "claim": "Weather agencies issued warnings for severe wind gusts and thunderstorms",
+    "source": "1",
+    "pass": true,
+    "note": "Confirmed by BMKG weather warning source text showing severe weather alerts in Indonesia"
+  },
+  {
+    "item": "story.body_1",
+    "claim": "When warm and cool air masses clash, low pressure forms and wind starts to rush",
+    "source": "2",
+    "pass": true,
+    "note": "Confirmed by NOAA meteorological definitions regarding pressure systems and wind"
+  },
+  {
+    "item": "story.body_2",
+    "claim": "Wind speed determines how much force it exerts on trees and roofs",
+    "source": "3",
+    "pass": true,
+    "note": "Supported by air movement dynamics and monitoring descriptions"
+  },
+  {
+    "item": "bilingual agreement",
+    "claim": "English and Indonesian editions share identical stats, calculations, answers, and source citations",
+    "source": "bilingual",
+    "pass": true,
+    "note": "Both language editions are fully aligned in content and numerical data"
+  }
+]
