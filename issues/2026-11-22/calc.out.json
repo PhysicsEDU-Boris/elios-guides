@@ -1,0 +1,14 @@
+{
+  "turbine_1_W": 1500000,
+  "turbine_1_t": 10,
+  "turbine_1_P_W": 150000.0,
+  "turbine_1_P_kW": 150.0,
+  "turbine_2_W": 3000000,
+  "turbine_2_t": 15,
+  "turbine_2_P_W": 200000.0,
+  "turbine_2_P_kW": 200.0,
+  "turbine_3_W": 800000,
+  "turbine_3_t": 5,
+  "turbine_3_P_W": 160000.0,
+  "turbine_3_P_kW": 160.0
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "item": "Japan's energy self-sufficiency rate (2024)",
+    "claim": "Japan's energy self-sufficiency rate stood at 16.4% in fiscal year 2024.",
+    "source": "1",
+    "pass": true,
+    "note": "Verified by Mongabay 2026/11/20 report."
+  },
+  {
+    "item": "Offshore wind target capacity (2040)",
+    "claim": "Japan aims to generate 30 to 45 GW from offshore wind by 2040.",
+    "source": "1",
+    "pass": true,
+    "note": "Verified by Mongabay 2026/11/20 report."
+  },
+  {
+    "item": "Wind power share of electricity (2024)",
+    "claim": "As of 2024, wind power (onshore and offshore) provided 1% of electricity generation in Japan.",
+    "source": "1",
+    "pass": true,
+    "note": "Verified by Mongabay 2026/11/20 report."
+  },
+  {
+    "item": "Power Calculation - Turbine A",
+    "claim": "A turbine with 1,500,000 J energy output in 10 s has a power of 150,000 W (150 kW).",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculation: 1,500,000 / 10 = 150,000 W."
+  },
+  {
+    "item": "Power Calculation - Turbine B",
+    "claim": "A turbine with 3,000,000 J energy output in 15 s has a power of 200,000 W (200 kW).",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculation: 3,000,000 / 15 = 200,000 W."
+  },
+  {
+    "item": "Power Calculation - Turbine C",
+    "claim": "A turbine with 800,000 J energy output in 5 s has a power of 160,000 W (160 kW).",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculation: 800,000 / 5 = 160,000 W."
+  },
+  {
+    "item": "Quiz Answer 1",
+    "claim": "Power measures the rate of energy transfer.",
+    "source": "2",
+    "pass": true,
+    "note": "Correct definition of power in physics."
+  },
+  {
+    "item": "Quiz Answer 2",
+    "claim": "The SI unit of power is Watt (W).",
+    "source": "2",
+    "pass": true,
+    "note": "Correct SI unit verified."
+  },
+  {
+    "item": "Indonesian labels",
+    "claim": "Indonesian translation reflects correct terminology and formatting (e.g., 16,4%).",
+    "source": "bilingual",
+    "pass": true,
+    "note": "Verified consistency with Indonesian conventions."
+  }
+]
