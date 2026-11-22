@@ -1,0 +1,290 @@
+{
+  "_issue": "11",
+  "_slug": "japan-offshore-wind-energy-security",
+  "_theme": "energy",
+  "_formula": "power",
+  "_keywords": [
+    "wind",
+    "offshore",
+    "energy",
+    "turbine",
+    "angin"
+  ],
+  "_date": "2026-11-22",
+  "_lang": "en",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "Mongabay",
+      "title": "Japan looks to offshore wind to boost energy security, but hurdles remain",
+      "date": "2026-11-20",
+      "url": "https://news.mongabay.com/2026/11/japan-looks-to-offshore-wind-to-boost-energy-security-but-hurdles-remain/",
+      "primary": false
+    },
+    {
+      "n": 2,
+      "publisher": "WMO",
+      "title": "Energy",
+      "date": "2026-10-30",
+      "url": "https://wmo.int/topics/energy",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Power_County_Wind_Farm_002.jpg",
+      "license": "Public domain",
+      "credit": "ENERGY.GOV / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Wind_turbines%2C_Wind_energy%2C_Mirny%2C_Crimea.jpg",
+      "license": "CC BY 4.0",
+      "credit": "Vyacheslav Argenberg / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 150,
+  "_graph.2.raw": 200,
+  "_graph.3.raw": 160,
+  "_answers": {
+    "1": "c",
+    "2": "a",
+    "3": "b"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Power measures the rate at which work is done or energy is transferred.",
+      "wrong": {
+        "a": "Total mass is not power.",
+        "b": "Wind speed is not power.",
+        "d": "Air temperature is not power."
+      }
+    },
+    "2": {
+      "why": "Power is measured in watts (W), where 1 watt equals 1 joule per second.",
+      "wrong": {
+        "b": "Joule is energy, not power.",
+        "c": "Newton is force.",
+        "d": "Second is time."
+      }
+    },
+    "3": {
+      "why": "Japan has narrow coastal shelves, so floating turbines are needed in deep waters.",
+      "wrong": {
+        "a": "Turbines do not block sunlight.",
+        "c": "Turbines do not stop ocean currents.",
+        "d": "Turbines do not heat ocean water."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "What is the formula for power?",
+      "options": [
+        "P = W × t",
+        "P = W ÷ t",
+        "P = m × g",
+        "P = F × s"
+      ],
+      "answer": 1,
+      "explanation": "Power P equals work W divided by time t."
+    },
+    {
+      "question": "If you do the same work in half the time, the power…",
+      "options": [
+        "halves",
+        "stays the same",
+        "doubles",
+        "quadruples"
+      ],
+      "answer": 2,
+      "explanation": "Less time means higher power for the same work."
+    },
+    {
+      "question": "What is the unit of work W?",
+      "options": [
+        "Watt",
+        "Joule",
+        "Newton",
+        "Volt"
+      ],
+      "answer": 1,
+      "explanation": "Work and energy are measured in joules (J)."
+    },
+    {
+      "question": "What does energy security mean?",
+      "options": [
+        "Having reliable domestic energy supply",
+        "Guarded power stations",
+        "Solar panels only",
+        "Windless weather"
+      ],
+      "answer": 0,
+      "explanation": "Energy security is having a reliable and secure supply of energy."
+    },
+    {
+      "question": "Why are floating wind turbines used in deep water?",
+      "options": [
+        "They float on air",
+        "Fixed towers cannot reach the seabed easily",
+        "They move faster",
+        "They generate no noise"
+      ],
+      "answer": 1,
+      "explanation": "Deep water makes fixed foundations difficult, so floating platforms anchor to the seabed."
+    },
+    {
+      "question": "1 kilowatt (kW) equals…",
+      "options": [
+        "10 watts",
+        "100 watts",
+        "1,000 watts",
+        "1,000,000 watts"
+      ],
+      "answer": 2,
+      "explanation": "Kilo means one thousand."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "a folded paper pinwheel turbine",
+      "hand blowing on the blades",
+      "timing device or observation of speed"
+    ],
+    "safety": [
+      "no flame, no mains electricity",
+      "only hands in the photo"
+    ],
+    "pass_if": "The photos show the paper turbine and hand action, and the student explains how blowing harder changes power."
+  },
+  "_per_page": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "_replace": {},
+  "guide.issue_date": "#11 · 22 NOV 2026",
+  "guide.lang": "EN",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Issue 11 · 2026",
+  "cover.title": "How offshore wind powers Japan",
+  "cover.subtitle": "Japan is turning to floating wind turbines in deep waters to boost energy security. Discover how wind power turns motion into electricity.",
+  "cover.image_caption": "Archive photo · energy",
+  "cover.news_date": "News: 20 Nov 2026",
+  "cover.place": "Japan",
+  "cover.topic": "Wind energy",
+  "cover.subject": "Physics · Power",
+  "quest.1.desc": "Read about Japan's floating wind farms",
+  "quest.2.desc": "Use P = W ÷ t",
+  "quest.3.desc": "Quiz, mini lab and badge",
+  "cover.read_time": "12 min read",
+  "cover.level": "SMP · grade 7–9",
+  "cover.xp_total": "Earn up to 60 XP",
+  "cover.fun_fact": "Japan aims to reach 30 to 45 gigawatts of offshore wind capacity by 2040 to strengthen energy security.",
+  "story.title": "Catching the ocean wind",
+  "story.lead": "Japan relies on imported fuel for most of its energy [1]. To boost energy security, the country is building offshore wind farms [1].",
+  "story.image_caption": "Archive photo · Wind turbines, Wind energy, Mirny, Crimea",
+  "story.image_credit": "Vyacheslav Argenberg / Wikimedia Commons, CC BY 4.0",
+  "stat.1.value": "16.4%",
+  "stat.2.value": "30–45 GW",
+  "stat.3.value": "1%",
+  "stat.1.label": "Japan's energy self-sufficiency rate in 2024",
+  "stat.2.label": "offshore wind target capacity by 2040",
+  "stat.3.label": "wind share of electricity generation",
+  "story.body_1": "Japan has a narrow continental shelf, making deep waters common near its coasts [1]. To harness strong sea winds, engineers deploy floating wind turbines that anchor securely to the seabed [1].",
+  "story.body_2": "While offshore wind offers massive clean power, the sector faces hurdles like high costs, supply chain gaps, and protecting marine fisheries [1]. Weather and climate variability also influence how energy systems operate and plan for the future [2].",
+  "timeline.1.date": "2024",
+  "timeline.2.date": "2026",
+  "timeline.3.date": "2040",
+  "timeline.1.text": "Energy self-sufficiency stays low at 16.4% [1].",
+  "timeline.2.text": "Commercial floating wind projects launch in Japan [1].",
+  "timeline.3.text": "Target to reach 30 to 45 GW of offshore wind [1].",
+  "physics.title": "Work, time and power",
+  "physics.body_1": "When a wind turbine spins, it does work by transferring energy from moving air to generate electricity. Power measures how fast this energy transfer happens.",
+  "physics.body_2": "Power is energy divided by time. A higher power means more energy is generated every second.",
+  "physics.equation": "P = W ÷ t",
+  "physics.equation_name": "Power equation",
+  "legend.1.symbol": "P",
+  "legend.1.meaning": "power",
+  "legend.1.unit": "watt (W)",
+  "legend.2.symbol": "W",
+  "legend.2.meaning": "work or energy",
+  "legend.2.unit": "joule (J)",
+  "legend.3.symbol": "t",
+  "legend.3.meaning": "time",
+  "legend.3.unit": "second (s)",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "We assume steady wind energy conversion without energy losses in the generator.",
+  "example.step_1": "W = 1,500,000 J, t = 10 s",
+  "example.step_2": "P = 1,500,000 ÷ 10",
+  "example.step_3": "Calculate: P = 150,000 W (150 kW)",
+  "example.result": "P = 150,000 W",
+  "table.h1": "Turbine",
+  "table.h2": "Energy W (J)",
+  "table.h3": "Time t (s)",
+  "table.r1c1": "Turbine A",
+  "table.r1c2": "1,500,000",
+  "table.r1c3": "10 s",
+  "table.r2c1": "Turbine B",
+  "table.r2c2": "3,000,000",
+  "table.r2c3": "15 s",
+  "table.r3c1": "Turbine C",
+  "table.r3c2": "800,000",
+  "table.r3c3": "5 s",
+  "table.note": "Different energy and time outputs change power.",
+  "graph.title": "Power output of wind turbines",
+  "graph.1.label": "Turb A",
+  "graph.2.label": "Turb B",
+  "graph.3.label": "Turb C",
+  "graph.1.value": "150 kW",
+  "graph.2.value": "200 kW",
+  "graph.3.value": "160 kW",
+  "graph.note": "Turbine B delivers the highest power output.",
+  "physics.tip": "Power is the rate of energy transfer. Doubling energy in the same time doubles the power.",
+  "mission.title": "Wind Power Mission",
+  "quiz.answer_key": "Answer key: 1C · 2A · 3B",
+  "quiz.1.question": "What does power measure in physics?",
+  "quiz.1.a": "Total mass",
+  "quiz.1.b": "Wind speed",
+  "quiz.1.c": "Rate of energy transfer",
+  "quiz.1.d": "Air temperature",
+  "quiz.2.question": "In P = W ÷ t, what is the SI unit of power P?",
+  "quiz.2.a": "Watt (W)",
+  "quiz.2.b": "Joule (J)",
+  "quiz.2.c": "Newton (N)",
+  "quiz.2.d": "Second (s)",
+  "quiz.3.question": "Why does Japan use floating wind turbines?",
+  "quiz.3.a": "To block sunlight",
+  "quiz.3.b": "To harness deep water winds",
+  "quiz.3.c": "To stop ocean currents",
+  "quiz.3.d": "To heat the ocean water",
+  "lab.title": "Spinning paper turbine lab",
+  "lab.step_1": "Cut a paper square and fold diagonals to make a simple pinwheel.",
+  "lab.step_2": "Blow gently on blades to spin and count rotations in 10 seconds.",
+  "lab.step_3": "Blow harder to do more work in the same time and observe how speed changes.",
+  "lab.question": "How does blowing harder change the work and power of your paper turbine?",
+  "badge.name": "Wind Engineer",
+  "badge.text": "You explored offshore wind energy and power.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Energy security",
+  "glossary.2.term": "Power",
+  "glossary.3.term": "Floating turbine",
+  "glossary.1.def": "Having a reliable and secure domestic energy supply.",
+  "glossary.2.def": "The rate at which work is done or energy is transferred.",
+  "glossary.3.def": "A wind turbine mounted on a floating platform in deep water.",
+  "label.sources": "Sources",
+  "source.1": "[1] Mongabay, Japan looks to offshore wind to boost energy security, but hurdles remain, 20 Nov 2026",
+  "source.2": "[2] WMO, Energy, 30 Oct 2026",
+  "source.3": "",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Cover: Archive photo. Other pictures: Illustration by ELIOS."
+}

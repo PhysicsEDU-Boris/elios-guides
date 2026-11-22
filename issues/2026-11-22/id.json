@@ -1,0 +1,330 @@
+{
+  "_issue": "11",
+  "_slug": "japan-offshore-wind-energy-security",
+  "_theme": "energy",
+  "_formula": "power",
+  "_keywords": [
+    "wind",
+    "offshore",
+    "energy",
+    "turbine",
+    "angin"
+  ],
+  "_date": "2026-11-22",
+  "_lang": "id",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "Mongabay",
+      "title": "Japan looks to offshore wind to boost energy security, but hurdles remain",
+      "date": "2026-11-20",
+      "url": "https://news.mongabay.com/2026/11/japan-looks-to-offshore-wind-to-boost-energy-security-but-hurdles-remain/",
+      "primary": false
+    },
+    {
+      "n": 2,
+      "publisher": "WMO",
+      "title": "Energy",
+      "date": "2026-10-30",
+      "url": "https://wmo.int/topics/energy",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Power_County_Wind_Farm_002.jpg",
+      "license": "Public domain",
+      "credit": "ENERGY.GOV / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Wind_turbines%2C_Wind_energy%2C_Mirny%2C_Crimea.jpg",
+      "license": "CC BY 4.0",
+      "credit": "Vyacheslav Argenberg / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 150,
+  "_graph.2.raw": 200,
+  "_graph.3.raw": 160,
+  "_answers": {
+    "1": "c",
+    "2": "a",
+    "3": "b"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Daya mengukur laju saat usaha dilakukan atau energi ditransfer.",
+      "wrong": {
+        "a": "Massa total bukan daya.",
+        "b": "Kecepatan angin bukan daya.",
+        "d": "Suhu udara bukan daya."
+      }
+    },
+    "2": {
+      "why": "Daya diukur dalam watt (W), di mana 1 watt sama dengan 1 joule per detik.",
+      "wrong": {
+        "b": "Joule adalah energi, bukan daya.",
+        "c": "Newton adalah gaya.",
+        "d": "Detik adalah waktu."
+      }
+    },
+    "3": {
+      "why": "Jepang memiliki landas pantai yang sempit, sehingga turbin apung diperlukan di laut dalam.",
+      "wrong": {
+        "a": "Turbin tidak menghalangi sinar matahari.",
+        "c": "Turbin tidak menghentikan arus laut.",
+        "d": "Turbin tidak memanaskan air laut."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "Apa persamaan untuk daya?",
+      "options": [
+        "P = W × t",
+        "P = W ÷ t",
+        "P = m × g",
+        "P = F × s"
+      ],
+      "answer": 1,
+      "explanation": "Daya P sama dengan usaha W dibagi waktu t."
+    },
+    {
+      "question": "Jika Anda melakukan usaha yang sama dalam setengah waktu, dayanya…",
+      "options": [
+        "menjadi setengah",
+        "tetap sama",
+        "berlipat ganda",
+        "empat kali lipat"
+      ],
+      "answer": 2,
+      "explanation": "Waktu yang lebih singkat berarti daya lebih tinggi untuk usaha yang sama."
+    },
+    {
+      "question": "Apa satuan untuk usaha W?",
+      "options": [
+        "Watt",
+        "Joule",
+        "Newton",
+        "Volt"
+      ],
+      "answer": 1,
+      "explanation": "Usaha dan energi diukur dalam joule (J)."
+    },
+    {
+      "question": "Apa arti ketahanan energi?",
+      "options": [
+        "Memiliki pasokan energi domestik yang andal",
+        "Pembangkit listrik terjaga",
+        "Panel surya saja",
+        "Cuaca tanpa angin"
+      ],
+      "answer": 0,
+      "explanation": "Ketahanan energi adalah memiliki pasokan energi yang andal dan aman."
+    },
+    {
+      "question": "Mengapa turbin angin apung digunakan di air dalam?",
+      "options": [
+        "Mereka mengapung di udara",
+        "Menara tetap sulit mencapai dasar laut dengan mudah",
+        "Mereka bergerak lebih cepat",
+        "Mereka tidak menghasilkan kebisingan"
+      ],
+      "answer": 1,
+      "explanation": "Air dalam menyulitkan fondasi tetap, sehingga platform apung berlabuh di dasar laut."
+    },
+    {
+      "question": "1 kilowatt (kW) sama dengan…",
+      "options": [
+        "10 watt",
+        "100 watt",
+        "1.000 watt",
+        "1.000.000 watt"
+      ],
+      "answer": 2,
+      "explanation": "Kilo berarti seribu."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "kincir angin kertas lipat",
+      "tangan meniup bilah",
+      "alat pengukur waktu atau pengamatan kecepatan"
+    ],
+    "safety": [
+      "tanpa nyala api, tanpa listrik PLN",
+      "hanya tangan dalam foto"
+    ],
+    "pass_if": "Foto menunjukkan kincir kertas dan aksi tiupan, dan siswa menjelaskan bagaimana tiupan lebih kuat mengubah daya."
+  },
+  "_per_page": [
+    {
+      "guide.stop_label": "Sampul"
+    },
+    {
+      "guide.stop_label": "Pos 1 · Ceritanya",
+      "section.label": "POS 1 · CERITANYA",
+      "section.xp": "+10 XP UNTUK MEMBACA"
+    },
+    {
+      "guide.stop_label": "Pos 2 · Fisikanya",
+      "section.label": "POS 2 · FISIKANYA",
+      "section.xp": "+20 XP UNTUK MENJAWAB"
+    },
+    {
+      "guide.stop_label": "Pos 3 · Misimu",
+      "section.label": "POS 3 · MISIMU",
+      "section.xp": "+30 XP UNTUK DIRAIH"
+    }
+  ],
+  "_replace": {
+    "stop": [
+      [
+        "STOP",
+        "POS"
+      ]
+    ],
+    "page ref": [
+      [
+        "p.",
+        "hlm. "
+      ]
+    ]
+  },
+  "label.quest_map": "PETA MISIMU",
+  "label.fun_fact": "TAHUKAH KAMU?",
+  "label.timeline": "LINIMASA",
+  "label.equation": "PERSAMAAN KUNCI",
+  "label.example": "CONTOH SOAL",
+  "label.graph": "GRAFIK",
+  "label.tip": "KATA BULB BUDDY",
+  "label.quiz": "KUIS KILAT · 3 SOAL · CENTANG SATU KOTAK",
+  "label.lab": "LAB MINI · COBA DI RUMAH ATAU SEKOLAH",
+  "label.badge": "LENCANA TERBUKA",
+  "quest.1.title": "Ceritanya",
+  "quest.2.title": "Fisikanya",
+  "quest.3.title": "Misimu",
+  "guide.issue_date": "#11 · 22 NOV 2026",
+  "guide.lang": "ID",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Edisi 11 · 2026",
+  "cover.title": "Cara angin laut dayadai Jepang",
+  "cover.subtitle": "Jepang beralih ke turbin angin apung di laut dalam untuk memperkuat ketahanan energi. Temukan bagaimana daya mengubah energi.",
+  "cover.image_caption": "Foto arsip · energy",
+  "cover.news_date": "Berita: 20 Nov 2026",
+  "cover.place": "Jepang",
+  "cover.topic": "Energi angin",
+  "cover.subject": "Fisika · Daya",
+  "quest.1.desc": "Baca tentang ladang angin apung Jepang",
+  "quest.2.desc": "Gunakan P = W ÷ t",
+  "quest.3.desc": "Kuis, lab mini, dan lencana",
+  "cover.read_time": "12 menit baca",
+  "cover.level": "SMP · kelas 7–9",
+  "cover.xp_total": "Raih hingga 60 XP",
+  "cover.fun_fact": "Jepang menargetkan kapasitas angin lepas pantai 30 hingga 45 gigawatt pada tahun 2040 untuk memperkuat ketahanan energi.",
+  "story.title": "Menangkap angin samudra",
+  "story.lead": "Jepang mengandalkan bahan bakar impor untuk sebagian besar energinya [1]. Untuk meningkatkan ketahanan energi, negara ini membangun ladang angin lepas pantai [1].",
+  "story.image_caption": "Foto arsip · Wind turbines, Wind energy, Mirny, Crimea",
+  "story.image_credit": "Vyacheslav Argenberg / Wikimedia Commons, CC BY 4.0",
+  "stat.1.value": "16,4%",
+  "stat.2.value": "30–45 GW",
+  "stat.3.value": "1%",
+  "stat.1.label": "Tingkat swasembada energi Jepang pada 2024",
+  "stat.2.label": "target kapasitas angin lepas pantai 2040",
+  "stat.3.label": "bagian angin dari pembangkit listrik",
+  "story.body_1": "Jepang memiliki landas kontinen yang sempit, membuat laut dalam umum di dekat pantainya [1]. Untuk memanfaatkan angin laut yang kuat, para insinyur mengerahkan turbin angin apung yang berlabuh di dasar laut [1].",
+  "story.body_2": "Meskipun angin lepas pantai menawarkan daya bersih yang besar, sektor ini menghadapi hambatan seperti biaya tinggi, celah rantai pasok, dan perlindungan perikanan laut [1]. Variabilitas cuaca dan iklim juga memengaruhi cara sistem energi beroperasi [2].",
+  "timeline.1.date": "2024",
+  "timeline.2.date": "2026",
+  "timeline.3.date": "2040",
+  "timeline.1.text": "Swasembada energi tetap rendah di 16,4% [1].",
+  "timeline.2.text": "Proyek angin apung komersial diluncurkan di Jepang [1].",
+  "timeline.3.text": "Target mencapai 30 hingga 45 GW angin lepas pantai [1].",
+  "physics.title": "Usaha, waktu, dan daya",
+  "physics.body_1": "Saat turbin angin berputar, ia melakukan usaha dengan mentransfer energi dari udara yang bergerak untuk menghasilkan listrik. Daya mengukur seberapa cepat transfer energi ini terjadi.",
+  "physics.body_2": "Daya adalah energi dibagi waktu. Daya yang lebih tinggi berarti lebih banyak energi yang dihasilkan setiap detik.",
+  "physics.equation": "P = W ÷ t",
+  "physics.equation_name": "Persamaan daya",
+  "legend.1.symbol": "P",
+  "legend.1.meaning": "daya",
+  "legend.1.unit": "watt (W)",
+  "legend.2.symbol": "W",
+  "legend.2.meaning": "usaha atau energi",
+  "legend.2.unit": "joule (J)",
+  "legend.3.symbol": "t",
+  "legend.3.meaning": "waktu",
+  "legend.3.unit": "detik (s)",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "Kami berasumsi konversi energi angin stabil tanpa kehilangan energi pada generator.",
+  "example.step_1": "W = 1.500.000 J, t = 10 d",
+  "example.step_2": "P = 1.500.000 ÷ 10",
+  "example.step_3": "Hitung: P = 150.000 W (150 kW)",
+  "example.result": "P = 150.000 W",
+  "table.h1": "Turbin",
+  "table.h2": "Energi W (J)",
+  "table.h3": "Waktu t (d)",
+  "table.r1c1": "Turbin A",
+  "table.r1c2": "1.500.000",
+  "table.r1c3": "10 d",
+  "table.r2c1": "Turbin B",
+  "table.r2c2": "3.000.000",
+  "table.r2c3": "15 d",
+  "table.r3c1": "Turbin C",
+  "table.r3c2": "800.000",
+  "table.r3c3": "5 d",
+  "table.note": "Energi dan waktu beda hasilkan tingkat daya.",
+  "graph.title": "Keluaran daya turbin angin",
+  "graph.1.label": "Turbin A",
+  "graph.2.label": "Turbin B",
+  "graph.3.label": "Turbin C",
+  "graph.1.value": "150 kW",
+  "graph.2.value": "200 kW",
+  "graph.3.value": "160 kW",
+  "graph.note": "Turbin B memberikan keluaran daya tertinggi.",
+  "physics.tip": "Daya adalah laju transfer energi. Melipatgandakan energi dalam waktu yang sama melipatgandakan daya.",
+  "mission.title": "Misi Daya Angin",
+  "quiz.answer_key": "Kunci: 1C · 2A · 3B",
+  "quiz.1.question": "Apa yang diukur oleh daya dalam fisika?",
+  "quiz.1.a": "Massa total",
+  "quiz.1.b": "Kecepatan angin",
+  "quiz.1.c": "Laju transfer energi",
+  "quiz.1.d": "Suhu udara",
+  "quiz.2.question": "Dalam P = W ÷ t, apa satuan SI untuk daya P?",
+  "quiz.2.a": "Watt (W)",
+  "quiz.2.b": "Joule (J)",
+  "quiz.2.c": "Newton (N)",
+  "quiz.2.d": "Detik (s)",
+  "quiz.3.question": "Mengapa Jepang menggunakan turbin angin apung?",
+  "quiz.3.a": "Menghalangi sinar matahari",
+  "quiz.3.b": "Manfaat angin di laut dalam",
+  "quiz.3.c": "Untuk menghentikan arus laut",
+  "quiz.3.d": "Untuk memanaskan air laut",
+  "lab.title": "Lab turbin kertas putar",
+  "lab.step_1": "Potong kertas persegi dan lipat diagonal untuk membuat kincir angin sederhana.",
+  "lab.step_2": "Tiup perlahan pada bilah agar berputar dan catat jumlah putaran dalam 10 detik.",
+  "lab.step_3": "Tiup lebih kuat untuk usaha lebih besar dan amati kecepatan.",
+  "lab.question": "Bagaimana tiupan yang lebih kuat mengubah usaha dan daya turbin kertas Anda?",
+  "badge.name": "Insinyur Angin",
+  "badge.text": "Anda menjelajahi energi angin lepas pantai dan daya.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Ketahanan energi",
+  "glossary.2.term": "Daya",
+  "glossary.3.term": "Turbin apung",
+  "glossary.1.def": "Memiliki pasokan energi domestik yang andal dan aman.",
+  "glossary.2.def": "Laju saat usaha dilakukan atau energi ditransfer.",
+  "glossary.3.def": "Turbin angin yang dipasang pada platform apung di air dalam.",
+  "label.sources": "Sumber",
+  "source.1": "[1] Mongabay, Japan looks to offshore wind to boost energy security, but hurdles remain, 20 Nov 2026",
+  "source.2": "[2] WMO, Energy, 30 Oct 2026",
+  "source.3": "",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Sampul: Foto arsip. Gambar lain: Ilustrasi oleh ELIOS."
+}
