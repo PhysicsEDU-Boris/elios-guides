@@ -1,0 +1,336 @@
+{
+  "_example": false,
+  "_issue": "11",
+  "_slug": "colombo-extreme-rainfall-and-floods",
+  "_theme": "water",
+  "_formula": "hydrostatic-pressure",
+  "_keywords": [
+    "flood",
+    "banjir",
+    "rain",
+    "hujan",
+    "wetland",
+    "drain"
+  ],
+  "_date": "2026-11-24",
+  "_lang": "en",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "Mongabay",
+      "title": "Extreme rainfalls flood Sri Lanka’s coastal city as wetlands, drains vanish",
+      "date": "2026-11-21",
+      "url": "https://news.mongabay.com/2026/11/extreme-rainfalls-flood-sri-lankas-coastal-city-as-wetlands-drains-vanish/",
+      "primary": false
+    },
+    {
+      "n": 2,
+      "publisher": "WMO",
+      "title": "Weather and water extremes",
+      "date": "2026-11-01",
+      "url": "https://wmo.int/topics/weather",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flooded_building_and_tree_trunk_in_the_muddy_water_of_the_Mekong_in_Si_Phan_Don%2C_Laos%2C_September_2019.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Basile Morin / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Red_Dragon_scuplture_during_River_Lee_flooding%2C_October_2023.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Podstawko / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 294,
+  "_graph.2.raw": 1176,
+  "_graph.3.raw": 4900,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Water pressure increases directly with depth and fluid density.",
+      "wrong": {
+        "a": "Density is not measured in pascals.",
+        "c": "Gravity is constant at 9.8 m/s².",
+        "d": "Pressure does not decrease with depth."
+      }
+    },
+    "2": {
+      "why": "h stands for depth or height of the water column in metres.",
+      "wrong": {
+        "b": "Time is not in this equation.",
+        "c": "Area is used in force per area.",
+        "d": "Mass is m, not h."
+      }
+    },
+    "3": {
+      "why": "Wetlands act as natural sponges that absorb and temporarily store rainwater.",
+      "wrong": {
+        "a": "Covering wetlands with concrete speeds up runoff.",
+        "b": "Narrower drains hold less water.",
+        "d": "Removing vegetation reduces water retention."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "What does p stand for in p = ρ × g × h?",
+      "options": [
+        "Power",
+        "Pressure",
+        "Period",
+        "Path"
+      ],
+      "answer": 1,
+      "explanation": "p stands for fluid pressure."
+    },
+    {
+      "question": "What is the SI unit of pressure?",
+      "options": [
+        "Joule",
+        "Pascal",
+        "Newton",
+        "Watt"
+      ],
+      "answer": 1,
+      "explanation": "Pressure is measured in pascals (Pa)."
+    },
+    {
+      "question": "What is water density ρ approximately?",
+      "options": [
+        "1 kg/m³",
+        "10 kg/m³",
+        "100 kg/m³",
+        "1,000 kg/m³"
+      ],
+      "answer": 3,
+      "explanation": "Pure water has a density of about 1,000 kg/m³."
+    },
+    {
+      "question": "If you double the water depth h, the pressure p…",
+      "options": [
+        "halves",
+        "stays the same",
+        "doubles",
+        "quadruples"
+      ],
+      "answer": 2,
+      "explanation": "Pressure increases in direct proportion to depth."
+    },
+    {
+      "question": "What is the role of urban wetlands during heavy rain?",
+      "options": [
+        "Absorb and temporarily hold water",
+        "Block rainwater",
+        "Heat up the city",
+        "Generate wind"
+      ],
+      "answer": 0,
+      "explanation": "Wetlands act as natural sponges for flood retention."
+    },
+    {
+      "question": "What does g represent in hydrostatic pressure?",
+      "options": [
+        "Gram",
+        "Gas constant",
+        "Gravity",
+        "Gradient"
+      ],
+      "answer": 2,
+      "explanation": "g is acceleration due to gravity (9.8 m/s²)."
+    },
+    {
+      "question": "Century-old Colombo drains were designed for hourly rainfall of…",
+      "options": [
+        "30 mm",
+        "120 mm",
+        "300 mm",
+        "500 mm"
+      ],
+      "answer": 0,
+      "explanation": "Old drains handle about 30 mm per hour."
+    },
+    {
+      "question": "What caused the flash floods in Colombo on Nov 6?",
+      "options": [
+        "Earthquake",
+        "High-intensity downpour",
+        "Volcano",
+        "Snowmelt"
+      ],
+      "answer": 1,
+      "explanation": "Extreme hourly rainfall intensity overwhelmed drains."
+    },
+    {
+      "question": "What is the standard value of g used here?",
+      "options": [
+        "1.6 m/s²",
+        "9.8 m/s²",
+        "11.2 m/s²",
+        "98 m/s²"
+      ],
+      "answer": 1,
+      "explanation": "Earth gravity is about 9.8 m/s²."
+    },
+    {
+      "question": "Why do wetlands prevent floods?",
+      "options": [
+        "They store water and recharge groundwater",
+        "They push clouds away",
+        "They freeze water",
+        "They make rain stop"
+      ],
+      "answer": 0,
+      "explanation": "Wetlands temporarily store and absorb rainwater."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "a transparent container with water at different depth marks",
+      "a ruler measuring water depth",
+      "a clear note of water pressure changes"
+    ],
+    "safety": [
+      "no hot liquids, no glass breakage risk",
+      "only hands in the photo"
+    ],
+    "pass_if": "The photos show water depth measurement and explain how pressure increases with depth."
+  },
+  "_per_page": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "_replace": {},
+  "guide.issue_date": "#11 · 24 NOV 2026",
+  "guide.lang": "EN",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Issue 11 · Colombo Floods and Water Pressure",
+  "cover.title": "How extreme rain causes floods",
+  "cover.subtitle": "When heavy downpours overwhelm ancient storm drains and wetlands vanish, water piles up. Discover the physics of fluid pressure.",
+  "cover.image_caption": "Archive photo · water",
+  "cover.news_date": "News: 21 Nov 2026",
+  "cover.place": "Colombo, Sri Lanka",
+  "cover.topic": "Water flow and floods",
+  "cover.subject": "Physics · Pressure",
+  "quest.1.desc": "Read about the Colombo floods",
+  "quest.2.desc": "Calculate water pressure p = ρgh",
+  "quest.3.desc": "Quiz, mini lab and badge",
+  "cover.read_time": "12 min read",
+  "cover.level": "SMP · grade 7–9",
+  "cover.xp_total": "Earn up to 60 XP",
+  "cover.fun_fact": "A water depth of just 0.50 m exerts a crushing pressure of 4,900 pascals on surfaces below!",
+  "story.title": "When drains and wetlands vanish",
+  "story.lead": "On November 6, a heavy downpour flooded Colombo within minutes, stranding commuters [1]. Century-old storm drains could not keep up with the extreme rain [1].",
+  "story.image_caption": "Archive photo · Red Dragon scuplture during River Lee flooding, October",
+  "story.image_credit": "Podstawko / Wikimedia Commons, CC BY-SA 4.0",
+  "stat.1.value": "120 mm",
+  "stat.2.value": "30 mm",
+  "stat.3.value": "37 %",
+  "stat.1.label": "rainfall per hour during the flash flood",
+  "stat.2.label": "hourly capacity of the old storm drains",
+  "stat.3.label": "rainwater retained by natural wetlands",
+  "story.body_1": "Rainwater rushed through Colombo's streets when hourly rainfall exceeded 120 mm [1]. The century-old drainage system was designed for only 30 mm per hour [1]. As real estate development replaces natural wetlands and green spaces, rainwater has nowhere to absorb safely [1].",
+  "story.body_2": "Wetlands act as natural sponges that hold excess water and protect cities [1]. Environmental experts warn that restoring wetlands and upgrading drainage are vital for urban climate resilience [1].",
+  "timeline.1.date": "Before Rain",
+  "timeline.2.date": "Downpour",
+  "timeline.3.date": "Flood",
+  "timeline.1.text": "Wetlands and drains are clear and ready.",
+  "timeline.2.text": "Rain falls faster than drains can carry away.",
+  "timeline.3.text": "Water pools on streets, building high pressure.",
+  "physics.title": "Water pressure and depth",
+  "physics.body_1": "Standing water exerts pressure on everything beneath it. The deeper the water gets, the greater the pressure pushes down and sideways [2].",
+  "physics.body_2": "Fluid pressure depends on water density, gravity, and depth. This relationship is calculated using the hydrostatic pressure formula [2].",
+  "physics.equation": "p = ρ × g × h",
+  "physics.equation_name": "Hydrostatic pressure equation",
+  "legend.1.symbol": "p",
+  "legend.1.meaning": "pressure",
+  "legend.1.unit": "pascal (Pa)",
+  "legend.2.symbol": "ρ",
+  "legend.2.meaning": "fluid density",
+  "legend.2.unit": "kg/m³",
+  "legend.3.symbol": "g",
+  "legend.3.meaning": "gravity",
+  "legend.3.unit": "9.8 m/s²",
+  "legend.4.symbol": "h",
+  "legend.4.meaning": "depth",
+  "legend.4.unit": "metre (m)",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "We assume water density is constant and ignore atmospheric pressure for the fluid column.",
+  "example.step_1": "h=0.03m, ρ=1000 kg/m³, g=9.8",
+  "example.step_2": "p = 1,000 × 9.8 × 0.03",
+  "example.step_3": "Multiply: p = 294 Pa",
+  "example.result": "p = 294 Pa",
+  "table.h1": "Water condition",
+  "table.h2": "Depth h (m)",
+  "table.h3": "Pressure p (Pa)",
+  "table.r1c1": "Drain design",
+  "table.r1c2": "0.03",
+  "table.r1c3": "294 Pa",
+  "table.r2c1": "Heavy rain",
+  "table.r2c2": "0.12",
+  "table.r2c3": "1,176 Pa",
+  "table.r3c1": "Street flood",
+  "table.r3c2": "0.50",
+  "table.r3c3": "4,900 Pa",
+  "table.note": "Greater depth creates much higher water pressure.",
+  "graph.title": "Pressure rise with water depth",
+  "graph.1.label": "Drain",
+  "graph.2.label": "Rain",
+  "graph.3.label": "Flood",
+  "graph.1.value": "294 Pa",
+  "graph.2.value": "1,176 Pa",
+  "graph.3.value": "4,900 Pa",
+  "graph.note": "Water pressure grows fast as flood depth increases.",
+  "physics.tip": "Double the depth, double the pressure! Water weight pushes hard on deep surfaces.",
+  "mission.title": "Flood defense mission",
+  "quiz.answer_key": "Answer key: 1B · 2A · 3C",
+  "quiz.1.question": "What happens to water pressure as depth increases?",
+  "quiz.1.a": "It decreases",
+  "quiz.1.b": "It increases",
+  "quiz.1.c": "It stays zero",
+  "quiz.1.d": "It vanishes",
+  "quiz.2.question": "In p = ρ × g × h, what does h represent?",
+  "quiz.2.a": "Depth or height",
+  "quiz.2.b": "Time",
+  "quiz.2.c": "Area",
+  "quiz.2.d": "Mass",
+  "quiz.3.question": "Which action helps a coastal city resist floods?",
+  "quiz.3.a": "Paving all wetlands",
+  "quiz.3.b": "Narrowing drains",
+  "quiz.3.c": "Protecting wetlands",
+  "quiz.3.d": "Removing trees",
+  "lab.title": "Water depth and pressure test",
+  "lab.step_1": "Fill a tall clear plastic bottle with water up to different depth marks.",
+  "lab.step_2": "Measure the height h with a ruler.",
+  "lab.step_3": "Calculate p = ρgh for each depth using 1,000 kg/m³.",
+  "lab.question": "How does water pressure change when depth increases?",
+  "badge.name": "Flood Guardian",
+  "badge.text": "You mastered water pressure and urban flood physics.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Hydrostatic pressure",
+  "glossary.2.term": "Wetland",
+  "glossary.3.term": "Flash flood",
+  "glossary.1.def": "Pressure exerted by a fluid at rest due to the force of gravity.",
+  "glossary.2.def": "Land area saturated with water that acts as a natural sponge.",
+  "glossary.3.def": "A sudden, rapid flood caused by heavy rainfall in a short time.",
+  "label.sources": "Sources",
+  "source.1": "[1] Mongabay, Extreme rainfalls flood Sri Lanka’s coastal city as wetlands, drains vanish, 21 Nov 2026",
+  "source.2": "[2] WMO, Weather and water extremes, 1 Nov 2026",
+  "source.3": "",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Photos: Wikimedia Commons and public domain archives. Diagrams by ELIOS."
+}

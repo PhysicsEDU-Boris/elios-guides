@@ -1,0 +1,58 @@
+[
+  {
+    "item": "Colombo flash flood date",
+    "claim": "Flash floods occurred in Colombo on November 6, 2026.",
+    "source": "1",
+    "pass": true,
+    "note": "Confirmed by Mongabay article."
+  },
+  {
+    "item": "Drainage system capacity",
+    "claim": "Century-old Colombo storm water systems were designed for 30 mm of rainfall per hour.",
+    "source": "1",
+    "pass": true,
+    "note": "Verified by the Deputy Director Engineering of the Colombo Municipal Council."
+  },
+  {
+    "item": "Rainfall intensity on Nov 6",
+    "claim": "Rainfall intensity reached more than 120 mm per hour on November 6, 2026.",
+    "source": "1",
+    "pass": true,
+    "note": "Confirmed by the Department of Meteorology."
+  },
+  {
+    "item": "Wetlands retention capacity",
+    "claim": "Approximately 37% of rainwater in Colombo is retained by its natural wetland complex.",
+    "source": "1",
+    "pass": true,
+    "note": "Confirmed by environmental scientist Chethika Gunasiri."
+  },
+  {
+    "item": "Hydrostatic pressure calculation",
+    "claim": "The hydrostatic pressure for a 0.50 m water column is 4,900 Pa.",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculated as p = 1,000 kg/m³ * 9.8 m/s² * 0.50 m = 4,900 Pa."
+  },
+  {
+    "item": "Hydrostatic pressure formula",
+    "claim": "Hydrostatic pressure is calculated as p = ρ × g × h.",
+    "source": "2",
+    "pass": true,
+    "note": "Standard physical formula for fluid pressure."
+  },
+  {
+    "item": "Quiz Answer 1 (English)",
+    "claim": "Water pressure increases with depth.",
+    "source": "2",
+    "pass": true,
+    "note": "Pressure in a fluid increases directly with depth."
+  },
+  {
+    "item": "Bilingual agreement",
+    "claim": "Indonesian terms and translations are consistent with the English context.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "Terminology and technical constants are correctly localized."
+  }
+]

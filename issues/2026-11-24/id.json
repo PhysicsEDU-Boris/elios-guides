@@ -1,0 +1,349 @@
+{
+  "_example": false,
+  "_issue": "11",
+  "_slug": "colombo-extreme-rainfall-and-floods",
+  "_theme": "water",
+  "_formula": "hydrostatic-pressure",
+  "_keywords": [
+    "flood",
+    "banjir",
+    "rain",
+    "hujan",
+    "wetland",
+    "drain"
+  ],
+  "_date": "2026-11-24",
+  "_lang": "id",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "Mongabay",
+      "title": "Extreme rainfalls flood Sri Lanka’s coastal city as wetlands, drains vanish",
+      "date": "2026-11-21",
+      "url": "https://news.mongabay.com/2026/11/extreme-rainfalls-flood-sri-lankas-coastal-city-as-wetlands-drains-vanish/",
+      "primary": false
+    },
+    {
+      "n": 2,
+      "publisher": "WMO",
+      "title": "Weather and water extremes",
+      "date": "2026-11-01",
+      "url": "https://wmo.int/topics/weather",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flooded_building_and_tree_trunk_in_the_muddy_water_of_the_Mekong_in_Si_Phan_Don%2C_Laos%2C_September_2019.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Basile Morin / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Red_Dragon_scuplture_during_River_Lee_flooding%2C_October_2023.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Podstawko / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 294,
+  "_graph.2.raw": 1176,
+  "_graph.3.raw": 4900,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Tekanan air meningkat seiring dengan bertambahnya kedalaman dan massa jenis fluida.",
+      "wrong": {
+        "a": "Massa jenis tidak diukur dalam pascal.",
+        "c": "Gravitasi bernilai tetap 9,8 m/s².",
+        "d": "Tekanan tidak berkurang pada kedalaman."
+      }
+    },
+    "2": {
+      "why": "h melambangkan kedalaman atau ketinggian kolom air dalam meter.",
+      "wrong": {
+        "b": "Waktu tidak ada dalam persamaan ini.",
+        "c": "Luas digunakan pada gaya per luas.",
+        "d": "Massa adalah m, bukan h."
+      }
+    },
+    "3": {
+      "why": "Lahan basah berfungsi sebagai spons alami yang menyerap dan menampung air hujan.",
+      "wrong": {
+        "a": "Menutup lahan basah dengan beton mempercepat aliran permukaan.",
+        "b": "Saluran lebih sempit menampung lebih sedikit air.",
+        "d": "Menghilangkan vegetasi mengurangi retensi air."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "Apa arti p dalam persamaan p = ρ × g × h?",
+      "options": [
+        "Daya",
+        "Tekanan",
+        "Periode",
+        "Lintasan"
+      ],
+      "answer": 1,
+      "explanation": "p adalah tekanan fluida."
+    },
+    {
+      "question": "Apa satuan SI untuk tekanan?",
+      "options": [
+        "Joule",
+        "Pascal",
+        "Newton",
+        "Watt"
+      ],
+      "answer": 1,
+      "explanation": "Tekanan diukur dalam pascal (Pa)."
+    },
+    {
+      "question": "Berapa nilai massa jenis air ρ kira-kira?",
+      "options": [
+        "1 kg/m³",
+        "10 kg/m³",
+        "100 kg/m³",
+        "1.000 kg/m³"
+      ],
+      "answer": 3,
+      "explanation": "Air murni memiliki massa jenis sekitar 1.000 kg/m³."
+    },
+    {
+      "question": "Jika kedalaman air h digandakan, tekanan p…",
+      "options": [
+        "menengah",
+        "tetap",
+        "berlipat ganda",
+        "empat kali"
+      ],
+      "answer": 2,
+      "explanation": "Tekanan meningkat sebanding dengan kedalaman."
+    },
+    {
+      "question": "Apa fungsi lahan basah perkotaan saat hujan deras?",
+      "options": [
+        "Menyerap dan menampung air sementara",
+        "Menghalangi hujan",
+        "Memanaskan kota",
+        "Menimbulkan angin"
+      ],
+      "answer": 0,
+      "explanation": "Lahan basah bertindak sebagai spons alami penahan banjir."
+    },
+    {
+      "question": "Apa arti g dalam tekanan hidrostatis?",
+      "options": [
+        "Gram",
+        "Konstanta gas",
+        "Gravitasi",
+        "Gradien"
+      ],
+      "answer": 2,
+      "explanation": "g adalah percepatan gravitasi (9,8 m/s²)."
+    },
+    {
+      "question": "Saluran air tua Kolombo dirancang untuk curah hujan per jam sebesar…",
+      "options": [
+        "30 mm",
+        "120 mm",
+        "300 mm",
+        "500 mm"
+      ],
+      "answer": 0,
+      "explanation": "Saluran lama mampu menampung sekitar 30 mm per jam."
+    },
+    {
+      "question": "Apa penyebab banjir kilat di Kolombo pada 6 Nov?",
+      "options": [
+        "Gempa bumi",
+        "Hujan intensitas sangat tinggi",
+        "Gunung meletus",
+        "Pencairan salju"
+      ],
+      "answer": 1,
+      "explanation": "Intensitas hujan ekstrem melampaui kapasitas saluran."
+    },
+    {
+      "question": "Berapa nilai standar g yang digunakan di sini?",
+      "options": [
+        "1,6 m/s²",
+        "9,8 m/s²",
+        "11,2 m/s²",
+        "98 m/s²"
+      ],
+      "answer": 1,
+      "explanation": "Gravitasi Bumi sekitar 9,8 m/s²."
+    },
+    {
+      "question": "Mengapa lahan basah mencegah banjir?",
+      "options": [
+        "Menyimpan air dan mengisi air tanah",
+        "Mendorong awan menjauh",
+        "Membekukan air",
+        "Menghentikan hujan"
+      ],
+      "answer": 0,
+      "explanation": "Lahan basah menampung dan menyerap air hujan."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "wadah transparan berisi air pada tanda kedalaman berbeda",
+      "penggaris untuk mengukur kedalaman air",
+      "catatan perubahan tekanan air"
+    ],
+    "safety": [
+      "tanpa cairan panas, tanpa risiko kaca pecah",
+      "hanya tangan dalam foto"
+    ],
+    "pass_if": "Foto menunjukkan pengukuran kedalaman air dan penjelasan tekanan bertambah seiring kedalaman."
+  },
+  "_per_page": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "_replace": {
+    "stop": [
+      [
+        "STOP",
+        "POS"
+      ]
+    ],
+    "page ref": [
+      [
+        "p.",
+        "hlm. "
+      ]
+    ]
+  },
+  "guide.issue_date": "#11 · 24 NOV 2026",
+  "guide.lang": "ID",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Edisi 11 · Banjir Kolombo dan Tekanan Air",
+  "cover.title": "Hujan ekstrem memicu banjir",
+  "cover.subtitle": "Saat hujan deras meluap melebihi saluran air tua dan lahan basah menyusut, air menggenang. Pelajari fisika tekanan fluida.",
+  "cover.image_caption": "Foto arsip · water",
+  "cover.news_date": "Berita: 21 Nov 2026",
+  "cover.place": "Kolombo, Sri Lanka",
+  "cover.topic": "Aliran air dan banjir",
+  "cover.subject": "Fisika · Tekanan",
+  "quest.1.desc": "Baca kisah banjir di Kolombo",
+  "quest.2.desc": "Hitung tekanan air p = ρgh",
+  "quest.3.desc": "Kuis, lab mini, dan lencana",
+  "cover.read_time": "12 mnt baca",
+  "cover.level": "SMP · kelas 7–9",
+  "cover.xp_total": "Raih hingga 60 XP",
+  "cover.fun_fact": "Kedalaman air 0,50 m memberikan tekanan besar 4.900 pascal di bawahnya!",
+  "story.title": "Saat saluran dan lahan basah lenyap",
+  "story.lead": "Pada 6 November, hujan deras merendam Kolombo dalam hitungan menit, membuat warga terjebak [1]. Saluran air tua tak mampu menampung hujan ekstrem [1].",
+  "story.image_caption": "Foto arsip · Red Dragon scuplture during River Lee flooding, October",
+  "story.image_credit": "Podstawko / Wikimedia Commons, CC BY-SA 4.0",
+  "stat.1.value": "120 mm",
+  "stat.2.value": "30 mm",
+  "stat.3.value": "37 %",
+  "stat.1.label": "curah hujan per jam saat banjir kilat",
+  "stat.2.label": "kapasitas per jam saluran air lama",
+  "stat.3.label": "air hujan ditahan lahan basah alami",
+  "story.body_1": "Air hujan mengalir deras di jalanan Kolombo ketika curah hujan melampaui 120 mm per jam [1]. Sistem drainase yang berusia seabad hanya dirancang menampung 30 mm per jam [1]. Pembangunan properti mengubah lahan basah dan ruang hijau, membuat air kehilangan tempat penyerapan [1].",
+  "story.body_2": "Lahan basah bertindak sebagai spons alami yang menampung kelebihan air dan melindungi kota [1]. Pakar lingkungan mengingatkan pemugaran lahan basah dan drainase sangat penting bagi ketahanan iklim perkotaan [1].",
+  "timeline.1.date": "Sebelum Hujan",
+  "timeline.2.date": "Hujan Deras",
+  "timeline.3.date": "Banjir",
+  "timeline.1.text": "Lahan basah dan saluran air siap menampung air.",
+  "timeline.2.text": "Hujan turun lebih cepat dari kemampuan saluran.",
+  "timeline.3.text": "Air menggenang di jalan, menciptakan tekanan besar.",
+  "physics.title": "Tekanan air dan kedalaman",
+  "physics.body_1": "Air yang tergenang memberikan tekanan pada benda di bawahnya. Semakin dalam air, semakin besar pula tekanan yang menekan ke bawah dan kesamping [2].",
+  "physics.body_2": "Tekanan fluida bergantung pada massa jenis air, gravitasi, dan kedalaman. Hubungan ini dihitung menggunakan persamaan tekanan hidrostatis [2].",
+  "physics.equation": "p = ρ × g × h",
+  "physics.equation_name": "Persamaan tekanan hidrostatis",
+  "legend.1.symbol": "p",
+  "legend.1.meaning": "tekanan",
+  "legend.1.unit": "pascal (Pa)",
+  "legend.2.symbol": "ρ",
+  "legend.2.meaning": "massa jenis",
+  "legend.2.unit": "kg/m³",
+  "legend.3.symbol": "g",
+  "legend.3.meaning": "gravitasi",
+  "legend.3.unit": "9,8 m/s²",
+  "legend.4.symbol": "h",
+  "legend.4.meaning": "kedalaman",
+  "legend.4.unit": "meter (m)",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "Kami menganggap massa jenis air tetap dan mengabaikan tekanan udara pada kolom fluida.",
+  "example.step_1": "h=0,03m, ρ=1000 kg/m³, g=9,8",
+  "example.step_2": "p = 1.000 × 9,8 × 0,03",
+  "example.step_3": "Kalikan: p = 294 Pa",
+  "example.result": "p = 294 Pa",
+  "table.h1": "Kondisi Air",
+  "table.h2": "Kedalaman h (m)",
+  "table.h3": "Tekanan p (Pa)",
+  "table.r1c1": "Kapasitas drainase",
+  "table.r1c2": "0,03",
+  "table.r1c3": "294 Pa",
+  "table.r2c1": "Hujan deras",
+  "table.r2c2": "0,12",
+  "table.r2c3": "1.176 Pa",
+  "table.r3c1": "Banjir jalan",
+  "table.r3c2": "0,50",
+  "table.r3c3": "4.900 Pa",
+  "table.note": "Kedalaman besar menciptakan tekanan air yang tinggi.",
+  "graph.title": "Kenaikan tekanan dengan kedalaman air",
+  "graph.1.label": "Drainase",
+  "graph.2.label": "Hujan",
+  "graph.3.label": "Banjir",
+  "graph.1.value": "294 Pa",
+  "graph.2.value": "1.176 Pa",
+  "graph.3.value": "4.900 Pa",
+  "graph.note": "Tekanan air meningkat cepat seiring bertambahnya kedalaman banjir.",
+  "physics.tip": "Lipat gandakan kedalaman, lipat gandakan tekanan! Berat air menekan kuat permukaan bawah.",
+  "mission.title": "Misi pertahanan banjir",
+  "quiz.answer_key": "Kunci: 1B · 2A · 3C",
+  "quiz.1.question": "Apa yang terjadi pada tekanan air saat kedalaman bertambah?",
+  "quiz.1.a": "Menurun",
+  "quiz.1.b": "Meningkat",
+  "quiz.1.c": "Tetap nol",
+  "quiz.1.d": "Lenyap",
+  "quiz.2.question": "Dalam p = ρ × g × h, apakah arti dari h?",
+  "quiz.2.a": "Kedalaman atau tinggi",
+  "quiz.2.b": "Waktu",
+  "quiz.2.c": "Luas",
+  "quiz.2.d": "Massa",
+  "quiz.3.question": "Tindakan apa yang membantu kota pesisir tahan banjir?",
+  "quiz.3.a": "Menurap semua lahan basah",
+  "quiz.3.b": "Menyempitkan saluran air",
+  "quiz.3.c": "Melindungi lahan basah",
+  "quiz.3.d": "Menebang pohon",
+  "lab.title": "Uji kedalaman dan tekanan air",
+  "lab.step_1": "Isi botol plastik tinggi transparan dengan air hingga tanda kedalaman berbeda.",
+  "lab.step_2": "Ukur tinggi h menggunakan penggaris.",
+  "lab.step_3": "Hitung p = ρgh untuk setiap kedalaman dengan 1.000 kg/m³.",
+  "lab.question": "Bagaimana tekanan air berubah saat kedalaman bertambah?",
+  "badge.name": "Penjaga Banjir",
+  "badge.text": "Anda menguasai tekanan air dan fisika banjir perkotaan.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Tekanan hidrostatis",
+  "glossary.2.term": "Lahan basah",
+  "glossary.3.term": "Banjir kilat",
+  "glossary.1.def": "Tekanan yang diberikan fluida diam akibat gaya gravitasi.",
+  "glossary.2.def": "Wilayah daratan jenuh air yang bertindak sebagai spons alami.",
+  "glossary.3.def": "Banjir mendadak akibat hujan lebat dalam waktu singkat.",
+  "label.sources": "Sumber",
+  "source.1": "[1] Mongabay, Extreme rainfalls flood Sri Lanka’s coastal city as wetlands, drains vanish, 21 Nov 2026",
+  "source.2": "[2] WMO, Weather and water extremes, 1 Nov 2026",
+  "source.3": "",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Foto: Wikimedia Commons dan arsip domain publik. Diagram oleh ELIOS."
+}
