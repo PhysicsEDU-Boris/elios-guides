@@ -1,0 +1,331 @@
+{
+  "_issue": "11",
+  "_slug": "indonesia-wildfire-smoke-and-heatwaves",
+  "_theme": "heat",
+  "_formula": "stefan-boltzmann",
+  "_keywords": [
+    "smoke",
+    "heatwave",
+    "asap",
+    "panas",
+    "wildfire",
+    "kebakaran"
+  ],
+  "_date": "2026-11-25",
+  "_lang": "id",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "Mongabay",
+      "title": "Study reveals rising ‘double threat’ of wildfire smoke and heatwaves in Indonesia",
+      "date": "2026-11-25",
+      "url": "https://news.mongabay.com/2026/11/study-reveals-rising-double-threat-of-wildfire-smoke-and-heatwaves-in-indonesia/",
+      "primary": false
+    },
+    {
+      "n": 2,
+      "publisher": "Copernicus Atmosphere Monitoring Service",
+      "title": "Global Fire Monitoring",
+      "date": "2026-11-25",
+      "url": "https://atmosphere.copernicus.eu/global-fire-monitoring",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Heat_and_smoke_vents_and_icicles_%2801%29.jpg",
+      "license": "CC0",
+      "credit": "Georg Pik / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/VENTZ_control_panel_for_heat_and_smoke_vents_%2802%29.jpg",
+      "license": "CC0",
+      "credit": "Georg Pik / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 459.3,
+  "_graph.2.raw": 523.6,
+  "_graph.3.raw": 594.5,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "T adalah suhu mutlak yang diukur dalam satuan kelvin.",
+      "wrong": {
+        "a": "Celsius tidak digunakan dalam pangkat empat T.",
+        "c": "Waktu tidak ada dalam rumus ini.",
+        "d": "A adalah luas permukaan."
+      }
+    },
+    "2": {
+      "why": "Kombinasi asap dan panas ekstrem membebani jantung dan paru-paru sekaligus.",
+      "wrong": {
+        "b": "Asap tidak mendinginkan udara.",
+        "c": "Kedua bahaya terjadi sepanjang hari.",
+        "d": "Keduanya meningkatkan tekanan termal."
+      }
+    },
+    "3": {
+      "why": "Suhu mutlak dalam kelvin wajib digunakan dalam perhitungan radiasi daya.",
+      "wrong": {
+        "a": "Celsius gagal dalam rasio daya mutlak.",
+        "b": "Fahrenheit bukan standar rumus fisika.",
+        "d": "Reaumur sudah usang."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "Dalam P = σ × A × T⁴, apakah arti σ?",
+      "options": [
+        "Konstanta Stefan-Boltzmann",
+        "Kecepatan cahaya",
+        "Luas permukaan",
+        "Kalor jenis"
+      ],
+      "answer": 0,
+      "explanation": "σ adalah konstanta Stefan-Boltzmann."
+    },
+    {
+      "question": "Apakah satuan daya radiasi P?",
+      "options": [
+        "Joule",
+        "Watt",
+        "Pascal",
+        "Newton"
+      ],
+      "answer": 1,
+      "explanation": "Daya diukur dalam watt (W)."
+    },
+    {
+      "question": "Jika suhu mutlak T dilipatgandakan, daya radiasi meningkat sebesar...",
+      "options": [
+        "2 kali",
+        "4 kali",
+        "8 kali",
+        "16 kali"
+      ],
+      "answer": 3,
+      "explanation": "2 pangkat empat adalah 16."
+    },
+    {
+      "question": "Skala suhu apa yang harus digunakan untuk T dalam hukum Stefan-Boltzmann?",
+      "options": [
+        "Celsius",
+        "Fahrenheit",
+        "Kelvin",
+        "Rankine"
+      ],
+      "answer": 2,
+      "explanation": "Suhu mutlak harus dalam kelvin."
+    },
+    {
+      "question": "Mengapa gelombang panas dan asap karhutla sering terjadi bersamaan?",
+      "options": [
+        "Cuaca panas dan kering memicu kebakaran hutan",
+        "Api membuat es",
+        "Angin membekukan pohon",
+        "Hujan menyebabkan panas"
+      ],
+      "answer": 0,
+      "explanation": "Kondisi panas dan kering menciptakan risiko kebakaran dan suhu ekstrem."
+    },
+    {
+      "question": "Apa arti A dalam rumus radiasi?",
+      "options": [
+        "Tekanan udara",
+        "Luas permukaan",
+        "Percepatan",
+        "Ketinggian"
+      ],
+      "answer": 1,
+      "explanation": "A merepresentasikan luas permukaan pemancar radiasi."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "dua kertas, satu gelap dan satu terang, diletakkan dekat jendela cerah",
+      "tangan menguji suhu setelah 15 menit",
+      "perbandingan kehangatan yang diserap"
+    ],
+    "safety": [
+      "tanpa nyala api, tanpa air panas, tanpa listrik utama",
+      "hanya tangan dalam foto"
+    ],
+    "pass_if": "Foto menunjukkan kedua kertas di bawah matahari dan siswa menguji kehangatannya."
+  },
+  "_per_page": [
+    {
+      "guide.stop_label": "Sampul"
+    },
+    {
+      "guide.stop_label": "Pos 1 · Ceritanya",
+      "section.label": "POS 1 · CERITANYA",
+      "section.xp": "+10 XP UNTUK MEMBACA"
+    },
+    {
+      "guide.stop_label": "Pos 2 · Fisikanya",
+      "section.label": "POS 2 · FISIKANYA",
+      "section.xp": "+20 XP UNTUK MENJAWAB"
+    },
+    {
+      "guide.stop_label": "Pos 3 · Misimu",
+      "section.label": "POS 3 · MISIMU",
+      "section.xp": "+30 XP UNTUK DIRAIH"
+    }
+  ],
+  "_replace": {
+    "stop": [
+      [
+        "STOP",
+        "POS"
+      ]
+    ],
+    "page ref": [
+      [
+        "p.",
+        "hlm. "
+      ]
+    ]
+  },
+  "guide.issue_date": "#11 · 25 NOV 2026",
+  "guide.lang": "ID",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Edisi 11 · 25 November 2026",
+  "cover.title": "Asap karhutla & gelombang panas",
+  "cover.subtitle": "Studi baru mengungkap ancaman ganda asap dan panas ekstrem di Indonesia. Pelajari suhu dan daya radiasi.",
+  "cover.image_caption": "Foto arsip · heat",
+  "cover.news_date": "Berita: 25 Nov 2026",
+  "cover.place": "Indonesia",
+  "cover.topic": "Karhutla & panas",
+  "cover.subject": "Fisika · Radiasi",
+  "quest.1.desc": "Baca tentang ancaman ganda",
+  "quest.2.desc": "Gunakan hukum Stefan-Boltzmann",
+  "quest.3.desc": "Kuis, lab mini, dan lencana",
+  "cover.read_time": "12 hlm baca",
+  "cover.level": "SMP · kelas 7–9",
+  "cover.xp_total": "Raih hingga 60 XP",
+  "cover.fun_fact": "Benda pada suhu mutlak yang lebih tinggi memancarkan energi sebanding dengan pangkat empat suhu (T⁴).",
+  "story.title": "Ancaman ganda yang meningkat di Indonesia",
+  "story.lead": "Studi besar di Science Advances menunjukkan jutaan warga di Indonesia menghadapi asap karhutla dan gelombang panas bersamaan [1]. Panas ekstrem dan kabut asap mengancam kesehatan [2].",
+  "story.image_caption": "Foto arsip · VENTZ control panel for heat and smoke vents",
+  "story.image_credit": "Georg Pik / Wikimedia Commons, CC0",
+  "stat.1.value": "101 jt",
+  "stat.2.value": "42",
+  "stat.3.value": "5.200",
+  "stat.1.label": "penduduk terdampak tiap tahun di Indonesia (2010–2019)",
+  "stat.2.label": "hari paparan gelombang panas per orang per tahun",
+  "stat.3.label": "estimasi kematian berlebih saat puncak kabut asap",
+  "story.body_1": "Peneliti Universitas Monash menganalisis data 20 tahun, mengungkap ancaman ganda asap kebakaran dan gelombang panas [1]. Indonesia tertinggi dalam paparan tahunan, rata-rata 101 juta orang terdampak tiap tahun [1]. Kondisi kering dan El Niño memperparah kedua bahaya, menyelimuti wilayah seperti Kalimantan Tengah dengan kabut asap [1].",
+  "story.body_2": "Pada tahun 2026, jutaan orang menghirup udara berbahaya sambil menahan gelombang panas parah, memicu ratusan ribu kasus infeksi saluran pernapasan akut [1]. Pakar kesehatan memperingatkan bahwa gabungan hirupan asap dan tekanan termal meningkatkan risiko kardiovaskular dan pernapasan secara tajam [1].",
+  "timeline.1.date": "Musim Kemarau",
+  "timeline.2.date": "Puncak Api",
+  "timeline.3.date": "Ancaman Ganda",
+  "timeline.1.text": "Suhu naik dan kondisi kering memicu kebakaran hutan.",
+  "timeline.2.text": "Asap tebal menyelimuti kota dan permukiman.",
+  "timeline.3.text": "Gelombang panas dan asap menguji kesehatan masyarakat.",
+  "physics.title": "Daya radiasi dan suhu",
+  "physics.body_1": "Benda panas memancarkan radiasi termal ke sekitarnya. Total daya yang dipancarkan oleh suatu permukaan bergantung pada luasnya, suhunya, dan konstanta fundamental.",
+  "physics.body_2": "Dalam rumus ini, P adalah daya radiasi dalam watt, σ adalah konstanta Stefan-Boltzmann, A adalah luas permukaan dalam meter persegi, dan T adalah suhu mutlak dalam kelvin.",
+  "physics.equation": "P = σ × A × T⁴",
+  "physics.equation_name": "Hukum Stefan–Boltzmann",
+  "legend.1.symbol": "P",
+  "legend.1.meaning": "daya radiasi",
+  "legend.1.unit": "watt (W)",
+  "legend.2.symbol": "σ",
+  "legend.2.meaning": "konstanta Stefan–Boltzmann",
+  "legend.2.unit": "W/m²·K⁴",
+  "legend.3.symbol": "A",
+  "legend.3.meaning": "luas permukaan",
+  "legend.3.unit": "m²",
+  "legend.4.symbol": "T",
+  "legend.4.meaning": "suhu mutlak",
+  "legend.4.unit": "kelvin (K)",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "Kami berasumsi pemancar benda hitam dengan emisivitas sama dengan 1 dan suhu permukaan seragam.",
+  "example.step_1": "A = 1 m², T = 300 K, σ = 5,67×10⁻⁸",
+  "example.step_2": "P = 5,67e-8 × 1 × (300)⁴",
+  "example.step_3": "Hitung: P = 459,3 W",
+  "example.result": "P = 459,3 W",
+  "table.h1": "Suhu (K)",
+  "table.h2": "Luas (m²)",
+  "table.h3": "Daya Radiasi (W)",
+  "table.r1c1": "300 K",
+  "table.r1c2": "1 m²",
+  "table.r1c3": "459,3 W",
+  "table.r2c1": "310 K",
+  "table.r2c2": "1 m²",
+  "table.r2c3": "523,6 W",
+  "table.r3c1": "320 K",
+  "table.r3c2": "1 m²",
+  "table.r3c3": "594,5 W",
+  "table.note": "Suhu lebih tinggi meningkatkan daya radiasi lewat T⁴.",
+  "graph.title": "Daya radiasi pada berbagai suhu",
+  "graph.1.label": "300 K",
+  "graph.2.label": "310 K",
+  "graph.3.label": "320 K",
+  "graph.1.value": "459,3 W",
+  "graph.2.value": "523,6 W",
+  "graph.3.value": "594,5 W",
+  "graph.note": "Kenaikan kecil suhu mutlak menyebabkan peningkatan besar pada energi radiasi.",
+  "physics.tip": "Karena suhu dinaikkan ke pangkat empat dalam T⁴, pemanasan kecil pun sangat meningkatkan radiasi termal.",
+  "mission.title": "Misi karhutla dan panas",
+  "quiz.answer_key": "Kunci: 1B · 2A · 3C",
+  "quiz.1.question": "Dalam hukum Stefan-Boltzmann P = σ × A × T⁴, apakah arti T?",
+  "quiz.1.a": "Suhu Celsius",
+  "quiz.1.b": "Suhu mutlak dalam kelvin",
+  "quiz.1.c": "Waktu dalam detik",
+  "quiz.1.d": "Luas permukaan",
+  "quiz.2.question": "Mengapa asap karhutla dan gelombang panas dianggap ancaman ganda?",
+  "quiz.2.a": "Keduanya membebani jantung",
+  "quiz.2.b": "Asap mendinginkan udara",
+  "quiz.2.c": "Hanya terjadi malam hari",
+  "quiz.2.d": "Keduanya menurunkan suhu",
+  "quiz.3.question": "Skala suhu apa yang harus dipakai dalam perhitungan T⁴?",
+  "quiz.3.a": "Celsius",
+  "quiz.3.b": "Fahrenheit",
+  "quiz.3.c": "Kelvin",
+  "quiz.3.d": "Reaumur",
+  "lab.title": "Uji kehangatan dan radiasi",
+  "lab.step_1": "Letakkan kertas gelap dan terang di dekat jendela cerah selama 15 menit.",
+  "lab.step_2": "Raba suhu kedua kertas dengan hati-hati menggunakan tangan.",
+  "lab.step_3": "Bandingkan seberapa banyak kalor yang diserap masing-masing kertas.",
+  "lab.question": "Kertas mana yang menyerap lebih banyak energi radiasi dan terasa lebih hangat?",
+  "badge.name": "Penjaga Iklim",
+  "badge.text": "Selesai belajar asap karhutla dan radiasi.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Gelombang panas",
+  "glossary.1.def": "Periode cuaca sangat panas yang berlangsung selama beberapa hari.",
+  "glossary.2.term": "Daya radiasi",
+  "glossary.2.def": "Energi yang dipancarkan per detik oleh benda.",
+  "glossary.3.term": "Paparan ganda",
+  "glossary.3.def": "Mengalami dua bahaya lingkungan secara bersamaan.",
+  "label.sources": "Sumber & Referensi",
+  "source.1": "[1] Mongabay (2026): Study reveals rising double threat of wildfire smoke and heatwaves in Indonesia",
+  "source.2": "[2] Copernicus Atmosphere Monitoring Service (2026): Global Fire Monitoring",
+  "source.3": "",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Ilustrasi sampul dan cerita oleh ELIOS",
+  "label.quest_map": "PETA MISIMU",
+  "label.fun_fact": "TAHUKAH KAMU?",
+  "label.timeline": "LINIMASA",
+  "label.equation": "PERSAMAAN KUNCI",
+  "label.example": "CONTOH SOAL",
+  "label.graph": "GRAFIK",
+  "label.tip": "KATA BULB BUDDY",
+  "label.quiz": "KUIS KILAT · 3 SOAL · CENTANG SATU KOTAK",
+  "label.lab": "LAB MINI · COBA DI RUMAH ATAU SEKOLAH",
+  "label.badge": "LENCANA TERBUKA",
+  "quest.1.title": "Ceritanya",
+  "quest.2.title": "Fisikanya",
+  "quest.3.title": "Misimu"
+}

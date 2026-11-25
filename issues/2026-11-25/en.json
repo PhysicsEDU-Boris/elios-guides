@@ -1,0 +1,291 @@
+{
+  "_issue": "11",
+  "_slug": "indonesia-wildfire-smoke-and-heatwaves",
+  "_theme": "heat",
+  "_formula": "stefan-boltzmann",
+  "_keywords": [
+    "smoke",
+    "heatwave",
+    "asap",
+    "panas",
+    "wildfire",
+    "kebakaran"
+  ],
+  "_date": "2026-11-25",
+  "_lang": "en",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "Mongabay",
+      "title": "Study reveals rising ‘double threat’ of wildfire smoke and heatwaves in Indonesia",
+      "date": "2026-11-25",
+      "url": "https://news.mongabay.com/2026/11/study-reveals-rising-double-threat-of-wildfire-smoke-and-heatwaves-in-indonesia/",
+      "primary": false
+    },
+    {
+      "n": 2,
+      "publisher": "Copernicus Atmosphere Monitoring Service",
+      "title": "Global Fire Monitoring",
+      "date": "2026-11-25",
+      "url": "https://atmosphere.copernicus.eu/global-fire-monitoring",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Heat_and_smoke_vents_and_icicles_%2801%29.jpg",
+      "license": "CC0",
+      "credit": "Georg Pik / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/VENTZ_control_panel_for_heat_and_smoke_vents_%2802%29.jpg",
+      "license": "CC0",
+      "credit": "Georg Pik / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 459.3,
+  "_graph.2.raw": 523.6,
+  "_graph.3.raw": 594.5,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "T stands for absolute temperature measured in kelvin.",
+      "wrong": {
+        "a": "Celsius is not used in T to the fourth power.",
+        "c": "Time is not in this formula.",
+        "d": "A stands for surface area."
+      }
+    },
+    "2": {
+      "why": "Simultaneous smoke and extreme heat stress both heart and lungs.",
+      "wrong": {
+        "b": "Smoke does not cool the air down.",
+        "c": "Both hazards occur throughout the day.",
+        "d": "They increase thermal stress."
+      }
+    },
+    "3": {
+      "why": "Absolute temperature in kelvin is required for power radiation calculations.",
+      "wrong": {
+        "a": "Celsius fails absolute power ratios.",
+        "b": "Fahrenheit is not standard in physics formulas.",
+        "d": "Reaumur is obsolete."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "In P = σ × A × T⁴, what does σ represent?",
+      "options": [
+        "Stefan-Boltzmann constant",
+        "Speed of light",
+        "Surface area",
+        "Specific heat"
+      ],
+      "answer": 0,
+      "explanation": "σ is the Stefan-Boltzmann constant."
+    },
+    {
+      "question": "What is the unit of radiated power P?",
+      "options": [
+        "Joule",
+        "Watt",
+        "Pascal",
+        "Newton"
+      ],
+      "answer": 1,
+      "explanation": "Power is measured in watts (W)."
+    },
+    {
+      "question": "If you double the absolute temperature T, radiated power increases by a factor of...",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "16"
+      ],
+      "answer": 3,
+      "explanation": "2 to the fourth power is 16."
+    },
+    {
+      "question": "What scale must be used for T in the Stefan-Boltzmann law?",
+      "options": [
+        "Celsius",
+        "Fahrenheit",
+        "Kelvin",
+        "Rankine"
+      ],
+      "answer": 2,
+      "explanation": "Absolute temperature must be in kelvin."
+    },
+    {
+      "question": "Why do heatwaves and wildfire smoke often happen together?",
+      "options": [
+        "Hot dry weather dries out vegetation and sparks fires",
+        "Fires make ice",
+        "Wind freezes trees",
+        "Rain causes heat"
+      ],
+      "answer": 0,
+      "explanation": "Hot, dry conditions create high fire risk and extreme heat."
+    },
+    {
+      "question": "What does A stand for in the radiation formula?",
+      "options": [
+        "Air pressure",
+        "Surface area",
+        "Acceleration",
+        "Altitude"
+      ],
+      "answer": 1,
+      "explanation": "A represents the surface area emitting radiation."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "two papers, one dark and one light, placed near a sunny window",
+      "hands testing temperature after 15 minutes",
+      "comparison of warmth absorbed"
+    ],
+    "safety": [
+      "no flame, no hot liquids, no mains electricity",
+      "only hands in the photo"
+    ],
+    "pass_if": "The photos show both papers in the sun and the student testing their warmth."
+  },
+  "_per_page": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "_replace": {},
+  "guide.issue_date": "#11 · 25 NOV 2026",
+  "guide.lang": "EN",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Issue 11 · 25 November 2026",
+  "cover.title": "Wildfire smoke and heatwaves",
+  "cover.subtitle": "A new study reveals a rising double threat of smoke and extreme heat across Indonesia. Explore how temperatures and radiated power work.",
+  "cover.image_caption": "Archive photo · heat",
+  "cover.news_date": "News: 25 Nov 2026",
+  "cover.place": "Indonesia",
+  "cover.topic": "Wildfires & heatwaves",
+  "cover.subject": "Physics · Radiation",
+  "quest.1.desc": "Read about the double threat",
+  "quest.2.desc": "Use the Stefan-Boltzmann law",
+  "quest.3.desc": "Quiz, mini lab and badge",
+  "cover.read_time": "12 min read",
+  "cover.level": "SMP · grade 7–9",
+  "cover.xp_total": "Earn up to 60 XP",
+  "cover.fun_fact": "Objects at higher absolute temperature radiate energy proportional to the fourth power of temperature (T⁴).",
+  "story.title": "The rising double threat in Indonesia",
+  "story.lead": "A major study in Science Advances shows millions in Indonesia face simultaneous wildfire smoke and heatwaves [1]. Extreme heat and haze strain public health [2].",
+  "story.image_caption": "Archive photo · VENTZ control panel for heat and smoke vents",
+  "story.image_credit": "Georg Pik / Wikimedia Commons, CC0",
+  "stat.1.value": "101M",
+  "stat.2.value": "42",
+  "stat.3.value": "5,200",
+  "stat.1.label": "people affected annually in Indonesia (2010–2019)",
+  "stat.2.label": "heatwave exposure days per person per year",
+  "stat.3.label": "estimated excess deaths during peak haze months",
+  "story.body_1": "Monash University scientists analyzed 20 years of data, revealing a global double threat of wildfire smoke and heatwaves [1]. Indonesia ranks highest in population co-exposure, averaging 101 million people affected annually [1]. Dry conditions and El Niño amplify both hazards, blanketing regions like Central Kalimantan in thick haze [1].",
+  "story.body_2": "In 2026, millions breathed hazardous air while enduring severe heatwaves, causing hundreds of thousands of acute respiratory infections [1]. Public health experts warn that combining smoke inhalation and thermal stress sharply increases cardiovascular and respiratory risks, especially for vulnerable populations [1].",
+  "timeline.1.date": "Dry Season",
+  "timeline.2.date": "Peak Fire",
+  "timeline.3.date": "Double Threat",
+  "timeline.1.text": "Temperatures rise and dry conditions trigger wildfires.",
+  "timeline.2.text": "Thick smoke blankets towns and cities across regions.",
+  "timeline.3.text": "Heatwaves and smoke combine to stress public health.",
+  "physics.title": "Radiated power and temperature",
+  "physics.body_1": "Hot objects emit thermal radiation into their surroundings. The total power radiated by a surface depends on its area, its temperature, and fundamental constants.",
+  "physics.body_2": "In this stretch formula, P is the radiated power in watts, σ is the Stefan-Boltzmann constant, A is the surface area in square metres, and T is the absolute temperature in kelvin.",
+  "physics.equation": "P = σ × A × T⁴",
+  "physics.equation_name": "Stefan–Boltzmann law",
+  "legend.1.symbol": "P",
+  "legend.1.meaning": "radiated power",
+  "legend.1.unit": "watt (W)",
+  "legend.2.symbol": "σ",
+  "legend.2.meaning": "Stefan–Boltzmann constant",
+  "legend.2.unit": "W/m²·K⁴",
+  "legend.3.symbol": "A",
+  "legend.3.meaning": "surface area",
+  "legend.3.unit": "m²",
+  "legend.4.symbol": "T",
+  "legend.4.meaning": "absolute temperature",
+  "legend.4.unit": "kelvin (K)",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "We assume a blackbody emitter with emissivity equal to 1 and uniform surface temperature.",
+  "example.step_1": "A = 1 m², T = 300 K, σ = 5.67×10⁻⁸",
+  "example.step_2": "P = 5.67e-8 × 1 × (300)⁴",
+  "example.step_3": "Calculate: P = 459.3 W",
+  "example.result": "P = 459.3 W",
+  "table.h1": "Temperature (K)",
+  "table.h2": "Area (m²)",
+  "table.h3": "Radiated Power (W)",
+  "table.r1c1": "300 K",
+  "table.r1c2": "1 m²",
+  "table.r1c3": "459.3 W",
+  "table.r2c1": "310 K",
+  "table.r2c2": "1 m²",
+  "table.r2c3": "523.6 W",
+  "table.r3c1": "320 K",
+  "table.r3c2": "1 m²",
+  "table.r3c3": "594.5 W",
+  "table.note": "Higher temperature raises radiated power via T⁴.",
+  "graph.title": "Radiated power at different temperatures",
+  "graph.1.label": "300 K",
+  "graph.2.label": "310 K",
+  "graph.3.label": "320 K",
+  "graph.1.value": "459.3 W",
+  "graph.2.value": "523.6 W",
+  "graph.3.value": "594.5 W",
+  "graph.note": "A small rise in absolute temperature causes a large increase in radiated energy.",
+  "physics.tip": "Because temperature is raised to the fourth power in T⁴, even a slight warming greatly increases thermal radiation.",
+  "mission.title": "Wildfire and heat mission",
+  "quiz.answer_key": "Answer key: 1B · 2A · 3C",
+  "quiz.1.question": "In the Stefan-Boltzmann law P = σ × A × T⁴, what does T represent?",
+  "quiz.1.a": "Celsius temperature",
+  "quiz.1.b": "Absolute temperature in kelvin",
+  "quiz.1.c": "Time in seconds",
+  "quiz.1.d": "Surface area",
+  "quiz.2.question": "Why is wildfire smoke combined with heatwaves considered a double threat?",
+  "quiz.2.a": "Both stress heart and lungs",
+  "quiz.2.b": "Smoke cools the air down",
+  "quiz.2.c": "They only happen at night",
+  "quiz.2.d": "They decrease temperatures",
+  "quiz.3.question": "What temperature scale must be used in T⁴ calculations?",
+  "quiz.3.a": "Celsius",
+  "quiz.3.b": "Fahrenheit",
+  "quiz.3.c": "Kelvin",
+  "quiz.3.d": "Reaumur",
+  "lab.title": "Warmth and radiation test",
+  "lab.step_1": "Place a dark paper and a light paper near a sunny window for 15 minutes.",
+  "lab.step_2": "Feel the temperature of both papers carefully with your hand.",
+  "lab.step_3": "Compare how much heat each paper absorbed from sunlight.",
+  "lab.question": "Which paper absorbed more radiant energy and felt warmer?",
+  "badge.name": "Climate & Heat",
+  "badge.text": "Completed the guide on smoke, heatwaves, and radiation.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Heatwave",
+  "glossary.1.def": "A period of abnormally hot weather lasting several days.",
+  "glossary.2.term": "Radiated power",
+  "glossary.2.def": "Energy emitted per second by an object as electromagnetic waves.",
+  "glossary.3.term": "Co-exposure",
+  "glossary.3.def": "Experiencing two environmental hazards at the same time.",
+  "label.sources": "Sources & References",
+  "source.1": "[1] Mongabay (2026): Study reveals rising double threat of wildfire smoke and heatwaves in Indonesia",
+  "source.2": "[2] Copernicus Atmosphere Monitoring Service (2026): Global Fire Monitoring",
+  "source.3": "",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Cover and story illustrations by ELIOS"
+}

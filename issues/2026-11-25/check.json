@@ -1,0 +1,44 @@
+[
+  {
+    "item": "Indonesia population co-exposure",
+    "claim": "Indonesia averaged 101 million people affected annually by wildfire smoke and heatwaves in 2010-2019.",
+    "source": "1",
+    "pass": true,
+    "note": "The study from Monash University confirmed this figure for the 2010-2019 period."
+  },
+  {
+    "item": "Heatwave exposure days in Indonesia",
+    "claim": "Average heatwave exposure days per person per year in Indonesia more than doubled from about 17 days in 2000-2009 to 42 days in 2010-2019.",
+    "source": "1",
+    "pass": true,
+    "note": "Data from the study confirms the increase from 17 to 42 days."
+  },
+  {
+    "item": "Excess deaths from haze",
+    "claim": "Short-term exposure to fine-particle pollution from Indonesia's wildfires contributed to an estimated 5,200 deaths in August and September 2026.",
+    "source": "1",
+    "pass": true,
+    "note": "Figure cited by the Centre for Research on Energy and Clean Air (CREA) is 5,200."
+  },
+  {
+    "item": "Stefan-Boltzmann calculation",
+    "claim": "At A=1m² and T=300K, the radiated power P is 459.3 W.",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculation: 5.67e-8 * 1 * (300^4) = 459.27, rounded to 459.3."
+  },
+  {
+    "item": "Quiz Question 1",
+    "claim": "In the Stefan-Boltzmann law P = σ × A × T⁴, what does T represent?",
+    "source": "1",
+    "pass": true,
+    "note": "Correct answer is Absolute temperature in kelvin."
+  },
+  {
+    "item": "Bilingual agreement",
+    "claim": "Indonesian labels match the structure and content of English labels.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "All required labels, page markers, and formatting constraints are met."
+  }
+]
