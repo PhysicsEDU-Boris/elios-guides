@@ -1,0 +1,317 @@
+{
+  "_example": true,
+  "_issue": "11",
+  "_slug": "indonesia-wildfire-pangolin-speed",
+  "_theme": "air",
+  "_formula": "speed",
+  "_keywords": [
+    "trenggiling",
+    "karhutla",
+    "banjarbaru",
+    "speed"
+  ],
+  "_date": "2026-11-26",
+  "_lang": "id",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "Mongabay Indonesia",
+      "title": "Trenggiling Masuk Pemukiman di Banjarbaru, Korban Karhutla?",
+      "date": "2026-11-23",
+      "url": "https://mongabay.co.id/2026/11/23/trenggiling-masuk-pemukiman-di-banjarbaru-korban-karhutla/",
+      "primary": false
+    },
+    {
+      "n": 2,
+      "publisher": "BMKG",
+      "title": "Cuaca dan Informasi Kebakaran Hutan",
+      "date": "2026-11-23",
+      "url": "https://www.bmkg.go.id/",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Buah_Jambu_Air_D%27Legenda_Banjarbaru.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Malamilai / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Aliran_Sungai_menuju_Desa_dari_dalam_kawasan_Suaka_Margasatwa_Isau-Isau_by_taufankharis.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Taufankharis / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 0.33,
+  "_graph.2.raw": 0.5,
+  "_graph.3.raw": 0.2,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Kelajuan didefinisikan sebagai jarak tempuh dibagi waktu tempuh.",
+      "wrong": {
+        "a": "Mengalikan jarak dengan waktu bukan rumus kelajuan.",
+        "c": "Waktu dibagi jarak adalah kebalikan dari kelajuan.",
+        "d": "Mengalikan massa dengan kelajuan adalah momentum."
+      }
+    },
+    "2": {
+      "why": "900 meter dibagi 1.800 detik sama dengan 0,50 meter per detik.",
+      "wrong": {
+        "b": "2,00 m/s adalah hasil hitung yang salah.",
+        "c": "1.800 m/s terlalu cepat untuk hewan darat.",
+        "d": "0,02 m/s terlalu lambat."
+      }
+    },
+    "3": {
+      "why": "Kebakaran hutan dan asap merusak habitat alami, memaksa satwa mengungsi ke pemukiman [1].",
+      "wrong": {
+        "a": "Satwa tidak mengunjungi taman kota untuk rekreasi.",
+        "b": "Satwa tidak mencari kendaraan bermotor.",
+        "d": "Satwa tidak berenang di kolam."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "Apa satuan standar untuk kelajuan dalam fisika?",
+      "options": [
+        "Meter per detik (m/s)",
+        "Joule (J)",
+        "Kilogram (kg)",
+        "Newton (N)"
+      ],
+      "answer": 0,
+      "explanation": "Kelajuan diukur dalam meter per detik."
+    },
+    {
+      "question": "Jika jarak digandakan sementara waktu tetap, kelajuan...",
+      "options": [
+        "menjadi separuh",
+        "berlipat ganda",
+        "tetap sama",
+        "nol"
+      ],
+      "answer": 1,
+      "explanation": "Kelajuan berbanding lurus dengan jarak tempuh."
+    },
+    {
+      "question": "Apa arti variabel s dalam persamaan v = s ÷ t?",
+      "options": [
+        "Kelajuan",
+        "Waktu",
+        "Jarak",
+        "Massa"
+      ],
+      "answer": 2,
+      "explanation": "s melambangkan jarak."
+    },
+    {
+      "question": "Apa arti variabel t dalam persamaan v = s ÷ t?",
+      "options": [
+        "Suhu",
+        "Waktu",
+        "Total",
+        "Ketebalan"
+      ],
+      "answer": 1,
+      "explanation": "t melambangkan waktu."
+    },
+    {
+      "question": "Mengapa tim penyelamat satwa turun tangan saat karhutla di Banjarbaru?",
+      "options": [
+        "Memberi makan hewan peliharaan",
+        "Menyelamatkan satwa terdampak karhutla",
+        "Mengukur kecepatan angin",
+        "Membangun rumah"
+      ],
+      "answer": 1,
+      "explanation": "Penyelamat membantu satwa yang lari dari hutan terbakar [1]."
+    },
+    {
+      "question": "Berapa berat trenggiling yang diselamatkan di Banjarbaru?",
+      "options": [
+        "5 kg",
+        "9 kg",
+        "15 kg",
+        "20 kg"
+      ],
+      "answer": 1,
+      "explanation": "Seekor trenggiling seberat 9 kg dievakuasi dari saluran air [1]."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "garis lurus sepanjang 10 meter",
+      "seseorang berjalan di sepanjang garis",
+      "stopwatch mencatat waktu"
+    ],
+    "safety": [
+      "tanpa nyala api, tanpa listrik rumah, tanpa bahan kimia",
+      "hanya foto tangan atau proses berjalan"
+    ],
+    "pass_if": "Foto menampilkan alat ukur, uji jalan, dan hasil perhitungan kelajuan."
+  },
+  "_per_page": [
+    {
+      "guide.stop_label": "Sampul"
+    },
+    {
+      "guide.stop_label": "Pos 1 · Ceritanya",
+      "section.label": "POS 1 · CERITANYA",
+      "section.xp": "+10 XP UNTUK MEMBACA"
+    },
+    {
+      "guide.stop_label": "Pos 2 · Fisikanya",
+      "section.label": "POS 2 · FISIKANYA",
+      "section.xp": "+20 XP UNTUK MENJAWAB"
+    },
+    {
+      "guide.stop_label": "Pos 3 · Misimu",
+      "section.label": "POS 3 · MISIMU",
+      "section.xp": "+30 XP UNTUK DIRAIH"
+    }
+  ],
+  "_replace": {
+    "stop": [
+      [
+        "STOP",
+        "POS"
+      ]
+    ],
+    "page ref": [
+      [
+        "p.",
+        "hlm. "
+      ]
+    ]
+  },
+  "guide.issue_date": "#11 · 26 NOV 2026",
+  "guide.lang": "ID",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Edisi 11 · 2026",
+  "cover.title": "Secepat apa satwa lari dari api",
+  "cover.subtitle": "Karhutla di Banjarbaru memaksa trenggiling masuk saluran air kota. Pelajari cara menghitung kelajuan saat satwa menyelamatkan diri.",
+  "cover.image_caption": "Foto arsip · air",
+  "cover.news_date": "Berita: 23 Nov 2026",
+  "cover.place": "Banjarbaru, Indonesia",
+  "cover.topic": "Udara dan satwa",
+  "cover.subject": "Fisika · Kelajuan",
+  "quest.1.desc": "Baca kisah evakuasi satwa korban api",
+  "quest.2.desc": "Gunakan v = s ÷ t untuk kelajuan",
+  "quest.3.desc": "Kuis, lab mini dan lencana",
+  "cover.read_time": "12 mnt baca",
+  "cover.level": "SMP · kelas 7–9",
+  "cover.xp_total": "Raih hingga 60 XP",
+  "cover.fun_fact": "Karhutla menghancurkan sarang serangga dan pepohonan, memaksa satwa nokturnal keluar mencari tempat aman.",
+  "story.title": "Perjalanan sang trenggiling",
+  "story.lead": "Kebakaran hutan dan lahan memenuhi sebagian Kalimantan Selatan dengan asap [1]. Seekor trenggiling seberat 9 kilogram dievakuasi setelah terjebak di saluran air [1].",
+  "story.image_caption": "Foto arsip · Aliran Sungai menuju Desa dari dalam kawasan Suaka Margasatwa Isau Isau by taufankharis",
+  "story.image_credit": "Taufankharis / Wikimedia Commons, CC BY-SA 4.0",
+  "stat.1.value": "9 kg",
+  "stat.2.value": "1.200 m",
+  "stat.3.value": "0,33 m/s",
+  "stat.1.label": "berat trenggiling Sunda yang diselamatkan",
+  "stat.2.label": "jarak dari tepi hutan terbakar ke saluran air",
+  "stat.3.label": "kelajuan rata-rata satwa mengungsi",
+  "story.body_1": "Karhutla merusak vegetasi, kayu lapuk, dan sarang serangga yang menjadi sumber pakan satwa [1]. Saat asap dan panas mengancam habitat, trenggiling, biawak, dan musang harus berpindah tempat [1].",
+  "story.body_2": "Penyelamat satwa di Banjarbaru mencatat peningkatan laporan satwa keluar dari lahan terbakar [1], sementara data BMKG memantau kondisi cuaca kering [2].",
+  "timeline.1.date": "Sebelum api",
+  "timeline.2.date": "Saat karhutla",
+  "timeline.3.date": "Sesudah itu",
+  "timeline.1.text": "Trenggiling mencari makan dengan aman di dalam hutan lebat [1].",
+  "timeline.2.text": "Asap dan panas memaksa satwa berlari menyelamatkan diri [1].",
+  "timeline.3.text": "Satwa yang kelelahan tersesat ke area pemukiman warga [1].",
+  "physics.title": "Menghitung kelajuan perpindahan",
+  "physics.body_1": "Saat satwa berpindah untuk menghindari bahaya, kelajuan menunjukkan seberapa cepat mereka bergerak menempuh jarak tertentu [1].",
+  "physics.body_2": "Persamaannya adalah v = s ÷ t. Jika jarak dan waktu diketahui, kelajuan rata-rata perpindahan satwa dapat dihitung dengan mudah [1].",
+  "physics.equation": "v = s ÷ t",
+  "physics.equation_name": "Persamaan kelajuan",
+  "legend.1.symbol": "v",
+  "legend.1.meaning": "kelajuan",
+  "legend.1.unit": "m/s",
+  "legend.2.symbol": "s",
+  "legend.2.meaning": "jarak",
+  "legend.2.unit": "meter (m)",
+  "legend.3.symbol": "t",
+  "legend.3.meaning": "waktu",
+  "legend.3.unit": "detik (s)",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "Kita asumsikan gerak lurus beraturan dari tepi hutan menuju lokasi evakuasi warga.",
+  "example.step_1": "s = 1.200 m, t = 3.600 s",
+  "example.step_2": "v = 1.200 ÷ 3.600",
+  "example.step_3": "Bagi angka: v = 0,33 m/s",
+  "example.result": "v = 0,33 m/s",
+  "table.h1": "Satwa",
+  "table.h2": "Jarak & Waktu",
+  "table.h3": "Kelajuan (m/s)",
+  "table.r1c1": "Trenggiling",
+  "table.r1c2": "1.200 m, 3.600 s",
+  "table.r1c3": "0,33",
+  "table.r2c1": "Biawak",
+  "table.r2c2": "900 m, 1.800 s",
+  "table.r2c3": "0,50",
+  "table.r3c1": "Musang",
+  "table.r3c2": "600 m, 3.000 s",
+  "table.r3c3": "0,20",
+  "table.note": "Satwa menjauhi zona kebakaran dengan kelajuan berbeda.",
+  "graph.title": "Kelajuan evakuasi satwa liar",
+  "graph.1.label": "Treng",
+  "graph.2.label": "Biawak",
+  "graph.3.label": "Musang",
+  "graph.1.value": "0,33 m/s",
+  "graph.2.value": "0,50 m/s",
+  "graph.3.value": "0,20 m/s",
+  "graph.note": "Biawak bergerak paling cepat melintasi lahan terbuka saat evakuasi.",
+  "physics.tip": "Kata Bulb Buddy: Kelajuan mengukur seberapa cepat jarak ditempuh dalam selang waktu!",
+  "mission.title": "Misi Penyelamatan Satwa",
+  "quiz.answer_key": "Kunci: 1B · 2A · 3C",
+  "quiz.1.question": "Apa rumus untuk menghitung kelajuan dalam fisika?",
+  "quiz.1.a": "Jarak dikali waktu",
+  "quiz.1.b": "Jarak dibagi waktu",
+  "quiz.1.c": "Waktu dibagi jarak",
+  "quiz.1.d": "Massa dikali kelajuan",
+  "quiz.2.question": "Jika seekor satwa menempuh jarak 900 meter dalam 1.800 detik, berapa kelajuannya?",
+  "quiz.2.a": "0,50 m/s",
+  "quiz.2.b": "2,00 m/s",
+  "quiz.2.c": "1.800 m/s",
+  "quiz.2.d": "0,02 m/s",
+  "quiz.3.question": "Mengapa trenggiling masuk ke kawasan pemukiman di Banjarbaru?",
+  "quiz.3.a": "Mengunjungi taman kota",
+  "quiz.3.b": "Mencari kendaraan",
+  "quiz.3.c": "Menghindari karhutla",
+  "quiz.3.d": "Berenang di kolam",
+  "lab.title": "Lab Mini: Mengukur Kelajuan Jalan",
+  "lab.step_1": "Buat garis lurus 10 meter di lantai atau halaman.",
+  "lab.step_2": "Berjalanlah secara normal sementara teman mencatat waktu dengan stopwatch.",
+  "lab.step_3": "Hitung kelajuanmu dengan membagi jarak dengan waktu (v = s ÷ t).",
+  "lab.question": "Berapa kelajuan jalanmu dalam m/s, dan bagaimana bandingannya dengan satwa?",
+  "badge.name": "Penjaga Satwa",
+  "badge.text": "Berhasil menyelesaikan panduan kelajuan satwa.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Trenggiling",
+  "glossary.1.def": "Mamalia malam bersisik pemakan semut dan rayap di hutan [1].",
+  "glossary.2.term": "Karhutla",
+  "glossary.2.def": "Kebakaran hutan dan lahan di wilayah Indonesia [1].",
+  "glossary.3.term": "Kelajuan",
+  "glossary.3.def": "Besarnya jarak yang ditempuh tiap satuan waktu.",
+  "label.sources": "Sumber & Referensi",
+  "source.1": "[1] Mongabay Indonesia (23 Nov 2026). Trenggiling Masuk Pemukiman.",
+  "source.2": "[2] BMKG (23 Nov 2026). Cuaca dan Informasi Kebakaran Hutan.",
+  "source.3": "",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Ilustrasi oleh ELIOS"
+}

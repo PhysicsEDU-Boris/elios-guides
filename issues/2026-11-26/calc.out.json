@@ -1,0 +1,11 @@
+{
+  "s_m": 1200,
+  "t_s": 3600,
+  "v_pangolin": 0.33,
+  "lizard_s": 900,
+  "lizard_t": 1800,
+  "v_lizard": 0.5,
+  "civet_s": 600,
+  "civet_t": 3000,
+  "v_civet": 0.2
+}

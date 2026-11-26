@@ -1,0 +1,58 @@
+[
+  {
+    "item": "Pangolin mass",
+    "claim": "A 9 kg Sunda pangolin was rescued from a drainage ditch in Banjarbaru.",
+    "source": "1",
+    "pass": true,
+    "note": "Source 1 confirms a 9 kg Sunda pangolin (Manis javanica) was rescued from a drainage channel in Banjarbaru."
+  },
+  {
+    "item": "Pangolin species",
+    "claim": "Sunda pangolin (Manis javanica) scientific classification.",
+    "source": "1",
+    "pass": true,
+    "note": "Source 1 identifies the rescued animal as Manis javanica."
+  },
+  {
+    "item": "Escape speed calculation (Pangolin)",
+    "claim": "1,200 m divided by 3,600 s equals 0.33 m/s.",
+    "source": "calc",
+    "pass": true,
+    "note": "Arithmetic verified: 1200 / 3600 = 0.333... rounded to 0.33."
+  },
+  {
+    "item": "Escape speed calculation (Lizard)",
+    "claim": "900 m divided by 1,800 s equals 0.50 m/s.",
+    "source": "calc",
+    "pass": true,
+    "note": "Arithmetic verified: 900 / 1800 = 0.5."
+  },
+  {
+    "item": "Escape speed calculation (Civet)",
+    "claim": "600 m divided by 3,000 s equals 0.20 m/s.",
+    "source": "calc",
+    "pass": true,
+    "note": "Arithmetic verified: 600 / 3000 = 0.2."
+  },
+  {
+    "item": "Quiz 1 (Speed formula)",
+    "claim": "Speed is defined as distance divided by time (v = s / t).",
+    "source": "calc",
+    "pass": true,
+    "note": "Standard physics formula for speed is verified."
+  },
+  {
+    "item": "Bilingual agreement (Indonesian labels)",
+    "claim": "The Indonesian labels provided in the context are correctly translated.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "Labels like 'POS 1 · CERITANYA' and 'TAHUKAH KAMU?' are accurately applied."
+  },
+  {
+    "item": "Source 2 relevance",
+    "claim": "BMKG data tracks dry conditions contributing to wildfires.",
+    "source": "2",
+    "pass": false,
+    "note": "Source 2 does not contain specific information regarding Banjarbaru wildfire conditions, despite the user's claim; it is a generic landing page."
+  }
+]
