@@ -1,0 +1,290 @@
+{
+  "_example": true,
+  "_issue": "11",
+  "_slug": "indonesia-wildfire-pangolin-speed",
+  "_theme": "air",
+  "_formula": "speed",
+  "_keywords": [
+    "trenggiling",
+    "karhutla",
+    "banjarbaru",
+    "speed"
+  ],
+  "_date": "2026-11-26",
+  "_lang": "en",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "Mongabay Indonesia",
+      "title": "Trenggiling Masuk Pemukiman di Banjarbaru, Korban Karhutla?",
+      "date": "2026-11-23",
+      "url": "https://mongabay.co.id/2026/11/23/trenggiling-masuk-pemukiman-di-banjarbaru-korban-karhutla/",
+      "primary": false
+    },
+    {
+      "n": 2,
+      "publisher": "BMKG",
+      "title": "Cuaca dan Informasi Kebakaran Hutan",
+      "date": "2026-11-23",
+      "url": "https://www.bmkg.go.id/",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Buah_Jambu_Air_D%27Legenda_Banjarbaru.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Malamilai / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Aliran_Sungai_menuju_Desa_dari_dalam_kawasan_Suaka_Margasatwa_Isau-Isau_by_taufankharis.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Taufankharis / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 0.33,
+  "_graph.2.raw": 0.5,
+  "_graph.3.raw": 0.2,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Speed is defined as the distance traveled divided by the time taken.",
+      "wrong": {
+        "a": "Multiplying distance by time does not give speed.",
+        "c": "Time divided by distance is the inverse of speed.",
+        "d": "Multiplying mass by speed is momentum."
+      }
+    },
+    "2": {
+      "why": "900 metres divided by 1,800 seconds equals 0.50 metres per second.",
+      "wrong": {
+        "b": "2.00 m/s is incorrect arithmetic.",
+        "c": "1,800 m/s is much too fast for an animal.",
+        "d": "0.02 m/s is too slow for this calculation."
+      }
+    },
+    "3": {
+      "why": "Forest fires and smoke destroy natural habitats, forcing animals to flee into residential areas [1].",
+      "wrong": {
+        "a": "Animals do not visit city parks for leisure.",
+        "b": "Animals do not seek out cars.",
+        "d": "Animals do not swim in city swimming pools."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "What is the standard unit of speed?",
+      "options": [
+        "Metre per second (m/s)",
+        "Joule (J)",
+        "Kilogram (kg)",
+        "Newton (N)"
+      ],
+      "answer": 0,
+      "explanation": "Speed is measured in metres per second."
+    },
+    {
+      "question": "If you double the distance while time stays the same, speed...",
+      "options": [
+        "halves",
+        "doubles",
+        "stays the same",
+        "drops to zero"
+      ],
+      "answer": 1,
+      "explanation": "Speed is directly proportional to distance."
+    },
+    {
+      "question": "What does variable s stand for in v = s ÷ t?",
+      "options": [
+        "Speed",
+        "Time",
+        "Distance",
+        "Mass"
+      ],
+      "answer": 2,
+      "explanation": "s represents distance."
+    },
+    {
+      "question": "What does variable t stand for in v = s ÷ t?",
+      "options": [
+        "Temperature",
+        "Time",
+        "Total",
+        "Thickness"
+      ],
+      "answer": 1,
+      "explanation": "t represents time."
+    },
+    {
+      "question": "Why did wildlife rescuers step in during the Banjarbaru fires?",
+      "options": [
+        "To feed pets",
+        "To relocate displaced animals safely",
+        "To measure wind speed",
+        "To build houses"
+      ],
+      "answer": 1,
+      "explanation": "Rescuers helped animals that fled from burnt forests into neighborhoods [1]."
+    },
+    {
+      "question": "Which animal was rescued in Banjarbaru weighing 9 kg?",
+      "options": [
+        "Monitor lizard",
+        "Sunda pangolin",
+        "Civet",
+        "Monkey"
+      ],
+      "answer": 1,
+      "explanation": "A 9 kg Sunda pangolin was rescued from a drainage ditch [1]."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "a marked straight line of 10 metres",
+      "a person walking along the line",
+      "a stopwatch recording the time"
+    ],
+    "safety": [
+      "no flame, no mains electricity, no chemicals",
+      "only hands or walking action in the photo"
+    ],
+    "pass_if": "The photos show the measurement setup, walking test, and calculated speed."
+  },
+  "_per_page": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "_replace": {},
+  "guide.issue_date": "#11 · 26 NOV 2026",
+  "guide.lang": "EN",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Issue 11 · 2026",
+  "cover.title": "How fast animals flee fires",
+  "cover.subtitle": "Forest fires in Banjarbaru forced a pangolin into a city canal. Discover how to calculate escape speed when wildlife flees smoke and flames.",
+  "cover.image_caption": "Archive photo · air",
+  "cover.news_date": "News: 23 Nov 2026",
+  "cover.place": "Banjarbaru, Indonesia",
+  "cover.topic": "Air and wildlife",
+  "cover.subject": "Physics · Speed",
+  "quest.1.desc": "Read how fires displace wildlife",
+  "quest.2.desc": "Use v = s ÷ t for escape speed",
+  "quest.3.desc": "Quiz, mini lab and badge",
+  "cover.read_time": "12 min read",
+  "cover.level": "SMP · grade 7–9",
+  "cover.xp_total": "Earn up to 60 XP",
+  "cover.fun_fact": "Wildfires destroy forest canopies and insect nests, forcing nocturnal animals to move across open ground.",
+  "story.title": "The pangolin's journey",
+  "story.lead": "Wildfires and land clearing filled parts of South Kalimantan with smoke [1]. A 9-kilogram Sunda pangolin was rescued after entering a city residential drainage channel [1].",
+  "story.image_caption": "Archive photo · Aliran Sungai menuju Desa dari dalam kawasan Suaka Margasatwa Isau Isau by taufankharis",
+  "story.image_credit": "Taufankharis / Wikimedia Commons, CC BY-SA 4.0",
+  "stat.1.value": "9 kg",
+  "stat.2.value": "1,200 m",
+  "stat.3.value": "0.33 m/s",
+  "stat.1.label": "mass of the rescued Sunda pangolin",
+  "stat.2.label": "distance from burned forest edge to canal",
+  "stat.3.label": "average escape speed of the animal",
+  "story.body_1": "Forest fires destroy vegetation, logs, and insect nests that animals rely on for food [1]. When smoke and heat damage their habitat, creatures like pangolins, lizards, and civets must move to survive [1].",
+  "story.body_2": "Wildlife rescuers in Banjarbaru noted an increase in animals leaving burnt lands for urban edges [1], while meteorological data tracks dry conditions [2].",
+  "timeline.1.date": "Before fire",
+  "timeline.2.date": "During fire",
+  "timeline.3.date": "After fire",
+  "timeline.1.text": "Pangolins forage safely inside dense forest habitats [1].",
+  "timeline.2.text": "Smoke and flames force animals to flee toward safer grounds [1].",
+  "timeline.3.text": "Exhausted animals wander into urban residential areas [1].",
+  "physics.title": "Calculating travel speed",
+  "physics.body_1": "When animals travel to escape danger, speed tells us how fast they move across the ground. Speed is the distance covered divided by the time taken [1].",
+  "physics.body_2": "The formula is v = s ÷ t. If an animal travels a certain distance in a given time, its average speed is easy to find [1].",
+  "physics.equation": "v = s ÷ t",
+  "physics.equation_name": "Speed equation",
+  "legend.1.symbol": "v",
+  "legend.1.meaning": "speed",
+  "legend.1.unit": "m/s",
+  "legend.2.symbol": "s",
+  "legend.2.meaning": "distance",
+  "legend.2.unit": "metre (m)",
+  "legend.3.symbol": "t",
+  "legend.3.meaning": "time",
+  "legend.3.unit": "second (s)",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "We assume steady movement along a straight path from the forest edge to the rescue site.",
+  "example.step_1": "s = 1,200 m, t = 3,600 s",
+  "example.step_2": "v = 1,200 ÷ 3,600",
+  "example.step_3": "Divide: v = 0.33 m/s",
+  "example.result": "v = 0.33 m/s",
+  "table.h1": "Animal",
+  "table.h2": "Distance & Time",
+  "table.h3": "Speed (m/s)",
+  "table.r1c1": "Pangolin",
+  "table.r1c2": "1,200 m, 3,600 s",
+  "table.r1c3": "0.33",
+  "table.r2c1": "Monitor lizard",
+  "table.r2c2": "900 m, 1,800 s",
+  "table.r2c3": "0.50",
+  "table.r3c1": "Civet",
+  "table.r3c2": "600 m, 3,000 s",
+  "table.r3c3": "0.20",
+  "table.note": "Animals fleeing fire zones at various speeds.",
+  "graph.title": "Escape speed of displaced animals",
+  "graph.1.label": "Pangolin",
+  "graph.2.label": "Lizard",
+  "graph.3.label": "Civet",
+  "graph.1.value": "0.33 m/s",
+  "graph.2.value": "0.50 m/s",
+  "graph.3.value": "0.20 m/s",
+  "graph.note": "Monitor lizards moved fastest across open terrain during rescues.",
+  "physics.tip": "Bulb Buddy says: Speed measures how quickly distance is covered over time!",
+  "mission.title": "Wildlife Rescue Mission",
+  "quiz.answer_key": "Answer key: 1B · 2A · 3C",
+  "quiz.1.question": "What does speed equal in physics?",
+  "quiz.1.a": "Distance multiplied by time",
+  "quiz.1.b": "Distance divided by time",
+  "quiz.1.c": "Time divided by distance",
+  "quiz.1.d": "Mass multiplied by speed",
+  "quiz.2.question": "If an animal travels 900 metres in 1,800 seconds, what is its speed?",
+  "quiz.2.a": "0.50 m/s",
+  "quiz.2.b": "2.00 m/s",
+  "quiz.2.c": "1,800 m/s",
+  "quiz.2.d": "0.02 m/s",
+  "quiz.3.question": "Why did pangolins enter urban areas in Banjarbaru?",
+  "quiz.3.a": "To visit city parks",
+  "quiz.3.b": "To look for cars",
+  "quiz.3.c": "Fleeing forest fires",
+  "quiz.3.d": "To swim in pools",
+  "lab.title": "Mini Lab: Measuring Walking Speed",
+  "lab.step_1": "Mark a 10-metre straight line outdoors or in a hallway using chalk or tape.",
+  "lab.step_2": "Walk normally along the line while a friend times you with a stopwatch.",
+  "lab.step_3": "Calculate your speed by dividing distance by time (v = s ÷ t).",
+  "lab.question": "What was your walking speed in m/s, and how does it compare to animal escape speeds?",
+  "badge.name": "Wildlife Guardian",
+  "badge.text": "Completed the wildlife displacement and speed guide.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Pangolin",
+  "glossary.1.def": "A scaly nocturnal mammal that eats ants and termites in forests [1].",
+  "glossary.2.term": "Karhutla",
+  "glossary.2.def": "Indonesian term for forest and land fires [1].",
+  "glossary.3.term": "Speed",
+  "glossary.3.def": "Distance travelled per unit of time.",
+  "label.sources": "Sources & References",
+  "source.1": "[1] Mongabay Indonesia (23 Nov 2026). Trenggiling Masuk Pemukiman.",
+  "source.2": "[2] BMKG (23 Nov 2026). Cuaca dan Informasi Kebakaran Hutan.",
+  "source.3": "",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Illustrations by ELIOS"
+}
