@@ -1,0 +1,37 @@
+[
+  {
+    "item": "Affected land area",
+    "claim": "The analysis by Walhi Jambi recorded 65,429 hectares of forest and land fires in Jambi.",
+    "source": "1",
+    "pass": true,
+    "note": "The source explicitly states: 'luas kebakaran di jambi menjadi 65.429 hektar'."
+  },
+  {
+    "item": "Estimated health costs",
+    "claim": "The estimated health cost related to ISPA (respiratory issues) from fires is between 19.2 trillion and 224.65 trillion rupiah.",
+    "source": "1",
+    "pass": true,
+    "note": "Confirmed by the source: 'Biaya kesehatan terkait ispa rp19,20 triliun-rp224,65 triliun'."
+  },
+  {
+    "item": "Pressure formula calculation",
+    "claim": "For a force of 500 N and an area of 2 m², the pressure is 250 Pa.",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculation verified: 500 / 2 = 250."
+  },
+  {
+    "item": "Physics definition",
+    "claim": "Pressure is force exerted on a given surface area, with the formula p = F ÷ A.",
+    "source": "2",
+    "pass": true,
+    "note": "Standard physical definition for pressure matches the source content."
+  },
+  {
+    "item": "Quiz 3 answer",
+    "claim": "The SI unit of pressure is the pascal (Pa).",
+    "source": "2",
+    "pass": true,
+    "note": "Standard unit verification."
+  }
+]
