@@ -1,0 +1,323 @@
+{
+  "_example": false,
+  "_issue": "11",
+  "_slug": "jambi-gas-expansion-and-air-pressure",
+  "_theme": "air",
+  "_formula": "pressure",
+  "_keywords": [
+    "jambi",
+    "indonesia",
+    "gas",
+    "pressure",
+    "karhutla",
+    "tekanan"
+  ],
+  "_date": "2026-11-27",
+  "_lang": "id",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "Mongabay Indonesia",
+      "title": "Jejak Karhutla pada Area Konsesi Perusahaan di Jambi",
+      "date": "2026-11-26",
+      "url": "https://mongabay.co.id/2026/11/26/jejak-karhutla-pada-area-konsesi-perusahaan-di-jambi/",
+      "primary": false
+    },
+    {
+      "n": 2,
+      "publisher": "NOAA JetStream",
+      "title": "Air Pressure",
+      "date": "2026-07-10",
+      "url": "https://www.noaa.gov/jetstream/atmosphere/air-pressure",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Menara_Air_Jambi_Peninggalan_Belanda.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Muhamad Izzul Fiqih / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Sebuah_Lorong_Kecil_dan_Parit_yang_tercemar_-_Jambi_Timur%2C_Kota_Jambi%2C_JA_%2811_Mei_2024%29.jpg",
+      "license": "CC BY 4.0",
+      "credit": "Firzafp / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 100,
+  "_graph.2.raw": 250,
+  "_graph.3.raw": 500,
+  "_answers": {
+    "1": "b",
+    "2": "c",
+    "3": "a"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "p adalah simbol tekanan, mengukur besar gaya per satuan luas.",
+      "wrong": {
+        "a": "Daya disimbolkan dengan P.",
+        "c": "Energi potensial adalah Ep.",
+        "d": "Periode adalah T."
+      }
+    },
+    "2": {
+      "why": "Memperkecil luas dengan gaya yang sama akan memperbesar tekanan.",
+      "wrong": {
+        "a": "Tekanan justru bertambah, bukan berkurang.",
+        "b": "Tekanan berubah seiring perubahan luas.",
+        "d": "Tekanan tidak menjadi nol."
+      }
+    },
+    "3": {
+      "why": "Satuan standar SI untuk tekanan adalah pascal (Pa).",
+      "wrong": {
+        "b": "Joule adalah satuan energi.",
+        "c": "Newton adalah satuan gaya.",
+        "d": "Watt adalah satuan daya."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "Apa rumus untuk menghitung tekanan?",
+      "options": [
+        "v = s ÷ t",
+        "p = F ÷ A",
+        "Ek = ½mv²",
+        "ρ = m ÷ V"
+      ],
+      "answer": 1,
+      "explanation": "p = F ÷ A menyatakan tekanan sebagai gaya dibagi luas."
+    },
+    {
+      "question": "Apa satuan untuk gaya F?",
+      "options": [
+        "Pascal",
+        "Joule",
+        "Newton",
+        "Watt"
+      ],
+      "answer": 2,
+      "explanation": "Gaya diukur dalam newton (N)."
+    },
+    {
+      "question": "Apa satuan untuk luas A?",
+      "options": [
+        "m²",
+        "kg",
+        "m/s",
+        "m³"
+      ],
+      "answer": 0,
+      "explanation": "Luas diukur dalam meter persegi (m²)."
+    },
+    {
+      "question": "Jika gaya menjadi dua kali lipat dan luas tetap, tekanan…",
+      "options": [
+        "menjadi setengah",
+        "tetap sama",
+        "menjadi dua kali lipat",
+        "menjadi empat kali lipat"
+      ],
+      "answer": 2,
+      "explanation": "Tekanan berbanding lurus dengan gaya."
+    },
+    {
+      "question": "Mengapa gas panas naik ke atas?",
+      "options": [
+        "Lebih padat",
+        "Memuai dan menciptakan tekanan tinggi",
+        "Bersifat magnetis",
+        "Suhu dingin"
+      ],
+      "answer": 1,
+      "explanation": "Gas yang dipanaskan memuai dan menciptakan perbedaan tekanan yang mendorong aliran naik."
+    },
+    {
+      "question": "Apa arti A dalam rumus tekanan?",
+      "options": [
+        "Luas permukaan",
+        "Percepatan",
+        "Amplitudo",
+        "Usia"
+      ],
+      "answer": 0,
+      "explanation": "A adalah luas permukaan (area)."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "sepon di atas meja datar",
+      "buku berat diletakkan mendatar di atas sepon",
+      "buku yang sama berdiri pada sisi tepinya yang sempit di atas sepon"
+    ],
+    "safety": [
+      "tanpa nyala api, bahan kimia, atau benda jatuh yang berbahaya",
+      "hanya tangan dalam foto"
+    ],
+    "pass_if": "Foto menunjukkan sepon pada posisi buku mendatar dan buku berdiri, memperlihatkan kedalaman cekungan yang lebih besar pada luas permukaan yang lebih kecil."
+  },
+  "_per_page": [
+    {
+      "guide.stop_label": "Sampul"
+    },
+    {
+      "guide.stop_label": "Pos 1 · Ceritanya",
+      "section.label": "POS 1 · CERITANYA",
+      "section.xp": "+10 XP UNTUK MEMBACA"
+    },
+    {
+      "guide.stop_label": "Pos 2 · Fisikanya",
+      "section.label": "POS 2 · FISIKANYA",
+      "section.xp": "+20 XP UNTUK MENJAWAB"
+    },
+    {
+      "guide.stop_label": "Pos 3 · Misimu",
+      "section.label": "POS 3 · MISIMU",
+      "section.xp": "+30 XP UNTUK DIRAIH"
+    }
+  ],
+  "_replace": {
+    "stop": [
+      [
+        "STOP",
+        "POS"
+      ]
+    ],
+    "page ref": [
+      [
+        "p.",
+        "hlm. "
+      ]
+    ]
+  },
+  "guide.issue_date": "#11 · 27 NOV 2026",
+  "guide.lang": "ID",
+  "guide.xp": "+60 XP",
+  "footer.credit": "Panduan ELIOS · Pemuaian gas dan tekanan di Jambi",
+  "cover.title": "Bagaimana gas buat tekanan",
+  "cover.subtitle": "Peristiwa termal di Jambi melepaskan gas pemuai ke atmosfer. Pelajari cara gas panas ciptakan tekanan udara.",
+  "cover.image_caption": "Foto arsip · air",
+  "cover.news_date": "Berita: 26 Nov 2026",
+  "cover.place": "Jambi, Indonesia",
+  "cover.topic": "Pemuaian & tekanan gas",
+  "cover.subject": "Fisika · Tekanan",
+  "quest.1.desc": "Baca tentang pemuaian gas di Jambi",
+  "quest.2.desc": "Gunakan p = F ÷ A untuk tekanan",
+  "quest.3.desc": "Kuis, lab mini, dan lencana",
+  "cover.read_time": "12 menit baca",
+  "cover.level": "SMP · kelas 7–9",
+  "cover.xp_total": "Raih hingga 60 XP",
+  "cover.fun_fact": "Lebih 65.429 ha lahan terdampak di Jambi, melepaskan gas pemuai ke atmosfer.",
+  "story.title": "Pemuaian gas di Jambi",
+  "story.lead": "Pada akhir November 2026, peristiwa lahan di Jambi melepaskan gas pemuai ke atmosfer [1]. Pemantauan atmosfer mencatat transpor gas dan variasi tekanan [2].",
+  "story.image_caption": "Foto arsip · Lorong dan parit tercemar di Jambi Timur (Mei 2024)",
+  "story.image_credit": "Firzafp / Wikimedia Commons, CC BY 4.0",
+  "stat.1.value": "65.429",
+  "stat.2.value": "19,2",
+  "stat.3.value": "565,0",
+  "stat.1.label": "hektar lahan terdampak di Jambi menurut catatan Walhi",
+  "stat.2.label": "triliun rupiah estimasi biaya kesehatan akibat karhutla",
+  "stat.3.label": "triliun rupiah estimasi total kerugian ekonomi maksimal",
+  "story.body_1": "Peristiwa termal lahan menyebar di seluruh wilayah, melepaskan gas panas dan kepulan pemuai ke udara sekitar [1].",
+  "story.body_2": "Saat gas panas memuai dan mendesak massa udara di sekitarnya, mereka menghasilkan gradien tekanan tinggi yang memicu angin regional [1] [2].",
+  "timeline.1.date": "Pagi",
+  "timeline.2.date": "Siang",
+  "timeline.3.date": "Malam",
+  "timeline.1.text": "Peristiwa termal bermula di lahan kering regional.",
+  "timeline.2.text": "Panas terik membuat gas memuai dengan cepat.",
+  "timeline.3.text": "Gas pemuai menciptakan gradien tekanan tinggi.",
+  "physics.title": "Gaya, luas, dan tekanan",
+  "physics.body_1": "Saat gas dipanaskan, mereka memuai dan mendorong keluar ke segala arah. Tekanan adalah besar gaya yang bekerja pada suatu satuan luas permukaan.",
+  "physics.body_2": "Jika gaya yang sama diberikan pada area yang lebih kecil, tekanan yang dihasilkan akan jauh lebih besar. Gas panas yang memuai menciptakan tekanan dorong yang kuat.",
+  "physics.equation": "p = F ÷ A",
+  "physics.equation_name": "Persamaan tekanan",
+  "legend.1.symbol": "p",
+  "legend.1.meaning": "tekanan",
+  "legend.1.unit": "pascal (Pa)",
+  "legend.2.symbol": "F",
+  "legend.2.meaning": "gaya",
+  "legend.2.unit": "newton (N)",
+  "legend.3.symbol": "A",
+  "legend.3.meaning": "luas permukaan",
+  "legend.3.unit": "m²",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "Menganggap distribusi gaya merata dan suhu gas konstan di seluruh permukaan.",
+  "example.step_1": "Gaya F = 500 N, Luas A = 2 m²",
+  "example.step_2": "Gunakan persamaan: p = F ÷ A",
+  "example.step_3": "Hitung: p = 500 ÷ 2 = 250",
+  "example.result": "p = 250 Pa",
+  "table.h1": "Luas (m²)",
+  "table.h2": "Gaya (N)",
+  "table.h3": "Tekanan (Pa)",
+  "table.r1c1": "1",
+  "table.r1c2": "500",
+  "table.r1c3": "500",
+  "table.r2c1": "2",
+  "table.r2c2": "500",
+  "table.r2c3": "250",
+  "table.r3c1": "5",
+  "table.r3c2": "500",
+  "table.r3c3": "100",
+  "table.note": "Gaya sama, luas permukaan berbeda.",
+  "graph.title": "Grafik Tekanan vs Luas Permukaan",
+  "graph.1.label": "Luas 1",
+  "graph.2.label": "Luas 2",
+  "graph.3.label": "Luas 5",
+  "graph.1.value": "500 Pa",
+  "graph.2.value": "250 Pa",
+  "graph.3.value": "100 Pa",
+  "graph.note": "Luas lebih kecil menghasilkan tekanan lebih tinggi dengan gaya yang sama.",
+  "physics.tip": "Saat gaya disebar ke area yang lebih luas, tekanan akan mengecil.",
+  "mission.title": "Misi Tekanan dan Gas",
+  "quiz.answer_key": "Kunci: 1B · 2C · 3A",
+  "quiz.1.question": "Apa arti p dalam rumus p = F ÷ A?",
+  "quiz.1.a": "Daya",
+  "quiz.1.b": "Tekanan",
+  "quiz.1.c": "Potensial",
+  "quiz.1.d": "Periode",
+  "quiz.2.question": "Jika luas mengecil sementara gaya tetap, tekanan akan…",
+  "quiz.2.a": "menurun",
+  "quiz.2.b": "tetap sama",
+  "quiz.2.c": "meningkat",
+  "quiz.2.d": "menjadi nol",
+  "quiz.3.question": "Apa satuan standar SI untuk tekanan?",
+  "quiz.3.a": "pascal (Pa)",
+  "quiz.3.b": "joule (J)",
+  "quiz.3.c": "newton (N)",
+  "quiz.3.d": "watt (W)",
+  "lab.title": "Lab Mini: Tekanan Sepon",
+  "lab.subtitle": "Coba di rumah atau sekolah",
+  "lab.lead": "Amati bagaimana gaya dan luas permukaan mengubah tekanan menggunakan sepon dan buku.",
+  "lab.step_1": "Letakkan sepon secara mendatar di atas meja.",
+  "lab.step_2": "Letak buku mendatar di sepon, amati seberapa dalam sepon tertekan.",
+  "lab.step_3": "Berdirikan buku pada sisi sempitnya dan amati kedalamannya.",
+  "lab.question": "Posisi manakah yang membuat sepon amblas lebih dalam, dan mengapa?",
+  "badge.name": "Ahli Tekanan",
+  "badge.text": "Anda menjelajahi pemuaian gas dan tekanan.",
+  "badge.xp": "+60 XP",
+  "badge.status": "Terbuka",
+  "badge.desc": "Anda telah menyelesaikan panduan tentang pemuaian gas dan tekanan.",
+  "glossary.1.term": "Tekanan",
+  "glossary.2.term": "Gaya",
+  "glossary.3.term": "Luas",
+  "glossary.1.def": "Gaya yang bekerja per satuan luas permukaan.",
+  "glossary.2.def": "Dorongan atau tarikan yang bekerja pada objek.",
+  "glossary.3.def": "Besarnya suatu bidang permukaan.",
+  "label.sources": "Sumber",
+  "source.1": "[1] Mongabay Indonesia, Jejak Karhutla pada Area Konsesi Perusahaan di Jambi, 26 Nov 2026",
+  "source.2": "[2] NOAA JetStream, Air Pressure, 10 Jul 2026",
+  "source.3": "",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Ilustrasi oleh ELIOS"
+}

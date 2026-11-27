@@ -1,0 +1,310 @@
+{
+  "_example": false,
+  "_issue": "11",
+  "_slug": "jambi-gas-expansion-and-air-pressure",
+  "_theme": "air",
+  "_formula": "pressure",
+  "_keywords": [
+    "jambi",
+    "indonesia",
+    "gas",
+    "pressure",
+    "karhutla",
+    "tekanan"
+  ],
+  "_date": "2026-11-27",
+  "_lang": "en",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "Mongabay Indonesia",
+      "title": "Jejak Karhutla pada Area Konsesi Perusahaan di Jambi",
+      "date": "2026-11-26",
+      "url": "https://mongabay.co.id/2026/11/26/jejak-karhutla-pada-area-konsesi-perusahaan-di-jambi/",
+      "primary": false
+    },
+    {
+      "n": 2,
+      "publisher": "NOAA JetStream",
+      "title": "Air Pressure",
+      "date": "2026-07-10",
+      "url": "https://www.noaa.gov/jetstream/atmosphere/air-pressure",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Menara_Air_Jambi_Peninggalan_Belanda.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "Muhamad Izzul Fiqih / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Sebuah_Lorong_Kecil_dan_Parit_yang_tercemar_-_Jambi_Timur%2C_Kota_Jambi%2C_JA_%2811_Mei_2024%29.jpg",
+      "license": "CC BY 4.0",
+      "credit": "Firzafp / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 100,
+  "_graph.2.raw": 250,
+  "_graph.3.raw": 500,
+  "_answers": {
+    "1": "b",
+    "2": "c",
+    "3": "a"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "p stands for pressure, measuring force per unit area.",
+      "wrong": {
+        "a": "Power is represented by P.",
+        "c": "Potential energy is Ep.",
+        "d": "Period is T."
+      }
+    },
+    "2": {
+      "why": "Decreasing area while keeping force constant concentrates the force, increasing pressure.",
+      "wrong": {
+        "a": "Pressure increases, it does not decrease.",
+        "b": "Pressure changes as area changes.",
+        "d": "Pressure does not drop to zero."
+      }
+    },
+    "3": {
+      "why": "The standard SI unit of pressure is the pascal (Pa).",
+      "wrong": {
+        "b": "Joule is the unit of energy.",
+        "c": "Newton is the unit of force.",
+        "d": "Watt is the unit of power."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "What formula defines pressure?",
+      "options": [
+        "v = s ÷ t",
+        "p = F ÷ A",
+        "Ek = ½mv²",
+        "ρ = m ÷ V"
+      ],
+      "answer": 1,
+      "explanation": "p = F ÷ A gives pressure as force divided by area."
+    },
+    {
+      "question": "What unit measures force F?",
+      "options": [
+        "Pascal",
+        "Joule",
+        "Newton",
+        "Watt"
+      ],
+      "answer": 2,
+      "explanation": "Force is measured in newtons (N)."
+    },
+    {
+      "question": "What unit measures area A?",
+      "options": [
+        "m²",
+        "kg",
+        "m/s",
+        "m³"
+      ],
+      "answer": 0,
+      "explanation": "Area is measured in square metres (m²)."
+    },
+    {
+      "question": "If force doubles and area stays the same, pressure…",
+      "options": [
+        "halves",
+        "stays the same",
+        "doubles",
+        "quadruples"
+      ],
+      "answer": 2,
+      "explanation": "Pressure is directly proportional to force."
+    },
+    {
+      "question": "Why do hot gases rise?",
+      "options": [
+        "They are denser",
+        "They expand and create high pressure",
+        "They are magnetic",
+        "They are cold"
+      ],
+      "answer": 1,
+      "explanation": "Heated gases expand, creating pressure differences that drive upward motion."
+    },
+    {
+      "question": "What does A stand for in pressure equations?",
+      "options": [
+        "Area",
+        "Acceleration",
+        "Amplitude",
+        "Age"
+      ],
+      "answer": 0,
+      "explanation": "A stands for surface area."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "a sponge on a flat table",
+      "a heavy book resting flat on the sponge",
+      "the same book standing on its narrow edge on the sponge"
+    ],
+    "safety": [
+      "no flame, no chemicals, no heavy falling objects",
+      "only hands in the photo"
+    ],
+    "pass_if": "The photos show the sponge under both flat and edge-standing book positions, demonstrating greater sinking depth with smaller surface area."
+  },
+  "_per_page": [
+    {
+      "guide.stop_label": "Cover"
+    },
+    {
+      "guide.stop_label": "Post 1 · The Story",
+      "section.label": "POST 1 · THE STORY",
+      "section.xp": "+10 XP FOR READING"
+    },
+    {
+      "guide.stop_label": "Post 2 · The Physics",
+      "section.label": "POST 2 · THE PHYSICS",
+      "section.xp": "+20 XP FOR ANSWERING"
+    },
+    {
+      "guide.stop_label": "Post 3 · Your Mission",
+      "section.label": "POST 3 · YOUR MISSION",
+      "section.xp": "+30 XP TO EARN"
+    }
+  ],
+  "_replace": {},
+  "guide.issue_date": "#11 · 27 NOV 2026",
+  "guide.lang": "EN",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Jambi gas expansion and pressure",
+  "cover.title": "How heat and gas build pressure",
+  "cover.subtitle": "Thermal events in Jambi released expanding gases into the atmosphere. Discover how hot gases create air pressure.",
+  "cover.image_caption": "Archive photo · air",
+  "cover.news_date": "News: 26 Nov 2026",
+  "cover.place": "Jambi, Indonesia",
+  "cover.topic": "Gas and air pressure",
+  "cover.subject": "Physics · Pressure",
+  "quest.1.desc": "Read about gas expansion in Jambi",
+  "quest.2.desc": "Use p = F ÷ A for pressure",
+  "quest.3.desc": "Quiz, mini lab and badge",
+  "cover.read_time": "12 min read",
+  "cover.level": "SMP · grade 7–9",
+  "cover.xp_total": "Earn up to 60 XP",
+  "cover.fun_fact": "Over 65,429 hectares of land were affected in Jambi, releasing expanding gases into the atmosphere.",
+  "story.title": "Gas expansion in Jambi",
+  "story.lead": "In late November 2026, land events in Jambi released expanding gases into the atmosphere [1]. Atmospheric monitoring tracks gas transport and pressure variations [2].",
+  "story.image_caption": "Archive photo · Polluted small alley and ditch in East Jambi (May 2024)",
+  "story.image_credit": "Firzafp / Wikimedia Commons, CC BY 4.0",
+  "stat.1.value": "65,429",
+  "stat.2.value": "19.2",
+  "stat.3.value": "565.0",
+  "stat.1.label": "hectares of affected land in Jambi recorded by Walhi",
+  "stat.2.label": "trillion rupiah estimated minimum health cost from fires",
+  "stat.3.label": "trillion rupiah estimated maximum total economic loss",
+  "story.body_1": "Thermal land events spread across the region, releasing hot gases and expanding plumes into the surrounding air [1].",
+  "story.body_2": "As hot gases expand and push against surrounding air masses, they generate high pressure gradients that drive regional winds [1] [2].",
+  "timeline.1.date": "Morning",
+  "timeline.2.date": "Afternoon",
+  "timeline.3.date": "Evening",
+  "timeline.1.text": "Thermal events begin across dry regional land.",
+  "timeline.2.text": "Intense heat causes gases to expand rapidly.",
+  "timeline.3.text": "Expanding gases create high pressure gradients.",
+  "physics.title": "Force, area and pressure",
+  "physics.body_1": "When gases are heated, they expand and push outward against everything around them. Pressure is the force exerted on a given surface area.",
+  "physics.body_2": "If the same force is applied over a smaller area, the pressure becomes much greater. Hot expanding gases create strong outward pressure.",
+  "physics.equation": "p = F ÷ A",
+  "physics.equation_name": "Pressure equation",
+  "legend.1.symbol": "p",
+  "legend.1.meaning": "pressure",
+  "legend.1.unit": "pascal (Pa)",
+  "legend.2.symbol": "F",
+  "legend.2.meaning": "force",
+  "legend.2.unit": "newton (N)",
+  "legend.3.symbol": "A",
+  "legend.3.meaning": "area",
+  "legend.3.unit": "m²",
+  "legend.4.symbol": "",
+  "legend.4.meaning": "",
+  "legend.4.unit": "",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "Assuming uniform force distribution and constant gas temperature across the surface area.",
+  "example.step_1": "Force F = 500 N, Area A = 2 m²",
+  "example.step_2": "Apply equation: p = F ÷ A",
+  "example.step_3": "Calculate: p = 500 ÷ 2 = 250",
+  "example.result": "p = 250 Pa",
+  "table.h1": "Area (m²)",
+  "table.h2": "Force (N)",
+  "table.h3": "Pressure (Pa)",
+  "table.r1c1": "1",
+  "table.r1c2": "500",
+  "table.r1c3": "500",
+  "table.r2c1": "2",
+  "table.r2c2": "500",
+  "table.r2c3": "250",
+  "table.r3c1": "5",
+  "table.r3c2": "500",
+  "table.r3c3": "100",
+  "table.note": "Same force, different surface areas.",
+  "graph.title": "Pressure vs Surface Area",
+  "graph.1.label": "Area 1",
+  "graph.2.label": "Area 2",
+  "graph.3.label": "Area 5",
+  "graph.1.value": "500 Pa",
+  "graph.2.value": "250 Pa",
+  "graph.3.value": "100 Pa",
+  "graph.note": "Smaller area gives higher pressure with the same force.",
+  "physics.tip": "When force is spread over a larger area, the pressure goes down.",
+  "mission.title": "Pressure and Gas Mission",
+  "quiz.answer_key": "Answer key: 1B · 2C · 3A",
+  "quiz.1.question": "What does p stand for in p = F ÷ A?",
+  "quiz.1.a": "Power",
+  "quiz.1.b": "Pressure",
+  "quiz.1.c": "Potential",
+  "quiz.1.d": "Period",
+  "quiz.2.question": "If area decreases while force stays constant, pressure will…",
+  "quiz.2.a": "decrease",
+  "quiz.2.b": "stay the same",
+  "quiz.2.c": "increase",
+  "quiz.2.d": "drop to zero",
+  "quiz.3.question": "What is the standard SI unit of pressure?",
+  "quiz.3.a": "pascal (Pa)",
+  "quiz.3.b": "joule (J)",
+  "quiz.3.c": "newton (N)",
+  "quiz.3.d": "watt (W)",
+  "lab.title": "Mini Lab: Sponge Pressure",
+  "lab.subtitle": "Try at home or school",
+  "lab.lead": "See how force and surface area change pressure using a sponge and a book.",
+  "lab.step_1": "Place a sponge flat on a table.",
+  "lab.step_2": "Rest a heavy book flat on the sponge and observe how much it sinks.",
+  "lab.step_3": "Stand the book on its narrow edge and watch how deep it sinks.",
+  "lab.question": "Which position made the sponge sink deeper, and why?",
+  "badge.name": "Pressure Expert",
+  "badge.text": "You explored gas expansion and pressure.",
+  "badge.xp": "0 / 60 XP",
+  "badge.status": "Earned",
+  "badge.desc": "You completed the guide on gas expansion and pressure.",
+  "glossary.1.term": "Pressure",
+  "glossary.2.term": "Force",
+  "glossary.3.term": "Area",
+  "glossary.1.def": "Force exerted per unit surface area.",
+  "glossary.2.def": "A push or pull acting upon an object.",
+  "glossary.3.def": "The extent of a surface.",
+  "label.sources": "Sources",
+  "source.1": "[1] Mongabay Indonesia, Jejak Karhutla pada Area Konsesi Perusahaan di Jambi, 26 Nov 2026",
+  "source.2": "[2] NOAA JetStream, Air Pressure, 10 Jul 2026",
+  "source.3": "",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Illustration by ELIOS"
+}
