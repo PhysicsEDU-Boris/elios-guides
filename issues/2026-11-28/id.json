@@ -1,0 +1,330 @@
+{
+  "_example": false,
+  "_issue": "11",
+  "_slug": "indonesia-flash-floods-and-landslides",
+  "_theme": "water",
+  "_formula": "hydrostatic-pressure",
+  "_keywords": [
+    "banjir bandang",
+    "flash flood",
+    "longsor",
+    "landslide"
+  ],
+  "_date": "2026-11-28",
+  "_lang": "id",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "Mongabay Indonesia",
+      "title": "Karhutla Reda, Banjir Bandang dan Tanah Longsor Datang",
+      "date": "2026-11-27",
+      "url": "https://mongabay.co.id/2026/11/27/karhutla-reda-banjir-bandang-dan-tanah-longsor-datang/",
+      "primary": false
+    },
+    {
+      "n": 2,
+      "publisher": "BMKG",
+      "title": "Peringatan Dini Curah Hujan Nowcasting",
+      "date": "2026-11-28",
+      "url": "https://www.bmkg.go.id/cuaca/peringatan-dini-cuaca",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Ciliwung_01.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "FIYYNUT / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Flash_flood_water_flowing_over_Badwater_Road._%280e31b835-4162-462a-84a4-51505f86bcd9%29.jpg",
+      "license": "Public domain",
+      "credit": "NPS / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 9800,
+  "_graph.2.raw": 14700,
+  "_graph.3.raw": 19600,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Tekanan hidrostatis meningkat secara langsung dengan kedalaman air h.",
+      "wrong": {
+        "a": "Massa jenis air tidak berubah dengan kedalaman di sini.",
+        "c": "Gravitasi konstan di 9,8 m/s².",
+        "d": "Tekanan bertambah seiring kedalaman, bukan berkurang."
+      }
+    },
+    "2": {
+      "why": "p = ρ × g × h, di mana ρ adalah massa jenis fluida dan h adalah kedalaman.",
+      "wrong": {
+        "b": "Massa tidak ada dalam rumus tekanan hidrostatis.",
+        "c": "Luas adalah untuk tekanan permukaan, bukan tekanan kedalaman fluida.",
+        "d": "Waktu bukan bagian dari persamaan ini."
+      }
+    },
+    "3": {
+      "why": "Memulihkan hutan dan drainase mengurangi risiko banjir bandang.",
+      "wrong": {
+        "a": "Menebang lebih banyak pohon meningkatkan aliran permukaan.",
+        "b": "Membangun rumah di bantaran sungai menambah bahaya.",
+        "d": "Mengabaikan peringatan cuaca memicu lebih banyak bencana."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "Jika kedalaman air bertambah dua kali lipat, apa yang terjadi pada tekanan hidrostatis p?",
+      "options": [
+        "Berkurang setengah",
+        "Berlipat ganda",
+        "Tetap sama",
+        "Menjadi nol"
+      ],
+      "answer": 1,
+      "explanation": "Tekanan tumbuh sejalan dengan kedalaman h."
+    },
+    {
+      "question": "Dalam p = ρ × g × h, apa arti simbol ρ?",
+      "options": [
+        "Massa jenis fluida",
+        "Tekanan",
+        "Gravitasi",
+        "Ketinggian"
+      ],
+      "answer": 0,
+      "explanation": "ρ merepresentasikan massa jenis fluida."
+    },
+    {
+      "question": "Langkah apa yang membantu mengurangi risiko banjir bandang?",
+      "options": [
+        "Menebang semua pohon",
+        "Membangun rumah di bantaran sungai",
+        "Memulihkan hutan",
+        "Mengabaikan peringatan cuaca"
+      ],
+      "answer": 2,
+      "explanation": "Ekosistem yang sehat dan drainase bersih mengurangi bahaya banjir."
+    },
+    {
+      "question": "Apa satuan dari tekanan p?",
+      "options": [
+        "Joule",
+        "Pascal",
+        "Newton",
+        "Watt"
+      ],
+      "answer": 1,
+      "explanation": "Tekanan diukur dalam pascal (Pa)."
+    },
+    {
+      "question": "Berapa nilai percepatan gravitasi g yang digunakan dalam perhitungan fisika?",
+      "options": [
+        "1,0 m/s²",
+        "9,8 m/s²",
+        "100 m/s²",
+        "1.000 m/s²"
+      ],
+      "answer": 1,
+      "explanation": "Gravitasi standar di dekat permukaan bumi adalah sekitar 9,8 m/s²."
+    },
+    {
+      "question": "Mengapa tanggul banjir harus lebih kuat di bagian bawah?",
+      "options": [
+        "Tekanan air paling besar di titik terdalam",
+        "Air lebih dingin di bagian bawah",
+        "Ikan mendorong dinding",
+        "Bagian atas lebih berat"
+      ],
+      "answer": 0,
+      "explanation": "Tekanan meningkat seiring kedalaman, sehingga gaya paling besar di dasar."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "botol plastik dengan beberapa lubang pada ketinggian berbeda",
+      "selotip yang menutupi lubang saat diisi air",
+      "air yang memancar saat selotip dilepas"
+    ],
+    "safety": [
+      "tanpa nyala api, tanpa air panas, tanpa listrik",
+      "hanya tangan dalam foto"
+    ],
+    "pass_if": "Foto menunjukkan penyiapan botol dan membuktikan lubang lebih bawah memancar lebih jauh karena tekanan lebih besar."
+  },
+  "_per_page": [
+    {
+      "guide.stop_label": "Sampul"
+    },
+    {
+      "guide.stop_label": "Pos 1 · Ceritanya",
+      "section.label": "POS 1 · CERITANYA",
+      "section.xp": "+10 XP UNTUK MEMBACA"
+    },
+    {
+      "guide.stop_label": "Pos 2 · Fisikanya",
+      "section.label": "POS 2 · FISIKANYA",
+      "section.xp": "+20 XP UNTUK MENJAWAB"
+    },
+    {
+      "guide.stop_label": "Pos 3 · Misimu",
+      "section.label": "POS 3 · MISIMU",
+      "section.xp": "+30 XP UNTUK DIRAIH"
+    }
+  ],
+  "_replace": {
+    "stop": [
+      [
+        "STOP",
+        "POS"
+      ]
+    ],
+    "page ref": [
+      [
+        "p.",
+        "hlm. "
+      ]
+    ]
+  },
+  "guide.issue_date": "#11 · 28 NOV 2026",
+  "guide.lang": "ID",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Edisi 11 · 2026",
+  "cover.title": "Tekanan air pada banjir bandang",
+  "cover.subtitle": "Setelah kebakaran reda, hujan memicu banjir bandang di Sumatera [1]. Pelajari bagaimana kedalaman air menciptakan tekanan besar dan pemulihan.",
+  "cover.image_caption": "Sungai Ciliwung saat aliran deras",
+  "cover.news_date": "Berita: 27 Nov 2026",
+  "cover.place": "Sumatra, Indonesia",
+  "cover.topic": "Banjir bandang",
+  "cover.subject": "Fisika · Tekanan",
+  "quest.1.desc": "Baca mengapa hujan lebat sebabkan banjir",
+  "quest.2.desc": "Gunakan p = ρ × g × h untuk tekanan",
+  "quest.3.desc": "Kuis, lab mini dan lencana",
+  "cover.read_time": "12 mnt baca",
+  "cover.level": "SMP · kelas 7–9",
+  "cover.xp_total": "Raih hingga 60 XP",
+  "cover.fun_fact": "Tekanan air berlipat ganda saat kedalaman air bertambah dua kali lipat, menekan kuat dinding sungai.",
+  "story.title": "Banjir bandang dan air naik",
+  "story.lead": "Saat kebakaran hutan reda, hujan memicu banjir bandang di Indonesia [1]. BMKG mengeluarkan peringatan dini nowcasting untuk curah hujan tinggi [2].",
+  "story.image_caption": "Foto arsip · Flash flood water flowing over Badwater Road ( e b a a f bcd )",
+  "story.image_credit": "NPS / Wikimedia Commons, Public domain",
+  "stat.1.value": "1.000",
+  "stat.2.value": "9,8",
+  "stat.3.value": "14.700",
+  "stat.1.label": "kg/m³ massa jenis air tawar",
+  "stat.2.label": "m/s² percepatan gravitasi",
+  "stat.3.label": "p dalam pascal pada kedalaman 1,5 m",
+  "story.body_1": "Hujan monsun dan gelombang atmosfer membawa curah hujan tinggi ke Sumatera dan Jawa [1]. Air bah meluap cepat merendam jalan dan rumah di wilayah seperti Aceh [1].",
+  "story.body_2": "Para ahli mencatat ekosistem rapuh dan tanah terbakar memperparah risiko banjir [1]. Pemulihan hutan dan drainase yang baik membantu menekan dampak bencana [1].",
+  "timeline.1.date": "Pagi",
+  "timeline.2.date": "Siang",
+  "timeline.3.date": "Malam",
+  "timeline.1.text": "Hujan lebat mulai turun di daerah hulu pegunungan.",
+  "timeline.2.text": "Air bah meluap dan membanjiri kawasan sekitarnya.",
+  "timeline.3.text": "Air bah menekan kuat struktur bangunan dan tanggul.",
+  "physics.title": "Tekanan dalam fluida",
+  "physics.body_1": "Saat banjir naik, kedalaman air bertambah. Air yang lebih dalam menekan ke bawah dengan gaya lebih besar karena gravitasi dan massa jenis fluida.",
+  "physics.body_2": "Tekanan fluida bergantung pada tiga faktor: massa jenis air ρ, gravitasi g, dan kedalaman h. Setiap meter tambahan menambah tekanan.",
+  "physics.equation": "p = ρ × g × h",
+  "physics.equation_name": "Persamaan tekanan hidrostatis",
+  "legend.1.symbol": "p",
+  "legend.1.meaning": "tekanan",
+  "legend.1.unit": "pascal (Pa)",
+  "legend.2.symbol": "ρ",
+  "legend.2.meaning": "massa jenis fluida",
+  "legend.2.unit": "kg/m³",
+  "legend.3.symbol": "g",
+  "legend.3.meaning": "gravitasi",
+  "legend.3.unit": "9,8 m/s²",
+  "legend.4.symbol": "h",
+  "legend.4.meaning": "kedalaman",
+  "legend.4.unit": "meter (m)",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "Kita menganggap massa jenis air seragam dan mengabaikan variasi tekanan udara.",
+  "example.step_1": "ρ=1.000 kg/m³, g=9,8, h=1,5 m",
+  "example.step_2": "p = 1.000 × 9,8 × 1,5",
+  "example.step_3": "Kalikan: p = 14.700 Pa",
+  "example.result": "p = 14.700 Pa",
+  "table.h1": "Kedalaman (h)",
+  "table.h2": "Massa Jenis (ρ)",
+  "table.h3": "Tekanan (p)",
+  "table.r1c1": "1,0 m",
+  "table.r1c2": "1.000 kg/m³",
+  "table.r1c3": "9.800 Pa",
+  "table.r2c1": "1,5 m",
+  "table.r2c2": "1.000 kg/m³",
+  "table.r2c3": "14.700 Pa",
+  "table.r3c1": "2,0 m",
+  "table.r3c2": "1.000 kg/m³",
+  "table.r3c3": "19.600 Pa",
+  "table.note": "Tekanan meningkat sebanding dengan kedalaman air.",
+  "graph.title": "Tekanan fluida pada berbagai kedalaman",
+  "graph.1.label": "1,0 m",
+  "graph.2.label": "1,5 m",
+  "graph.3.label": "2,0 m",
+  "graph.1.value": "9.800 Pa",
+  "graph.2.value": "14.700 Pa",
+  "graph.3.value": "19.600 Pa",
+  "graph.note": "Melipatgandakan kedalaman melipatgandakan tekanan air.",
+  "physics.tip": "Air yang lebih dalam berarti tekanan lebih tinggi. Itulah mengapa tanggul banjir harus sangat kuat di bagian bawah.",
+  "mission.title": "Misi siaga banjir",
+  "quiz.answer_key": "Kunci: 1B · 2A · 3C",
+  "quiz.1.question": "Jika kedalaman air bertambah dua kali lipat, apa yang terjadi pada tekanan hidrostatis p?",
+  "quiz.1.a": "Berkurang setengah",
+  "quiz.1.b": "Berlipat ganda",
+  "quiz.1.c": "Tetap sama",
+  "quiz.1.d": "Menjadi nol",
+  "quiz.2.question": "Dalam p = ρ × g × h, apa arti simbol ρ?",
+  "quiz.2.a": "Massa jenis fluida",
+  "quiz.2.b": "Tekanan",
+  "quiz.2.c": "Gravitasi",
+  "quiz.2.d": "Ketinggian",
+  "quiz.3.question": "Langkah apa yang membantu mengurangi risiko banjir bandang?",
+  "quiz.3.a": "Menebang semua pohon",
+  "quiz.3.b": "Membangun di bantaran",
+  "quiz.3.c": "Memulihkan hutan",
+  "quiz.3.d": "Mengabaikan peringatan cuaca",
+  "lab.title": "Uji tekanan botol air",
+  "lab.step_1": "Buat tiga lubang kecil pada ketinggian berbeda pada botol plastik.",
+  "lab.step_2": "Isi botol dengan air sambil menutup lubang dengan selotip.",
+  "lab.step_3": "Buka selotip dan amati seberapa jauh air memancar dari setiap lubang.",
+  "lab.question": "Lubang mana yang memancarkan air paling jauh dan mengapa?",
+  "badge.name": "Pengamat Banjir",
+  "badge.text": "Anda menguasai tekanan fluida dan sains banjir.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Tekanan hidrostatis",
+  "glossary.2.term": "Massa jenis",
+  "glossary.3.term": "Nowcasting",
+  "glossary.1.def": "Tekanan yang diberikan fluida diam akibat gravitasi dan kedalaman.",
+  "glossary.2.def": "Massa suatu zat per satuan volume (kg/m³).",
+  "glossary.3.def": "Prakiraan cuaca jangka pendek mencakup 0 hingga 6 jam.",
+  "label.sources": "Sumber",
+  "source.1": "[1] Mongabay Indonesia, Karhutla Reda, Banjir Bandang dan Tanah Longsor Datang, 27 Nov 2026",
+  "source.2": "[2] BMKG, Peringatan Dini Curah Hujan Nowcasting, 28 Nov 2026",
+  "source.3": "",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Sampul: FIYYNUT / Wikimedia Commons (CC BY-SA 4.0). Ilustrasi lain oleh ELIOS.",
+  "label.quest_map": "PETA MISIMU",
+  "label.fun_fact": "TAHUKAH KAMU?",
+  "label.timeline": "LINIMASA",
+  "label.equation": "PERSAMAAN KUNCI",
+  "label.example": "CONTOH SOAL",
+  "label.graph": "GRAFIK",
+  "label.tip": "KATA BULB BUDDY",
+  "label.quiz": "KUIS KILAT · 3 SOAL · CENTANG SATU KOTAK",
+  "label.lab": "LAB MINI · COBA DI RUMAH ATAU SEKOLAH",
+  "label.badge": "LENCANA TERBUKA",
+  "quest.1.title": "Ceritanya",
+  "quest.2.title": "Fisikanya",
+  "quest.3.title": "Misimu"
+}

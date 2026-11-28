@@ -1,0 +1,10 @@
+{
+  "depth_1_m": 1.0,
+  "pressure_1_Pa": 9800.0,
+  "depth_2_m": 1.5,
+  "pressure_2_Pa": 14700.0,
+  "depth_3_m": 2.0,
+  "pressure_3_Pa": 19600.0,
+  "rho": 1000,
+  "g": 9.8
+}
