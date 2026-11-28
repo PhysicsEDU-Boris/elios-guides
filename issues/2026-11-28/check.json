@@ -1,0 +1,58 @@
+[
+  {
+    "item": "Flash flood reporting",
+    "claim": "Following forest fires, heavy rains have triggered flash floods and landslides across various regions in Indonesia, including Sumatra.",
+    "source": "1",
+    "pass": true,
+    "note": "Source confirms post-fire rain, floods, and landslides in Indonesia and Sumatra."
+  },
+  {
+    "item": "BMKG nowcasting definition",
+    "claim": "Nowcasting refers to short-term weather forecasts covering a period of 0 to 6 hours.",
+    "source": "2",
+    "pass": true,
+    "note": "Source 2 explicitly defines nowcasting as a 0-6 hour short-term weather forecast."
+  },
+  {
+    "item": "Hydrostatic pressure calculation (1.5 m)",
+    "claim": "At a water depth of 1.5 meters, hydrostatic pressure is 14,700 Pa.",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculated as p = 1000 kg/m³ * 9.8 m/s² * 1.5 m = 14,700 Pa."
+  },
+  {
+    "item": "Hydrostatic pressure calculation (1.0 m)",
+    "claim": "At a water depth of 1.0 meter, hydrostatic pressure is 9,800 Pa.",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculated as p = 1000 kg/m³ * 9.8 m/s² * 1.0 m = 9,800 Pa."
+  },
+  {
+    "item": "Hydrostatic pressure calculation (2.0 m)",
+    "claim": "At a water depth of 2.0 meters, hydrostatic pressure is 19,600 Pa.",
+    "source": "calc",
+    "pass": true,
+    "note": "Calculated as p = 1000 kg/m³ * 9.8 m/s² * 2.0 m = 19,600 Pa."
+  },
+  {
+    "item": "Quiz 1 (Bilingual)",
+    "claim": "If water depth doubles, the hydrostatic pressure p also doubles.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "Verified by the formula p = ρgh; p is directly proportional to h."
+  },
+  {
+    "item": "Quiz 2 (Bilingual)",
+    "claim": "In the formula p = ρ × g × h, the symbol ρ represents fluid density.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "Correct definition according to physics principles and provided text."
+  },
+  {
+    "item": "Quiz 3 (Bilingual)",
+    "claim": "Restoring forests and drainage helps reduce flash flood risks.",
+    "source": "bilingual",
+    "pass": true,
+    "note": "Verified by ecological mitigation advice in source 1."
+  }
+]

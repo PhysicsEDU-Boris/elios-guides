@@ -1,0 +1,290 @@
+{
+  "_example": false,
+  "_issue": "11",
+  "_slug": "indonesia-flash-floods-and-landslides",
+  "_theme": "water",
+  "_formula": "hydrostatic-pressure",
+  "_keywords": [
+    "banjir bandang",
+    "flash flood",
+    "longsor",
+    "landslide"
+  ],
+  "_date": "2026-11-28",
+  "_lang": "en",
+  "_sources": [
+    {
+      "n": 1,
+      "publisher": "Mongabay Indonesia",
+      "title": "Karhutla Reda, Banjir Bandang dan Tanah Longsor Datang",
+      "date": "2026-11-27",
+      "url": "https://mongabay.co.id/2026/11/27/karhutla-reda-banjir-bandang-dan-tanah-longsor-datang/",
+      "primary": false
+    },
+    {
+      "n": 2,
+      "publisher": "BMKG",
+      "title": "Peringatan Dini Curah Hujan Nowcasting",
+      "date": "2026-11-28",
+      "url": "https://www.bmkg.go.id/cuaca/peringatan-dini-cuaca",
+      "primary": true
+    }
+  ],
+  "_images": {
+    "cover.image": {
+      "file": "cover.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Ciliwung_01.jpg",
+      "license": "CC BY-SA 4.0",
+      "credit": "FIYYNUT / Wikimedia Commons"
+    },
+    "story.image": {
+      "file": "story.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Flash_flood_water_flowing_over_Badwater_Road._%280e31b835-4162-462a-84a4-51505f86bcd9%29.jpg",
+      "license": "Public domain",
+      "credit": "NPS / Wikimedia Commons"
+    },
+    "physics.diagram": null
+  },
+  "_graph.1.raw": 9800,
+  "_graph.2.raw": 14700,
+  "_graph.3.raw": 19600,
+  "_answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c"
+  },
+  "_quiz_explain": {
+    "1": {
+      "why": "Hydrostatic pressure increases directly with water depth h.",
+      "wrong": {
+        "a": "Density of water does not change with depth here.",
+        "c": "Gravity is constant at 9.8 m/s².",
+        "d": "Pressure grows with depth, not decreases."
+      }
+    },
+    "2": {
+      "why": "p = ρ × g × h, where ρ is fluid density and h is depth.",
+      "wrong": {
+        "b": "Mass is not in the hydrostatic pressure formula.",
+        "c": "Area is for surface pressure, not fluid depth pressure.",
+        "d": "Time is not part of this equation."
+      }
+    },
+    "3": {
+      "why": "Restoring forests and drainage reduces flash flood risks.",
+      "wrong": {
+        "a": "Clearing more forests increases runoff and risks.",
+        "b": "Building homes in riverbeds increases danger.",
+        "d": "Ignoring weather warnings leads to more disasters."
+      }
+    }
+  },
+  "_quiz_pool": [
+    {
+      "question": "If water depth doubles, what happens to the hydrostatic pressure p?",
+      "options": [
+        "Halves",
+        "Doubles",
+        "Stays the same",
+        "Becomes zero"
+      ],
+      "answer": 1,
+      "explanation": "Pressure grows in direct step with depth h."
+    },
+    {
+      "question": "In p = ρ × g × h, what does ρ stand for?",
+      "options": [
+        "Fluid density",
+        "Pressure",
+        "Gravity",
+        "Height"
+      ],
+      "answer": 0,
+      "explanation": "ρ represents the density of the fluid."
+    },
+    {
+      "question": "Which measure helps reduce flash flood risks?",
+      "options": [
+        "Removing all trees",
+        "Building homes in riverbeds",
+        "Restoring forests",
+        "Ignoring weather warnings"
+      ],
+      "answer": 2,
+      "explanation": "Healthy ecosystems and clear drainage reduce flood hazards."
+    },
+    {
+      "question": "What is the unit of pressure p?",
+      "options": [
+        "Joule",
+        "Pascal",
+        "Newton",
+        "Watt"
+      ],
+      "answer": 1,
+      "explanation": "Pressure is measured in pascals (Pa)."
+    },
+    {
+      "question": "What is the acceleration due to gravity g used in physics calculations?",
+      "options": [
+        "1.0 m/s²",
+        "9.8 m/s²",
+        "100 m/s²",
+        "1,000 m/s²"
+      ],
+      "answer": 1,
+      "explanation": "Standard gravity near Earth's surface is about 9.8 m/s²."
+    },
+    {
+      "question": "Why must flood barriers be stronger at the bottom?",
+      "options": [
+        "Water pressure is greatest at the deepest point",
+        "Water is colder at the bottom",
+        "Fish push against the walls",
+        "The top is heavier"
+      ],
+      "answer": 0,
+      "explanation": "Pressure increases with depth, so forces are highest at the base."
+    }
+  ],
+  "_lab_rubric": {
+    "must_show": [
+      "a plastic bottle with multiple holes at different heights",
+      "tape covering the holes while filling with water",
+      "water squirting out when tape is removed"
+    ],
+    "safety": [
+      "no flame, no hot water, no electricity",
+      "only hands in the photo"
+    ],
+    "pass_if": "The photos show the bottle setup and demonstrate that lower holes squirt water further due to higher pressure."
+  },
+  "_per_page": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "_replace": {},
+  "guide.issue_date": "#11 · 28 NOV 2026",
+  "guide.lang": "EN",
+  "guide.xp": "+60 XP",
+  "footer.credit": "ELIOS Guides · Issue 11 · 2026",
+  "cover.title": "How flood waters exert pressure",
+  "cover.subtitle": "After fires subside, rains trigger flash floods across Sumatra [1]. Discover how water depth creates massive pressure and why ecosystems matter.",
+  "cover.image_caption": "Ciliwung River during high flow",
+  "cover.news_date": "News: 27 Nov 2026",
+  "cover.place": "Sumatra, Indonesia",
+  "cover.topic": "Flash floods",
+  "cover.subject": "Physics · Pressure",
+  "quest.1.desc": "Read why heavy rains cause floods",
+  "quest.2.desc": "Use p = ρ × g × h for pressure",
+  "quest.3.desc": "Quiz, mini lab and badge",
+  "cover.read_time": "12 min read",
+  "cover.level": "SMP · grade 7–9",
+  "cover.xp_total": "Earn up to 60 XP",
+  "cover.fun_fact": "Water pressure doubles when the depth of the water doubles, pressing hard against riverbanks.",
+  "story.title": "Flash floods and rising waters",
+  "story.lead": "As forest fires fade, heavy rains trigger flash floods across Indonesia [1]. BMKG issues short-term nowcasting warnings for heavy downpours [2].",
+  "story.image_caption": "Archive photo · Flash flood water flowing over Badwater Road ( e b a a f bcd )",
+  "story.image_credit": "NPS / Wikimedia Commons, Public domain",
+  "stat.1.value": "1,000",
+  "stat.2.value": "9.8",
+  "stat.3.value": "14,700",
+  "stat.1.label": "kg/m³ density of fresh water",
+  "stat.2.label": "m/s² acceleration of gravity",
+  "stat.3.label": "p in pascals at 1.5 m water depth",
+  "story.body_1": "Monsoon rains and atmospheric waves bring heavy downpours to Sumatra and Java [1]. Swelling runoff overflows rapidly, submerging roads and homes in regions like Aceh [1].",
+  "story.body_2": "Experts note that fragile ecosystems and burned soils worsen flood risks [1]. Restoring forests and improving river drainage help reduce disaster impacts [1].",
+  "timeline.1.date": "Morning",
+  "timeline.2.date": "Afternoon",
+  "timeline.3.date": "Evening",
+  "timeline.1.text": "Heavy rain starts over mountain catchments.",
+  "timeline.2.text": "Runoff swells and overflows banks rapidly.",
+  "timeline.3.text": "Floodwaters exert intense pressure on structures.",
+  "physics.title": "Pressure in a fluid",
+  "physics.body_1": "When water rises during floods, depth increases. Deeper water presses down with greater force because of gravity and fluid density.",
+  "physics.body_2": "Fluid pressure depends on three factors: water density ρ, gravity g, and depth h. Every extra metre adds more pressure.",
+  "physics.equation": "p = ρ × g × h",
+  "physics.equation_name": "Hydrostatic pressure equation",
+  "legend.1.symbol": "p",
+  "legend.1.meaning": "pressure",
+  "legend.1.unit": "pascal (Pa)",
+  "legend.2.symbol": "ρ",
+  "legend.2.meaning": "fluid density",
+  "legend.2.unit": "kg/m³",
+  "legend.3.symbol": "g",
+  "legend.3.meaning": "gravity",
+  "legend.3.unit": "9.8 m/s²",
+  "legend.4.symbol": "h",
+  "legend.4.meaning": "depth",
+  "legend.4.unit": "metre (m)",
+  "legend.5.symbol": "",
+  "legend.5.meaning": "",
+  "legend.5.unit": "",
+  "physics.assumptions": "We assume water density is uniform and ignore atmospheric pressure variation.",
+  "example.step_1": "ρ=1,000 kg/m³, g=9.8, h=1.5 m",
+  "example.step_2": "p = 1,000 × 9.8 × 1.5",
+  "example.step_3": "Multiply: p = 14,700 Pa",
+  "example.result": "p = 14,700 Pa",
+  "table.h1": "Depth (h)",
+  "table.h2": "Density (ρ)",
+  "table.h3": "Pressure (p)",
+  "table.r1c1": "1.0 m",
+  "table.r1c2": "1,000 kg/m³",
+  "table.r1c3": "9,800 Pa",
+  "table.r2c1": "1.5 m",
+  "table.r2c2": "1,000 kg/m³",
+  "table.r2c3": "14,700 Pa",
+  "table.r3c1": "2.0 m",
+  "table.r3c2": "1,000 kg/m³",
+  "table.r3c3": "19,600 Pa",
+  "table.note": "Pressure increases in direct proportion to water depth.",
+  "graph.title": "Fluid pressure at different depths",
+  "graph.1.label": "1.0 m",
+  "graph.2.label": "1.5 m",
+  "graph.3.label": "2.0 m",
+  "graph.1.value": "9,800 Pa",
+  "graph.2.value": "14,700 Pa",
+  "graph.3.value": "19,600 Pa",
+  "graph.note": "Doubling depth doubles the pressure exerted by the water.",
+  "physics.tip": "Deeper water means higher pressure. That is why flood barriers must be extra strong at the bottom.",
+  "mission.title": "Flood safety mission",
+  "quiz.answer_key": "Answer key: 1B · 2A · 3C",
+  "quiz.1.question": "If water depth doubles, what happens to the hydrostatic pressure p?",
+  "quiz.1.a": "It halves",
+  "quiz.1.b": "It doubles",
+  "quiz.1.c": "It stays the same",
+  "quiz.1.d": "It becomes zero",
+  "quiz.2.question": "In p = ρ × g × h, what does ρ stand for?",
+  "quiz.2.a": "Fluid density",
+  "quiz.2.b": "Pressure",
+  "quiz.2.c": "Gravity",
+  "quiz.2.d": "Height",
+  "quiz.3.question": "Which measure helps reduce flash flood risks?",
+  "quiz.3.a": "Removing all trees",
+  "quiz.3.b": "Building homes in riverbeds",
+  "quiz.3.c": "Restoring forests",
+  "quiz.3.d": "Ignoring weather warnings",
+  "lab.title": "Water bottle pressure test",
+  "lab.step_1": "Poke three small holes at different heights on a plastic water bottle.",
+  "lab.step_2": "Fill the bottle with water while keeping the holes covered with tape.",
+  "lab.step_3": "Remove the tape and observe how far the water squirts from each hole.",
+  "lab.question": "Which hole squirted water the furthest and why?",
+  "badge.name": "Flood Watcher",
+  "badge.text": "You mastered fluid pressure and flood science.",
+  "badge.xp": "0 / 60 XP",
+  "glossary.1.term": "Hydrostatic pressure",
+  "glossary.2.term": "Density",
+  "glossary.3.term": "Nowcasting",
+  "glossary.1.def": "Pressure exerted by a fluid at rest due to gravity and depth.",
+  "glossary.2.def": "Mass of a substance per unit volume (kg/m³).",
+  "glossary.3.def": "Short-term weather forecast covering 0 to 6 hours.",
+  "label.sources": "Sources",
+  "source.1": "[1] Mongabay Indonesia, Karhutla Reda, Banjir Bandang dan Tanah Longsor Datang, 27 Nov 2026",
+  "source.2": "[2] BMKG, Peringatan Dini Curah Hujan Nowcasting, 28 Nov 2026",
+  "source.3": "",
+  "source.4": "",
+  "source.5": "",
+  "credit.images": "Cover: FIYYNUT / Wikimedia Commons (CC BY-SA 4.0). Other illustrations by ELIOS."
+}
